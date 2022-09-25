@@ -144,7 +144,7 @@ strong {
 }
 
 .md-header {
-    background-color: #174d8d;
+    background-color: #152b44;
 }
 
 .md-nav__link {
@@ -185,6 +185,16 @@ strong {
     background-color: #000;
     color: #fff !important;
     border: 0px;
+    padding: 0.6em 1em;
+    border-radius: 0.2em;
+}
+
+.btn-cta {
+    background-color: #d83790;
+    color: #fff !important;
+    border: 0px;
+    padding: 0.6em 1em;
+    border-radius: 0.2em;
 }
 
 .md-button {
@@ -197,7 +207,7 @@ strong {
 }
 
 .md-tabs {
-    background-color: #174d8d;
+    background-color: #152b44;
 }
 
 .md-tabs__link {
@@ -207,28 +217,33 @@ strong {
 .md-tabs__link--active {
     text-decoration: underline;
     text-underline-offset: 0.3em;
-    text-decoration-color: #d83790;
-    text-decoration-thickness: 3px;
+    text-decoration-color: #e68619;
+    text-decoration-thickness: 2px;
     font-weight: 400;
 }
 
+.md-content__inner {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
 .home-heading {
-    text-align: center;
+    font-size: 2em;
     font-weight: 900;
 }
 
 .home-features {
     display: grid;
     justify-content: center;
-    grid-template-columns: 33% [col-start] 33% [col-start];
+    grid-template-columns: 40% [col-start] 40% [col-start];
     column-gap: 8%;
 }
 
 .home-footer {
-    padding-top: 1.5em;
+    padding-top: 2em;
     padding-bottom: 2em;
     font-size: 1.2em;
-    background-color: #051b34;
+    background-color: #152b44;
     display: grid;
     justify-content: space-between;
     grid-template-columns: 5% [col-start] 40% [col-start] 33% [col-start];
@@ -236,9 +251,10 @@ strong {
 }
 
 .home-footer h2 {
-    color: #627489 !important;
+    color: #888 !important;
     font-size: 2em !important;
     font-weight: 800;
+    padding-bottom: 1em;
 }
 
 .home-footer ul {
@@ -247,5 +263,13 @@ strong {
 }
 
 .home-footer li {
-    padding-bottom: 0.4em;
+    padding-bottom: 0.5em;
+}
+
+.home-footer li>a {
+    color: #ddd !important;
+}
+
+.home-footer li>a:hover {
+    color: #d83790 !important;
 }
