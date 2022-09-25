@@ -207,6 +207,45 @@ strong {
 .md-tabs__link--active {
     text-decoration: underline;
     text-underline-offset: 0.3em;
-    text-decoration-color: #aaa;
+    text-decoration-color: #d83790;
+    text-decoration-thickness: 3px;
     font-weight: 400;
+}
+
+.home-heading {
+    text-align: center;
+    font-weight: 900;
+}
+
+.home-features {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 33% [col-start] 33% [col-start];
+    column-gap: 8%;
+}
+
+.home-footer {
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    font-size: 1.2em;
+    background-color: #051b34;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 5% [col-start] 40% [col-start] 33% [col-start];
+    color: #ddd !important;
+}
+
+.home-footer h2 {
+    color: #627489 !important;
+    font-size: 2em !important;
+    font-weight: 800;
+}
+
+.home-footer ul {
+    padding: 0px;
+    list-style: none;
+}
+
+.home-footer li {
+    padding-bottom: 0.4em;
 }

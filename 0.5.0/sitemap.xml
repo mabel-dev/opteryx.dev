@@ -111,21 +111,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/overrides/Features/Command%20Line/</loc>
-         <lastmod>2022-09-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/overrides/Features/Multi%20Platform/</loc>
-         <lastmod>2022-09-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/overrides/Features/Time%20Travel/</loc>
-         <lastmod>2022-09-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/sql-reference/adv-engine-configuration/</loc>
          <lastmod>2022-09-25</lastmod>
          <changefreq>daily</changefreq>

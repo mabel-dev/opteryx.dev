@@ -1,7 +1,76 @@
 {% extends "base.html" %}
 
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
 {% block site_nav %} {% endblock %}
 
+
 {% block content %}
-  Opteryx
+
+    <section id="hero" class="home-hero">
+      <h1>Opteryx</h1>
+      Opteryx. Query your data, no database required.
+      Get Started
+      Star on Github
+    </section>
+
+    <h2 class="home-features-heading home-heading">Features</h2>
+    <section id="features" class="home-features">
+      <div class="item">
+        <h3>Multiplaform</h3>
+      </div>
+      <div class="item">
+        <h3>Query In Place</h3>
+        <p>Run queries against data without loading or migrating into another system.</p>
+      </div>
+      <div class="item">
+        <h3>Elastic & Available</h3>
+        <p>Scale down to zero, and scale up to respond to thousands of concurrent queries within seconds.</p>
+        <p>Shared nothing, each query runs in its own environment.</p>
+      </div>
+      <div class="item">
+        <h3>Time Travel</h3>
+        <p>query data as at a point in time in the past to replay decision algorithms against facts as they were known in the past.</p>
+      </div>
+    </section>
+
+    <h2 class="home-use-cases-heading home-heading">Use Cases</h2>
+    <section id="use-cases" class="home-use-cases">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </section>
+
+    <h2 class="home-get-started-heading home-heading">Get Started</h2>
+    <section id="get-started" class="home-get-started">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </section>
+
+
+
+{% endblock %}
+
+{% block footer %}
+  <section class="home-footer">
+    <div class="item"></div>
+    <div class="item">
+      Stuff
+    </div>
+    <div class="item">
+      <h2>Let's keep in touch</h2>
+      <ul>
+        <li><i class="fa-fw fa-brands fa-twitter"></i> Follow @OpteryxSQL on Twitter</li>
+        <li><i class="fa-fw fa-brands fa-gitter"></i> Ask for help on Gitter</li>
+        <li><i class="fa-fw fa-brands fa-github"></i> Optertx on GitHub</li>
+        <li><i class="fa-fw fa-brands fa-python"></i> Opteryx on PyPI</li>
+      </ul>
+    </div>
+  </section>
+    {{super()}}
 {% endblock %}
