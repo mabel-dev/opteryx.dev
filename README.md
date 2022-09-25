@@ -1,2 +1,3 @@
 # opteryx.dev
-opteryx website
+
+Content for the [https://opteryx.dev](Opteryx website).
