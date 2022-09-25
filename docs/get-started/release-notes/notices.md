@@ -1,9 +1,9 @@
 # Notices
 
-Opteryx uses the following libraries and components:
+Opteryx is built on the shoulders of other great libraries and components:
 
-Component | Disposition | Copyright | Licence   
-:-------- | :---------- | :-------- | :------ 
+Component         | Disposition       | Copyright            | Licence   
+:---------------- | :---------------- | :------------------- | :--------------- 
 [cityhash](https://github.com/escherba/python-cityhash)    | Installed   | . | [Bespoke](https://github.com/escherba/python-cityhash/blob/master/LICENSE)  
 [cython](https://github.com/cython/cython)                 | Installed   | . | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
 [datasketch](https://github.com/ekzhu/datasketch)          | Integrated  | 2015 Eric Zhu | [MIT](https://github.com/ekzhu/datasketch/blob/master/LICENSE)
@@ -38,3 +38,5 @@ Satellite and Planet datasets acquired from [devstronomy](https://github.com/dev
 Astronaut dataset acquired from [Kaggle](https://www.kaggle.com/nasa/astronaut-yearbook).
 
 Diagrams created using [ASCII Flow](https://asciiflow.com/) or [draw.io](https://github.com/jgraph/drawio).
+
+Website build using [mkdocs-material](https://github.com/squidfunk/mkdocs-material).

@@ -44,27 +44,29 @@ extra:
     provider: mike
     default: latest
   social:
-    - icon: fontawesome/brands/github 
-      link: https://github.com/mabel-dev/opteryx
     - icon: fontawesome/brands/twitter 
       link: https://twitter.com/opteryxsql
     - icon: fontawesome/brands/gitter 
       link: https://gitter.im/mabel-opteryx/community
+    - icon: fontawesome/brands/github 
+      link: https://github.com/mabel-dev/opteryx
+    - icon: fontawesome/brands/python 
+      link: https://pypi.org/project/opteryx/
 
 # Page tree
 nav:
   - Home: index.md
-  - Getting started:
-    - Installation: getting-started/getting-started.md
-    - Clients: getting-started/clients.md
+  - Get started:
+    - Installation: get-started/get-started.md
+    - Clients: get-started/clients.md
     - Deployment Guide: 
-      - getting-started/deployment/deployment-guide.md
-      - Hosting: getting-started/deployment/hosting.md
-      - Storage: getting-started/deployment/storage.md
-      - Advanced: getting-started/deployment/advanced.md
+      - get-started/deployment/deployment-guide.md
+      - Hosting: get-started/deployment/hosting.md
+      - Storage: get-started/deployment/storage.md
+      - Advanced: get-started/deployment/advanced.md
     - Release Notes:
-      - Change Log: getting-started/release-notes/change-log.md
-      - Notices: getting-started/release-notes/notices.md
+      - Change Log: get-started/release-notes/change-log.md
+      - Notices: get-started/release-notes/notices.md
   - SQL Reference:
     - sql-reference/introduction.md
     - Statements: sql-reference/statements.md
