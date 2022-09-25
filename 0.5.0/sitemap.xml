@@ -66,6 +66,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/get-started/configuration-guide/</loc>
+         <lastmod>2022-09-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/get-started/deployment-guide/</loc>
+         <lastmod>2022-09-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/get-started/get-started/</loc>
          <lastmod>2022-09-25</lastmod>
          <changefreq>daily</changefreq>
@@ -77,26 +87,6 @@
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/get-started/schema-evolution/</loc>
-         <lastmod>2022-09-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/get-started/deployment/advanced/</loc>
-         <lastmod>2022-09-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/get-started/deployment/deployment-guide/</loc>
-         <lastmod>2022-09-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/get-started/deployment/hosting/</loc>
-         <lastmod>2022-09-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/get-started/deployment/storage/</loc>
          <lastmod>2022-09-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
