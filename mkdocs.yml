@@ -59,11 +59,8 @@ nav:
   - Get started:
     - Installation: get-started/get-started.md
     - Clients: get-started/clients.md
-    - Deployment Guide: 
-      - get-started/deployment/deployment-guide.md
-      - Hosting: get-started/deployment/hosting.md
-      - Storage: get-started/deployment/storage.md
-      - Advanced: get-started/deployment/advanced.md
+    - Deployment Guide: get-started/deployment-guide.md
+    - Configuration Guide: get-started/configuration-guide.md
     - Release Notes:
       - Change Log: get-started/release-notes/change-log.md
       - Notices: get-started/release-notes/notices.md

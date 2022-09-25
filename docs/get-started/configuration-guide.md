@@ -1,4 +1,4 @@
-# Advanced Set Up
+# Configuration Guide
 
 ## Configuration File
 

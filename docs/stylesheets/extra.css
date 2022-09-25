@@ -40,7 +40,7 @@ code {
 }
 
 pre > code {
-    background-color: #faf7fd !important;
+    background-color: #f8f8ff !important;
     font-size: 1em !important;
     padding: 1em !important;
     color: #822156 !important;
@@ -53,6 +53,16 @@ body {
 
 p, li {
     font-size: 1.2em !important;
+}
+
+.md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
+    font-size: 1.1em !important;
+    color: #11595c !important;
+}
+
+.md-nav__title {
+    font-size: 1.2em !important;
+    color: #11595c !important;
 }
 
 h1 {
@@ -149,7 +159,12 @@ strong {
 
 .md-nav__link {
     font-size: 0.9em;
-    color: #6e6e6e !important;
+    color: #555 !important;
+    font-weight: 400;
+}
+
+.md-nav__link:hover {
+    color: #d83790 !important;
 }
 
 .md-nav__link--active {
@@ -181,12 +196,30 @@ strong {
     color: #998000 !important;
 }
 
+.md-button {
+    padding: 0.4em 1em !important;
+    font-weight: 400 !important;
+    color: #d83790 !important;
+    border-color: #d83790 !important;;
+}
+
+.md-button:hover {
+    padding: 0.4em 1em !important;
+    font-weight: 400 !important;
+    color: #fff !important;
+    background-color: #d83790 !important;;
+}
+
 .btn-github {
-    background-color: #000;
+    background-color: #2c2c2c;
     color: #fff !important;
     border: 0px;
     padding: 0.6em 1em;
     border-radius: 0.2em;
+}
+
+.btn-github:hover {
+    background-color: #000;
 }
 
 .btn-cta {
@@ -195,6 +228,10 @@ strong {
     border: 0px;
     padding: 0.6em 1em;
     border-radius: 0.2em;
+}
+
+.btn-cta:hover {
+    background-color: #ff0894;
 }
 
 .md-button {
@@ -217,7 +254,7 @@ strong {
 .md-tabs__link--active {
     text-decoration: underline;
     text-underline-offset: 0.3em;
-    text-decoration-color: #e68619;
+    text-decoration-color: #d83790;
     text-decoration-thickness: 2px;
     font-weight: 400;
 }
@@ -271,5 +308,5 @@ strong {
 }
 
 .home-footer li>a:hover {
-    color: #d83790 !important;
+    color: #e05fa7 !important;
 }
