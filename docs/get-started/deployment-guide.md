@@ -7,7 +7,7 @@
 **Minimum**: 1 CPU, 1 Gb RAM (Intel/x86 CPU)   
 **Recommended**: 4 CPUs, 8 Gb RAM (Intel/x86 CPU)
 
-Opteryx balances memory consumption with performance, however, being able to process large datasets will require larger memory specifications compared to what is needed to process smaller datasets. The reference implementation of Opteryx regularly processes approximately 50Gb of data in a container with 4 CPUs and 8Gb of memory allocated.
+Opteryx balances memory consumption with performance, however, being able to process large datasets will require larger memory specifications compared to what is needed to process smaller datasets. The reference implementation of Opteryx regularly processes 100Gb of data in a container with 4 CPUs and 8Gb of memory allocated.
 
 !!! Note
     This is a general recommendation and is a good place to start, your environment and specific problem may require, or perform significantly better, with a different configuration.

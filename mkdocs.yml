@@ -58,7 +58,8 @@ nav:
   - Home: index.md
   - Get started:
     - Installation: get-started/get-started.md
-    - Clients: get-started/clients.md
+    - Client Overview: get-started/clients.md
+    - Python Client: get-started/python-client.md
     - Deployment Guide: get-started/deployment-guide.md
     - Configuration Guide: get-started/configuration-guide.md
     - Release Notes:
