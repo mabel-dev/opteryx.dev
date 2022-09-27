@@ -74,10 +74,19 @@ dd {
     color: #11595c !important;
 }
 
+.md-logo {
+    display: none !important;
+}
+
+.md-ellipsis {
+    font-family: "DM Serif Display", 'Times New Roman', Times, serif;
+    font-weight: 900 !important;
+    font-size: 1.4em !important;
+}
+
 h1 {
     font-family: "DM Serif Display", 'Times New Roman', Times, serif;
     font-weight: 900 !important;
-    letter-spacing: 1px;
     font-size: 2.2em !important;
     margin-bottom: 0.7em !important;
     color: #4b4b4b !important;
