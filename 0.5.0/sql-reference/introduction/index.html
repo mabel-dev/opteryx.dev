@@ -1305,10 +1305,10 @@
 <a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>
 <a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>(more rows and columns)
 </code></pre></div>
-<p>Using the <code>LEFT OUTER JOIN</code> will mean the relation mentioned on the left of the join operator will have each of its rows in the output at least once, whereas the relation on the right will only have those rows output that match some row of the left relation. When outputting a left-relation row for which there is no right-relation match, empty (null) values are substituted for the right-relation columns. </p>
+<p>Using the <code>LEFT OUTER JOIN</code> will mean the relation mentioned on the left of the join operator will have each of its rows in the output at least once, whereas the relation on the right will only have those rows output that match some row of the left relation. When outputting a left-relation row for which there is no right-relation match, empty (<code>null</code>) values are substituted for the right-relation columns. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>How null values are displayed may be different between different systems, common approaches are to display an empty cell or display 'none' or 'null' in an alternate format (e.g. italics or different font color). This is not controlled by Opteryx.</p>
+<p>How <code>null</code> values are displayed may be different between different systems, common approaches are to display an empty cell or display 'none' or 'null' in an alternate format (e.g. italics or different font color). This is not controlled by Opteryx.</p>
 </div>
 <h2 id="aggregate-functions">Aggregate Functions</h2>
 <p>Like most query engines and databases, Opteryx supports aggregate functions. An aggregate function computes a single result from multiple input rows. For example, there are aggregates to compute the <code>COUNT</code>, <code>SUM</code>, <code>AVG</code> (average), <code>MAX</code> (maximum) and <code>MIN</code> (minimum) over a set of rows.</p>

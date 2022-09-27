@@ -1160,46 +1160,46 @@
 </thead>
 <tbody>
 <tr>
-<td align="center">True</td>
-<td align="center">True</td>
-<td align="center">True</td>
-<td align="center">True</td>
-<td align="center">False</td>
+<td align="center">true</td>
+<td align="center">true</td>
+<td align="center">true</td>
+<td align="center">true</td>
+<td align="center">false</td>
 </tr>
 <tr>
-<td align="center">True</td>
-<td align="center">False</td>
-<td align="center">False</td>
-<td align="center">True</td>
-<td align="center">True</td>
+<td align="center">true</td>
+<td align="center">false</td>
+<td align="center">false</td>
+<td align="center">true</td>
+<td align="center">true</td>
 </tr>
 <tr>
-<td align="center">False</td>
-<td align="center">False</td>
-<td align="center">False</td>
-<td align="center">False</td>
-<td align="center">False</td>
+<td align="center">false</td>
+<td align="center">false</td>
+<td align="center">false</td>
+<td align="center">false</td>
+<td align="center">false</td>
 </tr>
 <tr>
-<td align="center">Null</td>
-<td align="center">True</td>
-<td align="center">Null</td>
-<td align="center">Null</td>
-<td align="center">Null</td>
+<td align="center"><em>null</em></td>
+<td align="center">true</td>
+<td align="center"><em>null</em></td>
+<td align="center"><em>null</em></td>
+<td align="center"><em>null</em></td>
 </tr>
 <tr>
-<td align="center">Null</td>
-<td align="center">False</td>
-<td align="center">Null</td>
-<td align="center">Null</td>
-<td align="center">Null</td>
+<td align="center"><em>null</em></td>
+<td align="center">false</td>
+<td align="center"><em>null</em></td>
+<td align="center"><em>null</em></td>
+<td align="center"><em>null</em></td>
 </tr>
 </tbody>
 </table>
 <p>The operators <code>AND</code>, <code>OR</code>, and <code>XOR</code> are commutative, that is, you can switch the left and right operand without affecting the result.</p>
 <h2 id="comparison-operators">Comparison Operators</h2>
 <p>Comparison Operators are used within Expressions to compare values, usually involving comparing a field within the datasets against a literal value - although comparisons can be used against two fields, or two literals.</p>
-<p>Usually when one of the values involved in the comparison is <code>NULL</code>, the result is <code>NULL</code>.</p>
+<p>Usually when one of the values involved in the comparison is <code>null</code>, the result is <code>null</code>.</p>
 <table>
 <thead>
 <tr>
@@ -1274,13 +1274,13 @@
 </tr>
 <tr>
 <td align="left"><code>IS</code></td>
-<td align="left">special comparison for non-values <code>True</code>, <code>False</code> and <code>Null</code></td>
+<td align="left">special comparison for non-values <code>true</code>, <code>false</code> and <code>null</code></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When handling <code>NULL</code> values, infix inversions (e.g. <code>x NOT LIKE y</code>) behave differently to prefix inversions (<code>NOT x LIKE y</code>).</p>
+<p>When handling <code>null</code> values, infix inversions (e.g. <code>x NOT LIKE y</code>) behave differently to prefix inversions (<code>NOT x LIKE y</code>).</p>
 </div>
 <h2 id="other-comparisons">Other Comparisons</h2>
 <table>

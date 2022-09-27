@@ -593,8 +593,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#date-and-time-functions" class="md-nav__link">
-    Date and Time Functions
+  <a href="#date-time-functions" class="md-nav__link">
+    Date &amp; Time Functions
   </a>
   
 </li>
@@ -1138,8 +1138,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#date-and-time-functions" class="md-nav__link">
-    Date and Time Functions
+  <a href="#date-time-functions" class="md-nav__link">
+    Date &amp; Time Functions
   </a>
   
 </li>
@@ -1215,7 +1215,7 @@
 
 <h1 id="functions">Functions</h1>
 <p>This document describes the built-in SQL functions and operators supported by Opteryx.</p>
-<p>Generally functions will return <code>Null</code> on <code>Null</code> input, although note that this is not true in all circumstances.</p>
+<p>Generally functions will return <code>null</code> on <code>null</code> input, although note that this is not true in all circumstances.</p>
 <p>Definitions noted with a <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 1 1 0 1.5H8.5v4.25a.75.75 0 1 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2z"/></svg></span> accept different input arguments.</p>
 <h2 id="conversion-functions">Conversion Functions</h2>
 <div class="admonition function">
@@ -1273,7 +1273,7 @@ Alias for <code>CAST</code>(<strong>iso8601</strong> AS TIMESTAMP).   </p>
 <p>Cast <strong>any</strong> to a string, raises an error if cast is not possible.<br />
 Alias for <code>CAST</code>(<strong>any</strong> AS VARCHAR).</p>
 </div>
-<h2 id="date-and-time-functions">Date and Time Functions</h2>
+<h2 id="date-time-functions">Date &amp; Time Functions</h2>
 <p>For more details, see <a href="../Working%20with%20SQL/10%20Working%20with%20Timestamps/">Working with Timestamps</a>.</p>
 <div class="admonition function">
 <p class="admonition-title"><code>current_date</code> → <em>timestamp</em></p>
@@ -1431,20 +1431,20 @@ Related: <code>GREATEST</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LIST_CONTAINS</code> (<strong>array</strong>: <em>list</em>, <strong>value</strong>) → <em>boolean</em></p>
-<p>Return <code>True</code> if <strong>array</strong> contains <strong>value</strong>.<br />
+<p>Return <code>true</code> if <strong>array</strong> contains <strong>value</strong>.<br />
 See also <code>SEARCH</code>(<strong>array</strong>, <strong>value</strong>).  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LIST_CONTAINS_ANY</code> (<strong>array</strong>: <em>list</em>, <strong>values</strong>: <em>list</em>) → <em>boolean</em></p>
-<p>Return <code>True</code> if <strong>array</strong> contains any elements in <strong>values</strong>.</p>
+<p>Return <code>true</code> if <strong>array</strong> contains any elements in <strong>values</strong>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LIST_CONTAINS_ALL</code> (<strong>array</strong>: <em>list</em>, <strong>values</strong>: <em>list</em>) → <em>boolean</em></p>
-<p>Return <code>True</code> if <strong>array</strong> contains all of elements in <strong>values</strong>.</p>
+<p>Return <code>true</code> if <strong>array</strong> contains all of elements in <strong>values</strong>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SEARCH</code> (<strong>array</strong>: <em>list</em>, <strong>value</strong>) → <em>boolean</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 1 1 0 1.5H8.5v4.25a.75.75 0 1 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2z"/></svg></span></p>
-<p>Return <code>True</code> if <strong>array</strong> contains <strong>value</strong>. </p>
+<p>Return <code>true</code> if <strong>array</strong> contains <strong>value</strong>. </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SORT</code> (<strong>array</strong>: <em>list</em>) → <em>list</em></p>
@@ -1555,7 +1555,7 @@ Related: <code>CONCAT</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>ENDS_WITH</code> (<strong>str</strong>: <em>varchar</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em></p>
-<p>Return <code>True</code> if <strong>str</strong> ends with <strong>value</strong>.<br />
+<p>Return <code>true</code> if <strong>str</strong> ends with <strong>value</strong>.<br />
 Related: <code>STARTS_WITH</code>.</p>
 </div>
 <div class="admonition function">
@@ -1595,11 +1595,11 @@ Related: <code>LEFT</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SEARCH</code> (<strong>str</strong>: <em>varchar</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 1 1 0 1.5H8.5v4.25a.75.75 0 1 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2z"/></svg></span></p>
-<p>Return <code>True</code> if <strong>str</strong> contains <strong>value</strong>.  </p>
+<p>Return <code>true</code> if <strong>str</strong> contains <strong>value</strong>.  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>STARTS_WITH</code> (<strong>str</strong>: <em>varchar</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em></p>
-<p>Return <code>True</code> if <strong>str</strong> starts with <strong>value</strong>.<br />
+<p>Return <code>true</code> if <strong>str</strong> starts with <strong>value</strong>.<br />
 Related: <code>ENDS_WITH</code></p>
 </div>
 <div class="admonition function">
@@ -1628,7 +1628,7 @@ Related: <code>LOWER</code>, <code>TITLE</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SEARCH</code> (<strong>object</strong>: <em>struct</em>, <strong>value</strong>: <em>varchar</em>) → <strong>boolean</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 1 1 0 1.5H8.5v4.25a.75.75 0 1 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2z"/></svg></span></p>
-<p>Return <code>True</code> if any of the values in <strong>object</strong> is <strong>value</strong>. Note <code>SEARCH</code> does not match struct keys.</p>
+<p>Return <code>true</code> if any of the values in <strong>object</strong> is <strong>value</strong>. Note <code>SEARCH</code> does not match struct keys.</p>
 </div>
 <h2 id="system-functions">System Functions</h2>
 <div class="admonition function">
@@ -1658,7 +1658,7 @@ Related: <code>BASE85_DECODE</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>COALESCE</code> (<strong>arg1</strong>, <strong>arg2</strong>, ...) → <em>[input type]</em></p>
-<p>Return the first item from args which is not <code>Null</code>.  <br />
+<p>Return the first item from args which is not <code>null</code>.  <br />
 Related: <code>IFNULL</code>.</p>
 </div>
 <div class="admonition function">
@@ -1683,7 +1683,7 @@ Related: <code>IFNULL</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>IFNULL</code> (<strong>check_expression</strong>: <em>any</em>, <strong>replacement_value</strong>: <em>any</em>) → <em>[input type]</em></p>
-<p>Returns <strong>check_expression</strong> if not <code>Null</code>, otherwise returns <strong>replacement_value</strong>.
+<p>Returns <strong>check_expression</strong> if not <code>null</code>, otherwise returns <strong>replacement_value</strong>.
 Related: <code>COALESCE</code>.</p>
 </div>
 <div class="admonition function">

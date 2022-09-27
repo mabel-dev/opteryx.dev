@@ -1036,8 +1036,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#security-and-code-quality-testing" class="md-nav__link">
-    Security and Code Quality Testing
+  <a href="#fuzzing" class="md-nav__link">
+    Fuzzing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-code-quality-testing" class="md-nav__link">
+    Security &amp; Code Quality Testing
   </a>
   
 </li>
@@ -1133,8 +1140,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#security-and-code-quality-testing" class="md-nav__link">
-    Security and Code Quality Testing
+  <a href="#fuzzing" class="md-nav__link">
+    Fuzzing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-code-quality-testing" class="md-nav__link">
+    Security &amp; Code Quality Testing
   </a>
   
 </li>
@@ -1179,10 +1193,16 @@
 <p><strong>Frequency</strong>: Ad hoc<br />
 <strong>Maturity</strong>: Low</p>
 <p>Runs SQL statements against Operyx and SQLite (which performs <a href="https://www.sqlite.org/testing.html">similar testing</a> against other database engines) to verify Opteryx returns the same answer as SQLite.</p>
-<h2 id="security-and-code-quality-testing">Security and Code Quality Testing</h2>
+<h2 id="fuzzing">Fuzzing</h2>
+<p><strong>Frequency</strong>: CI &amp; Weekly
+<strong>Maturity</strong>: Low</p>
+<p>As part of the CI process, executes 100 iterations of random inputs.</p>
+<p>As part of a weekly test, executes 100,000 iterations of random inputs.</p>
+<p>Fuzzing supplies some key functions with random data to try to capture scenarios which are unexpected or unhandled.</p>
+<h2 id="security-code-quality-testing">Security &amp; Code Quality Testing</h2>
 <p><strong>Frequency</strong>: CI<br />
 <strong>Maturity</strong>: Medium</p>
-<p>Bandit, Semgrep, Black, MyPy, PyLint, PerfLint, Fides, SonarCloud</p>
+<p>Various other tests are performed to help ensure code quality is maintained, these include security, form, typing, secret detection and test coverage checks using the following tools: Bandit, Semgrep, Black, MyPy, PyLint, PerfLint, Fides, SonarCloud, and Coverage.</p>
 
 
 
