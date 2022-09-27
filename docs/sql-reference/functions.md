@@ -2,7 +2,7 @@
 
 This document describes the built-in SQL functions and operators supported by Opteryx.
 
-Generally functions will return `Null` on `Null` input, although note that this is not true in all circumstances.
+Generally functions will return `null` on `null` input, although note that this is not true in all circumstances.
 
 Definitions noted with a :octicons-plus-16: accept different input arguments.
 
@@ -51,7 +51,7 @@ Definitions noted with a :octicons-plus-16: accept different input arguments.
     Cast **any** to a string, raises an error if cast is not possible.  
     Alias for `CAST`(**any** AS VARCHAR).
 
-## Date and Time Functions
+## Date & Time Functions
 
 For more details, see [Working with Timestamps](../Working%20with%20SQL/10%20Working%20with%20Timestamps/).
 
@@ -179,17 +179,17 @@ For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%
     Returns the number of elements in **array**.
 
 !!! function "`LIST_CONTAINS` (**array**: _list_, **value**) → _boolean_"  
-    Return `True` if **array** contains **value**.  
+    Return `true` if **array** contains **value**.  
     See also `SEARCH`(**array**, **value**).  
 
 !!! function "`LIST_CONTAINS_ANY` (**array**: _list_, **values**: _list_) → _boolean_"    
-    Return `True` if **array** contains any elements in **values**.
+    Return `true` if **array** contains any elements in **values**.
 
 !!! function "`LIST_CONTAINS_ALL` (**array**: _list_, **values**: _list_) → _boolean_"   
-    Return `True` if **array** contains all of elements in **values**.
+    Return `true` if **array** contains all of elements in **values**.
 
 !!! function "`SEARCH` (**array**: _list_, **value**) → _boolean_ :octicons-plus-16:"  
-    Return `True` if **array** contains **value**. 
+    Return `true` if **array** contains **value**. 
 
 !!! function "`SORT` (**array**: _list_) → _list_"  
     Return **array** in ascending order. 
@@ -278,7 +278,7 @@ Functions for examining and manipulating string values.
     Related: `CONCAT`.
 
 !!! function "`ENDS_WITH` (**str**: _varchar_, **value**: _varchar_) → _boolean_"  
-    Return `True` if **str** ends with **value**.  
+    Return `true` if **str** ends with **value**.  
     Related: `STARTS_WITH`.
 
 !!! function "`GET` (**str**: _varchar_, **index**: _numeric_) → _varchar_ :octicons-plus-16:"  
@@ -309,10 +309,10 @@ Functions for examining and manipulating string values.
     Returns a character string containing the phonetic representation of char. See [Soundex 🡕](https://en.wikipedia.org/wiki/Soundex).   
 
 !!! function "`SEARCH` (**str**: _varchar_, **value**: _varchar_) → _boolean_ :octicons-plus-16:"  
-    Return `True` if **str** contains **value**.  
+    Return `true` if **str** contains **value**.  
 
 !!! function "`STARTS_WITH` (**str**: _varchar_, **value**: _varchar_) → _boolean_"  
-    Return `True` if **str** starts with **value**.  
+    Return `true` if **str** starts with **value**.  
     Related: `ENDS_WITH`
 
 !!! function "`TITLE` (**str**: _varchar_) → _varchar_"  
@@ -337,7 +337,7 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
     Alias of **object**`[`**key**`]`.  
 
 !!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → **boolean** :octicons-plus-16:"  
-    Return `True` if any of the values in **object** is **value**. Note `SEARCH` does not match struct keys.
+    Return `true` if any of the values in **object** is **value**. Note `SEARCH` does not match struct keys.
 
 ## System Functions
 
@@ -363,7 +363,7 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
     Related: `BASE85_DECODE`.
 
 !!! function "`COALESCE` (**arg1**, **arg2**, ...) → _[input type]_"  
-    Return the first item from args which is not `Null`.    
+    Return the first item from args which is not `null`.    
     Related: `IFNULL`.
 
 !!! function "`GENERATE_SERIES` (**stop**: _numeric_) → _list_<_numeric_> :octicons-plus-16:"  
@@ -382,7 +382,7 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
     Return a list of IP addresses from a given **cidr**.   
 
 !!! function "`IFNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _[input type]_"  
-    Returns **check_expression** if not `Null`, otherwise returns **replacement_value**.
+    Returns **check_expression** if not `null`, otherwise returns **replacement_value**.
     Related: `COALESCE`.
 
 !!! function "`HASH` (**any**) → _varchar_"  

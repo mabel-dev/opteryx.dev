@@ -34,9 +34,20 @@ To measure impact of changes.
 
 Runs SQL statements against Operyx and SQLite (which performs [similar testing](https://www.sqlite.org/testing.html) against other database engines) to verify Opteryx returns the same answer as SQLite.
 
-## Security and Code Quality Testing
+## Fuzzing
+
+**Frequency**: CI & Weekly
+**Maturity**: Low
+
+As part of the CI process, executes 100 iterations of random inputs.
+
+As part of a weekly test, executes 100,000 iterations of random inputs.
+
+Fuzzing supplies some key functions with random data to try to capture scenarios which are unexpected or unhandled.
+
+## Security & Code Quality Testing
 
 **Frequency**: CI  
 **Maturity**: Medium
 
-Bandit, Semgrep, Black, MyPy, PyLint, PerfLint, Fides, SonarCloud
+Various other tests are performed to help ensure code quality is maintained, these include security, form, typing, secret detection and test coverage checks using the following tools: Bandit, Semgrep, Black, MyPy, PyLint, PerfLint, Fides, SonarCloud, and Coverage.

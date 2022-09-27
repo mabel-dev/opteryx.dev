@@ -8,13 +8,13 @@ Logical Operators are used within Expressions to express how predicates combine.
 
 The following logical operators are available: `NOT`, `AND`, `OR`, and `XOR`.
 
-| a     | b     | a `AND` b | a `OR` b | a `XOR` b |
-| :---: | :---: | :-------: | :------: | :-------: |
-| True  | True  | True      | True     | False     |
-| True  | False | False     | True     | True      |
-| False | False | False     | False    | False     |
-| Null  | True  | Null      | Null     | Null      |
-| Null  | False | Null      | Null     | Null      |
+| a      | b     | a `AND` b | a `OR` b | a `XOR` b |
+| :----: | :---: | :-------: | :------: | :-------: |
+| true   | true  | true      | true     | false     |
+| true   | false | false     | true     | true      |
+| false  | false | false     | false    | false     |
+| _null_ | true  | _null_    | _null_   | _null_    |
+| _null_ | false | _null_    | _null_   | _null_    |
 
 The operators `AND`, `OR`, and `XOR` are commutative, that is, you can switch the left and right operand without affecting the result.
 
@@ -22,7 +22,7 @@ The operators `AND`, `OR`, and `XOR` are commutative, that is, you can switch th
 
 Comparison Operators are used within Expressions to compare values, usually involving comparing a field within the datasets against a literal value - although comparisons can be used against two fields, or two literals.
 
-Usually when one of the values involved in the comparison is `NULL`, the result is `NULL`.
+Usually when one of the values involved in the comparison is `null`, the result is `null`.
 
 Operator     | Description                   
 :----------- | :-----------------------------
@@ -42,10 +42,10 @@ Operator     | Description
 `!~`         | inverse results of `~` (also `NOT SIMILAR TO`)
 `~*`         | case insensitive regular expression match
 `!~*`        | inverse results of `~*`
-`IS`         | special comparison for non-values `True`, `False` and `Null`
+`IS`         | special comparison for non-values `true`, `false` and `null`
 
 !!! Note  
-    When handling `NULL` values, infix inversions (e.g. `x NOT LIKE y`) behave differently to prefix inversions (`NOT x LIKE y`).
+    When handling `null` values, infix inversions (e.g. `x NOT LIKE y`) behave differently to prefix inversions (`NOT x LIKE y`).
 
 ## Other Comparisons
 

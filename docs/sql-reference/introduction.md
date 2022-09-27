@@ -221,10 +221,10 @@ $satellites.id | planetId | $satellites.name | ...
 (more rows and columns)
 ~~~
 
-Using the `LEFT OUTER JOIN` will mean the relation mentioned on the left of the join operator will have each of its rows in the output at least once, whereas the relation on the right will only have those rows output that match some row of the left relation. When outputting a left-relation row for which there is no right-relation match, empty (null) values are substituted for the right-relation columns. 
+Using the `LEFT OUTER JOIN` will mean the relation mentioned on the left of the join operator will have each of its rows in the output at least once, whereas the relation on the right will only have those rows output that match some row of the left relation. When outputting a left-relation row for which there is no right-relation match, empty (`null`) values are substituted for the right-relation columns. 
 
 !!! note
-    How null values are displayed may be different between different systems, common approaches are to display an empty cell or display 'none' or 'null' in an alternate format (e.g. italics or different font color). This is not controlled by Opteryx.
+    How `null` values are displayed may be different between different systems, common approaches are to display an empty cell or display 'none' or 'null' in an alternate format (e.g. italics or different font color). This is not controlled by Opteryx.
 
 ## Aggregate Functions
 

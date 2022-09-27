@@ -4,7 +4,7 @@ Aggregates are functions that combine multiple rows into a single value. Aggrega
 
 When the `ORDER BY` clause is provided, the values being aggregated are sorted after applying the function. 
 
-Aggregate functions generally ignore `NULL` values when performing calculations.
+Aggregate functions generally ignore `null` values when performing calculations.
 
 ## General Functions
 
@@ -22,7 +22,7 @@ Aggregate functions generally ignore `NULL` values when performing calculations.
     Count the number of rows.
 
 !!! function "`COUNT` (**column**) → _numeric_"  
-    Count the number of non `NULL` values in **column**.
+    Count the number of non `null` values in **column**.
 
 !!! function "`COUNT_DISTINCT` (**column**) → _numeric_"  
     Count the number of unique values.
