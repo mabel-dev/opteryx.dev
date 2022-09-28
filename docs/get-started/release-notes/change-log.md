@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - ⚠️**BREAKING** (correction) cursor 'fetch*' methods returns tuples rather than dictionaries as defaults, this is correcting a bug in [PEP249](https://peps.python.org/pep-0249/) compatibility. ([@joocer](https://github.com/joocer))  
 - ⚠️**BREAKING** (security) [[#517](https://github.com/mabel-dev/opteryx/issues/517)] Placeholder changed from '%s' to '?'. ([@joocer](https://github.com/joocer))  
 - [[#522](https://github.com/mabel-dev/opteryx/issues/522)] Implementation of LRU-K(2) for cache evictions. ([@joocer](https://github.com/joocer))  
+- [[#537](https://github.com/mabel-dev/opteryx/issues/537)] Significant refactor of Query Planner. ([@joocer](https://github.com/joocer))  
 
 **Added**
 
