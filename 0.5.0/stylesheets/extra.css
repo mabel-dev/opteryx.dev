@@ -321,3 +321,8 @@ strong {
 .home-footer li>a:hover {
     color: #e05fa7 !important;
 }
+
+#hero h1 {
+    font-size: 3em !important;
+    padding-bottom: 4em;
+}
