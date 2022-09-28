@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#531](https://github.com/mabel-dev/opteryx/issues/531)] Support `SHOW VARIABLES` and `SHOW PARAMETERS`. ([@joocer](https://github.com/joocer))  
 - [[#464](https://github.com/mabel-dev/opteryx/issues/464)] Support `LEFT JOIN USING` ([@joocer](https://github.com/joocer))  
 - [[#402](https://github.com/mabel-dev/opteryx/issues/402)] `INNER JOIN ON` supports multiple conditions ([@joocer](https://github.com/joocer))  
+- [[#551](https://github.com/mabel-dev/opteryx/issues/551)] Document stores (MongoDb + FireStore) return '_id' column holding string version of document ID. ([@joocer](https://github.com/joocer))  
 
 
 ## [0.4.1] - 2022-09-12
