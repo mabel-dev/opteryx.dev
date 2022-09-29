@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 **Fixed**
 
 - [[#528](https://github.com/mabel-dev/opteryx/issues/528)] `.shape` and `.count` not working as expected. ([@joocer](https://github.com/joocer))  
+- Numbers expressed in the form `+n` not parsed correctly. ([@joocer](https://github.com/joocer))  
 
 **Changed**
 
