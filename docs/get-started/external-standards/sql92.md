@@ -18,7 +18,7 @@ E011-01	 | `INTEGER` and `SMALLINT` data types                       | yes
 E011-02  | `REAL`, `DOUBLE PRECISION`, and `FLOAT` data types        | unknown
 E011-03  | `DECIMAL` and `NUMERIC` data                              | unknown
 E011-04  | Arithmetic                                                | yes
-E011-05  | Numeric comparison                                        | unknown
+E011-05  | Numeric comparison                                        | yes
 E011-06  | Implicit casting among the numeric data types             | unknown
 **E021** | **Character string types**                                | unknown
 E021-01  | `CHARACTER` data type                                     | unknown
