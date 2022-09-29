@@ -2,29 +2,29 @@
 
 Opteryx is built on the shoulders of other great libraries and components:
 
-Component         | Disposition       | Copyright            | Licence   
+Library           | Disposition       | Copyright            | Licence   
 :---------------- | :---------------- | :------------------- | :--------------- 
-[cityhash](https://github.com/escherba/python-cityhash)    | Installed   | . | [Bespoke](https://github.com/escherba/python-cityhash/blob/master/LICENSE)  
-[cython](https://github.com/cython/cython)                 | Installed   | . | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
+[cityhash](https://github.com/escherba/python-cityhash)    | Installed   |  | [Bespoke](https://github.com/escherba/python-cityhash/blob/master/LICENSE)  
+[cython](https://github.com/cython/cython)                 | Installed   |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
 [datasketch](https://github.com/ekzhu/datasketch)          | Integrated  | 2015 Eric Zhu | [MIT](https://github.com/ekzhu/datasketch/blob/master/LICENSE)
 [datetime_truncate](https://github.com/mediapop/datetime_truncate) | Integrated | 2020 Media Pop | [MIT](https://github.com/mediapop/datetime_truncate/blob/master/LICENSE)
 [distogram](https://github.com/maki-nage/distogram)        | Integrated  | 2020 Romain Picard | [MIT](https://github.com/maki-nage/distogram/blob/master/LICENSE.txt)
 [fuzzy](https://github.com/yougov/fuzzy)                   | Integrated | Jason R. Coombs | [MIT](https://github.com/yougov/fuzzy/blob/master/LICENSE)
 [mbleven](https://github.com/fujimotos/mbleven)            | Integrated  | 2018 Fujimoto Seiji | [Public Domain](https://github.com/fujimotos/mbleven/blob/master/LICENSE)
-[numpy](https://github.com/numpy/numpy)                    | Installed   | . | [BSD-3](https://github.com/numpy/numpy/blob/main/LICENSE.txt)
-[orjson](https://github.com/ijl/orjson)                    | Installed   | . | [Apache 2.0](https://github.com/ijl/orjson/blob/master/LICENSE-APACHE)
-[pyarrow](https://github.com/apache/arrow/)                | Installed   | . | [Apache 2.0](https://github.com/apache/arrow/blob/master/LICENSE.txt)
+[numpy](https://github.com/numpy/numpy)                    | Installed   |  | [BSD-3](https://github.com/numpy/numpy/blob/main/LICENSE.txt)
+[orjson](https://github.com/ijl/orjson)                    | Installed   |  | [Apache 2.0](https://github.com/ijl/orjson/blob/master/LICENSE-APACHE)
+[pyarrow](https://github.com/apache/arrow/)                | Installed   |  | [Apache 2.0](https://github.com/apache/arrow/blob/master/LICENSE.txt)
 [pyarrow_ops](https://github.com/TomScheffers/pyarrow_ops) | Integrated  | TomScheffers (assumed) | [Apache 2.0](https://github.com/TomScheffers/pyarrow_ops/blob/main/LICENSE)
-[pyyaml](https://pyyaml.org/)                              | Installed   | . | [MIT](https://github.com/yaml/pyyaml/blob/master/LICENSE)
-[sqloxide](https://github.com/wseaton/sqloxide)            | Installed   | . | [MIT](https://github.com/wseaton/sqloxide/blob/master/LICENSE)
-[sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) | Transitive | . | [Apache 2.0](https://github.com/sqlparser-rs/sqlparser-rs/blob/main/LICENSE.TXT)
-[typer](https://github.com/tiangolo/typer)                 | Installed   | . | [MIT](https://github.com/tiangolo/typer/blob/master/LICENSE)
+[pyyaml](https://pyyaml.org/)                              | Installed   |  | [MIT](https://github.com/yaml/pyyaml/blob/master/LICENSE)
+[sqloxide](https://github.com/wseaton/sqloxide)            | Installed   |  | [MIT](https://github.com/wseaton/sqloxide/blob/master/LICENSE)
+[sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) | Transitive |  | [Apache 2.0](https://github.com/sqlparser-rs/sqlparser-rs/blob/main/LICENSE.TXT)
+[typer](https://github.com/tiangolo/typer)                 | Installed   |   | [MIT](https://github.com/tiangolo/typer/blob/master/LICENSE)
 
 **Installed** components are installed from PyPI.  
 **Integrated** components have their source code included in the Opteryx codebase.  
 **Transitive** components are key components installed by other components - this is not intended to be a complete list.
 
-Integrated components may differ from their original form. Cosmetic changes are not generally noted however where functionality has been added or altered, this should be recorded in comments.
+Integrated components may differ from their original form. Cosmetic changes are not generally noted however where functionality has been added or altered, this is recorded in comments.
 
 !!! Note   
     License information was correct as at 2022-06-03, or when updated in this document if later.
@@ -40,3 +40,5 @@ Astronaut dataset acquired from [Kaggle](https://www.kaggle.com/nasa/astronaut-y
 Diagrams created using [ASCII Flow](https://asciiflow.com/) or [draw.io](https://github.com/jgraph/drawio).
 
 Website build using [mkdocs-material](https://github.com/squidfunk/mkdocs-material).
+
+SQL-92 conformity tests are based on [sqltest](https://github.com/elliotchance/sqltest).

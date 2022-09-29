@@ -1,4 +1,4 @@
-# Clients
+# Client Connectivity Overview
 
 Opteryx supports two methods of invocation; as an importable Python library and as a command line tool.
 

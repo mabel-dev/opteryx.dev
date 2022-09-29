@@ -2,9 +2,9 @@
 
 Opteryx has three built-in relations for demonstration and testing.
 
-- `$satellites` (8 columns, 177 rows)
-- `$planets` (20 columns, 9 rows) **#plutoisaplanet**
-- `$astronauts` (19 columns,  357 rows)
+&emsp;`$satellites` (8 columns, 177 rows)   
+&emsp;`$planets` (20 columns, 9 rows) **#plutoisaplanet**   
+&emsp;`$astronauts` (19 columns,  357 rows)   
 
 Satellite and Planet datasets acquired from [this source](https://github.com/devstronomy/nasa-data-scraper/tree/f610e541a053f05e26573570604aed50b358cc43/data/json).
 
