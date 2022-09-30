@@ -24,14 +24,14 @@ E011-06  | Implicit casting among the numeric data types             | unknown
 E021-01  | `CHARACTER` data type                                     | unknown
 E021-02  | `CHARACTER VARYING` data type                             | unknown
 E021-03  | Character literals                                        | unknown
-E021-04  | `CHARACTER_LENGTH` function                               | unknown
-E021-05  | `OCTET_LENGTH`                                            | unknown
+E021-04  | `CHARACTER_LENGTH` function                               | no
+E021-05  | `OCTET_LENGTH`                                            | no
 E021-06  | `SUBSTRING` function                                      | unknown
 E021-07  | Character concatenation                                   | unknown
 E021-08  | `UPPER` and `LOWER` functions                             | unknown
 E021-09  | `TRIM` function                                           | unknown
 E021-10  | Implicit casting among the fixed-length and variable-length character string types | unknown
-E021-11  | `POSITION` function                                       | unknown
+E021-11  | `POSITION` function                                       | no
 E021-12  | Character comparison                                      | unknown
 **E031** | **Identifiers**                                           | unknown
 E031-01  | Delimited identifiers                                     | unknown
@@ -54,16 +54,16 @@ E061-04  | `LIKE` predicate                                          | unknown
 E061-05  | `LIKE` predicate: `ESCAPE` clause                         | unknown
 E061-06  | `NULL` predicate                                          | unknown
 E061-07  | Quantified comparison predicate                           | unknown
-E061-08  | `EXISTS` predicate                                        | unknown
+E061-08  | `EXISTS` predicate                                        | no
 E061-09  | Subqueries in comparison predicate                        | unknown
 E061-11  | Subqueries in `IN` predicate                              | unknown
 E061-12  | Subqueries in quantified comparison predicate             | unknown
 E061-13  | Correlated subqueries                                     | unknown
 E061-14  | Search condition                                          | unknown
 **E071** | **Basic query expressions**                               | unknown
-E071-01  | `UNION DISTINCT` table operator                           | unknown
-E071-02  | `UNION ALL` table operator                                | unknown
-E071-03  | `EXCEPT DISTINCT` table operator                          | unknown
+E071-01  | `UNION DISTINCT` table operator                           | no
+E071-02  | `UNION ALL` table operator                                | no
+E071-03  | `EXCEPT DISTINCT` table operator                          | no
 E071-05  | Columns combined via table operators need not have exactly the same data type | unknown
 E071-06  | Table operators in subqueries                             | unknown
 **E081** | **Basic Privileges**                                      | unknown
@@ -163,9 +163,9 @@ F131-05  | Single row `SELECT` with `GROUP BY` and `HAVING` clauses and grouped 
 **F181** | **Multiple module support**                               | unknown
 **F201** | **`CAST` function**                                       | unknown
 **F221** | **Explicit defaults**                                     | unknown
-**F261** | **`CASE` expression**                                     | unknown
-F261-01  | Simple `CASE`                                             | unknown
-F261-02  | Searched `CASE`                                           | unknown
+**F261** | **`CASE` expression**                                     | no
+F261-01  | Simple `CASE`                                             | no
+F261-02  | Searched `CASE`                                           | no
 F261-03  | `NULLIF`                                                  | unknown
 F261-04  | `COALESCE`                                                | unknown
 **F311** | **Schema definition statement**                           | n/a
