@@ -3,6 +3,11 @@
     src: url('DMSerifDisplay-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'Fira Mono';
+    src: url('FiraMono-Regular.ttf');
+}
+
 table {
     width: 100% !important;
     line-height: 1.3em;
@@ -29,13 +34,13 @@ td {
     padding-bottom: 0.5em !important;
     margin-left: 0.8em !important;
     margin-right: 0.8em !important;
-    font-size: 1.3em !important;
+    font-size: 1.2em !important;
     min-width: 9em;
 }
 
 code {
-    font-family: Menlo, 'Robot Mono', 'JetBrains Mono', sans-serif;
-    font-size: 0.9em !important;
+    font-family: 'Menlo', 'JetBrains Mono', sans-serif;
+    font-size: 1em !important;
     color: #d83790 !important;
     font-weight: 300;
     word-wrap: break-word;
@@ -87,7 +92,7 @@ dd {
 h1 {
     font-family: "DM Serif Display", 'Times New Roman', Times, serif;
     font-weight: 900 !important;
-    font-size: 2.2em !important;
+    font-size: 2.5em !important;
     margin-bottom: 0.7em !important;
     color: #4b4b4b !important;
 }
@@ -344,7 +349,18 @@ strong {
     color: #e05fa7 !important;
 }
 
+#hero {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 40% [col-start] 60% [col-start];
+}
+
 #hero h1 {
-    font-size: 3em !important;
+    font-size: 4em !important;
     padding-bottom: 4em;
 }
+
+#hero b {
+    font-size: 1.3em;
+}
+
