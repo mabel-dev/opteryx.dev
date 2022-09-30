@@ -24,12 +24,12 @@ Retrieve rows from zero or more relations.
 SELECT [ DISTINCT ] select_list
   FROM relation [WITH (NO_CACHE,NO_PARTITION,NO_PUSH_PROJECTION)]
        [ INNER ] JOIN relation
-                 USING (column)
        CROSS JOIN relation
        LEFT [ OUTER ] JOIN relation
        RIGHT [ OUTER ] JOIN relation
        FULL [ OUTER ] JOIN relation
-                      ON condition
+                      ON conditions
+                      USING (columns)
    FOR period
  WHERE condition
  GROUP BY groups
@@ -52,13 +52,16 @@ The `DISTINCT` modifier is specified, only unique rows are included in the resul
 ### FROM / JOIN clauses
 
 ~~~
-FROM relation [, ...] [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PROJECTION)]
+FROM relation [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PROJECTION)] [, ...] 
 ~~~
 ~~~
-FROM relation [ INNER ] JOIN relation < USING (column) | ON condition >
+FROM relation [ INNER ] JOIN relation < USING (columns) | ON condition >
 ~~~ 
 ~~~
-FROM relation < LEFT | RIGHT | FULL > [OUTER] JOIN relation
+FROM relation LEFT [ OUTER ] JOIN relation < USING (columns) | ON condition >
+~~~ 
+~~~
+FROM relation < RIGHT | FULL > [OUTER ] JOIN relation
 ~~~
 ~~~
 FROM relation CROSS JOIN < relation | UNNEST(column) >
@@ -68,7 +71,7 @@ The `FROM` clause specifies the source of the data on which the remainder of the
 
 `JOIN` clauses allow you to combine data from multiple relations. If no `JOIN` qualifier is provided, `INNER` will be used. `JOIN` qualifiers are mutually exclusive. `ON` and `USING` clauses are also mutually exclusive and can only be used with `INNER` and `LEFT` joins.
 
-See [Joins](../08%20Joins) for more information on `JOIN` syntax and functionality.
+See [Joins](../joins/) for more information on `JOIN` syntax and functionality.
 
 Hints can be provided as part of the statement to direct the query planner and executor to make decisions. Relation hints are declared as `WITH` statements following a relation in the `FROM` and `JOIN` clauses, for example `FROM $astronauts WITH (NO_CACHE)`. Reconised hints are:
 
@@ -93,9 +96,9 @@ FOR DATES BETWEEN start AND end
 FOR DATES IN range
 ~~~
 
-The `FOR` clause is a non ANSI SQL extension which filters data by the date it was recorded for.
+The `FOR` clause is an Opteryx-specific clause which filters data by the date it was recorded for.
 
-See [Temporality](../09%20Temporality) for more information on `FOR` syntax and functionality.
+See [Time Travel](../adv-time-travel/) for more information on `FOR` syntax and functionality.
 
 ### WHERE clause
 
@@ -146,7 +149,7 @@ User defined variable names must be prefixed with an 'at' symbol (`@`) and the v
 
 System parameters can also be temporarily for a query batch and are prefixed with a dollar sign (`$`).
 
-**Related: `SHOW VARIABLES` and `SHOW PARAMETER`**
+**Related**: `SHOW VARIABLES` and `SHOW PARAMETER`
 
 ## SHOW COLUMNS
 
@@ -189,7 +192,7 @@ FOR DATES IN range
 
 The `FOR` clause specifies the date to review data for. Although this supports the full syntax as per the `SELECT` statements.
 
-See [Temporality](../09%20Temporality) for more information on `FOR` syntax and functionality.
+See [Time Travel](../adv-time-travel/) for more information on `FOR` syntax and functionality.
 
 ## SHOW CREATE TABLE
 
@@ -217,7 +220,7 @@ Display the value of a given configuration setting.
 SHOW PARAMETER parameter
 ~~~
 
-**Related: `SET`**
+**Related**: `SET`
 
 ## SHOW VARIABLES
 
@@ -236,4 +239,4 @@ LIKE pattern
 
 Specify a pattern in the optional `LIKE` clause to filter the results to the desired subset by the variable name. This does not require a left-hand operator, it will always filter by the variable name.
 
-**Related: `SET`**
+**Related**: `SET`

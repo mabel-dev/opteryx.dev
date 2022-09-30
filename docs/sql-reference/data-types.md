@@ -1,18 +1,18 @@
 # Data Types
 
-[Opteryx](https://github.com/mabel-dev/opteryx) uses a reduced set of types compared to full RDBMS platforms.
+[Opteryx](https://github.com/mabel-dev/opteryx) uses a reduced set of types compared to full DBMS platforms.
 
 ## Types
 
-Name        | Symbol                       | Description
------------ | :--------------------------: | --------------
-`BOOLEAN`   | :fontawesome-solid-check:    | Logical boolean (True/False).
-`NUMERIC`   | :fontawesome-solid-hashtag:  | All numeric types.
-`LIST`      | :fontawesome-solid-bars:     | An ordered sequence of strings.
-`VARCHAR`   | :fontawesome-solid-a:        | Variable-length character string.
-`STRUCT`    | :fontawesome-solid-box:      | A dictionary of multiple named values, where each key is a string, but the value can be a different type for each key.
-`TIMESTAMP` | :fontawesome-regular-clock:  | Combination of date and time.
-`INTERVAL`  | :fontawesome-solid-arrows-left-right-to-line: | The difference between two TIMESTAMP values
+Name        | Description
+----------- | --------------
+`BOOLEAN`   | Logical boolean (True/False).
+`NUMERIC`   | All numeric types.
+`LIST`      | An ordered sequence of strings.
+`VARCHAR`   | Variable-length character string.
+`STRUCT`    | A dictionary of multiple named values, where each key is a string, but the value can be a different type for each key.
+`TIMESTAMP` | Combination of date and time.
+`INTERVAL`  | The difference between two TIMESTAMP values
 
 !!! Note  
     `INTERVAL` may not support all functions in all circumstances.  

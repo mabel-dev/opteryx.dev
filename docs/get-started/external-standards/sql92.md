@@ -1,25 +1,18 @@
 # ANSI SQL-92 Conformity
 
-For a system to attest to supporting SQL, a SQL must have good conformance to the [ANSI SQL-92](https://db.cs.cmu.edu/files/sql/sql1992.txt) standard [(ref)](https://15445.courses.cs.cmu.edu/fall2020/slides/02-advancedsql.pdf). This standard is also known as [ISO/IEC 9075:1992](https://www.iso.org/standard/16663.html).
+For a system to [attest to supporting SQL][^1] it must have good conformance to the [ANSI SQL-92](https://db.cs.cmu.edu/files/sql/sql1992.txt) standard. This standard is also known as [ISO/IEC 9075:1992](https://www.iso.org/standard/16663.html).
 
-Opteryx is not a DBMS, so only aims for confirmity to a subset of SQL-92 related to featureset it supports - this is primarily related to `SELECT` statements.
-
-Support statuses in this document:
-
-&emsp;**yes** - The feature is supported.  
-&emsp;**no** - The feature is not supported.  
-&emsp;**n/a** - The feature relates to a feature not supported by Opteryx.  
-&emsp;**unknown** - The feature hasn't been tested against the standard.  
+Opteryx is not a DBMS, so only aims for confirmity to the subset of SQL-92 for to featureset it supports - this is primarily related to `SELECT` statements.
 
 Function | Description                                               | Support
 :------- | :-------------------------------------------------------- | :---------
-**E011** | **Numeric data types**                                    | unknown
+**E011** | **Numeric data types**                                    | partial
 E011-01	 | `INTEGER` and `SMALLINT` data types                       | yes
-E011-02  | `REAL`, `DOUBLE PRECISION`, and `FLOAT` data types        | unknown
+E011-02  | `REAL`, `DOUBLE PRECISION`, and `FLOAT` data types        | partial
 E011-03  | `DECIMAL` and `NUMERIC` data                              | unknown
 E011-04  | Arithmetic                                                | yes
 E011-05  | Numeric comparison                                        | yes
-E011-06  | Implicit casting among the numeric data types             | unknown
+E011-06  | Implicit casting among the numeric data types             | yes
 **E021** | **Character string types**                                | unknown
 E021-01  | `CHARACTER` data type                                     | unknown
 E021-02  | `CHARACTER VARYING` data type                             | unknown
@@ -27,12 +20,12 @@ E021-03  | Character literals                                        | unknown
 E021-04  | `CHARACTER_LENGTH` function                               | no
 E021-05  | `OCTET_LENGTH`                                            | no
 E021-06  | `SUBSTRING` function                                      | unknown
-E021-07  | Character concatenation                                   | unknown
-E021-08  | `UPPER` and `LOWER` functions                             | unknown
+E021-07  | Character concatenation                                   | yes
+E021-08  | `UPPER` and `LOWER` functions                             | yes
 E021-09  | `TRIM` function                                           | unknown
 E021-10  | Implicit casting among the fixed-length and variable-length character string types | unknown
 E021-11  | `POSITION` function                                       | no
-E021-12  | Character comparison                                      | unknown
+E021-12  | Character comparison                                      | yes
 **E031** | **Identifiers**                                           | unknown
 E031-01  | Delimited identifiers                                     | unknown
 E031-02  | Lower case identifiers                                    | unknown
@@ -118,7 +111,7 @@ E152-01  | `SET TRANSACTION` statement: `ISOLATION LEVEL SERIALIZABLE` clause   
 E152-02  | `SET TRANSACTION` statement: `READ ONLY` and `READ WRITE` clauses    | n/a
 **E+**   | **Other**                                                 | unknown
 **E153** | **Updatable queries with subqueries**                     | unknown
-**E161** | **SQL comments using leading double minus**               | unknown
+**E161** | **SQL comments using leading double minus**               | yes
 **E171** | **`SQLSTATE` support**                                    | unknown
 **E182** | **Host language binding**                                 | unknown
 **F021** | **Basic information schema**                              | unknown
@@ -192,3 +185,15 @@ T321-05  | `RETURN` statement                                        | unknown
 T321-06  | `ROUTINES` view                                           | unknown
 T321-07  | `PARAMETERS` view                                         | unknown
 **T631** | **`IN` predicate with one list element**                  | unknown
+
+Support statuses in this table:
+
+&emsp;**yes** - The feature is supported.  
+&emsp;**no** - The feature is not supported.  
+&emsp;**partial** - Some features are supported.  
+&emsp;**n/a** - The feature relates to a feature not supported by Opteryx.  
+&emsp;**unknown** - The feature has not been tested against the standard.  
+
+Note that **unknown** generally means that conformity cannot ascertained because appropriate or complete tests have not been written, the system may be fully or partiality conformant.
+
+[^1]: https://15445.courses.cs.cmu.edu/fall2020/slides/02-advancedsql.pdf
