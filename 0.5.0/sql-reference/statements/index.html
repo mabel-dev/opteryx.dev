@@ -1467,12 +1467,12 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="n">select_list</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">relation</span><span class="w"> </span><span class="p">[</span><span class="k">WITH</span><span class="w"> </span><span class="p">(</span><span class="n">NO_CACHE</span><span class="p">,</span><span class="n">NO_PARTITION</span><span class="p">,</span><span class="n">NO_PUSH_PROJECTION</span><span class="p">)]</span><span class="w"></span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">       </span><span class="p">[</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">                 </span><span class="k">USING</span><span class="w"> </span><span class="p">(</span><span class="k">column</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">       </span><span class="k">CROSS</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">       </span><span class="k">LEFT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">       </span><span class="k">RIGHT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">       </span><span class="k">FULL</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                      </span><span class="k">ON</span><span class="w"> </span><span class="n">condition</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">       </span><span class="k">CROSS</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">       </span><span class="k">LEFT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">       </span><span class="k">RIGHT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">       </span><span class="k">FULL</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">                      </span><span class="k">ON</span><span class="w"> </span><span class="n">conditions</span><span class="w"></span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                      </span><span class="k">USING</span><span class="w"> </span><span class="p">(</span><span class="n">columns</span><span class="p">)</span><span class="w"></span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="k">period</span><span class="w"></span>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="w"></span>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">groups</span><span class="w"></span>
@@ -1487,17 +1487,19 @@
 <p>The <code>SELECT</code> clause specifies the list of columns that will be returned by the query. While it appears first in the clause, logically the expressions here are executed after most other clauses. The <code>SELECT</code> clause can contain arbitrary expressions that transform the output, as well as aggregate functions.</p>
 <p>The <code>DISTINCT</code> modifier is specified, only unique rows are included in the result set. In this case, each output column must be of a type that allows comparison.</p>
 <h3 id="from-join-clauses">FROM / JOIN clauses</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FROM relation [, ...] [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PROJECTION)]
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FROM relation [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PROJECTION)] [, ...] 
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>FROM relation [ INNER ] JOIN relation &lt; USING (column) | ON condition &gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>FROM relation [ INNER ] JOIN relation &lt; USING (columns) | ON condition &gt;
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>FROM relation &lt; LEFT | RIGHT | FULL &gt; [OUTER] JOIN relation
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>FROM relation LEFT [ OUTER ] JOIN relation &lt; USING (columns) | ON condition &gt;
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>FROM relation CROSS JOIN &lt; relation | UNNEST(column) &gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>FROM relation &lt; RIGHT | FULL &gt; [OUTER ] JOIN relation
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>FROM relation CROSS JOIN &lt; relation | UNNEST(column) &gt;
 </code></pre></div></p>
 <p>The <code>FROM</code> clause specifies the source of the data on which the remainder of the query should operate. Logically, the <code>FROM</code> clause is where the query starts execution. The <code>FROM</code> clause can contain a single relation, a combination of multiple relations that are joined together, or another <code>SELECT</code> query inside a subquery node.</p>
 <p><code>JOIN</code> clauses allow you to combine data from multiple relations. If no <code>JOIN</code> qualifier is provided, <code>INNER</code> will be used. <code>JOIN</code> qualifiers are mutually exclusive. <code>ON</code> and <code>USING</code> clauses are also mutually exclusive and can only be used with <code>INNER</code> and <code>LEFT</code> joins.</p>
-<p>See <a href="../08%20Joins">Joins</a> for more information on <code>JOIN</code> syntax and functionality.</p>
+<p>See <a href="../joins/">Joins</a> for more information on <code>JOIN</code> syntax and functionality.</p>
 <p>Hints can be provided as part of the statement to direct the query planner and executor to make decisions. Relation hints are declared as <code>WITH</code> statements following a relation in the <code>FROM</code> and <code>JOIN</code> clauses, for example <code>FROM $astronauts WITH (NO_CACHE)</code>. Reconised hints are:</p>
 <table>
 <thead>
@@ -1526,89 +1528,89 @@
 <p>Hints are not guaranteed to be followed, the query planner and executor may ignore hints in specific circumstances.</p>
 </div>
 <h3 id="for-clause">FOR clause</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>FOR date
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>FOR date
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>FOR DATES BETWEEN start AND end
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>FOR DATES BETWEEN start AND end
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>FOR DATES IN range
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>FOR DATES IN range
 </code></pre></div></p>
-<p>The <code>FOR</code> clause is a non ANSI SQL extension which filters data by the date it was recorded for.</p>
-<p>See <a href="../09%20Temporality">Temporality</a> for more information on <code>FOR</code> syntax and functionality.</p>
+<p>The <code>FOR</code> clause is an Opteryx-specific clause which filters data by the date it was recorded for.</p>
+<p>See <a href="../adv-time-travel/">Time Travel</a> for more information on <code>FOR</code> syntax and functionality.</p>
 <h3 id="where-clause">WHERE clause</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>WHERE condition
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>WHERE condition
 </code></pre></div>
 <p>The <code>WHERE</code> clause specifies any filters to apply to the data. This allows you to select only a subset of the data in which you are interested. Logically the <code>WHERE</code> clause is applied immediately after the <code>FROM</code> clause.</p>
 <h3 id="group-by-having-clauses">GROUP BY / HAVING clauses</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>GROUP BY expression [, ...]
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>GROUP BY expression [, ...]
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>HAVING group_filter
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>HAVING group_filter
 </code></pre></div></p>
 <p>The <code>GROUP BY</code> clause specifies which grouping columns should be used to perform any aggregations in the <code>SELECT</code> clause. If the <code>GROUP BY</code> clause is specified, the query is always an aggregate query, even if no aggregations are present in the <code>SELECT</code> clause. The <code>HAVING</code> clause specifies filters to apply to aggregated data, <code>HAVING</code> clauses require a <code>GROUP BY</code> clause.</p>
 <p><code>GROUP BY</code> expressions may use column numbers, however, this is not recommended for statements intended for reuse. </p>
 <h3 id="order-by-limit-offset-clauses">ORDER BY / LIMIT / OFFSET clauses</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ORDER BY expression [ ASC | DESC ] [, ...]
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>ORDER BY expression [ ASC | DESC ] [, ...]
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>OFFSET count
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>OFFSET count
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>LIMIT count
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>LIMIT count
 </code></pre></div></p>
 <p><code>ORDER BY</code>, <code>LIMIT</code> and <code>OFFSET</code> are output modifiers. Logically they are applied at the very end of the query. The <code>OFFSET</code> clause discards initial rows from the returned set, the <code>LIMIT</code> clause restricts the amount of rows fetched, and the <code>ORDER BY</code> clause sorts the rows on the sorting criteria in either ascending or descending order.</p>
 <p><code>ORDER BY</code> expressions may use column numbers, however, this is not recommended for statements intended for reuse.</p>
 <h2 id="set">SET</h2>
 <p>Specifies the value of a variable, the variable is available to the scope of the executing query batch.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">SET</span><span class="w"> </span><span class="k">variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">SET</span><span class="w"> </span><span class="k">variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
 </code></pre></div>
 <p>User defined variable names must be prefixed with an 'at' symbol (<code>@</code>) and the value must be a literal value. The variable can be used within <code>SELECT</code> clauses within the same query batch. A <code>SET</code> statement without a <code>SELECT</code> statement is invalid.</p>
 <p>System parameters can also be temporarily for a query batch and are prefixed with a dollar sign (<code>$</code>).</p>
-<p><strong>Related: <code>SHOW VARIABLES</code> and <code>SHOW PARAMETER</code></strong></p>
+<p><strong>Related</strong>: <code>SHOW VARIABLES</code> and <code>SHOW PARAMETER</code></p>
 <h2 id="show-columns">SHOW COLUMNS</h2>
 <p>List the columns in a relation along with their data type. Without any modifiers, <code>SHOW COLUMNS</code> only reads a single page of data before returning.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="p">[</span><span class="n">EXTENDED</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="k">FULL</span><span class="p">]</span><span class="w"> </span><span class="n">COLUMNS</span><span class="w"></span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span><span class="w"></span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">period</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="p">[</span><span class="n">EXTENDED</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="k">FULL</span><span class="p">]</span><span class="w"> </span><span class="n">COLUMNS</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span><span class="w"></span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">period</span><span class="w"></span>
 </code></pre></div>
 <h3 id="extended-modifier">EXTENDED modifier</h3>
 <p>Inclusion of the <code>EXTENDED</code> modifier includes summary statistics about the columns which take longer and more memory to create than the standard summary information without the modifier. The summary information varies between column types and values.</p>
 <h3 id="full-modifier">FULL modifier</h3>
 <p>Inclusion of the <code>FULL</code> modifier uses the entire dataset in order to return complete column information, rather than just the first page from the dataset.</p>
 <h3 id="like-clause">LIKE clause</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>LIKE pattern
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>LIKE pattern
 </code></pre></div>
 <p>Specify a pattern in the optional <code>LIKE</code> clause to filter the results to the desired subset by the column name. This does not require a left-hand operator, it will always filter by the column name.</p>
 <h3 id="for-clause_1">FOR clause</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>FOR date
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>FOR date
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>FOR DATES BETWEEN start AND end
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>FOR DATES BETWEEN start AND end
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>FOR DATES IN range
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>FOR DATES IN range
 </code></pre></div></p>
 <p>The <code>FOR</code> clause specifies the date to review data for. Although this supports the full syntax as per the <code>SELECT</code> statements.</p>
-<p>See <a href="../09%20Temporality">Temporality</a> for more information on <code>FOR</code> syntax and functionality.</p>
+<p>See <a href="../adv-time-travel/">Time Travel</a> for more information on <code>FOR</code> syntax and functionality.</p>
 <h2 id="show-create-table">SHOW CREATE TABLE</h2>
 <p>Show an approximation of the SQL to create a specified relation.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
 </code></pre></div>
 <p>The SQL generated by this statement is unlikely to be able to be used with any SQL engine to create the table without some intervention and edits. It is intended to reduce effort to obtain this SQL, not eliminate it.</p>
 <h2 id="show-functions">SHOW FUNCTIONS</h2>
 <p>List the functions and aggregators supported by the engine.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">FUNCTIONS</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">FUNCTIONS</span><span class="w"></span>
 </code></pre></div>
 <h2 id="show-parameter">SHOW PARAMETER</h2>
 <p>Display the value of a given configuration setting.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="k">PARAMETER</span><span class="w"> </span><span class="k">parameter</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="k">PARAMETER</span><span class="w"> </span><span class="k">parameter</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Related: <code>SET</code></strong></p>
+<p><strong>Related</strong>: <code>SET</code></p>
 <h2 id="show-variables">SHOW VARIABLES</h2>
 <p>List the variables set in the query batch.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">VARIABLES</span><span class="w"></span>
-<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">VARIABLES</span><span class="w"></span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span><span class="w"></span>
 </code></pre></div>
 <h3 id="like-clause_1">LIKE clause</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>LIKE pattern
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>LIKE pattern
 </code></pre></div>
 <p>Specify a pattern in the optional <code>LIKE</code> clause to filter the results to the desired subset by the variable name. This does not require a left-hand operator, it will always filter by the variable name.</p>
-<p><strong>Related: <code>SET</code></strong></p>
+<p><strong>Related</strong>: <code>SET</code></p>
 
 
 

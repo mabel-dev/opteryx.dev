@@ -1119,13 +1119,8 @@
 
 
 <h1 id="ansi-sql-92-conformity">ANSI SQL-92 Conformity</h1>
-<p>For a system to attest to supporting SQL, a SQL must have good conformance to the <a href="https://db.cs.cmu.edu/files/sql/sql1992.txt">ANSI SQL-92</a> standard <a href="https://15445.courses.cs.cmu.edu/fall2020/slides/02-advancedsql.pdf">(ref)</a>. This standard is also known as <a href="https://www.iso.org/standard/16663.html">ISO/IEC 9075:1992</a>.</p>
-<p>Opteryx is not a DBMS, so only aims for confirmity to a subset of SQL-92 related to featureset it supports - this is primarily related to <code>SELECT</code> statements.</p>
-<p>Support statuses in this document:</p>
-<p>&emsp;<strong>yes</strong> - The feature is supported.<br />
-&emsp;<strong>no</strong> - The feature is not supported.<br />
-&emsp;<strong>n/a</strong> - The feature relates to a feature not supported by Opteryx.<br />
-&emsp;<strong>unknown</strong> - The feature hasn't been tested against the standard.  </p>
+<p>For a system to <a href="https://15445.courses.cs.cmu.edu/fall2020/slides/02-advancedsql.pdf">attest to supporting SQL</a> it must have good conformance to the <a href="https://db.cs.cmu.edu/files/sql/sql1992.txt">ANSI SQL-92</a> standard. This standard is also known as <a href="https://www.iso.org/standard/16663.html">ISO/IEC 9075:1992</a>.</p>
+<p>Opteryx is not a DBMS, so only aims for confirmity to the subset of SQL-92 for to featureset it supports - this is primarily related to <code>SELECT</code> statements.</p>
 <table>
 <thead>
 <tr>
@@ -1138,7 +1133,7 @@
 <tr>
 <td align="left"><strong>E011</strong></td>
 <td align="left"><strong>Numeric data types</strong></td>
-<td align="left">unknown</td>
+<td align="left">partial</td>
 </tr>
 <tr>
 <td align="left">E011-01</td>
@@ -1148,7 +1143,7 @@
 <tr>
 <td align="left">E011-02</td>
 <td align="left"><code>REAL</code>, <code>DOUBLE PRECISION</code>, and <code>FLOAT</code> data types</td>
-<td align="left">unknown</td>
+<td align="left">partial</td>
 </tr>
 <tr>
 <td align="left">E011-03</td>
@@ -1168,7 +1163,7 @@
 <tr>
 <td align="left">E011-06</td>
 <td align="left">Implicit casting among the numeric data types</td>
-<td align="left">unknown</td>
+<td align="left">yes</td>
 </tr>
 <tr>
 <td align="left"><strong>E021</strong></td>
@@ -1208,12 +1203,12 @@
 <tr>
 <td align="left">E021-07</td>
 <td align="left">Character concatenation</td>
-<td align="left">unknown</td>
+<td align="left">yes</td>
 </tr>
 <tr>
 <td align="left">E021-08</td>
 <td align="left"><code>UPPER</code> and <code>LOWER</code> functions</td>
-<td align="left">unknown</td>
+<td align="left">yes</td>
 </tr>
 <tr>
 <td align="left">E021-09</td>
@@ -1233,7 +1228,7 @@
 <tr>
 <td align="left">E021-12</td>
 <td align="left">Character comparison</td>
-<td align="left">unknown</td>
+<td align="left">yes</td>
 </tr>
 <tr>
 <td align="left"><strong>E031</strong></td>
@@ -1663,7 +1658,7 @@
 <tr>
 <td align="left"><strong>E161</strong></td>
 <td align="left"><strong>SQL comments using leading double minus</strong></td>
-<td align="left">unknown</td>
+<td align="left">yes</td>
 </tr>
 <tr>
 <td align="left"><strong>E171</strong></td>
@@ -2032,6 +2027,13 @@
 </tr>
 </tbody>
 </table>
+<p>Support statuses in this table:</p>
+<p>&emsp;<strong>yes</strong> - The feature is supported.<br />
+&emsp;<strong>no</strong> - The feature is not supported.<br />
+&emsp;<strong>partial</strong> - Some features are supported.<br />
+&emsp;<strong>n/a</strong> - The feature relates to a feature not supported by Opteryx.<br />
+&emsp;<strong>unknown</strong> - The feature has not been tested against the standard.  </p>
+<p>Note that <strong>unknown</strong> generally means that conformity cannot ascertained because appropriate or complete tests have not been written, the system may be fully or partiality conformant.</p>
 
 
 
