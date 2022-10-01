@@ -100,3 +100,7 @@ nav:
         - Storage Engine: contributing/internals/storage-engine.md
         - Testing Approach: contributing/internals/testing.md
       - Version Goals: contributing/version-goals.md
+  - Blog:
+      - Year 2022:
+        - Building our first Optimizer: blog/202209-building-our-first-optimizer.md
+

@@ -1,6 +1,6 @@
 # Statements
 
-[Opteryx](https://github.com/mabel-dev/opteryx) targets ANSI SQL compliant syntax. This standard alignment allows Opteryx users to quickly understand how to query data and enables easier porting of SQL between query engines and databases.
+[Opteryx](https://github.com/mabel-dev/opteryx) supports the following statement forms.
 
 ## EXPLAIN
 
@@ -19,6 +19,8 @@ The `EXPLAIN` clause outputs a summary of the execution plan for the query in th
 ## SELECT
 
 Retrieve rows from zero or more relations.
+
+[Opteryx](https://github.com/mabel-dev/opteryx) is targeting [ANSI SQL-92](https://db.cs.cmu.edu/files/sql/sql1992.txt) compliant syntax for `SELECT` statements. This standard alignment allows Opteryx users to quickly understand how to query data and enables easier porting of SQL between query engines and databases.
 
 ~~~sql
 SELECT [ DISTINCT ] select_list
