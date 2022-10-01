@@ -36,6 +36,8 @@ Most `JOIN`s require iterating over two relations, the _left_ relation, which is
 
 ## 7. Use the correct `JOIN`
 
+A `CROSS JOIN` can quickly generate millions of records to be filtered, if you can use any join other than the `CROSS JOIN`, do that.
+
 ## 8. Use `LIMIT`
 
 `LIMIT` stops a query when it has returned the desired number of results; if you do not want the full dataset, using `LIMIT` can reduce the time taken to process a statement.

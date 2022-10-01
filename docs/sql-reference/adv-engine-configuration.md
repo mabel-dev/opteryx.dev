@@ -32,6 +32,9 @@ Query parameters which affect the execution of the query can be tuned on a per-q
 !!! function "`page_size`: _int_ = **67108864**"     
     Approximate Page Size in bytes - default is 64Mb.
 
+!!! function "`enabled_page_management`: _boolean_ = **True**"
+    Use the internal page merge and split functions.
+
 ## WITH hints
 
 Hints are used to force the planner, optimizer or the executor to make specific decisions. If a hint is not recognized, it is ignored by the planner and executor, however is reported in the warnings.

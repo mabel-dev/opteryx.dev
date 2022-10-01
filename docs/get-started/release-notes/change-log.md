@@ -30,6 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#402](https://github.com/mabel-dev/opteryx/issues/402)] `INNER JOIN ON` supports multiple conditions ([@joocer](https://github.com/joocer))  
 - [[#551](https://github.com/mabel-dev/opteryx/issues/551)] Document stores (MongoDb + FireStore) return '_id' column holding string version of document ID. ([@joocer](https://github.com/joocer))  
 - [[#532](https://github.com/mabel-dev/opteryx/issues/532)] Runtime parameters are able to be altered using the `SET` statement. ([@joocer](https://github.com/joocer)) 
+- [[#524](https://github.com/mabel-dev/opteryx/issues/524)] Query Optimizer - conjunctive predicate splitter. ([@joocer](https://github.com/joocer)) 
 
 
 ## [0.4.1] - 2022-09-12

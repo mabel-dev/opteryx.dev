@@ -6,7 +6,7 @@ The Opteryx query engine has the following key components and general process:
 
 1) The Parser & Lexer, which recieves the user SQL and builds an Abstract Syntax Tree (AST).
 2) The Planner, which recieves the AST and builds a Query Plan.
-3) The Optimizer (Raptor), recieves a Query Plan and rewrites it to improve performance. 
+3) The Optimizer, recieves a Query Plan and rewrites it to improve performance. 
 4) The Query Executor, which recieves the Query Plan and returns the result dataset.
 
 ## Parser & Lexer
@@ -40,9 +40,11 @@ The planner ensures the processes to be applied to the data reflect this order a
 
 The Query Plan can be seen for a given query using the `EXPLAIN` query.
 
-## Query Optimizer (Raptor)
+## Query Optimizer
 
 The goal of the Query Optimizer is to rewrite the Query Plan to a plan which will return result to users faster.
+
+The current optimizer is immature and requires hand-tuning of the input query to achieve best results.
 
 ## Query Executor
 
