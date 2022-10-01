@@ -1055,8 +1055,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#query-optimizer-raptor" class="md-nav__link">
-    Query Optimizer (Raptor)
+  <a href="#query-optimizer" class="md-nav__link">
+    Query Optimizer
   </a>
   
 </li>
@@ -1180,8 +1180,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#query-optimizer-raptor" class="md-nav__link">
-    Query Optimizer (Raptor)
+  <a href="#query-optimizer" class="md-nav__link">
+    Query Optimizer
   </a>
   
 </li>
@@ -1227,7 +1227,7 @@
 <p>The Opteryx query engine has the following key components and general process:</p>
 <p>1) The Parser &amp; Lexer, which recieves the user SQL and builds an Abstract Syntax Tree (AST).
 2) The Planner, which recieves the AST and builds a Query Plan.
-3) The Optimizer (Raptor), recieves a Query Plan and rewrites it to improve performance. 
+3) The Optimizer, recieves a Query Plan and rewrites it to improve performance. 
 4) The Query Executor, which recieves the Query Plan and returns the result dataset.</p>
 <h2 id="parser-lexer">Parser &amp; Lexer</h2>
 <p>The primary goal of the Parser and Lexer (which in some engines is two separate components) is to interpret the SQL provided by the user. This is generally done in two steps, the first is the break the query into separate tokens (or words) and the second is to understand the meaning of those tokens.</p>
@@ -1245,8 +1245,9 @@
 <p><img alt="OPERATOR ORDER" src="../operator-order.svg" /> </p>
 <p>The planner ensures the processes to be applied to the data reflect this order and creates the most convenient plan to achieve this.</p>
 <p>The Query Plan can be seen for a given query using the <code>EXPLAIN</code> query.</p>
-<h2 id="query-optimizer-raptor">Query Optimizer (Raptor)</h2>
+<h2 id="query-optimizer">Query Optimizer</h2>
 <p>The goal of the Query Optimizer is to rewrite the Query Plan to a plan which will return result to users faster.</p>
+<p>The current optimizer is immature and requires hand-tuning of the input query to achieve best results.</p>
 <h2 id="query-executor">Query Executor</h2>
 <p>The goal of the Query Executor is to produce the results for the user. It takes the Plan and executes the steps in the plan.</p>
 <p>Opteryx implements a vectorized Volcano model executor. This means that the planner starts at the node closest to the end of the plan (e.g. <code>LIMIT</code>) and asks it for a page of data. This node asks its preceeding node for a page of data, etc etc until it gets to the node which aquires data from source. The data is then processed by each node until it is returned to the <code>LIMIT</code> node at the end.</p>

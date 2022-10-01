@@ -1312,6 +1312,7 @@ Grouping by columns with high cardinality (mostly unique) is generally slower th
 <p>Most <code>JOIN</code>s require iterating over two relations, the <em>left</em> relation, which is the one in the <code>FROM</code> clause, and the <em>right</em> relation which is the one in the <code>JOIN</code> clause (<code>SELECT * FROM left JOIN right</code>). It is generally faster to put the smaller relation to the <em>left</em>.</p>
 <h2 id="6-do-not-use-too-many-values-with-the-in-keyword">6. Do not use too many values with the <code>IN</code> keyword</h2>
 <h2 id="7-use-the-correct-join">7. Use the correct <code>JOIN</code></h2>
+<p>A <code>CROSS JOIN</code> can quickly generate millions of records to be filtered, if you can use any join other than the <code>CROSS JOIN</code>, do that.</p>
 <h2 id="8-use-limit">8. Use <code>LIMIT</code></h2>
 <p><code>LIMIT</code> stops a query when it has returned the desired number of results; if you do not want the full dataset, using <code>LIMIT</code> can reduce the time taken to process a statement.</p>
 <p>However, some operations are 'greedy', that is, they need all of the data for their operation (for example <code>ORDER BY</code>, and <code>GROUP BY</code>) - <code>LIMIT</code> does not have the same impact on these queries.</p>
