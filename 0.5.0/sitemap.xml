@@ -6,6 +6,31 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/blog/202209-building-our-first-optimizer/</loc>
+         <lastmod>2022-10-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/blog/unpublished/20220205%20Writing%20a%20Query%20Engine/</loc>
+         <lastmod>2022-10-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/blog/unpublished/202204%20Introduction%20to%20Query%20Engines/</loc>
+         <lastmod>2022-10-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/blog/unpublished/20220901%20Lessons%20Learnt%20so%20Far/</loc>
+         <lastmod>2022-10-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/blog/unpublished/20221001%20Storage/</loc>
+         <lastmod>2022-10-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.5.0/contributing/code-of-conduct/</loc>
          <lastmod>2022-10-01</lastmod>
          <changefreq>daily</changefreq>

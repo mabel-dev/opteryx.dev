@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.5.0/sql-reference/statements/">
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.4">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.5">
     
     
       
@@ -234,6 +234,29 @@
         Contributing
       </a>
     </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../blog/202209-building-our-first-optimizer/" class="md-tabs__link">
+        Blog
+      </a>
+    </li>
+  
+
   
 
       
@@ -1253,6 +1276,87 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Blog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Blog" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Blog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Year 2022
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Year 2022" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Year 2022
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/202209-building-our-first-optimizer/" class="md-nav__link">
+        Building our first Optimizer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1451,7 +1555,7 @@
 
 
 <h1 id="statements">Statements</h1>
-<p><a href="https://github.com/mabel-dev/opteryx">Opteryx</a> targets ANSI SQL compliant syntax. This standard alignment allows Opteryx users to quickly understand how to query data and enables easier porting of SQL between query engines and databases.</p>
+<p><a href="https://github.com/mabel-dev/opteryx">Opteryx</a> supports the following statement forms.</p>
 <h2 id="explain">EXPLAIN</h2>
 <p>Show the logical execution plan of a statement.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">EXPLAIN</span><span class="w"></span>
@@ -1464,6 +1568,7 @@
 </div>
 <h2 id="select">SELECT</h2>
 <p>Retrieve rows from zero or more relations.</p>
+<p><a href="https://github.com/mabel-dev/opteryx">Opteryx</a> is targeting <a href="https://db.cs.cmu.edu/files/sql/sql1992.txt">ANSI SQL-92</a> compliant syntax for <code>SELECT</code> statements. This standard alignment allows Opteryx users to quickly understand how to query data and enables easier porting of SQL between query engines and databases.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="n">select_list</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">relation</span><span class="w"> </span><span class="p">[</span><span class="k">WITH</span><span class="w"> </span><span class="p">(</span><span class="n">NO_CACHE</span><span class="p">,</span><span class="n">NO_PARTITION</span><span class="p">,</span><span class="n">NO_PUSH_PROJECTION</span><span class="p">)]</span><span class="w"></span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">       </span><span class="p">[</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
