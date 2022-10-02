@@ -364,3 +364,8 @@ strong {
     font-size: 1.3em;
 }
 
+.centro {
+    display: block;
+    margin: auto;
+    width: 75%;
+}
