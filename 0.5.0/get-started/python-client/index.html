@@ -1274,35 +1274,40 @@
 --->
 
 <!--- start --->
-<dl><dt><h2>class <b>Connection</b> ()</h2></dd></dl>
+<dl><dt><h2>class <b>Connection</b> ()</h2></ul></dd></dl>
 <dl><dt><b>cursor</b> ()</dt><dd>
-return a cursor object</dd></dl>
+</br>return a cursor object</li></ul></dd></dl>
 <dl><dt><b>close</b> ()</dt><dd>
-exists for interface compatibility only</dd></dl>
-<dl><dt><h2>class <b>Cursor</b> (connection)</h2></dd></dl>
-<dl><dt><b>execute</b> (operation, params)</dt><dd></dd></dl>
-<dl><dt><b>rowcount</b> ()</dt><dd></dd></dl>
-<dl><dt><b>shape</b> ()</dt><dd></dd></dl>
+</br>exists for interface compatibility only</li></ul></dd></dl>
+<dl><dt><h2>class <b>Cursor</b> (connection)</h2></ul></dd></dl>
+<dl><dt><b>execute</b> (operation, params)</dt><dd></ul></dd></dl>
+<dl><dt><b>rowcount</b> ()</dt><dd></ul></dd></dl>
+<dl><dt><b>shape</b> ()</dt><dd></ul></dd></dl>
 <dl><dt><b>stats</b> ()</dt><dd>
-execution statistics</dd></dl>
+</br>execution statistics</li></ul></dd></dl>
 <dl><dt><b>has_warnings</b> ()</dt><dd>
-do I have warnings</dd></dl>
+</br>do I have warnings</li></ul></dd></dl>
 <dl><dt><b>warnings</b> ()</dt><dd>
-list of run-time warnings</dd></dl>
+</br>list of run-time warnings</li></ul></dd></dl>
 <dl><dt><b>fetchone</b> (as_dicts)</dt><dd>
-Fetch one record only.
+</br>Fetch one record only.</li>
 
-<p><b>Parameters</b></p><ul><li>as_dicts</li> -  boolean (optional)  
-Return a dictionary, default is False, return a tuple</dd></dl>
+<p><b>Parameters</b></p><ul><li>as_dicts:  boolean (optional)
+</br>Return a dictionary, default is False, return a tuple</li></ul></dd></dl>
 <dl><dt><b>fetchmany</b> (size, as_dicts)</dt><dd>
-fetch a given number of records</dd></dl>
+</br>fetch a given number of records</li></ul></dd></dl>
 <dl><dt><b>fetchall</b> (as_dicts)</dt><dd>
-fetch all matching records</dd></dl>
+</br>fetch all matching records</li></ul></dd></dl>
 <dl><dt><b>arrow</b> (size)</dt><dd>
-fetch all matching records as a pyarrow table</dd></dl>
+</br>Fetch the resultset as a pyarrow table, this is generally the fastest way to</li> get the entire set of results.
+
+<p><b>Parameters</b></p><ul><li>size:  int (optional)
+</br>Return the head 'size' number of records.</li>
+
+<p><b>Returns</b></p><ul><li>pyarrow.Table: </ul></dd></dl>
 <dl><dt><b>close</b> ()</dt><dd>
-close the connection</dd></dl>
-<dl><dt><b>head</b> (size)</dt><dd></dd></dl>
+</br>close the connection</li></ul></dd></dl>
+<dl><dt><b>head</b> (size)</dt><dd></ul></dd></dl>
 
 <hr>
 <p>This file has been automatically generated from the source code.</p>
