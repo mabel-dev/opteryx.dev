@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 **Changed**
 
+- ⚠️**BREAKING** (alignment) `as_arrow` renamed to `arrow` to align to [DuckDB](https://duckdb.org/docs/api/python/overview#apache-arrow) naming. ([@joocer](https://github.com/joocer))  
 - ⚠️**BREAKING** `SHOW COLUMNS` returns the column name in the `name` column, previously `column_name` ([@joocer](https://github.com/joocer))  
 - ⚠️**BREAKING** (correction) cursor 'fetch*' methods returns tuples rather than dictionaries as defaults, this is correcting a bug in [PEP249](https://peps.python.org/pep-0249/) compatibility. ([@joocer](https://github.com/joocer))  
 - ⚠️**BREAKING** (security) [[#517](https://github.com/mabel-dev/opteryx/issues/517)] Placeholder changed from '%s' to '?'. ([@joocer](https://github.com/joocer))  
