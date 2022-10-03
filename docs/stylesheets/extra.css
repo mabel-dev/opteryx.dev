@@ -231,7 +231,8 @@ strong {
     padding: 0.4em 1em !important;
     font-weight: 400 !important;
     color: #fff !important;
-    background-color: #d83790 !important;;
+    background-color: #d83790 !important;
+    text-decoration: none !important;
 }
 
 .btn-github {
@@ -368,4 +369,8 @@ strong {
     display: block;
     margin: auto;
     width: 75%;
+}
+
+strong > .twemoji {
+    color: #dfbf00 !important;
 }

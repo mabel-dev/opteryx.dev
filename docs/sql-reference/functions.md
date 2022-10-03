@@ -34,6 +34,10 @@ Definitions noted with a :octicons-plus-16: accept different input arguments.
 !!! function "`SAFE_CAST` (**any**: _any_ AS **type**) → _[type]_"    
     Alias for `TRY_CAST`(**any** AS **type**).  
 
+!!! function "`STR` (**any**: _any_) → _varchar_"     
+    Alias of `VARCHAR`(**any**) and `CAST`(**any** AS VARCHAR)   
+    **:octicons-north-star-24: New in 0.6** 
+
 !!! function "`STRING` (**any**: _any_) → _varchar_"     
     Alias of `VARCHAR`(**any**) and `CAST`(**any** AS VARCHAR)
 
@@ -53,7 +57,7 @@ Definitions noted with a :octicons-plus-16: accept different input arguments.
 
 ## Date & Time Functions
 
-For more details, see [Working with Timestamps](../Working%20with%20SQL/10%20Working%20with%20Timestamps/).
+For more details, see [Working with Timestamps](../adv-working-with-timestamps//).
 
 !!! function "`current_date` → _timestamp_"  
     Return the current date, in UTC. Note `current_date` does not require parenthesis.  
@@ -123,7 +127,7 @@ For more details, see [Working with Timestamps](../Working%20with%20SQL/10%20Wor
     Returns the year from **ts**.  
     Alias for `EXTRACT`(year FROM **ts**)
 
-## Infix Function
+## Infix Functions
 
 These are functions that are called similar to comparison operators:
 

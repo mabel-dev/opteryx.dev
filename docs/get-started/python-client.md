@@ -74,7 +74,7 @@ fetch one record only</dd></dl>
 fetch a given number of records</dd></dl>
 <dl><dt><b>fetchall</b> (as_dicts)</dt><dd> 
 fetch all matching records</dd></dl>
-<dl><dt><b>as_arrow</b> (size)</dt><dd> 
+<dl><dt><b>arrow</b> (size)</dt><dd> 
 fetch all matching records as a pyarrow table</dd></dl>
 <dl><dt><b>close</b> ()</dt><dd> 
 close the connection</dd></dl>
