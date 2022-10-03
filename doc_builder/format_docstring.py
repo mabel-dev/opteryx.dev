@@ -74,21 +74,23 @@ def create_md_content(node, title=None, cls=False):
                     if index == 0 and len(part.split()) > 0:
                         print("********", current_header)
                         if current_header not in ["Example", "Examples"]:
-                            cache += "<li>" + part + "</li>"
+                            cache += "<li>" + part + ": "
                         else:
                             cache += "<br /> \n<code>\n" + part + "  "
                     elif len(part.split()) == 0:
                         pass
                     else:
-                        cache += " - " + part + "  "
+                        cache += part
             else:
                 # this is the body of the inner_header
-                cache += "\n" + line
+                cache += "\n</br>" + line + "</li>"
 
         last_indent = indent
 
     if current_header in ["Example", "Examples"]:
         cache += "\n</code>\n"
+    else:
+        cache += "</ul>"
 
     # print(cache)
     if not cls:
