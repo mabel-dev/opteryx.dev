@@ -33,17 +33,15 @@ def create_md_content(node, title=None, cls=False):
 
     doc_string = ast.get_docstring(node) or ""
 
-    cache = "<dl><dt>"
-    if cls:
-        cache += "<h2>class "
-    cache += f"<b>{title}</b>"
-    if isinstance(node, ast.FunctionDef):
-        cache += " ("
-        cache += ", ".join([a.arg for a in node.args.args if a.arg != "self"])
-        cache += ")"
-    if cls:
-        cache += "</h2>"
-    cache += "</dt><dd>"
+    cache = ""
+    if not cls:
+        cache = "<dl><dt>"
+        cache += f"<b>{title}</b>"
+        if isinstance(node, ast.FunctionDef):
+            cache += " ("
+            cache += ", ".join([a.arg for a in node.args.args if a.arg != "self"])
+            cache += ")"
+        cache += "</dt><dd>"
 
     last_indent = -1
     for line in doc_string.splitlines():
@@ -58,7 +56,7 @@ def create_md_content(node, title=None, cls=False):
             if current_header in ["Example", "Examples"]:
                 cache += "\n~~~\n"
             current_header = header.pop().title()
-            cache += "\n<h3>" + current_header + "</h3><dl>"
+            cache += f"\n<p><b>{current_header}</b></p><ul>"
             last_indent = 100
             continue
 
@@ -76,16 +74,16 @@ def create_md_content(node, title=None, cls=False):
                     if index == 0 and len(part.split()) > 0:
                         print("********", current_header)
                         if current_header not in ["Example", "Examples"]:
-                            cache += " \n- **" + part + "**  "
+                            cache += "<li>" + part + "</li>"
                         else:
-                            cache += " \n<code>\n" + part + "  "
+                            cache += "<br /> \n<code>\n" + part + "  "
                     elif len(part.split()) == 0:
                         pass
                     else:
                         cache += " - " + part + "  "
             else:
                 # this is the body of the inner_header
-                cache += " \n" + line
+                cache += "\n" + line
 
         last_indent = indent
 
@@ -93,4 +91,6 @@ def create_md_content(node, title=None, cls=False):
         cache += "\n</code>\n"
 
     # print(cache)
-    return cache + "</dd></dl>\n"
+    if not cls:
+        cache += "</dd></dl>\n"
+    return cache

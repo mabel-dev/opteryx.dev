@@ -7,6 +7,14 @@ def get_file():
     ob = next(glob.iglob("../**/opteryx/connection.py", recursive=True))
     return ob
 
+def class_header(title, node):
+    cache = f"<dl><dt><h2>class <b>{title}</b>"
+    cache += " ("
+    cache += ", ".join([a.arg for a in node.args.args if a.arg != "self"])
+    cache += ")"
+    cache += "</h2>"
+    return cache
+
 
 def process_file(filepath):
 
@@ -34,7 +42,7 @@ def process_file(filepath):
             ]
             if len(init) > 0:
                 init = init.pop()
-                cache += create_md_content(init, title=node.name, cls=True)
+                cache += class_header(node.name, init) + create_md_content(init, node.name, True) + "</dd></dl>"
 
             for child_node in [
                 child_node
