@@ -1410,6 +1410,7 @@
 </ul>
 <p><strong>Changed</strong></p>
 <ul>
+<li>⚠️<strong>BREAKING</strong> (alignment) <code>as_arrow</code> renamed to <code>arrow</code> to align to <a href="https://duckdb.org/docs/api/python/overview#apache-arrow">DuckDB</a> naming. (<a href="https://github.com/joocer">@joocer</a>)  </li>
 <li>⚠️<strong>BREAKING</strong> <code>SHOW COLUMNS</code> returns the column name in the <code>name</code> column, previously <code>column_name</code> (<a href="https://github.com/joocer">@joocer</a>)  </li>
 <li>⚠️<strong>BREAKING</strong> (correction) cursor 'fetch*' methods returns tuples rather than dictionaries as defaults, this is correcting a bug in <a href="https://peps.python.org/pep-0249/">PEP249</a> compatibility. (<a href="https://github.com/joocer">@joocer</a>)  </li>
 <li>⚠️<strong>BREAKING</strong> (security) [<a href="https://github.com/mabel-dev/opteryx/issues/517">#517</a>] Placeholder changed from '%s' to '?'. (<a href="https://github.com/joocer">@joocer</a>)  </li>
