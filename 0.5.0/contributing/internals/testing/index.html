@@ -1357,12 +1357,12 @@
 <h2 id="sql-logic-test">SQL Logic Test</h2>
 <p><strong>Frequency</strong>: Ad hoc<br />
 <strong>Maturity</strong>: Low</p>
-<p>Runs SQL statements against Operyx and SQLite (which performs <a href="https://www.sqlite.org/testing.html">similar testing</a> against other database engines) to verify Opteryx returns the same answer as SQLite.</p>
+<p>Runs SQL statements against Operyx and DuckDB to verify Opteryx returns the same answer as DuckDB.</p>
 <h2 id="fuzzing">Fuzzing</h2>
-<p><strong>Frequency</strong>: CI &amp; Weekly
+<p><strong>Frequency</strong>: CI &amp; Nightly
 <strong>Maturity</strong>: Low</p>
 <p>As part of the CI process, executes 100 iterations of random inputs.</p>
-<p>As part of a weekly test, executes 100,000 iterations of random inputs.</p>
+<p>As part of a nightly test, executes 100,000 iterations of random inputs.</p>
 <p>Fuzzing supplies some key functions with random data to try to capture scenarios which are unexpected or unhandled.</p>
 <h2 id="security-code-quality-testing">Security &amp; Code Quality Testing</h2>
 <p><strong>Frequency</strong>: CI<br />
