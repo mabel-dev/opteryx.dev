@@ -1274,30 +1274,33 @@
 --->
 
 <!--- start --->
-<dl><dt><h2>class <b>Connection</b> ()</h2></dt><dd></dd></dl>
-<dl><dt><b>cursor</b> ()</dt><dd> 
+<dl><dt><h2>class <b>Connection</b> ()</h2></dd></dl>
+<dl><dt><b>cursor</b> ()</dt><dd>
 return a cursor object</dd></dl>
-<dl><dt><b>close</b> ()</dt><dd> 
+<dl><dt><b>close</b> ()</dt><dd>
 exists for interface compatibility only</dd></dl>
-<dl><dt><h2>class <b>Cursor</b> (connection)</h2></dt><dd></dd></dl>
+<dl><dt><h2>class <b>Cursor</b> (connection)</h2></dd></dl>
 <dl><dt><b>execute</b> (operation, params)</dt><dd></dd></dl>
 <dl><dt><b>rowcount</b> ()</dt><dd></dd></dl>
 <dl><dt><b>shape</b> ()</dt><dd></dd></dl>
-<dl><dt><b>stats</b> ()</dt><dd> 
+<dl><dt><b>stats</b> ()</dt><dd>
 execution statistics</dd></dl>
-<dl><dt><b>has_warnings</b> ()</dt><dd> 
+<dl><dt><b>has_warnings</b> ()</dt><dd>
 do I have warnings</dd></dl>
-<dl><dt><b>warnings</b> ()</dt><dd> 
+<dl><dt><b>warnings</b> ()</dt><dd>
 list of run-time warnings</dd></dl>
-<dl><dt><b>fetchone</b> (as_dicts)</dt><dd> 
-fetch one record only</dd></dl>
-<dl><dt><b>fetchmany</b> (size, as_dicts)</dt><dd> 
+<dl><dt><b>fetchone</b> (as_dicts)</dt><dd>
+Fetch one record only.
+
+<p><b>Parameters</b></p><ul><li>as_dicts</li> -  boolean (optional)  
+Return a dictionary, default is False, return a tuple</dd></dl>
+<dl><dt><b>fetchmany</b> (size, as_dicts)</dt><dd>
 fetch a given number of records</dd></dl>
-<dl><dt><b>fetchall</b> (as_dicts)</dt><dd> 
+<dl><dt><b>fetchall</b> (as_dicts)</dt><dd>
 fetch all matching records</dd></dl>
-<dl><dt><b>arrow</b> (size)</dt><dd> 
+<dl><dt><b>arrow</b> (size)</dt><dd>
 fetch all matching records as a pyarrow table</dd></dl>
-<dl><dt><b>close</b> ()</dt><dd> 
+<dl><dt><b>close</b> ()</dt><dd>
 close the connection</dd></dl>
 <dl><dt><b>head</b> (size)</dt><dd></dd></dl>
 
