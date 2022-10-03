@@ -684,8 +684,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#infix-function" class="md-nav__link">
-    Infix Function
+  <a href="#infix-functions" class="md-nav__link">
+    Infix Functions
   </a>
   
 </li>
@@ -1310,8 +1310,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#infix-function" class="md-nav__link">
-    Infix Function
+  <a href="#infix-functions" class="md-nav__link">
+    Infix Functions
   </a>
   
 </li>
@@ -1417,6 +1417,11 @@ Alias for <code>CAST</code>(<strong>any</strong> AS NUMERIC).   </p>
 <p>Alias for <code>TRY_CAST</code>(<strong>any</strong> AS <strong>type</strong>).  </p>
 </div>
 <div class="admonition function">
+<p class="admonition-title"><code>STR</code> (<strong>any</strong>: <em>any</em>) → <em>varchar</em></p>
+<p>Alias of <code>VARCHAR</code>(<strong>any</strong>) and <code>CAST</code>(<strong>any</strong> AS VARCHAR) <br />
+<strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.5 1.25a.75.75 0 0 0-1.5 0v8.69L6.447 5.385a.75.75 0 1 0-1.061 1.06L9.94 11H1.25a.75.75 0 0 0 0 1.5h8.69l-4.554 4.553a.75.75 0 0 0 1.06 1.061L11 13.561v8.689a.75.75 0 0 0 1.5 0v-8.69l4.553 4.554a.75.75 0 0 0 1.061-1.06L13.561 12.5h8.689a.75.75 0 0 0 0-1.5h-8.69l4.554-4.553a.75.75 0 1 0-1.06-1.061L12.5 9.939V1.25z"/></svg></span> New in 0.6</strong> </p>
+</div>
+<div class="admonition function">
 <p class="admonition-title"><code>STRING</code> (<strong>any</strong>: <em>any</em>) → <em>varchar</em></p>
 <p>Alias of <code>VARCHAR</code>(<strong>any</strong>) and <code>CAST</code>(<strong>any</strong> AS VARCHAR)</p>
 </div>
@@ -1439,7 +1444,7 @@ Alias for <code>CAST</code>(<strong>iso8601</strong> AS TIMESTAMP).   </p>
 Alias for <code>CAST</code>(<strong>any</strong> AS VARCHAR).</p>
 </div>
 <h2 id="date-time-functions">Date &amp; Time Functions</h2>
-<p>For more details, see <a href="../Working%20with%20SQL/10%20Working%20with%20Timestamps/">Working with Timestamps</a>.</p>
+<p>For more details, see <a href="../adv-working-with-timestamps//">Working with Timestamps</a>.</p>
 <div class="admonition function">
 <p class="admonition-title"><code>current_date</code> → <em>timestamp</em></p>
 <p>Return the current date, in UTC. Note <code>current_date</code> does not require parenthesis.  </p>
@@ -1528,7 +1533,7 @@ Alias for <code>EXTRACT</code>(week FROM <strong>ts</strong>)</p>
 <p>Returns the year from <strong>ts</strong>.<br />
 Alias for <code>EXTRACT</code>(year FROM <strong>ts</strong>)</p>
 </div>
-<h2 id="infix-function">Infix Function</h2>
+<h2 id="infix-functions">Infix Functions</h2>
 <p>These are functions that are called similar to comparison operators:</p>
 <div class="admonition function">
 <p class="admonition-title"><em>numeric</em> <code>+</code> <em>numeric</em> → <em>numeric</em></p>
