@@ -57,6 +57,10 @@
 </br>return a cursor object</li></ul></dd></dl>
 <dl><dt><b>close</b> ()</dt><dd>
 </br>exists for interface compatibility only</li></ul></dd></dl>
+<dl><dt><b>commit</b> ()</dt><dd>
+</br>exists for interface compatibility only</li></ul></dd></dl>
+<dl><dt><b>rollback</b> ()</dt><dd>
+</br>exists for interface compatibility only</li></ul></dd></dl>
 <dl><dt><h2>class <b>Cursor</b> (connection)</h2></ul></dd></dl><dl><dt><b>execute</b> (operation, params)</dt><dd></ul></dd></dl>
 <dl><dt><b>rowcount</b> ()</dt><dd></ul></dd></dl>
 <dl><dt><b>shape</b> ()</dt><dd></ul></dd></dl>
