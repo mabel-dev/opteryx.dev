@@ -36,7 +36,7 @@ Runs SQL statements against Operyx and DuckDB to verify Opteryx returns the same
 
 ## Fuzzing
 
-**Frequency**: CI & Nightly
+**Frequency**: CI & Nightly  
 **Maturity**: Low
 
 As part of the CI process, executes 100 iterations of random inputs.
