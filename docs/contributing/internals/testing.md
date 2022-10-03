@@ -32,16 +32,16 @@ To measure impact of changes.
 **Frequency**: Ad hoc  
 **Maturity**: Low
 
-Runs SQL statements against Operyx and SQLite (which performs [similar testing](https://www.sqlite.org/testing.html) against other database engines) to verify Opteryx returns the same answer as SQLite.
+Runs SQL statements against Operyx and DuckDB to verify Opteryx returns the same answer as DuckDB.
 
 ## Fuzzing
 
-**Frequency**: CI & Weekly
+**Frequency**: CI & Nightly
 **Maturity**: Low
 
 As part of the CI process, executes 100 iterations of random inputs.
 
-As part of a weekly test, executes 100,000 iterations of random inputs.
+As part of a nightly test, executes 100,000 iterations of random inputs.
 
 Fuzzing supplies some key functions with random data to try to capture scenarios which are unexpected or unhandled.
 

@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased]
+
+**Fixed**
+
+- [[#568](https://github.com/mabel-dev/opteryx/issues/568)] Unable to perform aggregates on literals. ([@joocer](https://github.com/joocer))  
+
 ## [0.5.0] - 2022-10-02
 
 **Fixed**
