@@ -188,12 +188,11 @@ T321-07  | `PARAMETERS` view                                         | unknown
 
 Support statuses in this table:
 
-&emsp;**yes** - The feature is supported.  
+&emsp;**yes** - The feature is supported and conformance is part of the test suite.  
 &emsp;**no** - The feature is not supported.  
 &emsp;**partial** - Some features are supported.  
 &emsp;**n/a** - The feature relates to a feature not supported by Opteryx.  
-&emsp;**unknown** - The feature has not been tested against the standard.  
+&emsp;**unknown** - No test exists to confirm conformance.  
 
-Note that **unknown** generally means that conformity cannot ascertained because appropriate or complete tests have not been written, the system may be fully or partiality conformant.
 
 [^1]: https://15445.courses.cs.cmu.edu/fall2020/slides/02-advancedsql.pdf
