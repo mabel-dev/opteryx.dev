@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#568](https://github.com/mabel-dev/opteryx/issues/568)] Unable to perform aggregates on literals. ([@joocer](https://github.com/joocer))  
 
+**Changed**
+
+- [[#566](https://github.com/mabel-dev/opteryx/issues/566)] Use DuckDB for SQL comparision tests in Wrenchy-Bench. ([@joocer](https://github.com/joocer))  
+
 ## [0.5.0] - 2022-10-02
 
 **Fixed**
