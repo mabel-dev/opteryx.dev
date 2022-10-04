@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 **Changed**
 
 - [[#566](https://github.com/mabel-dev/opteryx/issues/566)] Use DuckDB for SQL comparision tests in Wrenchy-Bench. ([@joocer](https://github.com/joocer))  
+- ⚠️**BREAKING** (clarity) [[#584](https://github.com/mabel-dev/opteryx/issues/584)] `enable_page_management` configuration and parameter renamed `enable_page_defragmentation` with some minor refactoring of approach ([@joocer](https://github.com/joocer))  
 
 ## [0.5.0] - 2022-10-02
 
