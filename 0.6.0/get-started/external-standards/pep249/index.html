@@ -461,9 +461,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python PEP249
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Python PEP249
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#module-interface" class="md-nav__link">
+    Module Interface
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1204,6 +1235,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#module-interface" class="md-nav__link">
+    Module Interface
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1223,7 +1269,340 @@
 
 
 <h1 id="python-pep-249-conformity">Python PEP-249 Conformity</h1>
-<p>Opteryx is not a DBMS so only aims for confirmity to PEP-249 for the featureset it supports - this is primarily support related to the querying of data.</p>
+<p>Opteryx is not a DBMS so only aims for confirmity to <a href="https://peps.python.org/pep-0249">PEP-249</a> for the featureset it supports - this is primarily support related to the querying of data.</p>
+<h2 id="module-interface">Module Interface</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Feature</th>
+<th align="left">Imperative</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Module Interface</strong></td>
+<td align="left"></td>
+<td>uknown</td>
+</tr>
+<tr>
+<td align="left"><code>connect</code> constructor</td>
+<td align="left">must</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>apilevel</code> global</td>
+<td align="left">must</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>threadsafety</code> global</td>
+<td align="left">must</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>paramstyle</code> global</td>
+<td align="left">must</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>Warning</code> exception</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>Error</code> exception</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>InterfaceError</code> exception</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>DatabaseError</code> exception</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>DataError</code> exception</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>OperationalError</code> exception</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>IntegrityError</code> exception</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>InternalError</code> exception</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>ProgrammingError</code> exception</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>NotSupportedError</code> exception</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><strong>Connection Object</strong></td>
+<td align="left"></td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>close</code> method</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>commit</code> method</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>rollback</code> method</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>cursor</code> method</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>messages</code> attribute</td>
+<td align="left">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td align="left"><code>errorhandler</code> attribute</td>
+<td align="left">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td align="left"><strong>Cursor Object</strong></td>
+<td align="left"></td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>description</code> attribute</td>
+<td align="left">should</td>
+<td>no</td>
+</tr>
+<tr>
+<td align="left"><code>rowcount</code> attribute</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>callproc</code> method</td>
+<td align="left">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td align="left"><code>close</code> method</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>execute</code> method</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>executemany</code> method</td>
+<td align="left">should</td>
+<td>no</td>
+</tr>
+<tr>
+<td align="left"><code>fetchmany</code> method</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>fetchall</code> method</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>nextset</code> method</td>
+<td align="left">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td align="left"><code>arraysize</code> attribute</td>
+<td align="left">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>setinputsizes</code> method</td>
+<td align="left">should</td>
+<td>no</td>
+</tr>
+<tr>
+<td align="left"><code>setoutputsize</code> method</td>
+<td align="left">should</td>
+<td>no</td>
+</tr>
+<tr>
+<td align="left"><code>rownumber</code> attribute</td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>connection</code> attribute</td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>scroll</code> method</td>
+<td align="left">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td align="left"><code>messages</code> attribute</td>
+<td align="left">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td align="left"><code>next</code> method</td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>__iter__</code> method</td>
+<td align="left">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td align="left"><code>lastrowid</code> attribute</td>
+<td align="left">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td align="left"><code>errorhandler</code> attribute</td>
+<td align="left">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td align="left"><strong>Type Constructors</strong></td>
+<td align="left"></td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>Date</code></td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>Time</code></td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>Timestamp</code></td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>DateFromTicks</code></td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>TimeFromTicks</code></td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>TimestampFromTicks</code></td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>Binary</code></td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>STRING</code></td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>BINARY</code></td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>NUMBER</code></td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>DATETIME</code></td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><code>ROWID</code></td>
+<td align="left">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td align="left"><strong>Two-Phase Commit Extensions</strong></td>
+<td align="left"></td>
+<td>n/a</td>
+</tr>
+<tr>
+<td align="left"><code>xid</code> method</td>
+<td align="left">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td align="left"><code>tpc_begin</code> method</td>
+<td align="left">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td align="left"><code>tpc_prepare</code> method</td>
+<td align="left">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td align="left"><code>tpc_commit</code> method</td>
+<td align="left">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td align="left"><code>tpc_rollback</code> method</td>
+<td align="left">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td align="left"><code>tpc_recover</code> method</td>
+<td align="left">optional</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<p>Support statuses in these tables:</p>
+<p>&emsp;<strong>yes</strong> - The feature is supported and conformance is part of the test suite.<br />
+&emsp;<strong>no</strong> - The feature is not supported.<br />
+&emsp;<strong>partial</strong> - Some features are supported.<br />
+&emsp;<strong>n/a</strong> - The feature relates to a feature not supported by Opteryx.<br />
+&emsp;<strong>unknown</strong> - No test exists to confirm conformance.  </p>
 
 
 
