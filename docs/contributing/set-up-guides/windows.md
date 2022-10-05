@@ -28,7 +28,11 @@ sudo apt-get update
 sudo apt-get install git
 ~~~
 
-### 4. Clone the Repository   
+### 4. Install Rust
+
+Follow the instructions at https://rustup.rs/
+
+### 5. Clone the Repository   
 
 ~~~bash
 git clone https://github.com/mabel-dev/opteryx

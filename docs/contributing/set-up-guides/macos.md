@@ -28,19 +28,25 @@ sudo apt-get update
 sudo apt-get install git
 ~~~
 
-### 4. Clone the Repository   
+### 4. Install Rust
+
+~~~bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+~~~
+
+### 5. Clone the Repository    
 
 ~~~bash
 git clone https://github.com/mabel-dev/opteryx
 ~~~
 
-### 5. Install Dependencies   
+### 6. Install Dependencies   
 
 ~~~bash
 python3 -m pip install --upgrade -r requirements.txt
 ~~~
 
-### 6. Build Binaries   
+### 7. Build Binaries   
 
 ~~~bash
 python3 setup.py build_ext --inplace
