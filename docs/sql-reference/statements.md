@@ -178,7 +178,7 @@ Inclusion of the `FULL` modifier uses the entire dataset in order to return comp
 LIKE pattern
 ~~~
 
-Specify a pattern in the optional `LIKE` clause to filter the results to the desired subset by the column name. This does not require a left-hand operator, it will always filter by the column name.
+A case-insensitive `LIKE` clause to filter the results to the desired subset by the column name. This does not require a left-hand operator, it will always filter by the column name.
 
 ### FOR clause
 
@@ -212,7 +212,16 @@ List the functions and aggregators supported by the engine.
 
 ~~~sql
 SHOW FUNCTIONS
+LIKE pattern
 ~~~
+
+### LIKE clause
+
+~~~
+LIKE pattern
+~~~
+
+A case-insensitive `LIKE` clause to filter the results to the desired subset by the function name. This does not require a left-hand operator, it will always filter by the function name.
 
 ## SHOW PARAMETER
 
@@ -239,6 +248,6 @@ LIKE pattern
 LIKE pattern
 ~~~
 
-Specify a pattern in the optional `LIKE` clause to filter the results to the desired subset by the variable name. This does not require a left-hand operator, it will always filter by the variable name.
+A case-insensitive `LIKE` clause to filter the results to the desired subset by the variable name. This does not require a left-hand operator, it will always filter by the variable name.
 
 **Related**: `SET`
