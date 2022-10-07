@@ -41,12 +41,9 @@ Definitions noted with a :octicons-plus-16: accept different input arguments.
 !!! function "`STRING` (**any**: _any_) → _varchar_"     
     Alias of `VARCHAR`(**any**) and `CAST`(**any** AS VARCHAR)
 
-!!! function "`TIMESTAMP` (**iso8601**: _varchar_) → _timestamp_ :octicons-plus-16:"  
+!!! function "`TIMESTAMP` (**iso8601**: _varchar_) → _timestamp_"  
     Cast an [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format string to a timestamp, raises an error if cast is not possible.  
     Alias for `CAST`(**iso8601** AS TIMESTAMP).   
-
-!!! function "`TIMESTAMP` (**seconds**: _numeric_) → _timestamp_ :octicons-plus-16:"  
-    Return timestamp of **seconds** seconds since the Unix Epoch. 
 
 !!! function "`TRY_CAST` (**any**: _any_ AS **type**) → _[type]_"  
     Cast **any** to **type**, if cast is not possible, returns `Null`.   
