@@ -742,6 +742,19 @@
     SHOW CREATE TABLE
   </a>
   
+    <nav class="md-nav" aria-label="SHOW CREATE TABLE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-clause_2" class="md-nav__link">
+    FOR clause
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1511,6 +1524,19 @@
     SHOW CREATE TABLE
   </a>
   
+    <nav class="md-nav" aria-label="SHOW CREATE TABLE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-clause_2" class="md-nav__link">
+    FOR clause
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1595,22 +1621,23 @@
 <h2 id="select">SELECT</h2>
 <p>Retrieve rows from zero or more relations.</p>
 <p><a href="https://github.com/mabel-dev/opteryx">Opteryx</a> is targeting <a href="https://db.cs.cmu.edu/files/sql/sql1992.txt">ANSI SQL-92</a> compliant syntax for <code>SELECT</code> statements. This standard alignment allows Opteryx users to quickly understand how to query data and enables easier porting of SQL between query engines and databases.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="n">select_list</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">relation</span><span class="w"> </span><span class="p">[</span><span class="k">WITH</span><span class="w"> </span><span class="p">(</span><span class="n">NO_CACHE</span><span class="p">,</span><span class="n">NO_PARTITION</span><span class="p">,</span><span class="n">NO_PUSH_PROJECTION</span><span class="p">)]</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">       </span><span class="p">[</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">       </span><span class="k">CROSS</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">       </span><span class="k">LEFT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">       </span><span class="k">RIGHT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">       </span><span class="k">FULL</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">relation</span><span class="w"></span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">                      </span><span class="k">ON</span><span class="w"> </span><span class="n">conditions</span><span class="w"></span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                      </span><span class="k">USING</span><span class="w"> </span><span class="p">(</span><span class="n">columns</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="k">period</span><span class="w"></span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="w"></span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">groups</span><span class="w"></span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">       </span><span class="k">HAVING</span><span class="w"> </span><span class="n">group_filter</span><span class="w"></span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">order_expr</span><span class="w"></span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="k">OFFSET</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="p">..</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">relation</span><span class="o">&gt;</span><span class="w"> </span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="o">&lt;</span><span class="k">period</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[</span><span class="k">WITH</span><span class="w"> </span><span class="p">(</span><span class="n">NO_CACHE</span><span class="o">|</span><span class="n">NO_PARTITION</span><span class="o">|</span><span class="n">NO_PUSH_PROJECTION</span><span class="p">)]</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">       </span><span class="p">[</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">relation</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">&lt;</span><span class="k">function</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">subquery</span><span class="o">&gt;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">       </span><span class="k">CROSS</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">relation</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">&lt;</span><span class="k">function</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">subquery</span><span class="o">&gt;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">       </span><span class="k">LEFT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">relation</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">&lt;</span><span class="k">function</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">subquery</span><span class="o">&gt;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">       </span><span class="k">RIGHT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">relation</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">&lt;</span><span class="k">function</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">subquery</span><span class="o">&gt;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">       </span><span class="k">FULL</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">relation</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">&lt;</span><span class="k">function</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">subquery</span><span class="o">&gt;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                      </span><span class="k">ON</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">                      </span><span class="k">USING</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">columns</span><span class="o">&gt;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="p">..</span><span class="w"></span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">       </span><span class="k">HAVING</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="p">..</span><span class="w"></span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="p">..</span><span class="w"></span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="k">OFFSET</span><span class="w"> </span><span class="o">&lt;</span><span class="k">offset</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="o">&lt;</span><span class="k">limit</span><span class="o">&gt;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="select-clause">SELECT clause</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SELECT [ DISTINCT ] expression [, ...]
@@ -1618,15 +1645,15 @@
 <p>The <code>SELECT</code> clause specifies the list of columns that will be returned by the query. While it appears first in the clause, logically the expressions here are executed after most other clauses. The <code>SELECT</code> clause can contain arbitrary expressions that transform the output, as well as aggregate functions.</p>
 <p>The <code>DISTINCT</code> modifier is specified, only unique rows are included in the result set. In this case, each output column must be of a type that allows comparison.</p>
 <h3 id="from-join-clauses">FROM / JOIN clauses</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FROM relation [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PROJECTION)] [, ...] 
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FROM relation [FOR period] [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PROJECTION)] [, ...] 
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>FROM relation [ INNER ] JOIN relation &lt; USING (columns) | ON condition &gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>FROM relation [FOR period] [ INNER ] JOIN relation [FOR period] &lt; USING (columns) | ON condition &gt;
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>FROM relation LEFT [ OUTER ] JOIN relation &lt; USING (columns) | ON condition &gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>FROM relation [FOR period] LEFT [ OUTER ] JOIN relation [FOR period] &lt; USING (columns) | ON condition &gt;
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>FROM relation &lt; RIGHT | FULL &gt; [OUTER ] JOIN relation
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>FROM relation [FOR period] &lt; RIGHT | FULL &gt; [OUTER ] JOIN relation [FOR period]
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>FROM relation CROSS JOIN &lt; relation | UNNEST(column) &gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>FROM relation [FOR period] CROSS JOIN &lt; relation [FOR period] | UNNEST(column) &gt;
 </code></pre></div></p>
 <p>The <code>FROM</code> clause specifies the source of the data on which the remainder of the query should operate. Logically, the <code>FROM</code> clause is where the query starts execution. The <code>FROM</code> clause can contain a single relation, a combination of multiple relations that are joined together, or another <code>SELECT</code> query inside a subquery node.</p>
 <p><code>JOIN</code> clauses allow you to combine data from multiple relations. If no <code>JOIN</code> qualifier is provided, <code>INNER</code> will be used. <code>JOIN</code> qualifiers are mutually exclusive. <code>ON</code> and <code>USING</code> clauses are also mutually exclusive and can only be used with <code>INNER</code> and <code>LEFT</code> joins.</p>
@@ -1665,7 +1692,7 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>FOR DATES IN range
 </code></pre></div></p>
-<p>The <code>FOR</code> clause is an Opteryx-specific clause which filters data by the date it was recorded for.</p>
+<p>The <code>FOR</code> clause is an Opteryx-specific clause which filters data by the date it was recorded for. When provided <code>FOR</code> clauses must directly follow the relation name in a <code>FROM</code> or <code>JOIN</code> clause. If not provided <code>FOR TODAY</code> is assumed.</p>
 <p>See <a href="../adv-time-travel/">Time Travel</a> for more information on <code>FOR</code> syntax and functionality.</p>
 <h3 id="where-clause">WHERE clause</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>WHERE condition
@@ -1716,34 +1743,43 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>FOR DATES IN range
 </code></pre></div></p>
-<p>The <code>FOR</code> clause specifies the date to review data for. Although this supports the full syntax as per the <code>SELECT</code> statements.</p>
+<p>The <code>FOR</code> clause is an Opteryx-specific clause which filters data by the date it was recorded for. When provided <code>FOR</code> clauses must directly follow the relation name the <code>FROM</code> clause. If not provided <code>FOR TODAY</code> is assumed.</p>
 <p>See <a href="../adv-time-travel/">Time Travel</a> for more information on <code>FOR</code> syntax and functionality.</p>
 <h2 id="show-create-table">SHOW CREATE TABLE</h2>
 <p>Show an approximation of the SQL to create a specified relation.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table</span><span class="w"></span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">period</span><span class="w"></span>
 </code></pre></div>
 <p>The SQL generated by this statement is unlikely to be able to be used with any SQL engine to create the table without some intervention and edits. It is intended to reduce effort to obtain this SQL, not eliminate it.</p>
+<h3 id="for-clause_2">FOR clause</h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>FOR date
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>FOR DATES BETWEEN start AND end
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>FOR DATES IN range
+</code></pre></div></p>
+<p>The <code>FOR</code> clause is an Opteryx-specific clause which filters data by the date it was recorded for. When provided <code>FOR</code> clauses must directly follow the relation name. If not provided <code>FOR TODAY</code> is assumed.</p>
 <h2 id="show-functions">SHOW FUNCTIONS</h2>
 <p>List the functions and aggregators supported by the engine.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">FUNCTIONS</span><span class="w"></span>
-<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">FUNCTIONS</span><span class="w"></span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span><span class="w"></span>
 </code></pre></div>
 <h3 id="like-clause_1">LIKE clause</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>LIKE pattern
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>LIKE pattern
 </code></pre></div>
 <p>A case-insensitive <code>LIKE</code> clause to filter the results to the desired subset by the function name. This does not require a left-hand operator, it will always filter by the function name.</p>
 <h2 id="show-parameter">SHOW PARAMETER</h2>
 <p>Display the value of a given configuration setting.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="k">PARAMETER</span><span class="w"> </span><span class="k">parameter</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="k">PARAMETER</span><span class="w"> </span><span class="k">parameter</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Related</strong>: <code>SET</code></p>
 <h2 id="show-variables">SHOW VARIABLES</h2>
 <p>List the variables set in the query batch.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">VARIABLES</span><span class="w"></span>
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">VARIABLES</span><span class="w"></span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span><span class="w"></span>
 </code></pre></div>
 <h3 id="like-clause_2">LIKE clause</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>LIKE pattern
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>LIKE pattern
 </code></pre></div>
 <p>A case-insensitive <code>LIKE</code> clause to filter the results to the desired subset by the variable name. This does not require a left-hand operator, it will always filter by the variable name.</p>
 <p><strong>Related</strong>: <code>SET</code></p>
