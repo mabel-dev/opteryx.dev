@@ -141,9 +141,9 @@ F041-08  | All comparison operators are supported (rather than just `=`)        
 F051-01  | `DATE` data type (including support of `DATE` literal)    | unknown
 F051-02  | `TIME` data type (including support of `TIME` literal) with fractional seconds    | unknown
 F051-03  | `TIMESTAMP` data type (including support of `TIMESTAMP` literal) with fractional seconds precision of at least 0 and 6   | unknown
-F051-04  | Comparison predicate on `DATE`, `TIME`, and `TIMESTAMP` data types   | unknown
+F051-04  | Comparison predicate on `DATE`, `TIME`, and `TIMESTAMP` data types   | partial
 F051-05  | Explicit `CAST` between datetime types and character string types    | unknown
-F051-06  | `CURRENT_DATE`                                            | unknown
+F051-06  | `CURRENT_DATE`                                            | yes
 F051-07  | `LOCALTIME`                                               | unknown
 F051-08  | `LOCALTIMESTAMP`                                          | unknown
 **F081** | **`UNION` and `EXCEPT` in views**                         | unknown
