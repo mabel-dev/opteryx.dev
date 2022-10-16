@@ -33,6 +33,8 @@ Where unit can be 'Year', 'Month', 'Day', 'Hour', 'Minute' or 'Second'.
 
 Values can be cast using the `CAST` function, its form is `CAST(any AS type)`. Where values are incompatible, an error will be thrown, to avoid errors `TRY_CAST` can be used instead which will return `NULL` instead of error.
 
+`BOOLEAN`, `NUMERIC` and `TIMESTAMP` also support 'type string' notation (`SELECT TIMESTAMP '2022-01-01'`) to perform casting to the desired type.
+
 ## Coercion
 
 ### Timestamps

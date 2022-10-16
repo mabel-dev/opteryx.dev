@@ -8,8 +8,8 @@ Definitions noted with a :octicons-plus-16: accept different input arguments.
 
 ## Conversion Functions
 
-!!! function "`BOOLEAN` (**any**: _any_) → _boolean_"  
-    Cast **any** to a `BOOLEAN`, raises an error if cast is not possible.   
+!!! function "`BOOLEAN` **any**: _any_ → _boolean_"  
+    Cast **any** to a `BOOLEAN`, raises an error if cast is not possible. Note `BOOLEAN` does not require parenthesis, however any aliases do.      
     Alias for `CAST`(**any** AS BOOLEAN).   
 
 !!! function "`CAST` (**any**: _any_ AS **type**) → _[type]_"  
@@ -25,10 +25,10 @@ Definitions noted with a :octicons-plus-16: accept different input arguments.
 
 !!! function "`FLOAT` (**num**: _numeric_) → _numeric_"  
     Convert **num** to a floating point number.   
-    `FLOAT` is a psuedo-type, `CAST` is not supported and values may be coerced to `NUMERIC`..
+    `FLOAT` is a psuedo-type, `CAST` is not supported and values may be coerced to `NUMERIC`.
 
-!!! function "`NUMERIC` (**any**: _any_) → _numeric_"  
-    Cast **any** to a floating point number, raises an error if cast is not possible.   
+!!! function "`NUMERIC` **any**: _any_ → _numeric_"  
+    Cast **any** to a floating point number, raises an error if cast is not possible. Note `NUMERIC` does not require parenthesis, however any aliases do.   
     Alias for `CAST`(**any** AS NUMERIC).   
 
 !!! function "`SAFE_CAST` (**any**: _any_ AS **type**) → _[type]_"    
@@ -41,8 +41,8 @@ Definitions noted with a :octicons-plus-16: accept different input arguments.
 !!! function "`STRING` (**any**: _any_) → _varchar_"     
     Alias of `VARCHAR`(**any**) and `CAST`(**any** AS VARCHAR)
 
-!!! function "`TIMESTAMP` (**iso8601**: _varchar_) → _timestamp_"  
-    Cast an [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format string to a timestamp, raises an error if cast is not possible.  
+!!! function "`TIMESTAMP` **iso8601**: _varchar_ → _timestamp_"  
+    Cast an [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format string to a timestamp, raises an error if cast is not possible. Note `TIMESTAMP` does not require parenthesis, however any aliases do.    
     Alias for `CAST`(**iso8601** AS TIMESTAMP).   
 
 !!! function "`TRY_CAST` (**any**: _any_ AS **type**) → _[type]_"  
