@@ -312,6 +312,15 @@ Functions for examining and manipulating string values.
 !!! function "`SEARCH` (**str**: _varchar_, **value**: _varchar_) → _boolean_ :octicons-plus-16:"  
     Return `true` if **str** contains **value**.  
 
+!!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_) → _varchar_ :octicons-plus-16:" 
+    Return substring from a string from **start** position to the end of **str**.  
+    **:octicons-north-star-24: New in 0.6** 
+
+!!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_, **length**: _numeric_) → _varchar_:octicons-plus-16:"  
+    Return substring from a string from **start** position for **length** characters.  
+    **:octicons-north-star-24: New in 0.6** 
+ 
+
 !!! function "`STARTS_WITH` (**str**: _varchar_, **value**: _varchar_) → _boolean_"  
     Return `true` if **str** starts with **value**.  
     Related: `ENDS_WITH`

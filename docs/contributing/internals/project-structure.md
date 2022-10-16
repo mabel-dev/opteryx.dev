@@ -17,6 +17,7 @@ opteryx/                 <- main opteryx library
  ├── models/             <- internal data models
  ├── operators/          <- modules implementing steps in the query plan
  ├── samples/            <- sample data
+ ├── shared/             <- global resources
  ├── third_party/        <- third party code
  │   ├── distogram/ 
  │   ├── fuzzy/   

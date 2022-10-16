@@ -67,7 +67,7 @@ E081-04  | `UPDATE` privilege at the table level                     | n/a
 E081-05  | `UPDATE` privilege at the column level                    | n/a
 E081-06  | `REFERENCES` privilege at the table level                 | unknown
 E081-07  | `REFERENCES` privilege at the column level                | unknown
-E081-08  | `WITH GRANT OPTION`                                       | unknown
+E081-08  | `WITH GRANT OPTION`                                       | no
 E081-09  | `USAGE` privilege                                         | unknown
 E081-10  | `EXECUTE` privilege                                       | unknown
 **E091** | **Set functions**                                         | unknown
@@ -84,15 +84,15 @@ E101-03  | Searched `UPDATE` statement                               | n/a
 E101-04  | Searched `DELETE` statement                               | n/a
 **E111** | **Single row SELECT statement**                           | unknown
 **E121** | **Basic cursor support**                                  | unknown
-E121-01  | `DECLARE CURSOR`                                          | unknown
+E121-01  | `DECLARE CURSOR`                                          | no
 E121-02  | `ORDER BY` columns need not be in select                  | unknown
 E121-03  | Value expressions in `ORDER BY` clause                    | unknown
 E121-04  | `OPEN` statement                                          | unknown
-E121-06  | Positioned `UPDATE` statement                             | unknown
-E121-07  | Positioned `DELETE` statement                             | unknown
-E121-08  | `CLOSE` statement                                         | unknown
-E121-10  | `FETCH` statement: implicit `NEXT`                        | unknown
-E121-17  | `WITH HOLD` cursors                                       | unknown
+E121-06  | Positioned `UPDATE` statement                             | no
+E121-07  | Positioned `DELETE` statement                             | no
+E121-08  | `CLOSE` statement                                         | no
+E121-10  | `FETCH` statement: implicit `NEXT`                        | no
+E121-17  | `WITH HOLD` cursors                                       | no
 **E131** | **Null value support**                                    | unknown
 **E141** | **Basic integrity constraints**                           | unknown
 E141-01  | `NOT NULL` constraints                                    | unknown
@@ -175,7 +175,7 @@ F501-02  | `SQL_SIZING` view                                         | unknown
 F501-03  | `SQL_LANGUAGES` view                                      | unknown
 **F812** | **Basic flagging**                                        | unknown
 **S011** | **Distinct data types**                                   | unknown
-S011-01  | `USER_DEFINED_TYPES` view                                 | unknown
+S011-01  | `USER_DEFINED_TYPES` view                                 | no
 **T321** | **Basic SQL-invoked routines**                            | unknown
 T321-01  | User-defined functions with no overloading                | unknown
 T321-02  | User-defined stored procedures with no overloading        | unknown

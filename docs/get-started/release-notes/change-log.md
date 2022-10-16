@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#568](https://github.com/mabel-dev/opteryx/issues/568)] Unable to perform aggregates on literals. ([@joocer](https://github.com/joocer))  
 - [[#592](https://github.com/mabel-dev/opteryx/issues/592)] Dates handled incorrectly. ([@joocer](https://github.com/joocer))  
+- [[#600](https://github.com/mabel-dev/opteryx/issues/600)] Parameterization used on query batches fails. ([@joocer](https://github.com/joocer))  
 
 **Changed**
 
