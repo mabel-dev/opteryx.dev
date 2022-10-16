@@ -159,6 +159,15 @@ strong {
     border: 0px;
     margin: 0px;
     box-shadow: none;
+    padding: 0 !important;
+}
+
+.admonition.function  > .admonition-title::before{
+    width: 0px;
+}
+  
+.admonition.function  > p {
+    margin: 0.2em 0px 0px 1em;
 }
 
 .admonition.function  > .admonition-title{
@@ -168,14 +177,6 @@ strong {
     padding-bottom: 0px;
     padding-top: 0px;
     font-weight: 300;
-}
-
-.admonition.function  > .admonition-title::before{
-    width: 0px;
-}
-  
-.admonition.function  > p {
-    margin: 0.2em 0px 0px 1em;
 }
 
 .md-header {
