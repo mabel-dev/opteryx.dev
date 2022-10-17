@@ -1427,6 +1427,7 @@
 <p>Where unit can be 'Year', 'Month', 'Day', 'Hour', 'Minute' or 'Second'.</p>
 <h2 id="casting">Casting</h2>
 <p>Values can be cast using the <code>CAST</code> function, its form is <code>CAST(any AS type)</code>. Where values are incompatible, an error will be thrown, to avoid errors <code>TRY_CAST</code> can be used instead which will return <code>NULL</code> instead of error.</p>
+<p><code>BOOLEAN</code>, <code>NUMERIC</code> and <code>TIMESTAMP</code> also support 'type string' notation (<code>SELECT TIMESTAMP '2022-01-01'</code>) to perform casting to the desired type.</p>
 <h2 id="coercion">Coercion</h2>
 <h3 id="timestamps">Timestamps</h3>
 <p>Literal values in quotes may be in interpreted as a <code>TIMESTAMP</code> when they match a valid date in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>  format (e.g. <code>YYYY-MM-DD</code> and <code>YYYY-MM-DD HH:MM</code>).</p>
