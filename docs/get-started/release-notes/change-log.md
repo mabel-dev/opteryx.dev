@@ -18,12 +18,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - ⚠️**BREAKING** (clarity) [[#584](https://github.com/mabel-dev/opteryx/issues/584)] `enable_page_management` configuration and parameter renamed `enable_page_defragmentation` with some minor refactoring of approach ([@joocer](https://github.com/joocer))  
 - ⚠️**BREAKING** (alignment) `TIMESTAMP` casting no longer supports casting from a number. ([@joocer](https://github.com/joocer))  
 - [[#588](https://github.com/mabel-dev/opteryx/issues/588)] Integrate [sqloxide](https://github.com/wseaton/sqloxide) into Opteryx to reduce lag with [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) updates. ([@joocer](https://github.com/joocer))  
+- [[#619](https://github.com/mabel-dev/opteryx/issues/619)] Page defragmentation moved to an Operator and positioned by the Optimizer. ([@joocer](https://github.com/joocer))  
 
 **Added**
 
 - [[#533](https://github.com/mabel-dev/opteryx/issues/533)] Support `LIKE` on `SHOW FUNCTIONS`, see [sqlparser-rs/#620](https://github.com/sqlparser-rs/sqlparser-rs/pull/620). ([@joocer](https://github.com/joocer))  
 - [[#570](https://github.com/mabel-dev/opteryx/issues/570)] Query Optimizer rule to reduce steps by trying to eliminate negatives. ([@joocer](https://github.com/joocer))  
 - [[#129](https://github.com/mabel-dev/opteryx/issues/129)] Support `FOR` clauses for all datasets. ([@joocer](https://github.com/joocer))  
+- [[#543](https://github.com/mabel-dev/opteryx/issues/543)] Support 'type string' notation for casting values. ([@joocer](https://github.com/joocer))  
 
 ## [0.5.0] - 2022-10-02
 
