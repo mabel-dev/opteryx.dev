@@ -2,21 +2,16 @@ import ast
 import glob
 from format_docstring import create_md_content
 
+from doc_builder import Graph
 
 def get_file():
     ob = next(glob.iglob("../**/opteryx/connection.py", recursive=True))
     return ob
 
-def class_header(title, node):
-    cache = f"<dl><dt><h2>class <b>{title}</b>"
-    cache += " ("
-    cache += ", ".join([a.arg for a in node.args.args if a.arg != "self"])
-    cache += ")"
-    cache += "</h2>"
-    return cache
-
-
 def process_file(filepath):
+
+    graph = Graph()
+    graph.add
 
     file_contents = ""
     with open(filepath, encoding="utf8") as fd:
@@ -24,9 +19,9 @@ def process_file(filepath):
 
     module = ast.parse(file_contents)
 
-    cache = ""
-
     for node in ast.iter_child_nodes(module):
+
+        
 
         if isinstance(node, ast.ClassDef):
             # cache += create_md_content(node, title=node.name)
