@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#129](https://github.com/mabel-dev/opteryx/issues/129)] Support `FOR` clauses for all datasets. ([@joocer](https://github.com/joocer))  
 - [[#543](https://github.com/mabel-dev/opteryx/issues/543)] Support 'type string' notation for casting values. ([@joocer](https://github.com/joocer))  
 - [[#596](https://github.com/mabel-dev/opteryx/issues/596)] Optimizer replaces ORDER BY and LIMIT plan steps with a single HeapSort plan step. ([@joocer](https://github.com/joocer))  
+- [[#515](https://github.com/mabel-dev/opteryx/issues/515)] `NULLIF` function. ([@joocer](https://github.com/joocer))  
 
 ## [0.5.0] - 2022-10-02
 

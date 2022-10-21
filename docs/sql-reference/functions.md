@@ -46,7 +46,7 @@ Definitions noted with a :octicons-plus-16: accept different input arguments.
     Alias for `CAST`(**iso8601** AS TIMESTAMP).   
 
 !!! function "`TRY_CAST` (**any**: _any_ AS **type**) → _[type]_"  
-    Cast **any** to **type**, if cast is not possible, returns `Null`.   
+    Cast **any** to **type**, if cast is not possible, returns `null`.   
 
 !!! function "`VARCHAR` (_any_) → _varchar_"  
     Cast **any** to a string, raises an error if cast is not possible.  
@@ -408,6 +408,10 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
 
 !!! function "`IIF` (**condition**, **true_value**, **false_value**) → _[input type]_"  
     Return the **true_value** if the condition evaluates to `True`, otherwise return the **false_value**.
+
+!!! function "`IFNULL` (**value1**: _any_, **value2**: _any_) → _[input type]_"  
+    Returns `null` if **value1** equals **value2**, otherwise returns **value1**.
+    **:octicons-north-star-24: New in 0.6** 
 
 !!! function "`NORMAL` () → _numeric_"  
     Random number from a normal (Gaussian) distribution; distribution is centred at 0.0 and has a standard deviation of 1.0.
