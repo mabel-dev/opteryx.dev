@@ -1432,7 +1432,7 @@ Alias for <code>CAST</code>(<strong>iso8601</strong> AS TIMESTAMP).   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TRY_CAST</code> (<strong>any</strong>: <em>any</em> AS <strong>type</strong>) → <em>[type]</em></p>
-<p>Cast <strong>any</strong> to <strong>type</strong>, if cast is not possible, returns <code>Null</code>.   </p>
+<p>Cast <strong>any</strong> to <strong>type</strong>, if cast is not possible, returns <code>null</code>.   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>VARCHAR</code> (<em>any</em>) → <em>varchar</em></p>
@@ -1879,6 +1879,11 @@ Related: <code>HEX_DECODE</code>.</p>
 <div class="admonition function">
 <p class="admonition-title"><code>IIF</code> (<strong>condition</strong>, <strong>true_value</strong>, <strong>false_value</strong>) → <em>[input type]</em></p>
 <p>Return the <strong>true_value</strong> if the condition evaluates to <code>True</code>, otherwise return the <strong>false_value</strong>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>IFNULL</code> (<strong>value1</strong>: <em>any</em>, <strong>value2</strong>: <em>any</em>) → <em>[input type]</em></p>
+<p>Returns <code>null</code> if <strong>value1</strong> equals <strong>value2</strong>, otherwise returns <strong>value1</strong>.
+<strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.5 1.25a.75.75 0 0 0-1.5 0v8.69L6.447 5.385a.75.75 0 1 0-1.061 1.06L9.94 11H1.25a.75.75 0 0 0 0 1.5h8.69l-4.554 4.553a.75.75 0 0 0 1.06 1.061L11 13.561v8.689a.75.75 0 0 0 1.5 0v-8.69l4.553 4.554a.75.75 0 0 0 1.061-1.06L13.561 12.5h8.689a.75.75 0 0 0 0-1.5h-8.69l4.554-4.553a.75.75 0 1 0-1.06-1.061L12.5 9.939V1.25z"/></svg></span> New in 0.6</strong> </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>NORMAL</code> () → <em>numeric</em></p>
