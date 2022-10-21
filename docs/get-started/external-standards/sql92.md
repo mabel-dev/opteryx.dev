@@ -159,8 +159,8 @@ F131-05  | Single row `SELECT` with `GROUP BY` and `HAVING` clauses and grouped 
 **F261** | **`CASE` expression**                                     | no
 F261-01  | Simple `CASE`                                             | no
 F261-02  | Searched `CASE`                                           | no
-F261-03  | `NULLIF`                                                  | unknown
-F261-04  | `COALESCE`                                                | unknown
+F261-03  | `NULLIF`                                                  | yes
+F261-04  | `COALESCE`                                                | yes
 **F311** | **Schema definition statement**                           | n/a
 F311-01  | `CREATE SCHEMA`                                           | n/a
 F311-02  | `CREATE TABLE`                                            | n/a
