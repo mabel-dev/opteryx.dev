@@ -19,7 +19,7 @@ E021-02  | `CHARACTER VARYING` data type                             | unknown
 E021-03  | Character literals                                        | unknown
 E021-04  | `CHARACTER_LENGTH` function                               | no
 E021-05  | `OCTET_LENGTH`                                            | no
-E021-06  | `SUBSTRING` function                                      | unknown
+E021-06  | `SUBSTRING` function                                      | partial
 E021-07  | Character concatenation                                   | yes
 E021-08  | `UPPER` and `LOWER` functions                             | yes
 E021-09  | `TRIM` function                                           | unknown
