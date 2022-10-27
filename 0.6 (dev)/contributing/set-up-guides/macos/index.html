@@ -1421,11 +1421,14 @@
 </code></pre></div>
 <h2 id="running-tests">Running Tests</h2>
 <p>To run the regression and unit tests:</p>
-<p>First, install the optional dependencies:</p>
+<p>First, install the optional dependencies, on intel-based Macs:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python3 -m pip install --upgrade -r tests/requirements.txt
 </code></pre></div>
+<p>On M (ARM) based Macs:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python3 -m pip install --upgrade -r tests/requirements_arm.txt
+</code></pre></div>
 <p>Then run the regression tests.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python3 -m pytest
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>python3 -m pytest
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
