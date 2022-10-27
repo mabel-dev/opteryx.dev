@@ -11,7 +11,7 @@ Version 1.0 goals will be delivered across various minor versions building towar
 - 🔲 **Planner** CTEs (`WITH`) statements supported
 - ✅ **Planner** Read across multiple data sources (e.g. GCS and Postgres in the same query) [v0.2]
 - 🔲 **Planner** Support different plaform data sources (e.g. FireStore and BigQuery)
-- 🔲 **Planner** Rule-based query optimizer [v0.5]
+- ✅ **Planner** Rule-based query optimizer [v0.5]
 - 🔲 **Planner** Metastore used in planning an optimizing
 - ✅ **Execution** `JOIN` statements supported [v0.1]
 - ✅ **Execution** Functions using the result of Functions (e.g. `LENGTH(LIST(field))`) [v0.3]
