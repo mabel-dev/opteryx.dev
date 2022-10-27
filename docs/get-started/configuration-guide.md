@@ -66,6 +66,6 @@ Debian (ARM) | X          | Partial    | X           | X
 
 !!! Note
     - PyPy regression suite fails due to issues with Apache Arrow.
-    - ARM regression suite fails partway through.
+    - ARM regression suite fails part way through (likely memory issues).
     - Python 3.11 regression suite fails due to lack of 3.11 support.
     - Windows and MacOS regression fails due to lack of Docker support.
