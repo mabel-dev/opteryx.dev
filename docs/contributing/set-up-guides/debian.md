@@ -54,10 +54,16 @@ python3 setup.py build_ext --inplace
 
 To run the regression and unit tests:
 
-First, install the optional dependencies:
+First, install the optional dependencies, on most devices:
 
 ~~~bash
 python3 -m pip install --upgrade -r tests/requirements.txt
+~~~
+
+On ARM-based devices (like Raspberry Pi):
+
+~~~bash
+python3 -m pip install --upgrade -r tests/requirements_arm.txt
 ~~~
 
 Then run the regression tests.
