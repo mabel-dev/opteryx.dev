@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.6 (dev)/get-started/release-notes/change-log/">
       
       <link rel="icon" href="../../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -1400,102 +1400,102 @@
 <h2 id="unreleased">[Unreleased]</h2>
 <p><strong>Fixed</strong></p>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/568">#568</a>] Unable to perform aggregates on literals. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/592">#592</a>] Dates handled incorrectly. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/600">#600</a>] Parameterization used on query batches fails. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/580">#580</a>] Empty result sets have no column information. (<a href="https://github.com/joocer">@joocer</a>)  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/568">#568</a>] Unable to perform aggregates on literals. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/592">#592</a>] Dates handled incorrectly. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/600">#600</a>] Parameterization used on query batches fails. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/580">#580</a>] Empty result sets have no column information. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
 <p><strong>Changed</strong></p>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/566">#566</a>] Use DuckDB for SQL comparision tests in Wrenchy-Bench. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>⚠️<strong>BREAKING</strong> (clarity) [<a href="https://github.com/mabel-dev/opteryx/issues/584">#584</a>] <code>enable_page_management</code> configuration and parameter renamed <code>enable_page_defragmentation</code> with some minor refactoring of approach (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>⚠️<strong>BREAKING</strong> (alignment) <code>TIMESTAMP</code> casting no longer supports casting from a number. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/588">#588</a>] Integrate <a href="https://github.com/wseaton/sqloxide">sqloxide</a> into Opteryx to reduce lag with <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> updates. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/619">#619</a>] Page defragmentation moved to an Operator and positioned by the Optimizer. (<a href="https://github.com/joocer">@joocer</a>)  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/566">#566</a>] Use <a href="https://duckdb.org/">DuckDB</a> for SQL comparision tests in <a href="https://github.com/mabel-dev/wrenchy-bench">Wrenchy-Bench</a>. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>⚠️<strong>BREAKING</strong> (clarity) [<a href="https://github.com/mabel-dev/opteryx/issues/584">#584</a>] <code>enable_page_management</code> configuration and parameter renamed <code>enable_page_defragmentation</code> with some minor refactoring of approach <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>⚠️<strong>BREAKING</strong> (alignment) <code>TIMESTAMP</code> casting no longer supports casting from a number. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/588">#588</a>] Integrate <a href="https://github.com/wseaton/sqloxide">sqloxide</a> into Opteryx to reduce lag with <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> updates. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/619">#619</a>] Page defragmentation moved to an Operator and positioned by the Optimizer. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
 <p><strong>Added</strong></p>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/533">#533</a>] Support <code>LIKE</code> on <code>SHOW FUNCTIONS</code>, see <a href="https://github.com/sqlparser-rs/sqlparser-rs/pull/620">sqlparser-rs/#620</a>. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/570">#570</a>] Query Optimizer rule to reduce steps by trying to eliminate negatives. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/129">#129</a>] Support <code>FOR</code> clauses for all datasets. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/543">#543</a>] Support 'type string' notation for casting values. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/596">#596</a>] Optimizer replaces ORDER BY and LIMIT plan steps with a single HeapSort plan step. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/515">#515</a>] <code>NULLIF</code> function. (<a href="https://github.com/joocer">@joocer</a>)  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/533">#533</a>] Support <code>LIKE</code> on <code>SHOW FUNCTIONS</code>, see <a href="https://github.com/sqlparser-rs/sqlparser-rs/pull/620">sqlparser-rs/#620</a>. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/570">#570</a>] Query Optimizer rule to reduce steps by trying to eliminate negatives. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/129">#129</a>] Support <code>FOR</code> clauses for all datasets. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/543">#543</a>] Support 'type string' notation for casting values. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/596">#596</a>] Optimizer replaces ORDER BY and LIMIT plan steps with a single HeapSort plan step. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/515">#515</a>] <code>NULLIF</code> function. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
 <h2 id="050-2022-10-02">[0.5.0] - 2022-10-02</h2>
 <p><strong>Fixed</strong></p>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/528">#528</a>] <code>.shape</code> and <code>.count</code> not working as expected. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>Numbers expressed in the form <code>+n</code> not parsed correctly. (<a href="https://github.com/joocer">@joocer</a>)  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/528">#528</a>] <code>.shape</code> and <code>.count</code> not working as expected. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>Numbers expressed in the form <code>+n</code> not parsed correctly. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
 <p><strong>Changed</strong></p>
 <ul>
-<li>⚠️<strong>BREAKING</strong> (alignment) <code>as_arrow</code> renamed to <code>arrow</code> to align to <a href="https://duckdb.org/docs/api/python/overview#apache-arrow">DuckDB</a> naming. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>⚠️<strong>BREAKING</strong> <code>SHOW COLUMNS</code> returns the column name in the <code>name</code> column, previously <code>column_name</code> (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>⚠️<strong>BREAKING</strong> (correction) cursor 'fetch*' methods returns tuples rather than dictionaries as defaults, this is correcting a bug in <a href="https://peps.python.org/pep-0249/">PEP249</a> compatibility. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>⚠️<strong>BREAKING</strong> (security) [<a href="https://github.com/mabel-dev/opteryx/issues/517">#517</a>] Placeholder changed from '%s' to '?'. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/522">#522</a>] Implementation of LRU-K(2) for cache evictions. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/537">#537</a>] Significant refactor of Query Planner. (<a href="https://github.com/joocer">@joocer</a>)  </li>
+<li>⚠️<strong>BREAKING</strong> (alignment) <code>as_arrow</code> renamed to <code>arrow</code> to align to <a href="https://duckdb.org/docs/api/python/overview#apache-arrow">DuckDB</a> naming. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>⚠️<strong>BREAKING</strong> <code>SHOW COLUMNS</code> returns the column name in the <code>name</code> column, previously <code>column_name</code> <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>⚠️<strong>BREAKING</strong> (correction) cursor 'fetch*' methods returns tuples rather than dictionaries as defaults, this is correcting a bug in <a href="https://peps.python.org/pep-0249/">PEP249</a> compatibility. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>⚠️<strong>BREAKING</strong> (security) [<a href="https://github.com/mabel-dev/opteryx/issues/517">#517</a>] Placeholder changed from '%s' to '?'. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/522">#522</a>] Implementation of LRU-K(2) for cache evictions. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/537">#537</a>] Significant refactor of Query Planner. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
 <p><strong>Added</strong></p>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/397">#397</a>] Time Travel with '$planets' dataset. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/519">#519</a>] Introduce a size limit on <code>as_arrow()</code>. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/324">#324</a>] Support <code>IN UNNEST()</code>. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/386">#386</a>] Support <code>SET</code> statements. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/531">#531</a>] Support <code>SHOW VARIABLES</code> and <code>SHOW PARAMETERS</code>. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/464">#464</a>] Support <code>LEFT JOIN USING</code> (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/402">#402</a>] <code>INNER JOIN ON</code> supports multiple conditions (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/551">#551</a>] Document stores (MongoDb + FireStore) return '_id' column holding string version of document ID. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/532">#532</a>] Runtime parameters are able to be altered using the <code>SET</code> statement. (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/524">#524</a>] Query Optimizer - conjunctive predicate splitter. (<a href="https://github.com/joocer">@joocer</a>) </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/397">#397</a>] Time Travel with '$planets' dataset. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/519">#519</a>] Introduce a size limit on <code>as_arrow()</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/324">#324</a>] Support <code>IN UNNEST()</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/386">#386</a>] Support <code>SET</code> statements. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/531">#531</a>] Support <code>SHOW VARIABLES</code> and <code>SHOW PARAMETERS</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/464">#464</a>] Support <code>LEFT JOIN USING</code> <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/402">#402</a>] <code>INNER JOIN ON</code> supports multiple conditions <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/551">#551</a>] Document stores (MongoDb + FireStore) return '_id' column holding string version of document ID. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/532">#532</a>] Runtime parameters are able to be altered using the <code>SET</code> statement. <a href="https://github.com/joocer">@joocer</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/524">#524</a>] Query Optimizer - conjunctive predicate splitter. <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
 <h2 id="041-2022-09-12">[0.4.1] - 2022-09-12</h2>
 <p><strong>Fixed</strong></p>
 <ul>
-<li>Fixed missing <code>__init__</code> file. (<a href="https://github.com/joocer">@joocer</a>) </li>
+<li>Fixed missing <code>__init__</code> file. <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
 <h2 id="040-2022-09-12">[0.4.0] - 2022-09-12</h2>
 <p><strong>Added</strong></p>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/336">#366</a>] Implement 'function not found' suggestions. (<a href="https://github.com/joocer">@joocer</a>)   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/443">#443</a>] Introduce a CLI. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/351">#351</a>] Support <code>SHOW FUNCTIONS</code>. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/442">#442</a>] Various functions. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/483">#483</a>] Support <code>SHOW CREATE TABLE</code>. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/375">#375</a>] Results to an Arrow Table. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/486">#486</a>] Support functions on aggregates and aggregates on functions. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>Initial support for <code>INTERVAL</code>s. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/395">#395</a>] Support reading CSV files. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/498">#498</a>] CLI support writing CSV/JSONL/Parquet. (<a href="https://github.com/joocer">@joocer</a>)  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/336">#366</a>] Implement 'function not found' suggestions. <a href="https://github.com/joocer">@joocer</a>    </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/443">#443</a>] Introduce a CLI. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/351">#351</a>] Support <code>SHOW FUNCTIONS</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/442">#442</a>] Various functions. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/483">#483</a>] Support <code>SHOW CREATE TABLE</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/375">#375</a>] Results to an Arrow Table. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/486">#486</a>] Support functions on aggregates and aggregates on functions. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>Initial support for <code>INTERVAL</code>s. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/395">#395</a>] Support reading CSV files. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/498">#498</a>] CLI support writing CSV/JSONL/Parquet. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
 <p><strong>Changed</strong></p>
 <ul>
-<li>⚠️<strong>BREAKING</strong> (correction) [<a href="https://github.com/mabel-dev/opteryx/issues/457">#457</a>] Null values are removed before performing <code>INNER JOIN USING</code>. (<a href="https://github.com/joocer">@joocer</a>) </li>
+<li>⚠️<strong>BREAKING</strong> (correction) [<a href="https://github.com/mabel-dev/opteryx/issues/457">#457</a>] Null values are removed before performing <code>INNER JOIN USING</code>. <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
 <p><strong>Fixed</strong></p>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/448">#448</a>] <code>VERSION()</code> failed and missing from regression suite. (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/404">#404</a>] <code>COALESCE</code> fails for NaN values. (<a href="https://github.com/joocer">@joocer</a>)   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/453">#453</a>] PyArrow bug with long lists creating new columns. (<a href="https://github.com/joocer">@joocer</a>)   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/444">#444</a>] Very low cardinality <code>INNER JOINS</code> exceed memory allocation. (<a href="https://github.com/joocer">@joocer</a>)   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/459">#459</a>] Functions lose some detail on non-first page. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/465">#465</a>] Pages aren't matched to schema for simple queries. (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/468">#468</a>] Parquet reader shows some fields as "item". (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/471">#471</a>] Column aliases not correctly applied when the relation has an alias. (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/489">#489</a>] Intermittent behaviour on hash <code>JOIN</code> algorithm. (<a href="https://github.com/joocer">@joocer</a>) </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/448">#448</a>] <code>VERSION()</code> failed and missing from regression suite. <a href="https://github.com/joocer">@joocer</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/404">#404</a>] <code>COALESCE</code> fails for NaN values. <a href="https://github.com/joocer">@joocer</a>    </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/453">#453</a>] PyArrow bug with long lists creating new columns. <a href="https://github.com/joocer">@joocer</a>    </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/444">#444</a>] Very low cardinality <code>INNER JOINS</code> exceed memory allocation. <a href="https://github.com/joocer">@joocer</a>    </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/459">#459</a>] Functions lose some detail on non-first page. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/465">#465</a>] Pages aren't matched to schema for simple queries. <a href="https://github.com/joocer">@joocer</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/468">#468</a>] Parquet reader shows some fields as "item". <a href="https://github.com/joocer">@joocer</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/471">#471</a>] Column aliases not correctly applied when the relation has an alias. <a href="https://github.com/joocer">@joocer</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/489">#489</a>] Intermittent behaviour on hash <code>JOIN</code> algorithm. <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
 <h2 id="030-2022-08-28">[0.3.0] - 2022-08-28</h2>
 <p><strong>Added</strong></p>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/196">#196</a>] Partial implementation of projection pushdown (Parquet Only). (<a href="https://github.com/joocer">@joocer</a>)   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/41">#41</a>] Enable the results of functions to be used as parameters for other functions. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/42">#42</a>] Enable inline operations. (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/330">#330</a>] Support <code>SIMILAR TO</code> alias for RegEx match. (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/331">#331</a>] Support <code>SAFE_CAST</code> alias for <code>TRY_CAST</code>. (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/419">#419</a>] Various simple functions (<code>SIGN</code>, <code>SQRT</code>, <code>TITLE</code>, <code>REVERSE</code>). (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/364">#364</a>] Support <code>SOUNDEX</code> function. (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/401">#401</a>] Support SHA-based hash algorithm functions. (<a href="https://github.com/joocer">@joocer</a>) </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/196">#196</a>] Partial implementation of projection pushdown (Parquet Only). <a href="https://github.com/joocer">@joocer</a>    </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/41">#41</a>] Enable the results of functions to be used as parameters for other functions. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/42">#42</a>] Enable inline operations. <a href="https://github.com/joocer">@joocer</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/330">#330</a>] Support <code>SIMILAR TO</code> alias for RegEx match. <a href="https://github.com/joocer">@joocer</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/331">#331</a>] Support <code>SAFE_CAST</code> alias for <code>TRY_CAST</code>. <a href="https://github.com/joocer">@joocer</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/419">#419</a>] Various simple functions (<code>SIGN</code>, <code>SQRT</code>, <code>TITLE</code>, <code>REVERSE</code>). <a href="https://github.com/joocer">@joocer</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/364">#364</a>] Support <code>SOUNDEX</code> function. <a href="https://github.com/joocer">@joocer</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/401">#401</a>] Support SHA-based hash algorithm functions. <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
 <p><strong>Changed</strong></p>
 <ul>
@@ -1503,10 +1503,10 @@
 <li>⚠️<strong>BREAKING</strong> - Default behaviour changed from Mabel partitioning to no partitioning.</li>
 <li>⚠️<strong>BREAKING</strong> (correction) - Use of aliases defined in the <code>SELECT</code> clause can no longer be used in <code>WHERE</code> and <code>GROUP BY</code> clauses - this is a correction to align to standard SQL behaviour.</li>
 <li>⚠️<strong>BREAKING</strong> (correction) - Use of 'None' as an alias for 'Null' is no longer supported - this is a correction to align to standard SQL behaviour.</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/326">#326</a>] Prefer pyarrow's 'promote' over manually handling missing fields. (<a href="https://github.com/joocer">@joocer</a>)   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/39">#39</a>] Rewrite Aggregation Node to use Pyarrow <code>group_by</code>. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/338">#338</a>] Remove Evaluation Node. (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/58">#58</a>] Performance of <code>ORDER BY RAND()</code> improved. (<a href="https://github.com/joocer">@joocer</a>) </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/326">#326</a>] Prefer pyarrow's 'promote' over manually handling missing fields. <a href="https://github.com/joocer">@joocer</a>    </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/39">#39</a>] Rewrite Aggregation Node to use Pyarrow <code>group_by</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/338">#338</a>] Remove Evaluation Node. <a href="https://github.com/joocer">@joocer</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/58">#58</a>] Performance of <code>ORDER BY RAND()</code> improved. <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
 <p><strong>Fixed</strong></p>
 <ul>
@@ -1518,7 +1518,7 @@
 <h2 id="020-2022-07-31">[0.2.0] - 2022-07-31</h2>
 <p><strong>Added</strong></p>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/232">#232</a>] Support <code>DATEPART</code> and <code>EXTRACT</code> date functions. (<a href="https://github.com/joocer">@joocer</a>)   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/232">#232</a>] Support <code>DATEPART</code> and <code>EXTRACT</code> date functions. <a href="https://github.com/joocer">@joocer</a>    </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/63">#63</a>] Estimate row counts when reading blobs. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/231">#231</a>] Implement <code>DATEDIFF</code> function. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/301">#301</a>] Optimizations for <code>IS</code> conditions. (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -1526,7 +1526,7 @@
 </ul>
 <p><strong>Changed</strong></p>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/35">#35</a>] Table scan planning done during query planning. (<a href="https://github.com/joocer">@joocer</a>)   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/35">#35</a>] Table scan planning done during query planning. <a href="https://github.com/joocer">@joocer</a>    </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/173">#173</a>] Data not found raises different errors under different scenarios. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>Implementation of <code>LEFT</code> and <code>RIGHT</code> functions to reduce execution time. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/258">#258</a>] Code release approach. (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -1746,10 +1746,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>
