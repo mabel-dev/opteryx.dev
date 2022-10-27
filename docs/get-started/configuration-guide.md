@@ -57,11 +57,15 @@ This is also recommended in an environment where multiple servers, or container 
 
 The regression suite runs against CPython:
 
-OS | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11   
+OS           | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11   
 ------------ | :--------: | :--------: | :---------: | :--------:  
 MacOS (x86)  | X          | X          | X           | X  
 Windows      | X          | X          | X           | X  
 Ubuntu (x86) | Full       | Full       | Full        | Failing  
 Debian (ARM) | X          | Partial    | X           | X  
 
-The PyPy regression suite currently fails due to issues with Apache Arrow.
+!!! Note
+    - PyPy regression suite fails due to issues with Apache Arrow.
+    - ARM regression suite fails partway through.
+    - Python 3.11 regression suite fails due to lack of 3.11 support.
+    - Windows and MacOS regression fails due to lack of Docker support.
