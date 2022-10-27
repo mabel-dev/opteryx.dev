@@ -458,12 +458,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#caching" class="md-nav__link">
-    Caching
+  <a href="#caching-for-blob-stores" class="md-nav__link">
+    Caching for Blob Stores
   </a>
   
-    <nav class="md-nav" aria-label="Caching">
+    <nav class="md-nav" aria-label="Caching for Blob Stores">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-cache" class="md-nav__link">
+    Read Cache
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#buffer-pool" class="md-nav__link">
@@ -1288,12 +1295,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#caching" class="md-nav__link">
-    Caching
+  <a href="#caching-for-blob-stores" class="md-nav__link">
+    Caching for Blob Stores
   </a>
   
-    <nav class="md-nav" aria-label="Caching">
+    <nav class="md-nav" aria-label="Caching for Blob Stores">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-cache" class="md-nav__link">
+    Read Cache
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#buffer-pool" class="md-nav__link">
@@ -1354,7 +1368,7 @@
 <tr>
 <td><code>MAX_JOIN_SIZE</code></td>
 <td align="right">10000</td>
-<td>Maximum records created in a CROSS JOIN frame</td>
+<td>Maximum records created in a <code>CROSS JOIN</code> frame</td>
 </tr>
 <tr>
 <td><code>MEMCACHED_SERVER</code></td>
@@ -1362,39 +1376,39 @@
 <td>Address of Memcached server, in <code>IP:PORT</code> format</td>
 </tr>
 <tr>
-<td><code>MAX_SUB_PROCESSES</code></td>
-<td align="right">Physical CPU count</td>
-<td>Subprocesses used to parallelize processing</td>
-</tr>
-<tr>
-<td><code>BUFFER_PER_SUB_PROCESS</code></td>
-<td align="right">100000000</td>
-<td>Memory to allocate per subprocess</td>
-</tr>
-<tr>
-<td><code>MAXIMUM_SECONDS_SUB_PROCESSES_CAN_RUN</code></td>
-<td align="right">3600</td>
-<td>Time to wait before killing subprocesses</td>
-</tr>
-<tr>
 <td><code>DATASET_PREFIX_MAPPING</code></td>
-<td align="right">_</td>
-<td>reader</td>
+<td align="right"><em>not set</em></td>
+<td>Data store prefix mapping</td>
 </tr>
 <tr>
 <td><code>PARTITION_SCHEME</code></td>
-<td align="right">None</td>
+<td align="right"><em>none</em></td>
 <td>How the blob/file data is partitioned</td>
 </tr>
 <tr>
 <td><code>MAX_SIZE_SINGLE_CACHE_ITEM</code></td>
 <td align="right">1048576</td>
-<td>The maximum size of an item to store in the buffer cache</td>
+<td>The maximum size of an item to store in the cache</td>
+</tr>
+<tr>
+<td><code>MAX_CACHE_EVICTIONS</code></td>
+<td align="right">50</td>
+<td>The maximum number of evictions from in-memory read cache per query</td>
 </tr>
 <tr>
 <td><code>PAGE_SIZE</code></td>
 <td align="right">67108864</td>
 <td>The size to try to make data pages as they are processed</td>
+</tr>
+<tr>
+<td><code>LOCAL_BUFFER_POOL_SIZE</code></td>
+<td align="right">50</td>
+<td>The size of the in-memory Buffer Pool (blob size)</td>
+</tr>
+<tr>
+<td><code>MAX_BUFFER_POOL_EVICTIONS</code></td>
+<td align="right">20</td>
+<td>The maximum number of evictions from Buffer Pool per query</td>
 </tr>
 </tbody>
 </table>
@@ -1407,11 +1421,13 @@
 <li><code>MINIO_SECRET_KEY</code></li>
 <li><code>MINIO_SECURE</code></li>
 </ul>
-<h2 id="caching">Caching</h2>
-<h3 id="buffer-pool">Buffer Pool</h3>
+<h2 id="caching-for-blob-stores">Caching for Blob Stores</h2>
+<h3 id="read-cache">Read Cache</h3>
 <p>The observed bottleneck for query performance is almost always IO. It is not uncommon for 90% of the execution time is initial load of data - this can vary considerably by storage and query.</p>
-<p>Opteryx implements a cache similar in concept to a <a href="https://www.ibm.com/docs/en/db2/11.5?topic=databases-buffer-pools">Buffer Pool</a> in a traditional RDBMS to improve data load performance. However, rather than always residing in main memory, the Buffer Pool can reside in any memory store faster than main storage access. This configuration is managed by the user.</p>
-<p>The Buffer Pool currently has two implementations, In Memory Cache and Memcached Cache. When your main storage is local disk, using Memcached as your Buffer Pool is unlikely to provide significant performance improvement, however  the In Memory Cache may; when using remote storage such as S3 or GCS, Memcached Cache can provide significant improvements. However, as will all optimization, test in your unique set of circumstances before assuming it to be true.</p>
+<p>The Read Cache currently has two implementations, In Memory Cache and Memcached Cache. When your main storage is local disk, using Memcached as your Read Cache is unlikely to provide significant performance improvement, however  the In Memory Cache may; when using remote storage such as S3 or GCS, Memcached Cache can provide significant improvements. However, as will all optimization, test in your unique set of circumstances before assuming it to be true.</p>
+<h3 id="buffer-pool">Buffer Pool</h3>
+<p>The <a href="https://www.ibm.com/docs/en/db2/11.5?topic=databases-buffer-pools">Buffer Pool</a> is similar to the Read Cache with two key differences; the Buffer Pool must be held in local memory, Memcache or external system cannot be used and the Buffer Pool is a read through to the Read Cache. That means that reads to the Read Cache check if the items is in the Buffer Pool before checking the Read Cache. This creates a storage heirarchy, where frequently read blobs are likely to be in memory, and never, or infrequently accessed blobs are fetched from storage.</p>
+<p>If your Read Cache is in memory, you are unlikely to see considerable benefits from the Buffer Pool.</p>
 <p><strong>In Memory Cache</strong></p>
 <p>Uses the main memory of the host machine to cache pages. This is usually fastest, but most limiting and volatile. This is a good fit for high specification hosts.</p>
 <p>The size of the cache is set by the number of pages to hold in memory. No checks are made if the pages actually fit in memory and setting the cache too large, or running on a host where there is high contention for memory where memory is swapped to disk, may result in negative performance.</p>
@@ -1419,7 +1435,7 @@
 <p>Uses a Memcached instance to cache pages. Is a good option when remote reads are slow, for example from GCS or S3.</p>
 <p>This is also recommended in an environment where multiple servers, or container instances, may be serving customers. Here, the shared cache allows users to benefit from caching even on their first query if another user's query has populated the cache with the files being read.</p>
 <h2 id="operating-system-support">Operating System Support</h2>
-<p>The full regression suite runs against:</p>
+<p>The regression suite runs against CPython:</p>
 <table>
 <thead>
 <tr>
@@ -1427,11 +1443,13 @@
 <th align="center">Python 3.8</th>
 <th align="center">Python 3.9</th>
 <th align="center">Python 3.10</th>
+<th align="center">Python 3.11</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>MacOS</td>
+<td>MacOS (x86)</td>
+<td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
@@ -1441,16 +1459,25 @@
 <td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
+<td align="center">X</td>
 </tr>
 <tr>
-<td>Ubuntu</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
+<td>Ubuntu (x86)</td>
+<td align="center">Full</td>
+<td align="center">Full</td>
+<td align="center">Full</td>
+<td align="center">Failing</td>
+</tr>
+<tr>
+<td>Debian (ARM)</td>
+<td align="center">X</td>
+<td align="center">Partial</td>
+<td align="center">X</td>
+<td align="center">X</td>
 </tr>
 </tbody>
 </table>
-<p>Note that although not included in the regression suite, packages are built for all versions in this table.</p>
+<p>The PyPy regression suite currently fails due to issues with Apache Arrow.</p>
 
 
 
