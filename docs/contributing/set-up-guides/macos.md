@@ -56,11 +56,18 @@ python3 setup.py build_ext --inplace
 
 To run the regression and unit tests:
 
-First, install the optional dependencies:
+First, install the optional dependencies, on intel-based Macs:
 
 ~~~bash
 python3 -m pip install --upgrade -r tests/requirements.txt
 ~~~
+
+On M (ARM) based Macs:
+
+~~~bash
+python3 -m pip install --upgrade -r tests/requirements_arm.txt
+~~~
+
 
 Then run the regression tests.
 
