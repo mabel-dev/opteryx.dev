@@ -887,8 +887,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-do-not-use-too-many-values-with-the-in-keyword" class="md-nav__link">
-    6. Do not use too many values with the IN keyword
+  <a href="#6-use-like-when-comparing-strings" class="md-nav__link">
+    6. Use LIKE when comparing strings
   </a>
   
 </li>
@@ -1340,8 +1340,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-do-not-use-too-many-values-with-the-in-keyword" class="md-nav__link">
-    6. Do not use too many values with the IN keyword
+  <a href="#6-use-like-when-comparing-strings" class="md-nav__link">
+    6. Use LIKE when comparing strings
   </a>
   
 </li>
@@ -1395,10 +1395,10 @@
 
 
 <h1 id="query-optimization">Query Optimization</h1>
-<p>No optimization technique is universally true, these recommendations should improve performance in most cases. As will all optimization, test in your unique set of circumstances before assuming it to be true.</p>
 <blockquote>
 <p>Adapted from <a href="https://betterprogramming.pub/15-best-practices-for-sql-optimization-956759626321">15 Best Practices for SQL Optimization</a>.</p>
 </blockquote>
+<p>No optimization technique is universally true, these recommendations should improve performance in most cases. As will all optimization, test in your unique set of circumstances before assuming it to be true.</p>
 <h2 id="1-avoid-using-select">1. Avoid using <code>SELECT *</code></h2>
 <p>Selecting only the fields you need to be returned improves query performance by reducing the amount of data that is processed internally.</p>
 <p>A principle the Query Optimizer uses is to eliminate rows and columns to process as early as possible, <code>SELECT *</code> removes the option to remove columns from the data being processed.</p>
@@ -1414,7 +1414,8 @@ Grouping by columns with high cardinality (mostly unique) is generally slower th
 <p>Cross join will very likely create a lot of records that are not required - if you then filter these records from the two source tables using a <code>WHERE</code> clause, it's likely you should use an <code>INNER JOIN</code> instead.</p>
 <h2 id="5-small-table-drives-big-table">5. Small table drives big table</h2>
 <p>Most <code>JOIN</code>s require iterating over two relations, the <em>left</em> relation, which is the one in the <code>FROM</code> clause, and the <em>right</em> relation which is the one in the <code>JOIN</code> clause (<code>SELECT * FROM left JOIN right</code>). It is generally faster to put the smaller relation to the <em>left</em>.</p>
-<h2 id="6-do-not-use-too-many-values-with-the-in-keyword">6. Do not use too many values with the <code>IN</code> keyword</h2>
+<h2 id="6-use-like-when-comparing-strings">6. Use <code>LIKE</code> when comparing strings</h2>
+<p><code>LIKE</code> can be used for pattern matching but it can also be used for comparisions without wildcards and generally performs faster than <code>=</code> comparisons.</p>
 <h2 id="7-use-the-correct-join">7. Use the correct <code>JOIN</code></h2>
 <p>A <code>CROSS JOIN</code> can quickly generate millions of records to be filtered, if you can use any join other than the <code>CROSS JOIN</code>, do that.</p>
 <h2 id="8-use-limit">8. Use <code>LIMIT</code></h2>

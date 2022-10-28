@@ -1482,13 +1482,13 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Non x86 environments, such as Raspberry Pi or the M series of Mac CPUs, may require additional set up steps.</p>
+<p>Non x86 environments, such as Raspberry Pi or the M1 Macs, may require additional set up steps.</p>
 </div>
 <h3 id="python-environment">Python Environment</h3>
-<p><strong>Recommended Version</strong>: 3.10</p>
+<p><strong>Recommended Version</strong>: 3.9</p>
 <p>Opteryx supports Python versions 3.8, 3.9 and 3.10.</p>
 <p>Opteryx has builds for Python 3.8, 3.9 and 3.10 on 64-bit (x86) versions of Windows, MacOS and Linux. The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python version 3.8, 3.9 and 3.10.</p>
-<p>Opteryx is primarily developed on workstations running Python 3.10 (Debian, MacOS) and is known to be deployed in production environments running Python 3.9 (Debian)</p>
+<p>Opteryx is primarily developed on workstations running Python 3.10 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 also has the greatest test coverage due to it being supported on more platforms.</p>
 <h3 id="jupyter-notebooks">Jupyter Notebooks</h3>
 <p>Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3. This approach will result in raw data being moved from the data platform (GCS or S3) to the host running Jupyter to be processed. This is most practical when the connection to the data platform is fast - such as running Vertex AI Notebooks on GCP, or querying local files.</p>
 <h3 id="docker-kubernetes">Docker &amp; Kubernetes</h3>
