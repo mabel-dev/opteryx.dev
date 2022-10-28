@@ -13,17 +13,17 @@ Opteryx balances memory consumption with performance, however, being able to pro
     This is a general recommendation and is a good place to start, your environment and specific problem may require, or perform significantly better, with a different configuration.
 
 !!! Warning
-    Non x86 environments, such as Raspberry Pi or the M series of Mac CPUs, may require additional set up steps.
+    Non x86 environments, such as Raspberry Pi or the M1 Macs, may require additional set up steps.
 
 ### Python Environment
 
-**Recommended Version**: 3.10
+**Recommended Version**: 3.9
 
 Opteryx supports Python versions 3.8, 3.9 and 3.10.
 
 Opteryx has builds for Python 3.8, 3.9 and 3.10 on 64-bit (x86) versions of Windows, MacOS and Linux. The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python version 3.8, 3.9 and 3.10.
 
-Opteryx is primarily developed on workstations running Python 3.10 (Debian, MacOS) and is known to be deployed in production environments running Python 3.9 (Debian)
+Opteryx is primarily developed on workstations running Python 3.10 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 also has the greatest test coverage due to it being supported on more platforms.
 
 ### Jupyter Notebooks
 
