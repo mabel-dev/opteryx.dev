@@ -8,7 +8,7 @@ We had a problem where we wanted a SQL interface to our data, but none of the ex
 
 ## Prior Attempts
 
-The data store we're working with was designed to be transctional (read a row of data, process it, save the result, repeat). We use JSON lines files, which for this usecase we were unable to find anything better in the sweet spot of human and machine readable, and performance to read and write.
+The data store we're working with was designed to be transctional (read a row of data, process it, save the result, repeat). We use JSON lines files, which for this use case we were unable to find anything better in the sweet spot of human and machine readable, and performance to read and write.
 
 With this as the datastore, our first attempt at a SQL engine was also transactional, following what is known as the Volcano Model. This aligned well with the tools that we had written to process the data so most of the effort was with translating the SQL syntax to filters that the existing tools could understand. Functionality like GROUP BY was added to make it feel more like a database and less like a log-viewer.
 

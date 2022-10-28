@@ -60,12 +60,13 @@ The regression suite runs against CPython:
 OS           | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11   
 ------------ | :--------: | :--------: | :---------: | :--------:  
 MacOS (x86)  | X          | X          | X           | X  
-Windows      | X          | X          | X           | X  
+MacOS (ARM)  | X          | X          | X           | X
+Windows      | Partial    | Partial    | Partial     | X  
 Ubuntu (x86) | Full       | Full       | Full        | Failing  
 Debian (ARM) | X          | Partial    | X           | X  
 
 !!! Note
     - PyPy regression suite fails due to issues with Apache Arrow.
-    - ARM regression suite fails part way through (likely memory issues).
-    - Python 3.11 regression suite fails due to lack of 3.11 support.
-    - Windows and MacOS regression fails due to lack of Docker support.
+    - ARM and Windows regression suite excludes some tests.
+    - Python 3.11 regression suite fails due to lack of 3.11 support in the test platform.
+    - M1 Mac (ARM) is not included in the regression suite but there is known usage on this platform.
