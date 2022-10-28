@@ -1455,10 +1455,17 @@
 <td align="center">X</td>
 </tr>
 <tr>
+<td>MacOS (ARM)</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+</tr>
+<tr>
 <td>Windows</td>
-<td align="center">X</td>
-<td align="center">X</td>
-<td align="center">X</td>
+<td align="center">Partial</td>
+<td align="center">Partial</td>
+<td align="center">Partial</td>
 <td align="center">X</td>
 </tr>
 <tr>
@@ -1481,9 +1488,9 @@
 <p class="admonition-title">Note</p>
 <ul>
 <li>PyPy regression suite fails due to issues with Apache Arrow.</li>
-<li>ARM regression suite fails part way through (likely memory issues).</li>
-<li>Python 3.11 regression suite fails due to lack of 3.11 support.</li>
-<li>Windows and MacOS regression fails due to lack of Docker support.</li>
+<li>ARM and Windows regression suite excludes some tests.</li>
+<li>Python 3.11 regression suite fails due to lack of 3.11 support in the test platform.</li>
+<li>M1 Mac (ARM) is not included in the regression suite but there is known usage on this platform.</li>
 </ul>
 </div>
 
