@@ -1,8 +1,8 @@
 # Query Optimization
 
-No optimization technique is universally true, these recommendations should improve performance in most cases. As will all optimization, test in your unique set of circumstances before assuming it to be true.
-
 > Adapted from [15 Best Practices for SQL Optimization](https://betterprogramming.pub/15-best-practices-for-sql-optimization-956759626321).
+
+No optimization technique is universally true, these recommendations should improve performance in most cases. As will all optimization, test in your unique set of circumstances before assuming it to be true.
 
 ## 1. Avoid using `SELECT *`
 
@@ -32,7 +32,9 @@ Cross join will very likely create a lot of records that are not required - if y
 
 Most `JOIN`s require iterating over two relations, the _left_ relation, which is the one in the `FROM` clause, and the _right_ relation which is the one in the `JOIN` clause (`SELECT * FROM left JOIN right`). It is generally faster to put the smaller relation to the _left_.
 
-## 6. Do not use too many values with the `IN` keyword
+## 6. Use `LIKE` when comparing strings
+
+`LIKE` can be used for pattern matching but it can also be used for comparisions without wildcards and generally performs faster than `=` comparisons.
 
 ## 7. Use the correct `JOIN`
 

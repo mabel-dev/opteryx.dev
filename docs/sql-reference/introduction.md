@@ -1,8 +1,10 @@
 # SQL Introduction
 
+> This tutorial is reworked from the [DuckDB](https://duckdb.org/docs/sql/introduction) tutorial.
+
 ## Overview
 
-This page provides an overview of how to perform simple operations in SQL. This tutorial is only intended to give you an introduction and is not a complete tutorial on SQL. This tutorial is reworked from the [DuckDB](https://duckdb.org/docs/sql/introduction) tutorial.
+This page provides an overview of how to perform simple operations in SQL. This tutorial is only intended to give you an introduction and is not a complete tutorial on SQL.
 
 All queries use the internal sample NASA datasets and should work regardless of the data your installation and set up has access to.
 
