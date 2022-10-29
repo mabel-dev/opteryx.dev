@@ -56,18 +56,20 @@ This is also recommended in an environment where multiple servers, or container 
 
 ## Operating System Support
 
-The regression suite runs against CPython:
+The regression suite coverage:
 
-OS            | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11   
-------------- | :--------: | :--------: | :---------: | :--------:  
-MacOS (Intel) | X          | X          | X           | X  
-MacOS (M1)    | X          | X          | X           | X
-Windows       | Partial    | Partial    | Partial     | X  
-Ubuntu (x86)  | Full       | Full       | Full        | Failing  
-Debian (ARM)  | X          | Partial    | X           | X  
+OS             | CPython 3.8 | CPython 3.9 | CPython 3.10 | CPython 3.11 | PyPy 3.9
+-------------- | :---------: | :---------: | :----------: | :----------: | :------: 
+MacOS (Intel)  | Partial     | Partial     | Partial      | X            | X
+MacOS (M1/ARM) | X           | X           | X            | X            | X
+Windows        | Partial     | Partial     | Partial      | X            | X
+Ubuntu (x86)   | Full        | Full        | Full         | Failing      | Failing
+Debian (ARM)   | X           | Partial     | X            | X            | X
 
 !!! Note
+    - **X** indicates there is no automated test for this configuration.
+    - **Partial** coverage indicates some tests are excluded.
+    - Windows regression suite fails some tests due to issues with Apache Arrow.
     - PyPy regression suite fails due to issues with Apache Arrow.
-    - Debian ARM and Windows regression suite excludes some tests.
     - Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.
     - M1 Mac (ARM) is not included in the regression suite but there is known usage on this platform.
