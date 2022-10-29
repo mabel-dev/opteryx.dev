@@ -16,6 +16,7 @@ Configuration values are set a `opteryx.yaml` file in the directory the applicat
 `PAGE_SIZE`                 | 67108864    | The size to try to make data pages as they are processed
 `LOCAL_BUFFER_POOL_SIZE`    | 50          | The size of the in-memory Buffer Pool (blob size)
 `MAX_BUFFER_POOL_EVICTIONS` | 20          | The maximum number of evictions from Buffer Pool per query
+`DISABLE_HIGH_PRIORITY`     | False       | Disable trying to set the process priority
 
 ## Environment Variables
 
