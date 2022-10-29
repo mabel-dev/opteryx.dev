@@ -1440,27 +1440,30 @@
 <p>Uses a Memcached instance to cache pages. Is a good option when remote reads are slow, for example from GCS or S3.</p>
 <p>This is also recommended in an environment where multiple servers, or container instances, may be serving customers. Here, the shared cache allows users to benefit from caching even on their first query if another user's query has populated the cache with the files being read.</p>
 <h2 id="operating-system-support">Operating System Support</h2>
-<p>The regression suite runs against CPython:</p>
+<p>The regression suite coverage:</p>
 <table>
 <thead>
 <tr>
 <th>OS</th>
-<th align="center">Python 3.8</th>
-<th align="center">Python 3.9</th>
-<th align="center">Python 3.10</th>
-<th align="center">Python 3.11</th>
+<th align="center">CPython 3.8</th>
+<th align="center">CPython 3.9</th>
+<th align="center">CPython 3.10</th>
+<th align="center">CPython 3.11</th>
+<th align="center">PyPy 3.9</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>MacOS (Intel)</td>
-<td align="center">X</td>
-<td align="center">X</td>
+<td align="center">Partial</td>
+<td align="center">Partial</td>
+<td align="center">Partial</td>
 <td align="center">X</td>
 <td align="center">X</td>
 </tr>
 <tr>
-<td>MacOS (M1)</td>
+<td>MacOS (M1/ARM)</td>
+<td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
@@ -1472,12 +1475,14 @@
 <td align="center">Partial</td>
 <td align="center">Partial</td>
 <td align="center">X</td>
+<td align="center">X</td>
 </tr>
 <tr>
 <td>Ubuntu (x86)</td>
 <td align="center">Full</td>
 <td align="center">Full</td>
 <td align="center">Full</td>
+<td align="center">Failing</td>
 <td align="center">Failing</td>
 </tr>
 <tr>
@@ -1486,14 +1491,17 @@
 <td align="center">Partial</td>
 <td align="center">X</td>
 <td align="center">X</td>
+<td align="center">X</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
+<li><strong>X</strong> indicates there is no automated test for this configuration.</li>
+<li><strong>Partial</strong> coverage indicates some tests are excluded.</li>
+<li>Windows regression suite fails some tests due to issues with Apache Arrow.</li>
 <li>PyPy regression suite fails due to issues with Apache Arrow.</li>
-<li>Debian ARM and Windows regression suite excludes some tests.</li>
 <li>Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.</li>
 <li>M1 Mac (ARM) is not included in the regression suite but there is known usage on this platform.</li>
 </ul>
