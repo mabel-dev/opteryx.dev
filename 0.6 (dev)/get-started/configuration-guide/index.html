@@ -1458,24 +1458,32 @@
 <td align="center">Partial</td>
 <td align="center">Partial</td>
 <td align="center">Partial</td>
-<td align="center">X</td>
-<td align="center">X</td>
+<td align="center">None</td>
+<td align="center">None</td>
 </tr>
 <tr>
 <td>MacOS (M1)</td>
-<td align="center">X</td>
-<td align="center">X</td>
-<td align="center">X</td>
-<td align="center">X</td>
-<td align="center">X</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
 </tr>
 <tr>
-<td>Windows</td>
+<td>Windows (x86)</td>
 <td align="center">Partial</td>
 <td align="center">Partial</td>
 <td align="center">Partial</td>
-<td align="center">X</td>
-<td align="center">X</td>
+<td align="center">None</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td>Windows (ARM)</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
 </tr>
 <tr>
 <td>Ubuntu (x86)</td>
@@ -1487,23 +1495,25 @@
 </tr>
 <tr>
 <td>Debian (ARM)</td>
-<td align="center">X</td>
+<td align="center">None</td>
 <td align="center">Partial</td>
-<td align="center">X</td>
-<td align="center">X</td>
-<td align="center">X</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
-<li><strong>X</strong> indicates there is no automated test for this configuration.</li>
+<li><strong>Full</strong> indicates no tests are excluded from the test suite - coverage statistics are from <strong>Full</strong> tests.</li>
+<li><strong>None</strong> indicates there is no automated test for this configuration.</li>
 <li><strong>Partial</strong> coverage indicates some tests are excluded.</li>
-<li>Windows regression suite fails some tests due to issues with Apache Arrow.</li>
+<li>Windows (x86) regression suite fails some tests due to issues with Apache Arrow.</li>
 <li>PyPy regression suite fails due to issues with Apache Arrow.</li>
 <li>Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.</li>
-<li>M1 Mac (ARM) is not included in the regression suite but there is known usage on this platform.</li>
+<li>MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.</li>
+<li>Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.</li>
 </ul>
 </div>
 
