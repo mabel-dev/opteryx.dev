@@ -60,14 +60,15 @@ The regression suite coverage:
 
 OS            | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11 | PyPy 3.9
 ------------- | :--------: | :--------: | :---------: | :---------: | :------: 
-MacOS (Intel) | Partial    | Partial    | Partial     | X           | X
-MacOS (M1)    | X          | X          | X           | X           | X
-Windows       | Partial    | Partial    | Partial     | X           | X
+MacOS (Intel) | Partial    | Partial    | Partial     | None        | None
+MacOS (M1)    | None       | None       | None        | None        | None
+Windows       | Partial    | Partial    | Partial     | None        | None
 Ubuntu (x86)  | Full       | Full       | Full        | Failing     | Failing
-Debian (ARM)  | X          | Partial    | X           | X           | X
+Debian (ARM)  | None       | Partial    | None        | None        | None
 
 !!! Note
-    - **X** indicates there is no automated test for this configuration.
+    - **Full** indicates no tests are excluded from the test suite - coverage statistics are from **Full** tests.
+    - **None** indicates there is no automated test for this configuration.
     - **Partial** coverage indicates some tests are excluded.
     - Windows regression suite fails some tests due to issues with Apache Arrow.
     - PyPy regression suite fails due to issues with Apache Arrow.
