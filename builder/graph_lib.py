@@ -1,7 +1,7 @@
 """
 Seren: Python Graph Library
 
-(C) 2021 Justin Joyce.
+(C) 2021-2022 Justin Joyce.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -80,7 +80,7 @@ class Graph(object):
         )
         self._edges[source] = list(set(targets))
 
-    def add_node(self, nid: str, attributes: dict = {}):
+    def add_node(self, nid: str, **attributes):
         """
         Add node to the graph
 
