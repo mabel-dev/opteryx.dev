@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#600](https://github.com/mabel-dev/opteryx/issues/600)] Parameterization used on query batches fails. [@joocer](https://github.com/joocer)   
 - [[#580](https://github.com/mabel-dev/opteryx/issues/580)] Empty result sets have no column information. [@joocer](https://github.com/joocer)   
 - [[#548](https://github.com/mabel-dev/opteryx/issues/548)] Hint 'did you mean' message restored. [@joocer](https://github.com/joocer) 
+- [[#640](https://github.com/mabel-dev/opteryx/issues/640)] `COUNT(*)` shortcut only used when in uppercase. [@joocer](https://github.com/joocer) 
 
 **Changed**
 
