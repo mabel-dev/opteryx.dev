@@ -32,7 +32,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#596](https://github.com/mabel-dev/opteryx/issues/596)] Optimizer replaces ORDER BY and LIMIT plan steps with a single HeapSort plan step. [@joocer](https://github.com/joocer)   
 - [[#515](https://github.com/mabel-dev/opteryx/issues/515)] `NULLIF` function. [@joocer](https://github.com/joocer)   
 - [[#581](https://github.com/mabel-dev/opteryx/issues/581)] SQL Battery test that tests results. [@joocer](https://github.com/joocer)  
-- [[#577](https://github.com/mabel-dev/opteryx/issues/577)] Hiercharical buffer pool. [@joocer](https://github.com/joocer)    
+- [[#577](https://github.com/mabel-dev/opteryx/issues/577)] hierarchical buffer pool. [@joocer](https://github.com/joocer)    
 
 ## [0.5.0] - 2022-10-02
 
