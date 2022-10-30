@@ -12,10 +12,9 @@ Configuration values are set a `opteryx.yaml` file in the directory the applicat
 `DATASET_PREFIX_MAPPING`    | _not set_   | Data store prefix mapping
 `PARTITION_SCHEME`          | _none_      | How the blob/file data is partitioned
 `MAX_SIZE_SINGLE_CACHE_ITEM` | 1048576    | The maximum size of an item to store in the cache
-`MAX_CACHE_EVICTIONS`       | 50          | The maximum number of evictions from in-memory read cache per query
+`MAX_CACHE_EVICTIONS`       | 25          | The maximum number of evictions from in-memory read cache per query
 `PAGE_SIZE`                 | 67108864    | The size to try to make data pages as they are processed
-`LOCAL_BUFFER_POOL_SIZE`    | 50          | The size of the in-memory Buffer Pool (blob size)
-`MAX_BUFFER_POOL_EVICTIONS` | 20          | The maximum number of evictions from Buffer Pool per query
+`LOCAL_BUFFER_POOL_SIZE`    | 256          | The size of the in-memory Buffer Pool (blob size)
 `DISABLE_HIGH_PRIORITY`     | False       | Disable trying to set the process priority
 
 ## Environment Variables
