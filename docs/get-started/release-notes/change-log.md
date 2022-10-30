@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to this project will be documented in this file, where appropriate the GitHub issue reference will be noted along with the change. Breaking changes will be clearly indicated.
+All notable changes to this project will be documented in this file, where appropriate the GitHub issue reference will be noted along with the change. Breaking changes will be clearly indicated with the :octicons-alert-fill-24: icon.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
@@ -18,8 +18,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 **Changed**
 
 - [[#566](https://github.com/mabel-dev/opteryx/issues/566)] Use [DuckDB](https://duckdb.org/) for SQL comparision tests in [Wrenchy-Bench](https://github.com/mabel-dev/wrenchy-bench). [@joocer](https://github.com/joocer)   
-- ⚠️**BREAKING** (clarity) [[#584](https://github.com/mabel-dev/opteryx/issues/584)] `enable_page_management` configuration and parameter renamed `enable_page_defragmentation` with some minor refactoring of approach [@joocer](https://github.com/joocer)   
-- ⚠️**BREAKING** (alignment) `TIMESTAMP` casting no longer supports casting from a number. [@joocer](https://github.com/joocer)   
+- :octicons-alert-fill-24:**BREAKING** (clarity) [[#584](https://github.com/mabel-dev/opteryx/issues/584)] `enable_page_management` configuration and parameter renamed `enable_page_defragmentation` with some minor refactoring of approach [@joocer](https://github.com/joocer)   
+- :octicons-alert-fill-24:**BREAKING** (alignment) `TIMESTAMP` casting no longer supports casting from a number. [@joocer](https://github.com/joocer)   
 - [[#588](https://github.com/mabel-dev/opteryx/issues/588)] Integrate [sqloxide](https://github.com/wseaton/sqloxide) into Opteryx to reduce lag with [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) updates. [@joocer](https://github.com/joocer)   
 - [[#619](https://github.com/mabel-dev/opteryx/issues/619)] Page defragmentation moved to an Operator and positioned by the Optimizer. [@joocer](https://github.com/joocer)   
 
@@ -42,10 +42,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 **Changed**
 
-- ⚠️**BREAKING** (alignment) `as_arrow` renamed to `arrow` to align to [DuckDB](https://duckdb.org/docs/api/python/overview#apache-arrow) naming. [@joocer](https://github.com/joocer)   
-- ⚠️**BREAKING** `SHOW COLUMNS` returns the column name in the `name` column, previously `column_name` [@joocer](https://github.com/joocer)   
-- ⚠️**BREAKING** (correction) cursor 'fetch*' methods returns tuples rather than dictionaries as defaults, this is correcting a bug in [PEP249](https://peps.python.org/pep-0249/) compatibility. [@joocer](https://github.com/joocer)   
-- ⚠️**BREAKING** (security) [[#517](https://github.com/mabel-dev/opteryx/issues/517)] Placeholder changed from '%s' to '?'. [@joocer](https://github.com/joocer)   
+- :octicons-alert-fill-24:**BREAKING** (alignment) `as_arrow` renamed to `arrow` to align to [DuckDB](https://duckdb.org/docs/api/python/overview#apache-arrow) naming. [@joocer](https://github.com/joocer)   
+- :octicons-alert-fill-24:**BREAKING** `SHOW COLUMNS` returns the column name in the `name` column, previously `column_name` [@joocer](https://github.com/joocer)   
+- :octicons-alert-fill-24:**BREAKING** (correction) cursor 'fetch*' methods returns tuples rather than dictionaries as defaults, this is correcting a bug in [PEP249](https://peps.python.org/pep-0249/) compatibility. [@joocer](https://github.com/joocer)   
+- :octicons-alert-fill-24:**BREAKING** (security) [[#517](https://github.com/mabel-dev/opteryx/issues/517)] Placeholder changed from '%s' to '?'. [@joocer](https://github.com/joocer)   
 - [[#522](https://github.com/mabel-dev/opteryx/issues/522)] Implementation of LRU-K(2) for cache evictions. [@joocer](https://github.com/joocer)   
 - [[#537](https://github.com/mabel-dev/opteryx/issues/537)] Significant refactor of Query Planner. [@joocer](https://github.com/joocer)   
 
@@ -86,7 +86,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 **Changed**
 
-- ⚠️**BREAKING** (correction) [[#457](https://github.com/mabel-dev/opteryx/issues/457)] Null values are removed before performing `INNER JOIN USING`. [@joocer](https://github.com/joocer)  
+- :octicons-alert-fill-24:**BREAKING** (correction) [[#457](https://github.com/mabel-dev/opteryx/issues/457)] Null values are removed before performing `INNER JOIN USING`. [@joocer](https://github.com/joocer)  
 
 **Fixed**
 
@@ -115,10 +115,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 **Changed**
 
-- ⚠️**BREAKING** - Paths to storage adapters has been updated to reflect 'connector' terminology.
-- ⚠️**BREAKING** - Default behaviour changed from Mabel partitioning to no partitioning.
-- ⚠️**BREAKING** (correction) - Use of aliases defined in the `SELECT` clause can no longer be used in `WHERE` and `GROUP BY` clauses - this is a correction to align to standard SQL behaviour.
-- ⚠️**BREAKING** (correction) - Use of 'None' as an alias for 'Null' is no longer supported - this is a correction to align to standard SQL behaviour.
+- :octicons-alert-fill-24:**BREAKING** - Paths to storage adapters has been updated to reflect 'connector' terminology.
+- :octicons-alert-fill-24:**BREAKING** - Default behaviour changed from Mabel partitioning to no partitioning.
+- :octicons-alert-fill-24:**BREAKING** (correction) - Use of aliases defined in the `SELECT` clause can no longer be used in `WHERE` and `GROUP BY` clauses - this is a correction to align to standard SQL behaviour.
+- :octicons-alert-fill-24:**BREAKING** (correction) - Use of 'None' as an alias for 'Null' is no longer supported - this is a correction to align to standard SQL behaviour.
 - [[#326](https://github.com/mabel-dev/opteryx/issues/326)] Prefer pyarrow's 'promote' over manually handling missing fields. [@joocer](https://github.com/joocer)    
 - [[#39](https://github.com/mabel-dev/opteryx/issues/39)] Rewrite Aggregation Node to use Pyarrow `group_by`. [@joocer](https://github.com/joocer)   
 - [[#338](https://github.com/mabel-dev/opteryx/issues/338)] Remove Evaluation Node. [@joocer](https://github.com/joocer)  
