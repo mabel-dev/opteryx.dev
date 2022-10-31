@@ -4,7 +4,7 @@ This document describes the built-in SQL functions and operators supported by Op
 
 Generally functions will return `null` on `null` input, although note that this is not true in all circumstances.
 
-Definitions noted with a _ _ :octicons-feed-star-16: accept different input arguments.
+Definitions noted with a :octicons-feed-star-16: accept different input arguments.
 
 ## Conversion Functions
 
