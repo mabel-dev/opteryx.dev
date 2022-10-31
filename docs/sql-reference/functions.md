@@ -4,7 +4,7 @@ This document describes the built-in SQL functions and operators supported by Op
 
 Generally functions will return `null` on `null` input, although note that this is not true in all circumstances.
 
-Definitions noted with a :octicons-plus-16: accept different input arguments.
+Definitions noted with a :octicons-feed-star-16: accept different input arguments.
 
 ## Conversion Functions
 
@@ -159,24 +159,24 @@ These are functions that are called similar to comparison operators:
 
 For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%20with%20Lists/).
 
-!!! function "**array**: _list_`[`**index**: _numeric_`]` → **value** :octicons-plus-16:"  
+!!! function "**array**: _list_`[`**index**: _numeric_`]` → **value** :octicons-feed-star-16:"  
     Return the **index**th element from **array**. 
 
-!!! function "`GET` (**array**: _list_, **index**: _numeric_) → **value** :octicons-plus-16:"   
+!!! function "`GET` (**array**: _list_, **index**: _numeric_) → **value** :octicons-feed-star-16:"   
     Alias of **array**`[`**index**`]`.  
 
-!!! function "`GREATEST` (**array**: _list_) → **value** :octicons-plus-16:"   
+!!! function "`GREATEST` (**array**: _list_) → **value** :octicons-feed-star-16:"   
     Return the greatest value in **array**.  
     Related: `LEAST`.
 
-!!! function "`LEAST` (**array**: _list_) → **value** :octicons-plus-16:"   
+!!! function "`LEAST` (**array**: _list_) → **value** :octicons-feed-star-16:"   
     Return the smallest value in **array**.  
     Related: `GREATEST`.
 
-!!! function "`LEN` (**array**: _list_) → _numeric_ :octicons-plus-16:"   
+!!! function "`LEN` (**array**: _list_) → _numeric_ :octicons-feed-star-16:"   
     Alias of `LENGTH`(**array**).
 
-!!! function "`LENGTH` (**array**: _list_) → _numeric_ :octicons-plus-16:"   
+!!! function "`LENGTH` (**array**: _list_) → _numeric_ :octicons-feed-star-16:"   
     Returns the number of elements in **array**.
 
 !!! function "`LIST_CONTAINS` (**array**: _list_, **value**) → _boolean_"  
@@ -189,7 +189,7 @@ For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%
 !!! function "`LIST_CONTAINS_ALL` (**array**: _list_, **values**: _list_) → _boolean_"   
     Return `true` if **array** contains all of elements in **values**.
 
-!!! function "`SEARCH` (**array**: _list_, **value**) → _boolean_ :octicons-plus-16:"  
+!!! function "`SEARCH` (**array**: _list_, **value**) → _boolean_ :octicons-feed-star-16:"  
     Return `true` if **array** contains **value**. 
 
 !!! function "`SORT` (**array**: _list_) → _list_"  
@@ -242,10 +242,10 @@ For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%
     Returns the logarithm for base 2 of **x**.  
     Related: `LN`, `LOG`, `LOG10`.
 
-!!! function "`ROUND` (**x**: _numeric_) → _numeric_ :octicons-plus-16:"  
+!!! function "`ROUND` (**x**: _numeric_) → _numeric_ :octicons-feed-star-16:"  
     Returns **x** rounded to the nearest integer. 
 
-!!! function "`ROUND` (**x**: _numeric_, **places**: _numeric_) → _numeric_ :octicons-plus-16:"  
+!!! function "`ROUND` (**x**: _numeric_, **places**: _numeric_) → _numeric_ :octicons-feed-star-16:"  
     Returns **x** rounded to **places** decimal places.
 
 !!! function "`SIGN` (**x**: _numeric_) → _numeric_"   
@@ -267,7 +267,7 @@ For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%
 
 Functions for examining and manipulating string values. 
 
-!!! function "**str**: _varchar_`[`**index**: _numeric_`]` → _varchar_ :octicons-plus-16:"  
+!!! function "**str**: _varchar_`[`**index**: _numeric_`]` → _varchar_ :octicons-feed-star-16:"  
     Subscript operator, return the **index**th character from **str**. 
 
 !!! function "`CONCAT` (**list**: _array_<_varchar_>) → _varchar_"   
@@ -282,17 +282,17 @@ Functions for examining and manipulating string values.
     Return `true` if **str** ends with **value**.  
     Related: `STARTS_WITH`.
 
-!!! function "`GET` (**str**: _varchar_, **index**: _numeric_) → _varchar_ :octicons-plus-16:"  
+!!! function "`GET` (**str**: _varchar_, **index**: _numeric_) → _varchar_ :octicons-feed-star-16:"  
     Alias of **str**`[`**index**`]`.   
 
 !!! function "`LEFT` (**str**: _varchar_, **n**: _numeric_) → _varchar_"  
     Extract the left-most **n** characters of **str**.  
     Related: `RIGHT`
 
-!!! function "`LEN` (**str**: _varchar_) → _numeric_ :octicons-plus-16:"   
+!!! function "`LEN` (**str**: _varchar_) → _numeric_ :octicons-feed-star-16:"   
     Alias of `LENGTH`
 
-!!! function "`LENGTH` (**str**: _varchar_) → _numeric_ :octicons-plus-16:"  
+!!! function "`LENGTH` (**str**: _varchar_) → _numeric_ :octicons-feed-star-16:"  
     Returns the length of **str** in characters.    
 
 !!! function "`LOWER` (**str**: _varchar_) → _varchar_"  
@@ -309,14 +309,14 @@ Functions for examining and manipulating string values.
 !!! function "`SOUNDEX` (**str**: _varchar_) → _varchar_"  
     Returns a character string containing the phonetic representation of char. See [Soundex 🡕](https://en.wikipedia.org/wiki/Soundex).   
 
-!!! function "`SEARCH` (**str**: _varchar_, **value**: _varchar_) → _boolean_ :octicons-plus-16:"  
+!!! function "`SEARCH` (**str**: _varchar_, **value**: _varchar_) → _boolean_ :octicons-feed-star-16:"  
     Return `true` if **str** contains **value**.  
 
-!!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_) → _varchar_ :octicons-plus-16:" 
+!!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_) → _varchar_ :octicons-feed-star-16:" 
     Return substring from a string from **start** position to the end of **str**.  
     ** :octicons-star-16: New in 0.6** 
 
-!!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_, **length**: _numeric_) → _varchar_:octicons-plus-16:"  
+!!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_, **length**: _numeric_) → _varchar_:octicons-feed-star-16:"  
     Return substring from a string from **start** position for **length** characters.  
     ** :octicons-star-16: New in 0.6** 
  
@@ -340,13 +340,13 @@ Functions for examining and manipulating string values.
 
 For more details, see [Working with Structs](../Working%20with%20SQL/30%20Working%20with%20Structs/).
 
-!!! function "**object**: _struct_`[`**key**: _varchar_`]` → **value** :octicons-plus-16:"  
+!!! function "**object**: _struct_`[`**key**: _varchar_`]` → **value** :octicons-feed-star-16:"  
     Subscript operator, return the value for **key** from **object**. 
 
-!!! function "`GET` (**object**: _struct_, **key**: _varchar_) → **value** :octicons-plus-16:"  
+!!! function "`GET` (**object**: _struct_, **key**: _varchar_) → **value** :octicons-feed-star-16:"  
     Alias of **object**`[`**key**`]`.  
 
-!!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → **boolean** :octicons-plus-16:"  
+!!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → **boolean** :octicons-feed-star-16:"  
     Return `true` if any of the values in **object** is **value**. Note `SEARCH` does not match struct keys.
 
 ## System Functions
@@ -376,19 +376,19 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
     Return the first item from args which is not `null`.    
     Related: `IFNULL`.
 
-!!! function "`GENERATE_SERIES` (**stop**: _numeric_) → _list_<_numeric_> :octicons-plus-16:"  
+!!! function "`GENERATE_SERIES` (**stop**: _numeric_) → _list_<_numeric_> :octicons-feed-star-16:"  
     Return a numeric list between 1 and **stop**, with a step of 1.  
 
-!!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_) → _list_<_numeric_> :octicons-plus-16:"   
+!!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_) → _list_<_numeric_> :octicons-feed-star-16:"   
     Return a numeric list between **start** and **stop**, with a step of 1.
 
-!!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_, **step**: _numeric_) → _list_<_numeric_> :octicons-plus-16:"  
+!!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_, **step**: _numeric_) → _list_<_numeric_> :octicons-feed-star-16:"  
     Return a numeric list between **start** and **stop**, with an increment of **step**.
 
-!!! function "`GENERATE_SERIES` (**start**: _timestamp_, **stop**: _timestamp_, _interval_) → _list_<_timestamp_> :octicons-plus-16:"    
+!!! function "`GENERATE_SERIES` (**start**: _timestamp_, **stop**: _timestamp_, _interval_) → _list_<_timestamp_> :octicons-feed-star-16:"    
     Return a timestamp list between **start** and **stop**, with a interval of **step**.    
 
-!!! function "`GENERATE_SERIES` (**cidr**: _varchar_) → _list_<_varchar_> :octicons-plus-16:"  
+!!! function "`GENERATE_SERIES` (**cidr**: _varchar_) → _list_<_varchar_> :octicons-feed-star-16:"  
     Return a list of IP addresses from a given **cidr**.   
 
 !!! function "`IFNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _[input type]_"  
