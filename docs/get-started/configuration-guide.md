@@ -67,7 +67,7 @@ Ubuntu (x86)  | Full       | Full       | Full        | Failing     | Failing
 Debian (ARM)  | None       | Partial    | None        | None        | None
 
 **Full** indicates no tests are excluded from the test suite - coverage statistics are from **Full** tests.  
-**Partial** coverage indicates some tests are excluded or some tests fail.
+**Partial** indicates some tests are excluded from the test suite or that some tests fail.
 **None** indicates there is no automated test for this configuration.  
 
 !!! Note
