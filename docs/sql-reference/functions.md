@@ -410,7 +410,7 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
     Return the **true_value** if the condition evaluates to `True`, otherwise return the **false_value**.
 
 !!! function "`IFNULL` (**value1**: _any_, **value2**: _any_) → _[input type]_"  
-    Returns `null` if **value1** equals **value2**, otherwise returns **value1**.
+    Returns `null` if **value1** equals **value2**, otherwise returns **value1**.  
     ** :octicons-star-16: New in 0.6** 
 
 !!! function "`NORMAL` () → _numeric_"  
