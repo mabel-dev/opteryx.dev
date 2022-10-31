@@ -159,17 +159,17 @@ These are functions that are called similar to comparison operators:
 
 For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%20with%20Lists/).
 
-!!! function "**array**: _list_`[`**index**: _numeric_`]` → **value** _ :octicons-dot-16:"  
+!!! function "**array**: _list_`[`**index**: _numeric_`]` → **value** :octicons-dot-16:"  
     Return the **index**th element from **array**. 
 
-!!! function "`GET` (**array**: _list_, **index**: _numeric_) → **value** _ :octicons-dot-16:"   
+!!! function "`GET` (**array**: _list_, **index**: _numeric_) → **value** :octicons-dot-16:"   
     Alias of **array**`[`**index**`]`.  
 
-!!! function "`GREATEST` (**array**: _list_) → **value** _ :octicons-dot-16:"   
+!!! function "`GREATEST` (**array**: _list_) → **value** :octicons-dot-16:"   
     Return the greatest value in **array**.  
     Related: `LEAST`.
 
-!!! function "`LEAST` (**array**: _list_) → **value** _ :octicons-dot-16:"   
+!!! function "`LEAST` (**array**: _list_) → **value** :octicons-dot-16:"   
     Return the smallest value in **array**.  
     Related: `GREATEST`.
 

@@ -378,6 +378,6 @@ strong > .twemoji {
     color: #dfbf00 !important;
 }
 
-.admonition-title > .twemoji {
+p > .twemoji {
     color: #ff7538 !important;
 }
