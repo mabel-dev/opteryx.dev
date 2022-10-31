@@ -50,7 +50,7 @@ Running in the Generation 2 container environment is likely to result in faster 
 
 **Built-In Connectors**
 
-Platform             | Connector Name           | Disposition
+Platform             | Connector Name           | Implementation
 -------------------- | ------------------------ | ---------------------
 Google Cloud Storage | GcpCloudStorageConnector | Blob/File Store
 AWS S3               | AwsS3Connector           | Blob/File Store
@@ -151,12 +151,12 @@ Opteryx is primarily designed for use with [Parquet](https://parquet.apache.org/
 
 Opteryx supports:
 
-- Parquet formatted files
-- CSV formatted files
-- [JSONL](https://jsonlines.org/) formatted files
+- Parquet formatted files (`.parquet`)
+- CSV formatted files (`.csv`)
+- [JSONL](https://jsonlines.org/) formatted files (`.jsonl`)
 - JSONL formatted files which have been [Zstandard](http://facebook.github.io/zstd/) compressed (`.zstd`)
-- ORC formatted files
-- Feather (Arrow) formatted files
+- ORC formatted files (`.orc`)
+- Feather (Arrow) formatted files (`.arrow`)
 
 ### File Sizes
 
