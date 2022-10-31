@@ -36,7 +36,7 @@ Definitions noted with a :octicons-plus-16: accept different input arguments.
 
 !!! function "`STR` (**any**: _any_) → _varchar_"     
     Alias of `VARCHAR`(**any**) and `CAST`(**any** AS VARCHAR)   
-    **:octicons-north-star-24: New in 0.6** 
+    ** :octicons-star-16: New in 0.6** 
 
 !!! function "`STRING` (**any**: _any_) → _varchar_"     
     Alias of `VARCHAR`(**any**) and `CAST`(**any** AS VARCHAR)
@@ -314,11 +314,11 @@ Functions for examining and manipulating string values.
 
 !!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_) → _varchar_ :octicons-plus-16:" 
     Return substring from a string from **start** position to the end of **str**.  
-    **:octicons-north-star-24: New in 0.6** 
+    ** :octicons-star-16: New in 0.6** 
 
 !!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_, **length**: _numeric_) → _varchar_:octicons-plus-16:"  
     Return substring from a string from **start** position for **length** characters.  
-    **:octicons-north-star-24: New in 0.6** 
+    ** :octicons-star-16: New in 0.6** 
  
 
 !!! function "`STARTS_WITH` (**str**: _varchar_, **value**: _varchar_) → _boolean_"  
@@ -411,7 +411,7 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
 
 !!! function "`IFNULL` (**value1**: _any_, **value2**: _any_) → _[input type]_"  
     Returns `null` if **value1** equals **value2**, otherwise returns **value1**.
-    **:octicons-north-star-24: New in 0.6** 
+    ** :octicons-star-16: New in 0.6** 
 
 !!! function "`NORMAL` () → _numeric_"  
     Random number from a normal (Gaussian) distribution; distribution is centred at 0.0 and has a standard deviation of 1.0.
