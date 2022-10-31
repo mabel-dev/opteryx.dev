@@ -66,10 +66,11 @@ Windows (ARM) | None       | None       | None        | None        | None
 Ubuntu (x86)  | Full       | Full       | Full        | Failing     | Failing
 Debian (ARM)  | None       | Partial    | None        | None        | None
 
+**Full** indicates no tests are excluded from the test suite - coverage statistics are from **Full** tests.  
+**None** indicates there is no automated test for this configuration.  
+**Partial** coverage indicates some tests are excluded.
+
 !!! Note
-    - **Full** indicates no tests are excluded from the test suite - coverage statistics are from **Full** tests.
-    - **None** indicates there is no automated test for this configuration.
-    - **Partial** coverage indicates some tests are excluded.
     - Windows (x86) regression suite fails some tests due to issues with Apache Arrow.
     - PyPy regression suite fails due to issues with Apache Arrow.
     - Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.
