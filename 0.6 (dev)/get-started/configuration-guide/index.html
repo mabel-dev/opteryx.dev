@@ -484,13 +484,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#operating-system-support" class="md-nav__link">
-    Operating System Support
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1321,13 +1314,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#operating-system-support" class="md-nav__link">
-    Operating System Support
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1434,83 +1420,6 @@
 <p><strong>Memcached Cache</strong></p>
 <p>Uses a Memcached instance to cache pages. Is a good option when remote reads are slow, for example from GCS or S3.</p>
 <p>This is also recommended in an environment where multiple servers, or container instances, may be serving customers. Here, the shared cache allows users to benefit from caching even on their first query if another user's query has populated the cache with the files being read.</p>
-<h2 id="operating-system-support">Operating System Support</h2>
-<p>The regression suite coverage:</p>
-<table>
-<thead>
-<tr>
-<th>OS</th>
-<th align="center">Python 3.8</th>
-<th align="center">Python 3.9</th>
-<th align="center">Python 3.10</th>
-<th align="center">Python 3.11</th>
-<th align="center">PyPy 3.9</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>MacOS (Intel)</td>
-<td align="center">Partial</td>
-<td align="center">Partial</td>
-<td align="center">Partial</td>
-<td align="center">None</td>
-<td align="center">None</td>
-</tr>
-<tr>
-<td>MacOS (M1)</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-</tr>
-<tr>
-<td>Windows (x86)</td>
-<td align="center">Partial</td>
-<td align="center">Partial</td>
-<td align="center">Partial</td>
-<td align="center">None</td>
-<td align="center">None</td>
-</tr>
-<tr>
-<td>Windows (ARM)</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-</tr>
-<tr>
-<td>Ubuntu (x86)</td>
-<td align="center">Full</td>
-<td align="center">Full</td>
-<td align="center">Full</td>
-<td align="center">Failing</td>
-<td align="center">Failing</td>
-</tr>
-<tr>
-<td>Debian (ARM)</td>
-<td align="center">None</td>
-<td align="center">Partial</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Full</strong> indicates no tests are excluded from the test suite - coverage statistics are from <strong>Full</strong> tests.<br />
-<strong>Partial</strong> indicates some tests are excluded from the test suite or that some tests fail.<br />
-<strong>None</strong> indicates there is no automated test for this configuration.  </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul>
-<li>Windows (x86) regression suite fails some tests due to issues with Apache Arrow.</li>
-<li>PyPy regression suite fails due to issues with Apache Arrow.</li>
-<li>Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.</li>
-<li>MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.</li>
-<li>Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.</li>
-</ul>
-</div>
 
 
 
