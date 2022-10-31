@@ -52,27 +52,3 @@ The size of the cache is set by the number of pages to hold in memory. No checks
 Uses a Memcached instance to cache pages. Is a good option when remote reads are slow, for example from GCS or S3.
 
 This is also recommended in an environment where multiple servers, or container instances, may be serving customers. Here, the shared cache allows users to benefit from caching even on their first query if another user's query has populated the cache with the files being read.
-
-## Operating System Support
-
-The regression suite coverage:
-
-OS            | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11 | PyPy 3.9
-------------- | :--------: | :--------: | :---------: | :---------: | :------: 
-MacOS (Intel) | Partial    | Partial    | Partial     | None        | None
-MacOS (M1)    | None       | None       | None        | None        | None
-Windows (x86) | Partial    | Partial    | Partial     | None        | None
-Windows (ARM) | None       | None       | None        | None        | None
-Ubuntu (x86)  | Full       | Full       | Full        | Failing     | Failing
-Debian (ARM)  | None       | Partial    | None        | None        | None
-
-**Full** indicates no tests are excluded from the test suite - coverage statistics are from **Full** tests.  
-**Partial** indicates some tests are excluded from the test suite or that some tests fail.  
-**None** indicates there is no automated test for this configuration.  
-
-!!! Note
-    - Windows (x86) regression suite fails some tests due to issues with Apache Arrow.
-    - PyPy regression suite fails due to issues with Apache Arrow.
-    - Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.
-    - MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.
-    - Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.
