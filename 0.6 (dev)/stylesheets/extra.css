@@ -377,3 +377,7 @@ strong {
 strong > .twemoji {
     color: #dfbf00 !important;
 }
+
+.admonition-title > .twemoji {
+    color: #ff7538 !important;
+}
