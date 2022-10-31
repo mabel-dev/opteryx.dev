@@ -1509,7 +1509,7 @@
 <tr>
 <th>Platform</th>
 <th>Connector Name</th>
-<th>Disposition</th>
+<th>Implementation</th>
 </tr>
 </thead>
 <tbody>
@@ -1610,12 +1610,12 @@
 <p>Opteryx is primarily designed for use with <a href="https://parquet.apache.org/">Parquet</a> to store data, Parquet is fast to process and offers optimizations not available for other formats, however, in some benchmarks <a href="https://orc.apache.org/">ORC</a> out performs Parquet.</p>
 <p>Opteryx supports:</p>
 <ul>
-<li>Parquet formatted files</li>
-<li>CSV formatted files</li>
-<li><a href="https://jsonlines.org/">JSONL</a> formatted files</li>
+<li>Parquet formatted files (<code>.parquet</code>)</li>
+<li>CSV formatted files (<code>.csv</code>)</li>
+<li><a href="https://jsonlines.org/">JSONL</a> formatted files (<code>.jsonl</code>)</li>
 <li>JSONL formatted files which have been <a href="http://facebook.github.io/zstd/">Zstandard</a> compressed (<code>.zstd</code>)</li>
-<li>ORC formatted files</li>
-<li>Feather (Arrow) formatted files</li>
+<li>ORC formatted files (<code>.orc</code>)</li>
+<li>Feather (Arrow) formatted files (<code>.arrow</code>)</li>
 </ul>
 <h3 id="file-sizes">File Sizes</h3>
 <p>Opteryx loads entire files (pages) into memory one at a time, this requires the following to be considered:</p>
