@@ -4,7 +4,7 @@ This document describes the built-in SQL functions and operators supported by Op
 
 Generally functions will return `null` on `null` input, although note that this is not true in all circumstances.
 
-Definitions noted with a :octicons-feed-star-16: accept different input arguments.
+Definitions noted with a _ _ :octicons-feed-star-16: accept different input arguments.
 
 ## Conversion Functions
 
@@ -159,17 +159,17 @@ These are functions that are called similar to comparison operators:
 
 For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%20with%20Lists/).
 
-!!! function "**array**: _list_`[`**index**: _numeric_`]` → **value** :octicons-feed-star-16:"  
+!!! function "**array**: _list_`[`**index**: _numeric_`]` → **value** _ :octicons-feed-star-16:"  
     Return the **index**th element from **array**. 
 
-!!! function "`GET` (**array**: _list_, **index**: _numeric_) → **value** :octicons-feed-star-16:"   
+!!! function "`GET` (**array**: _list_, **index**: _numeric_) → **value** _ :octicons-feed-star-16:"   
     Alias of **array**`[`**index**`]`.  
 
-!!! function "`GREATEST` (**array**: _list_) → **value** :octicons-feed-star-16:"   
+!!! function "`GREATEST` (**array**: _list_) → **value** _ :octicons-feed-star-16:"   
     Return the greatest value in **array**.  
     Related: `LEAST`.
 
-!!! function "`LEAST` (**array**: _list_) → **value** :octicons-feed-star-16:"   
+!!! function "`LEAST` (**array**: _list_) → **value** _ :octicons-feed-star-16:"   
     Return the smallest value in **array**.  
     Related: `GREATEST`.
 
@@ -316,7 +316,7 @@ Functions for examining and manipulating string values.
     Return substring from a string from **start** position to the end of **str**.  
     ** :octicons-star-16: New in 0.6** 
 
-!!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_, **length**: _numeric_) → _varchar_:octicons-feed-star-16:"  
+!!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_, **length**: _numeric_) → _varchar_ :octicons-feed-star-16:"  
     Return substring from a string from **start** position for **length** characters.  
     ** :octicons-star-16: New in 0.6** 
  
@@ -340,13 +340,13 @@ Functions for examining and manipulating string values.
 
 For more details, see [Working with Structs](../Working%20with%20SQL/30%20Working%20with%20Structs/).
 
-!!! function "**object**: _struct_`[`**key**: _varchar_`]` → **value** :octicons-feed-star-16:"  
+!!! function "**object**: _struct_`[`**key**: _varchar_`]` → **value** _ :octicons-feed-star-16:"  
     Subscript operator, return the value for **key** from **object**. 
 
-!!! function "`GET` (**object**: _struct_, **key**: _varchar_) → **value** :octicons-feed-star-16:"  
+!!! function "`GET` (**object**: _struct_, **key**: _varchar_) → **value** _ :octicons-feed-star-16:"  
     Alias of **object**`[`**key**`]`.  
 
-!!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → **boolean** :octicons-feed-star-16:"  
+!!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → **boolean** _ :octicons-feed-star-16:"  
     Return `true` if any of the values in **object** is **value**. Note `SEARCH` does not match struct keys.
 
 ## System Functions
@@ -376,7 +376,7 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
     Return the first item from args which is not `null`.    
     Related: `IFNULL`.
 
-!!! function "`GENERATE_SERIES` (**stop**: _numeric_) → _list_<_numeric_> :octicons-feed-star-16:"  
+!!! function "`GENERATE_SERIES` (**stop**: _numeric_) → _list_<_numeric_> _ :octicons-feed-star-16:"  
     Return a numeric list between 1 and **stop**, with a step of 1.  
 
 !!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_) → _list_<_numeric_> :octicons-feed-star-16:"   
@@ -385,7 +385,7 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
 !!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_, **step**: _numeric_) → _list_<_numeric_> :octicons-feed-star-16:"  
     Return a numeric list between **start** and **stop**, with an increment of **step**.
 
-!!! function "`GENERATE_SERIES` (**start**: _timestamp_, **stop**: _timestamp_, _interval_) → _list_<_timestamp_> :octicons-feed-star-16:"    
+!!! function "`GENERATE_SERIES` (**start**: _timestamp_, **stop**: _timestamp_, _interval_) → _list_<_timestamp_> _ _ :octicons-feed-star-16:"    
     Return a timestamp list between **start** and **stop**, with a interval of **step**.    
 
 !!! function "`GENERATE_SERIES` (**cidr**: _varchar_) → _list_<_varchar_> :octicons-feed-star-16:"  
