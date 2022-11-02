@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.6 (dev)/sql-reference/adv-null-semantics/">
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
     
     
       
@@ -1230,6 +1230,30 @@ and
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
 </code></pre></div></p>
 <p>Appear to be identical however, produce different results when <code>null</code> values are encountered. </p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>a</th>
+<th>b</th>
+<th>result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WHERE a != b</code></td>
+<td><em>true</em></td>
+<td><em>null</em></td>
+<td><em>true</em></td>
+</tr>
+<tr>
+<td><code>WHERE NOT a = b</code></td>
+<td><em>true</em></td>
+<td><em>null</em></td>
+<td><em>false</em></td>
+</tr>
+</tbody>
+</table>
 
 
 

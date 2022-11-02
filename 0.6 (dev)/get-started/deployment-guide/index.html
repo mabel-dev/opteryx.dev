@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.6 (dev)/get-started/deployment-guide/">
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
     
     
       
@@ -430,13 +430,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#operating-system-support" class="md-nav__link">
-    Operating System Support
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     Requirements
   </a>
@@ -447,6 +440,13 @@
           <li class="md-nav__item">
   <a href="#host-specifications" class="md-nav__link">
     Host Specifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-system-support" class="md-nav__link">
+    Operating System Support
   </a>
   
 </li>
@@ -1349,13 +1349,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#operating-system-support" class="md-nav__link">
-    Operating System Support
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     Requirements
   </a>
@@ -1366,6 +1359,13 @@
           <li class="md-nav__item">
   <a href="#host-specifications" class="md-nav__link">
     Host Specifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-system-support" class="md-nav__link">
+    Operating System Support
   </a>
   
 </li>
@@ -1485,83 +1485,6 @@
 
 
 <h1 id="deployment-guide">Deployment Guide</h1>
-<h2 id="operating-system-support">Operating System Support</h2>
-<p>The regression suite coverage:</p>
-<table>
-<thead>
-<tr>
-<th>OS</th>
-<th align="center">Python 3.8</th>
-<th align="center">Python 3.9</th>
-<th align="center">Python 3.10</th>
-<th align="center">Python 3.11</th>
-<th align="center">PyPy 3.9</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>MacOS (Intel)</td>
-<td align="center">Partial</td>
-<td align="center">Partial</td>
-<td align="center">Partial</td>
-<td align="center">None</td>
-<td align="center">None</td>
-</tr>
-<tr>
-<td>MacOS (M1)</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-</tr>
-<tr>
-<td>Windows (x86)</td>
-<td align="center">Partial</td>
-<td align="center">Partial</td>
-<td align="center">Partial</td>
-<td align="center">None</td>
-<td align="center">None</td>
-</tr>
-<tr>
-<td>Windows (ARM)</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-</tr>
-<tr>
-<td>Ubuntu (x86)</td>
-<td align="center">Full</td>
-<td align="center">Full</td>
-<td align="center">Full</td>
-<td align="center">Failing</td>
-<td align="center">Failing</td>
-</tr>
-<tr>
-<td>Debian (ARM)</td>
-<td align="center">None</td>
-<td align="center">Partial</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Full</strong> indicates no tests are excluded from the test suite - coverage statistics are from <strong>Full</strong> tests.<br />
-<strong>Partial</strong> indicates some tests are excluded from the test suite or that some tests fail.<br />
-<strong>None</strong> indicates there is no automated test for this configuration.  </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul>
-<li>Windows (x86) regression suite fails some tests due to issues with Apache Arrow.</li>
-<li>PyPy regression suite fails due to issues with Apache Arrow.</li>
-<li>Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.</li>
-<li>MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.</li>
-<li>Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.</li>
-</ul>
-</div>
 <h2 id="requirements">Requirements</h2>
 <h3 id="host-specifications">Host Specifications</h3>
 <p><strong>Minimum</strong>: 1 CPU, 1 Gb RAM (Intel/x86 CPU) <br />
@@ -1575,13 +1498,91 @@
 <p class="admonition-title">Warning</p>
 <p>Non x86 environments, such as Raspberry Pi or the M1 Macs, may require additional set up steps.</p>
 </div>
+<h3 id="operating-system-support">Operating System Support</h3>
+<p>Opteryx is confirmed to support the following operating systems, the below table shows the regression suite coverage:</p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th align="center">Python 3.8</th>
+<th align="center">Python 3.9</th>
+<th align="center">Python 3.10</th>
+<th align="center">Python 3.11</th>
+<th align="center">PyPy 3.9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MacOS (Intel)</strong></td>
+<td align="center">Partial</td>
+<td align="center">Partial</td>
+<td align="center">Partial</td>
+<td align="center">None</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td><strong>MacOS (M1)</strong></td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td><strong>Windows (x86)</strong></td>
+<td align="center">Partial</td>
+<td align="center">Partial</td>
+<td align="center">Partial</td>
+<td align="center">None</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td><strong>Windows (ARM)</strong></td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td><strong>Ubuntu (x86)</strong></td>
+<td align="center">Full</td>
+<td align="center">Full</td>
+<td align="center">Full</td>
+<td align="center">Failing</td>
+<td align="center">Failing</td>
+</tr>
+<tr>
+<td><strong>Debian (ARM)</strong></td>
+<td align="center">None</td>
+<td align="center">Partial</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td align="center">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Full</strong> - no tests are excluded from the test suite - coverage statistics are from <strong>Full</strong> tests.<br />
+<strong>Partial</strong> - some tests are excluded from the test suite or that some tests fail.<br />
+<strong>None</strong> - there is no automated test for this configuration.  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Windows (x86) regression suite fails some tests due to issues with Apache Arrow.</li>
+<li>PyPy regression suite fails due to issues with Apache Arrow.</li>
+<li>Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.</li>
+<li>MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.</li>
+<li>Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.</li>
+<li>Most tests are excluded due to testing platform constraints, not compatibility issues.</li>
+</ul>
+</div>
 <h3 id="python-environment">Python Environment</h3>
 <p><strong>Recommended Version</strong>: 3.9</p>
 <p>Opteryx supports Python versions 3.8, 3.9 and 3.10.</p>
 <p>Opteryx has builds for Python 3.8, 3.9 and 3.10 on 64-bit (x86) versions of Windows, MacOS and Linux. The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python version 3.8, 3.9 and 3.10.</p>
 <p>Opteryx is primarily developed on workstations running Python 3.10 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 also has the greatest test coverage due to it being supported on more platforms.</p>
 <h3 id="jupyter-notebooks">Jupyter Notebooks</h3>
-<p>Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3. This approach will result in raw data being moved from the data platform (GCS or S3) to the host running Jupyter to be processed. This is most practical when the connection to the data platform is fast - such as running Vertex AI Notebooks on GCP, or querying local files.</p>
+<p>Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3. This approach will result in raw data required to respond to the query being moved from the data platform (GCS or S3) to the host running Jupyter in order to be processed. This is most practical when the connection to the data platform is fast - such as running Vertex AI Notebooks on GCP, or querying local files.</p>
 <h3 id="docker-kubernetes">Docker &amp; Kubernetes</h3>
 <p>There is no Docker image for Opteryx, this is because Opteryx is an embedded Python library. However, system built using Opteryx can be deployed via Docker or Kubernetes.</p>
 <h3 id="google-cloud">Google Cloud</h3>
