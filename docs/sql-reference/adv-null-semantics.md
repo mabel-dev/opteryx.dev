@@ -1,18 +1,3 @@
 # NULL Semantics
 
-Most comparisons to `null` return `null`.
-
-~~~sql
-WHERE a IS NOT b
-~~~
-and
-~~~sql
-WHERE NOT a IS b
-~~~
-
-Appear to be identical however, produce different results when `null` values are encountered. 
-
-Condition          | a      | b      | result
------------------- | ------ | ------ | ---------
-`WHERE a != b`     | _true_ | _null_ | _true_
-`WHERE NOT a = b`  | _true_ | _null_ | _false_
+Most comparisons to `null` return `null`. Exceptions are generally in functions or comparisons specifically to handle `null`, such as `IS NULL`.
