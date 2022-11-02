@@ -1,29 +1,5 @@
 # Deployment Guide
 
-## Operating System Support
-
-The regression suite coverage:
-
-OS            | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11 | PyPy 3.9
-------------- | :--------: | :--------: | :---------: | :---------: | :------: 
-MacOS (Intel) | Partial    | Partial    | Partial     | None        | None
-MacOS (M1)    | None       | None       | None        | None        | None
-Windows (x86) | Partial    | Partial    | Partial     | None        | None
-Windows (ARM) | None       | None       | None        | None        | None
-Ubuntu (x86)  | Full       | Full       | Full        | Failing     | Failing
-Debian (ARM)  | None       | Partial    | None        | None        | None
-
-**Full** indicates no tests are excluded from the test suite - coverage statistics are from **Full** tests.  
-**Partial** indicates some tests are excluded from the test suite or that some tests fail.  
-**None** indicates there is no automated test for this configuration.  
-
-!!! Note
-    - Windows (x86) regression suite fails some tests due to issues with Apache Arrow.
-    - PyPy regression suite fails due to issues with Apache Arrow.
-    - Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.
-    - MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.
-    - Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.
-
 ## Requirements
 
 ### Host Specifications
@@ -39,6 +15,32 @@ Opteryx balances memory consumption with performance, however, being able to pro
 !!! Warning
     Non x86 environments, such as Raspberry Pi or the M1 Macs, may require additional set up steps.
 
+
+### Operating System Support
+
+Opteryx is confirmed to support the following operating systems, the below table shows the regression suite coverage:
+
+OS                | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11 | PyPy 3.9
+----------------- | :--------: | :--------: | :---------: | :---------: | :------: 
+**MacOS (Intel)** | Partial    | Partial    | Partial     | None        | None
+**MacOS (M1)**    | None       | None       | None        | None        | None
+**Windows (x86)** | Partial    | Partial    | Partial     | None        | None
+**Windows (ARM)** | None       | None       | None        | None        | None
+**Ubuntu (x86)**  | Full       | Full       | Full        | Failing     | Failing
+**Debian (ARM)**  | None       | Partial    | None        | None        | None
+
+**Full** - no tests are excluded from the test suite - coverage statistics are from **Full** tests.  
+**Partial** - some tests are excluded from the test suite or that some tests fail.  
+**None** - there is no automated test for this configuration.  
+
+!!! Note
+    - Windows (x86) regression suite fails some tests due to issues with Apache Arrow.
+    - PyPy regression suite fails due to issues with Apache Arrow.
+    - Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.
+    - MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.
+    - Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.
+    - Most tests are excluded due to testing platform constraints, not compatibility issues.
+
 ### Python Environment
 
 **Recommended Version**: 3.9
@@ -51,7 +53,7 @@ Opteryx is primarily developed on workstations running Python 3.10 (Debian, MacO
 
 ### Jupyter Notebooks
 
-Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3. This approach will result in raw data being moved from the data platform (GCS or S3) to the host running Jupyter to be processed. This is most practical when the connection to the data platform is fast - such as running Vertex AI Notebooks on GCP, or querying local files.
+Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3. This approach will result in raw data required to respond to the query being moved from the data platform (GCS or S3) to the host running Jupyter in order to be processed. This is most practical when the connection to the data platform is fast - such as running Vertex AI Notebooks on GCP, or querying local files.
 
 ### Docker & Kubernetes
 

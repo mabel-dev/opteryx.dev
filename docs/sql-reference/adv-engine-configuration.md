@@ -37,7 +37,7 @@ Query parameters which affect the execution of the query can be tuned on a per-q
 
 ## WITH hints
 
-Hints are used to force the planner, optimizer or the executor to make specific decisions. If a hint is not recognized, it is ignored by the planner and executor, however is reported in the warnings.
+Hints are used to direct the planner, optimizer or the executor to make specific decisions. If a hint is not recognized, it is ignored by the planner and executor and is reported in the messages.
 
 !!! Note
     Hints use the keyword `WITH` which is also the keyword for CTEs, this information relates to hints and not CTEs.
@@ -46,16 +46,16 @@ Hints are used to force the planner, optimizer or the executor to make specific 
 FROM dataset WITH(NO_CACHE)
 ~~~
 
-Instructs blob/file reader to not use cache, regardless of other settings.
+Instructs blob/file reader to not use cache, regardless of other settings. This is almost always followed but only applies to the local Buffer Pool and any remote cache - Operating System, CDN or other caches which may be used are not affected by this hint.
 
 ~~~
 FROM dataset WITH(NO_PARTITION)
 ~~~
 
-Instructs the blob/file reader to not use partitioning, regardless of other settings.
+Instructs the blob/file reader to not use partitioning, regardless of other settings. This is always followed.
 
 ~~~
 FROM dataset WITH(NO_PUSH_PROJECTION)
 ~~~
 
-Instructs the blob/file reader not to try to prune columns at read time.
+Instructs the blob/file reader not to try to prune columns at read time. The decision if to follow this hint is made by the reader. 
