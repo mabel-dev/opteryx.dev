@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.6 (dev)/contributing/internals/query-engine/">
       
       <link rel="icon" href="../../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
     
     
       
@@ -26,7 +26,7 @@
       <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.815d1a91.min.css">
         
       
       
@@ -1343,20 +1343,20 @@
 <p>If you are interested in how databases work, I recommend the resources from <a href="https://db.cs.cmu.edu/">The CMU Database Group</a> and the collection of resources at <a href="https://github.com/pingcap/awesome-database-learning">Awesome Database Learning</a>.</p>
 </blockquote>
 <p>The Opteryx query engine has the following key components and general process:</p>
-<p>1) The Parser &amp; Lexer, which recieves the user SQL and builds an Abstract Syntax Tree (AST).
-2) The Binder, which maps information to the AST.
-3) The Planner, which recieves the AST and builds a Query Plan.
-4) The Optimizer, recieves a Query Plan and rewrites it to improve performance. 
-5) The Query Executor, which recieves the Query Plan and returns the result dataset.</p>
+<p>1) <strong>Parser &amp; Lexer</strong> recieves the user SQL and builds an Abstract Syntax Tree (AST).<br />
+2) <strong>Binder</strong> maps contextual information to the AST.<br />
+3) <strong>Planner</strong> recieves the AST and builds a Query Plan.<br />
+4) <strong>Optimizer</strong> recieves a Query Plan and rewrites it to improve performance. <br />
+5) <strong>Executor</strong> recieves the Query Plan and returns the result dataset.  </p>
 <h2 id="parser-lexer">Parser &amp; Lexer</h2>
 <p>The primary goal of the Parser and Lexer (which in some engines is two separate components) is to interpret the SQL provided by the user. This is generally done in two steps, the first is the break the query into separate tokens (or words) and the second is to understand the meaning of those tokens.</p>
 <p>For example for this statement</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">SELECT</span><span class="w"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="k">FROM</span><span class="w"></span>
 </code></pre></div>
-<p>Understand that we're requesting the field <code>SELECT</code> from the relation <code>FROM</code>.</p>
-<p>Opteryx uses <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> as it's Parser and Lexer, as a Rust library, Opteryx creates Python bindings for sqlparser-rs (derived from <a href="https://github.com/wseaton/sqloxide">sqloxide</a>). Opteryx does not support all features and functionality provided by this library.</p>
-<p>This sqlparser-rs interprets all SQL except for the Temporal <code>FOR</code> clause which is handled separately.</p>
+<p>The Parser and Lexer will understand that we're requesting the field <code>SELECT</code> from the relation <code>FROM</code>.</p>
+<p>Opteryx uses <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> as its Parser and Lexer, as a Rust library, Opteryx creates Python bindings for sqlparser-rs (derived from <a href="https://github.com/wseaton/sqloxide">sqloxide</a>). Opteryx does not support all features and functionality provided by this library.</p>
+<p>This sqlparser-rs interprets all SQL except for the Temporal <code>FOR</code> clause which are handled separately.</p>
 <h2 id="binder">Binder</h2>
 <p>The Binder's primary goal is to embelish and replace information in the AST with details which the Parser &amp; Lexer did not have.</p>
 <p>This is used for replacing variables in queries with their literal equivalents and adding temporal information to relations.</p>
@@ -1368,21 +1368,23 @@
 <p>The planner ensures the processes to be applied to the data reflect this order and creates the most convenient plan to achieve this.</p>
 <p>The Query Plan can be seen for a given query using the <code>EXPLAIN</code> query.</p>
 <h2 id="query-optimizer">Query Optimizer</h2>
-<p>The goal of the Query Optimizer is to rewrite the Query Plan to a plan which will return result to users faster.</p>
-<p>The current optimizer is immature and requires hand-tuning of the input query to achieve best results.</p>
+<p>The goal of the Query Optimizer is to rewrite the Query Plan to a plan which will return result to users faster. This is generally achieved through reducing the data being handled as early in the query as possible (such as projection push-down), reducing the complexity of steps (such as using logical equivelences to make expressions simpler) or combining steps (such as sort and limit into a heap sort).</p>
+<p>The current optimizer in Opteryx is immature with very few rules and requires hand-tuning of the input query for the optimizer to achieve best results.</p>
 <h2 id="query-executor">Query Executor</h2>
 <p>The goal of the Query Executor is to produce the results for the user. It takes the Plan and executes the steps in the plan.</p>
 <p>Opteryx implements a vectorized Volcano model executor. This means that the planner starts at the node closest to the end of the plan (e.g. <code>LIMIT</code>) and asks it for a page of data. This node asks its preceeding node for a page of data, etc etc until it gets to the node which aquires data from source. The data is then processed by each node until it is returned to the <code>LIMIT</code> node at the end.</p>
 <h2 id="performance-features">Performance Features</h2>
 <p>The following features are build into the query engine to improve performance</p>
 <ul>
-<li>Small pages are merged together before activities which operate on the entire page-at-a-time (such as selections)</li>
-<li>Projections are pushed to the parser, either to prevent parsing of unwanted fields (Parquet), or before passing to the next operation</li>
-<li>A page cache is used (local or memcached) to reduce reads to attached or remote storage</li>
+<li>Small pages are merged together (referred to as 'defragmentation') before activities which operate on the entire page-at-a-time (such as selections)</li>
+<li>Projections are pushed to the blob parser, either to prevent parsing of unwanted fields (Parquet), or before passing to the next operation</li>
+<li>A buffer pool is used to maintain an in-memory cache of blobs</li>
+<li>A shared page cache can be used (e.g. memcached) to reduce reads to attached or remote storage</li>
 <li>An <a href="https://en.wikipedia.org/wiki/Page_replacement_algorithm#Variants_on_LRU">LRU-K</a> cache eviction strategy with a fixed eviction budget per query to help ensure effective use of the page cache</li>
 <li>Aggressive pruning of date partitioned datasets</li>
 <li>SIMD and vectorized execution where available (via <a href="https://numpy.org/devdocs/reference/simd/index.html">Numpy</a> and <a href="https://arrow.apache.org/docs/format/Columnar.html">PyArrow</a>)</li>
 <li>Projection before <code>GROUP BY</code> to reduce data handled by the aggregators</li>
+<li><code>null</code> values are eliminated from filters before they are executed, and added back in after values have been compared, reducing the pointless work of comparing <code>null</code> values</li>
 </ul>
 
 
@@ -1509,7 +1511,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>

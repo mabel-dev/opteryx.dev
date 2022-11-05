@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.6 (dev)/sql-reference/adv-time-travel/">
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
     
     
       
@@ -26,7 +26,7 @@
       <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
         
       
       
@@ -1335,7 +1335,7 @@
 <li>There is no implicit deduplication of records as they are returned.</li>
 </ul>
 </div>
-<p>Partition schemes that supports temporal queries allow you to view data from a different date by using a <code>FOR</code> clause in the SQL statement. <code>FOR</code> clauses state the date, or date range, a query should retrieve results for.</p>
+<p>Partition schemes that supports temporal queries allow you to view data from a different date by using a <code>FOR</code> clause after the dateset name in the SQL statement. <code>FOR</code> clauses state the date, or date range, a query should retrieve results for.</p>
 <p>If no temporal clause is provided and the schema supports it, <code>FOR TODAY</code> is assumed.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1404,7 +1404,7 @@
 <li><code>FOR</code> clauses cannot contain comments or reference column values or aliases  </li>
 <li>Dates can not include times and must be in the format 'YYYY-MM-DD'  </li>
 <li>The default partition scheme does not support Temporal queries  </li>
-<li>Only one temporal clause can be provided, the same dates will be used for all datasets in the query. If you are performing a <code>JOIN</code> or a sub query, the date or date ranges are applied to all datasets in the query - this may have unintended consequences.</li>
+<li>Temporal clauses must follow the relation name they relate to, and they only apply to that relation.</li>
 </ul>
 </div>
 <h2 id="time-travel_1">Time Travel</h2>
@@ -1414,12 +1414,12 @@
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="n">YESTERDAY</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>This technique is well suited to viewing snapshotted datasets from a previoud point in time. </p>
-<p>The '$planets' dataset has special handling to respond to temporal queries; Uranus was discovered in 1846 and Pluto was discovered in 1930, we and use the <code>FOR</code> clause to query the '$planets' relation from before those planets were discovered like this:</p>
+<p>The '$planets' sample dataset has special handling to respond to temporal queries; Uranus was discovered in 1846 and Pluto was discovered in 1930, we and use the <code>FOR</code> clause to query the '$planets' relation from before those planets were discovered like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"></span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span><span class="w"></span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="s1">&#39;1846-01-01&#39;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
-<p>Returns:</p>
+<p>Returns (order may differ):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>name
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>-------
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Mercury
@@ -1562,7 +1562,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>

@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.6 (dev)/sql-reference/adv-null-semantics/">
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
     
     
       
@@ -26,7 +26,7 @@
       <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
         
       
       
@@ -1224,6 +1224,34 @@
 
 <h1 id="null-semantics">NULL Semantics</h1>
 <p>Most comparisons to <code>null</code> return <code>null</code>. Exceptions are generally in functions or comparisons specifically to handle <code>null</code>, such as <code>IS NULL</code>.</p>
+<p>When the outcome of a comparison is <code>null</code>, this will be coerced to <code>false</code> when used in a filter (<code>WHERE</code> or <code>HAVING</code>) but return as <code>null</code> in a <code>SELECT</code> statement.</p>
+<p>To demonstrate, first a <code>null</code> comparison in a <code>SELECT</code> statement:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></p>
+<p>This returns <code>null</code> for all values.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> name=null
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>-----------
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> null
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a> null
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a> null
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a> null
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a> null
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a> null
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a> null
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a> null
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a> null
+</code></pre></div>
+<p>Then a <code>null</code> comparison in a <code>WHERE</code> statement:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Returns an empty set.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>null</code> comparison returning <code>null</code> holds true even for <code>null = null</code>. Do not test for null using an equals condition, use <code>IS NULL</code>.</p>
+</div>
 
 
 
@@ -1349,7 +1377,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>

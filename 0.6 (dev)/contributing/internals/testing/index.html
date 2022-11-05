@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.6 (dev)/contributing/internals/testing/">
       
       <link rel="icon" href="../../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
     
     
       
@@ -26,7 +26,7 @@
       <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.815d1a91.min.css">
         
       
       
@@ -1353,23 +1353,25 @@
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/opteryx/tree/main/tests">mabel-dev/opteryx</a></p>
 <p>Part of the CI process. Executes hundreds of hand-crafted SQL statements against the engine.</p>
 <p>The SQL Battery helps to ensure the entire system performs as expected and when used in tandem with Unit Testing, which primarily focuses on ensuring parts work as they should, this provides a level of confidence that the system continues to perform as expected.</p>
-<p>The battery essentially has three variations:</p>
+<p>The battery essentially has four variations:</p>
 <ul>
 <li>Does the Query run - with no checking or validation of the outputs</li>
 <li>Does the Query fail - for scenarios when the query is expected to fail</li>
 <li>Is the shape of the results as expected - only the row and column counts are checked</li>
+<li>Does the Query return the right results - the returned dataset is checked</li>
 </ul>
-<p>The SQL Battery testing is currently the most effective test to identify broken functionality.</p>
+<p>The SQL Battery the most effective test to identify when functionality has been broken or changed by updates. The shape testing is currently considered the most valuable testing of this suite - it is fast and easy to write new tests for this suite, and the execution give reasonable considence in the correctness of the result in most situations.</p>
 <h2 id="performance-testing">Performance Testing</h2>
 <p><strong>Frequency</strong>: Ad hoc<br />
 <strong>Maturity</strong>: Low<br />
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/wrenchy-bench">mabel-dev/wrenchy-bench</a></p>
-<p>To measure impact of changes.</p>
+<p>The performance testing framework is only able to be run ad hoc, and there is currently no meaningful treatment or tracking out outcomes. It us currently used to confirm optimizations do have the impact of reducing query execution times.</p>
 <h2 id="sql-logic-test">SQL Logic Test</h2>
 <p><strong>Frequency</strong>: Ad hoc<br />
 <strong>Maturity</strong>: Low<br />
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/wrenchy-bench">mabel-dev/wrenchy-bench</a></p>
-<p>Runs SQL statements against Operyx and DuckDB to verify Opteryx returns the same answer as DuckDB.</p>
+<p>Runs SQL statements in both Operyx and DuckDB to verify Opteryx returns the same answer as DuckDB. This has a growing set of tests which are executed, but as how relations are referenced in these systems, most queries require some hand-tuning and many are not possible with the framework as it currently is written.</p>
+<p>What has been able to be tested has demonstrated some deviation between these systems, so is a valuable and useful test, even in its current form.</p>
 <h2 id="fuzzing">Fuzzing</h2>
 <p><strong>Frequency</strong>: CI &amp; Nightly<br />
 <strong>Maturity</strong>: Low<br />
@@ -1507,7 +1509,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>

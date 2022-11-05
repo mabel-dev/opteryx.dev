@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.6 (dev)/get-started/release-notes/change-log/">
       
       <link rel="icon" href="../../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
     
     
       
@@ -26,7 +26,7 @@
       <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.815d1a91.min.css">
         
       
       
@@ -1401,30 +1401,34 @@
 <p><strong>Fixed</strong></p>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/568">#568</a>] Unable to perform aggregates on literals. <a href="https://github.com/joocer">@joocer</a>   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/592">#592</a>] Dates handled incorrectly. <a href="https://github.com/joocer">@joocer</a>   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/600">#600</a>] Parameterization used on query batches fails. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/592">#592</a>] Dates not always handled correctly. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/600">#600</a>] Parameterization when used on query batches fails. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/580">#580</a>] Empty result sets have no column information. <a href="https://github.com/joocer">@joocer</a>   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/548">#548</a>] Hint 'did you mean' message restored. <a href="https://github.com/joocer">@joocer</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/548">#548</a>] 'did you mean' message restored for dataset <code>WITH</code> hints. <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/640">#640</a>] <code>COUNT(*)</code> shortcut only used when in uppercase. <a href="https://github.com/joocer">@joocer</a> </li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5z"/><path fill-rule="evenodd" d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752L9.836 3.244zm3.03.751a1 1 0 0 0-1.732 0L2.168 19.499A1 1 0 0 0 3.034 21h17.932a1 1 0 0 0 .866-1.5L12.866 3.994z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/645">#645</a>] (correction) <code>null</code> values not handled correctly in comparisions. <a href="https://github.com/joocer">@joocer</a> </li>
+<li>Problem installing on M1 Mac. <a href="https://github.com/joocer">@joocer</a> </li>
+<li>Support <code>AND</code>, <code>OR</code>, and <code>XOR</code> in <code>SELECT</code> statement. <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
 <p><strong>Changed</strong></p>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/566">#566</a>] Use <a href="https://duckdb.org/">DuckDB</a> for SQL comparision tests in <a href="https://github.com/mabel-dev/wrenchy-bench">Wrenchy-Bench</a>. <a href="https://github.com/joocer">@joocer</a>   </li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5z"/><path fill-rule="evenodd" d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752L9.836 3.244zm3.03.751a1 1 0 0 0-1.732 0L2.168 19.499A1 1 0 0 0 3.034 21h17.932a1 1 0 0 0 .866-1.5L12.866 3.994z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/584">#584</a>] (clarity) <code>enable_page_management</code> configuration and parameter renamed <code>enable_page_defragmentation</code> with some minor refactoring of approach <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/566">#566</a>] Change from using SQLite3 to <a href="https://duckdb.org/">DuckDB</a> for SQL comparision tests in <a href="https://github.com/mabel-dev/wrenchy-bench">Wrenchy-Bench</a>. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5z"/><path fill-rule="evenodd" d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752L9.836 3.244zm3.03.751a1 1 0 0 0-1.732 0L2.168 19.499A1 1 0 0 0 3.034 21h17.932a1 1 0 0 0 .866-1.5L12.866 3.994z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/584">#584</a>] (clarity) <code>enable_page_management</code> configuration and parameter renamed <code>enable_page_defragmentation</code> with some minor refactoring of approach to defragmentation. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5z"/><path fill-rule="evenodd" d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752L9.836 3.244zm3.03.751a1 1 0 0 0-1.732 0L2.168 19.499A1 1 0 0 0 3.034 21h17.932a1 1 0 0 0 .866-1.5L12.866 3.994z"/></svg></span> (alignment) <code>TIMESTAMP</code> casting no longer supports casting from a number. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/588">#588</a>] Integrate <a href="https://github.com/wseaton/sqloxide">sqloxide</a> into Opteryx to reduce lag with <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> updates. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/619">#619</a>] Page defragmentation moved to an Operator and positioned by the Optimizer. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5z"/><path fill-rule="evenodd" d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752L9.836 3.244zm3.03.751a1 1 0 0 0-1.732 0L2.168 19.499A1 1 0 0 0 3.034 21h17.932a1 1 0 0 0 .866-1.5L12.866 3.994z"/></svg></span> (correction) cursor 'fetch*' methods return Python tuple, rather than Python lists. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
 <p><strong>Added</strong></p>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/533">#533</a>] Support <code>LIKE</code> on <code>SHOW FUNCTIONS</code>, see <a href="https://github.com/sqlparser-rs/sqlparser-rs/pull/620">sqlparser-rs/#620</a>. <a href="https://github.com/joocer">@joocer</a>   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/570">#570</a>] Query Optimizer rule to reduce steps by trying to eliminate negatives. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/570">#570</a>] Query Optimizer rule to reduce steps in expression evaluation by partial elimination of negatives. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/129">#129</a>] Support <code>FOR</code> clauses for all datasets. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/543">#543</a>] Support 'type string' notation for casting values. <a href="https://github.com/joocer">@joocer</a>   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/596">#596</a>] Optimizer replaces ORDER BY and LIMIT plan steps with a single HeapSort plan step. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/596">#596</a>] Optimizer replaces <code>ORDER BY</code> and <code>LIMIT</code> plan steps with a single 'HeapSort' plan step. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/515">#515</a>] <code>NULLIF</code> function. <a href="https://github.com/joocer">@joocer</a>   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/581">#581</a>] SQL Battery test that tests results. <a href="https://github.com/joocer">@joocer</a>  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/577">#577</a>] hierarchical buffer pool. <a href="https://github.com/joocer">@joocer</a>    </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/581">#581</a>] New SQL Battery test that tests results, and initial set of tests. <a href="https://github.com/joocer">@joocer</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/577">#577</a>] Hierarchical buffer pool and configuration. <a href="https://github.com/joocer">@joocer</a>    </li>
 </ul>
 <h2 id="050-2022-10-02">[0.5.0] - 2022-10-02</h2>
 <p><strong>Fixed</strong></p>
@@ -1448,7 +1452,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/324">#324</a>] Support <code>IN UNNEST()</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/386">#386</a>] Support <code>SET</code> statements. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/531">#531</a>] Support <code>SHOW VARIABLES</code> and <code>SHOW PARAMETERS</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/464">#464</a>] Support <code>LEFT JOIN USING</code> <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/464">#464</a>] Support <code>LEFT JOIN &lt;relation&gt; USING</code> <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/402">#402</a>] <code>INNER JOIN ON</code> supports multiple conditions <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/551">#551</a>] Document stores (MongoDb + FireStore) return '_id' column holding string version of document ID. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/532">#532</a>] Runtime parameters are able to be altered using the <code>SET</code> statement. <a href="https://github.com/joocer">@joocer</a>  </li>
@@ -1753,7 +1757,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>

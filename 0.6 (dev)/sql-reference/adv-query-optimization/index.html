@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.6 (dev)/sql-reference/adv-query-optimization/">
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
     
     
       
@@ -26,7 +26,7 @@
       <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
         
       
       
@@ -1414,6 +1414,10 @@ Grouping by columns with high cardinality (mostly unique) is generally slower th
 <p>Cross join will very likely create a lot of records that are not required - if you then filter these records from the two source tables using a <code>WHERE</code> clause, it's likely you should use an <code>INNER JOIN</code> instead.</p>
 <h2 id="5-small-table-drives-big-table">5. Small table drives big table</h2>
 <p>Most <code>JOIN</code>s require iterating over two relations, the <em>left</em> relation, which is the one in the <code>FROM</code> clause, and the <em>right</em> relation which is the one in the <code>JOIN</code> clause (<code>SELECT * FROM left JOIN right</code>). It is generally faster to put the smaller relation to the <em>left</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This advice may be contradictory to how other database engines optimize queries and may change in the future for Opteryx.</p>
+</div>
 <h2 id="6-use-like-when-comparing-strings">6. Use <code>LIKE</code> when comparing strings</h2>
 <p><code>LIKE</code> can be used for pattern matching but it can also be used for comparisions without wildcards and generally performs faster than <code>=</code> comparisons.</p>
 <h2 id="7-use-the-correct-join">7. Use the correct <code>JOIN</code></h2>
@@ -1556,7 +1560,7 @@ Grouping by columns with high cardinality (mostly unique) is generally slower th
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>
