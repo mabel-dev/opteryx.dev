@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - :octicons-alert-24: [[#645](https://github.com/mabel-dev/opteryx/issues/645)] (correction) `null` values not handled correctly in comparisions. [@joocer](https://github.com/joocer) 
 - Problem installing on M1 Mac. [@joocer](https://github.com/joocer) 
 - Support `AND`, `OR`, and `XOR` in `SELECT` statement. [@joocer](https://github.com/joocer) 
+- [[#646](https://github.com/mabel-dev/opteryx/issues/646)] Temporal clauses in incorrect place were ignored [@joocer](https://github.com/joocer) 
 
 **Changed**
 
