@@ -374,10 +374,14 @@ strong {
     width: 75%;
 }
 
-strong > .twemoji {
-    color: #dfbf00 !important;
+p>.twemoji {
+    color: #ff7538 !important;
 }
 
-p > .twemoji {
+li>.twemoji {
+    color: #ff7538 !important;
+}
+
+strong>.twemoji {
     color: #ff7538 !important;
 }

@@ -52,7 +52,6 @@ class Graph(object):
             return obj
         return [obj]
 
-
     def add_edge(self, source: str, target: str, relationship: str):
         """
         Add edge to the graph

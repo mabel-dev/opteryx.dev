@@ -4,6 +4,8 @@ This guide will help you to set up a Windows workstation to work with the code a
 
 If using WSL, refer to the Debian/Ubuntu set up guide. Initial set up of the WSL component is not covered in these guides.
 
+Intel/x86 is the recommended environment, it has not been confirmed that Opteryx operates as expected on ARM Windows - it does operate on Linux and Mac ARM.
+
 ## Setting Up
 
 ### 1. Install Python 

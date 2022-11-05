@@ -21,11 +21,13 @@ Library           | Disposition       | Copyright            | Licence
 [typer](https://github.com/tiangolo/typer)                 | Installed   |   | [MIT](https://github.com/tiangolo/typer/blob/master/LICENSE)
 
 **Installed** components are installed from PyPI.  
-**Integrated** components have their source code included in the Opteryx codebase.  
+**Integrated** components have their source code (or significant parts of) included in the Opteryx codebase.  
 
-Integrated components may differ from their original form. Cosmetic changes are not generally noted however where functionality has been added or altered, this is recorded in comments.
+This list does not include transitive dependencies nor is guaranteed to be complete. Only components which have been integrated have copyright information noted, best efforts have been made to ensure this information is correct.
 
-This list does not include transitive dependencies.
+Integrated components may differ from their original form. Cosmetic changes are not generally noted however where functionality has been added or altered, this is recorded in comments. 
+
+[pyarrow_ops](https://github.com/TomScheffers/pyarrow_ops) has had significant changes to the original code and it is no longer practical to annotate all differences in the code.
 
 !!! Note   
     License information was correct as at 2022-06-03, or when updated in this document if later.

@@ -32,6 +32,9 @@ Cross join will very likely create a lot of records that are not required - if y
 
 Most `JOIN`s require iterating over two relations, the _left_ relation, which is the one in the `FROM` clause, and the _right_ relation which is the one in the `JOIN` clause (`SELECT * FROM left JOIN right`). It is generally faster to put the smaller relation to the _left_.
 
+!!! note
+    This advice may be contradictory to how other database engines optimize queries and may change in the future for Opteryx.
+
 ## 6. Use `LIKE` when comparing strings
 
 `LIKE` can be used for pattern matching but it can also be used for comparisions without wildcards and generally performs faster than `=` comparisons.

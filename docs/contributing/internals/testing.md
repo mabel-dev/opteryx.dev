@@ -24,13 +24,14 @@ Part of the CI process. Executes hundreds of hand-crafted SQL statements against
 
 The SQL Battery helps to ensure the entire system performs as expected and when used in tandem with Unit Testing, which primarily focuses on ensuring parts work as they should, this provides a level of confidence that the system continues to perform as expected.
 
-The battery essentially has three variations:
+The battery essentially has four variations:
 
 - Does the Query run - with no checking or validation of the outputs
 - Does the Query fail - for scenarios when the query is expected to fail
 - Is the shape of the results as expected - only the row and column counts are checked
+- Does the Query return the right results - the returned dataset is checked
 
-The SQL Battery testing is currently the most effective test to identify broken functionality.
+The SQL Battery the most effective test to identify when functionality has been broken or changed by updates. The shape testing is currently considered the most valuable testing of this suite - it is fast and easy to write new tests for this suite, and the execution give reasonable considence in the correctness of the result in most situations.
 
 ## Performance Testing
 
@@ -38,7 +39,7 @@ The SQL Battery testing is currently the most effective test to identify broken 
 **Maturity**: Low  
 **Location**: [mabel-dev/wrenchy-bench](https://github.com/mabel-dev/wrenchy-bench)
 
-To measure impact of changes.
+The performance testing framework is only able to be run ad hoc, and there is currently no meaningful treatment or tracking out outcomes. It us currently used to confirm optimizations do have the impact of reducing query execution times.
 
 ## SQL Logic Test
 
@@ -46,7 +47,9 @@ To measure impact of changes.
 **Maturity**: Low  
 **Location**: [mabel-dev/wrenchy-bench](https://github.com/mabel-dev/wrenchy-bench)
 
-Runs SQL statements against Operyx and DuckDB to verify Opteryx returns the same answer as DuckDB.
+Runs SQL statements in both Operyx and DuckDB to verify Opteryx returns the same answer as DuckDB. This has a growing set of tests which are executed, but as how relations are referenced in these systems, most queries require some hand-tuning and many are not possible with the framework as it currently is written.
+
+What has been able to be tested has demonstrated some deviation between these systems, so is a valuable and useful test, even in its current form.
 
 ## Fuzzing
 

@@ -2,7 +2,7 @@
 
 This guide will help you to set up a MacOS workstation to work with the code and develop Opteryx.
 
-This has been tested on intel-based Macs.
+Intel/x86 is the recommended environment, however Opteryx does run on ARM and some parts of the guide may require additional steps in order to work correctly.
 
 ## Setting Up
 
@@ -62,7 +62,7 @@ First, install the optional dependencies, on intel-based Macs:
 python3 -m pip install --upgrade -r tests/requirements.txt
 ~~~
 
-On M (ARM) based Macs:
+On M (ARM) CPU Macs:
 
 ~~~bash
 python3 -m pip install --upgrade -r tests/requirements_arm.txt

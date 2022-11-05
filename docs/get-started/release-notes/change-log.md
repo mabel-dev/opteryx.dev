@@ -9,30 +9,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 **Fixed**
 
 - [[#568](https://github.com/mabel-dev/opteryx/issues/568)] Unable to perform aggregates on literals. [@joocer](https://github.com/joocer)   
-- [[#592](https://github.com/mabel-dev/opteryx/issues/592)] Dates handled incorrectly. [@joocer](https://github.com/joocer)   
-- [[#600](https://github.com/mabel-dev/opteryx/issues/600)] Parameterization used on query batches fails. [@joocer](https://github.com/joocer)   
+- [[#592](https://github.com/mabel-dev/opteryx/issues/592)] Dates not always handled correctly. [@joocer](https://github.com/joocer)   
+- [[#600](https://github.com/mabel-dev/opteryx/issues/600)] Parameterization when used on query batches fails. [@joocer](https://github.com/joocer)   
 - [[#580](https://github.com/mabel-dev/opteryx/issues/580)] Empty result sets have no column information. [@joocer](https://github.com/joocer)   
-- [[#548](https://github.com/mabel-dev/opteryx/issues/548)] Hint 'did you mean' message restored. [@joocer](https://github.com/joocer) 
+- [[#548](https://github.com/mabel-dev/opteryx/issues/548)] 'did you mean' message restored for dataset `WITH` hints. [@joocer](https://github.com/joocer) 
 - [[#640](https://github.com/mabel-dev/opteryx/issues/640)] `COUNT(*)` shortcut only used when in uppercase. [@joocer](https://github.com/joocer) 
+- :octicons-alert-24: [[#645](https://github.com/mabel-dev/opteryx/issues/645)] (correction) `null` values not handled correctly in comparisions. [@joocer](https://github.com/joocer) 
+- Problem installing on M1 Mac. [@joocer](https://github.com/joocer) 
+- Support `AND`, `OR`, and `XOR` in `SELECT` statement. [@joocer](https://github.com/joocer) 
 
 **Changed**
 
-- [[#566](https://github.com/mabel-dev/opteryx/issues/566)] Use [DuckDB](https://duckdb.org/) for SQL comparision tests in [Wrenchy-Bench](https://github.com/mabel-dev/wrenchy-bench). [@joocer](https://github.com/joocer)   
-- :octicons-alert-24: [[#584](https://github.com/mabel-dev/opteryx/issues/584)] (clarity) `enable_page_management` configuration and parameter renamed `enable_page_defragmentation` with some minor refactoring of approach [@joocer](https://github.com/joocer)   
+- [[#566](https://github.com/mabel-dev/opteryx/issues/566)] Change from using SQLite3 to [DuckDB](https://duckdb.org/) for SQL comparision tests in [Wrenchy-Bench](https://github.com/mabel-dev/wrenchy-bench). [@joocer](https://github.com/joocer)   
+- :octicons-alert-24: [[#584](https://github.com/mabel-dev/opteryx/issues/584)] (clarity) `enable_page_management` configuration and parameter renamed `enable_page_defragmentation` with some minor refactoring of approach to defragmentation. [@joocer](https://github.com/joocer)   
 - :octicons-alert-24: (alignment) `TIMESTAMP` casting no longer supports casting from a number. [@joocer](https://github.com/joocer)   
 - [[#588](https://github.com/mabel-dev/opteryx/issues/588)] Integrate [sqloxide](https://github.com/wseaton/sqloxide) into Opteryx to reduce lag with [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) updates. [@joocer](https://github.com/joocer)   
 - [[#619](https://github.com/mabel-dev/opteryx/issues/619)] Page defragmentation moved to an Operator and positioned by the Optimizer. [@joocer](https://github.com/joocer)   
+- :octicons-alert-24: (correction) cursor 'fetch*' methods return Python tuple, rather than Python lists. [@joocer](https://github.com/joocer)   
 
 **Added**
 
 - [[#533](https://github.com/mabel-dev/opteryx/issues/533)] Support `LIKE` on `SHOW FUNCTIONS`, see [sqlparser-rs/#620](https://github.com/sqlparser-rs/sqlparser-rs/pull/620). [@joocer](https://github.com/joocer)   
-- [[#570](https://github.com/mabel-dev/opteryx/issues/570)] Query Optimizer rule to reduce steps by trying to eliminate negatives. [@joocer](https://github.com/joocer)   
+- [[#570](https://github.com/mabel-dev/opteryx/issues/570)] Query Optimizer rule to reduce steps in expression evaluation by partial elimination of negatives. [@joocer](https://github.com/joocer)   
 - [[#129](https://github.com/mabel-dev/opteryx/issues/129)] Support `FOR` clauses for all datasets. [@joocer](https://github.com/joocer)   
 - [[#543](https://github.com/mabel-dev/opteryx/issues/543)] Support 'type string' notation for casting values. [@joocer](https://github.com/joocer)   
-- [[#596](https://github.com/mabel-dev/opteryx/issues/596)] Optimizer replaces ORDER BY and LIMIT plan steps with a single HeapSort plan step. [@joocer](https://github.com/joocer)   
+- [[#596](https://github.com/mabel-dev/opteryx/issues/596)] Optimizer replaces `ORDER BY` and `LIMIT` plan steps with a single 'HeapSort' plan step. [@joocer](https://github.com/joocer)   
 - [[#515](https://github.com/mabel-dev/opteryx/issues/515)] `NULLIF` function. [@joocer](https://github.com/joocer)   
-- [[#581](https://github.com/mabel-dev/opteryx/issues/581)] SQL Battery test that tests results. [@joocer](https://github.com/joocer)  
-- [[#577](https://github.com/mabel-dev/opteryx/issues/577)] hierarchical buffer pool. [@joocer](https://github.com/joocer)    
+- [[#581](https://github.com/mabel-dev/opteryx/issues/581)] New SQL Battery test that tests results, and initial set of tests. [@joocer](https://github.com/joocer)  
+- [[#577](https://github.com/mabel-dev/opteryx/issues/577)] Hierarchical buffer pool and configuration. [@joocer](https://github.com/joocer)    
 
 ## [0.5.0] - 2022-10-02
 
@@ -57,7 +61,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#324](https://github.com/mabel-dev/opteryx/issues/324)] Support `IN UNNEST()`. [@joocer](https://github.com/joocer)   
 - [[#386](https://github.com/mabel-dev/opteryx/issues/386)] Support `SET` statements. [@joocer](https://github.com/joocer)   
 - [[#531](https://github.com/mabel-dev/opteryx/issues/531)] Support `SHOW VARIABLES` and `SHOW PARAMETERS`. [@joocer](https://github.com/joocer)   
-- [[#464](https://github.com/mabel-dev/opteryx/issues/464)] Support `LEFT JOIN USING` [@joocer](https://github.com/joocer)   
+- [[#464](https://github.com/mabel-dev/opteryx/issues/464)] Support `LEFT JOIN <relation> USING` [@joocer](https://github.com/joocer)   
 - [[#402](https://github.com/mabel-dev/opteryx/issues/402)] `INNER JOIN ON` supports multiple conditions [@joocer](https://github.com/joocer)   
 - [[#551](https://github.com/mabel-dev/opteryx/issues/551)] Document stores (MongoDb + FireStore) return '_id' column holding string version of document ID. [@joocer](https://github.com/joocer)   
 - [[#532](https://github.com/mabel-dev/opteryx/issues/532)] Runtime parameters are able to be altered using the `SET` statement. [@joocer](https://github.com/joocer)  

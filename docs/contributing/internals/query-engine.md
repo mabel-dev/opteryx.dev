@@ -4,11 +4,11 @@
 
 The Opteryx query engine has the following key components and general process:
 
-1) The Parser & Lexer, which recieves the user SQL and builds an Abstract Syntax Tree (AST).
-2) The Binder, which maps information to the AST.
-3) The Planner, which recieves the AST and builds a Query Plan.
-4) The Optimizer, recieves a Query Plan and rewrites it to improve performance. 
-5) The Query Executor, which recieves the Query Plan and returns the result dataset.
+1) **Parser & Lexer** recieves the user SQL and builds an Abstract Syntax Tree (AST).  
+2) **Binder** maps contextual information to the AST.  
+3) **Planner** recieves the AST and builds a Query Plan.  
+4) **Optimizer** recieves a Query Plan and rewrites it to improve performance.   
+5) **Executor** recieves the Query Plan and returns the result dataset.  
 
 ## Parser & Lexer
 
@@ -21,11 +21,11 @@ SELECT SELECT
   FROM FROM
 ~~~
 
-Understand that we're requesting the field `SELECT` from the relation `FROM`.
+The Parser and Lexer will understand that we're requesting the field `SELECT` from the relation `FROM`.
 
-Opteryx uses [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) as it's Parser and Lexer, as a Rust library, Opteryx creates Python bindings for sqlparser-rs (derived from [sqloxide](https://github.com/wseaton/sqloxide)). Opteryx does not support all features and functionality provided by this library.
+Opteryx uses [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) as its Parser and Lexer, as a Rust library, Opteryx creates Python bindings for sqlparser-rs (derived from [sqloxide](https://github.com/wseaton/sqloxide)). Opteryx does not support all features and functionality provided by this library.
 
-This sqlparser-rs interprets all SQL except for the Temporal `FOR` clause which is handled separately.
+This sqlparser-rs interprets all SQL except for the Temporal `FOR` clause which are handled separately.
 
 ## Binder
 
@@ -49,9 +49,9 @@ The Query Plan can be seen for a given query using the `EXPLAIN` query.
 
 ## Query Optimizer
 
-The goal of the Query Optimizer is to rewrite the Query Plan to a plan which will return result to users faster.
+The goal of the Query Optimizer is to rewrite the Query Plan to a plan which will return result to users faster. This is generally achieved through reducing the data being handled as early in the query as possible (such as projection push-down), reducing the complexity of steps (such as using logical equivelences to make expressions simpler) or combining steps (such as sort and limit into a heap sort).
 
-The current optimizer is immature and requires hand-tuning of the input query to achieve best results.
+The current optimizer in Opteryx is immature with very few rules and requires hand-tuning of the input query for the optimizer to achieve best results.
 
 ## Query Executor
 
@@ -59,15 +59,16 @@ The goal of the Query Executor is to produce the results for the user. It takes 
 
 Opteryx implements a vectorized Volcano model executor. This means that the planner starts at the node closest to the end of the plan (e.g. `LIMIT`) and asks it for a page of data. This node asks its preceeding node for a page of data, etc etc until it gets to the node which aquires data from source. The data is then processed by each node until it is returned to the `LIMIT` node at the end.
 
-
 ## Performance Features
 
 The following features are build into the query engine to improve performance
 
-- Small pages are merged together before activities which operate on the entire page-at-a-time (such as selections)
-- Projections are pushed to the parser, either to prevent parsing of unwanted fields (Parquet), or before passing to the next operation
-- A page cache is used (local or memcached) to reduce reads to attached or remote storage
+- Small pages are merged together (referred to as 'defragmentation') before activities which operate on the entire page-at-a-time (such as selections)
+- Projections are pushed to the blob parser, either to prevent parsing of unwanted fields (Parquet), or before passing to the next operation
+- A buffer pool is used to maintain an in-memory cache of blobs
+- A shared page cache can be used (e.g. memcached) to reduce reads to attached or remote storage
 - An [LRU-K](https://en.wikipedia.org/wiki/Page_replacement_algorithm#Variants_on_LRU) cache eviction strategy with a fixed eviction budget per query to help ensure effective use of the page cache
 - Aggressive pruning of date partitioned datasets
 - SIMD and vectorized execution where available (via [Numpy](https://numpy.org/devdocs/reference/simd/index.html) and [PyArrow](https://arrow.apache.org/docs/format/Columnar.html))
 - Projection before `GROUP BY` to reduce data handled by the aggregators
+- `null` values are eliminated from filters before they are executed, and added back in after values have been compared, reducing the pointless work of comparing `null` values

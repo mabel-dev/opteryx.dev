@@ -3,14 +3,16 @@ import glob
 from format_docstring import create_md_content
 from graph_lib import Graph
 
+
 def get_file():
     ob = next(glob.iglob("../**/opteryx/connection.py", recursive=True))
     return ob
 
+
 def function_node(node):
     args = []
     defaults = [c.value for c in node.args.defaults]
-    defaults = ['🙂'] * (len(node.args.args) - len(defaults)) + defaults
+    defaults = ["🙂"] * (len(node.args.args) - len(defaults)) + defaults
     for index, arg in enumerate(node.args.args):
         if arg.arg != "self":
             if arg.annotation:
@@ -22,9 +24,9 @@ def function_node(node):
 
     kind = "function"
     # does the function have the property decorator?
-    if any([d.id =="property" for d in node.decorator_list]):
+    if any([d.id == "property" for d in node.decorator_list]):
         kind = "property"
-    
+
     return_type = None
     # does the function have a return type hint?
     if node.returns:
@@ -38,8 +40,9 @@ def function_node(node):
         "name": node.name,
         "returns": return_type,
         "arguments": args,
-        "description": docstring
+        "description": docstring,
     }
+
 
 def process_file(filepath):
 
@@ -78,7 +81,6 @@ def process_file(filepath):
                 graph.add_node(node.name, kind="method")
                 graph.add_edge("root", node.name, "contains")
 
-
     print(graph.nodes(data=True))
 
     return graph
@@ -94,5 +96,10 @@ save = "docs/get-started/python-client.md"
 
 template_content = open(save, mode="r").read().split("<!--- start --->")[0]
 
-doc = template_content + "<!--- start --->\n" + doc + "\n<hr><p>This file has been automatically generated from the source code.</p>"
-#open(save, "w").write(doc)
+doc = (
+    template_content
+    + "<!--- start --->\n"
+    + doc
+    + "\n<hr><p>This file has been automatically generated from the source code.</p>"
+)
+# open(save, "w").write(doc)

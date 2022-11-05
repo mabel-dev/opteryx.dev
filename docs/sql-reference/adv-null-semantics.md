@@ -1,3 +1,40 @@
 # NULL Semantics
 
 Most comparisons to `null` return `null`. Exceptions are generally in functions or comparisons specifically to handle `null`, such as `IS NULL`.
+
+When the outcome of a comparison is `null`, this will be coerced to `false` when used in a filter (`WHERE` or `HAVING`) but return as `null` in a `SELECT` statement.
+
+To demonstrate, first a `null` comparison in a `SELECT` statement:
+~~~sql
+SELECT name = null
+ FROM $planets;
+~~~
+
+This returns `null` for all values.
+
+~~~
+ name=null
+-----------
+ null
+ null
+ null
+ null
+ null
+ null
+ null
+ null
+ null
+~~~
+
+Then a `null` comparison in a `WHERE` statement:
+
+~~~sql
+SELECT name
+  FROM $planets
+ WHERE name = null;
+~~~
+
+Returns an empty set.
+
+!!! note
+    `null` comparison returning `null` holds true even for `null = null`. Do not test for null using an equals condition, use `IS NULL`.

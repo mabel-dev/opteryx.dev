@@ -11,7 +11,7 @@ We since users started using the engine about five months ago we've been able to
 
 This week saw the first iteration of plan-based optimization, where the Optimizer receives a query plan and uses rules to rewrite it to run faster.
 
-All complex systems are built on something simple. Our first iteration of the Optimizer is simple. It currently does one action - it takes AND conjunctions in the WHERE and HAVING clauses and splits them into individual Selection Operators to run in serial.
+All complex systems are built on something simple. Our first iteration of the Optimizer is simple. It currently does one action - it takes `AND` conjunctions in the `WHERE` and `HAVING` clauses and splits them into individual Selection Operators to run in serial.
 
 The effect of doing this, with no intelligence to the order or other factors, has been observed to be up to a 85% reduction in the execution time of the Selection step of real-world queries - i.e. ones we see being written and run by users.
 

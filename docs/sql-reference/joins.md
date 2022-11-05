@@ -1,6 +1,6 @@
 # Joins
 
-Joins allow you to combine data from multiple relations into a single relation.
+Joins allow you to combine data from multiple relations into a single relation. There are a number of different join types available, each combines relations in different ways.
 
 ## CROSS JOIN
 

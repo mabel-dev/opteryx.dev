@@ -2,6 +2,8 @@
 
 This guide will help you to set up a Debian or Ubuntu workstation to work with the code and develop Opteryx.
 
+Intel/x86 is the recommended environment, however Opteryx does run on ARM and some parts of the guide may require additional steps in order to work correctly.
+
 ## Setting Up
 
 ### 1. Install Python 

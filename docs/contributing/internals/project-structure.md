@@ -11,8 +11,7 @@ opteryx/                 <- main opteryx library
  ├── managers/           <- libraries responsible for key functional units
  │   ├── expression/     <- modules implementing expression evaluation
  │   ├── kvstore/        <- modules implementing interfacing with KV Stores
- │   ├── process/        <- modules implementing process management
- │   ├── query/          <- modules implementing query planning 
+ │   ├── planner/        <- modules implementing query planning and optimizing
  │   └── schemes/        <- modules implementing storage schemes
  ├── models/             <- internal data models
  ├── operators/          <- modules implementing steps in the query plan
@@ -26,6 +25,5 @@ opteryx/                 <- main opteryx library
  │   └── ...  
  ├── utils/              <- helper libraries
  └── ...       
-raptor/                  <- query optimizer
 ~~~
 

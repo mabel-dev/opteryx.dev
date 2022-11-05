@@ -9,8 +9,7 @@ For datasets which are snapshots, this allows you to recall the data of that sna
     - Data returned for previous days with be the latest data as at today. For example if a backfill updates data from seven days ago, when querying that data today the backfilled data will be returned.
     - There is no implicit deduplication of records as they are returned.
 
-
-Partition schemes that supports temporal queries allow you to view data from a different date by using a `FOR` clause in the SQL statement. `FOR` clauses state the date, or date range, a query should retrieve results for.
+Partition schemes that supports temporal queries allow you to view data from a different date by using a `FOR` clause after the dateset name in the SQL statement. `FOR` clauses state the date, or date range, a query should retrieve results for.
   
 If no temporal clause is provided and the schema supports it, `FOR TODAY` is assumed.
 
@@ -64,8 +63,7 @@ Placeholder  | Applicability   | Description
     - `FOR` clauses cannot contain comments or reference column values or aliases  
     - Dates can not include times and must be in the format 'YYYY-MM-DD'  
     - The default partition scheme does not support Temporal queries  
-    - Only one temporal clause can be provided, the same dates will be used for all datasets in the query. If you are performing a `JOIN` or a sub query, the date or date ranges are applied to all datasets in the query - this may have unintended consequences.
-
+    - Temporal clauses must follow the relation name they relate to, and they only apply to that relation.
 
 ## Time Travel
 
@@ -79,7 +77,7 @@ SELECT *
 
 This technique is well suited to viewing snapshotted datasets from a previoud point in time. 
 
-The '$planets' dataset has special handling to respond to temporal queries; Uranus was discovered in 1846 and Pluto was discovered in 1930, we and use the `FOR` clause to query the '$planets' relation from before those planets were discovered like this:
+The '$planets' sample dataset has special handling to respond to temporal queries; Uranus was discovered in 1846 and Pluto was discovered in 1930, we and use the `FOR` clause to query the '$planets' relation from before those planets were discovered like this:
 
 ~~~sql
 SELECT name
@@ -87,7 +85,7 @@ SELECT name
    FOR '1846-01-01';
 ~~~
 
-Returns:
+Returns (order may differ):
 
 ~~~
 name

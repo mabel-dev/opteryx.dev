@@ -2,9 +2,11 @@
 
 This document describes the built-in SQL functions and operators supported by Opteryx.
 
-Generally functions will return `null` on `null` input, although note that this is not true in all circumstances.
+Generally functions will return `null` on `null` input, although note that this is not true in all circumstances, especially for null-aware functions like `COALESCE` and `IFNULL`.
 
 Definitions noted with a :octicons-dot-16: accept different input arguments.
+
+New functions for this version are annotated with the :octicons-star-16: icon.
 
 ## Conversion Functions
 

@@ -8,13 +8,13 @@ Logical Operators are used within Expressions to express how predicates combine.
 
 The following logical operators are available: `NOT`, `AND`, `OR`, and `XOR`.
 
-| a      | b     | a `AND` b | a `OR` b | a `XOR` b |
-| :----: | :---: | :-------: | :------: | :-------: |
-| true   | true  | true      | true     | false     |
-| true   | false | false     | true     | true      |
-| false  | false | false     | false    | false     |
-| _null_ | true  | _null_    | _null_   | _null_    |
-| _null_ | false | _null_    | _null_   | _null_    |
+| a      | b     | a `AND` b | a `OR` b | a `XOR` b | `NOT` a |
+| :----: | :---: | :-------: | :------: | :-------: | :-----: |
+| true   | true  | true      | true     | false     | false   |
+| true   | false | false     | true     | true      | false   |
+| false  | false | false     | false    | false     | true    |
+| _null_ | true  | _null_    | _null_   | _null_    | _null_  |
+| _null_ | false | _null_    | _null_   | _null_    | _null_  |
 
 The operators `AND`, `OR`, and `XOR` are commutative, that is, you can switch the left and right operand without affecting the result.
 
@@ -43,9 +43,6 @@ Operator     | Description
 `~*`         | case insensitive regular expression match
 `!~*`        | inverse results of `~*`
 `IS`         | special comparison for non-values `true`, `false` and `null`
-
-!!! Note  
-    When handling `null` values, infix inversions (e.g. `x NOT LIKE y`) behave differently to prefix inversions (`NOT x LIKE y`).
 
 ## Other Comparisons
 
