@@ -34,9 +34,6 @@ Aggregate functions generally ignore `null` values when performing calculations.
     The maximum value in **column**.  
     Also `MAXIMUM`.
 
-!!! function "`MEDIAN` (**column**: _numeric_) → _numeric_"  
-    The median of values in **column**.  
-
 !!! function "`MIN` (**column**) → _any_"  
     The minimum value in **column**.  
     Also `MINIMUM`.
