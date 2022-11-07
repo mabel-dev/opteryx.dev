@@ -1,6 +1,6 @@
 # Functions
 
-This document describes the built-in SQL functions and operators supported by Opteryx.
+This document describes the supported SQL functions and operators.
 
 Generally functions will return `null` on `null` input, although note that this is not true in all circumstances, especially for null-aware functions like `COALESCE` and `IFNULL`.
 
@@ -354,7 +354,7 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
 ## System Functions
 
 !!! function "`VERSION` () → _varchar_"  
-    Return the version of Opteryx.
+    Return the version of the query engine.
 
 ## Other Functions
 

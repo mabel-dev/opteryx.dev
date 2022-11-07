@@ -1,6 +1,6 @@
 # Relation Constructors
 
-[Opteryx](https://github.com/mabel-dev/opteryx) provides options to create temporary relations as part of query definitions. These relations exist only for the execution of the query that defines them.
+There are multiple options to create temporary relations as part of query definitions. These relations exist only for the execution of the query that defines them.
 
 ## Using `VALUES`
 

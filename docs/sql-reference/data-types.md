@@ -1,6 +1,6 @@
 # Data Types
 
-[Opteryx](https://github.com/mabel-dev/opteryx) uses a reduced set of types compared to full DBMS platforms.
+The engine supports a reduced set of types compared to full DBMS platforms.
 
 ## Types
 

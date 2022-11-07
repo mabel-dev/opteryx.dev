@@ -1,6 +1,6 @@
 # Sample Data
 
-Opteryx has three built-in relations for demonstration and testing.
+There are three built-in relations for demonstration and testing.
 
 &emsp;`$satellites` (8 columns, 177 rows)   
 &emsp;`$planets` (20 columns, 9 rows) **#plutoisaplanet**   

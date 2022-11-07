@@ -1,6 +1,6 @@
 # Statements
 
-[Opteryx](https://github.com/mabel-dev/opteryx) supports the following statement forms.
+The following statement forms are supported.
 
 ## EXPLAIN
 
@@ -19,8 +19,6 @@ The `EXPLAIN` clause outputs a summary of the execution plan for the query in th
 ## SELECT
 
 Retrieve rows from zero or more relations.
-
-[Opteryx](https://github.com/mabel-dev/opteryx) is targeting [ANSI SQL-92](https://db.cs.cmu.edu/files/sql/sql1992.txt) compliant syntax for `SELECT` statements. This standard alignment allows Opteryx users to quickly understand how to query data and enables easier porting of SQL between query engines and databases.
 
 ~~~sql
 SELECT [ DISTINCT ] <expression>, ..
@@ -99,7 +97,7 @@ FOR DATES BETWEEN start AND end
 FOR DATES IN range
 ~~~
 
-The `FOR` clause is an Opteryx-specific clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation name in a `FROM` or `JOIN` clause. If not provided `FOR TODAY` is assumed.
+The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation name in a `FROM` or `JOIN` clause. If not provided `FOR TODAY` is assumed.
 
 See [Time Travel](../adv-time-travel/) for more information on `FOR` syntax and functionality.
 
@@ -193,7 +191,7 @@ FOR DATES BETWEEN start AND end
 FOR DATES IN range
 ~~~
 
-The `FOR` clause is an Opteryx-specific clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation name the `FROM` clause. If not provided `FOR TODAY` is assumed.
+The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation name the `FROM` clause. If not provided `FOR TODAY` is assumed.
 
 See [Time Travel](../adv-time-travel/) for more information on `FOR` syntax and functionality.
 
@@ -220,7 +218,7 @@ FOR DATES BETWEEN start AND end
 FOR DATES IN range
 ~~~
 
-The `FOR` clause is an Opteryx-specific clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation name. If not provided `FOR TODAY` is assumed.
+The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation name. If not provided `FOR TODAY` is assumed.
 
 ## SHOW FUNCTIONS
 

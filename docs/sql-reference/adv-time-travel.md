@@ -1,6 +1,6 @@
 # Time Travel
 
-Opteryx support temporality, the ability to view things as they were at a different point in time.
+The engine support temporality, the ability to view things as they were at a different point in time.
 
 For datasets which are snapshots, this allows you to recall the data of that snapshop as at a data in the past. For datasets which are logs, this allows you to prune queries to just the dates which contain relevant data.
 

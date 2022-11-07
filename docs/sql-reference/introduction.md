@@ -90,7 +90,7 @@ Pluto 	|       153.3 |             5
 The order of results are not guaranteed and should not be relied upon. If you request the results of the below query, you might get the Mercury or Venus in either order. 
 
 !!! note
-    The same query, of the same data in the same version of Opteryx will likely to return results in the same order, don't expect to test result order non-determinism by rerunning the query millions of times and looking for differences. These differences may manifest over different versions, or from subtle differences to the query statement or data.
+    The same query, of the same data in the same version of the query engine will likely to return results in the same order, don't expect to test result order non-determinism by rerunning the query millions of times and looking for differences. These differences may manifest over different versions, or from subtle differences to the query statement or data.
 
 ~~~sql
 SELECT name,
@@ -198,7 +198,7 @@ SELECT *
          ON $satellites.planetId = $planets.id;
 ~~~
 
-The Opteryx planner currently uses a different execution strategy for these two similar queries, the explicit `INNER JOIN` style generally executes faster.
+The planner currently uses a different execution strategy for these two similar queries, the explicit `INNER JOIN` style generally executes faster.
 
 Now we will figure out how we can get the Mercury and Venus records back in. What we want the query to do is to scan the _$planets_ relation and for each row to find the matching _$satellites_ row(s). If no matching row is found we want some “empty values” to be substituted for the _$satellites_ relations columns. This kind of query is called an outer join. (The joins we have seen so far are inner joins and cross joins.) The command looks like this:
 
@@ -226,11 +226,11 @@ $satellites.id | planetId | $satellites.name | ...
 Using the `LEFT OUTER JOIN` will mean the relation mentioned on the left of the join operator will have each of its rows in the output at least once, whereas the relation on the right will only have those rows output that match some row of the left relation. When outputting a left-relation row for which there is no right-relation match, empty (`null`) values are substituted for the right-relation columns. 
 
 !!! note
-    How `null` values are displayed may be different between different systems, common approaches are to display an empty cell or display 'none' or 'null' in an alternate format (e.g. italics or different font color). This is not controlled by Opteryx.
+    How `null` values are displayed may be different between different systems, common approaches are to display an empty cell or display 'none' or 'null' in an alternate format (e.g. italics or different font color). This is not controlled by the query engine.
 
 ## Aggregate Functions
 
-Like most query engines and databases, Opteryx supports aggregate functions. An aggregate function computes a single result from multiple input rows. For example, there are aggregates to compute the `COUNT`, `SUM`, `AVG` (average), `MAX` (maximum) and `MIN` (minimum) over a set of rows.
+An aggregate function computes a single result from multiple input rows. For example, there are aggregates to compute the `COUNT`, `SUM`, `AVG` (average), `MAX` (maximum) and `MIN` (minimum) over a set of rows.
 
 <!---
 As an example, we can find the highest low-temperature reading anywhere with:

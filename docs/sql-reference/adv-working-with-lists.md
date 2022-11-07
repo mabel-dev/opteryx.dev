@@ -1,6 +1,6 @@
 # Working with Lists
 
-In Opteryx a list is an ordered collection of zero or more `VARCHAR` values.
+A list is an ordered collection of zero or more `VARCHAR` values.
 
 ## Actions
 
