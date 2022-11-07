@@ -17,8 +17,10 @@ jobs:
       - run: git fetch origin gh-pages --depth=1
       - run: pip install --upgrade mkdocs-material mike
       # this should match the version
-#      - run: mike delete latest
+      - run: mike delete latest
 #      - run: mike deploy -p "0.5.0" latest
-#      - run: mike delete dev
-#      - run: mike delete "0.6.0"
-      - run: mike deploy -p "0.6 (dev)" dev      
+      - run: mike delete dev
+      - run: mike delete "0.6 (dev)"
+      - run: mike deploy -p "0.6.0" latest      
+
+      - run: mike deploy -p "0.7 (dev)" dev      
