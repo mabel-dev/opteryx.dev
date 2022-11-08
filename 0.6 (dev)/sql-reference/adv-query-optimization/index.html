@@ -1416,7 +1416,7 @@ Grouping by columns with high cardinality (mostly unique) is generally slower th
 <p>Most <code>JOIN</code>s require iterating over two relations, the <em>left</em> relation, which is the one in the <code>FROM</code> clause, and the <em>right</em> relation which is the one in the <code>JOIN</code> clause (<code>SELECT * FROM left JOIN right</code>). It is generally faster to put the smaller relation to the <em>left</em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This advice may be contradictory to how other database engines optimize queries and may change in the future for Opteryx.</p>
+<p>This advice may be contradictory to how other database engines optimize queries and may change in the future.</p>
 </div>
 <h2 id="6-use-like-when-comparing-strings">6. Use <code>LIKE</code> when comparing strings</h2>
 <p><code>LIKE</code> can be used for pattern matching but it can also be used for comparisions without wildcards and generally performs faster than <code>=</code> comparisons.</p>

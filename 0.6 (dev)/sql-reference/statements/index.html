@@ -1607,7 +1607,7 @@
 
 
 <h1 id="statements">Statements</h1>
-<p><a href="https://github.com/mabel-dev/opteryx">Opteryx</a> supports the following statement forms.</p>
+<p>The following statement forms are supported.</p>
 <h2 id="explain">EXPLAIN</h2>
 <p>Show the logical execution plan of a statement.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">EXPLAIN</span><span class="w"></span>
@@ -1620,7 +1620,6 @@
 </div>
 <h2 id="select">SELECT</h2>
 <p>Retrieve rows from zero or more relations.</p>
-<p><a href="https://github.com/mabel-dev/opteryx">Opteryx</a> is targeting <a href="https://db.cs.cmu.edu/files/sql/sql1992.txt">ANSI SQL-92</a> compliant syntax for <code>SELECT</code> statements. This standard alignment allows Opteryx users to quickly understand how to query data and enables easier porting of SQL between query engines and databases.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="p">..</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">relation</span><span class="o">&gt;</span><span class="w"> </span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="o">&lt;</span><span class="k">period</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[</span><span class="k">WITH</span><span class="w"> </span><span class="p">(</span><span class="n">NO_CACHE</span><span class="o">|</span><span class="n">NO_PARTITION</span><span class="o">|</span><span class="n">NO_PUSH_PROJECTION</span><span class="p">)]</span><span class="w"></span>
@@ -1692,7 +1691,7 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>FOR DATES IN range
 </code></pre></div></p>
-<p>The <code>FOR</code> clause is an Opteryx-specific clause which filters data by the date it was recorded for. When provided <code>FOR</code> clauses must directly follow the relation name in a <code>FROM</code> or <code>JOIN</code> clause. If not provided <code>FOR TODAY</code> is assumed.</p>
+<p>The <code>FOR</code> clause is a non-standard clause which filters data by the date it was recorded for. When provided <code>FOR</code> clauses must directly follow the relation name in a <code>FROM</code> or <code>JOIN</code> clause. If not provided <code>FOR TODAY</code> is assumed.</p>
 <p>See <a href="../adv-time-travel/">Time Travel</a> for more information on <code>FOR</code> syntax and functionality.</p>
 <h3 id="where-clause">WHERE clause</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>WHERE condition
@@ -1743,7 +1742,7 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>FOR DATES IN range
 </code></pre></div></p>
-<p>The <code>FOR</code> clause is an Opteryx-specific clause which filters data by the date it was recorded for. When provided <code>FOR</code> clauses must directly follow the relation name the <code>FROM</code> clause. If not provided <code>FOR TODAY</code> is assumed.</p>
+<p>The <code>FOR</code> clause is a non-standard clause which filters data by the date it was recorded for. When provided <code>FOR</code> clauses must directly follow the relation name the <code>FROM</code> clause. If not provided <code>FOR TODAY</code> is assumed.</p>
 <p>See <a href="../adv-time-travel/">Time Travel</a> for more information on <code>FOR</code> syntax and functionality.</p>
 <h2 id="show-create-table">SHOW CREATE TABLE</h2>
 <p>Show an approximation of the SQL to create a specified relation.</p>
@@ -1758,7 +1757,7 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>FOR DATES IN range
 </code></pre></div></p>
-<p>The <code>FOR</code> clause is an Opteryx-specific clause which filters data by the date it was recorded for. When provided <code>FOR</code> clauses must directly follow the relation name. If not provided <code>FOR TODAY</code> is assumed.</p>
+<p>The <code>FOR</code> clause is a non-standard clause which filters data by the date it was recorded for. When provided <code>FOR</code> clauses must directly follow the relation name. If not provided <code>FOR TODAY</code> is assumed.</p>
 <h2 id="show-functions">SHOW FUNCTIONS</h2>
 <p>List the functions and aggregators supported by the engine.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">FUNCTIONS</span><span class="w"></span>
