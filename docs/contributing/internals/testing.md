@@ -31,7 +31,7 @@ The battery essentially has four variations:
 - Is the shape of the results as expected - only the row and column counts are checked
 - Does the Query return the right results - the returned dataset is checked
 
-The SQL Battery the most effective test to identify when functionality has been broken or changed by updates. The shape testing is currently considered the most valuable testing of this suite - it is fast and easy to write new tests for this suite, and the execution give reasonable considence in the correctness of the result in most situations.
+The SQL Battery the most effective test to identify when functionality has been broken or changed by updates. The shape testing is currently considered the best value of this suite - it is fast and easy to write new tests for this suite, and the execution give reasonable considence in the correctness of the result in most situations.
 
 ## Performance Testing
 
