@@ -245,7 +245,13 @@ Display the value of a given configuration setting.
 SHOW PARAMETER parameter
 ~~~
 
-**Related**: `SET`
+## SHOW STORES
+
+Display the set of configured data stores.
+
+~~~sql
+SHOW STORES
+~~~
 
 ## SHOW VARIABLES
 
