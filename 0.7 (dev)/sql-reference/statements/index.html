@@ -785,6 +785,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#show-stores" class="md-nav__link">
+    SHOW STORES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#show-variables" class="md-nav__link">
     SHOW VARIABLES
   </a>
@@ -1567,6 +1574,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#show-stores" class="md-nav__link">
+    SHOW STORES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#show-variables" class="md-nav__link">
     SHOW VARIABLES
   </a>
@@ -1771,14 +1785,17 @@
 <p>Display the value of a given configuration setting.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="k">PARAMETER</span><span class="w"> </span><span class="k">parameter</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Related</strong>: <code>SET</code></p>
+<h2 id="show-stores">SHOW STORES</h2>
+<p>Display the set of configured data stores.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">STORES</span><span class="w"></span>
+</code></pre></div>
 <h2 id="show-variables">SHOW VARIABLES</h2>
 <p>List the variables set in the query batch.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">VARIABLES</span><span class="w"></span>
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">VARIABLES</span><span class="w"></span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span><span class="w"></span>
 </code></pre></div>
 <h3 id="like-clause_2">LIKE clause</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>LIKE pattern
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>LIKE pattern
 </code></pre></div>
 <p>A case-insensitive <code>LIKE</code> clause to filter the results to the desired subset by the variable name. This does not require a left-hand operator, it will always filter by the variable name.</p>
 <p><strong>Related</strong>: <code>SET</code></p>
