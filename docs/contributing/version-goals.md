@@ -9,14 +9,14 @@ Version 1.0 goals will be delivered across various minor versions building towar
 - :fontawesome-regular-square: **Connection** Python PEP249 compatibility
 - :fontawesome-regular-square: **Planner** ANSI SQL92 compatibility
 - :fontawesome-regular-square: **Planner** CTEs (`WITH`) statements supported
-- :fontawesome-solid-check-square: **Planner** Read across multiple data sources (e.g. GCS and Postgres in the same query) [v0.2]
+- :fontawesome-regular-check-square: **Planner** Read across multiple data sources (e.g. GCS and Postgres in the same query) [v0.2]
 - :fontawesome-regular-square: **Planner** Support different plaform data sources (e.g. FireStore [v0.3] and BigQuery)
-- :fontawesome-solid-check-square: **Planner** Rule-based query optimizer [v0.5]
+- :fontawesome-regular-check-square: **Planner** Rule-based query optimizer [v0.5]
 - :fontawesome-regular-square: **Planner** Metastore used in planning an optimizing
-- :fontawesome-solid-check-square: **Execution** `JOIN` statements supported [v0.1]
-- :fontawesome-solid-check-square: **Execution** Functions using the result of Functions (e.g. `LENGTH(LIST(field))`) [v0.3]
-- :fontawesome-solid-check-square: **Execution** Inline operators (e.g. `firstname || surname`) [v0.3]
-- :fontawesome-solid-check-square: **Execution** Local Buffer Cache implemented [v0.6]
+- :fontawesome-regular-check-square: **Execution** `JOIN` statements supported [v0.1]
+- :fontawesome-regular-check-square: **Execution** Functions using the result of Functions (e.g. `LENGTH(LIST(field))`) [v0.3]
+- :fontawesome-regular-check-square: **Execution** Inline operators (e.g. `firstname || surname`) [v0.3]
+- :fontawesome-regular-check-square: **Execution** Local Buffer Cache implemented [v0.6]
 - :fontawesome-regular-square: **Operation** Correctness benchmarks written [v0.6] and acceptable pass-rate obtained
 - :fontawesome-regular-square: **Operation** Performance benchmarks written [v0.5] and monitored
 
