@@ -100,7 +100,7 @@ h1 {
 
 h2 {
     font-family: Inter, 'IBM Plex Sans', sans-serif;
-    font-weight: 400 !important;
+    font-weight: 600 !important;
     font-size: 1.6em !important;
     margin-bottom: 0.7em !important;
     margin-top: 0.5em !important;
@@ -109,8 +109,8 @@ h2 {
 
 h3 {
     font-family: Inter, 'IBM Plex Sans', sans-serif;
-    font-weight: 400 !important;
-    font-size: 1.3em !important;
+    font-weight: 600 !important;
+    font-size: 1.2em !important;
     margin-bottom: 0em !important;
     margin-top: 0.5em !important;
     color: #11595c !important;

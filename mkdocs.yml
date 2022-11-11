@@ -2,7 +2,7 @@ site_name: Opteryx
 site_url: https://mabel-dev.github.io/opteryx/latest/
 site_author: Justin Joyce
 site_description: Opteryx - Query your data, where it lives.
-copyright: Copyright &copy; 2021 - 2022 Justin Joyce
+copyright: Copyright &copy; 2021 - 2022 Justin Joyce (@joocer)
 
 theme:
   name: material
@@ -35,6 +35,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      toc_depth: 2
 
 extra_css:
   - stylesheets/extra.css
