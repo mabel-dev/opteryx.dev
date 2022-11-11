@@ -188,11 +188,11 @@ T321-07  | `PARAMETERS` view                                         | unknown
 
 Support statuses in this table:
 
-&emsp;**yes** - The feature is supported and conformance is part of the test suite.  
-&emsp;**no** - The feature is not supported.  
-&emsp;**partial** - Some features are supported.  
-&emsp;**n/a** - The feature relates to a feature not supported by Opteryx.  
-&emsp;**unknown** - No test exists to confirm conformance.  
+&emsp;**yes** The feature is supported and conformance is part of the test suite.  
+&emsp;**no** The feature is not supported.  
+&emsp;**partial** Some features are supported.  
+&emsp;**n/a** The feature relates to a feature not supported by Opteryx.  
+&emsp;**unknown** No test exists to confirm conformance.  
 
 
 [^1]: https://15445.courses.cs.cmu.edu/fall2020/slides/02-advancedsql.pdf

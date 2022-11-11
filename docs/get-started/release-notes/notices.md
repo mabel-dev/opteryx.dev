@@ -1,5 +1,7 @@
 # Notices
 
+## Incorporated Components
+
 Opteryx is built on the shoulders of other great libraries and components:
 
 Library           | Disposition       | Copyright            | Licence   
@@ -20,8 +22,8 @@ Library           | Disposition       | Copyright            | Licence
 [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) | Installed |  | [Apache 2.0](https://github.com/sqlparser-rs/sqlparser-rs/blob/main/LICENSE.TXT)
 [typer](https://github.com/tiangolo/typer)                 | Installed   |   | [MIT](https://github.com/tiangolo/typer/blob/master/LICENSE)
 
-**Installed** components are installed from PyPI.  
-**Integrated** components have their source code (or significant parts of) included in the Opteryx codebase.  
+&emsp;**Installed** components are installed from PyPI.  
+&emsp;**Integrated** components have their source code (or significant parts of) included in the Opteryx codebase.  
 
 This list does not include transitive dependencies nor is guaranteed to be complete. Only components which have been integrated have copyright information noted, best efforts have been made to ensure this information is correct.
 
@@ -32,7 +34,7 @@ Integrated components may differ from their original form. Cosmetic changes are 
 !!! Note   
     License information was correct as at 2022-06-03, or when updated in this document if later.
 
-**Other Assets**
+## Other Assets
 
 The [Icarus Opteryx](../../icarus-opteryx.png) image based on '[Evening: Fall of Day](https://collections.mfa.org/objects/30905)' by William Rimmer (Public Domain), more commonly associated with Led Zepplin's [Swan Song](https://en.wikipedia.org/wiki/Swan_Song_Records). The Icarus Opteryx image is created using visual components from 'Archaeopteryx' fossil image by Caro Asercion ([CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt)).
 

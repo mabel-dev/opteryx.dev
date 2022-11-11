@@ -2,13 +2,13 @@
 
 > If you are interested in how databases work, I recommend the resources from [The CMU Database Group](https://db.cs.cmu.edu/) and the collection of resources at [Awesome Database Learning](https://github.com/pingcap/awesome-database-learning).
 
-The Opteryx query engine has the following key components and general process:
+The Opteryx query engine has the following key components and processing queries follows this high-level series of steps:
 
-1) **Parser & Lexer** recieves the user SQL and builds an Abstract Syntax Tree (AST).  
-2) **Binder** maps contextual information to the AST.  
-3) **Planner** recieves the AST and builds a Query Plan.  
-4) **Optimizer** recieves a Query Plan and rewrites it to improve performance.   
-5) **Executor** recieves the Query Plan and returns the result dataset.  
+&emsp;**Parser & Lexer** recieves the user SQL and builds an Abstract Syntax Tree (AST).  
+&emsp;**Binder** maps contextual information to the AST.  
+&emsp;**Planner** recieves the AST and builds a Query Plan.  
+&emsp;**Optimizer** recieves a Query Plan and rewrites it to improve performance.   
+&emsp;**Executor** recieves the Query Plan and returns the result dataset.  
 
 ## Parser & Lexer
 

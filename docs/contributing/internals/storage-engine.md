@@ -8,7 +8,7 @@ This document primarily applies to the Blob and File stores, such as GCS, S3 and
 
 Parquet is the preferred file format for Opteryx and use of Parquet offers optimizations not available with other formats. If a datasource has query performance issues or is hot in terms of query use, converting to Parquet is likely to improve performance. Performance testing suggests Parquet with zStandard compression provides best balance of IO to read the files and CPU to to the files.
 
-Do not take this as true for all situations, do test for your specific circumstances.
+As will all guidance on performance tuning - this appears to be generally correct but test for your specific circumstances.
 
 ### ORC & Feather
 
@@ -23,6 +23,10 @@ Files don't need an explicit schema, but each partition must have the same colum
 Data types are inferred from the records, where data types are not consistent, the read will fail.
 
 Opteryx supports zStandard Compressed JSONL files as created by Mabel, these perform approximately 20% faster than raw JSONL files primarily due to reduced IO.
+
+### CSV
+
+Comma-separated files can be used with Opteryx, however this is only provided to meet the base expectation that the system can support CSV. It is not recommended and limited regression tests are written relating to CSV handling.
 
 ## Storage Layout
 
