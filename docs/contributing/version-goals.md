@@ -1,6 +1,6 @@
 # Version Goals
 
-Until version 1.0 is released, a set of goals for an initial version are set out in place of a Road Map.
+Version goals are set out to provide a view of a road map. Goals are intended to demonstrate direction of enhancements and evolution of the engine, inclusion on the list does not guarantee delivery at a particular point in time, or at all. As always, conditions on the road may require you to consider your current path.
 
 ## Version 1.0
 
@@ -19,3 +19,10 @@ Version 1.0 goals will be delivered across various minor versions building towar
 - ✅ **Execution** Local Buffer Cache implemented [v0.6]
 - 🔲 **Operation** Correctness benchmarks written [v0.6] and acceptable pass-rate obtained
 - 🔲 **Operation** Performance benchmarks written [v0.5] and monitored
+
+## Version 2.0
+
+Version 2.0 goals indicate which items are considered important for the engine to support, but we are willing to lower the priority against other items.
+
+- 🔲 **Operation** Persisted materialized views
+- 🔲 **Execution** Distributed execution
