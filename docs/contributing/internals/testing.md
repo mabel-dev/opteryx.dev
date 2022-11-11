@@ -6,7 +6,7 @@ Most testing is part of the main Opteryx repository on GitHub, however, some tes
 
 ## Unit Testing
 
-**Frequency**: CI  
+**Frequency**: On Commit to GitHub   
 **Maturity**: Medium  
 **Location**: [mabel-dev/opteryx](https://github.com/mabel-dev/opteryx/tree/main/tests)
 
@@ -16,7 +16,7 @@ Combined with the SQL Battery test, the aim is for 95% coverage (with explicit e
 
 ## SQL Battery
 
-**Frequency**: CI  
+**Frequency**: On Commit to GitHub    
 **Maturity**: Medium  
 **Location**: [mabel-dev/opteryx](https://github.com/mabel-dev/opteryx/tree/main/tests)
 
@@ -53,7 +53,7 @@ What has been able to be tested has demonstrated some deviation between these sy
 
 ## Fuzzing
 
-**Frequency**: CI & Nightly  
+**Frequency**: On Commit to GitHub & Nightly  
 **Maturity**: Low  
 **Location**: [mabel-dev/opteryx](https://github.com/mabel-dev/opteryx/tree/main/tests)
 
@@ -65,7 +65,7 @@ Fuzzing supplies some key functions with random data to try to capture scenarios
 
 ## Security & Code Quality Testing
 
-**Frequency**: CI  
+**Frequency**: On Commit to GitHub    
 **Maturity**: Medium  
 **Location**: [mabel-dev/opteryx](https://github.com/mabel-dev/opteryx/tree/main/tests)
 
