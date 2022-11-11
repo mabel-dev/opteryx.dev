@@ -1287,7 +1287,7 @@
 <h2 id="supported-data-files">Supported Data Files</h2>
 <h3 id="parquet">Parquet</h3>
 <p>Parquet is the preferred file format for Opteryx and use of Parquet offers optimizations not available with other formats. If a datasource has query performance issues or is hot in terms of query use, converting to Parquet is likely to improve performance. Performance testing suggests Parquet with zStandard compression provides best balance of IO to read the files and CPU to to the files.</p>
-<p>Do not take this as true for all situations, do test for your specific circumstances.</p>
+<p>As will all guidance on performance tuning - this appears to be generally correct but test for your specific circumstances.</p>
 <h3 id="orc-feather">ORC &amp; Feather</h3>
 <p>Opteryx support ORC and Feather, but not all optimizations implemented for Parquet are implemented for these formats. These will still provide better performance than traditional data formats.</p>
 <h3 id="jsonl">JSONL</h3>
@@ -1295,6 +1295,8 @@
 <p>Files don't need an explicit schema, but each partition must have the same columns in the same order in every row of every file.</p>
 <p>Data types are inferred from the records, where data types are not consistent, the read will fail.</p>
 <p>Opteryx supports zStandard Compressed JSONL files as created by Mabel, these perform approximately 20% faster than raw JSONL files primarily due to reduced IO.</p>
+<h3 id="csv">CSV</h3>
+<p>Comma-separated files can be used with Opteryx, however this is only provided to meet the base expectation that the system can support CSV. It is not recommended and limited regression tests are written relating to CSV handling.</p>
 <h2 id="storage-layout">Storage Layout</h2>
 <p>For Blob/File stores, the path of the data is used as the name of the relation in the query. There are currently two built in data schemas, none (or flat) and Mabel.</p>
 <h3 id="flat">Flat</h3>
