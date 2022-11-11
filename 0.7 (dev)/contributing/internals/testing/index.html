@@ -1342,13 +1342,13 @@
 <p>Opteryx utilizes a number of test approaches to help ensure the system is performant, secure and correct. The key test harnesses which are used to test Opteryx are listed here.</p>
 <p>Most testing is part of the main Opteryx repository on GitHub, however, some testing is located in other respositories.</p>
 <h2 id="unit-testing">Unit Testing</h2>
-<p><strong>Frequency</strong>: CI<br />
+<p><strong>Frequency</strong>: On Commit to GitHub <br />
 <strong>Maturity</strong>: Medium<br />
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/opteryx/tree/main/tests">mabel-dev/opteryx</a></p>
 <p>Part of the CI process. Tests specific aspects of the internals.</p>
 <p>Combined with the SQL Battery test, the aim is for 95% coverage (with explicit exceptions). Whilst 95% coverage does not ensure the tests are 'good', it does help ensures any material changes to the function of the system are captured early.</p>
 <h2 id="sql-battery">SQL Battery</h2>
-<p><strong>Frequency</strong>: CI<br />
+<p><strong>Frequency</strong>: On Commit to GitHub  <br />
 <strong>Maturity</strong>: Medium<br />
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/opteryx/tree/main/tests">mabel-dev/opteryx</a></p>
 <p>Part of the CI process. Executes hundreds of hand-crafted SQL statements against the engine.</p>
@@ -1373,14 +1373,14 @@
 <p>Runs SQL statements in both Operyx and DuckDB to verify Opteryx returns the same answer as DuckDB. This has a growing set of tests which are executed, but as how relations are referenced in these systems, most queries require some hand-tuning and many are not possible with the framework as it currently is written.</p>
 <p>What has been able to be tested has demonstrated some deviation between these systems, so is a valuable and useful test, even in its current form.</p>
 <h2 id="fuzzing">Fuzzing</h2>
-<p><strong>Frequency</strong>: CI &amp; Nightly<br />
+<p><strong>Frequency</strong>: On Commit to GitHub &amp; Nightly<br />
 <strong>Maturity</strong>: Low<br />
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/opteryx/tree/main/tests">mabel-dev/opteryx</a></p>
 <p>As part of the CI process, executes 100 iterations of random inputs.</p>
 <p>As part of a nightly test, executes 100,000 iterations of random inputs.</p>
 <p>Fuzzing supplies some key functions with random data to try to capture scenarios which are unexpected or unhandled.</p>
 <h2 id="security-code-quality-testing">Security &amp; Code Quality Testing</h2>
-<p><strong>Frequency</strong>: CI<br />
+<p><strong>Frequency</strong>: On Commit to GitHub  <br />
 <strong>Maturity</strong>: Medium<br />
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/opteryx/tree/main/tests">mabel-dev/opteryx</a></p>
 <p>Various other tests are performed to help ensure code quality is maintained, these include security, form, typing, secret detection and test coverage checks using the following tools: Bandit, Semgrep, Black, MyPy, PyLint, PerfLint, Fides, SonarCloud, and Coverage.</p>
