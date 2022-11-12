@@ -1317,64 +1317,50 @@
 <th align="center">Python 3.8</th>
 <th align="center">Python 3.9</th>
 <th align="center">Python 3.10</th>
-<th align="center">Python 3.11</th>
-<th align="center">PyPy 3.9</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>MacOS (Intel)</strong></td>
+<td>MacOS (x86/Intel)</td>
 <td align="center">Partial</td>
 <td align="center">Partial</td>
 <td align="center">Partial</td>
-<td align="center">None</td>
-<td align="center">None</td>
 </tr>
 <tr>
-<td><strong>MacOS (M1)</strong></td>
-<td align="center">None</td>
-<td align="center">None</td>
+<td>MacOS (ARM/M1)</td>
 <td align="center">None</td>
 <td align="center">None</td>
 <td align="center">None</td>
 </tr>
 <tr>
-<td><strong>Windows (x86)</strong></td>
+<td>Windows (x86)</td>
 <td align="center">Partial</td>
 <td align="center">Partial</td>
 <td align="center">Partial</td>
-<td align="center">None</td>
-<td align="center">None</td>
 </tr>
 <tr>
-<td><strong>Windows (ARM)</strong></td>
-<td align="center">None</td>
-<td align="center">None</td>
+<td>Windows (ARM)</td>
 <td align="center">None</td>
 <td align="center">None</td>
 <td align="center">None</td>
 </tr>
 <tr>
-<td><strong>Ubuntu (x86)</strong></td>
+<td>Ubuntu (x86)</td>
 <td align="center">Full</td>
 <td align="center">Full</td>
 <td align="center">Full</td>
-<td align="center">Failing</td>
-<td align="center">Failing</td>
 </tr>
 <tr>
-<td><strong>Debian (ARM)</strong></td>
+<td>Debian (ARM)</td>
 <td align="center">None</td>
 <td align="center">Partial</td>
-<td align="center">None</td>
-<td align="center">None</td>
 <td align="center">None</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Full</strong> - no tests are excluded from the test suite - coverage statistics are from <strong>Full</strong> tests.<br />
-<strong>Partial</strong> - some tests are excluded from the test suite or that some tests fail.<br />
-<strong>None</strong> - there is no automated test for this configuration.  </p>
+<p>&emsp;<strong>Full</strong> - no tests are excluded from the test suite - coverage statistics are from <strong>Full</strong> tests.<br />
+&emsp;<strong>Partial</strong> - some tests are excluded from the test suite or that some tests fail.<br />
+&emsp;<strong>None</strong> - there is no automated test for this configuration.  </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -1383,7 +1369,7 @@
 <li>Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.</li>
 <li>MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.</li>
 <li>Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.</li>
-<li>Most tests are excluded due to testing platform constraints, not compatibility issues.</li>
+<li>Most partial coverage of tests are due to testing platform constraints, not compatibility issues.</li>
 </ul>
 </div>
 <h3 id="python-environment">Python Environment</h3>
