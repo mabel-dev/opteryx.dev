@@ -1505,6 +1505,13 @@
 <li>ORC formatted files (<code>.orc</code>)</li>
 <li>Feather (Arrow) formatted files (<code>.arrow</code>)</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>ORC is not fully supported on Windows or PyPy environments</li>
+<li>CSV support is limited and is not recommended beyond trivial usage</li>
+</ul>
+</div>
 <h3 id="file-sizes">File Sizes</h3>
 <p>Opteryx loads entire files (pages) into memory one at a time, this requires the following to be considered:</p>
 <ul>

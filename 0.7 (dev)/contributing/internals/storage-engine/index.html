@@ -1290,6 +1290,7 @@
 <p>As will all guidance on performance tuning - this appears to be generally correct but test for your specific circumstances.</p>
 <h3 id="orc-feather">ORC &amp; Feather</h3>
 <p>Opteryx support ORC and Feather, but not all optimizations implemented for Parquet are implemented for these formats. These will still provide better performance than traditional data formats.</p>
+<p>ORC files have limited support on Windows and PyPy environments.</p>
 <h3 id="jsonl">JSONL</h3>
 <p><a href="https://jsonlines.org/">JSONL</a> and zStandard compressed JSONL files.</p>
 <p>Files don't need an explicit schema, but each partition must have the same columns in the same order in every row of every file.</p>
