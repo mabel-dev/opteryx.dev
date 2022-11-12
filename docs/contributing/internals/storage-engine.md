@@ -14,6 +14,8 @@ As will all guidance on performance tuning - this appears to be generally correc
 
 Opteryx support ORC and Feather, but not all optimizations implemented for Parquet are implemented for these formats. These will still provide better performance than traditional data formats.
 
+ORC files have limited support on Windows and PyPy environments.
+
 ### JSONL
 
 [JSONL](https://jsonlines.org/) and zStandard compressed JSONL files.

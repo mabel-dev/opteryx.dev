@@ -184,6 +184,10 @@ Opteryx supports:
 - ORC formatted files (`.orc`)
 - Feather (Arrow) formatted files (`.arrow`)
 
+!!! note
+    - ORC is not fully supported on Windows or PyPy environments
+    - CSV support is limited and is not recommended beyond trivial usage
+
 ### File Sizes
 
 Opteryx loads entire files (pages) into memory one at a time, this requires the following to be considered:
