@@ -20,14 +20,14 @@ Opteryx balances memory consumption with performance, however, being able to pro
 
 Opteryx is confirmed to support the following operating systems, the below table shows the regression suite coverage:
 
-OS                | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11 | PyPy 3.9
------------------ | :--------: | :--------: | :---------: | :---------: | :------: 
-**MacOS (Intel)** | Partial    | Partial    | Partial     | None        | None
-**MacOS (M1)**    | None       | None       | None        | None        | None
-**Windows (x86)** | Partial    | Partial    | Partial     | None        | None
-**Windows (ARM)** | None       | None       | None        | None        | None
-**Ubuntu (x86)**  | Full       | Full       | Full        | Failing     | Failing
-**Debian (ARM)**  | None       | Partial    | None        | None        | None
+OS                | Python 3.8 | Python 3.9 | Python 3.10 
+----------------- | :--------: | :--------: | :---------: 
+MacOS (x86/Intel) | Partial    | Partial    | Partial     
+MacOS (ARM/M1)    | None       | None       | None        
+Windows (x86)     | Partial    | Partial    | Partial     
+Windows (ARM)     | None       | None       | None        
+Ubuntu (x86)      | Full       | Full       | Full        
+Debian (ARM)      | None       | Partial    | None        
 
 &emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from **Full** tests.  
 &emsp;**Partial** - some tests are excluded from the test suite or that some tests fail.  
@@ -39,7 +39,7 @@ OS                | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11 | PyPy 3
     - Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.
     - MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.
     - Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.
-    - Most tests are excluded due to testing platform constraints, not compatibility issues.
+    - Most partial coverage of tests are due to testing platform constraints, not compatibility issues.
 
 ### Python Environment
 
