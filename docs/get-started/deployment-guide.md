@@ -29,9 +29,9 @@ OS                | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11 | PyPy 3
 **Ubuntu (x86)**  | Full       | Full       | Full        | Failing     | Failing
 **Debian (ARM)**  | None       | Partial    | None        | None        | None
 
-**Full** - no tests are excluded from the test suite - coverage statistics are from **Full** tests.  
-**Partial** - some tests are excluded from the test suite or that some tests fail.  
-**None** - there is no automated test for this configuration.  
+&emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from **Full** tests.  
+&emsp;**Partial** - some tests are excluded from the test suite or that some tests fail.  
+&emsp;**None** - there is no automated test for this configuration.  
 
 !!! Note
     - Windows (x86) regression suite fails some tests due to issues with Apache Arrow.
