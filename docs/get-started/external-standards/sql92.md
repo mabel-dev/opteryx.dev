@@ -24,7 +24,7 @@ E021-07  | Character concatenation                                   | yes
 E021-08  | `UPPER` and `LOWER` functions                             | yes
 E021-09  | `TRIM` function                                           | unknown
 E021-10  | Implicit casting among the fixed-length and variable-length character string types | unknown
-E021-11  | `POSITION` function                                       | no
+E021-11  | `POSITION` function                                       | partial
 E021-12  | Character comparison                                      | yes
 **E031** | **Identifiers**                                           | unknown
 E031-01  | Delimited identifiers                                     | unknown
