@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#629](https://github.com/mabel-dev/opteryx/issues/629)] Evaluate constants in expressions during optimization. [@joocer](https://github.com/joocer)   
 - [[#439](https://github.com/mabel-dev/opteryx/issues/439)] Support `SHOW STORES`. [@joocer](https://github.com/joocer)   
+- [[#542](https://github.com/mabel-dev/opteryx/issues/542)] Support `POSITION`. [@joocer](https://github.com/joocer)   
 
 
 ## [0.6.0] - 2022-11-08
