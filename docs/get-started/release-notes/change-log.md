@@ -12,6 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
+- Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.27.0 [@joocer](https://github.com/joocer)  
+
 ### Added
 
 - [[#629](https://github.com/mabel-dev/opteryx/issues/629)] Evaluate constants in expressions during optimization. [@joocer](https://github.com/joocer)   
