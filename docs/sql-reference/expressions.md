@@ -46,6 +46,8 @@ Operator     | Description
 
 ## Other Comparisons
 
+**BETWEEN**
+
 Predicate               | Description
 ----------------------- | ---------------------------------
 `a BETWEEN x AND y`     | equivalent to `a >= x AND a <= y`
@@ -53,6 +55,50 @@ Predicate               | Description
 
 !!! Warning  
     Using `BETWEEN` with other predicates, especially when used with an `AND` conjunction, can cause the query parser to fail. 
+
+**CASE**
+
+The standard SQL CASE expression has two forms. The “simple” form searches each value expression from left to right until it finds one that equals expression:
+
+~~~sql
+CASE expression
+    WHEN value THEN result
+    [ WHEN ... ]
+    [ ELSE result ]
+END
+~~~
+
+The result for the matching value is returned. If no match is found, the result from the ELSE clause is returned if it exists, otherwise null is returned. Example:
+
+~~~sql
+SELECT a,
+       CASE a
+           WHEN 1 THEN 'one'
+           WHEN 2 THEN 'two'
+           ELSE 'many'
+       END
+~~~
+
+The “searched” form evaluates each boolean condition from left to right until one is true and returns the matching result:
+
+~~~sql
+CASE
+    WHEN condition THEN result
+    [ WHEN ... ]
+    [ ELSE result ]
+END
+~~~
+
+If no conditions are true, the result from the ELSE clause is returned if it exists, otherwise null is returned. Example:
+
+~~~sql
+SELECT a, b,
+       CASE
+           WHEN a = 1 THEN 'aaa'
+           WHEN b = 2 THEN 'bbb'
+           ELSE 'ccc'
+       END
+~~~
 
 ## Subqueries
 

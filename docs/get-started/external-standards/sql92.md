@@ -156,9 +156,9 @@ F131-05  | Single row `SELECT` with `GROUP BY` and `HAVING` clauses and grouped 
 **F181** | **Multiple module support**                               | unknown
 **F201** | **`CAST` function**                                       | unknown
 **F221** | **Explicit defaults**                                     | unknown
-**F261** | **`CASE` expression**                                     | no
-F261-01  | Simple `CASE`                                             | no
-F261-02  | Searched `CASE`                                           | no
+**F261** | **`CASE` expression**                                     | partial
+F261-01  | Simple `CASE`                                             | partial
+F261-02  | Searched `CASE`                                           | yes
 F261-03  | `NULLIF`                                                  | yes
 F261-04  | `COALESCE`                                                | yes
 **F311** | **Schema definition statement**                           | n/a
