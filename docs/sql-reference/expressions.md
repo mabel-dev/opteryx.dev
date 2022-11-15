@@ -46,7 +46,7 @@ Operator     | Description
 
 ## Other Comparisons
 
-**BETWEEN**
+### BETWEEN
 
 Predicate               | Description
 ----------------------- | ---------------------------------
@@ -56,7 +56,7 @@ Predicate               | Description
 !!! Warning  
     Using `BETWEEN` with other predicates, especially when used with an `AND` conjunction, can cause the query parser to fail. 
 
-**CASE**
+### CASE
 
 The standard SQL CASE expression has two forms. The “simple” form searches each value expression from left to right until it finds one that equals expression:
 
