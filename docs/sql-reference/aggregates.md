@@ -16,7 +16,7 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
     Select any single value from the grouping.  
 
 !!! function "`ARRAY_AGG` ([DISTINCT] **column**) → _array_ :octicons-dot-16:"   
-    The list of values for **column** in the group. The **DISTINCT* modifier optionally filters to unique values only. 
+    The list of values for **column** in the group. The **DISTINCT** modifier optionally filters to unique values only.   
     ** :octicons-star-16: New in 0.7** 
 
 !!! function "`APPROXIMATE_MEDIAN` (**column**: _numeric_) → _numeric_"  
@@ -36,7 +36,7 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
     Count the number of unique values.
 
 !!! function "`LIST` (**column**) → _array_ :octicons-dot-16:"  
-    The complete list of values for **column** in the group.
+    The complete list of values for **column** in the group.   
     Related `ARRAY_AGG`
 
 !!! function "`MAX` (**column**) → _any_"  
