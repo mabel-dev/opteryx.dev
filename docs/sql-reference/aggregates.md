@@ -6,10 +6,18 @@ When the `ORDER BY` clause is provided, the values being aggregated are sorted a
 
 Aggregate functions generally ignore `null` values when performing calculations.
 
+Definitions noted with a :octicons-dot-16: are only supported in a statement with a `GROUP BY` clause.
+
+New aggregates for this version are annotated with the :octicons-star-16: icon.
+
 ## General Functions
 
 !!! function "`ANY_VALUE` (**column**) → _any_"  
     Select any single value from the grouping.  
+
+!!! function "`ARRAY_AGG` ([DISTINCT] **column**) → _array_ :octicons-dot-16:"   
+    The list of values for **column** in the group. The **DISTINCT* modifier optionally filters to unique values only. 
+    ** :octicons-star-16: New in 0.7** 
 
 !!! function "`APPROXIMATE_MEDIAN` (**column**: _numeric_) → _numeric_"  
     Approximate median of a column with T-Digest algorithm.
@@ -27,8 +35,9 @@ Aggregate functions generally ignore `null` values when performing calculations.
 !!! function "`COUNT_DISTINCT` (**column**) → _numeric_"  
     Count the number of unique values.
 
-!!! function "`LIST` (**column**) → _array_"  
-    The complete list of values.
+!!! function "`LIST` (**column**) → _array_ :octicons-dot-16:"  
+    The complete list of values for **column** in the group.
+    Related `ARRAY_AGG`
 
 !!! function "`MAX` (**column**) → _any_"  
     The maximum value in **column**.  
