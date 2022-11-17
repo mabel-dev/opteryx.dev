@@ -15,14 +15,14 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
 !!! function "`ANY_VALUE` (**column**) → _any_"  
     Select any single value from the grouping.  
 
+!!! function "`APPROXIMATE_MEDIAN` (**column**: _numeric_) → _numeric_"  
+    Approximate median of a column with T-Digest algorithm.
+
 !!! function "`ARRAY_AGG` ([DISTINCT] **column** [LIMIT **n**]) → _array_ :octicons-dot-16:"   
     The list of values for **column** in the group.   
     The **DISTINCT** modifier optionally filters to unique values only.   
     The **LIMIT** clause limits the number of items in each list to a maximum of **n** items.     
     ** :octicons-star-16: New in 0.7** 
-
-!!! function "`APPROXIMATE_MEDIAN` (**column**: _numeric_) → _numeric_"  
-    Approximate median of a column with T-Digest algorithm.
 
 !!! function "`AVG` (**column**: _numeric_) → _numeric_"  
     The mean average of a numeric column.   
