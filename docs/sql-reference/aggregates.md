@@ -6,7 +6,7 @@ When the `ORDER BY` clause is provided, the values being aggregated are sorted a
 
 Aggregate functions generally ignore `null` values when performing calculations.
 
-Definitions noted with a :octicons-dot-16: are only supported in a statement with a `GROUP BY` clause.
+Definitions noted with a :octicons-ellipsis-16: are only supported in a statement with a `GROUP BY` clause.
 
 New aggregates for this version are annotated with the :octicons-star-16: icon.
 
@@ -18,7 +18,7 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
 !!! function "`APPROXIMATE_MEDIAN` (**column**: _numeric_) → _numeric_"  
     Approximate median of a column with T-Digest algorithm.
 
-!!! function "`ARRAY_AGG` ([DISTINCT] **column** [LIMIT **n**]) → _array_ :octicons-dot-16:"
+!!! function "`ARRAY_AGG` ([DISTINCT] **column** [LIMIT **n**]) → _array_ :octicons-ellipsis-16:"
     ** :octicons-star-16: New in 0.7**    
     The list of values for **column** in the group.   
     The **DISTINCT** modifier optionally filters to unique values only.   
@@ -37,7 +37,7 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
 !!! function "`COUNT_DISTINCT` (**column**) → _numeric_"  
     Count the number of unique values.
 
-!!! function "`LIST` (**column**) → _array_ :octicons-dot-16:"  
+!!! function "`LIST` (**column**) → _array_ :octicons-ellipsis-16:"  
     The complete list of values for **column** in the group.   
     Related: `ARRAY_AGG`
 
