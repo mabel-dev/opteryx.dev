@@ -16,7 +16,9 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
     Select any single value from the grouping.  
 
 !!! function "`ARRAY_AGG` ([DISTINCT] **column** [LIMIT **n**]) → _array_ :octicons-dot-16:"   
-    The list of values for **column** in the group. The **DISTINCT** modifier optionally filters to unique values only. The **LIMIT** clause limits the number of items in each list to a maximum of **n** items.     
+    The list of values for **column** in the group.   
+    The **DISTINCT** modifier optionally filters to unique values only.   
+    The **LIMIT** clause limits the number of items in each list to a maximum of **n** items.     
     ** :octicons-star-16: New in 0.7** 
 
 !!! function "`APPROXIMATE_MEDIAN` (**column**: _numeric_) → _numeric_"  
@@ -24,7 +26,7 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
 
 !!! function "`AVG` (**column**: _numeric_) → _numeric_"  
     The mean average of a numeric column.   
-    Also `MEAN` and `AVERAGE`.
+    Alias for `MEAN` and `AVERAGE`.
 
 !!! function "`COUNT` (*) → _numeric_"  
     Count the number of rows.
@@ -37,21 +39,21 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
 
 !!! function "`LIST` (**column**) → _array_ :octicons-dot-16:"  
     The complete list of values for **column** in the group.   
-    Related `ARRAY_AGG`
+    Related: `ARRAY_AGG`
 
 !!! function "`MAX` (**column**) → _any_"  
     The maximum value in **column**.  
-    Also `MAXIMUM`.
+    Alias for `MAXIMUM`.
 
 !!! function "`MIN` (**column**) → _any_"  
     The minimum value in **column**.  
-    Also `MINIMUM`.
+    Alias for `MINIMUM`.
 
 !!! function "`MIN_MAX` (**column**) → _struct_"  
     The minimum and maximum values in **column**.  
 
 !!! function "`ONE` (**column**) → _any_"  
-    Alias for 'ANY_VALUE'()  
+    Alias for `ANY_VALUE`.  
 
 !!! function "`PRODUCT` (**column**: _numeric_) → _numeric_"  
     The product of values in **column**.  
