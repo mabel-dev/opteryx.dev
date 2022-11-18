@@ -12,7 +12,6 @@ Version 1.0 goals will be delivered across various minor versions building towar
 - :octicons-checkbox-24: Read across multiple data sources (e.g. GCS and Postgres in the same query) [v0.2]
 - :fontawesome-regular-square: Support different plaform data sources (e.g. FireStore [v0.3] and BigQuery)
 - :octicons-checkbox-24: Rule-based query optimizer [v0.5]
-- :fontawesome-regular-square: Metastore used in planning an optimizing
 - :octicons-checkbox-24: `JOIN` statements supported [v0.1]
 - :octicons-checkbox-24: Functions using the result of Functions (e.g. `LENGTH(LIST(field))`) [v0.3]
 - :octicons-checkbox-24: Inline operators (e.g. `firstname || surname`) [v0.3]
@@ -26,3 +25,4 @@ Version 2.0 goals indicate which items are considered important for the engine t
 
 - :fontawesome-regular-square: Persisted materialized views
 - :fontawesome-regular-square: Distributed execution
+- :fontawesome-regular-square: Metastore used in planning and optimization
