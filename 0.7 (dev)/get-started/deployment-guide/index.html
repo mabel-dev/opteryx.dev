@@ -198,8 +198,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../get-started/" class="md-tabs__link md-tabs__link--active">
-        Get started
+      <a href="../overview/" class="md-tabs__link md-tabs__link--active">
+        Get Started
       </a>
     </li>
   
@@ -337,14 +337,14 @@
       
       
         <label class="md-nav__link" for="__nav_2">
-          Get started
+          Get Started
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+      <nav class="md-nav" aria-label="Get Started" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Get started
+          Get Started
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -354,8 +354,22 @@
   
   
     <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../get-started/" class="md-nav__link">
-        Installation
+        Get Started
       </a>
     </li>
   
@@ -482,18 +496,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_6">
+        <label class="md-nav__link" for="__nav_2_7">
           External Standards
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="External Standards" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_6">
+        <label class="md-nav__title" for="__nav_2_7">
           <span class="md-nav__icon md-icon"></span>
           External Standards
         </label>
@@ -543,18 +557,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_7">
+        <label class="md-nav__link" for="__nav_2_8">
           Release Notes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Release Notes" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_7">
+        <label class="md-nav__title" for="__nav_2_8">
           <span class="md-nav__icon md-icon"></span>
           Release Notes
         </label>
@@ -1297,19 +1311,25 @@
 <h1 id="deployment-guide">Deployment Guide</h1>
 <h2 id="requirements">Requirements</h2>
 <h3 id="host-specifications">Host Specifications</h3>
-<p><strong>Minimum</strong>: 1 CPU, 1 Gb RAM (Intel/x86 CPU) <br />
-<strong>Recommended</strong>: 4 CPUs, 8 Gb RAM (Intel/x86 CPU)</p>
+<p><strong>Minimum</strong>: 1 Gb RAM, 1 CPU (x86) <br />
+<strong>Recommended</strong>: 8 Gb RAM, 4 CPUs (x86)</p>
 <p>Opteryx balances memory consumption with performance, however, being able to process large datasets will require larger memory specifications compared to what is needed to process smaller datasets. The reference implementation of Opteryx regularly processes 100Gb of data in a container with 4 CPUs and 8Gb of memory allocated.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is a general recommendation and is a good place to start, your environment and specific problem may require, or perform significantly better, with a different configuration.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Opteryx contains no specific optimiations to make use of multiple CPUs, although multiple CPUs may be beneficial as some libraries Opteryx is built on may use multiple CPUs.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Non x86 environments, such as Raspberry Pi or the M1 Macs, may require additional set up steps.</p>
 </div>
 <h3 id="operating-system-support">Operating System Support</h3>
-<p>Opteryx is confirmed to support the following operating systems, the below table shows the regression suite coverage:</p>
+<p><strong>Recommended Operating System</strong>: Ubuntu 20 (64bit)</p>
+<p>Opteryx can be installed and deployed on a number of different platforms. It has heavy dependency on <a href="https://arrow.apache.org/">Apache Arrow</a> and cannot be run on systems which do not support Arrow.</p>
+<p>The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.8, 3.9 and 3.10. The below table shows regression suite coverage:</p>
 <table>
 <thead>
 <tr>
@@ -1327,22 +1347,10 @@
 <td align="center">Partial</td>
 </tr>
 <tr>
-<td>MacOS (ARM/M1)</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
-</tr>
-<tr>
 <td>Windows (x86)</td>
 <td align="center">Partial</td>
 <td align="center">Partial</td>
 <td align="center">Partial</td>
-</tr>
-<tr>
-<td>Windows (ARM)</td>
-<td align="center">None</td>
-<td align="center">None</td>
-<td align="center">None</td>
 </tr>
 <tr>
 <td>Ubuntu (x86)</td>
@@ -1358,6 +1366,10 @@
 </tr>
 </tbody>
 </table>
+<!---
+MacOS (ARM/M1)    | None       | None       | None        
+Windows (ARM)     | None       | None       | None        
+--->
 <p>&emsp;<strong>Full</strong> - no tests are excluded from the test suite - coverage statistics are from <strong>Full</strong> tests.<br />
 &emsp;<strong>Partial</strong> - some tests are excluded from the test suite or that some tests fail.<br />
 &emsp;<strong>None</strong> - there is no automated test for this configuration.  </p>
@@ -1366,29 +1378,26 @@
 <ul>
 <li>Windows (x86) regression suite fails some tests due to issues with Apache Arrow.</li>
 <li>PyPy regression suite fails due to issues with Apache Arrow.</li>
-<li>Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.</li>
+<li>Python 3.11 regression suite fails due to issues with Apache Arrow.</li>
 <li>MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.</li>
 <li>Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.</li>
-<li>Most partial coverage of tests are due to testing platform constraints, not compatibility issues.</li>
+<li>Partial coverage is primarily due to testing platform constraints, not core-compatibility issues.</li>
 </ul>
 </div>
 <h3 id="python-environment">Python Environment</h3>
 <p><strong>Recommended Version</strong>: 3.9</p>
 <p>Opteryx supports Python versions 3.8, 3.9 and 3.10.</p>
-<p>Opteryx has builds for Python 3.8, 3.9 and 3.10 on 64-bit (x86) versions of Windows, MacOS and Linux. The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python version 3.8, 3.9 and 3.10.</p>
+<p>Opteryx has builds for Python 3.8, 3.9 and 3.10 on 64-bit (x86) versions of Windows, MacOS and Linux and ARM versions of MacOS and Linux.</p>
 <p>Opteryx is primarily developed on workstations running Python 3.10 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 also has the greatest test coverage due to it being supported on more platforms.</p>
 <h3 id="jupyter-notebooks">Jupyter Notebooks</h3>
-<p>Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3. This approach will result in raw data required to respond to the query being moved from the data platform (GCS or S3) to the host running Jupyter in order to be processed. This is most practical when the connection to the data platform is fast - such as running Vertex AI Notebooks on GCP, or querying local files.</p>
+<p>Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3.</p>
+<p>It is recommended that the Notebook host is located close to the data being queried - such as running Vertex AI Notebooks if the data sources are primarily on GCP, or querying local files if running Jupyter on a local device. Other configurations will work, but are less optimal.</p>
 <h3 id="docker-kubernetes">Docker &amp; Kubernetes</h3>
 <p>There is no Docker image for Opteryx, this is because Opteryx is an embedded Python library. However, system built using Opteryx can be deployed via Docker or Kubernetes.</p>
 <h3 id="google-cloud">Google Cloud</h3>
 <p><strong>Cloud Run</strong></p>
 <p>Opteryx is well-suited for running data manipulation tasks in Cloud Run as this was the target platform for the initial development.</p>
 <p>Running in the Generation 2 container environment is likely to result in faster query processing, but has a slower start-up time. Opteryx runs in Generation 1 container, taking approximately 10% longer to execute queries.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Opteryx contains no specific optimiations to make use of multiple CPUs, although multiple CPUs may be beneficial to allow higher memory allocations and libraries Opteryx is built on may use multiple CPUs.</p>
-</div>
 <h2 id="data-storage">Data Storage</h2>
 <h3 id="connectors">Connectors</h3>
 <p><strong>Built-In Connectors</strong></p>
