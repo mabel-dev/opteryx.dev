@@ -58,8 +58,9 @@ extra:
 # Page tree
 nav:
   - Home: index.md
-  - Get started:
-    - Installation: get-started/get-started.md
+  - Get Started:
+    - Overview: get-started/overview.md
+    - Get Started: get-started/get-started.md
     - Client Overview: get-started/clients.md
     - Python Client: get-started/python-client.md
     - Deployment Guide: get-started/deployment-guide.md

@@ -4,31 +4,39 @@
 
 ### Host Specifications
 
-**Minimum**: 1 CPU, 1 Gb RAM (Intel/x86 CPU)   
-**Recommended**: 4 CPUs, 8 Gb RAM (Intel/x86 CPU)
+**Minimum**: 1 Gb RAM, 1 CPU (x86)   
+**Recommended**: 8 Gb RAM, 4 CPUs (x86)
 
 Opteryx balances memory consumption with performance, however, being able to process large datasets will require larger memory specifications compared to what is needed to process smaller datasets. The reference implementation of Opteryx regularly processes 100Gb of data in a container with 4 CPUs and 8Gb of memory allocated.
 
 !!! Note
     This is a general recommendation and is a good place to start, your environment and specific problem may require, or perform significantly better, with a different configuration.
 
+!!! Note  
+    Opteryx contains no specific optimiations to make use of multiple CPUs, although multiple CPUs may be beneficial as some libraries Opteryx is built on may use multiple CPUs.
+
 !!! Warning
     Non x86 environments, such as Raspberry Pi or the M1 Macs, may require additional set up steps.
 
-
 ### Operating System Support
 
-Opteryx is confirmed to support the following operating systems, the below table shows the regression suite coverage:
+**Recommended Operating System**: Ubuntu 20 (64bit)
+
+Opteryx can be installed and deployed on a number of different platforms. It has heavy dependency on [Apache Arrow](https://arrow.apache.org/) and cannot be run on systems which do not support Arrow.
+
+The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.8, 3.9 and 3.10. The below table shows regression suite coverage:
 
 OS                | Python 3.8 | Python 3.9 | Python 3.10 
 ----------------- | :--------: | :--------: | :---------: 
 MacOS (x86/Intel) | Partial    | Partial    | Partial     
-MacOS (ARM/M1)    | None       | None       | None        
 Windows (x86)     | Partial    | Partial    | Partial     
-Windows (ARM)     | None       | None       | None        
 Ubuntu (x86)      | Full       | Full       | Full        
 Debian (ARM)      | None       | Partial    | None        
 
+<!---
+MacOS (ARM/M1)    | None       | None       | None        
+Windows (ARM)     | None       | None       | None        
+--->
 &emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from **Full** tests.  
 &emsp;**Partial** - some tests are excluded from the test suite or that some tests fail.  
 &emsp;**None** - there is no automated test for this configuration.  
@@ -36,10 +44,10 @@ Debian (ARM)      | None       | Partial    | None
 !!! Note
     - Windows (x86) regression suite fails some tests due to issues with Apache Arrow.
     - PyPy regression suite fails due to issues with Apache Arrow.
-    - Python 3.11 regression suite fails due to lack of 3.11 support on the test platform.
+    - Python 3.11 regression suite fails due to issues with Apache Arrow.
     - MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.
     - Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.
-    - Most partial coverage of tests are due to testing platform constraints, not compatibility issues.
+    - Partial coverage is primarily due to testing platform constraints, not core-compatibility issues.
 
 ### Python Environment
 
@@ -47,13 +55,15 @@ Debian (ARM)      | None       | Partial    | None
 
 Opteryx supports Python versions 3.8, 3.9 and 3.10.
 
-Opteryx has builds for Python 3.8, 3.9 and 3.10 on 64-bit (x86) versions of Windows, MacOS and Linux. The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python version 3.8, 3.9 and 3.10.
+Opteryx has builds for Python 3.8, 3.9 and 3.10 on 64-bit (x86) versions of Windows, MacOS and Linux and ARM versions of MacOS and Linux.
 
 Opteryx is primarily developed on workstations running Python 3.10 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 also has the greatest test coverage due to it being supported on more platforms.
 
 ### Jupyter Notebooks
 
-Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3. This approach will result in raw data required to respond to the query being moved from the data platform (GCS or S3) to the host running Jupyter in order to be processed. This is most practical when the connection to the data platform is fast - such as running Vertex AI Notebooks on GCP, or querying local files.
+Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3.
+
+It is recommended that the Notebook host is located close to the data being queried - such as running Vertex AI Notebooks if the data sources are primarily on GCP, or querying local files if running Jupyter on a local device. Other configurations will work, but are less optimal.
 
 ### Docker & Kubernetes
 
@@ -66,9 +76,6 @@ There is no Docker image for Opteryx, this is because Opteryx is an embedded Pyt
 Opteryx is well-suited for running data manipulation tasks in Cloud Run as this was the target platform for the initial development.
 
 Running in the Generation 2 container environment is likely to result in faster query processing, but has a slower start-up time. Opteryx runs in Generation 1 container, taking approximately 10% longer to execute queries.
-
-!!! Note  
-    Opteryx contains no specific optimiations to make use of multiple CPUs, although multiple CPUs may be beneficial to allow higher memory allocations and libraries Opteryx is built on may use multiple CPUs.
 
 ## Data Storage
 

@@ -42,7 +42,7 @@ Operator     | Description
 `!~`         | inverse results of `~` (also `NOT SIMILAR TO`)
 `~*`         | case insensitive regular expression match
 `!~*`        | inverse results of `~*`
-`IS`         | special comparison for non-values `true`, `false` and `null`
+`IS`         | special comparison for `true`, `false` and `null`
 
 ## Other Comparisons
 
@@ -58,7 +58,7 @@ Predicate               | Description
 
 ### CASE
 
-The standard SQL CASE expression has two forms. The “simple” form searches each value expression from left to right until it finds one that equals expression:
+The `CASE` expression has two forms. The 'simple' form searches each value expression from top to bottom until it finds one that equals expression:
 
 ~~~sql
 CASE expression
@@ -68,7 +68,7 @@ CASE expression
 END
 ~~~
 
-The result for the matching value is returned. If no match is found, the result from the ELSE clause is returned if it exists, otherwise null is returned. Example:
+The result for the matching value is returned. If no match is found, the result from the `ELSE` clause is returned if it exists, otherwise `null` is returned. Example:
 
 ~~~sql
 SELECT a,
@@ -79,7 +79,7 @@ SELECT a,
        END
 ~~~
 
-The “searched” form evaluates each boolean condition from left to right until one is true and returns the matching result:
+The 'searched' form evaluates each boolean condition from top to bottom until one is true and returns the matching result:
 
 ~~~sql
 CASE
@@ -89,7 +89,7 @@ CASE
 END
 ~~~
 
-If no conditions are true, the result from the ELSE clause is returned if it exists, otherwise null is returned. Example:
+If no conditions are true, the result from the `ELSE` clause is returned if it exists, otherwise `null` is returned. Example:
 
 ~~~sql
 SELECT a, b,

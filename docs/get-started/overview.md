@@ -1,8 +1,6 @@
-# Overview
+# Opteryx Overview
 
-[:fontawesome-brands-github: Star on Github](https://github.com/mabel-dev/opteryx){ .md-button .btn-github }
-
-[Opteryx](https://github.com/mabel-dev/opteryx) is a SQL query engine to query large data sets designed to run in low-cost serverless environments.
+Opteryx is a SQL query engine to query large data sets designed to run in low-cost serverless environments.
 
 Opteryx is not a database, it does understand and respond to a subset of SQL statements like a database, but it does not support any activities which insert, update or delete data. It is not a replacement for databases like SQL Server, MySQL or Postgres, it is designed to allow querying of data sources as part of an data analytics process.
 

@@ -15,11 +15,16 @@ Name        | Description
 `INTERVAL`  | The difference between two TIMESTAMP values
 
 !!! Note  
-    `INTERVAL` may not support all functions in all circumstances.  
+    - `INTERVAL` may not support all functions in all circumstances.  
+    - `LIST`s of non-string values have limited support.
 
-## Type Hinting
+## Casting
 
-### Intervals
+Values can be cast using the `CAST` function, its form is `CAST(any AS type)`. Where values are incompatible, an error will be thrown, to avoid errors `TRY_CAST` (or `SAFE_CAST`) can be used instead which will return `null` instead of error.
+
+### Type Hints
+
+**Intervals**
 
 Intervals require definition by type hints, using the type name before providing a literal description of the value.
 
@@ -29,11 +34,9 @@ INTERVAL 'value' unit
 
 Where unit can be 'Year', 'Month', 'Day', 'Hour', 'Minute' or 'Second'.
 
-## Casting
+**Other**
 
-Values can be cast using the `CAST` function, its form is `CAST(any AS type)`. Where values are incompatible, an error will be thrown, to avoid errors `TRY_CAST` can be used instead which will return `NULL` instead of error.
-
-`BOOLEAN`, `NUMERIC` and `TIMESTAMP` also support 'type string' notation (`SELECT TIMESTAMP '2022-01-01';`) to perform casting to the desired type.
+`BOOLEAN`, `NUMERIC` and `TIMESTAMP` also support 'type hint' notation (`SELECT TIMESTAMP '2022-01-01';`) to perform casting.
 
 ## Coercion
 

@@ -28,6 +28,5 @@ import opteryx
 conn = opteryx.connect()
 cur = conn.cursor()
 cur.execute("SELECT * FROM $planets;")
-for row in cur.fetchall():
-    print(row["name"])
+print(cur.arrow())
 ~~~
