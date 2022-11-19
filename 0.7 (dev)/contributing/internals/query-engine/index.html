@@ -1343,11 +1343,11 @@
 <p>If you are interested in how databases work, I recommend the resources from <a href="https://db.cs.cmu.edu/">The CMU Database Group</a> and the collection of resources at <a href="https://github.com/pingcap/awesome-database-learning">Awesome Database Learning</a>.</p>
 </blockquote>
 <p>The Opteryx query engine has the following key components and processing queries follows this high-level series of steps:</p>
-<p>&emsp;<strong>Parser &amp; Lexer</strong> recieves the user SQL and builds an Abstract Syntax Tree (AST).<br />
+<p>&emsp;<strong>Parser &amp; Lexer</strong> receives the user SQL and builds an Abstract Syntax Tree (AST).<br />
 &emsp;<strong>Binder</strong> maps contextual information to the AST.<br />
-&emsp;<strong>Planner</strong> recieves the AST and builds a Query Plan.<br />
-&emsp;<strong>Optimizer</strong> recieves a Query Plan and rewrites it to improve performance. <br />
-&emsp;<strong>Executor</strong> recieves the Query Plan and returns the result dataset.  </p>
+&emsp;<strong>Planner</strong> receives the AST and builds a Query Plan.<br />
+&emsp;<strong>Optimizer</strong> receives a Query Plan and rewrites it to improve performance. <br />
+&emsp;<strong>Executor</strong> receives the Query Plan and returns the result dataset.  </p>
 <h2 id="parser-lexer">Parser &amp; Lexer</h2>
 <p>The primary goal of the Parser and Lexer (which in some engines is two separate components) is to interpret the SQL provided by the user. This is generally done in two steps, the first is the break the query into separate tokens (or words) and the second is to understand the meaning of those tokens.</p>
 <p>For example for this statement</p>
