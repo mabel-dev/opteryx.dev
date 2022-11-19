@@ -4,11 +4,11 @@
 
 The Opteryx query engine has the following key components and processing queries follows this high-level series of steps:
 
-&emsp;**Parser & Lexer** recieves the user SQL and builds an Abstract Syntax Tree (AST).  
+&emsp;**Parser & Lexer** receives the user SQL and builds an Abstract Syntax Tree (AST).  
 &emsp;**Binder** maps contextual information to the AST.  
-&emsp;**Planner** recieves the AST and builds a Query Plan.  
-&emsp;**Optimizer** recieves a Query Plan and rewrites it to improve performance.   
-&emsp;**Executor** recieves the Query Plan and returns the result dataset.  
+&emsp;**Planner** receives the AST and builds a Query Plan.  
+&emsp;**Optimizer** receives a Query Plan and rewrites it to improve performance.   
+&emsp;**Executor** receives the Query Plan and returns the result dataset.  
 
 ## Parser & Lexer
 
