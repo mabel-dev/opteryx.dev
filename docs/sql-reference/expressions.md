@@ -71,12 +71,13 @@ END
 The result for the matching value is returned. If no match is found, the result from the `ELSE` clause is returned if it exists, otherwise `null` is returned. Example:
 
 ~~~sql
-SELECT a,
-       CASE a
-           WHEN 1 THEN 'one'
-           WHEN 2 THEN 'two'
-           ELSE 'many'
-       END
+SELECT name, 
+       CASE numberOfMoons 
+            WHEN 0 THEN 'none' 
+            WHEN 1 THEN 'one' 
+            ELSE 'lots' 
+       END as how_many_moons
+  FROM $planets;
 ~~~
 
 The 'searched' form evaluates each boolean condition from top to bottom until one is true and returns the matching result:
@@ -92,12 +93,13 @@ END
 If no conditions are true, the result from the `ELSE` clause is returned if it exists, otherwise `null` is returned. Example:
 
 ~~~sql
-SELECT a, b,
+SELECT name, 
        CASE
-           WHEN a = 1 THEN 'aaa'
-           WHEN b = 2 THEN 'bbb'
-           ELSE 'ccc'
-       END
+           WHEN numberOfMoons = 0 THEN 'none' 
+           WHEN numberOfMoons = 1 THEN 'one' 
+           ELSE 'lots' 
+       END as how_many_moons
+  FROM $planets;
 ~~~
 
 ## Subqueries
@@ -110,7 +112,7 @@ For example, to find the planets without any satellites.
 SELECT name
   FROM $planets
  WHERE id NOT IN (
-     SELECT DISTINCT planetId
-       FROM $satellites
-    );
+       SELECT DISTINCT planetId
+         FROM $satellites
+       );
 ~~~
