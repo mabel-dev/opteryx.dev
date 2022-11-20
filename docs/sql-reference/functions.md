@@ -393,29 +393,29 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
 !!! function "`GENERATE_SERIES` (**cidr**: _varchar_) → _list_<_varchar_> :octicons-dot-16:"  
     Return a list of IP addresses from a given **cidr**.   
 
-!!! function "`IFNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _[input type]_"  
-    Returns **check_expression** if not `null`, otherwise returns **replacement_value**.
-    Related: `COALESCE`.
+!!! function "`HASH` (**any**: _any_) → _varchar_"  
+    Calculate the [CityHash](https://opensource.googleblog.com/2011/04/introducing-cityhash.html) (64 bit) of **any**.
 
-!!! function "`HASH` (**any**) → _varchar_"  
-    Calculate the [CityHash](https://opensource.googleblog.com/2011/04/introducing-cityhash.html) (64 bit).
-
-!!! function "`HEX_DECODE` (**any**) → _varchar_"  
-    Decode a value which has been encoded using hexadecimal (Base16) encoding.  
+!!! function "`HEX_DECODE` (**value**: _varchar_) → _varchar_"  
+    Decode **value** using hexadecimal (Base16) encoding.  
     Related: `HEX_ENCODE`.
 
-!!! function "`HEX_ENCODE` (**any**) → _varchar_"  
-    Encode value with hexadecimal (Base16) encoding.  
+!!! function "`HEX_ENCODE` (**any**: _any_) → _varchar_"  
+    Encode **any** with hexadecimal (Base16) encoding.  
     Related: `HEX_DECODE`.
 
 !!! function "`IIF` (**condition**, **true_value**, **false_value**) → _[input type]_"  
     Return the **true_value** if the condition evaluates to `True`, otherwise return the **false_value**.
 
-!!! function "`IFNULL` (**value1**: _any_, **value2**: _any_) → _[input type]_"  
-    Returns `null` if **value1** equals **value2**, otherwise returns **value1**.  
+!!! function "`IFNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _[input type]_"  
+    Returns **check_expression** if not `null`, otherwise returns **replacement_value**.
+    Related: `COALESCE`. 
 
 !!! function "`NORMAL` () → _numeric_"  
     Random number from a normal (Gaussian) distribution; distribution is centred at 0.0 and has a standard deviation of 1.0.
+
+!!! function "`NULLIF` (**value1**: _any_, **value2**: _any_) → _[input type]_"  
+    Returns `null` if **value1** equals **value2**, otherwise returns **value1**. 
 
 !!! function "`MD5` (**any**) → _varchar_"  
     Calculate the MD5 hash.
