@@ -301,7 +301,7 @@ Functions for examining and manipulating string values.
     Related: `UPPER`, `TITLE`.
 
 !!! function "`POSITION` (**substring**: _varchar_ IN **string**: _varchar_) → _numeric_"   
-    ** :octicons-star-16: New in 0.7** 
+    ** :octicons-star-16: New in 0.7**   
     Returns the starting position of the first instance of **substring** in **string**. Positions start with 1. If not found, 0 is returned.   
 
 !!! function "`REVERSE` (**str**: _varchar_) → _varchar_"  
