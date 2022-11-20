@@ -412,41 +412,41 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
     Related: `COALESCE`. 
 
 !!! function "`NORMAL` () → _numeric_"  
-    Random number from a normal (Gaussian) distribution; distribution is centred at 0.0 and has a standard deviation of 1.0.
+    Random number from a normal (Gaussian) distribution; distribution is centred at 0.0 and has a standard deviation of 1.0. Per record.
 
 !!! function "`NULLIF` (**value1**: _any_, **value2**: _any_) → _[input type]_"  
     Returns `null` if **value1** equals **value2**, otherwise returns **value1**. 
 
-!!! function "`MD5` (**any**) → _varchar_"  
-    Calculate the MD5 hash.
+!!! function "`MD5` (**value**: _any_) → _varchar_"  
+    Calculate the MD5 hash of **value**.
 
 !!! function "`RAND` () → _numeric_"  
-    Returns a random number between 0 and 1.
+    Returns a random number between 0 and 1. Per record.
 
 !!! function "`RANDOM` () → _numeric_"  
     Alias of `RAND`().
 
 !!! function "`RANDOM_STRING` (**length**: _numeric_) → _varchar_"  
-    Returns a random string of lowercase alphabetic characters with a length of **length**.
+    Returns a random string of lowercase alphabetic characters with a length of **length**. Per record.
 
-!!! function "`SHA1` (**any**) → _varchar_"  
-    Calculate the SHA1 hash.  
+!!! function "`SHA1` (**value**: _any_) → _varchar_"  
+    Calculate the SHA1 hash of **value**.  
     Related: `SHA224`, `SHA256`, `SHA384`, `SHA512`.
 
-!!! function "`SHA224` (**any**) → _varchar_"  
-    Calculate the SHA224 hash.  
+!!! function "`SHA224` (**value**: _any_) → _varchar_"  
+    Calculate the SHA224 hash of **value**.  
     Related: `SHA1`, `SHA256`, `SHA384`, `SHA512`.
 
-!!! function "`SHA256` (**any**) → _varchar_"  
-    Calculate the SHA256 hash.  
+!!! function "`SHA256` (**value**: _any_) → _varchar_"  
+    Calculate the SHA256 hash of **value**.  
     Related: `SHA1`, `SHA224`, `SHA384`, `SHA512`.
 
-!!! function "`SHA384` (**any**) → _varchar_"  
-    Calculate the SHA384 hash.  
+!!! function "`SHA384` (**value**: _any_) → _varchar_"  
+    Calculate the SHA384 hash of **value**.  
     Related: `SHA1`, `SHA224`, `SHA256`, `SHA512`.
 
-!!! function "`SHA512` (**any**) → _varchar_"  
-    Calculate the SHA512 hash.  
+!!! function "`SHA512` (**value**: _any_) → _varchar_"  
+    Calculate the SHA512 hash of **value**.  
     Related: `SHA1`, `SHA224`, `SHA256`, `SHA384`.
 
 !!! function "`UNNEST` (**array**: _list_) → _relation_"  
