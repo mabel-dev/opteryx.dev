@@ -358,20 +358,20 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
 
 ## Other Functions
 
-!!! function "`BASE64_DECODE` (**any**) → _varchar_"  
-    Decode a value which has been encoded using BASE64 encoding.  
+!!! function "`BASE64_DECODE`  (**str**: _varchar_) → _varchar_"  
+    Decode BASE64 encoded value, **str**. 
     Related: `BASE64_ENCODE`.
 
-!!! function "`BASE64_ENCODE` (**any**) → _varchar_"  
-    Encode value with BASE64 encoding.  
+!!! function "`BASE64_ENCODE` (**str**: _varchar_) → _varchar_"  
+    Encode **str** with BASE64 encoding.  
     Related: `BASE64_DECODE`.
 
-!!! function "`BASE85_DECODE` (**any**) → _varchar_"  
-    Decode a value which has been encoded using BASE85 encoding.  
+!!! function "`BASE85_DECODE` (**str**: _varchar_) → _varchar_"  
+    Decode BASE85 encoded value, **str**. 
     Related: `BASE85_ENCODE`.
 
-!!! function "`BASE85_ENCODE` (**any**) → _varchar_"  
-    Encode value with BASE85 encoding.  
+!!! function "`BASE85_ENCODE` (**str**: _varchar_) → _varchar_"  
+    Encode **str** with BASE85 encoding.  
     Related: `BASE85_DECODE`.
 
 !!! function "`COALESCE` (**arg1**, **arg2**, ...) → _[input type]_"  
@@ -396,12 +396,12 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
 !!! function "`HASH` (**value**: _any_) → _varchar_"  
     Calculate the [CityHash](https://opensource.googleblog.com/2011/04/introducing-cityhash.html) (64 bit) of **value**.
 
-!!! function "`HEX_DECODE` (**value**: _varchar_) → _varchar_"  
-    Decode **value** using hexadecimal (Base16) encoding.  
+!!! function "`HEX_DECODE` (**str**: _varchar_) → _varchar_"  
+    Decode hexidecimal (BASE16) encoded value, **str**.    
     Related: `HEX_ENCODE`.
 
-!!! function "`HEX_ENCODE` (**any**: _any_) → _varchar_"  
-    Encode **any** with hexadecimal (Base16) encoding.  
+!!! function "`HEX_ENCODE` (**str**: _varchar_) → _varchar_"  
+    Encode **str** with hexadecimal (BASE16) encoding.  
     Related: `HEX_DECODE`.
 
 !!! function "`IIF` (**condition**, **true_value**, **false_value**) → _[input type]_"  
@@ -417,8 +417,8 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
 !!! function "`NULLIF` (**value1**: _any_, **value2**: _any_) → _[input type]_"  
     Returns `null` if **value1** equals **value2**, otherwise returns **value1**. 
 
-!!! function "`MD5` (**value**: _any_) → _varchar_"  
-    Calculate the MD5 hash of **value**.
+!!! function "`MD5` (**str**: _varchar_) → _varchar_"  
+    Calculate the MD5 hash of **str**.
 
 !!! function "`RAND` () → _numeric_"  
     Returns a random number between 0 and 1. Per record.
@@ -429,24 +429,24 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
 !!! function "`RANDOM_STRING` (**length**: _numeric_) → _varchar_"  
     Returns a random string of lowercase alphabetic characters with a length of **length**. Per record.
 
-!!! function "`SHA1` (**value**: _any_) → _varchar_"  
-    Calculate the SHA1 hash of **value**.  
+!!! function "`SHA1` (**str**: _varchar_) → _varchar_"  
+    Calculate the SHA1 hash of **str**.  
     Related: `SHA224`, `SHA256`, `SHA384`, `SHA512`.
 
-!!! function "`SHA224` (**value**: _any_) → _varchar_"  
-    Calculate the SHA224 hash of **value**.  
+!!! function "`SHA224` (**str**: _varchar_) → _varchar_"  
+    Calculate the SHA224 hash of **str**.  
     Related: `SHA1`, `SHA256`, `SHA384`, `SHA512`.
 
-!!! function "`SHA256` (**value**: _any_) → _varchar_"  
-    Calculate the SHA256 hash of **value**.  
+!!! function "`SHA256` (**str**: _varchar_) → _varchar_"  
+    Calculate the SHA256 hash of **str**.  
     Related: `SHA1`, `SHA224`, `SHA384`, `SHA512`.
 
-!!! function "`SHA384` (**value**: _any_) → _varchar_"  
-    Calculate the SHA384 hash of **value**.  
+!!! function "`SHA384` (**str**: _varchar_) → _varchar_"  
+    Calculate the SHA384 hash of **stre**.  
     Related: `SHA1`, `SHA224`, `SHA256`, `SHA512`.
 
-!!! function "`SHA512` (**value**: _any_) → _varchar_"  
-    Calculate the SHA512 hash of **value**.  
+!!! function "`SHA512` (**str**: _varchar_) → _varchar_"  
+    Calculate the SHA512 hash of **str**.  
     Related: `SHA1`, `SHA224`, `SHA256`, `SHA384`.
 
 !!! function "`UNNEST` (**array**: _list_) → _relation_"  
