@@ -21,7 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#439](https://github.com/mabel-dev/opteryx/issues/439)] Support `SHOW STORES`. [@joocer](https://github.com/joocer)   
 - [[#542](https://github.com/mabel-dev/opteryx/issues/542)] Support `POSITION`. [@joocer](https://github.com/joocer)   
 - [[#22](https://github.com/mabel-dev/opteryx/issues/22)] Support `CASE` statements. [@joocer](https://github.com/joocer)   
-- [[#665](https://github.com/mabel-dev/opteryx/issues/665)] Support `ARRAY_AGG` function. [@joocer](https://github.com/joocer)   
+- [[#665](https://github.com/mabel-dev/opteryx/issues/665)] Partial support of `ARRAY_AGG` function. [@joocer](https://github.com/joocer)   
 - [[#668](https://github.com/mabel-dev/opteryx/issues/668)] Optimizer exchanges functions with constant results. [@joocer](https://github.com/joocer)   
 
 
