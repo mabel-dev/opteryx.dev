@@ -212,17 +212,17 @@ For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%
     Related: `FLOOR` 
 
 !!! function "`E` () → _numeric_"  
-    Returns the constant _e_, also known as _Euler's number_.  
+    Returns the constant _e_, also known as [_Euler's number_](https://en.wikipedia.org/wiki/E_(mathematical_constant)).  
     Related: `LN`.
 
 !!! function "`FLOOR` (**x**: _numeric_) → _numeric_"  
     Returns **x** rounded down to the nearest integer.   
 
 !!! function "`PHI` () → _numeric_"  
-    Returns the constant φ (_phi_), also known as _the golden ratio_.  
+    Returns the constant φ (_phi_), also known as [_the golden ratio_](https://en.wikipedia.org/wiki/Golden_ratio).  
 
 !!! function "`PI` () → _numeric_"  
-    Returns the constant π (_pi_).  
+    Returns the constant [π](https://en.wikipedia.org/wiki/Pi) (_pi_).  
 
 !!! function "`POWER` (**base**: _numeric_, **exponent**: _numeric**) → _numeric_"   
     Returns **base** to the power of **exponent**.  
