@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - [[#653](https://github.com/mabel-dev/opteryx/issues/653)] `LIKE` and `FOR` clauses cannot coexist in `SHOW` queries. [@joocer](https://github.com/joocer)  
+- [[#669](https://github.com/mabel-dev/opteryx/issues/669)] `COUNT(*)` cannot be mixed with other aggregates. [@joocer](https://github.com/joocer)  
 
 ### Changed
 
