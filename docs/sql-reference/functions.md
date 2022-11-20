@@ -378,7 +378,7 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
     Return the first item from args which is not `null`.    
     Related: `IFNULL`.
 
-!!! function "`GENERATE_SERIES` (**stop**: _numeric_) → _list_<_numeric_> _ :octicons-dot-16:"  
+!!! function "`GENERATE_SERIES` (**stop**: _numeric_) → _list_<_numeric_> :octicons-dot-16:"  
     Return a numeric list between 1 and **stop**, with a step of 1.  
 
 !!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_) → _list_<_numeric_> :octicons-dot-16:"   
@@ -387,14 +387,14 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
 !!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_, **step**: _numeric_) → _list_<_numeric_> :octicons-dot-16:"  
     Return a numeric list between **start** and **stop**, with an increment of **step**.
 
-!!! function "`GENERATE_SERIES` (**start**: _timestamp_, **stop**: _timestamp_, _interval_) → _list_<_timestamp_> _ _ :octicons-dot-16:"    
+!!! function "`GENERATE_SERIES` (**start**: _timestamp_, **stop**: _timestamp_, _interval_) → _list_<_timestamp_> :octicons-dot-16:"    
     Return a timestamp list between **start** and **stop**, with a interval of **step**.    
 
 !!! function "`GENERATE_SERIES` (**cidr**: _varchar_) → _list_<_varchar_> :octicons-dot-16:"  
     Return a list of IP addresses from a given **cidr**.   
 
-!!! function "`HASH` (**any**: _any_) → _varchar_"  
-    Calculate the [CityHash](https://opensource.googleblog.com/2011/04/introducing-cityhash.html) (64 bit) of **any**.
+!!! function "`HASH` (**value**: _any_) → _varchar_"  
+    Calculate the [CityHash](https://opensource.googleblog.com/2011/04/introducing-cityhash.html) (64 bit) of **value**.
 
 !!! function "`HEX_DECODE` (**value**: _varchar_) → _varchar_"  
     Decode **value** using hexadecimal (Base16) encoding.  
