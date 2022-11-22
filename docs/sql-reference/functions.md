@@ -300,6 +300,11 @@ Functions for examining and manipulating string values.
     Converts **str** to lowercase.   
     Related: `UPPER`, `TITLE`.
 
+!!! function "`LTRIM` (**str**: _varchar_) → _varchar_"   
+    ** :octicons-star-16: New in 0.7**   
+    Remove leading whitespace from **str**.
+    Related: `RTRIM`, `TRIM`.
+
 !!! function "`POSITION` (**substring**: _varchar_ IN **string**: _varchar_) → _numeric_"   
     ** :octicons-star-16: New in 0.7**   
     Returns the starting position of the first instance of **substring** in **string**. Positions start with 1. If not found, 0 is returned.   
@@ -310,6 +315,11 @@ Functions for examining and manipulating string values.
 !!! function "`RIGHT` (**str**: _varchar_, **n**: _numeric_) → _varchar_"  
     Extract the right-most **n** characters of **str**.   
     Related: `LEFT`.
+
+!!! function "`RTRIM` (**str**: _varchar_) → _varchar_"   
+    ** :octicons-star-16: New in 0.7**   
+    Remove trailing whitespace from **str**.
+    Related: `LTRIM`, `TRIM`.
 
 !!! function "`SOUNDEX` (**str**: _varchar_) → _varchar_"  
     Returns a character string containing the phonetic representation of char. See [Soundex 🡕](https://en.wikipedia.org/wiki/Soundex).   
@@ -331,8 +341,13 @@ Functions for examining and manipulating string values.
     Returns **str** with the first letter of each work in upper case.   
     Related: `LOWER`, `UPPER`.
 
-!!! function "`TRIM` (**str**: _varchar_) → _varchar_"  
-    Removes leading and trailing whitespace from **str**.  
+!!! function "`TRIM` ( [ LEADING | TRAILING | BOTH ] [**chars**: _varchar_ FROM ] **str**: _varchar_ ) → _varchar_"   
+    ** :octicons-star-16: Updated in 0.7**   
+    Removes leading and trailing **chars** from **str**, if **chars** is not specified, whitespace is removed.  
+    - The **LEADING** modifier removes **chars** from the start of **str**.   
+    - The **TRAILING** modifier removes **chars** from the end of **str**.    
+    - The **BOTH** modifier removes **chars** from both the start and end of **str**, this is the default behaviour if no positional modifier is supplied.   
+    Related: `LTRIM`, `RTRIM`.
 
 !!! function "`UPPER` (**str**: _varchar_) → _varchar_"  
     Converts **str** to uppercase.   
