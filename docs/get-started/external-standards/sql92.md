@@ -70,12 +70,12 @@ E081-07  | `REFERENCES` privilege at the column level                | unknown
 E081-08  | `WITH GRANT OPTION`                                       | no
 E081-09  | `USAGE` privilege                                         | unknown
 E081-10  | `EXECUTE` privilege                                       | unknown
-**E091** | **Set functions**                                         | unknown
-E091-01  | `AVG`                                                     | unknown
-E091-02  | `COUNT`                                                   | unknown
-E091-03  | `MAX`                                                     | unknown
-E091-04  | `MIN`                                                     | unknown
-E091-05  | `SUM`                                                     | unknown
+**E091** | **Set functions**                                         | partial
+E091-01  | `AVG`                                                     | yes
+E091-02  | `COUNT`                                                   | yes
+E091-03  | `MAX`                                                     | yes
+E091-04  | `MIN`                                                     | yes
+E091-05  | `SUM`                                                     | yes
 E091-06  | `ALL` quantifier                                          | unknown
 E091-07  | `DISTINCT` quantifier                                     | unknown
 **E101** | **Basic data manipulation**                               | n/a
@@ -156,8 +156,8 @@ F131-05  | Single row `SELECT` with `GROUP BY` and `HAVING` clauses and grouped 
 **F181** | **Multiple module support**                               | unknown
 **F201** | **`CAST` function**                                       | unknown
 **F221** | **Explicit defaults**                                     | unknown
-**F261** | **`CASE` expression**                                     | partial
-F261-01  | Simple `CASE`                                             | partial
+**F261** | **`CASE` expression**                                     | yes
+F261-01  | Simple `CASE`                                             | yes
 F261-02  | Searched `CASE`                                           | yes
 F261-03  | `NULLIF`                                                  | yes
 F261-04  | `COALESCE`                                                | yes
