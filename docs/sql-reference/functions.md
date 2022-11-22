@@ -302,7 +302,7 @@ Functions for examining and manipulating string values.
 
 !!! function "`LTRIM` (**str**: _varchar_) → _varchar_"   
     ** :octicons-star-16: New in 0.7**   
-    Remove leading whitespace from **str**.
+    Remove leading whitespace from **str**.   
     Related: `RTRIM`, `TRIM`.
 
 !!! function "`POSITION` (**substring**: _varchar_ IN **string**: _varchar_) → _numeric_"   
@@ -318,7 +318,7 @@ Functions for examining and manipulating string values.
 
 !!! function "`RTRIM` (**str**: _varchar_) → _varchar_"   
     ** :octicons-star-16: New in 0.7**   
-    Remove trailing whitespace from **str**.
+    Remove trailing whitespace from **str**.   
     Related: `LTRIM`, `TRIM`.
 
 !!! function "`SOUNDEX` (**str**: _varchar_) → _varchar_"  
@@ -344,9 +344,9 @@ Functions for examining and manipulating string values.
 !!! function "`TRIM` ( [ LEADING | TRAILING | BOTH ] [**chars**: _varchar_ FROM ] **str**: _varchar_ ) → _varchar_"   
     ** :octicons-star-16: Updated in 0.7**   
     Removes leading and trailing **chars** from **str**, if **chars** is not specified, whitespace is removed.  
-    - The **LEADING** modifier removes **chars** from the start of **str**.   
-    - The **TRAILING** modifier removes **chars** from the end of **str**.    
-    - The **BOTH** modifier removes **chars** from both the start and end of **str**, this is the default behaviour if no positional modifier is supplied.   
+    The **LEADING** modifier removes **chars** from the start of **str**.   
+    The **TRAILING** modifier removes **chars** from the end of **str**.    
+    The **BOTH** modifier removes **chars** from both the start and end of **str**, this is the default behaviour if no positional modifier is supplied.   
     Related: `LTRIM`, `RTRIM`.
 
 !!! function "`UPPER` (**str**: _varchar_) → _varchar_"  
