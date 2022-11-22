@@ -93,7 +93,7 @@ E121-07  | Positioned `DELETE` statement                             | no
 E121-08  | `CLOSE` statement                                         | no
 E121-10  | `FETCH` statement: implicit `NEXT`                        | no
 E121-17  | `WITH HOLD` cursors                                       | no
-**E131** | **Null value support**                                    | unknown
+**E131** | **Null value support**                                    | yes
 **E141** | **Basic integrity constraints**                           | unknown
 E141-01  | `NOT NULL` constraints                                    | unknown
 E141-02  | `UNIQUE` constraints of `NOT NULL`                        | unknown
