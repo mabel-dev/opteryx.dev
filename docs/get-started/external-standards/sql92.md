@@ -95,14 +95,14 @@ E121-10  | `FETCH` statement: implicit `NEXT`                        | no
 E121-17  | `WITH HOLD` cursors                                       | no
 **E131** | **Null value support**                                    | yes
 **E141** | **Basic integrity constraints**                           | unknown
-E141-01  | `NOT NULL` constraints                                    | unknown
-E141-02  | `UNIQUE` constraints of `NOT NULL`                        | unknown
-E141-03  | `PRIMARY KEY` constraints                                 | unknown
-E141-04  | Basic `FOREIGN KEY` constraint with the `NO ACTION` default for both referential delete action and referential update action | unknown
-E141-06  | `CHECK` constraints                                       | unknown
+E141-01  | `NOT NULL` constraints                                    | n/a
+E141-02  | `UNIQUE` constraints of `NOT NULL`                        | n/a
+E141-03  | `PRIMARY KEY` constraints                                 | n/a
+E141-04  | Basic `FOREIGN KEY` constraint with the `NO ACTION` default for both referential delete action and referential update action | n/a
+E141-06  | `CHECK` constraints                                       | n/a
 E141-07  | Column defaults                                           | unknown
-E141-08  | `NOT NULL` inferred on `PRIMARY KEY`                      | unknown
-E141-10  | Names in a foreign key can be specified in any order      | unknown
+E141-08  | `NOT NULL` inferred on `PRIMARY KEY`                      | n/a
+E141-10  | Names in a foreign key can be specified in any order      | n/a
 **E151** | **Transaction support**                                   | n/a
 E151-01  | `COMMIT` statement                                        | n/a
 E151-02  | `ROLLBACK` statement                                      | n/a
