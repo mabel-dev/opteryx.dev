@@ -1,6 +1,6 @@
 # ANSI SQL-92 Conformity
 
-For a system to [attest to supporting SQL][^1] it must have good conformance to the [ANSI SQL-92](https://db.cs.cmu.edu/files/sql/sql1992.txt) standard. This standard is also known as [ISO/IEC 9075:1992](https://www.iso.org/standard/16663.html).
+For a system to [attest to supporting SQL][^1] it should have good conformance to the [ANSI SQL-92](https://db.cs.cmu.edu/files/sql/sql1992.txt) standard. This standard is also known as [ISO/IEC 9075:1992](https://www.iso.org/standard/16663.html).
 
 Opteryx is not a DBMS, so only aims for confirmity to the subset of SQL-92 for to featureset it supports - this is primarily related to `SELECT` statements.
 
