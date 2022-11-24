@@ -341,7 +341,7 @@ Functions for examining and manipulating string values.
     Returns **str** with the first letter of each work in upper case.   
     Related: `LOWER`, `UPPER`.
 
-!!! function "`TRIM` ( [ LEADING | TRAILING | BOTH ] [**chars**: _varchar_ FROM ] **str**: _varchar_ ) → _varchar_"   
+!!! function "`TRIM` ( [ LEADING | TRAILING | BOTH ] [ **chars**: _varchar_ FROM ] **str**: _varchar_ ) → _varchar_"   
     ** :octicons-star-16: Updated in 0.7**   
     Removes leading and trailing **chars** from **str**, if **chars** is not specified, whitespace is removed.  
     The **LEADING** modifier removes **chars** from the start of **str**.   
