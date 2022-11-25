@@ -12,14 +12,14 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 
 !!! function "`BOOLEAN` **any**: _any_ → _boolean_"  
     Cast **any** to a `BOOLEAN`, raises an error if cast is not possible. Note `BOOLEAN` does not require parenthesis, however any aliases do.      
-    Alias for `CAST`(**any** AS BOOLEAN).   
+    Alias for `CAST`(**any** AS BOOLEAN)   
 
 !!! function "`CAST` (**any**: _any_ AS **type**) → _type_"  
     Cast **any** to **type**, raises an error if cast is not possible.   
     Also implemented as individual cast functions.
 
 !!! function "`INT` (**num**: _numeric_) → _numeric_"  
-    Alias for `INTEGER`.
+    Alias for `INTEGER`
 
 !!! function "`INTEGER` (**num**: _numeric_) → _numeric_"  
     Convert **num** to an integer.   
@@ -31,10 +31,10 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 
 !!! function "`NUMERIC` **any**: _any_ → _numeric_"  
     Cast **any** to a floating point number, raises an error if cast is not possible. Note `NUMERIC` does not require parenthesis, however any aliases do.   
-    Alias for `CAST`(**any** AS NUMERIC).   
+    Alias for `CAST`(**any** AS NUMERIC)   
 
 !!! function "`SAFE_CAST` (**any**: _any_ AS **type**) → _type_"    
-    Alias for `TRY_CAST`(**any** AS **type**).  
+    Alias for `TRY_CAST`(**any** AS **type**)  
 
 !!! function "`STR` (**any**: _any_) → _varchar_"     
     Alias of `VARCHAR`(**any**) and `CAST`(**any** AS VARCHAR)   
@@ -44,14 +44,14 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 
 !!! function "`TIMESTAMP` **iso8601**: _varchar_ → _timestamp_"  
     Cast an [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format string to a timestamp, raises an error if cast is not possible. Note `TIMESTAMP` does not require parenthesis, however any aliases do.    
-    Alias for `CAST`(**iso8601** AS TIMESTAMP).   
+    Alias for `CAST`(**iso8601** AS TIMESTAMP)   
 
 !!! function "`TRY_CAST` (**any**: _any_ AS **type**) → _type_"  
     Cast **any** to **type**, if cast is not possible, returns `null`.   
 
 !!! function "`VARCHAR` (_any_) → _varchar_"  
     Cast **any** to a string, raises an error if cast is not possible.  
-    Alias for `CAST`(**any** AS VARCHAR).
+    Alias for `CAST`(**any** AS VARCHAR)
 
 ## Date & Time Functions
 
@@ -70,7 +70,7 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps//
     Formats **ts** as a string using **format**.   
 
 !!! function "`DATEPART`(**unit**: _varchar_, **ts**: _timestamp_) → _numeric_"  
-    Alias of `EXTRACT`(**unit** FROM **ts**).
+    Alias of `EXTRACT`(**unit** FROM **ts**)
 
 !!! function "`DATE_TRUNC` (**unit**: _varchar_, **ts**: _timestamp_) → _varchar_"  
     Returns **ts** truncated to **unit**.  
@@ -86,20 +86,20 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps//
     Also implemented as individual extraction functions.
 
 !!! function "`NOW` () → _timestamp_"  
-    Alias for `current_time`.
+    Alias for `current_time`
 
 !!! function "`TIME` () → _timestamp_"  
-    Current Time (UTC).     
+    Returns the current iime (UTC).     
 
 !!! function "`TIME_BUCKET` (_timestamp_, **multiple**: _numeric_, **unit**: _varchar_) → _timestamp_"  
     Floor timestamps into fixed time interval buckets. **unit** is optional and will be `day` if not provided.
 
 !!! function "`TODAY` () → _timestamp_"  
-    Alias for `current_date`.
+    Alias for `current_date`
 
 !!! function "`HOUR` (**ts**: _timestamp_) → _numeric_"  
     Returns the hour of the day from **ts**. The value ranges from `0` to `23`.   
-    Alias for `EXTRACT`(hour FROM **ts**).
+    Alias for `EXTRACT`(hour FROM **ts**)
 
 !!! function "`MINUTE` (**ts**: _timestamp_) → _numeric_"  
     Returns the minute of the hour from **ts**. The value ranges from `0` to `59`.  
@@ -160,29 +160,29 @@ These are functions that are called similar to comparison operators:
 
 For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%20with%20Lists/).
 
-!!! function "**array**: _list_`[`**index**: _numeric_`]` → **value** :octicons-dot-16:"  
+!!! function "**array**: _list_`[`**index**: _numeric_`]` → _value_:octicons-dot-16:"  
     Return the **index**th element from **array**. 
 
-!!! function "`GET` (**array**: _list_, **index**: _numeric_) → **value** :octicons-dot-16:"   
-    Alias of **array**`[`**index**`]`.  
+!!! function "`GET` (**array**: _list_, **index**: _numeric_) → _value_:octicons-dot-16:"   
+    Alias of **array**`[`**index**`]`  
 
-!!! function "`GREATEST` (**array**: _list_) → **value** :octicons-dot-16:"   
+!!! function "`GREATEST` (**array**: _list_) → _value_"   
     Return the greatest value in **array**.  
-    Related: `LEAST`.
+    Related: `LEAST`
 
-!!! function "`LEAST` (**array**: _list_) → **value** :octicons-dot-16:"   
+!!! function "`LEAST` (**array**: _list_) → _value_"   
     Return the smallest value in **array**.  
-    Related: `GREATEST`.
+    Related: `GREATEST`
 
-!!! function "`LEN` (**array**: _list_) → _numeric_ :octicons-dot-16:"   
-    Alias of `LENGTH`(**array**).
+!!! function "`LEN` (**array**: _list_) → _numeric_:octicons-dot-16:"   
+    Alias of `LENGTH`(**array**)
 
-!!! function "`LENGTH` (**array**: _list_) → _numeric_ :octicons-dot-16:"   
+!!! function "`LENGTH` (**array**: _list_) → _numeric_:octicons-dot-16:"   
     Returns the number of elements in **array**.
 
 !!! function "`LIST_CONTAINS` (**array**: _list_, **value**) → _boolean_"  
     Return `true` if **array** contains **value**.  
-    See also `SEARCH`(**array**, **value**).  
+    See also `SEARCH`(**array**, **value**)  
 
 !!! function "`LIST_CONTAINS_ANY` (**array**: _list_, **values**: _list_) → _boolean_"    
     Return `true` if **array** contains any elements in **values**.
@@ -190,7 +190,7 @@ For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%
 !!! function "`LIST_CONTAINS_ALL` (**array**: _list_, **values**: _list_) → _boolean_"   
     Return `true` if **array** contains all of elements in **values**.
 
-!!! function "`SEARCH` (**array**: _list_, **value**) → _boolean_ :octicons-dot-16:"  
+!!! function "`SEARCH` (**array**: _list_, **value**) → _boolean_:octicons-dot-16:"  
     Return `true` if **array** contains **value**. 
 
 !!! function "`SORT` (**array**: _list_) → _list_"  
@@ -199,13 +199,13 @@ For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%
 ## Numeric Functions
 
 !!! function "`ABS` (**x**: _numeric_) → _numeric_"  
-    Alias of `ABSOLUTE`.  
+    Alias of `ABSOLUTE`  
 
 !!! function "`ABSOLUTE` (**x**: _numeric_) → _numeric_"  
     Returns the absolute value of **x**.   
 
 !!! function "`CEIL` (**x**: _numeric_) → _numeric_"  
-    Alias of `CEILING`.  
+    Alias of `CEILING`  
 
 !!! function "`CEILING` (**x**: _numeric_) → _numeric_"  
     Returns **x** rounded up to the nearest integer.   
@@ -229,37 +229,37 @@ For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%
 
 !!! function "`LN` (**x**: _numeric_) → _numeric_"   
     Returns the natural logarithm of **x**.  
-    Related: `E`, `LOG`, `LOG10`, `LOG2`.
+    Related: `E`, `LOG`, `LOG10`, `LOG2`
 
 !!! function "`LOG` (**x**: _numeric_, **base**: _numeric_) → _numeric_"   
     Returns the logarithm of **x** for base **base**.   
-    Related: `LN`, `LOG10`, `LOG2`.
+    Related: `LN`, `LOG10`, `LOG2`
 
 !!! function "`LOG10` (**x**: _numeric_) → _numeric_"   
     Returns the logarithm for base 10 of **x**.  
-    Related: `LN`, `LOG`, `LOG2`.
+    Related: `LN`, `LOG`, `LOG2`
 
 !!! function "`LOG2` (**x**: _numeric_) → _numeric_"   
     Returns the logarithm for base 2 of **x**.  
-    Related: `LN`, `LOG`, `LOG10`.
+    Related: `LN`, `LOG`, `LOG10`
 
-!!! function "`ROUND` (**x**: _numeric_) → _numeric_ :octicons-dot-16:"  
+!!! function "`ROUND` (**x**: _numeric_) → _numeric_:octicons-dot-16:"  
     Returns **x** rounded to the nearest integer. 
 
-!!! function "`ROUND` (**x**: _numeric_, **places**: _numeric_) → _numeric_ :octicons-dot-16:"  
+!!! function "`ROUND` (**x**: _numeric_, **places**: _numeric_) → _numeric_:octicons-dot-16:"  
     Returns **x** rounded to **places** decimal places.
 
 !!! function "`SIGN` (**x**: _numeric_) → _numeric_"   
     Returns the signum function of **x**; 0 if **x** is 0, -1 if **x** is less than 0 and 1 if **x** is greater than 0.
 
 !!! function "`SIGNUM` (**x**: _numeric_) → _numeric_"   
-    Alias for `SIGN`.
+    Alias for `SIGN`
 
 !!! function "`SQRT` (**x**: _numeric_) → _numeric_"   
     Returns the square root of **x**.
 
 !!! function "`TRUNC` (**x**: _numeric_) → _numeric_"  
-    Alias of `TRUNCATE`.  
+    Alias of `TRUNCATE`  
 
 !!! function "`TRUNCATE` (**x**: _numeric_) → _numeric_"  
     Returns **x** rounded to integer by dropping digits after decimal point.    
@@ -268,42 +268,42 @@ For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%
 
 Functions for examining and manipulating string values. 
 
-!!! function "**str**: _varchar_`[`**index**: _numeric_`]` → _varchar_ :octicons-dot-16:"  
+!!! function "**str**: _varchar_`[`**index**: _numeric_`]` → _varchar_:octicons-dot-16:"  
     Subscript operator, return the **index**th character from **str**. 
 
 !!! function "`CONCAT` (**list**: _array_<_varchar_>) → _varchar_"   
     Returns the result of concatenating, or joining, of two or more string values in an end-to-end manner.  
-    Related: `CONCAT_WS`.
+    Related: `CONCAT_WS`
 
 !!! function "`CONCAT_WS` (**separator**: _varchar_, **list**: _array_<_varchar_>) → _varchar_"   
     Returns the result of concatenating, or joining, of two or more string values with a **separator** used to delimit individual values.  
-    Related: `CONCAT`.
+    Related: `CONCAT`
 
 !!! function "`ENDS_WITH` (**str**: _varchar_, **value**: _varchar_) → _boolean_"  
     Return `true` if **str** ends with **value**.  
-    Related: `STARTS_WITH`.
+    Related: `STARTS_WITH`
 
-!!! function "`GET` (**str**: _varchar_, **index**: _numeric_) → _varchar_ :octicons-dot-16:"  
-    Alias of **str**`[`**index**`]`.   
+!!! function "`GET` (**str**: _varchar_, **index**: _numeric_) → _varchar_:octicons-dot-16:"  
+    Alias of **str**`[`**index**`]`   
 
 !!! function "`LEFT` (**str**: _varchar_, **n**: _numeric_) → _varchar_"  
     Extract the left-most **n** characters of **str**.  
     Related: `RIGHT`
 
-!!! function "`LEN` (**str**: _varchar_) → _numeric_ :octicons-dot-16:"   
+!!! function "`LEN` (**str**: _varchar_) → _numeric_:octicons-dot-16:"   
     Alias of `LENGTH`
 
-!!! function "`LENGTH` (**str**: _varchar_) → _numeric_ :octicons-dot-16:"  
+!!! function "`LENGTH` (**str**: _varchar_) → _numeric_:octicons-dot-16:"  
     Returns the length of **str** in characters.    
 
 !!! function "`LOWER` (**str**: _varchar_) → _varchar_"  
     Converts **str** to lowercase.   
-    Related: `UPPER`, `TITLE`.
+    Related: `UPPER`, `TITLE`
 
 !!! function "`LTRIM` (**str**: _varchar_) → _varchar_"   
     ** :octicons-star-16: New in 0.7**   
     Remove leading whitespace from **str**.   
-    Related: `RTRIM`, `TRIM`.
+    Related: `RTRIM`, `TRIM`
 
 !!! function "`POSITION` (**substring**: _varchar_ IN **string**: _varchar_) → _numeric_"   
     ** :octicons-star-16: New in 0.7**   
@@ -314,23 +314,23 @@ Functions for examining and manipulating string values.
 
 !!! function "`RIGHT` (**str**: _varchar_, **n**: _numeric_) → _varchar_"  
     Extract the right-most **n** characters of **str**.   
-    Related: `LEFT`.
+    Related: `LEFT`
 
 !!! function "`RTRIM` (**str**: _varchar_) → _varchar_"   
     ** :octicons-star-16: New in 0.7**   
     Remove trailing whitespace from **str**.   
-    Related: `LTRIM`, `TRIM`.
+    Related: `LTRIM`, `TRIM`
 
 !!! function "`SOUNDEX` (**str**: _varchar_) → _varchar_"  
     Returns a character string containing the phonetic representation of char. See [Soundex 🡕](https://en.wikipedia.org/wiki/Soundex).   
 
-!!! function "`SEARCH` (**str**: _varchar_, **value**: _varchar_) → _boolean_ :octicons-dot-16:"  
-    Return `true` if **str** contains **value**.  
+!!! function "`SEARCH` (**str**: _varchar_, **substring**: _varchar_) → _boolean_:octicons-dot-16:"  
+    Return `true` if **str** contains **substring**.  
 
-!!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_) → _varchar_ :octicons-dot-16:" 
+!!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_) → _varchar_:octicons-dot-16:" 
     Return substring from a string from **start** position to the end of **str**.  
 
-!!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_, **length**: _numeric_) → _varchar_ :octicons-dot-16:"  
+!!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_, **length**: _numeric_) → _varchar_:octicons-dot-16:"  
     Return substring from a string from **start** position for **length** characters.  
  
 !!! function "`STARTS_WITH` (**str**: _varchar_, **value**: _varchar_) → _boolean_"  
@@ -339,7 +339,7 @@ Functions for examining and manipulating string values.
 
 !!! function "`TITLE` (**str**: _varchar_) → _varchar_"  
     Returns **str** with the first letter of each work in upper case.   
-    Related: `LOWER`, `UPPER`.
+    Related: `LOWER`, `UPPER`
 
 !!! function "`TRIM` ( [ LEADING | TRAILING | BOTH ] [ **chars**: _varchar_ FROM ] **str**: _varchar_ ) → _varchar_"   
     ** :octicons-star-16: Updated in 0.7**   
@@ -347,23 +347,23 @@ Functions for examining and manipulating string values.
     The **LEADING** modifier removes **chars** from the start of **str**.   
     The **TRAILING** modifier removes **chars** from the end of **str**.    
     The **BOTH** modifier removes **chars** from both the start and end of **str**, this is the default behaviour if no positional modifier is supplied.   
-    Related: `LTRIM`, `RTRIM`.
+    Related: `LTRIM`, `RTRIM`
 
 !!! function "`UPPER` (**str**: _varchar_) → _varchar_"  
     Converts **str** to uppercase.   
-    Related: `LOWER`, `TITLE`.
+    Related: `LOWER`, `TITLE`
 
 ## Struct Functions
 
 For more details, see [Working with Structs](../Working%20with%20SQL/30%20Working%20with%20Structs/).
 
-!!! function "**object**: _struct_`[`**key**: _varchar_`]` → _value_ :octicons-dot-16:"  
+!!! function "**object**: _struct_`[`**key**: _varchar_`]` → _value_:octicons-dot-16:"  
     Subscript operator, return the value for **key** from **object**. 
 
-!!! function "`GET` (**object**: _struct_, **key**: _varchar_) → _value_ :octicons-dot-16:"  
-    Alias of **object**`[`**key**`]`.  
+!!! function "`GET` (**object**: _struct_, **key**: _varchar_) → _value_:octicons-dot-16:"  
+    Alias of **object**`[`**key**`]`  
 
-!!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → _boolean_ :octicons-dot-16:"  
+!!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → _boolean_:octicons-dot-16:"  
     Return `true` if any of the values in **object** is **value**. Note `SEARCH` does not match struct keys.
 
 ## System Functions
@@ -375,37 +375,37 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
 
 !!! function "`BASE64_DECODE`  (**str**: _varchar_) → _varchar_"  
     Decode BASE64 encoded value, **str**. 
-    Related: `BASE64_ENCODE`.
+    Related: `BASE64_ENCODE`
 
 !!! function "`BASE64_ENCODE` (**str**: _varchar_) → _varchar_"  
     Encode **str** with BASE64 encoding.  
-    Related: `BASE64_DECODE`.
+    Related: `BASE64_DECODE`
 
 !!! function "`BASE85_DECODE` (**str**: _varchar_) → _varchar_"  
     Decode BASE85 encoded value, **str**. 
-    Related: `BASE85_ENCODE`.
+    Related: `BASE85_ENCODE`
 
 !!! function "`BASE85_ENCODE` (**str**: _varchar_) → _varchar_"  
     Encode **str** with BASE85 encoding.  
-    Related: `BASE85_DECODE`.
+    Related: `BASE85_DECODE`
 
-!!! function "`COALESCE` (**arg1**, **arg2**, ...) → _[input type]_"  
+!!! function "`COALESCE` (**arg1**, **arg2**, ...) → _value_"  
     Return the first item from args which is not `null`.    
-    Related: `IFNULL`.
+    Related: `IFNULL`
 
-!!! function "`GENERATE_SERIES` (**stop**: _numeric_) → _list_<_numeric_> :octicons-dot-16:"  
+!!! function "`GENERATE_SERIES` (**stop**: _numeric_) → _list_<_numeric_>:octicons-dot-16:"  
     Return a numeric list between 1 and **stop**, with a step of 1.  
 
-!!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_) → _list_<_numeric_> :octicons-dot-16:"   
+!!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_) → _list_<_numeric_>:octicons-dot-16:"   
     Return a numeric list between **start** and **stop**, with a step of 1.
 
-!!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_, **step**: _numeric_) → _list_<_numeric_> :octicons-dot-16:"  
+!!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_, **step**: _numeric_) → _list_<_numeric_>:octicons-dot-16:"  
     Return a numeric list between **start** and **stop**, with an increment of **step**.
 
-!!! function "`GENERATE_SERIES` (**start**: _timestamp_, **stop**: _timestamp_, _interval_) → _list_<_timestamp_> :octicons-dot-16:"    
+!!! function "`GENERATE_SERIES` (**start**: _timestamp_, **stop**: _timestamp_, _interval_) → _list_<_timestamp_>:octicons-dot-16:"    
     Return a timestamp list between **start** and **stop**, with a interval of **step**.    
 
-!!! function "`GENERATE_SERIES` (**cidr**: _varchar_) → _list_<_varchar_> :octicons-dot-16:"  
+!!! function "`GENERATE_SERIES` (**cidr**: _varchar_) → _list_<_varchar_>:octicons-dot-16:"  
     Return a list of IP addresses from a given **cidr**.   
 
 !!! function "`HASH` (**value**: _any_) → _varchar_"  
@@ -413,18 +413,18 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
 
 !!! function "`HEX_DECODE` (**str**: _varchar_) → _varchar_"  
     Decode hexidecimal (BASE16) encoded value, **str**.    
-    Related: `HEX_ENCODE`.
+    Related: `HEX_ENCODE`
 
 !!! function "`HEX_ENCODE` (**str**: _varchar_) → _varchar_"  
     Encode **str** with hexadecimal (BASE16) encoding.  
-    Related: `HEX_DECODE`.
+    Related: `HEX_DECODE`
 
 !!! function "`IIF` (**condition**, **true_value**, **false_value**) → _input type_"  
     Return the **true_value** if the condition evaluates to `True`, otherwise return the **false_value**.
 
 !!! function "`IFNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _input type_"  
     Returns **check_expression** if not `null`, otherwise returns **replacement_value**.
-    Related: `COALESCE`. 
+    Related: `COALESCE` 
 
 !!! function "`NORMAL` () → _numeric_"  
     Random number from a normal (Gaussian) distribution; distribution is centred at 0.0 and has a standard deviation of 1.0. Per record.
@@ -439,30 +439,30 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
     Returns a random number between 0 and 1. Per record.
 
 !!! function "`RANDOM` () → _numeric_"  
-    Alias of `RAND`.
+    Alias of `RAND`
 
 !!! function "`RANDOM_STRING` (**length**: _numeric_) → _varchar_"  
     Returns a random string of lowercase alphabetic characters with a length of **length**. Per record.
 
 !!! function "`SHA1` (**str**: _varchar_) → _varchar_"  
     Calculate the SHA1 hash of **str**.  
-    Related: `SHA224`, `SHA256`, `SHA384`, `SHA512`.
+    Related: `SHA224`, `SHA256`, `SHA384`, `SHA512`
 
 !!! function "`SHA224` (**str**: _varchar_) → _varchar_"  
     Calculate the SHA224 hash of **str**.  
-    Related: `SHA1`, `SHA256`, `SHA384`, `SHA512`.
+    Related: `SHA1`, `SHA256`, `SHA384`, `SHA512`
 
 !!! function "`SHA256` (**str**: _varchar_) → _varchar_"  
     Calculate the SHA256 hash of **str**.  
-    Related: `SHA1`, `SHA224`, `SHA384`, `SHA512`.
+    Related: `SHA1`, `SHA224`, `SHA384`, `SHA512`
 
 !!! function "`SHA384` (**str**: _varchar_) → _varchar_"  
     Calculate the SHA384 hash of **stre**.  
-    Related: `SHA1`, `SHA224`, `SHA256`, `SHA512`.
+    Related: `SHA1`, `SHA224`, `SHA256`, `SHA512`
 
 !!! function "`SHA512` (**str**: _varchar_) → _varchar_"  
     Calculate the SHA512 hash of **str**.  
-    Related: `SHA1`, `SHA224`, `SHA256`, `SHA384`.
+    Related: `SHA1`, `SHA224`, `SHA256`, `SHA384`
 
 !!! function "`UNNEST` (**array**: _list_) → _relation_"  
     Create a virtual relation with a row for each element in **array**.
