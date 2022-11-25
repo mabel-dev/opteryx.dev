@@ -55,7 +55,7 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 
 ## Date & Time Functions
 
-For more details, see [Working with Timestamps](../adv-working-with-timestamps//).
+For more details, see [Working with Timestamps](../adv-working-with-timestamps/).
 
 !!! function "`current_date` → _timestamp_"  
     Return the current date, in UTC. Note `current_date` does not require parenthesis.  
