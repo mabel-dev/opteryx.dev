@@ -1829,15 +1829,15 @@ Related: <code>LOWER</code>, <code>TITLE</code>.</p>
 <h2 id="struct-functions">Struct Functions</h2>
 <p>For more details, see <a href="../Working%20with%20SQL/30%20Working%20with%20Structs/">Working with Structs</a>.</p>
 <div class="admonition function">
-<p class="admonition-title"><strong>object</strong>: <em>struct</em><code>[</code><strong>key</strong>: <em>varchar</em><code>]</code> → <strong>value</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><strong>object</strong>: <em>struct</em><code>[</code><strong>key</strong>: <em>varchar</em><code>]</code> → <em>value</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Subscript operator, return the value for <strong>key</strong> from <strong>object</strong>. </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GET</code> (<strong>object</strong>: <em>struct</em>, <strong>key</strong>: <em>varchar</em>) → <strong>value</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>GET</code> (<strong>object</strong>: <em>struct</em>, <strong>key</strong>: <em>varchar</em>) → <em>value</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Alias of <strong>object</strong><code>[</code><strong>key</strong><code>]</code>.  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>SEARCH</code> (<strong>object</strong>: <em>struct</em>, <strong>value</strong>: <em>varchar</em>) → <strong>boolean</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>SEARCH</code> (<strong>object</strong>: <em>struct</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Return <code>true</code> if any of the values in <strong>object</strong> is <strong>value</strong>. Note <code>SEARCH</code> does not match struct keys.</p>
 </div>
 <h2 id="system-functions">System Functions</h2>
@@ -1906,11 +1906,11 @@ Related: <code>HEX_ENCODE</code>.</p>
 Related: <code>HEX_DECODE</code>.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>IIF</code> (<strong>condition</strong>, <strong>true_value</strong>, <strong>false_value</strong>) → <em>[input type]</em></p>
+<p class="admonition-title"><code>IIF</code> (<strong>condition</strong>, <strong>true_value</strong>, <strong>false_value</strong>) → <em>input type</em></p>
 <p>Return the <strong>true_value</strong> if the condition evaluates to <code>True</code>, otherwise return the <strong>false_value</strong>.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>IFNULL</code> (<strong>check_expression</strong>: <em>any</em>, <strong>replacement_value</strong>: <em>any</em>) → <em>[input type]</em></p>
+<p class="admonition-title"><code>IFNULL</code> (<strong>check_expression</strong>: <em>any</em>, <strong>replacement_value</strong>: <em>any</em>) → <em>input type</em></p>
 <p>Returns <strong>check_expression</strong> if not <code>null</code>, otherwise returns <strong>replacement_value</strong>.
 Related: <code>COALESCE</code>. </p>
 </div>
@@ -1919,7 +1919,7 @@ Related: <code>COALESCE</code>. </p>
 <p>Random number from a normal (Gaussian) distribution; distribution is centred at 0.0 and has a standard deviation of 1.0. Per record.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>NULLIF</code> (<strong>value1</strong>: <em>any</em>, <strong>value2</strong>: <em>any</em>) → <em>[input type]</em></p>
+<p class="admonition-title"><code>NULLIF</code> (<strong>value1</strong>: <em>any</em>, <strong>value2</strong>: <em>any</em>) → <em>input type</em></p>
 <p>Returns <code>null</code> if <strong>value1</strong> equals <strong>value2</strong>, otherwise returns <strong>value1</strong>. </p>
 </div>
 <div class="admonition function">
@@ -1932,7 +1932,7 @@ Related: <code>COALESCE</code>. </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>RANDOM</code> () → <em>numeric</em></p>
-<p>Alias of <code>RAND</code>().</p>
+<p>Alias of <code>RAND</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>RANDOM_STRING</code> (<strong>length</strong>: <em>numeric</em>) → <em>varchar</em></p>
