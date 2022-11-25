@@ -357,13 +357,13 @@ Functions for examining and manipulating string values.
 
 For more details, see [Working with Structs](../Working%20with%20SQL/30%20Working%20with%20Structs/).
 
-!!! function "**object**: _struct_`[`**key**: _varchar_`]` → **value** _ :octicons-dot-16:"  
+!!! function "**object**: _struct_`[`**key**: _varchar_`]` → **value** :octicons-dot-16:"  
     Subscript operator, return the value for **key** from **object**. 
 
-!!! function "`GET` (**object**: _struct_, **key**: _varchar_) → **value** _ :octicons-dot-16:"  
+!!! function "`GET` (**object**: _struct_, **key**: _varchar_) → **value** :octicons-dot-16:"  
     Alias of **object**`[`**key**`]`.  
 
-!!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → **boolean** _ :octicons-dot-16:"  
+!!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → **boolean** :octicons-dot-16:"  
     Return `true` if any of the values in **object** is **value**. Note `SEARCH` does not match struct keys.
 
 ## System Functions
