@@ -14,7 +14,7 @@ New functions for this version are annotated with the :octicons-star-16: icon.
     Cast **any** to a `BOOLEAN`, raises an error if cast is not possible. Note `BOOLEAN` does not require parenthesis, however any aliases do.      
     Alias for `CAST`(**any** AS BOOLEAN).   
 
-!!! function "`CAST` (**any**: _any_ AS **type**) → _[type]_"  
+!!! function "`CAST` (**any**: _any_ AS **type**) → _type_"  
     Cast **any** to **type**, raises an error if cast is not possible.   
     Also implemented as individual cast functions.
 
@@ -33,7 +33,7 @@ New functions for this version are annotated with the :octicons-star-16: icon.
     Cast **any** to a floating point number, raises an error if cast is not possible. Note `NUMERIC` does not require parenthesis, however any aliases do.   
     Alias for `CAST`(**any** AS NUMERIC).   
 
-!!! function "`SAFE_CAST` (**any**: _any_ AS **type**) → _[type]_"    
+!!! function "`SAFE_CAST` (**any**: _any_ AS **type**) → _type_"    
     Alias for `TRY_CAST`(**any** AS **type**).  
 
 !!! function "`STR` (**any**: _any_) → _varchar_"     
@@ -46,7 +46,7 @@ New functions for this version are annotated with the :octicons-star-16: icon.
     Cast an [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format string to a timestamp, raises an error if cast is not possible. Note `TIMESTAMP` does not require parenthesis, however any aliases do.    
     Alias for `CAST`(**iso8601** AS TIMESTAMP).   
 
-!!! function "`TRY_CAST` (**any**: _any_ AS **type**) → _[type]_"  
+!!! function "`TRY_CAST` (**any**: _any_ AS **type**) → _type_"  
     Cast **any** to **type**, if cast is not possible, returns `null`.   
 
 !!! function "`VARCHAR` (_any_) → _varchar_"  
