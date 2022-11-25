@@ -357,13 +357,13 @@ Functions for examining and manipulating string values.
 
 For more details, see [Working with Structs](../Working%20with%20SQL/30%20Working%20with%20Structs/).
 
-!!! function "**object**: _struct_`[`**key**: _varchar_`]` → **value** :octicons-dot-16:"  
+!!! function "**object**: _struct_`[`**key**: _varchar_`]` → _value_ :octicons-dot-16:"  
     Subscript operator, return the value for **key** from **object**. 
 
-!!! function "`GET` (**object**: _struct_, **key**: _varchar_) → **value** :octicons-dot-16:"  
+!!! function "`GET` (**object**: _struct_, **key**: _varchar_) → _value_ :octicons-dot-16:"  
     Alias of **object**`[`**key**`]`.  
 
-!!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → **boolean** :octicons-dot-16:"  
+!!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → _boolean_ :octicons-dot-16:"  
     Return `true` if any of the values in **object** is **value**. Note `SEARCH` does not match struct keys.
 
 ## System Functions
@@ -419,17 +419,17 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
     Encode **str** with hexadecimal (BASE16) encoding.  
     Related: `HEX_DECODE`.
 
-!!! function "`IIF` (**condition**, **true_value**, **false_value**) → _[input type]_"  
+!!! function "`IIF` (**condition**, **true_value**, **false_value**) → _input type_"  
     Return the **true_value** if the condition evaluates to `True`, otherwise return the **false_value**.
 
-!!! function "`IFNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _[input type]_"  
+!!! function "`IFNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _input type_"  
     Returns **check_expression** if not `null`, otherwise returns **replacement_value**.
     Related: `COALESCE`. 
 
 !!! function "`NORMAL` () → _numeric_"  
     Random number from a normal (Gaussian) distribution; distribution is centred at 0.0 and has a standard deviation of 1.0. Per record.
 
-!!! function "`NULLIF` (**value1**: _any_, **value2**: _any_) → _[input type]_"  
+!!! function "`NULLIF` (**value1**: _any_, **value2**: _any_) → _input type_"  
     Returns `null` if **value1** equals **value2**, otherwise returns **value1**. 
 
 !!! function "`MD5` (**str**: _varchar_) → _varchar_"  
@@ -439,7 +439,7 @@ For more details, see [Working with Structs](../Working%20with%20SQL/30%20Workin
     Returns a random number between 0 and 1. Per record.
 
 !!! function "`RANDOM` () → _numeric_"  
-    Alias of `RAND`().
+    Alias of `RAND`.
 
 !!! function "`RANDOM_STRING` (**length**: _numeric_) → _varchar_"  
     Returns a random string of lowercase alphabetic characters with a length of **length**. Per record.
