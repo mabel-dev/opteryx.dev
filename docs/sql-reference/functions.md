@@ -158,7 +158,7 @@ These are functions that are called similar to comparison operators:
 
 ## List Functions
 
-For more details, see [Working with Lists](../Working%20with%20SQL/20%20Working%20with%20Lists/).
+For more details, see [Working with Lists](../adv-working-with-lists/).
 
 !!! function "**array**: _list_`[`**index**: _numeric_`]` → _value_:octicons-dot-16:"  
     Return the **index**th element from **array**. 
@@ -355,7 +355,7 @@ Functions for examining and manipulating string values.
 
 ## Struct Functions
 
-For more details, see [Working with Structs](../Working%20with%20SQL/30%20Working%20with%20Structs/).
+For more details, see [Working with Structs](../adv-working-with-structs/).
 
 !!! function "**object**: _struct_`[`**key**: _varchar_`]` → _value_:octicons-dot-16:"  
     Subscript operator, return the value for **key** from **object**. 
