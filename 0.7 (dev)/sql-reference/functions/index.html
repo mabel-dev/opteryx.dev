@@ -1401,7 +1401,7 @@
 <div class="admonition function">
 <p class="admonition-title"><code>BOOLEAN</code> <strong>any</strong>: <em>any</em> → <em>boolean</em></p>
 <p>Cast <strong>any</strong> to a <code>BOOLEAN</code>, raises an error if cast is not possible. Note <code>BOOLEAN</code> does not require parenthesis, however any aliases do.    <br />
-Alias for <code>CAST</code>(<strong>any</strong> AS BOOLEAN).   </p>
+Alias for <code>CAST</code>(<strong>any</strong> AS BOOLEAN)   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>CAST</code> (<strong>any</strong>: <em>any</em> AS <strong>type</strong>) → <em>type</em></p>
@@ -1410,7 +1410,7 @@ Also implemented as individual cast functions.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>INT</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Alias for <code>INTEGER</code>.</p>
+<p>Alias for <code>INTEGER</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>INTEGER</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
@@ -1425,11 +1425,11 @@ Also implemented as individual cast functions.</p>
 <div class="admonition function">
 <p class="admonition-title"><code>NUMERIC</code> <strong>any</strong>: <em>any</em> → <em>numeric</em></p>
 <p>Cast <strong>any</strong> to a floating point number, raises an error if cast is not possible. Note <code>NUMERIC</code> does not require parenthesis, however any aliases do. <br />
-Alias for <code>CAST</code>(<strong>any</strong> AS NUMERIC).   </p>
+Alias for <code>CAST</code>(<strong>any</strong> AS NUMERIC)   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SAFE_CAST</code> (<strong>any</strong>: <em>any</em> AS <strong>type</strong>) → <em>type</em></p>
-<p>Alias for <code>TRY_CAST</code>(<strong>any</strong> AS <strong>type</strong>).  </p>
+<p>Alias for <code>TRY_CAST</code>(<strong>any</strong> AS <strong>type</strong>)  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>STR</code> (<strong>any</strong>: <em>any</em>) → <em>varchar</em></p>
@@ -1442,7 +1442,7 @@ Alias for <code>CAST</code>(<strong>any</strong> AS NUMERIC).   </p>
 <div class="admonition function">
 <p class="admonition-title"><code>TIMESTAMP</code> <strong>iso8601</strong>: <em>varchar</em> → <em>timestamp</em></p>
 <p>Cast an <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format string to a timestamp, raises an error if cast is not possible. Note <code>TIMESTAMP</code> does not require parenthesis, however any aliases do.  <br />
-Alias for <code>CAST</code>(<strong>iso8601</strong> AS TIMESTAMP).   </p>
+Alias for <code>CAST</code>(<strong>iso8601</strong> AS TIMESTAMP)   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TRY_CAST</code> (<strong>any</strong>: <em>any</em> AS <strong>type</strong>) → <em>type</em></p>
@@ -1451,7 +1451,7 @@ Alias for <code>CAST</code>(<strong>iso8601</strong> AS TIMESTAMP).   </p>
 <div class="admonition function">
 <p class="admonition-title"><code>VARCHAR</code> (<em>any</em>) → <em>varchar</em></p>
 <p>Cast <strong>any</strong> to a string, raises an error if cast is not possible.<br />
-Alias for <code>CAST</code>(<strong>any</strong> AS VARCHAR).</p>
+Alias for <code>CAST</code>(<strong>any</strong> AS VARCHAR)</p>
 </div>
 <h2 id="date-time-functions">Date &amp; Time Functions</h2>
 <p>For more details, see <a href="../adv-working-with-timestamps//">Working with Timestamps</a>.</p>
@@ -1473,7 +1473,7 @@ Alias for <code>CAST</code>(<strong>any</strong> AS VARCHAR).</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>DATEPART</code>(<strong>unit</strong>: <em>varchar</em>, <strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
-<p>Alias of <code>EXTRACT</code>(<strong>unit</strong> FROM <strong>ts</strong>).</p>
+<p>Alias of <code>EXTRACT</code>(<strong>unit</strong> FROM <strong>ts</strong>)</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>DATE_TRUNC</code> (<strong>unit</strong>: <em>varchar</em>, <strong>ts</strong>: <em>timestamp</em>) → <em>varchar</em></p>
@@ -1494,11 +1494,11 @@ Also implemented as individual extraction functions.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>NOW</code> () → <em>timestamp</em></p>
-<p>Alias for <code>current_time</code>.</p>
+<p>Alias for <code>current_time</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TIME</code> () → <em>timestamp</em></p>
-<p>Current Time (UTC).     </p>
+<p>Returns the current iime (UTC).     </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TIME_BUCKET</code> (<em>timestamp</em>, <strong>multiple</strong>: <em>numeric</em>, <strong>unit</strong>: <em>varchar</em>) → <em>timestamp</em></p>
@@ -1506,12 +1506,12 @@ Also implemented as individual extraction functions.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TODAY</code> () → <em>timestamp</em></p>
-<p>Alias for <code>current_date</code>.</p>
+<p>Alias for <code>current_date</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>HOUR</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
 <p>Returns the hour of the day from <strong>ts</strong>. The value ranges from <code>0</code> to <code>23</code>. <br />
-Alias for <code>EXTRACT</code>(hour FROM <strong>ts</strong>).</p>
+Alias for <code>EXTRACT</code>(hour FROM <strong>ts</strong>)</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>MINUTE</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
@@ -1584,35 +1584,35 @@ Alias for <code>EXTRACT</code>(year FROM <strong>ts</strong>)</p>
 <h2 id="list-functions">List Functions</h2>
 <p>For more details, see <a href="../Working%20with%20SQL/20%20Working%20with%20Lists/">Working with Lists</a>.</p>
 <div class="admonition function">
-<p class="admonition-title"><strong>array</strong>: <em>list</em><code>[</code><strong>index</strong>: <em>numeric</em><code>]</code> → <strong>value</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><strong>array</strong>: <em>list</em><code>[</code><strong>index</strong>: <em>numeric</em><code>]</code> → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Return the <strong>index</strong>th element from <strong>array</strong>. </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GET</code> (<strong>array</strong>: <em>list</em>, <strong>index</strong>: <em>numeric</em>) → <strong>value</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
-<p>Alias of <strong>array</strong><code>[</code><strong>index</strong><code>]</code>.  </p>
+<p class="admonition-title"><code>GET</code> (<strong>array</strong>: <em>list</em>, <strong>index</strong>: <em>numeric</em>) → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p>Alias of <strong>array</strong><code>[</code><strong>index</strong><code>]</code>  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GREATEST</code> (<strong>array</strong>: <em>list</em>) → <strong>value</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>GREATEST</code> (<strong>array</strong>: <em>list</em>) → <em>value</em></p>
 <p>Return the greatest value in <strong>array</strong>.<br />
-Related: <code>LEAST</code>.</p>
+Related: <code>LEAST</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>LEAST</code> (<strong>array</strong>: <em>list</em>) → <strong>value</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>LEAST</code> (<strong>array</strong>: <em>list</em>) → <em>value</em></p>
 <p>Return the smallest value in <strong>array</strong>.<br />
-Related: <code>GREATEST</code>.</p>
+Related: <code>GREATEST</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>LEN</code> (<strong>array</strong>: <em>list</em>) → <em>numeric</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
-<p>Alias of <code>LENGTH</code>(<strong>array</strong>).</p>
+<p class="admonition-title"><code>LEN</code> (<strong>array</strong>: <em>list</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p>Alias of <code>LENGTH</code>(<strong>array</strong>)</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>LENGTH</code> (<strong>array</strong>: <em>list</em>) → <em>numeric</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>LENGTH</code> (<strong>array</strong>: <em>list</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Returns the number of elements in <strong>array</strong>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LIST_CONTAINS</code> (<strong>array</strong>: <em>list</em>, <strong>value</strong>) → <em>boolean</em></p>
 <p>Return <code>true</code> if <strong>array</strong> contains <strong>value</strong>.<br />
-See also <code>SEARCH</code>(<strong>array</strong>, <strong>value</strong>).  </p>
+See also <code>SEARCH</code>(<strong>array</strong>, <strong>value</strong>)  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LIST_CONTAINS_ANY</code> (<strong>array</strong>: <em>list</em>, <strong>values</strong>: <em>list</em>) → <em>boolean</em></p>
@@ -1623,7 +1623,7 @@ See also <code>SEARCH</code>(<strong>array</strong>, <strong>value</strong>).  <
 <p>Return <code>true</code> if <strong>array</strong> contains all of elements in <strong>values</strong>.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>SEARCH</code> (<strong>array</strong>: <em>list</em>, <strong>value</strong>) → <em>boolean</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>SEARCH</code> (<strong>array</strong>: <em>list</em>, <strong>value</strong>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Return <code>true</code> if <strong>array</strong> contains <strong>value</strong>. </p>
 </div>
 <div class="admonition function">
@@ -1633,7 +1633,7 @@ See also <code>SEARCH</code>(<strong>array</strong>, <strong>value</strong>).  <
 <h2 id="numeric-functions">Numeric Functions</h2>
 <div class="admonition function">
 <p class="admonition-title"><code>ABS</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Alias of <code>ABSOLUTE</code>.  </p>
+<p>Alias of <code>ABSOLUTE</code>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>ABSOLUTE</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
@@ -1641,7 +1641,7 @@ See also <code>SEARCH</code>(<strong>array</strong>, <strong>value</strong>).  <
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>CEIL</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Alias of <code>CEILING</code>.  </p>
+<p>Alias of <code>CEILING</code>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>CEILING</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
@@ -1672,29 +1672,29 @@ Related: <code>LN</code>.</p>
 <div class="admonition function">
 <p class="admonition-title"><code>LN</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
 <p>Returns the natural logarithm of <strong>x</strong>.<br />
-Related: <code>E</code>, <code>LOG</code>, <code>LOG10</code>, <code>LOG2</code>.</p>
+Related: <code>E</code>, <code>LOG</code>, <code>LOG10</code>, <code>LOG2</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LOG</code> (<strong>x</strong>: <em>numeric</em>, <strong>base</strong>: <em>numeric</em>) → <em>numeric</em></p>
 <p>Returns the logarithm of <strong>x</strong> for base <strong>base</strong>. <br />
-Related: <code>LN</code>, <code>LOG10</code>, <code>LOG2</code>.</p>
+Related: <code>LN</code>, <code>LOG10</code>, <code>LOG2</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LOG10</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
 <p>Returns the logarithm for base 10 of <strong>x</strong>.<br />
-Related: <code>LN</code>, <code>LOG</code>, <code>LOG2</code>.</p>
+Related: <code>LN</code>, <code>LOG</code>, <code>LOG2</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LOG2</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
 <p>Returns the logarithm for base 2 of <strong>x</strong>.<br />
-Related: <code>LN</code>, <code>LOG</code>, <code>LOG10</code>.</p>
+Related: <code>LN</code>, <code>LOG</code>, <code>LOG10</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>ROUND</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>ROUND</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Returns <strong>x</strong> rounded to the nearest integer. </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>ROUND</code> (<strong>x</strong>: <em>numeric</em>, <strong>places</strong>: <em>numeric</em>) → <em>numeric</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>ROUND</code> (<strong>x</strong>: <em>numeric</em>, <strong>places</strong>: <em>numeric</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Returns <strong>x</strong> rounded to <strong>places</strong> decimal places.</p>
 </div>
 <div class="admonition function">
@@ -1703,7 +1703,7 @@ Related: <code>LN</code>, <code>LOG</code>, <code>LOG10</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SIGNUM</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Alias for <code>SIGN</code>.</p>
+<p>Alias for <code>SIGN</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SQRT</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
@@ -1711,7 +1711,7 @@ Related: <code>LN</code>, <code>LOG</code>, <code>LOG10</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TRUNC</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Alias of <code>TRUNCATE</code>.  </p>
+<p>Alias of <code>TRUNCATE</code>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TRUNCATE</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
@@ -1720,27 +1720,27 @@ Related: <code>LN</code>, <code>LOG</code>, <code>LOG10</code>.</p>
 <h2 id="string-functions">String Functions</h2>
 <p>Functions for examining and manipulating string values. </p>
 <div class="admonition function">
-<p class="admonition-title"><strong>str</strong>: <em>varchar</em><code>[</code><strong>index</strong>: <em>numeric</em><code>]</code> → <em>varchar</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><strong>str</strong>: <em>varchar</em><code>[</code><strong>index</strong>: <em>numeric</em><code>]</code> → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Subscript operator, return the <strong>index</strong>th character from <strong>str</strong>. </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>CONCAT</code> (<strong>list</strong>: <em>array</em>&lt;<em>varchar</em>&gt;) → <em>varchar</em></p>
 <p>Returns the result of concatenating, or joining, of two or more string values in an end-to-end manner.<br />
-Related: <code>CONCAT_WS</code>.</p>
+Related: <code>CONCAT_WS</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>CONCAT_WS</code> (<strong>separator</strong>: <em>varchar</em>, <strong>list</strong>: <em>array</em>&lt;<em>varchar</em>&gt;) → <em>varchar</em></p>
 <p>Returns the result of concatenating, or joining, of two or more string values with a <strong>separator</strong> used to delimit individual values.<br />
-Related: <code>CONCAT</code>.</p>
+Related: <code>CONCAT</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>ENDS_WITH</code> (<strong>str</strong>: <em>varchar</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em></p>
 <p>Return <code>true</code> if <strong>str</strong> ends with <strong>value</strong>.<br />
-Related: <code>STARTS_WITH</code>.</p>
+Related: <code>STARTS_WITH</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GET</code> (<strong>str</strong>: <em>varchar</em>, <strong>index</strong>: <em>numeric</em>) → <em>varchar</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
-<p>Alias of <strong>str</strong><code>[</code><strong>index</strong><code>]</code>.   </p>
+<p class="admonition-title"><code>GET</code> (<strong>str</strong>: <em>varchar</em>, <strong>index</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p>Alias of <strong>str</strong><code>[</code><strong>index</strong><code>]</code>   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LEFT</code> (<strong>str</strong>: <em>varchar</em>, <strong>n</strong>: <em>numeric</em>) → <em>varchar</em></p>
@@ -1748,23 +1748,23 @@ Related: <code>STARTS_WITH</code>.</p>
 Related: <code>RIGHT</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>LEN</code> (<strong>str</strong>: <em>varchar</em>) → <em>numeric</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>LEN</code> (<strong>str</strong>: <em>varchar</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Alias of <code>LENGTH</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>LENGTH</code> (<strong>str</strong>: <em>varchar</em>) → <em>numeric</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>LENGTH</code> (<strong>str</strong>: <em>varchar</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Returns the length of <strong>str</strong> in characters.    </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LOWER</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Converts <strong>str</strong> to lowercase. <br />
-Related: <code>UPPER</code>, <code>TITLE</code>.</p>
+Related: <code>UPPER</code>, <code>TITLE</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LTRIM</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694v.001z"/></svg></span> New in 0.7</strong> <br />
 Remove leading whitespace from <strong>str</strong>. <br />
-Related: <code>RTRIM</code>, <code>TRIM</code>.</p>
+Related: <code>RTRIM</code>, <code>TRIM</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>POSITION</code> (<strong>substring</strong>: <em>varchar</em> IN <strong>string</strong>: <em>varchar</em>) → <em>numeric</em></p>
@@ -1778,28 +1778,28 @@ Returns the starting position of the first instance of <strong>substring</strong
 <div class="admonition function">
 <p class="admonition-title"><code>RIGHT</code> (<strong>str</strong>: <em>varchar</em>, <strong>n</strong>: <em>numeric</em>) → <em>varchar</em></p>
 <p>Extract the right-most <strong>n</strong> characters of <strong>str</strong>. <br />
-Related: <code>LEFT</code>.</p>
+Related: <code>LEFT</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>RTRIM</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694v.001z"/></svg></span> New in 0.7</strong> <br />
 Remove trailing whitespace from <strong>str</strong>. <br />
-Related: <code>LTRIM</code>, <code>TRIM</code>.</p>
+Related: <code>LTRIM</code>, <code>TRIM</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SOUNDEX</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Returns a character string containing the phonetic representation of char. See <a href="https://en.wikipedia.org/wiki/Soundex">Soundex 🡕</a>.   </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>SEARCH</code> (<strong>str</strong>: <em>varchar</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
-<p>Return <code>true</code> if <strong>str</strong> contains <strong>value</strong>.  </p>
+<p class="admonition-title"><code>SEARCH</code> (<strong>str</strong>: <em>varchar</em>, <strong>substring</strong>: <em>varchar</em>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p>Return <code>true</code> if <strong>str</strong> contains <strong>substring</strong>.  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>SUBSTRING</code> (<strong>str</strong>: <em>varchar</em>, <strong>start</strong>: <em>numeric</em>) → <em>varchar</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>SUBSTRING</code> (<strong>str</strong>: <em>varchar</em>, <strong>start</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Return substring from a string from <strong>start</strong> position to the end of <strong>str</strong>.  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>SUBSTRING</code> (<strong>str</strong>: <em>varchar</em>, <strong>start</strong>: <em>numeric</em>, <strong>length</strong>: <em>numeric</em>) → <em>varchar</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>SUBSTRING</code> (<strong>str</strong>: <em>varchar</em>, <strong>start</strong>: <em>numeric</em>, <strong>length</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Return substring from a string from <strong>start</strong> position for <strong>length</strong> characters.  </p>
 </div>
 <div class="admonition function">
@@ -1810,7 +1810,7 @@ Related: <code>ENDS_WITH</code></p>
 <div class="admonition function">
 <p class="admonition-title"><code>TITLE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Returns <strong>str</strong> with the first letter of each work in upper case. <br />
-Related: <code>LOWER</code>, <code>UPPER</code>.</p>
+Related: <code>LOWER</code>, <code>UPPER</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TRIM</code> ( [ LEADING | TRAILING | BOTH ] [ <strong>chars</strong>: <em>varchar</em> FROM ] <strong>str</strong>: <em>varchar</em> ) → <em>varchar</em></p>
@@ -1819,25 +1819,25 @@ Removes leading and trailing <strong>chars</strong> from <strong>str</strong>, i
 The <strong>LEADING</strong> modifier removes <strong>chars</strong> from the start of <strong>str</strong>. <br />
 The <strong>TRAILING</strong> modifier removes <strong>chars</strong> from the end of <strong>str</strong>.  <br />
 The <strong>BOTH</strong> modifier removes <strong>chars</strong> from both the start and end of <strong>str</strong>, this is the default behaviour if no positional modifier is supplied. <br />
-Related: <code>LTRIM</code>, <code>RTRIM</code>.</p>
+Related: <code>LTRIM</code>, <code>RTRIM</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>UPPER</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Converts <strong>str</strong> to uppercase. <br />
-Related: <code>LOWER</code>, <code>TITLE</code>.</p>
+Related: <code>LOWER</code>, <code>TITLE</code></p>
 </div>
 <h2 id="struct-functions">Struct Functions</h2>
 <p>For more details, see <a href="../Working%20with%20SQL/30%20Working%20with%20Structs/">Working with Structs</a>.</p>
 <div class="admonition function">
-<p class="admonition-title"><strong>object</strong>: <em>struct</em><code>[</code><strong>key</strong>: <em>varchar</em><code>]</code> → <em>value</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><strong>object</strong>: <em>struct</em><code>[</code><strong>key</strong>: <em>varchar</em><code>]</code> → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Subscript operator, return the value for <strong>key</strong> from <strong>object</strong>. </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GET</code> (<strong>object</strong>: <em>struct</em>, <strong>key</strong>: <em>varchar</em>) → <em>value</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
-<p>Alias of <strong>object</strong><code>[</code><strong>key</strong><code>]</code>.  </p>
+<p class="admonition-title"><code>GET</code> (<strong>object</strong>: <em>struct</em>, <strong>key</strong>: <em>varchar</em>) → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p>Alias of <strong>object</strong><code>[</code><strong>key</strong><code>]</code>  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>SEARCH</code> (<strong>object</strong>: <em>struct</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>SEARCH</code> (<strong>object</strong>: <em>struct</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Return <code>true</code> if any of the values in <strong>object</strong> is <strong>value</strong>. Note <code>SEARCH</code> does not match struct keys.</p>
 </div>
 <h2 id="system-functions">System Functions</h2>
@@ -1849,46 +1849,46 @@ Related: <code>LOWER</code>, <code>TITLE</code>.</p>
 <div class="admonition function">
 <p class="admonition-title"><code>BASE64_DECODE</code>  (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Decode BASE64 encoded value, <strong>str</strong>. 
-Related: <code>BASE64_ENCODE</code>.</p>
+Related: <code>BASE64_ENCODE</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>BASE64_ENCODE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Encode <strong>str</strong> with BASE64 encoding.<br />
-Related: <code>BASE64_DECODE</code>.</p>
+Related: <code>BASE64_DECODE</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>BASE85_DECODE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Decode BASE85 encoded value, <strong>str</strong>. 
-Related: <code>BASE85_ENCODE</code>.</p>
+Related: <code>BASE85_ENCODE</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>BASE85_ENCODE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Encode <strong>str</strong> with BASE85 encoding.<br />
-Related: <code>BASE85_DECODE</code>.</p>
+Related: <code>BASE85_DECODE</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>COALESCE</code> (<strong>arg1</strong>, <strong>arg2</strong>, ...) → <em>[input type]</em></p>
+<p class="admonition-title"><code>COALESCE</code> (<strong>arg1</strong>, <strong>arg2</strong>, ...) → <em>value</em></p>
 <p>Return the first item from args which is not <code>null</code>.  <br />
-Related: <code>IFNULL</code>.</p>
+Related: <code>IFNULL</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>stop</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>stop</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Return a numeric list between 1 and <strong>stop</strong>, with a step of 1.  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Return a numeric list between <strong>start</strong> and <strong>stop</strong>, with a step of 1.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>, <strong>step</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>, <strong>step</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Return a numeric list between <strong>start</strong> and <strong>stop</strong>, with an increment of <strong>step</strong>.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>timestamp</em>, <strong>stop</strong>: <em>timestamp</em>, <em>interval</em>) → <em>list</em>&lt;<em>timestamp</em>&gt; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>timestamp</em>, <strong>stop</strong>: <em>timestamp</em>, <em>interval</em>) → <em>list</em>&lt;<em>timestamp</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Return a timestamp list between <strong>start</strong> and <strong>stop</strong>, with a interval of <strong>step</strong>.    </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>cidr</strong>: <em>varchar</em>) → <em>list</em>&lt;<em>varchar</em>&gt; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>cidr</strong>: <em>varchar</em>) → <em>list</em>&lt;<em>varchar</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Return a list of IP addresses from a given <strong>cidr</strong>.   </p>
 </div>
 <div class="admonition function">
@@ -1898,12 +1898,12 @@ Related: <code>IFNULL</code>.</p>
 <div class="admonition function">
 <p class="admonition-title"><code>HEX_DECODE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Decode hexidecimal (BASE16) encoded value, <strong>str</strong>.  <br />
-Related: <code>HEX_ENCODE</code>.</p>
+Related: <code>HEX_ENCODE</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>HEX_ENCODE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Encode <strong>str</strong> with hexadecimal (BASE16) encoding.<br />
-Related: <code>HEX_DECODE</code>.</p>
+Related: <code>HEX_DECODE</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>IIF</code> (<strong>condition</strong>, <strong>true_value</strong>, <strong>false_value</strong>) → <em>input type</em></p>
@@ -1912,7 +1912,7 @@ Related: <code>HEX_DECODE</code>.</p>
 <div class="admonition function">
 <p class="admonition-title"><code>IFNULL</code> (<strong>check_expression</strong>: <em>any</em>, <strong>replacement_value</strong>: <em>any</em>) → <em>input type</em></p>
 <p>Returns <strong>check_expression</strong> if not <code>null</code>, otherwise returns <strong>replacement_value</strong>.
-Related: <code>COALESCE</code>. </p>
+Related: <code>COALESCE</code> </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>NORMAL</code> () → <em>numeric</em></p>
@@ -1932,7 +1932,7 @@ Related: <code>COALESCE</code>. </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>RANDOM</code> () → <em>numeric</em></p>
-<p>Alias of <code>RAND</code>.</p>
+<p>Alias of <code>RAND</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>RANDOM_STRING</code> (<strong>length</strong>: <em>numeric</em>) → <em>varchar</em></p>
@@ -1941,27 +1941,27 @@ Related: <code>COALESCE</code>. </p>
 <div class="admonition function">
 <p class="admonition-title"><code>SHA1</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Calculate the SHA1 hash of <strong>str</strong>.<br />
-Related: <code>SHA224</code>, <code>SHA256</code>, <code>SHA384</code>, <code>SHA512</code>.</p>
+Related: <code>SHA224</code>, <code>SHA256</code>, <code>SHA384</code>, <code>SHA512</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SHA224</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Calculate the SHA224 hash of <strong>str</strong>.<br />
-Related: <code>SHA1</code>, <code>SHA256</code>, <code>SHA384</code>, <code>SHA512</code>.</p>
+Related: <code>SHA1</code>, <code>SHA256</code>, <code>SHA384</code>, <code>SHA512</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SHA256</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Calculate the SHA256 hash of <strong>str</strong>.<br />
-Related: <code>SHA1</code>, <code>SHA224</code>, <code>SHA384</code>, <code>SHA512</code>.</p>
+Related: <code>SHA1</code>, <code>SHA224</code>, <code>SHA384</code>, <code>SHA512</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SHA384</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Calculate the SHA384 hash of <strong>stre</strong>.<br />
-Related: <code>SHA1</code>, <code>SHA224</code>, <code>SHA256</code>, <code>SHA512</code>.</p>
+Related: <code>SHA1</code>, <code>SHA224</code>, <code>SHA256</code>, <code>SHA512</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SHA512</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
 <p>Calculate the SHA512 hash of <strong>str</strong>.<br />
-Related: <code>SHA1</code>, <code>SHA224</code>, <code>SHA256</code>, <code>SHA384</code>.</p>
+Related: <code>SHA1</code>, <code>SHA224</code>, <code>SHA256</code>, <code>SHA384</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>UNNEST</code> (<strong>array</strong>: <em>list</em>) → <em>relation</em></p>
