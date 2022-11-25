@@ -1829,15 +1829,15 @@ Related: <code>LOWER</code>, <code>TITLE</code>.</p>
 <h2 id="struct-functions">Struct Functions</h2>
 <p>For more details, see <a href="../Working%20with%20SQL/30%20Working%20with%20Structs/">Working with Structs</a>.</p>
 <div class="admonition function">
-<p class="admonition-title"><strong>object</strong>: <em>struct</em><code>[</code><strong>key</strong>: <em>varchar</em><code>]</code> → <strong>value</strong> _ <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><strong>object</strong>: <em>struct</em><code>[</code><strong>key</strong>: <em>varchar</em><code>]</code> → <strong>value</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Subscript operator, return the value for <strong>key</strong> from <strong>object</strong>. </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GET</code> (<strong>object</strong>: <em>struct</em>, <strong>key</strong>: <em>varchar</em>) → <strong>value</strong> _ <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>GET</code> (<strong>object</strong>: <em>struct</em>, <strong>key</strong>: <em>varchar</em>) → <strong>value</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Alias of <strong>object</strong><code>[</code><strong>key</strong><code>]</code>.  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>SEARCH</code> (<strong>object</strong>: <em>struct</em>, <strong>value</strong>: <em>varchar</em>) → <strong>boolean</strong> _ <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p class="admonition-title"><code>SEARCH</code> (<strong>object</strong>: <em>struct</em>, <strong>value</strong>: <em>varchar</em>) → <strong>boolean</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
 <p>Return <code>true</code> if any of the values in <strong>object</strong> is <strong>value</strong>. Note <code>SEARCH</code> does not match struct keys.</p>
 </div>
 <h2 id="system-functions">System Functions</h2>
