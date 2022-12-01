@@ -26,12 +26,12 @@ Opteryx can be installed and deployed on a number of different platforms. It has
 
 The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.8, 3.9 and 3.10. The below table shows regression suite coverage:
 
-OS                | Python 3.8 | Python 3.9 | Python 3.10 
------------------ | :--------: | :--------: | :---------: 
-MacOS (x86/Intel) | Partial    | Partial    | Partial     
-Windows (x86)     | Partial    | Partial    | Partial     
-Ubuntu (x86)      | Full       | Full       | Full        
-Debian (ARM)      | None       | Partial    | None        
+OS                | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11 |
+----------------- | :--------: | :--------: | :---------: | :---------: |
+MacOS (x86/Intel) | Partial    | Partial    | Partial     | None
+Windows (x86)     | Partial    | Partial    | Partial     | None
+Ubuntu (x86)      | Full       | Full       | Full        | Full
+Debian (ARM)      | None       | Partial    | None        | None
 
 <!---
 MacOS (ARM/M1)    | None       | None       | None        
@@ -44,7 +44,6 @@ Windows (ARM)     | None       | None       | None
 !!! Note
     - Windows (x86) regression suite fails some tests due to issues with Apache Arrow.
     - PyPy regression suite fails due to issues with Apache Arrow.
-    - Python 3.11 regression suite fails due to issues with Apache Arrow.
     - MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.
     - Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.
     - Partial coverage is primarily due to testing platform constraints, not core-compatibility issues.
@@ -53,7 +52,7 @@ Windows (ARM)     | None       | None       | None
 
 **Recommended Version**: 3.9
 
-Opteryx supports Python versions 3.8, 3.9 and 3.10.
+Opteryx supports Python versions 3.8, 3.9, 3.10 and 3.11.
 
 Opteryx has builds for Python 3.8, 3.9 and 3.10 on 64-bit (x86) versions of Windows, MacOS and Linux and ARM versions of MacOS and Linux.
 

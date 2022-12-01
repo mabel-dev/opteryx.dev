@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#653](https://github.com/mabel-dev/opteryx/issues/653)] `LIKE` and `FOR` clauses cannot coexist in `SHOW` queries. [@joocer](https://github.com/joocer)  
 - [[#669](https://github.com/mabel-dev/opteryx/issues/669)] `COUNT(*)` cannot be mixed with other aggregates. [@joocer](https://github.com/joocer)  
 - [[#518](https://github.com/mabel-dev/opteryx/issues/518)] `SELECT *` and `GROUP BY` can't be used together. [@joocer](https://github.com/joocer)  
+- [[#689](https://github.com/mabel-dev/opteryx/issues/689)] `IS` comparisons cannot be combined with other comparisons when optimization is off. [@joocer](https://github.com/joocer)  
 
 ### Changed
 
