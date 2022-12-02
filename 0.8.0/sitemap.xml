@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.8.0/thankyou/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.8.0/blog/202209-building-our-first-optimizer/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
