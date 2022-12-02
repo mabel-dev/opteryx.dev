@@ -54,9 +54,9 @@ Windows (ARM)     | None       | None       | None
 
 Opteryx supports Python versions 3.8, 3.9, 3.10 and 3.11.
 
-Opteryx has builds for Python 3.8, 3.9 and 3.10 on 64-bit (x86) versions of Windows, MacOS and Linux and ARM versions of MacOS and Linux.
+Opteryx has builds for Python 3.8, 3.9, 3.10 and 3.11 on 64-bit (x86) versions of Windows, MacOS and Linux and ARM versions of MacOS and Linux.
 
-Opteryx is primarily developed on workstations running Python 3.10 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 also has the greatest test coverage due to it being supported on more platforms.
+Opteryx is primarily developed on workstations running Python 3.10 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 has the greatest test coverage due to it being supported on more platforms.
 
 ### Jupyter Notebooks
 
