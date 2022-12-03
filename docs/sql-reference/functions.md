@@ -296,6 +296,10 @@ Functions for examining and manipulating string values.
 !!! function "`LENGTH` (**str**: _varchar_) → _numeric_:octicons-dot-16:"  
     Returns the length of **str** in characters.    
 
+!!! function "`LEVENSHTEIN` (**str1**: _varchar_, **str2**: _varchar_) → _numeric_"   
+    ** :octicons-star-16: New in 0.8**    
+    Returns the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) between **str1** and **str2**   
+
 !!! function "`LOWER` (**str**: _varchar_) → _varchar_"  
     Converts **str** to lowercase.   
     Related: `UPPER`, `TITLE`
