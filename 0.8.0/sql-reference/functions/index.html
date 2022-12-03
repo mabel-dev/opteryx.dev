@@ -1493,6 +1493,12 @@ Alias for <code>CAST</code>(<strong>any</strong> AS VARCHAR)</p>
 Also implemented as individual extraction functions.</p>
 </div>
 <div class="admonition function">
+<p class="admonition-title"><code>FROM_UNIXTIME</code> (<strong>timestamp</strong>: <em>numeric</em>) → <em>timestamp</em></p>
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694v.001z"/></svg></span> New in 0.8</strong>    <br />
+Return a timestamp representation of an <a href="https://www.unixtimestamp.com/">Unix Timestamp</a>.  <br />
+Related: <code>UNIXTIME</code> </p>
+</div>
+<div class="admonition function">
 <p class="admonition-title"><code>NOW</code> () → <em>timestamp</em></p>
 <p>Alias for <code>current_time</code></p>
 </div>
@@ -1532,6 +1538,18 @@ Alias for <code>EXTRACT</code>(quarter FROM <strong>ts</strong>)</p>
 <p class="admonition-title"><code>SECOND</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
 <p>Returns the second of the minute from <strong>ts</strong>. The value ranges from <code>0</code> to <code>59</code>.<br />
 Alias for <code>EXTRACT</code>(second FROM <strong>ts</strong>)</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>UNIXTIME</code> () → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694v.001z"/></svg></span> New in 0.8</strong>    <br />
+Return the current time as a <a href="https://www.unixtimestamp.com/">Unix Timestamp</a>.  <br />
+Related: <code>FROM_UNIXTIME</code>, <code>current_time</code> </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>UNIXTIME</code> (<strong>timestamp</strong>: <em>timestamp</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg></span></p>
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694v.001z"/></svg></span> New in 0.8</strong>    <br />
+Return <strong>timestamp</strong> in <a href="https://www.unixtimestamp.com/">Unix Timestamp</a> representation.  <br />
+Related: <code>FROM_UNIXTIME</code> </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>WEEK</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
