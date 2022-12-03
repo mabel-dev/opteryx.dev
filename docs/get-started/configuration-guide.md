@@ -33,22 +33,31 @@ The environment is the preferred location for secrets, although the engine will 
 
 The observed bottleneck for query performance is almost always IO. It is not uncommon for 90% of the execution time is initial load of data - this can vary considerably by storage and query.
 
-The Read Cache currently has two implementations, In Memory Cache and Memcached Cache. When your main storage is local disk, using Memcached as your Read Cache is unlikely to provide significant performance improvement, however  the In Memory Cache may; when using remote storage such as S3 or GCS, Memcached Cache can provide significant improvements. However, as will all optimization, test in your unique set of circumstances before assuming it to be true.
+The Read Cache currently has one implementation, using [Memcached](https://memcached.org/).
+
+When your main storage is local disk, using a Read Cache is unlikely to provide significant performance improvement. However, when using remote storage, such as S3 or GCS, Read Cache can provide significant improvements. 
+
+As will all optimization recommendations, test in your unique set of circumstances before assuming this to always be true.
+
+Read Cache is only used for Blob stores, and is not used for Document stores.
 
 ### Buffer Pool
 
-The [Buffer Pool](https://www.ibm.com/docs/en/db2/11.5?topic=databases-buffer-pools) is similar to the Read Cache with two key differences; the Buffer Pool must be held in local memory, Memcache or external system cannot be used and the Buffer Pool is a read through to the Read Cache. That means that reads to the Read Cache check if the items is in the Buffer Pool before checking the Read Cache. This creates a storage heirarchy, where frequently read blobs are likely to be in memory, and never, or infrequently accessed blobs are fetched from storage.
+The [Buffer Pool](https://www.ibm.com/docs/en/db2/11.5?topic=databases-buffer-pools) is similar to the Read Cache with two key differences; 
 
-If your Read Cache is in memory, you are unlikely to see considerable benefits from the Buffer Pool.
+- The Buffer Pool is held in local memory.
+- The Buffer Pool is a read-through for the Read Cache.
 
-**In Memory Cache**
+That means that reads try to locate the fastest access to a blob in this order:
 
-Uses the main memory of the host machine to cache pages. This is usually fastest, but most limiting and volatile. This is a good fit for high specification hosts.
+1) Check the Buffer Pool (in memory)
+2) Check the Read Cache (fast KV store)
+3) Read from storage
 
-The size of the cache is set by the number of pages to hold in memory. No checks are made if the pages actually fit in memory and setting the cache too large, or running on a host where there is high contention for memory where memory is swapped to disk, may result in negative performance.
+The Buffer Pool and Read Cache creates a storage heirarchy, where blobs more likely to be read (based on what has been read in the past) are more likely to be in a location which is faster to read.
 
-**Memcached Cache**
+Buffer Pools are local to the asset serving the requests, in a serverless environment this asset may only serve one or two requests before terminating. If your environment is configured like this, have a small Buffer Pool and a large Read Cache. If assets serve 10s or more requests before terminating, have a large Buffer Cache.
 
-Uses a Memcached instance to cache pages. Is a good option when remote reads are slow, for example from GCS or S3.
+As will all optimization recommendations, test in your unique set of circumstances before assuming this to always be true.
 
-This is also recommended in an environment where multiple servers, or container instances, may be serving customers. Here, the shared cache allows users to benefit from caching even on their first query if another user's query has populated the cache with the files being read.
+Buffer Pool is only used for Blob stores, and is not used for Document stores.

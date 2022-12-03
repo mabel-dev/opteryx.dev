@@ -28,8 +28,8 @@ The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.
 
 OS                | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11 |
 ----------------- | :--------: | :--------: | :---------: | :---------: |
-MacOS (x86/Intel) | Partial    | Partial    | Partial     | None
-Windows (x86)     | Partial    | Partial    | Partial     | None
+MacOS (x86/Intel) | Partial    | Partial    | Partial     | Partial
+Windows (x86)     | Partial    | Partial    | Partial     | Partial
 Ubuntu (x86)      | Full       | Full       | Full        | Full
 Debian (ARM)      | None       | Partial    | None        | None
 
