@@ -85,6 +85,11 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     Extract **unit** of a timestamp.   
     Also implemented as individual extraction functions.
 
+!!! function "`FROM_UNIXTIME` (**timestamp**: _numeric_) → _timestamp_"    
+    ** :octicons-star-16: New in 0.8**      
+    Return a timestamp representation of an [Unix Timestamp](https://www.unixtimestamp.com/).    
+    Related: `UNIXTIME` 
+
 !!! function "`NOW` () → _timestamp_"  
     Alias for `current_time`
 
@@ -116,6 +121,16 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
 !!! function "`SECOND` (**ts**: _timestamp_) → _numeric_"  
     Returns the second of the minute from **ts**. The value ranges from `0` to `59`.  
     Alias for `EXTRACT`(second FROM **ts**)
+
+!!! function "`UNIXTIME` () → _numeric_:octicons-dot-16:"       
+    ** :octicons-star-16: New in 0.8**      
+    Return the current time as a [Unix Timestamp](https://www.unixtimestamp.com/).    
+    Related: `FROM_UNIXTIME`, `current_time` 
+
+!!! function "`UNIXTIME` (**timestamp**: _timestamp_) → _numeric_:octicons-dot-16:"    
+    ** :octicons-star-16: New in 0.8**      
+    Return **timestamp** in [Unix Timestamp](https://www.unixtimestamp.com/) representation.    
+    Related: `FROM_UNIXTIME` 
 
 !!! function "`WEEK` (**ts**: _timestamp_) → _numeric_"  
     Returns the week of the year from **ts**. The value ranges from `1` to `53`.  
