@@ -65,11 +65,11 @@ E081-02  | `DELETE` privilege                                        | n/a
 E081-03  | `INSERT` privilege at the table level                     | n/a
 E081-04  | `UPDATE` privilege at the table level                     | n/a  
 E081-05  | `UPDATE` privilege at the column level                    | n/a
-E081-06  | `REFERENCES` privilege at the table level                 | unknown
-E081-07  | `REFERENCES` privilege at the column level                | unknown
-E081-08  | `WITH GRANT OPTION`                                       | no
-E081-09  | `USAGE` privilege                                         | unknown
-E081-10  | `EXECUTE` privilege                                       | unknown
+E081-06  | `REFERENCES` privilege at the table level                 | n/a
+E081-07  | `REFERENCES` privilege at the column level                | n/a
+E081-08  | `WITH GRANT OPTION`                                       | n/a
+E081-09  | `USAGE` privilege                                         | n/a
+E081-10  | `EXECUTE` privilege                                       | n/a
 **E091** | **Set functions**                                         | partial
 E091-01  | `AVG`                                                     | yes
 E091-02  | `COUNT`                                                   | yes
@@ -85,7 +85,7 @@ E101-04  | Searched `DELETE` statement                               | n/a
 **E111** | **Single row SELECT statement**                           | unknown
 **E121** | **Basic cursor support**                                  | unknown
 E121-01  | `DECLARE CURSOR`                                          | no
-E121-02  | `ORDER BY` columns need not be in select                  | unknown
+E121-02  | `ORDER BY` columns need not be in select                  | yes
 E121-03  | Value expressions in `ORDER BY` clause                    | unknown
 E121-04  | `OPEN` statement                                          | unknown
 E121-06  | Positioned `UPDATE` statement                             | no
