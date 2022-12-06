@@ -21,9 +21,10 @@ The `EXPLAIN` clause outputs a summary of the execution plan for the query in th
 Retrieve rows from zero or more relations.
 
 ~~~sql
-SELECT [ DISTINCT ] <expression>, ..
+  WITH <cte> AS <statement> [, ..] 
+SELECT [ DISTINCT ] <expression> [, ..]
   FROM <relation> 
-   FOR <period> [WITH (NO_CACHE|NO_PARTITION|NO_PUSH_PROJECTION)]
+   FOR <period> [ WITH (NO_CACHE|NO_PARTITION|NO_PUSH_PROJECTION) ]
        [ INNER ] JOIN <relation> | <function> | (<subquery>)
        CROSS JOIN <relation> | <function> | (<subquery>)
        LEFT [ OUTER ] JOIN <relation> | <function> | (<subquery>)
@@ -31,14 +32,24 @@ SELECT [ DISTINCT ] <expression>, ..
        FULL [ OUTER ] JOIN <relation> | <function> | (<subquery>)
                       ON <expression>
                       USING (<columns>)
-
- WHERE <expression>, ..
+ WHERE <expression> [ AND | OR | XOR .. ]
  GROUP BY 
-       HAVING <expression>, ..
- ORDER BY <expression>, ..
+       HAVING <expression> [ AND | OR | XOR .. ]
+ ORDER BY <expression> [, ..]
 OFFSET <offset>
  LIMIT <limit>
 ~~~
+
+### WITH clause
+
+~~~
+WITH <cte> AS <statement> [, ..] 
+~~~
+
+The `WITH` clause, known as a _Common Table Expression_, or CTE, is used to define a temporary view which can be referenced within `FROM` and `JOIN` clauses. The statement in the CTE supports the full syntax for `SELECT` statements.
+
+Unlike some platforms, Opteryx handles CTEs by inserting them as subqueries into the main statement and not by executing them and referencing the result.
+
 
 ### SELECT clause
 
