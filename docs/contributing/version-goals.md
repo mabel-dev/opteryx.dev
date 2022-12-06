@@ -8,7 +8,7 @@ Version 1.0 goals will be delivered across various minor versions building towar
 
 - :fontawesome-regular-square: Python PEP249 compatibility
 - :fontawesome-regular-square: ANSI SQL92 compatibility
-- :fontawesome-regular-square: CTEs (`WITH`) statements supported
+- :octicons-checkbox-24: CTEs (`WITH`) statements supported [v0.8]
 - :octicons-checkbox-24: Read across multiple data sources (e.g. GCS and Postgres in the same query) [v0.2]
 - :fontawesome-regular-square: Support different plaform data sources (e.g. FireStore [v0.3] and BigQuery)
 - :octicons-checkbox-24: Rule-based query optimizer [v0.5]
