@@ -12,14 +12,14 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.8.0/blog/unpublished/20220901%20Lessons%20Learnt%20so%20Far/">
+        <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.8.0/blog/unpublished/202212%20Lessons%20Learnt%20so%20Far/">
       
       <link rel="icon" href="../../../icarus-opteryx.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>20220901 Lessons Learnt so Far - Opteryx</title>
+        <title>Lessons Learnt So Far - Opteryx</title>
       
     
     
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#lessons-learnt-so-far" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              20220901 Lessons Learnt so Far
+              Lessons Learnt So Far
             
           </span>
         </div>
@@ -1194,6 +1199,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1207,23 +1214,27 @@
                 
                   
 
-  <a href="https://github.com/mabel-dev/opteryx/edit/master/docs/blog/unpublished/20220901 Lessons Learnt so Far.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/mabel-dev/opteryx/edit/master/docs/blog/unpublished/202212 Lessons Learnt so Far.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>20220901 Lessons Learnt so Far</h1>
-
-<ul>
-<li>The conventions in SQL Engines generally make good sense, follow them</li>
-<li>Have real systems and real users as your beta testers</li>
-<li>Unit testing is fine, but write hundreds of tests cases which run real SQL queries</li>
-<li>You can't fabricate test data for all your test scenarios</li>
-<li>Storage read speed will kill any performance boosts from algorithmic improvements</li>
-<li>If you don't control the writing of the data - assume the worst</li>
-</ul>
-<p>PyArrow is awesome, but it has bugs, odd limitations and some parts are so slow it hurts.</p>
+<h1 id="lessons-learnt-so-far">Lessons Learnt So Far</h1>
+<p><em>9th December 2022</em></p>
+<p>We never thought building a SQL Engine from scratch was going to be easy, and we expected some hard learnings.</p>
+<p><strong>The conventions in SQL Engines generally make good sense, follow them</strong></p>
+<p>If most SQL Engines work a particular way, chances are they've done that because they've probably </p>
+<p><strong>Unit testing is fine, but write hundreds of tests cases which run real SQL queries</strong></p>
+<p>Testing individual components in isolation is important, and for some components the only real way to get assurance that it works as expected; but we find that writing SQL queries to exercise the entire stack usually, test-per-test, provides more value on average.</p>
+<p>The key finding is that a SQL Engine is complex, where a minor change in one component can have an unexpected impact on another.</p>
+<p><strong>Have real systems and real users as your beta testers</strong></p>
+<p>If you want real users to be able to use your system, make sure you have real users on your system early. This can be problematic, especially if you can't guarantee the accuracy of the engine and perforance is likely to be pretty poor.</p>
+<p><strong>You can't fabricate test data for all your test scenarios</strong></p>
+<p>You will never write tests that cover the variation of real-world data.</p>
+<p><strong>Storage read speed will kill any performance boosts from algorithmic improvements</strong></p>
+<p><strong>If you don't control of the the thing writing of the data - assume the worst</strong></p>
+<p><strong>Bonus Point: PyArrow is awesome, but it has bugs, odd limitations and some parts are so slow it hurts</strong></p>
 <p>bugs
 - date diff just doesn't work for months</p>
 <p>odd limitations
