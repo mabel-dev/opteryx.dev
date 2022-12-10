@@ -10,8 +10,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#703](https://github.com/mabel-dev/opteryx/issues/703)] `ORDER BY` columns not in `SELECT` clause. [@joocer](https://github.com/joocer) 
 - [[#712](https://github.com/mabel-dev/opteryx/issues/712)] Aggregates on literals when combined with a `GROUP BY` clause. [@joocer](https://github.com/joocer) 
+- [[#710](https://github.com/mabel-dev/opteryx/issues/710)] `SEARCH` mishandles pages with empty values in first row. [@joocer](https://github.com/joocer) 
 
 ### Changed
+
+- [[#707](https://github.com/mabel-dev/opteryx/issues/707)] First try to estimate unique values using the Distogram for `SHOW EXTENDED COLUMNS`. [@joocer](https://github.com/joocer) 
+- [[#707](https://github.com/mabel-dev/opteryx/issues/707)] `SHOW EXTENDED COLUMNS` creates histograms of 20 bins. [@joocer](https://github.com/joocer) 
+- [[#707](https://github.com/mabel-dev/opteryx/issues/707)] Distogram (data profiler) significant performance improvements. [@joocer](https://github.com/joocer) 
 
 ### Added
 
