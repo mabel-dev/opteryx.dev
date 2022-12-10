@@ -24,7 +24,7 @@ Retrieve rows from zero or more relations.
   WITH <cte> AS <statement> [, ..] 
 SELECT [ DISTINCT ] <expression> [, ..]
   FROM <relation> 
-   FOR <period> [ WITH (NO_CACHE|NO_PARTITION|NO_PUSH_PROJECTION) ]
+   FOR <period> [ WITH (NO_CACHE|NO_PARTITION|NO_PUSH_PROJECTION|NO_PUSH_SELECTION) ]
        [ INNER ] JOIN <relation> | <function> | (<subquery>)
        CROSS JOIN <relation> | <function> | (<subquery>)
        LEFT [ OUTER ] JOIN <relation> | <function> | (<subquery>)
@@ -64,7 +64,7 @@ The `DISTINCT` modifier is specified, only unique rows are included in the resul
 ### FROM / JOIN clauses
 
 ~~~
-FROM relation [FOR period] [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PROJECTION)] [, ...] 
+FROM relation [FOR period] [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PROJECTION, NO_PUSH_SELECTION)] [, ...] 
 ~~~
 ~~~
 FROM relation [FOR period] [ INNER ] JOIN relation [FOR period] < USING (columns) | ON condition >
@@ -88,10 +88,11 @@ See [Joins](../joins/) for more information on `JOIN` syntax and functionality.
 Hints can be provided as part of the statement to direct the query planner and executor to make decisions. Relation hints are declared as `WITH` statements following a relation in the `FROM` and `JOIN` clauses, for example `FROM $astronauts WITH (NO_CACHE)`. Reconised hints are:
 
 Hint               | Effect                         
------------------- | --------------------------------------------
+------------------ | -------------------------------------------------
 NO_CACHE           | Ignores any cache configuration 
 NO_PARTITION       | Do not use partition configuration when reading
 NO_PUSH_PROJECTION | Do not attempt to prune columns when reading 
+NO_PUSH_SELECTION  | Do not use the source system to prefilter rows
 
 !!! Note  
     Hints are not guaranteed to be followed, the query planner and executor may ignore hints in specific circumstances.
