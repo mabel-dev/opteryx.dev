@@ -311,6 +311,12 @@ strong {
         grid-template-columns: 32% [col-start] 32% [col-start] 32% [col-start];
         column-gap: 1%;
     }
+
+    .home-footer {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 5% [col-start] 40% [col-start] 33% [col-start];
+    }
 }
 
 .home-get-started {
@@ -339,9 +345,6 @@ strong {
     padding-bottom: 2em;
     font-size: 1.2em;
     background-color: #152b44;
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: 5% [col-start] 40% [col-start] 33% [col-start];
     color: #ddd !important;
 }
 
