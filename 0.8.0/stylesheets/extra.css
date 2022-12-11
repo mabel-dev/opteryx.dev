@@ -238,6 +238,10 @@ strong {
     text-decoration: none !important;
 }
 
+.btn {
+    white-space: nowrap;
+}
+
 .btn-github {
     background-color: #2c2c2c;
     color: #fff !important;
@@ -301,7 +305,7 @@ strong {
     .home-features {
         display: grid;
         justify-content: center;
-        grid-template-columns: 40% [col-start] 40% [col-start];
+        grid-template-columns: 42% [col-start] 42% [col-start];
         column-gap: 8%;
     }
 
