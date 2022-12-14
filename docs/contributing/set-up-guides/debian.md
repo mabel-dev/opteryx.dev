@@ -43,8 +43,12 @@ git clone https://github.com/mabel-dev/opteryx
 ### 6. Install Dependencies   
 
 ~~~bash
-python3 -m pip install --upgrade -r requirements.txt
+python -m pip install --upgrade -r requirements.txt
 ~~~
+
+¬¬¬bash
+python3 -m pip install --upgrade setuptools setuptools_rust
+¬¬¬
 
 ### 7. Build Binaries   
 
