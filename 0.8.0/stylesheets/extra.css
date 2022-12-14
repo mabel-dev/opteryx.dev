@@ -401,3 +401,7 @@ li>.twemoji {
 strong>.twemoji {
     color: #ff7538 !important;
 }
+
+.item > img {
+    height: 1.3em !important;
+}
