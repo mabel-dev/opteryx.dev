@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#707](https://github.com/mabel-dev/opteryx/issues/707)] First try to estimate unique values using the Distogram for `SHOW EXTENDED COLUMNS`. [@joocer](https://github.com/joocer) 
 - [[#707](https://github.com/mabel-dev/opteryx/issues/707)] `SHOW EXTENDED COLUMNS` creates histograms of 20 bins. [@joocer](https://github.com/joocer) 
 - [[#707](https://github.com/mabel-dev/opteryx/issues/707)] Distogram (data profiler) significant performance improvements. [@joocer](https://github.com/joocer) 
+- [[#722](https://github.com/mabel-dev/opteryx/issues/722)] Allow temporal `FOR` after alias `AS` clauses. [@joocer](https://github.com/joocer) 
 
 ### Added
 

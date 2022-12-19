@@ -23,7 +23,7 @@ Retrieve rows from zero or more relations.
 ~~~sql
   WITH <cte> AS <statement> [, ..] 
 SELECT [ DISTINCT ] <expression> [, ..]
-  FROM <relation> 
+  FROM <relation> [AS <alias>]
    FOR <period> [ WITH (NO_CACHE|NO_PARTITION|NO_PUSH_PROJECTION|NO_PUSH_SELECTION) ]
        [ INNER ] JOIN <relation> | <function> | (<subquery>)
        CROSS JOIN <relation> | <function> | (<subquery>)
@@ -64,19 +64,19 @@ The `DISTINCT` modifier is specified, only unique rows are included in the resul
 ### FROM / JOIN clauses
 
 ~~~
-FROM relation [FOR period] [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PROJECTION, NO_PUSH_SELECTION)] [, ...] 
+FROM relation [AS alias] [FOR period] [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PROJECTION, NO_PUSH_SELECTION)] [, ...] 
 ~~~
 ~~~
-FROM relation [FOR period] [ INNER ] JOIN relation [FOR period] < USING (columns) | ON condition >
+FROM relation [AS alias] [FOR period] [ INNER ] JOIN relation [FOR period] < USING (columns) | ON condition >
 ~~~ 
 ~~~
-FROM relation [FOR period] LEFT [ OUTER ] JOIN relation [FOR period] < USING (columns) | ON condition >
+FROM relation [AS alias] [FOR period] LEFT [ OUTER ] JOIN relation [FOR period] < USING (columns) | ON condition >
 ~~~ 
 ~~~
-FROM relation [FOR period] < RIGHT | FULL > [OUTER ] JOIN relation [FOR period]
+FROM relation [AS alias] [FOR period] < RIGHT | FULL > [OUTER ] JOIN relation [FOR period]
 ~~~
 ~~~
-FROM relation [FOR period] CROSS JOIN < relation [FOR period] | UNNEST(column) >
+FROM relation [AS alias] [FOR period] CROSS JOIN < relation [FOR period] | UNNEST(column) >
 ~~~
 
 The `FROM` clause specifies the source of the data on which the remainder of the query should operate. Logically, the `FROM` clause is where the query starts execution. The `FROM` clause can contain a single relation, a combination of multiple relations that are joined together, or another `SELECT` query inside a subquery node.
@@ -109,7 +109,7 @@ FOR DATES BETWEEN start AND end
 FOR DATES IN range
 ~~~
 
-The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation name in a `FROM` or `JOIN` clause. If not provided `FOR TODAY` is assumed.
+The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation in a `FROM` or `JOIN` clause. If not provided `FOR TODAY` is assumed.
 
 See [Time Travel](../adv-time-travel/) for more information on `FOR` syntax and functionality.
 
