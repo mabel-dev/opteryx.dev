@@ -43,11 +43,11 @@ git clone https://github.com/mabel-dev/opteryx
 ### 6. Install Dependencies   
 
 ~~~bash
-python -m pip install --upgrade -r requirements.txt
+python3 -m pip install --upgrade -r requirements.txt
 ~~~
 
 ~~~bash
-python3 -m pip install --upgrade setuptools setuptools_rust
+python3 -m pip install --upgrade setuptools setuptools_rust  numpy cython
 ~~~
 
 ### 7. Build Binaries   
@@ -66,7 +66,7 @@ First, install the optional dependencies, on intel-based Macs:
 python3 -m pip install --upgrade -r tests/requirements.txt
 ~~~
 
-On M (ARM) CPU Macs:
+On M-series (ARM) CPU Macs:
 
 ~~~bash
 python3 -m pip install --upgrade -r tests/requirements_arm.txt

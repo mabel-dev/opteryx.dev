@@ -22,13 +22,7 @@ python -m ensurepip --upgrade
 
 ### 3. Install Git   
 
-~~~bash
-sudo apt-get update
-~~~
-
-~~~bash
-sudo apt-get install git
-~~~
+Follow the instructions at https://git-scm.com/download/win
 
 ### 4. Install Rust
 
@@ -47,7 +41,7 @@ python -m pip install --upgrade -r requirements.txt
 ~~~
 
 ~~~bash
-python3 -m pip install --upgrade setuptools setuptools_rust
+python -m pip install --upgrade setuptools setuptools_rust numpy cython
 ~~~
 
 ### 6. Build Binaries   
