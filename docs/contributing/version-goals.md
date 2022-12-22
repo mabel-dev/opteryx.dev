@@ -26,3 +26,4 @@ Version 2.0 goals indicate which items are considered important for the engine t
 - :fontawesome-regular-square: Persisted materialized views
 - :fontawesome-regular-square: Distributed execution
 - :fontawesome-regular-square: Metastore used in planning and optimization
+- :fontawesome-regular-square: Permissions Model
