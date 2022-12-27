@@ -319,13 +319,11 @@ Functions for examining and manipulating string values.
     Converts **str** to lowercase.   
     Related: `UPPER`, `TITLE`
 
-!!! function "`LTRIM` (**str**: _varchar_) → _varchar_"   
-    ** :octicons-star-16: New in 0.7**   
+!!! function "`LTRIM` (**str**: _varchar_) → _varchar_"    
     Remove leading whitespace from **str**.   
     Related: `RTRIM`, `TRIM`
 
-!!! function "`POSITION` (**substring**: _varchar_ IN **string**: _varchar_) → _numeric_"   
-    ** :octicons-star-16: New in 0.7**   
+!!! function "`POSITION` (**substring**: _varchar_ IN **string**: _varchar_) → _numeric_"    
     Returns the starting position of the first instance of **substring** in **string**. Positions start with 1. If not found, 0 is returned.   
 
 !!! function "`REVERSE` (**str**: _varchar_) → _varchar_"  
@@ -335,8 +333,7 @@ Functions for examining and manipulating string values.
     Extract the right-most **n** characters of **str**.   
     Related: `LEFT`
 
-!!! function "`RTRIM` (**str**: _varchar_) → _varchar_"   
-    ** :octicons-star-16: New in 0.7**   
+!!! function "`RTRIM` (**str**: _varchar_) → _varchar_"     
     Remove trailing whitespace from **str**.   
     Related: `LTRIM`, `TRIM`
 
