@@ -4,13 +4,11 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [Unreleased]
+## [0.8.1] - 2022-12-30
 
 ### Fixed
 
-### Changed
-
-### Added
+- [[#754](https://github.com/mabel-dev/opteryx/issues/754)] Occassional segfaults on Aggregates. [@joocer](https://github.com/joocer) 
 
 ## [0.8.0] - 2022-12-27
 
