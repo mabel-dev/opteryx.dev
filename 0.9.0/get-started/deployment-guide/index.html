@@ -1343,7 +1343,7 @@
 <h3 id="operating-system-support">Operating System Support</h3>
 <p><strong>Recommended Operating System</strong>: Ubuntu 20 (64bit)</p>
 <p>Opteryx can be installed and deployed on a number of different platforms. It has heavy dependency on <a href="https://arrow.apache.org/">Apache Arrow</a> and cannot be run on systems which do not support Arrow.</p>
-<p>The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.8, 3.9 and 3.10. The below table shows regression suite coverage:</p>
+<p>The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.8, 3.9, 3.10 and 3.11. The below table shows regression suite coverage:</p>
 <table>
 <thead>
 <tr>
@@ -1385,17 +1385,12 @@
 </tr>
 </tbody>
 </table>
-<!---
-MacOS (ARM/M1)    | None       | None       | None        
-Windows (ARM)     | None       | None       | None        
---->
 <p>&emsp;<strong>Full</strong> - no tests are excluded from the test suite - coverage statistics are from <strong>Full</strong> tests.<br />
 &emsp;<strong>Partial</strong> - some tests are excluded from the test suite or that some tests fail.<br />
 &emsp;<strong>None</strong> - there is no automated test for this configuration.  </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
-<li>Windows (x86) regression suite fails some tests due to issues with Apache Arrow.</li>
 <li>PyPy regression suite fails due to issues with Apache Arrow.</li>
 <li>MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.</li>
 <li>Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.</li>
