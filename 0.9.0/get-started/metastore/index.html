@@ -12,14 +12,14 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.9.0/sql-reference/adv-working-with-timestamps/">
+        <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.9.0/get-started/metastore/">
       
       <link rel="icon" href="../../icarus-opteryx.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Working with Timestamps - Opteryx</title>
+        <title>Metastore (Tarchia) - Opteryx</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-with-timestamps" class="md-skip">
+        <a href="#metastore" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Working with Timestamps
+              Metastore (Tarchia)
             
           </span>
         </div>
@@ -190,13 +190,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../get-started/overview/" class="md-tabs__link">
+      <a href="../overview/" class="md-tabs__link md-tabs__link--active">
         Get Started
       </a>
     </li>
@@ -206,15 +208,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../introduction/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../sql-reference/introduction/" class="md-tabs__link">
         SQL Reference
       </a>
     </li>
@@ -324,12 +324,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -352,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -366,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/get-started/" class="md-nav__link">
+      <a href="../get-started/" class="md-nav__link">
         Get Started
       </a>
     </li>
@@ -380,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/clients/" class="md-nav__link">
+      <a href="../clients/" class="md-nav__link">
         Client Overview
       </a>
     </li>
@@ -394,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/python-client/" class="md-nav__link">
+      <a href="../python-client/" class="md-nav__link">
         Python Client
       </a>
     </li>
@@ -408,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/deployment-guide/" class="md-nav__link">
+      <a href="../deployment-guide/" class="md-nav__link">
         Deployment Guide
       </a>
     </li>
@@ -422,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/configuration-guide/" class="md-nav__link">
+      <a href="../configuration-guide/" class="md-nav__link">
         Configuration Guide
       </a>
     </li>
@@ -434,11 +436,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../get-started/metastore/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Metastore (Tarchia)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Metastore (Tarchia)
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-data-catalogue" class="md-nav__link">
+    The Data Catalogue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-profiles" class="md-nav__link">
+    Data Profiles
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -476,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/external-standards/pep249/" class="md-nav__link">
+      <a href="../external-standards/pep249/" class="md-nav__link">
         Python PEP249
       </a>
     </li>
@@ -490,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/external-standards/sql92/" class="md-nav__link">
+      <a href="../external-standards/sql92/" class="md-nav__link">
         ANSI SQL-92
       </a>
     </li>
@@ -537,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/release-notes/change-log/" class="md-nav__link">
+      <a href="../release-notes/change-log/" class="md-nav__link">
         Change Log
       </a>
     </li>
@@ -551,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/release-notes/notices/" class="md-nav__link">
+      <a href="../release-notes/notices/" class="md-nav__link">
         Notices
       </a>
     </li>
@@ -578,14 +628,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -608,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
+      <a href="../../sql-reference/introduction/" class="md-nav__link">
         SQL Introduction
       </a>
     </li>
@@ -622,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../statements/" class="md-nav__link">
+      <a href="../../sql-reference/statements/" class="md-nav__link">
         Statements
       </a>
     </li>
@@ -636,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-types/" class="md-nav__link">
+      <a href="../../sql-reference/data-types/" class="md-nav__link">
         Data Types
       </a>
     </li>
@@ -650,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../expressions/" class="md-nav__link">
+      <a href="../../sql-reference/expressions/" class="md-nav__link">
         Expressions
       </a>
     </li>
@@ -664,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/" class="md-nav__link">
+      <a href="../../sql-reference/functions/" class="md-nav__link">
         Functions
       </a>
     </li>
@@ -678,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aggregates/" class="md-nav__link">
+      <a href="../../sql-reference/aggregates/" class="md-nav__link">
         Aggregates
       </a>
     </li>
@@ -692,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../joins/" class="md-nav__link">
+      <a href="../../sql-reference/joins/" class="md-nav__link">
         Joins
       </a>
     </li>
@@ -704,14 +752,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" type="checkbox" id="__nav_3_8" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" type="checkbox" id="__nav_3_8" >
       
       
       
@@ -732,66 +778,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Working with Timestamps
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../sql-reference/adv-working-with-timestamps/" class="md-nav__link">
         Working with Timestamps
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#actions" class="md-nav__link">
-    Actions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implicit-casting" class="md-nav__link">
-    Implicit Casting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#timezones" class="md-nav__link">
-    Timezones
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -803,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-lists/" class="md-nav__link">
+      <a href="../../sql-reference/adv-working-with-lists/" class="md-nav__link">
         Working with Lists
       </a>
     </li>
@@ -817,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-structs/" class="md-nav__link">
+      <a href="../../sql-reference/adv-working-with-structs/" class="md-nav__link">
         Working with Structs
       </a>
     </li>
@@ -831,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-time-travel/" class="md-nav__link">
+      <a href="../../sql-reference/adv-time-travel/" class="md-nav__link">
         Time Travel
       </a>
     </li>
@@ -845,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-null-semantics/" class="md-nav__link">
+      <a href="../../sql-reference/adv-null-semantics/" class="md-nav__link">
         Null Semantics
       </a>
     </li>
@@ -859,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-temp-tables/" class="md-nav__link">
+      <a href="../../sql-reference/adv-temp-tables/" class="md-nav__link">
         Temporary Tables
       </a>
     </li>
@@ -873,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-sample-data/" class="md-nav__link">
+      <a href="../../sql-reference/adv-sample-data/" class="md-nav__link">
         Sample Data
       </a>
     </li>
@@ -887,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-engine-configuration/" class="md-nav__link">
+      <a href="../../sql-reference/adv-engine-configuration/" class="md-nav__link">
         Engine Configuration
       </a>
     </li>
@@ -901,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-query-optimization/" class="md-nav__link">
+      <a href="../../sql-reference/adv-query-optimization/" class="md-nav__link">
         Query Optimization
       </a>
     </li>
@@ -1284,22 +1275,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#actions" class="md-nav__link">
-    Actions
+  <a href="#the-data-catalogue" class="md-nav__link">
+    The Data Catalogue
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#implicit-casting" class="md-nav__link">
-    Implicit Casting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#timezones" class="md-nav__link">
-    Timezones
+  <a href="#data-profiles" class="md-nav__link">
+    Data Profiles
   </a>
   
 </li>
@@ -1318,156 +1302,28 @@
                 
                   
 
-  <a href="https://github.com/mabel-dev/opteryx/edit/master/docs/sql-reference/adv-working-with-timestamps.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/mabel-dev/opteryx/edit/master/docs/get-started/metastore.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="working-with-timestamps">Working with Timestamps</h1>
-<p>Working with Timestamps often involves working with Intervals.</p>
-<h2 id="actions">Actions</h2>
-<h3 id="addsubtract">Add/Subtract</h3>
-<p><em>timestamp</em> <code>+</code> <em>interval</em> → <em>timestamp</em>  </p>
-<p><em>timestamp</em> <code>-</code> <em>interval</em> → <em>timestamp</em>  </p>
-<p><em>timestamp</em> <code>-</code> <em>timestamp</em> → <em>interval</em>  </p>
-<p><code>DATEDIFF</code> (<strong>unit</strong>: <em>varchar</em>, <strong>start</strong>: <em>timestamp</em>, <strong>end</strong>: <em>timestamp</em>) → <em>numeric</em>  </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>INTERVAL</code> may not support all functions in all circumstances.  </p>
-</div>
-<h3 id="construct">Construct</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>INTERVAL values units
-</code></pre></div>
-<h3 id="extract">Extract</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>EXTRACT(part FROM timestamp)
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>DATE(timestamp)
-</code></pre></div></p>
-<h3 id="format">Format</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>DATE_FORMAT(timestamp, format)
-</code></pre></div>
-<h3 id="parse">Parse</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>CAST(field AS TIMESTAMP)
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>TIMESTAMP(field)
-</code></pre></div></p>
-<h3 id="truncate">Truncate</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>DATE_TRUNC(part, timestamp)
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>TIME_BUCKET(timestamp, multiple, unit)
-</code></pre></div></p>
-<h3 id="generate">Generate</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>current_date
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>current_time
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>YESTERDAY()
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>TIME()
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>generate_series()
-</code></pre></div></p>
-<p>Note that <code>current_date</code> and <code>current_time</code> support being called without parenthesis.</p>
-<p>Recognized date parts and periods and support across various functions:</p>
-<table>
-<thead>
-<tr>
-<th>Part</th>
-<th align="center">DATE_TRUNC</th>
-<th align="center">EXTRACT</th>
-<th align="center">DATEDIFF</th>
-<th align="center">TIME_BUCKET</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>second</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td></td>
-</tr>
-<tr>
-<td>minute</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td></td>
-</tr>
-<tr>
-<td>hour</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td></td>
-</tr>
-<tr>
-<td>day</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td></td>
-</tr>
-<tr>
-<td>dow</td>
-<td align="center">✘</td>
-<td align="center">✓</td>
-<td align="center">✘</td>
-<td align="center">✘</td>
-<td>day of week</td>
-</tr>
-<tr>
-<td>week</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td>iso week i.e. to monday</td>
-</tr>
-<tr>
-<td>month</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">▲</td>
-<td align="center">✓</td>
-<td>DATEFIFF unreliable calculating months</td>
-</tr>
-<tr>
-<td>quarter</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td></td>
-</tr>
-<tr>
-<td>doy</td>
-<td align="center">✘</td>
-<td align="center">✓</td>
-<td align="center">✘</td>
-<td align="center">✘</td>
-<td>day of year</td>
-</tr>
-<tr>
-<td>year</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="implicit-casting">Implicit Casting</h2>
-<p>In many situation where a timestamp is expected, if an ISO1806 formatted string is provided, the engine will interpret as a timestamp.</p>
-<h2 id="timezones">Timezones</h2>
-<p>The engine is opinionated to run in UTC - all instances where the system time is requested, UTC is used.</p>
+<h1 id="metastore">Metastore</h1>
+<blockquote>
+<p>IN DEVELOPMENT</p>
+</blockquote>
+<p>Tarchia is in development and will be the metastore provider for Mabel and Opteryx.</p>
+<p>It has two key parts:</p>
+<ul>
+<li>The Data Catalogue</li>
+<li>Data Profiles</li>
+</ul>
+<h2 id="the-data-catalogue">The Data Catalogue</h2>
+<p>Used by Mabel to look up schema and data quality tests to apply to data as it is being written.</p>
+<p>Used by Opteryx to for schema information for schema evolution and query planning</p>
+<h2 id="data-profiles">Data Profiles</h2>
+<p>Used by Opteryx to respond to simple queries</p>
+<p>Used by Opteryx to make cost estimations for queries</p>
 
 
 
@@ -1493,7 +1349,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../joins/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Joins" rel="prev">
+        <a href="../configuration-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuration Guide" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1502,20 +1358,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Joins
+              Configuration Guide
             </div>
           </div>
         </a>
       
       
         
-        <a href="../adv-working-with-lists/" class="md-footer__link md-footer__link--next" aria-label="Next: Working with Lists" rel="next">
+        <a href="../external-standards/pep249/" class="md-footer__link md-footer__link--next" aria-label="Next: Python PEP249" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Working with Lists
+              Python PEP249
             </div>
           </div>
           <div class="md-footer__button md-icon">
