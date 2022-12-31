@@ -65,6 +65,7 @@ nav:
     - Python Client: get-started/python-client.md
     - Deployment Guide: get-started/deployment-guide.md
     - Configuration Guide: get-started/configuration-guide.md
+    - Metastore (Tarchia): get-started/metastore.md
     - External Standards:
       - Python PEP249: get-started/external-standards/pep249.md
       - ANSI SQL-92: get-started/external-standards/sql92.md
