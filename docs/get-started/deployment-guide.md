@@ -24,7 +24,7 @@ Opteryx balances memory consumption with performance, however, being able to pro
 
 Opteryx can be installed and deployed on a number of different platforms. It has heavy dependency on [Apache Arrow](https://arrow.apache.org/) and cannot be run on systems which do not support Arrow.
 
-The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.8, 3.9 and 3.10. The below table shows regression suite coverage:
+The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.8, 3.9, 3.10 and 3.11. The below table shows regression suite coverage:
 
 OS                | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11 |
 ----------------- | :--------: | :--------: | :---------: | :---------: |
@@ -33,16 +33,11 @@ Windows (x86)     | Partial    | Partial    | Partial     | Partial
 Ubuntu (x86)      | Full       | Full       | Full        | Full
 Debian (ARM)      | None       | Partial    | None        | None
 
-<!---
-MacOS (ARM/M1)    | None       | None       | None        
-Windows (ARM)     | None       | None       | None        
---->
 &emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from **Full** tests.  
 &emsp;**Partial** - some tests are excluded from the test suite or that some tests fail.  
 &emsp;**None** - there is no automated test for this configuration.  
 
 !!! Note
-    - Windows (x86) regression suite fails some tests due to issues with Apache Arrow.
     - PyPy regression suite fails due to issues with Apache Arrow.
     - MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.
     - Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.
