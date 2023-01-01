@@ -1319,27 +1319,27 @@
 <p><strong>3.10 recommended</strong></p>
 <p>We recommmend using <a href="https://github.com/pyenv/pyenv">pyenv</a> to install and manage Python environments, particularly in development and test environments.</p>
 <h3 id="2-install-pip">2. Install pip</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python -m ensurepip --upgrade
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-m<span class="w"> </span>ensurepip<span class="w"> </span>--upgrade
 </code></pre></div>
 <h3 id="3-install-git">3. Install Git</h3>
 <p>Follow the instructions at https://git-scm.com/download/win</p>
 <h3 id="4-install-rust">4. Install Rust</h3>
 <p>Follow the instructions at https://rustup.rs/</p>
 <h3 id="5-clone-the-repository">5. Clone the Repository</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git clone https://github.com/mabel-dev/opteryx
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mabel-dev/opteryx
 </code></pre></div>
 <h3 id="5-install-dependencies">5. Install Dependencies</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python -m pip install --upgrade -r requirements.txt
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python -m pip install --upgrade setuptools setuptools_rust numpy cython
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>setuptools<span class="w"> </span>setuptools_rust<span class="w"> </span>numpy<span class="w"> </span>cython
 </code></pre></div>
 <h3 id="6-build-binaries">6. Build Binaries</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python setup.py build_ext --inplace
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>setup.py<span class="w"> </span>build_ext<span class="w"> </span>--inplace
 </code></pre></div>
 <h2 id="running-tests">Running Tests</h2>
 <p>To run the regression and unit tests:</p>
 <p>First, install the optional dependencies:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python -m pip install --upgrade -r tests/requirements.txt
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>-r<span class="w"> </span>tests/requirements.txt
 </code></pre></div>
 <p>Then run the regression tests.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python -m pytest

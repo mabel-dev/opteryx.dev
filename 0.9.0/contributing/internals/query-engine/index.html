@@ -1379,8 +1379,8 @@
 <h2 id="parser-lexer">Parser &amp; Lexer</h2>
 <p>The primary goal of the Parser and Lexer (which in some engines is two separate components) is to interpret the SQL provided by the user. This is generally done in two steps, the first is the break the query into separate tokens (or words) and the second is to understand the meaning of those tokens.</p>
 <p>For example for this statement</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">SELECT</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="k">FROM</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">SELECT</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="k">FROM</span>
 </code></pre></div>
 <p>The Parser and Lexer will understand that we're requesting the field <code>SELECT</code> from the relation <code>FROM</code>.</p>
 <p>Opteryx uses <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> as its Parser and Lexer, as a Rust library, Opteryx creates Python bindings for sqlparser-rs (derived from <a href="https://github.com/wseaton/sqloxide">sqloxide</a>). Opteryx does not support all features and functionality provided by this library.</p>
