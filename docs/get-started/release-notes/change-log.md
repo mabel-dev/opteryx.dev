@@ -7,7 +7,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Fixed
+
+- [[#757](https://github.com/mabel-dev/opteryx/issues/757)] Multiple bugs in config manager. [@joocer](https://github.com/joocer) 
+
 ### Changed
+
+- [TARCHIA] Internal refactoring relating to creation of metadata service. [@joocer]
+
 ### Added
 
 ## [0.8.1] - 2022-12-30
