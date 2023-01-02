@@ -12,7 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
-- Internal refactoring relating to creation of metadata service. [@joocer]
+- Internal refactoring relating to creation of metadata service. [@joocer](https://github.com/joocer)  
 - Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.29.0 [@joocer](https://github.com/joocer)  
 
 ### Added
