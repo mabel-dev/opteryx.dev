@@ -31,10 +31,10 @@ Abridged usage guidance is available below:
 ~~~
 Usage: python -m opteryx [OPTIONS] [SQL] 
 
---ast    --no-ast    Display the AST for the query. [default: no-ast]
---o      <target>    Where to output the results. [default: console]
---color  --no-color  Colorize the table displayed to the console. [default: color] 
---help               Show the full help details.          
+--ast         Display the AST for the query.
+--o <target>  Where to output the results. [default: console]
+--no-color    Do not colorize console output. 
+--help        Show the full help details.          
 ~~~
 
 To see the full help and usage details for the CLI use the `--help` option:
