@@ -14,7 +14,7 @@ cur.execute('SELECT * FROM $planets')
 rows = cur.fetchall()
 ~~~
 
-The results of the query are availble via the cursor using `fetchone()` which returns a tuple, `fetchmany(size)` and `fetchall()` which return generators of tuples, or `arrow()` which returns an [Arrow Table](https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table).
+The results of the query are availble via the cursor using `fetchone()` that returns a tuple, `fetchmany()` and `fetchall()` that return generators of tuples, or `arrow()` that returns an [Arrow Table](https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table).
 
 ## Command Line Interface
 
