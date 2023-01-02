@@ -24,7 +24,7 @@ Library           | Disposition       | Copyright            | Licence
 [typer](https://github.com/tiangolo/typer)                 | Installed   |   | [MIT](https://github.com/tiangolo/typer/blob/master/LICENSE)
 
 &emsp;**Derived** components originated from this module but has undergone significant change.  
-&emsp;**Installed** components are installed from PyPI.  
+&emsp;**Installed** components are installed from PyPI/Cargo.  
 &emsp;**Integrated** components have their source code (or significant parts of) included in the Opteryx codebase.  
 
 This list does not include transitive dependencies nor is guaranteed to be complete. Only components which have been integrated have copyright information noted, best efforts have been made to ensure this information is correct. Corrections should be [raised as issues](https://github.com/mabel-dev/opteryx/issues/new?assignees=joocer&labels=Bug+%F0%9F%AA%B2&template=bug_report.md&title=%F0%9F%AA%B2) for remediation. 
