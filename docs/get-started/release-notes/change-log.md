@@ -16,6 +16,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
+- [[#750](https://github.com/mabel-dev/opteryx/issues/750)] CLI improvements. [@joocer](https://github.com/joocer) 
+
 ## [0.8.1] - 2022-12-30
 
 ### Fixed
