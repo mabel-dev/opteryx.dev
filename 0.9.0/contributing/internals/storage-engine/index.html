@@ -1328,8 +1328,10 @@
 <p>Files don't need an explicit schema, but each partition must have the same columns in the same order in every row of every file.</p>
 <p>Data types are inferred from the records, where data types are not consistent, the read will fail.</p>
 <p>Opteryx supports zStandard Compressed JSONL files as created by Mabel, these perform approximately 20% faster than raw JSONL files primarily due to reduced IO.</p>
-<h3 id="csv">CSV</h3>
-<p>Comma-separated files can be used with Opteryx, however this is only provided to meet the base expectation that the system can support CSV. It is not recommended and limited regression tests are written relating to CSV handling.</p>
+<h3 id="csv-tsv">CSV &amp; TSV</h3>
+<p>Comma-separated and tab-delimited files can be used with Opteryx, however this is only provided to meet the base expectation that the system can support these formats. It is not recommended and limited regression tests are written relating to CSV handling.</p>
+<h3 id="avro">Avro</h3>
+<p>Avro formatted files are supported, however require an additional library to be installed (<code>pip install avro</code>) and performance is considered poor.</p>
 <h2 id="storage-layout">Storage Layout</h2>
 <p>For Blob/File stores, the path of the data is used as the name of the relation in the query. There are currently two built in data schemas, none (or flat) and Mabel.</p>
 <h3 id="flat">Flat</h3>

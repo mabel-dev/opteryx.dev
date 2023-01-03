@@ -1526,16 +1526,19 @@
 <ul>
 <li>Parquet formatted files (<code>.parquet</code>)</li>
 <li>CSV formatted files (<code>.csv</code>)</li>
+<li>Tab delimited files (<code>.tsv</code>)</li>
 <li><a href="https://jsonlines.org/">JSONL</a> formatted files (<code>.jsonl</code>)</li>
 <li>JSONL formatted files which have been <a href="http://facebook.github.io/zstd/">Zstandard</a> compressed (<code>.zstd</code>)</li>
 <li>ORC formatted files (<code>.orc</code>)</li>
 <li>Feather (Arrow) formatted files (<code>.arrow</code>)</li>
+<li>Avro formatted files (<code>.avro</code>)</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
-<li>ORC is not fully supported on Windows or PyPy environments</li>
-<li>CSV support is limited and is not recommended beyond trivial usage</li>
+<li>ORC is not fully supported on Windows environments</li>
+<li>CSV and TSV support is limited and is not recommended beyond trivial usage</li>
+<li>Avro is not recommended for use in performance-sensitive contexts</li>
 </ul>
 </div>
 <h3 id="file-sizes">File Sizes</h3>
