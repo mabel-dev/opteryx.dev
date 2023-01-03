@@ -180,14 +180,17 @@ Opteryx supports:
 
 - Parquet formatted files (`.parquet`)
 - CSV formatted files (`.csv`)
+- Tab delimited files (`.tsv`)
 - [JSONL](https://jsonlines.org/) formatted files (`.jsonl`)
 - JSONL formatted files which have been [Zstandard](http://facebook.github.io/zstd/) compressed (`.zstd`)
 - ORC formatted files (`.orc`)
 - Feather (Arrow) formatted files (`.arrow`)
+- Avro formatted files (`.avro`)
 
 !!! note
-    - ORC is not fully supported on Windows or PyPy environments
-    - CSV support is limited and is not recommended beyond trivial usage
+    - ORC is not fully supported on Windows environments
+    - CSV and TSV support is limited and is not recommended beyond trivial usage
+    - Avro is not recommended for use in performance-sensitive contexts
 
 ### File Sizes
 

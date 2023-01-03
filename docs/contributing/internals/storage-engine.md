@@ -26,9 +26,13 @@ Data types are inferred from the records, where data types are not consistent, t
 
 Opteryx supports zStandard Compressed JSONL files as created by Mabel, these perform approximately 20% faster than raw JSONL files primarily due to reduced IO.
 
-### CSV
+### CSV & TSV
 
-Comma-separated files can be used with Opteryx, however this is only provided to meet the base expectation that the system can support CSV. It is not recommended and limited regression tests are written relating to CSV handling.
+Comma-separated and tab-delimited files can be used with Opteryx, however this is only provided to meet the base expectation that the system can support these formats. It is not recommended and limited regression tests are written relating to CSV handling.
+
+### Avro
+
+Avro formatted files are supported, however require an additional library to be installed (`pip install avro`) and performance is considered poor.
 
 ## Storage Layout
 
