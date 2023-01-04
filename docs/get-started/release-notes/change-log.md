@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - [[#757](https://github.com/mabel-dev/opteryx/issues/757)] Multiple bugs in config manager. [@joocer](https://github.com/joocer) 
+- [[#769](https://github.com/mabel-dev/opteryx/issues/769)] `ARRAY_AGG` couldn't be nested. [@joocer](https://github.com/joocer) 
 
 ### Changed
 
