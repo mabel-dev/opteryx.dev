@@ -1,0 +1,32 @@
+# TPH-C
+
+[TPC](https://www.tpc.org/) publish a set of benchmarks for computer and database systems. [TPC-H](https://www.tpc.org/tpch/default5.asp) is a decision support benchmark.
+
+Query   | Modified | Pass
+:------ | :------- | :---------
+query1  | no       | yes
+query2  | yes      | no
+query3  | no       | no
+query4  | no       | no
+query5  | no       | no
+query6  | no       | yes
+query7  | no       | no
+query8  | no       | no
+query9  | no       | no
+query10 | no       | no
+query11 | yes      | no
+query12 | no       | no
+query13 | no       | no
+query14 | no       | unknown
+query15 | yes      | no
+query16 | no       | no
+query17 | no       | no
+query18 | yes      | unknown
+query19 | no       | unknown
+query20 | no       | unknown
+query21 | yes      | unknown
+query22 | yes      | unknown
+
+All queries have been modified to refer to the location of the datasets, **modified** in the above table is where the SQL has been written to replace unsupported functionality with supported functionality - this is where the original query either created a view or a temporary table, both of these have been replaced with a CTE definition.
+
+The test suite for this benchmark is in the [Opteryx Benchmarking](https://github.com/mabel-dev/wrenchy-bench) repository.
