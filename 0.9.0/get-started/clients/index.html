@@ -1341,7 +1341,10 @@
 <p>Opteryx Command Line Interface (CLI) provides a terminal-based interactive shell for running queries. The CLI is a Python script usually run by invoking Python, like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>-m<span class="w"> </span>opteryx<span class="w"> </span>--o<span class="w"> </span>planets.csv<span class="w"> </span><span class="s2">&quot;SELECT * FROM \$planets&quot;</span>
 </code></pre></div>
-<p>Note that CLI will have character escaping requirements, such as a backslash before dollar signs.</p>
+<blockquote>
+<p>Note: CLI usage may have character escaping requirements, such as a backslash before dollar signs and backticks.</p>
+</blockquote>
+<p>Querying individual files quires the relative path in place of the relation/table name in the query, this usually requires the filename to be put in quotes as filenames usually contain illegal characters.</p>
 <p>Abridged usage guidance is available below:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Usage: python -m opteryx [OPTIONS] [SQL] 
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
