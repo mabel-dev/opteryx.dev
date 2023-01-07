@@ -26,7 +26,7 @@ python -m opteryx --o planets.csv "SELECT * FROM \$planets"
 
 > Note: CLI usage may have character escaping requirements, such as a backslash before dollar signs and backticks.
 
-Querying individual files
+Querying individual files quires the relative path in place of the relation/table name in the query, this usually requires the filename to be put in quotes as filenames usually contain illegal characters.
 
 Abridged usage guidance is available below:
 
