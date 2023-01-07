@@ -24,7 +24,9 @@ Opteryx Command Line Interface (CLI) provides a terminal-based interactive shell
 python -m opteryx --o planets.csv "SELECT * FROM \$planets"
 ~~~
 
-Note that CLI will have character escaping requirements, such as a backslash before dollar signs.
+> Note: CLI usage may have character escaping requirements, such as a backslash before dollar signs and backticks.
+
+Querying individual files
 
 Abridged usage guidance is available below:
 

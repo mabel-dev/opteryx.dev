@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 ### Added
 
+- [[#521](https://github.com/mabel-dev/opteryx/issues/521)] Query files directly. [@joocer](https://github.com/joocer) 
+
 ## [0.8.2] - 2023-01-06
 
 ### Fixed
