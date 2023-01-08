@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- [[#782](https://github.com/mabel-dev/opteryx/issues/782)] Literal predicates in JOIN conditions. [@joocer](https://github.com/joocer) 
+- [[#782](https://github.com/mabel-dev/opteryx/issues/782)] Support literal predicates in `JOIN` conditions. [@joocer](https://github.com/joocer) 
 
 ### Changed
 ### Added
