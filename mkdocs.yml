@@ -66,10 +66,10 @@ nav:
     - Deployment Guide: get-started/deployment-guide.md
     - Configuration Guide: get-started/configuration-guide.md
     - Metastore (Tarchia): get-started/metastore.md
-    - External Standards:
+    - Standards & Benchmarks:
       - Python PEP249: get-started/external-standards/pep249.md
       - ANSI SQL-92: get-started/external-standards/sql92.md
-      - TPH-C: get-started/external-standards/tphc.md
+      - TPC-H: get-started/external-standards/tpcg.md
     - Release Notes:
       - Change Log: get-started/release-notes/change-log.md
       - Notices: get-started/release-notes/notices.md

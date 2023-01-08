@@ -1,9 +1,9 @@
-# TPH-C
+# TPC-H
 
-[TPC](https://www.tpc.org/) publish a set of benchmarks for computer and database systems. [TPC-H](https://www.tpc.org/tpch/default5.asp) is a decision support benchmark.
+[TPC](https://www.tpc.org/) publish a set of benchmarks for computer and database systems. [TPC-H](https://www.tpc.org/tpch/default5.asp) is a decision support benchmark which consists of a set of business-oriented queries. This benchmark demonstrates a decision support system that examines large amounts of data, executes highly complex queries, and answers key business questions. 
 
 Query   | Modified | Pass
-:------ | :------- | :---------
+:------ | :------- | :-----
 query1  | no       | yes
 query2  | yes      | no
 query3  | no       | no
@@ -21,11 +21,11 @@ query14 | no       | unknown
 query15 | yes      | no
 query16 | no       | no
 query17 | no       | no
-query18 | yes      | unknown
+query18 | yes      | no
 query19 | no       | unknown
-query20 | no       | unknown
-query21 | yes      | unknown
-query22 | yes      | unknown
+query20 | no       | no
+query21 | yes      | no
+query22 | yes      | no
 
 All queries have been modified to refer to the location of the datasets, **modified** in the above table is where the SQL has been written to replace unsupported functionality with supported functionality - this is where the original query either created a view or a temporary table, both of these have been replaced with a CTE definition.
 
