@@ -291,17 +291,18 @@ strong {
     font-weight: 400;
 }
 
-.md-content__inner {
-    padding-left: 3em;
-    padding-right: 3em;
-}
-
 .home-heading {
     font-size: 2em;
     font-weight: 900;
 }
 
 @media (min-width: 720px) {
+
+    .md-content__inner {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
     .home-features {
         display: grid;
         justify-content: center;
