@@ -85,7 +85,16 @@
 <p><b>Parameters</b></p><ul><li>size:  int (optional)
 </br>Return the head 'size' number of records.</li>
 
-<p><b>Returns</b></p><ul><li>pyarrow.Table: </ul></dd></dl>
+<p><b>Returns</b></p><ul><li>pyarrow.Table</ul></dd></dl>
+
+<dl><dt><b>to_df</b> (size)</dt><dd>
+</br>Fetch the resultset as a pandas DataFrame.
+
+<p><b>Parameters</b></p><ul><li>size:  int (optional)
+</br>Return the head 'size' number of records.</li>
+
+<p><b>Returns</b></p><ul><li>pandas.DataFrame</ul></dd></dl>
+
 <dl><dt><b>close</b> ()</dt><dd>
 </br>close the connection</li></ul></dd></dl>
 <dl><dt><b>head</b> (size)</dt><dd></ul></dd></dl>
