@@ -11,6 +11,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#782](https://github.com/mabel-dev/opteryx/issues/782)] Support literal predicates in `JOIN` conditions. [@joocer](https://github.com/joocer) 
 
 ### Changed
+
+- Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.30.0 [@joocer](https://github.com/joocer)  
+
 ### Added
 
 - [[#521](https://github.com/mabel-dev/opteryx/issues/521)] Query files directly. [@joocer](https://github.com/joocer) 
