@@ -1,5 +1,7 @@
 # Python Client
 
+This document describes the Python objects intended to be accessed by users of the library. The library has many other components and interfaces which can be called, accessing these is generally not recommended.
+
 <!--- this page is automatically build from connection.py --->
 
 <!--- target format
