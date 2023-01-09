@@ -1,8 +1,10 @@
 # Contributor Guide
 
-**Welcome to the Opteryx Contributor Guide.**
+### Welcome to the Opteryx Contributor Guide
 
-In this section you will find information to help you to bring your unique skills and experience and join us in building Opteryx.
+We're excited your considering contributing to Opteryx and look forward to reviewing your contribution. 
+
+Opteryx is open source software, we value your feedback and want to make contributing to this project as easy and transparent as possible. In this section you will find information to help you to bring your unique skills and experience and join us in building Opteryx.
 
 Opteryx is primarily written in Python, but you don't need to be a Python developer to contribute. All contributions, [bug reports](https://github.com/mabel-dev/opteryx/issues/new/choose), documentation improvements, and [ideas](https://github.com/mabel-dev/opteryx/discussions) are welcome.
 
