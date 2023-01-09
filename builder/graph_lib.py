@@ -91,6 +91,9 @@ class Graph(object):
         """
         self._nodes[nid] = attributes
 
+    def __getitem__(self, node):
+        return self._nodes.get(node)
+
     def nodes(self, data=False):
         """
         The nodes which comprise the graph
