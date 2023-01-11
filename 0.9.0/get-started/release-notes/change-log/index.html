@@ -597,6 +597,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    [Unreleased]
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#083-2023-01-10" class="md-nav__link">
     [0.8.3] - 2023-01-10
   </a>
@@ -1397,6 +1404,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    [Unreleased]
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#083-2023-01-10" class="md-nav__link">
     [0.8.3] - 2023-01-10
   </a>
@@ -1523,12 +1537,17 @@
 <h1 id="changelog">Changelog</h1>
 <p>All notable changes to this project will be documented in this file, where appropriate the GitHub issue reference will be noted along with the change. Breaking changes will be clearly indicated with the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994z"/></svg></span> icon.</p>
 <p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>.</p>
+<h2 id="unreleased">[Unreleased]</h2>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/799">#799</a>] Chunk large blob reads. <a href="https://github.com/joocer">@joocer</a> </li>
+</ul>
 <h2 id="083-2023-01-10">[0.8.3] - 2023-01-10</h2>
 <h3 id="fixed">Fixed</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/782">#782</a>] Support literal predicates in <code>JOIN</code> conditions. <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
-<h3 id="changed">Changed</h3>
+<h3 id="changed_1">Changed</h3>
 <ul>
 <li>Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.30.0 <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
@@ -1545,7 +1564,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/769">#769</a>] <code>ARRAY_AGG</code> couldn't be nested. <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/775">#775</a>] Connection <code>arrow</code> materializes before applying limit. <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
-<h3 id="changed_1">Changed</h3>
+<h3 id="changed_2">Changed</h3>
 <ul>
 <li>Internal refactoring relating to creation of metadata service. <a href="https://github.com/joocer">@joocer</a>  </li>
 <li>Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.29.0 <a href="https://github.com/joocer">@joocer</a>  </li>
@@ -1568,7 +1587,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/710">#710</a>] <code>SEARCH</code> mishandles pages with empty values in first row. <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/711">#711</a>] <code>DATE_TRUNC</code> is case sensitive. <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
-<h3 id="changed_2">Changed</h3>
+<h3 id="changed_3">Changed</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/707">#707</a>] First try to estimate unique values using the Distogram for <code>SHOW EXTENDED COLUMNS</code>. <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/707">#707</a>] <code>SHOW EXTENDED COLUMNS</code> creates histograms of 20 bins. <a href="https://github.com/joocer">@joocer</a> </li>
@@ -1591,7 +1610,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/518">#518</a>] <code>SELECT *</code> and <code>GROUP BY</code> can't be used together. <a href="https://github.com/joocer">@joocer</a>  </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/689">#689</a>] <code>IS</code> comparisons cannot be combined with other comparisons when optimization is off. <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
-<h3 id="changed_3">Changed</h3>
+<h3 id="changed_4">Changed</h3>
 <ul>
 <li>Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.27.0 <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
@@ -1620,7 +1639,7 @@
 <li>Support <code>AND</code>, <code>OR</code>, and <code>XOR</code> in <code>SELECT</code> statement. <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/646">#646</a>] Temporal clauses in incorrect place were ignored <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
-<h3 id="changed_4">Changed</h3>
+<h3 id="changed_5">Changed</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/566">#566</a>] Change from using SQLite3 to <a href="https://duckdb.org/">DuckDB</a> for SQL comparision tests in <a href="https://github.com/mabel-dev/wrenchy-bench">Wrenchy-Bench</a>. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/584">#584</a>] (clarity) <code>enable_page_management</code> configuration and parameter renamed <code>enable_page_defragmentation</code> with some minor refactoring of approach to defragmentation. <a href="https://github.com/joocer">@joocer</a>   </li>
@@ -1646,7 +1665,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/528">#528</a>] <code>.shape</code> and <code>.count</code> not working as expected. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>Numbers expressed in the form <code>+n</code> not parsed correctly. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
-<h3 id="changed_5">Changed</h3>
+<h3 id="changed_6">Changed</h3>
 <ul>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994z"/></svg></span> (alignment) <code>as_arrow</code> renamed to <code>arrow</code> to align to <a href="https://duckdb.org/docs/api/python/overview#apache-arrow">DuckDB</a> naming. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994z"/></svg></span> (consistency) <code>SHOW COLUMNS</code> returns the column name in the <code>name</code> column, previously <code>column_name</code> <a href="https://github.com/joocer">@joocer</a>   </li>
@@ -1687,7 +1706,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/395">#395</a>] Support reading CSV files. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/498">#498</a>] CLI support writing CSV/JSONL/Parquet. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
-<h3 id="changed_6">Changed</h3>
+<h3 id="changed_7">Changed</h3>
 <ul>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/457">#457</a>] (correction) <code>null</code> values are removed before performing <code>INNER JOIN USING</code>. <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
@@ -1715,7 +1734,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/364">#364</a>] Support <code>SOUNDEX</code> function. <a href="https://github.com/joocer">@joocer</a>  </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/401">#401</a>] Support SHA-based hash algorithm functions. <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
-<h3 id="changed_7">Changed</h3>
+<h3 id="changed_8">Changed</h3>
 <ul>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994z"/></svg></span> (alignment) Paths to storage adapters has been updated to reflect 'connector' terminology.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994z"/></svg></span> (sensible defaults) Default behaviour changed from Mabel partitioning to no partitioning.</li>
@@ -1742,7 +1761,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/301">#301</a>] Optimizations for <code>IS</code> conditions. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/229">#229</a>] Support <code>TIME_BUCKET</code> function. (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
-<h3 id="changed_8">Changed</h3>
+<h3 id="changed_9">Changed</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/35">#35</a>] Table scan planning done during query planning. <a href="https://github.com/joocer">@joocer</a>    </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/173">#173</a>] Data not found raises different errors under different scenarios. (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -1777,7 +1796,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/234">#234</a>] Implement <code>SEARCH</code> function. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/237">#237</a>] Implement <code>COALESCE</code> function. (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
-<h3 id="changed_9">Changed</h3>
+<h3 id="changed_10">Changed</h3>
 <ul>
 <li>Blob-based readers (disk &amp; GCS) moved from 'local' and 'network' paths to a new 'blob' path. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>Query Execution rewritten. (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -1829,7 +1848,7 @@
 <li>Additional statistics recording the time taken to scan partitions (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>Support for <code>FULL JOIN</code> and <code>RIGHT JOIN</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
-<h3 id="changed_10">Changed</h3>
+<h3 id="changed_11">Changed</h3>
 <ul>
 <li>Use PyArrow implementation for <code>INNER JOIN</code> and <code>LEFT JOIN</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
