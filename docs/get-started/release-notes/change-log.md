@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- [[#797](https://github.com/mabel-dev/opteryx/issues/797)] Name collisons with aliases and ORDER BYs. [@joocer](https://github.com/joocer) 
+- [[#797](https://github.com/mabel-dev/opteryx/issues/797)] Name collisons with aliases and `ORDER BY`s. [@joocer](https://github.com/joocer) 
 
 ### Changed
 
