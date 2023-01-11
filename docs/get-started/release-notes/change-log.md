@@ -14,6 +14,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#799](https://github.com/mabel-dev/opteryx/issues/799)] Chunk large blob reads. [@joocer](https://github.com/joocer) 
 
+### Added
+
+- [[#801](https://github.com/mabel-dev/opteryx/issues/801)] Helper function `opteryx.query`. [@joocer](https://github.com/joocer) 
+
 ## [0.8.3] - 2023-01-10 
 
 ### Fixed
