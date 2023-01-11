@@ -188,7 +188,7 @@ Opteryx supports:
 - Avro formatted files (`.avro`)
 
 !!! note
-    - ORC is not fully supported on Windows environments
+    - ORC is not supported on Windows environments
     - CSV and TSV support is limited and is not recommended beyond trivial usage
     - Avro is not recommended for use in performance-sensitive contexts
 

@@ -8,13 +8,12 @@ Opteryx is an embeddable package into Python applications, scripts and Notebooks
 
 ~~~python
 import opteryx
-conn = opteryx.connect()
-cur = conn.cursor()
-cur.execute('SELECT * FROM $planets')
+
+result = opteryx.query('SELECT * FROM $planets')
 rows = cur.fetchall()
 ~~~
 
-The results of the query are availble via the cursor using `fetchone()` that returns a tuple, `fetchmany()` and `fetchall()` that return generators of tuples, or `arrow()` that returns an [Arrow Table](https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table).
+The results of the query are availble via the cursor using `fetchone()` that returns a tuple, `fetchmany()` and `fetchall()` that return generators of tuples, `arrow()` that returns an [Arrow Table](https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table)m or `to_df()` that returns a [pandas DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
 
 ## Command Line Interface
 
