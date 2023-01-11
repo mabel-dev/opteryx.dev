@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Fixed
+
+- [[#797](https://github.com/mabel-dev/opteryx/issues/797)] Name collisons with aliases and ORDER BYs. [@joocer](https://github.com/joocer) 
+
 ### Changed
 
 - [[#799](https://github.com/mabel-dev/opteryx/issues/799)] Chunk large blob reads. [@joocer](https://github.com/joocer) 
