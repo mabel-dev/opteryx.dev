@@ -27,8 +27,6 @@ You can quickly test your installation is working as expected by querying one of
 ~~~python
 import opteryx
 
-conn = opteryx.connect()
-cur = conn.cursor()
-cur.execute("SELECT * FROM $planets;")
-print(cur.arrow())
+result = opteryx.query("SELECT * FROM $planets;").arrow()
+print(result)
 ~~~
