@@ -1437,9 +1437,9 @@
 <li>The Buffer Pool is a read-through for the Read Cache.</li>
 </ul>
 <p>That means that reads try to locate the fastest access to a blob in this order:</p>
-<p>1) Check the Buffer Pool (in memory)
-2) Check the Read Cache (fast KV store)
-3) Read from storage</p>
+<p>1) Check the Buffer Pool (in memory) <br />
+1) Check the Read Cache (fast KV store) <br />
+1) Read from storage   </p>
 <p>The Buffer Pool and Read Cache creates a storage heirarchy, where blobs more likely to be read (based on what has been read in the past) are more likely to be in a location which is faster to read.</p>
 <p>Buffer Pools are local to the asset serving the requests, in a serverless environment this asset may only serve one or two requests before terminating. If your environment is configured like this, have a small Buffer Pool and a large Read Cache. If assets serve 10s or more requests before terminating, have a large Buffer Cache.</p>
 <p>As will all optimization recommendations, test in your unique set of circumstances before assuming this to always be true.</p>
