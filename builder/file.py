@@ -92,8 +92,8 @@ def process_file(filepath):
 
     return graph
 
-def create_doc(graph):
 
+def create_doc(graph):
     def _inner(nid):
         shard = ""
         # source, target, relation
@@ -102,7 +102,11 @@ def create_doc(graph):
             if node.get("kind") == "class":
 
                 # class args are in a child
-                init = [i for i in [graph[b] for a, b, c in graph.outgoing_edges(t)] if i.get('name') == "__init__"]
+                init = [
+                    i
+                    for i in [graph[b] for a, b, c in graph.outgoing_edges(t)]
+                    if i.get("name") == "__init__"
+                ]
                 desc = ""
                 if init:
                     init = init.pop()
@@ -122,6 +126,7 @@ def create_doc(graph):
         return shard
 
     return _inner("root")
+
 
 module = get_file()
 

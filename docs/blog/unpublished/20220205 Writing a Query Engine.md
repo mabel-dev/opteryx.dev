@@ -2,7 +2,7 @@
 
 ## Motivation
 
-No-one in their right mind would write a SQL Engine if they didn't need to. There are a lot of options in the space of providing SQL query access to distributed data - with a few players dominating the market like Trino, DuckDB and SQLite.
+No-one in their right mind would write a SQL Engine if they didn't need to. There are a lot of options in the space of providing SQL query access to distributed data - with a few players prominent in the market like Trino, DuckDB and SQLite.
 
 We had a problem where we wanted a SQL interface to our data, but none of the existing tools were a good fit for our situation. We could change ourselves to fit an existing toolset, but wanted to explore other options before committing to vendor-defined design.
 
@@ -10,7 +10,7 @@ We had a problem where we wanted a SQL interface to our data, but none of the ex
 
 The data store we're working with was designed to be transctional (read a row of data, process it, save the result, repeat). We use JSON lines files, which for this use case we were unable to find anything better in the sweet spot of human and machine readable, and performance to read and write.
 
-With this as the datastore, our first attempt at a SQL engine was also transactional, following what is known as the Volcano Model. This aligned well with the tools that we had written to process the data so most of the effort was with translating the SQL syntax to filters that the existing tools could understand. Functionality like GROUP BY was added to make it feel more like a database and less like a log-viewer.
+With this as the datastore, our first attempt at a SQL engine was also transactional, following what is known as the Volcano Model. This aligned well with the tools that we had written to process the data so most of the effort was with translating the SQL syntax to filters that the existing tools could understand. Functionality like `GROUP BY` was added to make it feel more like a database and less like a log-viewer.
 
 This provided an acceptable level of functionality for single-table queries (the existing tools only ever read from one table and write to one table) and the engine was implemented into user-facing systems.
 

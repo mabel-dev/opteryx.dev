@@ -22,6 +22,7 @@ Library           | Disposition       | Copyright            | Licence
 [pyyaml](https://pyyaml.org/)                              | Installed   |  | [MIT](https://github.com/yaml/pyyaml/blob/master/LICENSE)
 [sqloxide](https://github.com/wseaton/sqloxide)            | Integrated  | 2020 [Will Eaton](https://github.com/wseaton) | [MIT](https://github.com/wseaton/sqloxide/blob/master/LICENSE)
 [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) | Installed |  | [Apache 2.0](https://github.com/sqlparser-rs/sqlparser-rs/blob/main/LICENSE.TXT)
+[travers](https://github.com/joocer/travers)               | Integrated  | 2023 [Justin Joyce](https://github.com/joocer)  | [Apache 2.0](https://github.com/joocer/travers/blob/main/LICENSE)
 [typer](https://github.com/tiangolo/typer)                 | Installed   |   | [MIT](https://github.com/tiangolo/typer/blob/master/LICENSE)
 
 &emsp;**Derived** components originated from this module but has undergone significant change.  
