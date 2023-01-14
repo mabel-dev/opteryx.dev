@@ -50,9 +50,9 @@ The [Buffer Pool](https://www.ibm.com/docs/en/db2/11.5?topic=databases-buffer-po
 
 That means that reads try to locate the fastest access to a blob in this order:
 
-1) Check the Buffer Pool (in memory)
-2) Check the Read Cache (fast KV store)
-3) Read from storage
+1) Check the Buffer Pool (in memory)   
+1) Check the Read Cache (fast KV store)   
+1) Read from storage   
 
 The Buffer Pool and Read Cache creates a storage heirarchy, where blobs more likely to be read (based on what has been read in the past) are more likely to be in a location which is faster to read.
 
