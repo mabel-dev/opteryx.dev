@@ -21,7 +21,7 @@
         <link rel="next" href="../aggregates/">
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.9c788c91.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
@@ -146,7 +146,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -1437,8 +1437,8 @@
 <h1 id="functions">Functions</h1>
 <p>This document describes the supported SQL functions and operators.</p>
 <p>Generally functions will return <code>null</code> on <code>null</code> input, although note that this is not true in all circumstances, especially for null-aware functions like <code>COALESCE</code> and <code>IFNULL</code>.</p>
-<p>Definitions noted with a <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span> accept different input arguments.</p>
-<p>New functions for this version are annotated with the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694z"/></svg></span> icon.</p>
+<p>Definitions noted with a <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span> accept different input arguments.</p>
+<p>New functions for this version are annotated with the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> icon.</p>
 <h2 id="conversion-functions">Conversion Functions</h2>
 <div class="admonition function">
 <p class="admonition-title"><code>BOOLEAN</code> <strong>any</strong>: <em>any</em> → <em>boolean</em></p>
@@ -1536,7 +1536,7 @@ Also implemented as individual extraction functions.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>FROM_UNIXTIME</code> (<strong>timestamp</strong>: <em>numeric</em>) → <em>timestamp</em></p>
-<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694z"/></svg></span> New in 0.8</strong>    <br />
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> New in 0.8</strong>    <br />
 Return a timestamp representation of an <a href="https://www.unixtimestamp.com/">Unix Timestamp</a>.  <br />
 Related: <code>UNIXTIME</code> </p>
 </div>
@@ -1582,14 +1582,14 @@ Alias for <code>EXTRACT</code>(quarter FROM <strong>ts</strong>)</p>
 Alias for <code>EXTRACT</code>(second FROM <strong>ts</strong>)</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>UNIXTIME</code> () → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
-<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694z"/></svg></span> New in 0.8</strong>    <br />
+<p class="admonition-title"><code>UNIXTIME</code> () → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> New in 0.8</strong>    <br />
 Return the current time as a <a href="https://www.unixtimestamp.com/">Unix Timestamp</a>.  <br />
 Related: <code>FROM_UNIXTIME</code>, <code>current_time</code> </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>UNIXTIME</code> (<strong>timestamp</strong>: <em>timestamp</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
-<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694z"/></svg></span> New in 0.8</strong>    <br />
+<p class="admonition-title"><code>UNIXTIME</code> (<strong>timestamp</strong>: <em>timestamp</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> New in 0.8</strong>    <br />
 Return <strong>timestamp</strong> in <a href="https://www.unixtimestamp.com/">Unix Timestamp</a> representation.  <br />
 Related: <code>FROM_UNIXTIME</code> </p>
 </div>
@@ -1644,11 +1644,11 @@ Alias for <code>EXTRACT</code>(year FROM <strong>ts</strong>)</p>
 <h2 id="list-functions">List Functions</h2>
 <p>For more details, see <a href="../adv-working-with-lists/">Working with Lists</a>.</p>
 <div class="admonition function">
-<p class="admonition-title"><strong>array</strong>: <em>list</em><code>[</code><strong>index</strong>: <em>numeric</em><code>]</code> → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><strong>array</strong>: <em>list</em><code>[</code><strong>index</strong>: <em>numeric</em><code>]</code> → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Return the <strong>index</strong>th element from <strong>array</strong>. </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GET</code> (<strong>array</strong>: <em>list</em>, <strong>index</strong>: <em>numeric</em>) → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>GET</code> (<strong>array</strong>: <em>list</em>, <strong>index</strong>: <em>numeric</em>) → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Alias of <strong>array</strong><code>[</code><strong>index</strong><code>]</code>  </p>
 </div>
 <div class="admonition function">
@@ -1662,11 +1662,11 @@ Related: <code>LEAST</code></p>
 Related: <code>GREATEST</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>LEN</code> (<strong>array</strong>: <em>list</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>LEN</code> (<strong>array</strong>: <em>list</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Alias of <code>LENGTH</code>(<strong>array</strong>)</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>LENGTH</code> (<strong>array</strong>: <em>list</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>LENGTH</code> (<strong>array</strong>: <em>list</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Returns the number of elements in <strong>array</strong>.</p>
 </div>
 <div class="admonition function">
@@ -1683,7 +1683,7 @@ See also <code>SEARCH</code>(<strong>array</strong>, <strong>value</strong>)  </
 <p>Return <code>true</code> if <strong>array</strong> contains all of elements in <strong>values</strong>.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>SEARCH</code> (<strong>array</strong>: <em>list</em>, <strong>value</strong>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>SEARCH</code> (<strong>array</strong>: <em>list</em>, <strong>value</strong>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Return <code>true</code> if <strong>array</strong> contains <strong>value</strong>. </p>
 </div>
 <div class="admonition function">
@@ -1750,11 +1750,11 @@ Related: <code>LN</code>, <code>LOG</code>, <code>LOG2</code></p>
 Related: <code>LN</code>, <code>LOG</code>, <code>LOG10</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>ROUND</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>ROUND</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Returns <strong>x</strong> rounded to the nearest integer. </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>ROUND</code> (<strong>x</strong>: <em>numeric</em>, <strong>places</strong>: <em>numeric</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>ROUND</code> (<strong>x</strong>: <em>numeric</em>, <strong>places</strong>: <em>numeric</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Returns <strong>x</strong> rounded to <strong>places</strong> decimal places.</p>
 </div>
 <div class="admonition function">
@@ -1780,7 +1780,7 @@ Related: <code>LN</code>, <code>LOG</code>, <code>LOG10</code></p>
 <h2 id="string-functions">String Functions</h2>
 <p>Functions for examining and manipulating string values. </p>
 <div class="admonition function">
-<p class="admonition-title"><strong>str</strong>: <em>varchar</em><code>[</code><strong>index</strong>: <em>numeric</em><code>]</code> → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><strong>str</strong>: <em>varchar</em><code>[</code><strong>index</strong>: <em>numeric</em><code>]</code> → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Subscript operator, return the <strong>index</strong>th character from <strong>str</strong>. </p>
 </div>
 <div class="admonition function">
@@ -1799,7 +1799,7 @@ Related: <code>CONCAT</code></p>
 Related: <code>STARTS_WITH</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GET</code> (<strong>str</strong>: <em>varchar</em>, <strong>index</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>GET</code> (<strong>str</strong>: <em>varchar</em>, <strong>index</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Alias of <strong>str</strong><code>[</code><strong>index</strong><code>]</code>   </p>
 </div>
 <div class="admonition function">
@@ -1808,16 +1808,16 @@ Related: <code>STARTS_WITH</code></p>
 Related: <code>RIGHT</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>LEN</code> (<strong>str</strong>: <em>varchar</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>LEN</code> (<strong>str</strong>: <em>varchar</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Alias of <code>LENGTH</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>LENGTH</code> (<strong>str</strong>: <em>varchar</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>LENGTH</code> (<strong>str</strong>: <em>varchar</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Returns the length of <strong>str</strong> in characters.    </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LEVENSHTEIN</code> (<strong>str1</strong>: <em>varchar</em>, <strong>str2</strong>: <em>varchar</em>) → <em>numeric</em></p>
-<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694z"/></svg></span> New in 0.8</strong>  <br />
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> New in 0.8</strong>  <br />
 Returns the <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a> between <strong>str1</strong> and <strong>str2</strong>   </p>
 </div>
 <div class="admonition function">
@@ -1853,15 +1853,15 @@ Related: <code>LTRIM</code>, <code>TRIM</code></p>
 <p>Returns a character string containing the phonetic representation of char. See <a href="https://en.wikipedia.org/wiki/Soundex">Soundex 🡕</a>.   </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>SEARCH</code> (<strong>str</strong>: <em>varchar</em>, <strong>substring</strong>: <em>varchar</em>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>SEARCH</code> (<strong>str</strong>: <em>varchar</em>, <strong>substring</strong>: <em>varchar</em>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Return <code>true</code> if <strong>str</strong> contains <strong>substring</strong>.  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>SUBSTRING</code> (<strong>str</strong>: <em>varchar</em>, <strong>start</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>SUBSTRING</code> (<strong>str</strong>: <em>varchar</em>, <strong>start</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Return substring from a string from <strong>start</strong> position to the end of <strong>str</strong>.  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>SUBSTRING</code> (<strong>str</strong>: <em>varchar</em>, <strong>start</strong>: <em>numeric</em>, <strong>length</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>SUBSTRING</code> (<strong>str</strong>: <em>varchar</em>, <strong>start</strong>: <em>numeric</em>, <strong>length</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Return substring from a string from <strong>start</strong> position for <strong>length</strong> characters.  </p>
 </div>
 <div class="admonition function">
@@ -1876,7 +1876,7 @@ Related: <code>LOWER</code>, <code>UPPER</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TRIM</code> ( [ LEADING | TRAILING | BOTH ] [ <strong>chars</strong>: <em>varchar</em> FROM ] <strong>str</strong>: <em>varchar</em> ) → <em>varchar</em></p>
-<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694z"/></svg></span> Updated in 0.7</strong> <br />
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> Updated in 0.7</strong> <br />
 Removes leading and trailing <strong>chars</strong> from <strong>str</strong>, if <strong>chars</strong> is not specified, whitespace is removed. Note that any instance of a character in <strong>chars</strong> is removed in any order they appear.<br />
 The <strong>LEADING</strong> modifier removes <strong>chars</strong> from the start of <strong>str</strong>. <br />
 The <strong>TRAILING</strong> modifier removes <strong>chars</strong> from the end of <strong>str</strong>.  <br />
@@ -1891,15 +1891,15 @@ Related: <code>LOWER</code>, <code>TITLE</code></p>
 <h2 id="struct-functions">Struct Functions</h2>
 <p>For more details, see <a href="../adv-working-with-structs/">Working with Structs</a>.</p>
 <div class="admonition function">
-<p class="admonition-title"><strong>object</strong>: <em>struct</em><code>[</code><strong>key</strong>: <em>varchar</em><code>]</code> → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><strong>object</strong>: <em>struct</em><code>[</code><strong>key</strong>: <em>varchar</em><code>]</code> → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Subscript operator, return the value for <strong>key</strong> from <strong>object</strong>. </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GET</code> (<strong>object</strong>: <em>struct</em>, <strong>key</strong>: <em>varchar</em>) → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>GET</code> (<strong>object</strong>: <em>struct</em>, <strong>key</strong>: <em>varchar</em>) → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Alias of <strong>object</strong><code>[</code><strong>key</strong><code>]</code>  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>SEARCH</code> (<strong>object</strong>: <em>struct</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>SEARCH</code> (<strong>object</strong>: <em>struct</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Return <code>true</code> if any of the values in <strong>object</strong> is <strong>value</strong>. Note <code>SEARCH</code> does not match struct keys.</p>
 </div>
 <h2 id="system-functions">System Functions</h2>
@@ -1934,23 +1934,23 @@ Related: <code>BASE85_DECODE</code></p>
 Related: <code>IFNULL</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>stop</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>stop</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Return a numeric list between 1 and <strong>stop</strong>, with a step of 1.  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Return a numeric list between <strong>start</strong> and <strong>stop</strong>, with a step of 1.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>, <strong>step</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>, <strong>step</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Return a numeric list between <strong>start</strong> and <strong>stop</strong>, with an increment of <strong>step</strong>.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>timestamp</em>, <strong>stop</strong>: <em>timestamp</em>, <em>interval</em>) → <em>list</em>&lt;<em>timestamp</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>timestamp</em>, <strong>stop</strong>: <em>timestamp</em>, <em>interval</em>) → <em>list</em>&lt;<em>timestamp</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Return a timestamp list between <strong>start</strong> and <strong>stop</strong>, with a interval of <strong>step</strong>.    </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>cidr</strong>: <em>varchar</em>) → <em>list</em>&lt;<em>varchar</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span></p>
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>cidr</strong>: <em>varchar</em>) → <em>list</em>&lt;<em>varchar</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Return a list of IP addresses from a given <strong>cidr</strong>.   </p>
 </div>
 <div class="admonition function">
@@ -2118,7 +2118,7 @@ Related: <code>SHA1</code>, <code>SHA224</code>, <code>SHA256</code>, <code>SHA3
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
     
   </body>

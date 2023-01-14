@@ -21,7 +21,7 @@
         <link rel="next" href="../python-client/">
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.9c788c91.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
@@ -146,7 +146,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -1345,15 +1345,16 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">result</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM $planets&#39;</span><span class="p">)</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </code></pre></div>
-<p>The results of the query are availble via the cursor using <code>fetchone()</code> that returns a tuple, <code>fetchmany()</code> and <code>fetchall()</code> that return generators of tuples, <code>arrow()</code> that returns an <a href="https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table">Arrow Table</a>m or <code>to_df()</code> that returns a <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">pandas DataFrame</a></p>
+<p>The results of the query are availble via the cursor using <code>fetchone()</code> that returns a tuple, <code>fetchmany()</code> and <code>fetchall()</code> that return generators of tuples, <code>arrow()</code> that returns an <a href="https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table">Arrow Table</a>, or <code>to_df()</code> that returns a <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">pandas DataFrame</a></p>
 <h2 id="command-line-interface">Command Line Interface</h2>
 <p>Opteryx Command Line Interface (CLI) provides a terminal-based interactive shell for running queries. The CLI is a Python script usually run by invoking Python, like this:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>-m<span class="w"> </span>opteryx<span class="w"> </span>--o<span class="w"> </span>planets.csv<span class="w"> </span><span class="s2">&quot;SELECT * FROM \$planets&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>-m<span class="w"> </span>opteryx<span class="w"> </span>--o<span class="w"> </span><span class="s1">&#39;planets.csv&#39;</span><span class="w"> </span><span class="s2">&quot;SELECT * FROM \$planets&quot;</span>
 </code></pre></div>
-<blockquote>
-<p>Note: CLI usage may have character escaping requirements, such as a backslash before dollar signs and backticks.</p>
-</blockquote>
-<p>Querying individual files quires the relative path in place of the relation/table name in the query, this usually requires the filename to be put in quotes as filenames usually contain illegal characters.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>CLI usage may have character escaping requirements, such as a backslash before dollar signs and backticks.</p>
+</div>
+<p>Querying individual files quires the relative path in place of the relation/table name in the query, this usually requires the filename to be put in quotes as filenames often contain illegal characters.</p>
 <p>Abridged usage guidance is available below:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Usage: python -m opteryx [OPTIONS] [SQL] 
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
@@ -1365,6 +1366,7 @@
 <p>To see the full help and usage details for the CLI use the <code>--help</code> option:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>-m<span class="w"> </span>opteryx<span class="w"> </span>--help
 </code></pre></div>
+<p>Supported output locations are the <strong>console</strong>, a <strong>parquet</strong> file, a <strong>csv</strong> file, or a <strong>jsonl</strong> file.</p>
 
 
 
@@ -1454,7 +1456,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
     
   </body>
