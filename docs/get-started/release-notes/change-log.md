@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - [[#799](https://github.com/mabel-dev/opteryx/issues/799)] Chunk large blob reads. [@joocer](https://github.com/joocer) 
+- [[#812](https://github.com/mabel-dev/opteryx/issues/812)] Abstract tree structure plans are built from. [@joocer](https://github.com/joocer) 
 
 ### Added
 
