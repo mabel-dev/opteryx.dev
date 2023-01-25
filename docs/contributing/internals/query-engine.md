@@ -1,6 +1,8 @@
 # Query Engine
 
-> If you are interested in how databases work, I recommend the resources from [The CMU Database Group](https://db.cs.cmu.edu/) and the collection of resources at [Awesome Database Learning](https://github.com/pingcap/awesome-database-learning).
+<!--- https://www.cockroachlabs.com/docs/stable/architecture/sql-layer.html --->
+
+> If you are interested in how databases work, I recommend the resources from [The CMU Database Group](https://db.cs.cmu.edu/), and the collection of resources at [Awesome Database Learning](https://github.com/pingcap/awesome-database-learning) and [Awesome Database Development](https://github.com/huachaohuang/awesome-dbdev).
 
 The Opteryx query engine has the following key components and processing queries follows this high-level series of steps:
 

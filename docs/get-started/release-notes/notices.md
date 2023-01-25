@@ -51,3 +51,11 @@ Diagrams created using [ASCII Flow](https://asciiflow.com/) or [draw.io](https:/
 Website build using [mkdocs-material](https://github.com/squidfunk/mkdocs-material).
 
 SQL-92 conformity tests are based on [sqltest](https://github.com/elliotchance/sqltest).
+
+## References and Guides
+
+The following resources have been used as guides, references or patterns:
+
+- [sqlglot](https://github.com/tobymao/sqlglot) Python Library
+- [CMU DB Group](https://www.youtube.com/c/CMUDatabaseGroup) Lectures
+- [DuckDB](https://duckdb.org/) embedded OLAP SQL Engine
