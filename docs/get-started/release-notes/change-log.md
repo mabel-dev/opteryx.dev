@@ -14,10 +14,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#799](https://github.com/mabel-dev/opteryx/issues/799)] Chunk large blob reads. [@joocer](https://github.com/joocer) 
 - [[#812](https://github.com/mabel-dev/opteryx/issues/812)] Abstract tree structure plans are built from. [@joocer](https://github.com/joocer) 
+- [[#808](https://github.com/mabel-dev/opteryx/issues/808)] Split Logical and Physical planning (partial). [@joocer](https://github.com/joocer) 
+- [[#825](https://github.com/mabel-dev/opteryx/issues/825)] Remove HyperLogLog from profiling. [@joocer](https://github.com/joocer) 
 
 ### Added
 
 - [[#801](https://github.com/mabel-dev/opteryx/issues/801)] Helper function `opteryx.query`. [@joocer](https://github.com/joocer) 
+- [[#818](https://github.com/mabel-dev/opteryx/issues/818)] Save query plans to disk. [@joocer](https://github.com/joocer) 
 
 ## [0.8.3] - 2023-01-10 
 
