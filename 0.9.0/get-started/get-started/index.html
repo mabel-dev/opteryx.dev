@@ -415,8 +415,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#your-first-query" class="md-nav__link">
-    Your First Query
+  <a href="#filter-on-the-command-line" class="md-nav__link">
+    Filter on the Command Line
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execute-in-python" class="md-nav__link">
+    Execute in Python
   </a>
   
 </li>
@@ -1311,8 +1318,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#your-first-query" class="md-nav__link">
-    Your First Query
+  <a href="#filter-on-the-command-line" class="md-nav__link">
+    Filter on the Command Line
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execute-in-python" class="md-nav__link">
+    Execute in Python
   </a>
   
 </li>
@@ -1346,12 +1360,16 @@
 <p>The lastest version, including pre-release and beta versions can be installed, this is not recommended for production environments.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/mabel-dev/opteryx
 </code></pre></div>
-<h2 id="your-first-query">Your First Query</h2>
+<h2 id="filter-on-the-command-line">Filter on the Command Line</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>opteryx<span class="w"> </span><span class="s2">&quot;SELECT * FROM &#39;astronauts.parquet&#39; WHERE &#39;Apollo 11&#39; IN UNNEST(missions);&quot;</span>
+</code></pre></div>
+<p><img alt="Opteryx" src="https://github.com/mabel-dev/opteryx.dev/raw/main/assets/cli.png" /></p>
+<h2 id="execute-in-python">Execute in Python</h2>
 <p>You can quickly test your installation is working as expected by querying one of the internal sample datasets.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">opteryx</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">result</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $planets;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">arrow</span><span class="p">()</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">opteryx</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">result</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $planets;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">arrow</span><span class="p">()</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
 
 
