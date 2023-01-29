@@ -20,9 +20,9 @@ pip install git+https://github.com/mabel-dev/opteryx
 
 ## Filter on the Command Line
 
-~~~console
+```console
 python -m opteryx "SELECT * FROM 'astronauts.parquet' WHERE 'Apollo 11' IN UNNEST(missions);"
-~~~
+```
 
 ![Opteryx](https://github.com/mabel-dev/opteryx.dev/raw/main/assets/cli.png)
 
