@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#812](https://github.com/mabel-dev/opteryx/issues/812)] Abstract tree structure plans are built from. [@joocer](https://github.com/joocer) 
 - [[#808](https://github.com/mabel-dev/opteryx/issues/808)] Split Logical and Physical planning (partial). [@joocer](https://github.com/joocer) 
 - [[#825](https://github.com/mabel-dev/opteryx/issues/825)] Remove HyperLogLog from profiling. [@joocer](https://github.com/joocer) 
+- [[#750](https://github.com/mabel-dev/opteryx/issues/750)] More CLI improvements. [@joocer](https://github.com/joocer)   
 
 ### Added
 
