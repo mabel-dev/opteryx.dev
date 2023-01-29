@@ -41,6 +41,9 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
+plugins:
+  - termynal
+
 extra:
   version:
     provider: mike
@@ -59,7 +62,7 @@ extra:
 nav:
   - Home: index.md
   - Get Started:
-    - Overview: get-started/overview.md
+    - get-started/overview.md
     - Get Started: get-started/get-started.md
     - Client Overview: get-started/clients.md
     - Python Client: get-started/python-client.md
