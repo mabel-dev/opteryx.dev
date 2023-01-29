@@ -1,7 +1,5 @@
 # Get Started
 
-
-
 ## Installation
 
 **Install from PyPI (recommended)**
@@ -20,7 +18,15 @@ The lastest version, including pre-release and beta versions can be installed, t
 pip install git+https://github.com/mabel-dev/opteryx
 ~~~
 
-## Your First Query
+## Filter on the Command Line
+
+~~~bash
+python -m opteryx "SELECT * FROM 'astronauts.parquet' WHERE 'Apollo 11' IN UNNEST(missions);"
+~~~
+
+![Opteryx](https://github.com/mabel-dev/opteryx.dev/raw/main/assets/cli.png)
+
+## Execute in Python
 
 You can quickly test your installation is working as expected by querying one of the internal sample datasets.
 
