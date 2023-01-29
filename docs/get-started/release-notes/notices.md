@@ -8,7 +8,6 @@ Library           | Disposition       | Copyright            | Licence
 :---------------- | :---------------- | :------------------- | :--------------- 
 [cityhash](https://github.com/escherba/python-cityhash)    | Installed   |  | [Bespoke](https://github.com/escherba/python-cityhash/blob/master/LICENSE)  
 [cython](https://github.com/cython/cython)                 | Installed   |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
-[datasketch](https://github.com/ekzhu/datasketch)          | Integrated  | 2015 [Eric Zhu](https://github.com/ekzhu) | [MIT](https://github.com/ekzhu/datasketch/blob/master/LICENSE)
 [datetime_truncate](https://github.com/mediapop/datetime_truncate) | Integrated | 2020 [Media Pop](https://github.com/mediapop) | [MIT](https://github.com/mediapop/datetime_truncate/blob/master/LICENSE)
 [distogram](https://github.com/maki-nage/distogram)        | Integrated  | 2020 [Romain Picard](https://github.com/MainRo) | [MIT](https://github.com/maki-nage/distogram/blob/master/LICENSE.txt)
 [fastlogging](https://github.com/brmmm3/fastlogging)       | Integrated  | 2018 [Martin Bammer](https://github.com/brmmm3) | [MIT](https://github.com/brmmm3/fastlogging/blob/master/LICENSE.txt)

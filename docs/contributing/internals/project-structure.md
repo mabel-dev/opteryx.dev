@@ -20,7 +20,6 @@ opteryx/                 <- main opteryx library
  ├── third_party/        <- third party code
  │   ├── distogram/ 
  │   ├── fuzzy/   
- │   ├── hyperloglog/  
  │   ├── pyarrow_ops/ 
  │   └── ...  
  ├── utils/              <- helper libraries
