@@ -19,8 +19,8 @@ The results of the query are availble via the cursor using `fetchone()` that ret
 
 Opteryx Command Line Interface (CLI) provides a terminal-based interactive shell for running queries. The CLI is a Python script usually run by invoking Python, like this:
 
-~~~bash
-python -m opteryx --o 'planets.csv' "SELECT * FROM \$planets"
+~~~console
+$ python -m opteryx --o 'planets.csv' "SELECT * FROM \$planets"
 ~~~
 
 !!! Note
@@ -41,8 +41,8 @@ Usage: python -m opteryx [OPTIONS] [SQL]
 
 To see the full help and usage details for the CLI use the `--help` option:
 
-~~~bash
-python -m opteryx --help
+~~~console
+$ python -m opteryx --help
 ~~~
 
 Supported output locations are the **console**, a **parquet** file, a **csv** file, or a **jsonl** file.

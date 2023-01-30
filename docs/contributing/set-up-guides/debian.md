@@ -14,46 +14,46 @@ We recommmend using [pyenv](https://github.com/pyenv/pyenv) to install and manag
 
 ### 2. Install pip   
 
-~~~bash
-python3 -m ensurepip --upgrade
+~~~console
+$ python3 -m ensurepip --upgrade
 ~~~
 
 ### 3. Install Git   
 
-~~~bash
-sudo apt-get update
+~~~console
+$ sudo apt-get update
 ~~~
 
-~~~bash
-sudo apt-get install git
+~~~console
+$sudo apt-get install git
 ~~~
 
 ### 4. Install Rust
 
-~~~bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+~~~console
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ~~~
 
 ### 5. Clone the Repository   
 
-~~~bash
-git clone https://github.com/mabel-dev/opteryx
+~~~console
+$ git clone https://github.com/mabel-dev/opteryx
 ~~~
 
 ### 6. Install Dependencies   
 
-~~~bash
-python3 -m pip install --upgrade -r requirements.txt
+~~~console
+$ python3 -m pip install --upgrade -r requirements.txt
 ~~~
 
-~~~bash
-python3 -m pip install --upgrade setuptools setuptools_rust numpy cython
+~~~console
+$ python3 -m pip install --upgrade setuptools setuptools_rust numpy cython
 ~~~
 
 ### 7. Build Binaries   
 
-~~~bash
-python3 setup.py build_ext --inplace
+~~~console
+$ python3 setup.py build_ext --inplace
 ~~~
 
 ## Running Tests
@@ -62,20 +62,20 @@ To run the regression and unit tests:
 
 First, install the optional dependencies, on most devices:
 
-~~~bash
-python3 -m pip install --upgrade -r tests/requirements.txt
+~~~console
+$ python3 -m pip install --upgrade -r tests/requirements.txt
 ~~~
 
 On ARM-based devices (like Raspberry Pi):
 
-~~~bash
-python3 -m pip install --upgrade -r tests/requirements_arm.txt
+~~~console
+$ python3 -m pip install --upgrade -r tests/requirements_arm.txt
 ~~~
 
 Then run the regression tests.
 
-~~~
-python3 -m pytest
+~~~console
+$ python3 -m pytest
 ~~~
 
 !!! note
