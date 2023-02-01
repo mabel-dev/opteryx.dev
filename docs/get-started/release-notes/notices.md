@@ -6,6 +6,7 @@ Opteryx is built on the shoulders of other great libraries and components:
 
 Library           | Disposition       | Copyright            | Licence   
 :---------------- | :---------------- | :------------------- | :--------------- 
+[bitarray](https://github.com/ilanschnell/bitarray)        | Installed   |  | [PSF](https://github.com/ilanschnell/bitarray/blob/master/LICENSE)  
 [cityhash](https://github.com/escherba/python-cityhash)    | Installed   |  | [Bespoke](https://github.com/escherba/python-cityhash/blob/master/LICENSE)  
 [cython](https://github.com/cython/cython)                 | Installed   |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
 [datetime_truncate](https://github.com/mediapop/datetime_truncate) | Integrated | 2020 [Media Pop](https://github.com/mediapop) | [MIT](https://github.com/mediapop/datetime_truncate/blob/master/LICENSE)
