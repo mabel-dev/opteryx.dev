@@ -8,20 +8,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- [[#797](https://github.com/mabel-dev/opteryx/issues/797)] Name collisons with aliases and `ORDER BY`s. [@joocer](https://github.com/joocer) 
+- [[#797](https://github.com/mabel-dev/opteryx/issues/797)] Name collisons with aliases cause issues in `ORDER BY`. [@joocer](https://github.com/joocer) 
+- [[#833](https://github.com/mabel-dev/opteryx/issues/833)] Unhelpful error when no statement is provided [@joocer](https://github.com/joocer) 
 
 ### Changed
 
 - [[#799](https://github.com/mabel-dev/opteryx/issues/799)] Chunk large blob reads. [@joocer](https://github.com/joocer) 
-- [[#812](https://github.com/mabel-dev/opteryx/issues/812)] Abstract tree structure plans are built from. [@joocer](https://github.com/joocer) 
+- [[#812](https://github.com/mabel-dev/opteryx/issues/812)] Abstract the tree structure that plans are built from. [@joocer](https://github.com/joocer) 
 - [[#808](https://github.com/mabel-dev/opteryx/issues/808)] Split Logical and Physical planning (partial). [@joocer](https://github.com/joocer) 
 - [[#825](https://github.com/mabel-dev/opteryx/issues/825)] Remove HyperLogLog from profiling. [@joocer](https://github.com/joocer) 
 - [[#750](https://github.com/mabel-dev/opteryx/issues/750)] More CLI improvements. [@joocer](https://github.com/joocer)   
 
 ### Added
 
-- [[#801](https://github.com/mabel-dev/opteryx/issues/801)] Helper function `opteryx.query`. [@joocer](https://github.com/joocer) 
-- [[#818](https://github.com/mabel-dev/opteryx/issues/818)] Save query plans to disk. [@joocer](https://github.com/joocer) 
+- [[#801](https://github.com/mabel-dev/opteryx/issues/801)] New helper function `opteryx.query()`. [@joocer](https://github.com/joocer) 
+- [[#818](https://github.com/mabel-dev/opteryx/issues/818)] Save query plans to disk (partial). [@joocer](https://github.com/joocer) 
 
 ## [0.8.3] - 2023-01-10 
 
@@ -45,7 +46,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#757](https://github.com/mabel-dev/opteryx/issues/757)] Multiple bugs in config manager. [@joocer](https://github.com/joocer) 
 - [[#769](https://github.com/mabel-dev/opteryx/issues/769)] `ARRAY_AGG` couldn't be nested. [@joocer](https://github.com/joocer) 
-- [[#775](https://github.com/mabel-dev/opteryx/issues/775)] Connection `arrow` materializes before applying limit. [@joocer](https://github.com/joocer) 
+- [[#775](https://github.com/mabel-dev/opteryx/issues/775)] Connection function `.arrow()` materializes before applying limit. [@joocer](https://github.com/joocer) 
 
 ### Changed
 
@@ -150,12 +151,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- [[#528](https://github.com/mabel-dev/opteryx/issues/528)] `.shape` and `.count` not working as expected. [@joocer](https://github.com/joocer)   
+- [[#528](https://github.com/mabel-dev/opteryx/issues/528)] `.shape()` and `.count()` not working as expected. [@joocer](https://github.com/joocer)   
 - Numbers expressed in the form `+n` not parsed correctly. [@joocer](https://github.com/joocer)   
 
 ### Changed
 
-- :octicons-alert-24: (alignment) `as_arrow` renamed to `arrow` to align to [DuckDB](https://duckdb.org/docs/api/python/overview#apache-arrow) naming. [@joocer](https://github.com/joocer)   
+- :octicons-alert-24: (alignment) `.as_arrow()` renamed to `.arrow()` to align to [DuckDB](https://duckdb.org/docs/api/python/overview#apache-arrow) naming. [@joocer](https://github.com/joocer)   
 - :octicons-alert-24: (consistency) `SHOW COLUMNS` returns the column name in the `name` column, previously `column_name` [@joocer](https://github.com/joocer)   
 - :octicons-alert-24: (correction) cursor 'fetch*' methods returns tuples rather than dictionaries as defaults, this is correcting a bug in [PEP249](https://peps.python.org/pep-0249/) compatibility. [@joocer](https://github.com/joocer)   
 - :octicons-alert-24: [[#517](https://github.com/mabel-dev/opteryx/issues/517)] (security) Placeholder changed from '%s' to '?'. [@joocer](https://github.com/joocer)   
@@ -165,7 +166,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - [[#397](https://github.com/mabel-dev/opteryx/issues/397)] Time Travel with '$planets' dataset. [@joocer](https://github.com/joocer)   
-- [[#519](https://github.com/mabel-dev/opteryx/issues/519)] Introduce a size limit on `as_arrow()`. [@joocer](https://github.com/joocer)   
+- [[#519](https://github.com/mabel-dev/opteryx/issues/519)] Introduce a size limit on `.as_arrow()`. [@joocer](https://github.com/joocer)   
 - [[#324](https://github.com/mabel-dev/opteryx/issues/324)] Support `IN UNNEST()`. [@joocer](https://github.com/joocer)   
 - [[#386](https://github.com/mabel-dev/opteryx/issues/386)] Support `SET` statements. [@joocer](https://github.com/joocer)   
 - [[#531](https://github.com/mabel-dev/opteryx/issues/531)] Support `SHOW VARIABLES` and `SHOW PARAMETERS`. [@joocer](https://github.com/joocer)   
@@ -233,7 +234,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - :octicons-alert-24: (correction) - Use of aliases defined in the `SELECT` clause can no longer be used in `WHERE` and `GROUP BY` clauses - this is a correction to align to standard SQL behaviour.
 - :octicons-alert-24: (correction) - Use of 'None' as an alias for `null` is no longer supported - this is a correction to align to standard SQL behaviour.
 - [[#326](https://github.com/mabel-dev/opteryx/issues/326)] Prefer pyarrow's 'promote' over manually handling missing fields. [@joocer](https://github.com/joocer)    
-- [[#39](https://github.com/mabel-dev/opteryx/issues/39)] Rewrite Aggregation Node to use Pyarrow `group_by`. [@joocer](https://github.com/joocer)   
+- [[#39](https://github.com/mabel-dev/opteryx/issues/39)] Rewrite Aggregation Node to use Pyarrow `group_by()`. [@joocer](https://github.com/joocer)   
 - [[#338](https://github.com/mabel-dev/opteryx/issues/338)] Remove Evaluation Node. [@joocer](https://github.com/joocer)  
 - [[#58](https://github.com/mabel-dev/opteryx/issues/58)] Performance of `ORDER BY RAND()` improved. [@joocer](https://github.com/joocer)  
 
@@ -281,7 +282,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `FAKE` dataset constructor (part of [#179](https://github.com/mabel-dev/opteryx/issues/179)). ([@joocer](https://github.com/joocer))
 - [[#177](https://github.com/mabel-dev/opteryx/issues/177)] Support `SHOW FULL COLUMNS` to read entire datasets rather than just the first blob. ([@joocer](https://github.com/joocer))
 - [[#194](https://github.com/mabel-dev/opteryx/issues/194)] Functions that are abbreviations, should have the full name as an alias. ([@joocer](https://github.com/joocer))
-- [[#201](https://github.com/mabel-dev/opteryx/issues/201)] `generate_series` supports CIDR expansion. ([@joocer](https://github.com/joocer))
+- [[#201](https://github.com/mabel-dev/opteryx/issues/201)] `generate_series()` supports CIDR expansion. ([@joocer](https://github.com/joocer))
 - [[#175](https://github.com/mabel-dev/opteryx/issues/175)] Support `WITH (NO_CACHE)` hint to disable using cache. ([@joocer](https://github.com/joocer))
 - [[#203](https://github.com/mabel-dev/opteryx/issues/203)] When reporting that a column doesn't exist, it should suggest likely correct columns. ([@joocer](https://github.com/joocer))
 - 'Not' Regular Expression match operator, `!~` added to supported set of operators. ([@joocer](https://github.com/joocer))
