@@ -21,7 +21,7 @@
         <link rel="next" href="../notices/">
       
       <link rel="icon" href="../../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
@@ -1509,20 +1509,21 @@
 <h2 id="unreleased">[Unreleased]</h2>
 <h3 id="fixed">Fixed</h3>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/797">#797</a>] Name collisons with aliases and <code>ORDER BY</code>s. <a href="https://github.com/joocer">@joocer</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/797">#797</a>] Name collisons with aliases cause issues in <code>ORDER BY</code>. <a href="https://github.com/joocer">@joocer</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/833">#833</a>] Unhelpful error when no statement is provided <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
 <h3 id="changed">Changed</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/799">#799</a>] Chunk large blob reads. <a href="https://github.com/joocer">@joocer</a> </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/812">#812</a>] Abstract tree structure plans are built from. <a href="https://github.com/joocer">@joocer</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/812">#812</a>] Abstract the tree structure that plans are built from. <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/808">#808</a>] Split Logical and Physical planning (partial). <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/825">#825</a>] Remove HyperLogLog from profiling. <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/750">#750</a>] More CLI improvements. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
 <h3 id="added">Added</h3>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/801">#801</a>] Helper function <code>opteryx.query</code>. <a href="https://github.com/joocer">@joocer</a> </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/818">#818</a>] Save query plans to disk. <a href="https://github.com/joocer">@joocer</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/801">#801</a>] New helper function <code>opteryx.query()</code>. <a href="https://github.com/joocer">@joocer</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/818">#818</a>] Save query plans to disk (partial). <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
 <h2 id="083-2023-01-10">[0.8.3] - 2023-01-10</h2>
 <h3 id="fixed_1">Fixed</h3>
@@ -1544,7 +1545,7 @@
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/757">#757</a>] Multiple bugs in config manager. <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/769">#769</a>] <code>ARRAY_AGG</code> couldn't be nested. <a href="https://github.com/joocer">@joocer</a> </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/775">#775</a>] Connection <code>arrow</code> materializes before applying limit. <a href="https://github.com/joocer">@joocer</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/775">#775</a>] Connection function <code>.arrow()</code> materializes before applying limit. <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
 <h3 id="changed_2">Changed</h3>
 <ul>
@@ -1644,12 +1645,12 @@
 <h2 id="050-2022-10-02">[0.5.0] - 2022-10-02</h2>
 <h3 id="fixed_7">Fixed</h3>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/528">#528</a>] <code>.shape</code> and <code>.count</code> not working as expected. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/528">#528</a>] <code>.shape()</code> and <code>.count()</code> not working as expected. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>Numbers expressed in the form <code>+n</code> not parsed correctly. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
 <h3 id="changed_6">Changed</h3>
 <ul>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> (alignment) <code>as_arrow</code> renamed to <code>arrow</code> to align to <a href="https://duckdb.org/docs/api/python/overview#apache-arrow">DuckDB</a> naming. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> (alignment) <code>.as_arrow()</code> renamed to <code>.arrow()</code> to align to <a href="https://duckdb.org/docs/api/python/overview#apache-arrow">DuckDB</a> naming. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> (consistency) <code>SHOW COLUMNS</code> returns the column name in the <code>name</code> column, previously <code>column_name</code> <a href="https://github.com/joocer">@joocer</a>   </li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> (correction) cursor 'fetch*' methods returns tuples rather than dictionaries as defaults, this is correcting a bug in <a href="https://peps.python.org/pep-0249/">PEP249</a> compatibility. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/517">#517</a>] (security) Placeholder changed from '%s' to '?'. <a href="https://github.com/joocer">@joocer</a>   </li>
@@ -1659,7 +1660,7 @@
 <h3 id="added_6">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/397">#397</a>] Time Travel with '$planets' dataset. <a href="https://github.com/joocer">@joocer</a>   </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/519">#519</a>] Introduce a size limit on <code>as_arrow()</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/519">#519</a>] Introduce a size limit on <code>.as_arrow()</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/324">#324</a>] Support <code>IN UNNEST()</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/386">#386</a>] Support <code>SET</code> statements. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/531">#531</a>] Support <code>SHOW VARIABLES</code> and <code>SHOW PARAMETERS</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
@@ -1723,7 +1724,7 @@
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> (correction) - Use of aliases defined in the <code>SELECT</code> clause can no longer be used in <code>WHERE</code> and <code>GROUP BY</code> clauses - this is a correction to align to standard SQL behaviour.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> (correction) - Use of 'None' as an alias for <code>null</code> is no longer supported - this is a correction to align to standard SQL behaviour.</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/326">#326</a>] Prefer pyarrow's 'promote' over manually handling missing fields. <a href="https://github.com/joocer">@joocer</a>    </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/39">#39</a>] Rewrite Aggregation Node to use Pyarrow <code>group_by</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/39">#39</a>] Rewrite Aggregation Node to use Pyarrow <code>group_by()</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/338">#338</a>] Remove Evaluation Node. <a href="https://github.com/joocer">@joocer</a>  </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/58">#58</a>] Performance of <code>ORDER BY RAND()</code> improved. <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
@@ -1769,7 +1770,7 @@
 <li><code>FAKE</code> dataset constructor (part of <a href="https://github.com/mabel-dev/opteryx/issues/179">#179</a>). (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/177">#177</a>] Support <code>SHOW FULL COLUMNS</code> to read entire datasets rather than just the first blob. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/194">#194</a>] Functions that are abbreviations, should have the full name as an alias. (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/201">#201</a>] <code>generate_series</code> supports CIDR expansion. (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/201">#201</a>] <code>generate_series()</code> supports CIDR expansion. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/175">#175</a>] Support <code>WITH (NO_CACHE)</code> hint to disable using cache. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/203">#203</a>] When reporting that a column doesn't exist, it should suggest likely correct columns. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>'Not' Regular Expression match operator, <code>!~</code> added to supported set of operators. (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -1932,7 +1933,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
       
         <script src="../../../termynal.js"></script>
       
