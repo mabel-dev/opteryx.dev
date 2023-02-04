@@ -33,3 +33,7 @@ query22 | yes      | no
 All queries have been modified to refer to the location of the datasets, **modified** in the above table is where the SQL has been written to replace unsupported functionality with supported functionality - this is where the original query either created a view or a temporary table, both of these have been replaced with a CTE definition.
 
 The test suite for this benchmark is in the [Opteryx Benchmarking](https://github.com/mabel-dev/wrenchy-bench) repository.
+
+TPC-H is Copyright © 1993-2022 Transaction Processing Performance Council. The full TPC-H specification in PDF format can be found [here](https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-H_v3.0.1.pdf).
+
+TPC, TPC Benchmark, TPC-H are trademarks of the Transaction Processing Performance Council.
