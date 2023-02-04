@@ -1322,72 +1322,33 @@
 <h1 id="configuration-guide">Configuration Guide</h1>
 <h2 id="configuration-file">Configuration File</h2>
 <p>Configuration values are set a <a href="../opteryx.yaml"><code>opteryx.yaml</code></a> file in the directory the application is run from.</p>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th align="right">Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>INTERNAL_BATCH_SIZE</code></td>
-<td align="right">500</td>
-<td>Batch size for left-table of a join processes</td>
-</tr>
-<tr>
-<td><code>MAX_JOIN_SIZE</code></td>
-<td align="right">10000</td>
-<td>Maximum records created in a <code>CROSS JOIN</code> frame</td>
-</tr>
-<tr>
-<td><code>MEMCACHED_SERVER</code></td>
-<td align="right"><em>not set</em></td>
-<td>Address of Memcached server, in <code>IP:PORT</code> format</td>
-</tr>
-<tr>
-<td><code>DATASET_PREFIX_MAPPING</code></td>
-<td align="right"><em>not set</em></td>
-<td>Data store prefix mapping</td>
-</tr>
-<tr>
-<td><code>PARTITION_SCHEME</code></td>
-<td align="right"><em>none</em></td>
-<td>How the blob/file data is partitioned</td>
-</tr>
-<tr>
-<td><code>MAX_SIZE_SINGLE_CACHE_ITEM</code></td>
-<td align="right">1048576</td>
-<td>The maximum size of an item to store in the cache</td>
-</tr>
-<tr>
-<td><code>MAX_CACHE_EVICTIONS</code></td>
-<td align="right">25</td>
-<td>The maximum number of evictions from in-memory read cache per query</td>
-</tr>
-<tr>
-<td><code>PAGE_SIZE</code></td>
-<td align="right">67108864</td>
-<td>The size to try to make data pages as they are processed</td>
-</tr>
-<tr>
-<td><code>LOCAL_BUFFER_POOL_SIZE</code></td>
-<td align="right">256</td>
-<td>The size of the in-memory Buffer Pool (blob size)</td>
-</tr>
-<tr>
-<td><code>DISABLE_HIGH_PRIORITY</code></td>
-<td align="right">False</td>
-<td>Disable trying to set the process priority</td>
-</tr>
-<tr>
-<td><code>PROFILE_LOCATION</code></td>
-<td align="right"><em>not set</em></td>
-<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> Save information about the query planning and execution to disk</td>
-</tr>
-</tbody>
-</table>
+<h3 id="blob-read-settings">Blob Read Settings</h3>
+<p><code>DATASET_PREFIX_MAPPING</code><br />
+Data store prefix mapping.</p>
+<p><code>PARTITION_SCHEME</code><br />
+How the blob/file data is partitioned.</p>
+<h3 id="cache-settings">Cache Settings</h3>
+<p><code>LOCAL_BUFFER_POOL_SIZE</code>=256<br />
+The size of the in-memory Buffer Pool (blob size).</p>
+<p><code>MAX_CACHE_EVICTIONS</code>=25<br />
+The maximum number of evictions from in-memory read cache per query.</p>
+<p><code>MAX_SIZE_SINGLE_CACHE_ITEM</code>=1048576<br />
+The maximum size of an item to store in the cache.</p>
+<p><code>MEMCACHED_SERVER</code><br />
+Address of Memcached server, in <code>IP:PORT</code> format.</p>
+<h3 id="page-management-settings">Page Management Settings</h3>
+<p><code>INTERNAL_BATCH_SIZE</code>=500<br />
+Batch size for left-table of a join processes.</p>
+<p><code>MAX_JOIN_SIZE</code>=10000<br />
+Maximum records created in a <code>CROSS JOIN</code> frame.</p>
+<p><code>PAGE_SIZE</code>=67108864<br />
+The size to try to make data pages as they are processed.</p>
+<h3 id="operating-system-settings">Operating System Settings</h3>
+<p><code>DISABLE_HIGH_PRIORITY</code>=False<br />
+Disable trying to set the process priority.</p>
+<h3 id="debug-settings">Debug Settings</h3>
+<p><code>PROFILE_LOCATION</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> <br />
+Save information about the query planning and execution to disk.</p>
 <h2 id="environment-variables">Environment Variables</h2>
 <p>The environment is the preferred location for secrets, although the engine will read <code>.env</code> files if <a href="https://pypi.org/project/python-dotenv/">dotenv</a> has also been installed.</p>
 <ul>
