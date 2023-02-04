@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#825](https://github.com/mabel-dev/opteryx/issues/825)] Remove HyperLogLog from profiling. [@joocer](https://github.com/joocer) 
 - [[#750](https://github.com/mabel-dev/opteryx/issues/750)] More CLI improvements. [@joocer](https://github.com/joocer)   
 - [[#589](https://github.com/mabel-dev/opteryx/issues/589)] Moved conditional imports out of program initialization [@joocer](https://github.com/joocer) 
+- [[#836](https://github.com/mabel-dev/opteryx/issues/836)] Use PyArrow 11s exposure of underlying date values in profiler [@joocer](https://github.com/joocer) 
 
 ### Added
 
