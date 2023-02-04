@@ -1,7 +1,7 @@
 # TPC-H Benchmark
 
 !!! Note   
-    Compliance is a work in progress and this information represents the current state in order to provide transparent information about progress and capability.
+    Conformance is a work in progress and this information represents the current state in order to provide transparent information about progress and capability.
 
 [TPC](https://www.tpc.org/) publish a set of benchmarks for computer and database systems. [TPC-H](https://www.tpc.org/tpch/default5.asp) is a decision support benchmark which consists of a set of business-oriented queries. This benchmark demonstrates a decision support system that examines large amounts of data, executes highly complex queries, and answers key business questions. 
 

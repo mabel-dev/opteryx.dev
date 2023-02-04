@@ -1,7 +1,7 @@
 # ANSI SQL-92 Conformity
 
 !!! Note   
-    Compliance is a work in progress and this information represents the current state in order to provide transparent information about progress and capability.
+    Conformance is a work in progress and this information represents the current state in order to provide transparent information about progress and capability.
 
 For a system to [attest to supporting SQL][^1] it should have good conformance to the [ANSI SQL-92](https://db.cs.cmu.edu/files/sql/sql1992.txt) standard. This standard is also known as [ISO/IEC 9075:1992](https://www.iso.org/standard/16663.html).
 
