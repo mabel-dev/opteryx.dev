@@ -2,7 +2,7 @@
 
 ## Configuration File
 
-Configuration values are set a `opteryx.yaml` file in the directory the application is run from.
+Configuration values are set a [`opteryx.yaml`](opteryx.yaml) file in the directory the application is run from.
 
  Key                        | Default     | Description
 --------------------------- | ----------: | -----------
