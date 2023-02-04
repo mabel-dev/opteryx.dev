@@ -4,19 +4,48 @@
 
 Configuration values are set a [`opteryx.yaml`](opteryx.yaml) file in the directory the application is run from.
 
- Key                        | Default     | Description
---------------------------- | ----------: | -----------
-`INTERNAL_BATCH_SIZE`       | 500         | Batch size for left-table of a join processes
-`MAX_JOIN_SIZE`             | 10000       | Maximum records created in a `CROSS JOIN` frame
-`MEMCACHED_SERVER`          | _not set_   | Address of Memcached server, in `IP:PORT` format
-`DATASET_PREFIX_MAPPING`    | _not set_   | Data store prefix mapping
-`PARTITION_SCHEME`          | _none_      | How the blob/file data is partitioned
-`MAX_SIZE_SINGLE_CACHE_ITEM` | 1048576    | The maximum size of an item to store in the cache
-`MAX_CACHE_EVICTIONS`       | 25          | The maximum number of evictions from in-memory read cache per query
-`PAGE_SIZE`                 | 67108864    | The size to try to make data pages as they are processed
-`LOCAL_BUFFER_POOL_SIZE`    | 256         | The size of the in-memory Buffer Pool (blob size)
-`DISABLE_HIGH_PRIORITY`     | False       | Disable trying to set the process priority
-`PROFILE_LOCATION`          | _not set_   | :octicons-beaker-24: Save information about the query planning and execution to disk
+### Blob Read Settings
+
+`DATASET_PREFIX_MAPPING`  
+Data store prefix mapping.
+
+`PARTITION_SCHEME`  
+How the blob/file data is partitioned.
+
+### Cache Settings
+
+`LOCAL_BUFFER_POOL_SIZE`=256  
+The size of the in-memory Buffer Pool (blob size).
+
+`MAX_CACHE_EVICTIONS`=25  
+The maximum number of evictions from in-memory read cache per query.
+
+`MAX_SIZE_SINGLE_CACHE_ITEM`=1048576  
+The maximum size of an item to store in the cache.
+
+`MEMCACHED_SERVER`  
+Address of Memcached server, in `IP:PORT` format.
+
+### Page Management Settings
+
+`INTERNAL_BATCH_SIZE`=500  
+Batch size for left-table of a join processes.
+
+`MAX_JOIN_SIZE`=10000  
+Maximum records created in a `CROSS JOIN` frame.
+
+`PAGE_SIZE`=67108864  
+The size to try to make data pages as they are processed.
+
+### Operating System Settings
+
+`DISABLE_HIGH_PRIORITY`=False  
+Disable trying to set the process priority.
+
+### Debug Settings
+
+`PROFILE_LOCATION` :octicons-beaker-24:   
+Save information about the query planning and execution to disk.
 
 ## Environment Variables
 
