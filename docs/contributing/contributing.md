@@ -31,9 +31,15 @@ Changes should have:
 
 ### Gitter
 
-Gitter is our target channel for interactive conversations and support.
+Gitter is our target contact channel for support queries.
 
 [:fontawesome-brands-gitter: Join us on Gitter](https://gitter.im/mabel-opteryx/community){ .md-button }
+
+### Discord
+
+Discord is our target channel for community and discussion.
+
+[:fontawesome-brands-discord: Join us on Discord](https://discord.gg/PHqKAb9Y){ .md-button }
 
 ## Licence
 
