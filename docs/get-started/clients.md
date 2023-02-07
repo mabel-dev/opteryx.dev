@@ -33,7 +33,6 @@ Abridged usage guidance is available below:
 ~~~
 Usage: python -m opteryx [OPTIONS] [SQL] 
 
---ast         Display the AST for the query.
 --o <target>  Where to output the results. [default: console]
 --no-color    Do not colorize console output. 
 --help        Show the full help details.          
