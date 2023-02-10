@@ -8,7 +8,7 @@ Version 1.0 goals will be delivered across various minor versions building towar
 
 - :octicons-checkbox-24: CTEs (`WITH`) statements supported [v0.8]
 - :octicons-checkbox-24: Read across multiple data sources (e.g. GCS and Postgres in the same query) [v0.2]
-- :fontawesome-regular-square: Support different plaform data sources (e.g. FireStore [v0.3] and BigQuery)
+- :octicons-checkbox-24: Support different plaform data sources (e.g. FireStore [v0.3] and Postgres [v0.9])
 - :octicons-checkbox-24: Rule-based query optimizer [v0.5]
 - :octicons-checkbox-24: `JOIN` statements supported [v0.1]
 - :octicons-checkbox-24: Functions using the result of Functions (e.g. `LENGTH(LIST(field))`) [v0.3]
