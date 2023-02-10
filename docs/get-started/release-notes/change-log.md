@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#801](https://github.com/mabel-dev/opteryx/issues/801)] New helper function `opteryx.query()`. [@joocer](https://github.com/joocer) 
 - [[#818](https://github.com/mabel-dev/opteryx/issues/818)] Save query plans to disk (partial). [@joocer](https://github.com/joocer) 
 - [[#163](https://github.com/mabel-dev/opteryx/issues/163)] Initial support for SQL databases as a data source. [@joocer](https://github.com/joocer) 
+- [[#844](https://github.com/mabel-dev/opteryx/issues/844)] Materialize results as a [Polars](https://www.pola.rs/) dataframe. [@joocer](https://github.com/joocer) 
 
 ## [0.8.3] - 2023-01-10 
 
