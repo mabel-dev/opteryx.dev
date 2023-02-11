@@ -21,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#589](https://github.com/mabel-dev/opteryx/issues/589)] Moved conditional imports out of program initialization [@joocer](https://github.com/joocer) 
 - [[#836](https://github.com/mabel-dev/opteryx/issues/836)] Use PyArrow 11s exposure of underlying date values in profiler [@joocer](https://github.com/joocer) 
 - [[#853](https://github.com/mabel-dev/opteryx/issues/853)] CaskDB replaces RocksDB as default KV store [@joocer](https://github.com/joocer) 
+- :octicons-alert-24: [[#855](https://github.com/mabel-dev/opteryx/issues/853)] Caches have been renamed and separated from KV Stores to disencourage incorrect use; The Memcache Cache is now imported using `from opteryx.managers.cache import MemcachedCache` [@joocer](https://github.com/joocer) 
 
 ### Added
 
