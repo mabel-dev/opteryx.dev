@@ -10,7 +10,6 @@ Library           | Disposition       | Copyright            | Licence
 [caskdb](https://github.com/avinassh/py-caskdb)            | Derived  | 2022 [Avinash Sajjanshetty](https://github.com/avinassh)  | [MIT](https://github.com/avinassh/py-caskdb/blob/master/LICENSE)
 [cityhash](https://github.com/escherba/python-cityhash)    | Installed   |  | [Bespoke](https://github.com/escherba/python-cityhash/blob/master/LICENSE)  
 [cython](https://github.com/cython/cython)                 | Installed   |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
-[datetime_truncate](https://github.com/mediapop/datetime_truncate) | Integrated | 2020 [Media Pop](https://github.com/mediapop) | [MIT](https://github.com/mediapop/datetime_truncate/blob/master/LICENSE)
 [distogram](https://github.com/maki-nage/distogram)        | Integrated  | 2020 [Romain Picard](https://github.com/MainRo) | [MIT](https://github.com/maki-nage/distogram/blob/master/LICENSE.txt)
 [fastlogging](https://github.com/brmmm3/fastlogging)       | Integrated  | 2018 [Martin Bammer](https://github.com/brmmm3) | [MIT](https://github.com/brmmm3/fastlogging/blob/master/LICENSE.txt)
 [fuzzy](https://github.com/yougov/fuzzy)                   | Integrated  | [Jason R. Coombs](https://github.com/jaraco) | [MIT](https://github.com/yougov/fuzzy/blob/master/LICENSE)
