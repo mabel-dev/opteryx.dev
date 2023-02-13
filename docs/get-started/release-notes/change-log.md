@@ -23,7 +23,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#853](https://github.com/mabel-dev/opteryx/issues/853)] CaskDB replaces RocksDB as default KV store [@joocer](https://github.com/joocer) 
 - :octicons-alert-24: [[#855](https://github.com/mabel-dev/opteryx/issues/853)] Caches have been renamed and separated from KV Stores to disencourage incorrect use; The Memcache Cache is now imported using `from opteryx.managers.cache import MemcachedCache` [@joocer](https://github.com/joocer) 
 - [[#857](https://github.com/mabel-dev/opteryx/issues/857)] Removed PyYAML install [@joocer](https://github.com/joocer) 
-- [[#865](https://github.com/mabel-dev/opteryx/issues/865)] Replaced third party `DATE_TRUNC` implementation with a first party implementation [@joocer](https://github.com/joocer) 
+- [[#865](https://github.com/mabel-dev/opteryx/issues/865)] Replaced third-party `DATE_TRUNC` implementation with a first-party implementation [@joocer](https://github.com/joocer) 
+- [[#861](https://github.com/mabel-dev/opteryx/issues/861)] Replaced third-party `bitarray` library with a first-party implementation [@joocer](https://github.com/joocer) 
 
 ### Added
 
