@@ -194,12 +194,12 @@ Opteryx supports:
 
 ### File Sizes
 
-Opteryx loads entire files (pages) into memory one at a time, this requires the following to be considered:
+Opteryx loads entire files (morsels) into memory one at a time, this requires the following to be considered:
 
-- Reading one record from a file loads the entire page. If you regularly only read a few records, prefer smaller pages.
-- Reading each page, particularly from Cloud Storage (S3/GCS), incurs a per-read overhead. If you have large datasets, prefer larger pages.
+- Reading one record from a file loads the entire blob. If you regularly only read a few records, prefer smaller blobs.
+- Reading each blob, particularly from Cloud Storage (S3/GCS), incurs a per-read overhead. If you have large datasets, prefer larger blobs.
 
-If you are unsure where to start, 64Mb (before compression) is a recommended general-purpose page size.
+If you are unsure where to start, 64Mb (pre compression) is a recommended general-purpose blobs size, these should then be compressed (Snappy or zStandard are recommended).
 
 <!---
 ## Document Stores

@@ -166,7 +166,7 @@ System parameters can also be temporarily for a query batch and are prefixed wit
 
 ## SHOW COLUMNS
 
-List the columns in a relation along with their data type. Without any modifiers, `SHOW COLUMNS` only reads a single page of data before returning.
+List the columns in a relation along with their data type. Without any modifiers, `SHOW COLUMNS` only reads a single morsel of data before returning.
 
 ~~~sql
 SHOW [EXTENDED] [FULL] COLUMNS
@@ -181,7 +181,7 @@ Inclusion of the `EXTENDED` modifier includes summary statistics about the colum
 
 ### FULL modifier
 
-Inclusion of the `FULL` modifier uses the entire dataset in order to return complete column information, rather than just the first page from the dataset.
+Inclusion of the `FULL` modifier uses the entire dataset in order to return complete column information, rather than just the first morsel from the dataset.
 
 ### LIKE clause
 

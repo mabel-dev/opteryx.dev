@@ -26,7 +26,7 @@ The maximum size of an item to store in the cache.
 `MEMCACHED_SERVER`  
 Address of Memcached server, in `IP:PORT` format.
 
-### Page Management Settings
+### Data Size Management Settings
 
 `INTERNAL_BATCH_SIZE`=500  
 Batch size for left-table of a join processes.
@@ -34,8 +34,8 @@ Batch size for left-table of a join processes.
 `MAX_JOIN_SIZE`=10000  
 Maximum records created in a `CROSS JOIN` frame.
 
-`PAGE_SIZE`=67108864  
-The size to try to make data pages as they are processed.
+`MORSEL_SIZE`=67108864  
+The size to try to make data morsels as they are processed.
 
 ### Operating System Settings
 

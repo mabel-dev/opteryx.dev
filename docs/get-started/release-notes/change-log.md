@@ -25,6 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#857](https://github.com/mabel-dev/opteryx/issues/857)] Removed PyYAML install [@joocer](https://github.com/joocer) 
 - [[#865](https://github.com/mabel-dev/opteryx/issues/865)] Replaced third-party `DATE_TRUNC` implementation with a first-party implementation [@joocer](https://github.com/joocer) 
 - [[#861](https://github.com/mabel-dev/opteryx/issues/861)] Replaced third-party `bitarray` library with a first-party implementation [@joocer](https://github.com/joocer) 
+- :octicons-alert-24: [[#871](https://github.com/mabel-dev/opteryx/issues/871)] Consistently name internal variables relating to chunks of data to 'morsel' (technically breaking, but no user impact expected) [@joocer](https://github.com/joocer) 
 
 ### Added
 

@@ -29,11 +29,11 @@ Query parameters which affect the execution of the query can be tuned on a per-q
 !!! function "`max_join_size`: _int_ = **10000**"    
     The maximum number of records to create in a `CROSS JOIN` frame.
 
-!!! function "`page_size`: _int_ = **67108864**"     
-    Approximate Page Size in bytes - default is 64Mb.
+!!! function "`morsel_size`: _int_ = **67108864**"     
+    Target morsel Size in bytes - default is 64Mb.
 
-!!! function "`enable_page_defragmentation`: _boolean_ = **True**"
-    Use the internal page defragmentation.
+!!! function "`enable_morsel_defragmentation`: _boolean_ = **True**"
+    Use the internal morsel defragmentation (split large morsels and merge small morsels)
 
 ## WITH hints
 
