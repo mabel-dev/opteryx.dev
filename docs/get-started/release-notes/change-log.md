@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#797](https://github.com/mabel-dev/opteryx/issues/797)] Name collisons with aliases cause issues in `ORDER BY`. [@joocer](https://github.com/joocer) 
 - [[#833](https://github.com/mabel-dev/opteryx/issues/833)] Unhelpful error when no statement is provided [@joocer](https://github.com/joocer) 
+- [[#870](https://github.com/mabel-dev/opteryx/issues/870)] Repeated columns in `GROUP BY` not processed [@joocer](https://github.com/joocer) 
+- [[#873](https://github.com/mabel-dev/opteryx/issues/873)] 2 x CodeQL security issues [@joocer](https://github.com/joocer) 
 
 ### Changed
 
@@ -33,6 +35,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#818](https://github.com/mabel-dev/opteryx/issues/818)] Save query plans to disk (partial). [@joocer](https://github.com/joocer) 
 - [[#163](https://github.com/mabel-dev/opteryx/issues/163)] Initial support for SQL databases as a data source. [@joocer](https://github.com/joocer) 
 - [[#844](https://github.com/mabel-dev/opteryx/issues/844)] Materialize results as a [Polars](https://www.pola.rs/) dataframe. [@joocer](https://github.com/joocer) 
+- [[#869](https://github.com/mabel-dev/opteryx/issues/869)] Introduce a SQL Fuzzer. [@joocer](https://github.com/joocer) 
 
 ## [0.8.3] - 2023-01-10 
 
