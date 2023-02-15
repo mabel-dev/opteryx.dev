@@ -1347,12 +1347,12 @@
 <p>The maximum number of records to create in a <code>CROSS JOIN</code> frame.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>page_size</code>: <em>int</em> = <strong>67108864</strong></p>
-<p>Approximate Page Size in bytes - default is 64Mb.</p>
+<p class="admonition-title"><code>morsel_size</code>: <em>int</em> = <strong>67108864</strong></p>
+<p>Target morsel Size in bytes - default is 64Mb.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>enable_page_defragmentation</code>: <em>boolean</em> = <strong>True</strong></p>
-<p>Use the internal page defragmentation.</p>
+<p class="admonition-title"><code>enable_morsel_defragmentation</code>: <em>boolean</em> = <strong>True</strong></p>
+<p>Use the internal morsel defragmentation (split large morsels and merge small morsels)</p>
 </div>
 <h2 id="with-hints">WITH hints</h2>
 <p>Hints are used to direct the planner, optimizer or the executor to make specific decisions. If a hint is not recognized, it is ignored by the planner and executor and is reported in the messages.</p>

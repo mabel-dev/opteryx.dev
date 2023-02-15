@@ -1336,13 +1336,13 @@ The maximum number of evictions from in-memory read cache per query.</p>
 The maximum size of an item to store in the cache.</p>
 <p><code>MEMCACHED_SERVER</code><br />
 Address of Memcached server, in <code>IP:PORT</code> format.</p>
-<h3 id="page-management-settings">Page Management Settings</h3>
+<h3 id="data-size-management-settings">Data Size Management Settings</h3>
 <p><code>INTERNAL_BATCH_SIZE</code>=500<br />
 Batch size for left-table of a join processes.</p>
 <p><code>MAX_JOIN_SIZE</code>=10000<br />
 Maximum records created in a <code>CROSS JOIN</code> frame.</p>
-<p><code>PAGE_SIZE</code>=67108864<br />
-The size to try to make data pages as they are processed.</p>
+<p><code>MORSEL_SIZE</code>=67108864<br />
+The size to try to make data morsels as they are processed.</p>
 <h3 id="operating-system-settings">Operating System Settings</h3>
 <p><code>DISABLE_HIGH_PRIORITY</code>=False<br />
 Disable trying to set the process priority.</p>

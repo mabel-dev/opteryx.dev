@@ -1527,7 +1527,7 @@
 <p>System parameters can also be temporarily for a query batch and are prefixed with a dollar sign (<code>$</code>).</p>
 <p><strong>Related</strong>: <code>SHOW VARIABLES</code> and <code>SHOW PARAMETER</code></p>
 <h2 id="show-columns">SHOW COLUMNS</h2>
-<p>List the columns in a relation along with their data type. Without any modifiers, <code>SHOW COLUMNS</code> only reads a single page of data before returning.</p>
+<p>List the columns in a relation along with their data type. Without any modifiers, <code>SHOW COLUMNS</code> only reads a single morsel of data before returning.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="p">[</span><span class="n">EXTENDED</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="k">FULL</span><span class="p">]</span><span class="w"> </span><span class="n">COLUMNS</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">relation</span>
 <a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span>
@@ -1536,7 +1536,7 @@
 <h3 id="extended-modifier">EXTENDED modifier</h3>
 <p>Inclusion of the <code>EXTENDED</code> modifier includes summary statistics about the columns which take longer and more memory to create than the standard summary information without the modifier. The summary information varies between column types and values.</p>
 <h3 id="full-modifier">FULL modifier</h3>
-<p>Inclusion of the <code>FULL</code> modifier uses the entire dataset in order to return complete column information, rather than just the first page from the dataset.</p>
+<p>Inclusion of the <code>FULL</code> modifier uses the entire dataset in order to return complete column information, rather than just the first morsel from the dataset.</p>
 <h3 id="like-clause">LIKE clause</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>LIKE pattern
 </code></pre></div>
