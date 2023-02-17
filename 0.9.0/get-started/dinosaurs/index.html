@@ -12,27 +12,23 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.9.0/contributing/internals/project-structure/">
+        <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.9.0/get-started/dinosaurs/">
       
       
-        <link rel="prev" href="../../set-up-guides/windows/">
       
-      
-        <link rel="next" href="../query-engine/">
-      
-      <link rel="icon" href="../../../icarus-opteryx.png">
+      <link rel="icon" href="../../icarus-opteryx.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
     
     
       
-        <title>Project Structure - Opteryx</title>
+        <title>Dinosaurs - Opteryx</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -48,11 +44,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../termynal.css">
+      <link rel="stylesheet" href="../../termynal.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-structure" class="md-skip">
+        <a href="#dinosaurs" class="md-skip">
           Skip to content
         </a>
       
@@ -95,9 +91,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../.." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="../../../icarus-opteryx.png" alt="logo">
+  <img src="../../icarus-opteryx.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project Structure
+              Dinosaurs
             
           </span>
         </div>
@@ -155,7 +151,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../.." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -170,7 +166,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../get-started/overview/" class="md-tabs__link">
+      <a href="../overview/" class="md-tabs__link">
         Get Started
       </a>
     </li>
@@ -186,7 +182,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../sql-reference/introduction/" class="md-tabs__link">
+      <a href="../../sql-reference/introduction/" class="md-tabs__link">
         SQL Reference
       </a>
     </li>
@@ -196,15 +192,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../contributing/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../contributing/contributing/" class="md-tabs__link">
         Contributing
       </a>
     </li>
@@ -225,7 +219,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../blog/202209-building-our-first-optimizer/" class="md-tabs__link">
+      <a href="../../blog/202209-building-our-first-optimizer/" class="md-tabs__link">
         Blog
       </a>
     </li>
@@ -255,9 +249,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../.." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="../../../icarus-opteryx.png" alt="logo">
+  <img src="../../icarus-opteryx.png" alt="logo">
 
     </a>
     Opteryx
@@ -285,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -327,7 +321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../get-started/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         Opteryx Overview
       </a>
     </li>
@@ -341,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../get-started/get-started/" class="md-nav__link">
+      <a href="../get-started/" class="md-nav__link">
         Get Started
       </a>
     </li>
@@ -355,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../get-started/clients/" class="md-nav__link">
+      <a href="../clients/" class="md-nav__link">
         Client Overview
       </a>
     </li>
@@ -369,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../get-started/python-client/" class="md-nav__link">
+      <a href="../python-client/" class="md-nav__link">
         Python Client
       </a>
     </li>
@@ -383,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../get-started/deployment-guide/" class="md-nav__link">
+      <a href="../deployment-guide/" class="md-nav__link">
         Deployment Guide
       </a>
     </li>
@@ -397,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../get-started/configuration-guide/" class="md-nav__link">
+      <a href="../configuration-guide/" class="md-nav__link">
         Configuration Guide
       </a>
     </li>
@@ -411,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../get-started/metastore/" class="md-nav__link">
+      <a href="../metastore/" class="md-nav__link">
         Metastore (Tarchia)
       </a>
     </li>
@@ -452,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../get-started/external-standards/pep249/" class="md-nav__link">
+      <a href="../external-standards/pep249/" class="md-nav__link">
         Python PEP249
       </a>
     </li>
@@ -466,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../get-started/external-standards/sql92/" class="md-nav__link">
+      <a href="../external-standards/sql92/" class="md-nav__link">
         ANSI SQL-92
       </a>
     </li>
@@ -480,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../get-started/external-standards/tpch/" class="md-nav__link">
+      <a href="../external-standards/tpch/" class="md-nav__link">
         TPC-H
       </a>
     </li>
@@ -528,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../get-started/release-notes/change-log/" class="md-nav__link">
+      <a href="../release-notes/change-log/" class="md-nav__link">
         Change Log
       </a>
     </li>
@@ -542,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../get-started/release-notes/notices/" class="md-nav__link">
+      <a href="../release-notes/notices/" class="md-nav__link">
         Notices
       </a>
     </li>
@@ -598,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/introduction/" class="md-nav__link">
+      <a href="../../sql-reference/introduction/" class="md-nav__link">
         SQL Introduction
       </a>
     </li>
@@ -612,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/statements/" class="md-nav__link">
+      <a href="../../sql-reference/statements/" class="md-nav__link">
         Statements
       </a>
     </li>
@@ -626,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/data-types/" class="md-nav__link">
+      <a href="../../sql-reference/data-types/" class="md-nav__link">
         Data Types
       </a>
     </li>
@@ -640,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/expressions/" class="md-nav__link">
+      <a href="../../sql-reference/expressions/" class="md-nav__link">
         Expressions
       </a>
     </li>
@@ -654,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/functions/" class="md-nav__link">
+      <a href="../../sql-reference/functions/" class="md-nav__link">
         Functions
       </a>
     </li>
@@ -668,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/aggregates/" class="md-nav__link">
+      <a href="../../sql-reference/aggregates/" class="md-nav__link">
         Aggregates
       </a>
     </li>
@@ -682,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/joins/" class="md-nav__link">
+      <a href="../../sql-reference/joins/" class="md-nav__link">
         Joins
       </a>
     </li>
@@ -723,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/adv-working-with-timestamps/" class="md-nav__link">
+      <a href="../../sql-reference/adv-working-with-timestamps/" class="md-nav__link">
         Working with Timestamps
       </a>
     </li>
@@ -737,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/adv-working-with-lists/" class="md-nav__link">
+      <a href="../../sql-reference/adv-working-with-lists/" class="md-nav__link">
         Working with Lists
       </a>
     </li>
@@ -751,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/adv-working-with-structs/" class="md-nav__link">
+      <a href="../../sql-reference/adv-working-with-structs/" class="md-nav__link">
         Working with Structs
       </a>
     </li>
@@ -765,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/adv-time-travel/" class="md-nav__link">
+      <a href="../../sql-reference/adv-time-travel/" class="md-nav__link">
         Time Travel
       </a>
     </li>
@@ -779,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/adv-null-semantics/" class="md-nav__link">
+      <a href="../../sql-reference/adv-null-semantics/" class="md-nav__link">
         Null Semantics
       </a>
     </li>
@@ -793,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/adv-temp-tables/" class="md-nav__link">
+      <a href="../../sql-reference/adv-temp-tables/" class="md-nav__link">
         Temporary Tables
       </a>
     </li>
@@ -807,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/adv-sample-data/" class="md-nav__link">
+      <a href="../../sql-reference/adv-sample-data/" class="md-nav__link">
         Sample Data
       </a>
     </li>
@@ -821,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/adv-engine-configuration/" class="md-nav__link">
+      <a href="../../sql-reference/adv-engine-configuration/" class="md-nav__link">
         Engine Configuration
       </a>
     </li>
@@ -835,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sql-reference/adv-query-optimization/" class="md-nav__link">
+      <a href="../../sql-reference/adv-query-optimization/" class="md-nav__link">
         Query Optimization
       </a>
     </li>
@@ -862,16 +856,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
       
@@ -880,7 +872,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Contributing
@@ -893,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/" class="md-nav__link">
+      <a href="../../contributing/contributing/" class="md-nav__link">
         Contributor Guide
       </a>
     </li>
@@ -907,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../code-of-conduct/" class="md-nav__link">
+      <a href="../../contributing/code-of-conduct/" class="md-nav__link">
         Code of Conduct
       </a>
     </li>
@@ -921,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../etiquette/" class="md-nav__link">
+      <a href="../../contributing/etiquette/" class="md-nav__link">
         Etiquette
       </a>
     </li>
@@ -962,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../set-up-guides/debian/" class="md-nav__link">
+      <a href="../../contributing/set-up-guides/debian/" class="md-nav__link">
         Debian/Ubuntu
       </a>
     </li>
@@ -976,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../set-up-guides/macos/" class="md-nav__link">
+      <a href="../../contributing/set-up-guides/macos/" class="md-nav__link">
         MacOS
       </a>
     </li>
@@ -990,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../set-up-guides/windows/" class="md-nav__link">
+      <a href="../../contributing/set-up-guides/windows/" class="md-nav__link">
         Windows
       </a>
     </li>
@@ -1009,16 +1001,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
       
       
       
@@ -1027,7 +1017,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           System Internals
@@ -1038,52 +1028,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Project Structure
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../contributing/internals/project-structure/" class="md-nav__link">
         Project Structure
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#folder-structure" class="md-nav__link">
-    Folder Structure
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1095,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../query-engine/" class="md-nav__link">
+      <a href="../../contributing/internals/query-engine/" class="md-nav__link">
         Query Engine
       </a>
     </li>
@@ -1109,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage-engine/" class="md-nav__link">
+      <a href="../../contributing/internals/storage-engine/" class="md-nav__link">
         Storage Engine
       </a>
     </li>
@@ -1123,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../testing/" class="md-nav__link">
+      <a href="../../contributing/internals/testing/" class="md-nav__link">
         Testing Approach
       </a>
     </li>
@@ -1144,7 +1093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../version-goals/" class="md-nav__link">
+      <a href="../../contributing/version-goals/" class="md-nav__link">
         Version Goals
       </a>
     </li>
@@ -1220,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/202209-building-our-first-optimizer/" class="md-nav__link">
+      <a href="../../blog/202209-building-our-first-optimizer/" class="md-nav__link">
         Building our first Optimizer
       </a>
     </li>
@@ -1268,8 +1217,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#folder-structure" class="md-nav__link">
-    Folder Structure
+  <a href="#opteryx" class="md-nav__link">
+    Opteryx
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raptor" class="md-nav__link">
+    Raptor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hadrodb" class="md-nav__link">
+    HadroDB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarchia" class="md-nav__link">
+    Tarchia
   </a>
   
 </li>
@@ -1293,33 +1263,21 @@
 
 
 
-<h1 id="project-structure">Project Structure</h1>
-<h2 id="folder-structure">Folder Structure</h2>
-<p>Opteryx's repository folder structure is described below:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>opteryx/                 &lt;- main opteryx library
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> ├── components/         &lt;- the planning and management of the query engine
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> ├── connectors/         &lt;- modules to connect to data sources
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> ├── functions/          &lt;- modules to execute functions within SQL statements
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> ├── managers/           &lt;- libraries responsible for key functional units
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a> │   ├── cache/          &lt;- modules implementing caching systems
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a> │   ├── expression/     &lt;- modules implementing expression evaluation
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a> │   ├── kvstore/        &lt;- modules implementing interfacing with KV Stores
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a> │   └── schemes/        &lt;- modules implementing storage schemes
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a> ├── models/             &lt;- internal data models
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a> ├── operators/          &lt;- modules implementing steps in the query plan
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a> ├── samples/            &lt;- sample data ($planets, $astronauts, $satellites)
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a> ├── shared/             &lt;- global resources
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a> ├── third_party/        &lt;- third party code
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a> │   ├── distogram/ 
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a> │   ├── fuzzy/   
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a> │   ├── pyarrow_ops/ 
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a> │   └── ...  
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a> ├── utils/              &lt;- helper libraries
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a> └── ...       
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>src/                     &lt;- Rust libraries
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>testdata/                &lt;- Data referenced in unit tests
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>tests/                   &lt;- Unit tests
-</code></pre></div>
+<h1 id="dinosaurs">Dinosaurs</h1>
+<h2 id="opteryx">Opteryx</h2>
+<p><strong>The query engine</strong></p>
+<p>Named for <a href="https://en.wikipedia.org/wiki/Archaeopteryx">Archaeopteryx</a>.</p>
+<h2 id="raptor">Raptor</h2>
+<p><strong>The query optimizer</strong></p>
+<p>Named for <a href="https://en.wikipedia.org/wiki/Velociraptor">Velociraptor</a>, chose as it's association with speed and the query optimizer being a key component in speeding up query execution.</p>
+<p>Although it is the 'Velo' part of the name and the 'raptor' part means 'thief'. 'Raptor' is a common abbreviation for 'Velociraptor' </p>
+<h2 id="hadrodb">HadroDB</h2>
+<p><strong>The internal KV storage engine</strong><br />
+<em>Formerlly CaskDB.</em></p>
+<p>Named for <a href="https://en.wikipedia.org/wiki/Hadrosauridae">Hadrosauridae</a>, chosen as this is the family of dinosaurs which was believed to have the greatest population.</p>
+<h2 id="tarchia">Tarchia</h2>
+<p><strong>The metastore</strong></p>
+<p>Named for <a href="https://en.wikipedia.org/wiki/Tarchia">Tarchia</a>, chosen as this translates to 'Brainy One' and the metastore is where knowledge on the data in the store is held.</p>
 
 
 
@@ -1414,12 +1372,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
       
-        <script src="../../../termynal.js"></script>
+        <script src="../../termynal.js"></script>
       
     
   </body>
