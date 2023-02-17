@@ -19,7 +19,6 @@ opteryx/                 <- main opteryx library
  ├── samples/            <- sample data ($planets, $astronauts, $satellites)
  ├── shared/             <- global resources
  ├── third_party/        <- third party code
- │   ├── caskdb/ 
  │   ├── distogram/ 
  │   ├── fuzzy/   
  │   ├── pyarrow_ops/ 
