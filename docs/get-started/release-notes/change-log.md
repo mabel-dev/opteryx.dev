@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#865](https://github.com/mabel-dev/opteryx/issues/865)] Replaced third-party `DATE_TRUNC` implementation with a first-party implementation [@joocer](https://github.com/joocer) 
 - [[#861](https://github.com/mabel-dev/opteryx/issues/861)] Replaced third-party `bitarray` library with a first-party implementation [@joocer](https://github.com/joocer) 
 - :octicons-alert-24: [[#871](https://github.com/mabel-dev/opteryx/issues/871)] Consistently name internal variables relating to chunks of data to 'morsel' (technically breaking, but no user impact expected) [@joocer](https://github.com/joocer) 
+- [[#880](https://github.com/mabel-dev/opteryx/issues/880)] Minor performance improvements [@joocer](https://github.com/joocer) 
 
 ### Added
 
@@ -36,6 +37,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#163](https://github.com/mabel-dev/opteryx/issues/163)] Initial support for SQL databases as a data source. [@joocer](https://github.com/joocer) 
 - [[#844](https://github.com/mabel-dev/opteryx/issues/844)] Materialize results as a [Polars](https://www.pola.rs/) dataframe. [@joocer](https://github.com/joocer) 
 - [[#869](https://github.com/mabel-dev/opteryx/issues/869)] Introduce a SQL Fuzzer. [@joocer](https://github.com/joocer) 
+- [[#877](https://github.com/mabel-dev/opteryx/issues/877)] Initial experimental implementation of internal KV database, HadroDB [@joocer](https://github.com/joocer) 
 
 ## [0.8.3] - 2023-01-10 
 
