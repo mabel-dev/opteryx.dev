@@ -45,7 +45,9 @@ Satellite and Planet datasets acquired from [devstronomy](https://github.com/dev
 
 Astronaut dataset acquired from [Kaggle](https://www.kaggle.com/nasa/astronaut-yearbook).
 
-Exoplanet dataset acquire from [Kaggle](https://www.kaggle.com/datasets/nasa/kepler-exoplanet-search-results).
+Exoplanet dataset acquired from [Kaggle](https://www.kaggle.com/datasets/nasa/kepler-exoplanet-search-results).
+
+English wordlist acquired from [wordlists](https://github.com/kkrypt0nn/wordlists)
 
 Diagrams created using [ASCII Flow](https://asciiflow.com/) or [draw.io](https://github.com/jgraph/drawio).
 
