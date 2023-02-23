@@ -4,15 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [Unreleased]
+## [0.9.1] - 2023-02-23
 
 ### Fixed
 
 - [[#888](https://github.com/mabel-dev/opteryx/issues/888)] YAML parser errors. [@joocer](https://github.com/joocer) 
 
-### Changed
-
-### Added
 
 ## [0.9.0] - 2023-02-19
 
