@@ -1343,6 +1343,10 @@
 <td><code>INTERVAL</code></td>
 <td>The difference between two TIMESTAMP values</td>
 </tr>
+<tr>
+<td><code>INET</code></td>
+<td>Network Range</td>
+</tr>
 </tbody>
 </table>
 <div class="admonition note">
@@ -1350,6 +1354,7 @@
 <ul>
 <li><code>INTERVAL</code> may not support all functions in all circumstances.  </li>
 <li><code>LIST</code>s of non-string values have limited support.</li>
+<li><code>INET</code> has very limited support.</li>
 </ul>
 </div>
 <h2 id="casting">Casting</h2>
@@ -1368,6 +1373,8 @@
 <p>All <code>TIMESTAMP</code> and date values read from datasets are coerced to nanosecond precision timestamps.</p>
 <h3 id="numbers">Numbers</h3>
 <p>All numeric values included in SQL statements and read from datasets are coerced to 64bit floats.</p>
+<h3 id="ipv4-network-ranges">IPv4 Network Ranges</h3>
+<p>IPv4 Network Range comparisions automatically interpret IP addresses and ranges.</p>
 
 
 

@@ -1369,11 +1369,6 @@
 </thead>
 <tbody>
 <tr>
-<td><code>generate_series(stop)</code></td>
-<td>NUMERIC</td>
-<td>Generate a NUMERIC series between 1 and 'stop', with a step of 1</td>
-</tr>
-<tr>
 <td><code>generate_series(start, stop)</code></td>
 <td>NUMERIC, NUMERIC</td>
 <td>Generate a NUMERIC series between 'start' and 'stop', with a step of 1</td>
@@ -1388,66 +1383,40 @@
 <td>TIMESTAMP, TIMESTAMP, INTERVAL</td>
 <td>Generate a TIMESTAMP series between 'start' and 'stop', with a given interval</td>
 </tr>
-<tr>
-<td><code>generate_series(cidr)</code></td>
-<td>VARCHAR</td>
-<td>Generate set of IP addresses from a given CIDR (e.g. <code>192.168.0.0/24</code>)</td>
-</tr>
 </tbody>
 </table>
-<p>Single Parameter Example (NUMERIC):</p>
+<p>Two parameter Example:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> generate_series 
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>-----------------
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>               1
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>               2
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>               3
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>               2
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>               3
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>               4
 </code></pre></div></p>
-<p>Single Parameter Example (VARCHAR):</p>
+<p>Three parameter NUMERIC Example:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="s1">&#39;192.168.1.0/30&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> generate_series 
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>-----------------
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a> 192.168.1.0
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a> 192.168.1.1
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a> 192.168.1.2
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a> 192.168.1.3
-</code></pre></div></p>
-<p>Two parameter Example:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a> generate_series 
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>-----------------
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>               2
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>               3
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>               4
-</code></pre></div></p>
-<p>Three parameter NUMERIC Example:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a> generate_series 
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>-----------------
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>              -5
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>               0
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>               5
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>              -5
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>               0
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>               5
 </code></pre></div></p>
 <p>Three parameter TIMESTAMP example:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2025-12-31&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1y&#39;</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2025-12-31&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1y&#39;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>  generate_series 
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>------------------
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a> 2020-01-01 00:00
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a> 2021-01-01 00:00
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a> 2022-01-01 00:00
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a> 2023-01-01 00:00
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a> 2024-01-01 00:00
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a> 2025-01-01 00:00
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>  generate_series 
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>------------------
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a> 2020-01-01 00:00
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a> 2021-01-01 00:00
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a> 2022-01-01 00:00
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a> 2023-01-01 00:00
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a> 2024-01-01 00:00
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a> 2025-01-01 00:00
 </code></pre></div></p>
 <h3 id="interval-definitions">Interval Definitions</h3>
 <p>Intervals are defined quantifying one or more periods which make up the interval, supported periods and their notation are:</p>
@@ -1502,15 +1471,15 @@
 <h2 id="using-fake">Using <code>FAKE</code></h2>
 <p><code>FAKE</code> creates a table of random integers from provided row and column counts. This functionality has limited application outside of creating datasets for testing.</p>
 <p>A simple example is as follows:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">FAKE</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">FAKE</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
 </code></pre></div>
 <p>Result:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>   column_0 │   column_1 
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>------------┼------------
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>      32981 │      50883
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>       5037 │      42087
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>      51741 │      49456
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>   column_0 │   column_1 
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>------------┼------------
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>      32981 │      50883
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>       5037 │      42087
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>      51741 │      49456
 </code></pre></div>
 
 
