@@ -13,10 +13,12 @@ Name        | Description
 `STRUCT`    | A dictionary of multiple named values, where each key is a string, but the value can be a different type for each key.
 `TIMESTAMP` | Combination of date and time.
 `INTERVAL`  | The difference between two TIMESTAMP values
+`INET`      | Network Range
 
 !!! Note  
     - `INTERVAL` may not support all functions in all circumstances.  
     - `LIST`s of non-string values have limited support.
+    - `INET` has very limited support.
 
 ## Casting
 
@@ -49,3 +51,7 @@ All `TIMESTAMP` and date values read from datasets are coerced to nanosecond pre
 ### Numbers
 
 All numeric values included in SQL statements and read from datasets are coerced to 64bit floats.
+
+### IPv4 Network Ranges
+
+IPv4 Network Range comparisions automatically interpret IP addresses and ranges.

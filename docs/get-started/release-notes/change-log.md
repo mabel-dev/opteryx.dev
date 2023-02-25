@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased]
+
+## Fixed
+
+## Changed
+
+- :octicons-alert-24: [[#901](https://github.com/mabel-dev/opteryx/issues/901)] Generate Series no longer accepts single numbers or IP ranges, provide explicit start or use `|` to test IP address containment [@joocer](https://github.com/joocer) 
+
+## Added
+
 ## [0.9.1] - 2023-02-23
 
 ### Fixed
