@@ -201,6 +201,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.10.0/sql-reference/adv-working-with-ips/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.10.0/sql-reference/adv-working-with-lists/</loc>
          <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
