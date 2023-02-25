@@ -90,6 +90,7 @@ nav:
       - Working with Timestamps: sql-reference/adv-working-with-timestamps.md
       - Working with Lists: sql-reference/adv-working-with-lists.md
       - Working with Structs: sql-reference/adv-working-with-structs.md
+      - Working with IPs: sql-reference/adv-working-with-ips.md
       - Time Travel: sql-reference/adv-time-travel.md
       - Null Semantics: sql-reference/adv-null-semantics.md
       - Temporary Tables: sql-reference/adv-temp-tables.md
