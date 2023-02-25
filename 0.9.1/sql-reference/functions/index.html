@@ -1595,6 +1595,10 @@ Alias for <code>EXTRACT</code>(year FROM <strong>ts</strong>)</p>
 <p class="admonition-title"><em>varchar</em> <code>||</code> <em>varchar</em> → <em>varchar</em></p>
 <p>String concatenation  </p>
 </div>
+<div class="admonition function">
+<p class="admonition-title"><em>inet</em> <code>|</code> <em>inet</em> → <em>bool</em></p>
+<p>IP address containment</p>
+</div>
 <h2 id="list-functions">List Functions</h2>
 <p>For more details, see <a href="../adv-working-with-lists/">Working with Lists</a>.</p>
 <div class="admonition function">
@@ -1888,10 +1892,6 @@ Related: <code>BASE85_DECODE</code></p>
 Related: <code>IFNULL</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>stop</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
-<p>Return a numeric list between 1 and <strong>stop</strong>, with a step of 1.  </p>
-</div>
-<div class="admonition function">
 <p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
 <p>Return a numeric list between <strong>start</strong> and <strong>stop</strong>, with a step of 1.</p>
 </div>
@@ -1901,11 +1901,7 @@ Related: <code>IFNULL</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>timestamp</em>, <strong>stop</strong>: <em>timestamp</em>, <em>interval</em>) → <em>list</em>&lt;<em>timestamp</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
-<p>Return a timestamp list between <strong>start</strong> and <strong>stop</strong>, with a interval of <strong>step</strong>.    </p>
-</div>
-<div class="admonition function">
-<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>cidr</strong>: <em>varchar</em>) → <em>list</em>&lt;<em>varchar</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
-<p>Return a list of IP addresses from a given <strong>cidr</strong>.   </p>
+<p>Return a timestamp list between <strong>start</strong> and <strong>stop</strong>, with a interval of <strong>step</strong>.     </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>HASH</code> (<strong>value</strong>: <em>any</em>) → <em>varchar</em></p>
