@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## Changed
 
 - :octicons-alert-24: [[#901](https://github.com/mabel-dev/opteryx/issues/901)] Generate Series no longer accepts single numbers or IP ranges, provide explicit start or use `|` to test IP address containment [@joocer](https://github.com/joocer) 
+- [[#848](https://github.com/mabel-dev/opteryx/issues/848)] Collection and SQL Connectors dynamically size reads to fill target morsel size [@joocer](https://github.com/joocer) 
 
 ## Added
 
