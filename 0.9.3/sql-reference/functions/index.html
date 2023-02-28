@@ -1,0 +1,2098 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Opteryx - Query your data, where it lives.">
+      
+      
+        <meta name="author" content="Justin Joyce">
+      
+      
+        <link rel="canonical" href="https://mabel-dev.github.io/opteryx/latest/0.9.3/sql-reference/functions/">
+      
+      
+        <link rel="prev" href="../expressions/">
+      
+      
+        <link rel="next" href="../aggregates/">
+      
+      <link rel="icon" href="../../icarus-opteryx.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
+    
+    
+      
+        <title>Functions - Opteryx</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../termynal.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
+      
+  <img src="../../icarus-opteryx.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Opteryx
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mabel-dev/opteryx" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mabel-dev/opteryx
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../get-started/overview/" class="md-tabs__link">
+        Get Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../introduction/" class="md-tabs__link md-tabs__link--active">
+        SQL Reference
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contributing/contributing/" class="md-tabs__link">
+        Contributing
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../blog/202209-building-our-first-optimizer/" class="md-tabs__link">
+        Blog
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
+      
+  <img src="../../icarus-opteryx.png" alt="logo">
+
+    </a>
+    Opteryx
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mabel-dev/opteryx" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mabel-dev/opteryx
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Get Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/overview/" class="md-nav__link">
+        Opteryx Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/get-started/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/clients/" class="md-nav__link">
+        Client Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/python-client/" class="md-nav__link">
+        Python Client
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/deployment-guide/" class="md-nav__link">
+        Deployment Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/configuration-guide/" class="md-nav__link">
+        Configuration Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+          Standards & Benchmarks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Standards & Benchmarks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/external-standards/pep249/" class="md-nav__link">
+        Python PEP249
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/external-standards/sql92/" class="md-nav__link">
+        ANSI SQL-92
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/external-standards/tpch/" class="md-nav__link">
+        TPC-H
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+          Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          Release Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/release-notes/change-log/" class="md-nav__link">
+        Change Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/release-notes/notices/" class="md-nav__link">
+        Notices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          SQL Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          SQL Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        SQL Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statements/" class="md-nav__link">
+        Statements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-types/" class="md-nav__link">
+        Data Types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../expressions/" class="md-nav__link">
+        Expressions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Functions
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conversion-functions" class="md-nav__link">
+    Conversion Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-time-functions" class="md-nav__link">
+    Date &amp; Time Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infix-functions" class="md-nav__link">
+    Infix Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-functions" class="md-nav__link">
+    List Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeric-functions" class="md-nav__link">
+    Numeric Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-functions" class="md-nav__link">
+    String Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#struct-functions" class="md-nav__link">
+    Struct Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-functions" class="md-nav__link">
+    System Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-functions" class="md-nav__link">
+    Other Functions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aggregates/" class="md-nav__link">
+        Aggregates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../joins/" class="md-nav__link">
+        Joins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+          Advanced
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv-working-with-timestamps/" class="md-nav__link">
+        Working with Timestamps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv-working-with-lists/" class="md-nav__link">
+        Working with Lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv-working-with-structs/" class="md-nav__link">
+        Working with Structs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv-working-with-ips/" class="md-nav__link">
+        Working with IPs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv-time-travel/" class="md-nav__link">
+        Time Travel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv-null-semantics/" class="md-nav__link">
+        Null Semantics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv-temp-tables/" class="md-nav__link">
+        Temporary Tables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv-sample-data/" class="md-nav__link">
+        Sample Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv-engine-configuration/" class="md-nav__link">
+        Engine Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adv-query-optimization/" class="md-nav__link">
+        Query Optimization
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Contributing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/contributing/" class="md-nav__link">
+        Contributor Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/code-of-conduct/" class="md-nav__link">
+        Code of Conduct
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/etiquette/" class="md-nav__link">
+        Etiquette
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          Set Up Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Set Up Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/set-up-guides/debian/" class="md-nav__link">
+        Debian/Ubuntu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/set-up-guides/macos/" class="md-nav__link">
+        MacOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/set-up-guides/windows/" class="md-nav__link">
+        Windows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          System Internals
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          System Internals
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/internals/project-structure/" class="md-nav__link">
+        Project Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/internals/query-engine/" class="md-nav__link">
+        Query Engine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/internals/storage-engine/" class="md-nav__link">
+        Storage Engine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/internals/testing/" class="md-nav__link">
+        Testing Approach
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/version-goals/" class="md-nav__link">
+        Version Goals
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Blog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Blog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          Year 2022
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Year 2022
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/202209-building-our-first-optimizer/" class="md-nav__link">
+        Building our first Optimizer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conversion-functions" class="md-nav__link">
+    Conversion Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-time-functions" class="md-nav__link">
+    Date &amp; Time Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infix-functions" class="md-nav__link">
+    Infix Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-functions" class="md-nav__link">
+    List Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeric-functions" class="md-nav__link">
+    Numeric Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-functions" class="md-nav__link">
+    String Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#struct-functions" class="md-nav__link">
+    Struct Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-functions" class="md-nav__link">
+    System Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-functions" class="md-nav__link">
+    Other Functions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="functions">Functions</h1>
+<p>This document describes the supported SQL functions and operators.</p>
+<p>Generally functions will return <code>null</code> on <code>null</code> input, although note that this is not true in all circumstances, especially for null-aware functions like <code>COALESCE</code> and <code>IFNULL</code>.</p>
+<p>Definitions noted with a <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span> accept different input arguments.</p>
+<p>New functions for this version are annotated with the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> icon.</p>
+<h2 id="conversion-functions">Conversion Functions</h2>
+<div class="admonition function">
+<p class="admonition-title"><code>BOOLEAN</code> <strong>any</strong>: <em>any</em> → <em>boolean</em></p>
+<p>Cast <strong>any</strong> to a <code>BOOLEAN</code>, raises an error if cast is not possible. Note <code>BOOLEAN</code> does not require parenthesis, however any aliases do.    <br />
+Alias for <code>CAST</code>(<strong>any</strong> AS BOOLEAN)   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>CAST</code> (<strong>any</strong>: <em>any</em> AS <strong>type</strong>) → <em>type</em></p>
+<p>Cast <strong>any</strong> to <strong>type</strong>, raises an error if cast is not possible. <br />
+Also implemented as individual cast functions.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>INT</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Alias for <code>INTEGER</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>INTEGER</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Convert <strong>num</strong> to an integer. <br />
+<code>INTEGER</code> is a psuedo-type, <code>CAST</code> is not supported and values may be coerced to <code>NUMERIC</code>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>FLOAT</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Convert <strong>num</strong> to a floating point number. <br />
+<code>FLOAT</code> is a psuedo-type, <code>CAST</code> is not supported and values may be coerced to <code>NUMERIC</code>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>NUMERIC</code> <strong>any</strong>: <em>any</em> → <em>numeric</em></p>
+<p>Cast <strong>any</strong> to a floating point number, raises an error if cast is not possible. Note <code>NUMERIC</code> does not require parenthesis, however any aliases do. <br />
+Alias for <code>CAST</code>(<strong>any</strong> AS NUMERIC)   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SAFE_CAST</code> (<strong>any</strong>: <em>any</em> AS <strong>type</strong>) → <em>type</em></p>
+<p>Alias for <code>TRY_CAST</code>(<strong>any</strong> AS <strong>type</strong>)  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>STR</code> (<strong>any</strong>: <em>any</em>) → <em>varchar</em></p>
+<p>Alias of <code>VARCHAR</code>(<strong>any</strong>) and <code>CAST</code>(<strong>any</strong> AS VARCHAR)   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>STRING</code> (<strong>any</strong>: <em>any</em>) → <em>varchar</em></p>
+<p>Alias of <code>VARCHAR</code>(<strong>any</strong>) and <code>CAST</code>(<strong>any</strong> AS VARCHAR)</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>TIMESTAMP</code> <strong>iso8601</strong>: <em>varchar</em> → <em>timestamp</em></p>
+<p>Cast an <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format string to a timestamp, raises an error if cast is not possible. Note <code>TIMESTAMP</code> does not require parenthesis, however any aliases do.  <br />
+Alias for <code>CAST</code>(<strong>iso8601</strong> AS TIMESTAMP)   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>TRY_CAST</code> (<strong>any</strong>: <em>any</em> AS <strong>type</strong>) → <em>type</em></p>
+<p>Cast <strong>any</strong> to <strong>type</strong>, if cast is not possible, returns <code>null</code>.   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>VARCHAR</code> (<em>any</em>) → <em>varchar</em></p>
+<p>Cast <strong>any</strong> to a string, raises an error if cast is not possible.<br />
+Alias for <code>CAST</code>(<strong>any</strong> AS VARCHAR)</p>
+</div>
+<h2 id="date-time-functions">Date &amp; Time Functions</h2>
+<p>For more details, see <a href="../adv-working-with-timestamps/">Working with Timestamps</a>.</p>
+<div class="admonition function">
+<p class="admonition-title"><code>current_date</code> → <em>timestamp</em></p>
+<p>Return the current date, in UTC. Note <code>current_date</code> does not require parenthesis.  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>current_time</code> → <em>timestamp</em></p>
+<p>Return the current date and time, in UTC. Note <code>current_time</code> does not require parenthesis.  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>DATE</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>timestamp</em></p>
+<p>Remove any time information, leaving just the date part of <strong>ts</strong>.   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>DATE_FORMAT</code> (<strong>ts</strong>: <em>timestamp</em>, <strong>format</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Formats <strong>ts</strong> as a string using <strong>format</strong>.   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>DATEPART</code>(<strong>unit</strong>: <em>varchar</em>, <strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
+<p>Alias of <code>EXTRACT</code>(<strong>unit</strong> FROM <strong>ts</strong>)</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>DATE_TRUNC</code> (<strong>unit</strong>: <em>varchar</em>, <strong>ts</strong>: <em>timestamp</em>) → <em>varchar</em></p>
+<p>Returns <strong>ts</strong> truncated to <strong>unit</strong>.  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>DATEDIFF</code> (<strong>unit</strong>: <em>varchar</em>, <strong>start</strong>: <em>timestamp</em>, <strong>end</strong>: <em>timestamp</em>) → <em>numeric</em></p>
+<p>Calculate the difference between the start and end timestamps in a given <strong>unit</strong>.  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>DAY</code> (<em>timestamp</em>) → <em>numeric</em></p>
+<p>Extract day number from a timestamp. See <code>EXTRACT</code>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>EXTRACT</code> (<strong>unit</strong> FROM <em>timestamp</em>) → <em>numeric</em></p>
+<p>Extract <strong>unit</strong> of a timestamp. <br />
+Also implemented as individual extraction functions.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>FROM_UNIXTIME</code> (<strong>timestamp</strong>: <em>numeric</em>) → <em>timestamp</em></p>
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> New in 0.8</strong>    <br />
+Return a timestamp representation of an <a href="https://www.unixtimestamp.com/">Unix Timestamp</a>.  <br />
+Related: <code>UNIXTIME</code> </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>NOW</code> () → <em>timestamp</em></p>
+<p>Alias for <code>current_time</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>TIME</code> () → <em>timestamp</em></p>
+<p>Returns the current iime (UTC).     </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>TIME_BUCKET</code> (<em>timestamp</em>, <strong>multiple</strong>: <em>numeric</em>, <strong>unit</strong>: <em>varchar</em>) → <em>timestamp</em></p>
+<p>Floor timestamps into fixed time interval buckets. <strong>unit</strong> is optional and will be <code>day</code> if not provided.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>TODAY</code> () → <em>timestamp</em></p>
+<p>Alias for <code>current_date</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>HOUR</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
+<p>Returns the hour of the day from <strong>ts</strong>. The value ranges from <code>0</code> to <code>23</code>. <br />
+Alias for <code>EXTRACT</code>(hour FROM <strong>ts</strong>)</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>MINUTE</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
+<p>Returns the minute of the hour from <strong>ts</strong>. The value ranges from <code>0</code> to <code>59</code>.<br />
+Alias for <code>EXTRACT</code>(minute FROM <strong>ts</strong>)</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>MONTH</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
+<p>Returns the month of the year from <strong>ts</strong>. The value ranges from <code>1</code> to <code>12</code>.<br />
+Alias for <code>EXTRACT</code>(month FROM <strong>ts</strong>)</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>QUARTER</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
+<p>Returns the quarter of the year from <strong>ts</strong>. The value ranges from <code>1</code> to <code>4</code>.<br />
+Alias for <code>EXTRACT</code>(quarter FROM <strong>ts</strong>)</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SECOND</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
+<p>Returns the second of the minute from <strong>ts</strong>. The value ranges from <code>0</code> to <code>59</code>.<br />
+Alias for <code>EXTRACT</code>(second FROM <strong>ts</strong>)</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>UNIXTIME</code> () → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> New in 0.8</strong>    <br />
+Return the current time as a <a href="https://www.unixtimestamp.com/">Unix Timestamp</a>.  <br />
+Related: <code>FROM_UNIXTIME</code>, <code>current_time</code> </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>UNIXTIME</code> (<strong>timestamp</strong>: <em>timestamp</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> New in 0.8</strong>    <br />
+Return <strong>timestamp</strong> in <a href="https://www.unixtimestamp.com/">Unix Timestamp</a> representation.  <br />
+Related: <code>FROM_UNIXTIME</code> </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>WEEK</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
+<p>Returns the week of the year from <strong>ts</strong>. The value ranges from <code>1</code> to <code>53</code>.<br />
+Alias for <code>EXTRACT</code>(week FROM <strong>ts</strong>)</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>YEAR</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
+<p>Returns the year from <strong>ts</strong>.<br />
+Alias for <code>EXTRACT</code>(year FROM <strong>ts</strong>)</p>
+</div>
+<h2 id="infix-functions">Infix Functions</h2>
+<p>These are functions that are called similar to comparison operators:</p>
+<div class="admonition function">
+<p class="admonition-title"><em>numeric</em> <code>+</code> <em>numeric</em> → <em>numeric</em></p>
+<p>Numeric addition</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><em>timestamp</em> <code>+</code> <em>interval</em> → <em>timestamp</em></p>
+<p>Timestamp and Interval addition</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><em>numeric</em> <code>-</code> <em>numeric</em> → <em>numeric</em></p>
+<p>Numeric subtraction</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><em>timestamp</em> <code>-</code> <em>interval</em> → <em>timestamp</em></p>
+<p>Timestamp and Interval subtraction</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><em>timestamp</em> <code>-</code> <em>timestamp</em> → <em>interval</em></p>
+<p>Timestamp subtraction</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><em>numeric</em> <code>*</code> <em>numeric</em> → <em>numeric</em></p>
+<p>Numeric multiplication</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><em>numeric</em> <code>/</code> <em>numeric</em> → <em>numeric</em></p>
+<p>Numeric division</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><em>numeric</em> <code>%</code> <em>numeric</em> → <em>numeric</em></p>
+<p>Numeric modulo (remainder)</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><em>varchar</em> <code>||</code> <em>varchar</em> → <em>varchar</em></p>
+<p>String concatenation  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><em>inet</em> <code>|</code> <em>inet</em> → <em>bool</em></p>
+<p>IP address containment</p>
+</div>
+<h2 id="list-functions">List Functions</h2>
+<p>For more details, see <a href="../adv-working-with-lists/">Working with Lists</a>.</p>
+<div class="admonition function">
+<p class="admonition-title"><strong>array</strong>: <em>list</em><code>[</code><strong>index</strong>: <em>numeric</em><code>]</code> → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Return the <strong>index</strong>th element from <strong>array</strong>. </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>GET</code> (<strong>array</strong>: <em>list</em>, <strong>index</strong>: <em>numeric</em>) → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Alias of <strong>array</strong><code>[</code><strong>index</strong><code>]</code>  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>GREATEST</code> (<strong>array</strong>: <em>list</em>) → <em>value</em></p>
+<p>Return the greatest value in <strong>array</strong>.<br />
+Related: <code>LEAST</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LEAST</code> (<strong>array</strong>: <em>list</em>) → <em>value</em></p>
+<p>Return the smallest value in <strong>array</strong>.<br />
+Related: <code>GREATEST</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LEN</code> (<strong>array</strong>: <em>list</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Alias of <code>LENGTH</code>(<strong>array</strong>)</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LENGTH</code> (<strong>array</strong>: <em>list</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Returns the number of elements in <strong>array</strong>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LIST_CONTAINS</code> (<strong>array</strong>: <em>list</em>, <strong>value</strong>) → <em>boolean</em></p>
+<p>Return <code>true</code> if <strong>array</strong> contains <strong>value</strong>.<br />
+See also <code>SEARCH</code>(<strong>array</strong>, <strong>value</strong>)  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LIST_CONTAINS_ANY</code> (<strong>array</strong>: <em>list</em>, <strong>values</strong>: <em>list</em>) → <em>boolean</em></p>
+<p>Return <code>true</code> if <strong>array</strong> contains any elements in <strong>values</strong>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LIST_CONTAINS_ALL</code> (<strong>array</strong>: <em>list</em>, <strong>values</strong>: <em>list</em>) → <em>boolean</em></p>
+<p>Return <code>true</code> if <strong>array</strong> contains all of elements in <strong>values</strong>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SEARCH</code> (<strong>array</strong>: <em>list</em>, <strong>value</strong>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Return <code>true</code> if <strong>array</strong> contains <strong>value</strong>. </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SORT</code> (<strong>array</strong>: <em>list</em>) → <em>list</em></p>
+<p>Return <strong>array</strong> in ascending order. </p>
+</div>
+<h2 id="numeric-functions">Numeric Functions</h2>
+<div class="admonition function">
+<p class="admonition-title"><code>ABS</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Alias of <code>ABSOLUTE</code>  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>ABSOLUTE</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Returns the absolute value of <strong>x</strong>.   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>CEIL</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Alias of <code>CEILING</code>  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>CEILING</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Returns <strong>x</strong> rounded up to the nearest integer. <br />
+Related: <code>FLOOR</code> </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>E</code> () → <em>numeric</em></p>
+<p>Returns the constant <em>e</em>, also known as <a href="https://en.wikipedia.org/wiki/E_(mathematical_constant)"><em>Euler's number</em></a>.<br />
+Related: <code>LN</code>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>FLOOR</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Returns <strong>x</strong> rounded down to the nearest integer.   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>PHI</code> () → <em>numeric</em></p>
+<p>Returns the constant φ (<em>phi</em>), also known as <a href="https://en.wikipedia.org/wiki/Golden_ratio"><em>the golden ratio</em></a>.  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>PI</code> () → <em>numeric</em></p>
+<p>Returns the constant <a href="https://en.wikipedia.org/wiki/Pi">π</a> (<em>pi</em>).  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>POWER</code> (<strong>base</strong>: <em>numeric</em>, <strong>exponent</strong>: <em>numeric**) → _numeric</em></p>
+<p>Returns <strong>base</strong> to the power of <strong>exponent</strong>.  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LN</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Returns the natural logarithm of <strong>x</strong>.<br />
+Related: <code>E</code>, <code>LOG</code>, <code>LOG10</code>, <code>LOG2</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LOG</code> (<strong>x</strong>: <em>numeric</em>, <strong>base</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Returns the logarithm of <strong>x</strong> for base <strong>base</strong>. <br />
+Related: <code>LN</code>, <code>LOG10</code>, <code>LOG2</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LOG10</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Returns the logarithm for base 10 of <strong>x</strong>.<br />
+Related: <code>LN</code>, <code>LOG</code>, <code>LOG2</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LOG2</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Returns the logarithm for base 2 of <strong>x</strong>.<br />
+Related: <code>LN</code>, <code>LOG</code>, <code>LOG10</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>ROUND</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Returns <strong>x</strong> rounded to the nearest integer. </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>ROUND</code> (<strong>x</strong>: <em>numeric</em>, <strong>places</strong>: <em>numeric</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Returns <strong>x</strong> rounded to <strong>places</strong> decimal places.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SIGN</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Returns the signum function of <strong>x</strong>; 0 if <strong>x</strong> is 0, -1 if <strong>x</strong> is less than 0 and 1 if <strong>x</strong> is greater than 0.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SIGNUM</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Alias for <code>SIGN</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SQRT</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Returns the square root of <strong>x</strong>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>TRUNC</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Alias of <code>TRUNCATE</code>  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>TRUNCATE</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Returns <strong>x</strong> rounded to integer by dropping digits after decimal point.    </p>
+</div>
+<h2 id="string-functions">String Functions</h2>
+<p>Functions for examining and manipulating string values. </p>
+<div class="admonition function">
+<p class="admonition-title"><strong>str</strong>: <em>varchar</em><code>[</code><strong>index</strong>: <em>numeric</em><code>]</code> → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Subscript operator, return the <strong>index</strong>th character from <strong>str</strong>. </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>CONCAT</code> (<strong>list</strong>: <em>array</em>&lt;<em>varchar</em>&gt;) → <em>varchar</em></p>
+<p>Returns the result of concatenating, or joining, of two or more string values in an end-to-end manner.<br />
+Related: <code>CONCAT_WS</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>CONCAT_WS</code> (<strong>separator</strong>: <em>varchar</em>, <strong>list</strong>: <em>array</em>&lt;<em>varchar</em>&gt;) → <em>varchar</em></p>
+<p>Returns the result of concatenating, or joining, of two or more string values with a <strong>separator</strong> used to delimit individual values.<br />
+Related: <code>CONCAT</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>ENDS_WITH</code> (<strong>str</strong>: <em>varchar</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em></p>
+<p>Return <code>true</code> if <strong>str</strong> ends with <strong>value</strong>.<br />
+Related: <code>STARTS_WITH</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>GET</code> (<strong>str</strong>: <em>varchar</em>, <strong>index</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Alias of <strong>str</strong><code>[</code><strong>index</strong><code>]</code>   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LEFT</code> (<strong>str</strong>: <em>varchar</em>, <strong>n</strong>: <em>numeric</em>) → <em>varchar</em></p>
+<p>Extract the left-most <strong>n</strong> characters of <strong>str</strong>.<br />
+Related: <code>RIGHT</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LEN</code> (<strong>str</strong>: <em>varchar</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Alias of <code>LENGTH</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LENGTH</code> (<strong>str</strong>: <em>varchar</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Returns the length of <strong>str</strong> in characters.    </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LEVENSHTEIN</code> (<strong>str1</strong>: <em>varchar</em>, <strong>str2</strong>: <em>varchar</em>) → <em>numeric</em></p>
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> New in 0.8</strong>  <br />
+Returns the <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a> between <strong>str1</strong> and <strong>str2</strong>   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LOWER</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Converts <strong>str</strong> to lowercase. <br />
+Related: <code>UPPER</code>, <code>TITLE</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>LTRIM</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Remove leading whitespace from <strong>str</strong>. <br />
+Related: <code>RTRIM</code>, <code>TRIM</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>POSITION</code> (<strong>substring</strong>: <em>varchar</em> IN <strong>string</strong>: <em>varchar</em>) → <em>numeric</em></p>
+<p>Returns the starting position of the first instance of <strong>substring</strong> in <strong>string</strong>. Positions start with 1. If not found, 0 is returned.   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>REVERSE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Returns <strong>str</strong> with the characters in reverse order.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>RIGHT</code> (<strong>str</strong>: <em>varchar</em>, <strong>n</strong>: <em>numeric</em>) → <em>varchar</em></p>
+<p>Extract the right-most <strong>n</strong> characters of <strong>str</strong>. <br />
+Related: <code>LEFT</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>RTRIM</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Remove trailing whitespace from <strong>str</strong>. <br />
+Related: <code>LTRIM</code>, <code>TRIM</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SOUNDEX</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Returns a character string containing the phonetic representation of char. See <a href="https://en.wikipedia.org/wiki/Soundex">Soundex 🡕</a>.   </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SEARCH</code> (<strong>str</strong>: <em>varchar</em>, <strong>substring</strong>: <em>varchar</em>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Return <code>true</code> if <strong>str</strong> contains <strong>substring</strong>.  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SUBSTRING</code> (<strong>str</strong>: <em>varchar</em>, <strong>start</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Return substring from a string from <strong>start</strong> position to the end of <strong>str</strong>.  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SUBSTRING</code> (<strong>str</strong>: <em>varchar</em>, <strong>start</strong>: <em>numeric</em>, <strong>length</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Return substring from a string from <strong>start</strong> position for <strong>length</strong> characters.  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>STARTS_WITH</code> (<strong>str</strong>: <em>varchar</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em></p>
+<p>Return <code>true</code> if <strong>str</strong> starts with <strong>value</strong>.<br />
+Related: <code>ENDS_WITH</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>TITLE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Returns <strong>str</strong> with the first letter of each work in upper case. <br />
+Related: <code>LOWER</code>, <code>UPPER</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>TRIM</code> ( [ LEADING | TRAILING | BOTH ] [ <strong>chars</strong>: <em>varchar</em> FROM ] <strong>str</strong>: <em>varchar</em> ) → <em>varchar</em></p>
+<p>Removes leading and trailing <strong>chars</strong> from <strong>str</strong>, if <strong>chars</strong> is not specified, whitespace is removed. Note that any instance of a character in <strong>chars</strong> is removed in any order they appear.<br />
+The <strong>LEADING</strong> modifier removes <strong>chars</strong> from the start of <strong>str</strong>. <br />
+The <strong>TRAILING</strong> modifier removes <strong>chars</strong> from the end of <strong>str</strong>.  <br />
+The <strong>BOTH</strong> modifier removes <strong>chars</strong> from both the start and end of <strong>str</strong>, this is the default behaviour if no positional modifier is supplied. <br />
+Related: <code>LTRIM</code>, <code>RTRIM</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>UPPER</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Converts <strong>str</strong> to uppercase. <br />
+Related: <code>LOWER</code>, <code>TITLE</code></p>
+</div>
+<h2 id="struct-functions">Struct Functions</h2>
+<p>For more details, see <a href="../adv-working-with-structs/">Working with Structs</a>.</p>
+<div class="admonition function">
+<p class="admonition-title"><strong>object</strong>: <em>struct</em><code>[</code><strong>key</strong>: <em>varchar</em><code>]</code> → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Subscript operator, return the value for <strong>key</strong> from <strong>object</strong>. </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>GET</code> (<strong>object</strong>: <em>struct</em>, <strong>key</strong>: <em>varchar</em>) → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Alias of <strong>object</strong><code>[</code><strong>key</strong><code>]</code>  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SEARCH</code> (<strong>object</strong>: <em>struct</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Return <code>true</code> if any of the values in <strong>object</strong> is <strong>value</strong>. Note <code>SEARCH</code> does not match struct keys.</p>
+</div>
+<h2 id="system-functions">System Functions</h2>
+<div class="admonition function">
+<p class="admonition-title"><code>VERSION</code> () → <em>varchar</em></p>
+<p>Return the version of the query engine.</p>
+</div>
+<h2 id="other-functions">Other Functions</h2>
+<div class="admonition function">
+<p class="admonition-title"><code>BASE64_DECODE</code>  (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Decode BASE64 encoded value, <strong>str</strong>. 
+Related: <code>BASE64_ENCODE</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>BASE64_ENCODE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Encode <strong>str</strong> with BASE64 encoding.<br />
+Related: <code>BASE64_DECODE</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>BASE85_DECODE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Decode BASE85 encoded value, <strong>str</strong>. 
+Related: <code>BASE85_ENCODE</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>BASE85_ENCODE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Encode <strong>str</strong> with BASE85 encoding.<br />
+Related: <code>BASE85_DECODE</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>COALESCE</code> (<strong>arg1</strong>, <strong>arg2</strong>, ...) → <em>value</em></p>
+<p>Return the first item from args which is not <code>null</code>.  <br />
+Related: <code>IFNULL</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Return a numeric list between <strong>start</strong> and <strong>stop</strong>, with a step of 1.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>, <strong>step</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Return a numeric list between <strong>start</strong> and <strong>stop</strong>, with an increment of <strong>step</strong>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>timestamp</em>, <strong>stop</strong>: <em>timestamp</em>, <em>interval</em>) → <em>list</em>&lt;<em>timestamp</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
+<p>Return a timestamp list between <strong>start</strong> and <strong>stop</strong>, with a interval of <strong>step</strong>.     </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>HASH</code> (<strong>value</strong>: <em>any</em>) → <em>varchar</em></p>
+<p>Calculate the <a href="https://opensource.googleblog.com/2011/04/introducing-cityhash.html">CityHash</a> (64 bit) of <strong>value</strong>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>HEX_DECODE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Decode hexidecimal (BASE16) encoded value, <strong>str</strong>.  <br />
+Related: <code>HEX_ENCODE</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>HEX_ENCODE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Encode <strong>str</strong> with hexadecimal (BASE16) encoding.<br />
+Related: <code>HEX_DECODE</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>IIF</code> (<strong>condition</strong>, <strong>true_value</strong>, <strong>false_value</strong>) → <em>input type</em></p>
+<p>Return the <strong>true_value</strong> if the condition evaluates to <code>True</code>, otherwise return the <strong>false_value</strong>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>IFNULL</code> (<strong>check_expression</strong>: <em>any</em>, <strong>replacement_value</strong>: <em>any</em>) → <em>input type</em></p>
+<p>Returns <strong>check_expression</strong> if not <code>null</code>, otherwise returns <strong>replacement_value</strong>.
+Related: <code>COALESCE</code> </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>NORMAL</code> () → <em>numeric</em></p>
+<p>Random number from a normal (Gaussian) distribution; distribution is centred at 0.0 and has a standard deviation of 1.0. Per record.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>NULLIF</code> (<strong>value1</strong>: <em>any</em>, <strong>value2</strong>: <em>any</em>) → <em>input type</em></p>
+<p>Returns <code>null</code> if <strong>value1</strong> equals <strong>value2</strong>, otherwise returns <strong>value1</strong>. </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>MD5</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Calculate the MD5 hash of <strong>str</strong>.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>RAND</code> () → <em>numeric</em></p>
+<p>Returns a random number between 0 and 1. Per record.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>RANDOM</code> () → <em>numeric</em></p>
+<p>Alias of <code>RAND</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>RANDOM_STRING</code> (<strong>length</strong>: <em>numeric</em>) → <em>varchar</em></p>
+<p>Returns a random string of lowercase alphabetic characters with a length of <strong>length</strong>. Per record.</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SHA1</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Calculate the SHA1 hash of <strong>str</strong>.<br />
+Related: <code>SHA224</code>, <code>SHA256</code>, <code>SHA384</code>, <code>SHA512</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SHA224</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Calculate the SHA224 hash of <strong>str</strong>.<br />
+Related: <code>SHA1</code>, <code>SHA256</code>, <code>SHA384</code>, <code>SHA512</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SHA256</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Calculate the SHA256 hash of <strong>str</strong>.<br />
+Related: <code>SHA1</code>, <code>SHA224</code>, <code>SHA384</code>, <code>SHA512</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SHA384</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Calculate the SHA384 hash of <strong>stre</strong>.<br />
+Related: <code>SHA1</code>, <code>SHA224</code>, <code>SHA256</code>, <code>SHA512</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>SHA512</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
+<p>Calculate the SHA512 hash of <strong>str</strong>.<br />
+Related: <code>SHA1</code>, <code>SHA224</code>, <code>SHA256</code>, <code>SHA384</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>UNNEST</code> (<strong>array</strong>: <em>list</em>) → <em>relation</em></p>
+<p>Create a virtual relation with a row for each element in <strong>array</strong>.</p>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 - 2023 Justin Joyce (@joocer)
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/opteryxsql" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://gitter.im/mabel-opteryx/community" target="_blank" rel="noopener" title="gitter.im" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M66.4 322.5H16V0h50.4v322.5zM166.9 76.1h-50.4V512h50.4V76.1zm100.6 0h-50.4V512h50.4V76.1zM368 76h-50.4v247H368V76z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/mabel-dev/opteryx" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://pypi.org/project/opteryx/" target="_blank" rel="noopener" title="pypi.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+        <script src="../../termynal.js"></script>
+      
+    
+  </body>
+</html>
