@@ -6,18 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.9.2] - 2023-02-28
 
-## Fixed
+### Fixed
 
 - [[#909](https://github.com/mabel-dev/opteryx/issues/909)] Divide by Zero error handling empty pages [@joocer](https://github.com/joocer) 
 - [[#912](https://github.com/mabel-dev/opteryx/issues/912)] Literal expressioned which evaluate to a boolean were ignored [@joocer](https://github.com/joocer) 
 
-## Changed
+### Changed
 
 - :octicons-alert-24: [[#901](https://github.com/mabel-dev/opteryx/issues/901)] Generate Series no longer accepts single numbers or IP ranges, provide explicit start or use `|` to test IP address containment [@joocer](https://github.com/joocer) 
 - [[#848](https://github.com/mabel-dev/opteryx/issues/848)] Collection and SQL Connectors dynamically size reads to fill target morsel size [@joocer](https://github.com/joocer) 
-
-
-## Added
 
 ## [0.9.1] - 2023-02-23
 
