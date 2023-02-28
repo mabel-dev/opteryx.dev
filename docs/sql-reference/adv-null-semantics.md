@@ -26,7 +26,7 @@ This returns `null` for all values.
  null
 ~~~
 
-Then a `null` comparison in a `WHERE` statement:
+Using a `null` comparison in a `WHERE` statement will always result in `false`.
 
 ~~~sql
 SELECT name
@@ -34,7 +34,15 @@ SELECT name
  WHERE name = null;
 ~~~
 
-Returns an empty set.
+Returns an empty set, this is true even for inequality tests:
+
+~~~sql
+SELECT name
+  FROM $planets
+ WHERE name != null;
+~~~
+
+Also, returns an empty set.
 
 !!! note
     `null` comparison returning `null` holds true even for `null = null`. Do not test for null using an equals condition, use `IS NULL`.
