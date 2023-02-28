@@ -1266,12 +1266,17 @@
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a> null
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a> null
 </code></pre></div>
-<p>Then a <code>null</code> comparison in a <code>WHERE</code> statement:</p>
+<p>Using a <code>null</code> comparison in a <code>WHERE</code> statement will always result in <code>false</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
 </code></pre></div>
-<p>Returns an empty set.</p>
+<p>Returns an empty set, this is true even for inequality tests:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
+</code></pre></div>
+<p>Also, returns an empty set.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code>null</code> comparison returning <code>null</code> holds true even for <code>null = null</code>. Do not test for null using an equals condition, use <code>IS NULL</code>.</p>
