@@ -361,7 +361,6 @@ Functions for examining and manipulating string values.
     Related: `LOWER`, `UPPER`
 
 !!! function "`TRIM` ( [ LEADING | TRAILING | BOTH ] [ **chars**: _varchar_ FROM ] **str**: _varchar_ ) → _varchar_"   
-    ** :octicons-star-16: Updated in 0.7**   
     Removes leading and trailing **chars** from **str**, if **chars** is not specified, whitespace is removed. Note that any instance of a character in **chars** is removed in any order they appear.  
     The **LEADING** modifier removes **chars** from the start of **str**.   
     The **TRAILING** modifier removes **chars** from the end of **str**.    
