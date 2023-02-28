@@ -29,9 +29,11 @@ Disposition statuses in this table:
 - **Installed** components are installed from PyPI/Cargo.  
 - **Integrated** components have their source code (or significant parts of) included in the Opteryx codebase.  
 
-This list does not include transitive dependencies nor is guaranteed to be complete. Only components which have been integrated have copyright information noted, best efforts have been made to ensure this information is correct. Corrections should be [raised as issues](https://github.com/mabel-dev/opteryx/issues/new?assignees=joocer&labels=Bug+%F0%9F%AA%B2&template=bug_report.md&title=%F0%9F%AA%B2) for remediation. 
+This list does not include transitive dependencies nor is guaranteed to be complete. See the [dependency graph on GitHub](https://github.com/mabel-dev/opteryx/network/dependencies) for a more complete view of components used.
 
-Integrated components may differ from their original form. Cosmetic changes are not generally noted however where functionality has been added or altered, this is recorded in comments. 
+Only components which have been integrated have copyright information noted, best efforts have been made to ensure this information is correct. Corrections should be [raised as issues](https://github.com/mabel-dev/opteryx/issues/new?assignees=joocer&labels=Bug+%F0%9F%AA%B2&template=bug_report.md&title=%F0%9F%AA%B2) for remediation. 
+
+Integrated components may differ from their original form. Cosmetic changes are not generally noted however where functionality has been added or altered, this is recorded in comments. Derived components do not note individual changes as the codebase generally has changed too much for such annotation to be meaningful.
 
 !!! Note   
     License information was last checked on 2022-06-03, or when specific entries were added to this document, if later.
