@@ -6,8 +6,7 @@ Opteryx is built on the shoulders of other great libraries and components:
 
 Library           | Disposition       | Copyright            | Licence   
 :---------------- | :---------------- | :------------------- | :--------------- 
-[caskdb](https://github.com/avinassh/py-caskdb)            | Derived  | 2022 [Avinash Sajjanshetty](https://github.com/avinassh)  | [MIT](https://github.com/avinassh/py-caskdb/blob/master/LICENSE)
-[cityhash](https://github.com/escherba/python-cityhash)    | Installed   |  | [Bespoke](https://github.com/escherba/python-cityhash/blob/master/LICENSE)  
+[cityhash](https://github.com/escherba/python-cityhash)    | Integrated  |  | [Bespoke](https://github.com/escherba/python-cityhash/blob/master/LICENSE)  
 [cython](https://github.com/cython/cython)                 | Installed   |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
 [distogram](https://github.com/maki-nage/distogram)        | Integrated  | 2020 [Romain Picard](https://github.com/MainRo) | [MIT](https://github.com/maki-nage/distogram/blob/master/LICENSE.txt)
 [fastlogging](https://github.com/brmmm3/fastlogging)       | Integrated  | 2018 [Martin Bammer](https://github.com/brmmm3) | [MIT](https://github.com/brmmm3/fastlogging/blob/master/LICENSE.txt)
