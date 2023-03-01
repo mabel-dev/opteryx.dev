@@ -65,7 +65,10 @@ nav:
     - get-started/overview.md
     - Get Started: get-started/get-started.md
     - Client Overview: get-started/clients.md
-    - Python Client: get-started/python-client.md
+    - Python Guide:
+      - get-started/python-client.md
+      - Pandas Integration: get-started/guides/pandas-and-opteryx.md
+      - Polars Integration: get-started/guides/polars-and-opteryx.md
     - Deployment Guide: get-started/deployment-guide.md
     - Configuration Guide: get-started/configuration-guide.md
 #    - Metastore (Tarchia): get-started/metastore.md
