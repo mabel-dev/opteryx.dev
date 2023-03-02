@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased]
+
+### Fixed
+
+- [[#916](https://github.com/mabel-dev/opteryx/issues/916)] Profile error on morsel with all nulls in column [@joocer](https://github.com/joocer) 
+
 ## [0.9.2] - 2023-02-28
 
 ### Fixed
