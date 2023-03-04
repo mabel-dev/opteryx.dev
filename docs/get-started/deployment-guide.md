@@ -117,7 +117,7 @@ print(cursor.fetchone())
 
 Opteryx references datasets using their relative path as the table name. For example in the following folder structure
 
-~~~
+~~~json
 /
  ├─ products/
  ├─ customers/
@@ -147,7 +147,7 @@ SELECT *
 
 To enable temporal queries, data must be structured into date hierarchy folders below the dataset folder. Using just the _products_ dataset from the above example, below the _products_ folder must be year, month and day folders like this:
 
-~~~
+~~~json
 /
  └─ products/
      └─ year_2022/

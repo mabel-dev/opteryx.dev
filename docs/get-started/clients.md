@@ -30,7 +30,7 @@ Querying individual files quires the relative path in place of the relation/tabl
 
 Abridged usage guidance is available below:
 
-~~~
+~~~console
 Usage: python -m opteryx [OPTIONS] [SQL] 
 
 --o <target>  Where to output the results. [default: console]
