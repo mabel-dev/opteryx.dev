@@ -18,9 +18,11 @@ import opteryx
 import pandas
 
 # Create the DataFrame
-data = {'Name': ['Huey', 'Dewey', 'Louie'],
-        'Age': [12, 12, 12],
-        'Favorite Color': ['Red', 'Blue', 'Green']}
+data = {
+    "Name": ["Huey", "Dewey", "Louie"],
+    "Age": [12, 12, 12],
+    "Favorite Color": ["Red", "Blue", "Green"],
+}
 df = pandas.DataFrame(data)
 
 # Register as a data source
