@@ -26,7 +26,7 @@ data = {
 df = polars.DataFrame(data)
 
 # Register as a data source
-opteryx.register_df('nephews', df)
+opteryx.register_df("nephews", df)
 
 results = opteryx.query("SELECT * FROM nephews")
 ~~~
