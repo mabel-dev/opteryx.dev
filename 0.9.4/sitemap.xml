@@ -116,32 +116,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/hadrodb/</loc>
-         <lastmod>2023-03-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/mabel/</loc>
-         <lastmod>2023-03-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/metastore/</loc>
-         <lastmod>2023-03-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/overview/</loc>
          <lastmod>2023-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/python-client/</loc>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/schema-evolution/</loc>
          <lastmod>2023-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/schema-evolution/</loc>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/ecosystem/hadrodb/</loc>
+         <lastmod>2023-03-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/ecosystem/mabel/</loc>
+         <lastmod>2023-03-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/ecosystem/metastore/</loc>
          <lastmod>2023-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -187,6 +182,11 @@
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/guides/polars-and-opteryx/</loc>
+         <lastmod>2023-03-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/guides/python-client/</loc>
          <lastmod>2023-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
