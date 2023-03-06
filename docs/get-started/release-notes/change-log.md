@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased]
+
+### Changed
+
+- [[#925](https://github.com/mabel-dev/opteryx/pull/925)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.31.0 [dependabot](https://github.com/apps/dependabot) 
+
 ## [0.9.4] - 2023-03-04
 
 ### Fixed
@@ -74,7 +80,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
-- Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.30.0 [@joocer](https://github.com/joocer)  
+- Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.30.0 [dependabot](https://github.com/apps/dependabot)  
 
 ### Added
 
@@ -93,7 +99,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Internal refactoring relating to creation of metadata service. [@joocer](https://github.com/joocer)  
-- Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.29.0 [@joocer](https://github.com/joocer)  
+- Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.29.0 [dependabot](https://github.com/apps/dependabot) 
 
 ### Added
 
