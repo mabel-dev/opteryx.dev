@@ -72,6 +72,7 @@ nav:
     - Deployment Guide: get-started/deployment-guide.md
     - Configuration Guide: get-started/configuration-guide.md
     - Ecosystem:
+      - Dataframe (Orso): get-started/ecosystem/orso.md
       - Metastore (Tarchia): get-started/ecosystem/metastore.md
       - Storage Engine (HadroDB): get-started/ecosystem/hadrodb.md
       - Streaming Writer (Mabel): get-started/ecosystem/mabel.md
