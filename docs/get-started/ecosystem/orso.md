@@ -7,11 +7,26 @@ Orso is a DataFrame library implemented for Opteryx and HadroDB.
 <dl>
     <dt><h2>class <b>DataFrame</b> (<i>dictionaries</i>)</h2></dt>  
     <dd>
- 
-<h3>Constructor Parameters</h3>
+
+<h3>Constructors</h3>
 <dl>
-    <dt><b>dictionaries</b> iterable of dicts</dt>
-    <dd>An Iterable (list, tuple, generator) of Python dicts. Where the dicts have different fields, only the fields from the first dict are used to determine the schema. Missing values are filled with Nones.
+    <dt><h4><b>DataFrame</b> (dictionaries) </h4></dt>
+    <dd>
+    <p><b>Parameters</b></p>
+    <ul>
+        <dt><b>dictionaries</b>: iterable of dicts</dt>
+        <dd>An Iterable (list, tuple, generator) of Python dicts. Where the dicts have different fields, only the fields from the first dict are used to determine the schema. Missing values are filled with Nones.
+        </dd>
+    </ul>
+    </dd>
+    <dt><h4><b>DataFrame.from_arrow</b> (table) </h4></dt>
+    <dd>
+    <p><b>Parameters</b></p>
+    <ul>
+        <dt><b>table</b>: pyarrow.Table</dt>
+        <dd>Return an orso DataFrame representation of a pyarrow.Table.
+        </dd>
+    </ul>
     </dd>
 </dl>
 
@@ -32,10 +47,8 @@ Orso is a DataFrame library implemented for Opteryx and HadroDB.
         Fetch all of the values in specified columns.
         <p><b>Parameters</b></p>
         <ul>
-            <li>
-                columns: int, str, list of int, list of str<br />
-                If an int, fetch the column with that offset. If a str, fetch the column with that name, if a list of ints, fetch the columns at the given offsets, if a list of strings, fetch the columns with those names.
-            </li>
+            <b>columns</b>: int, str, list of int, list of str<br />
+            If an int, fetch the column with that offset. If a str, fetch the column with that name, if a list of ints, fetch the columns at the given offsets, if a list of strings, fetch the columns with those names.
         </ul>
         <p><b>Returns</b></p>
         <p>list, if a single column has been specified. list of lists, if multiple columns have been specified.</p>
@@ -43,6 +56,8 @@ Orso is a DataFrame library implemented for Opteryx and HadroDB.
 </dl>
 <dl>
 <dt><h4>def <b>distinct</b> () -> orso.DataFrame</h4></dt>
+</dl>
+<dl>
 <dt><h4>def <b>query</b> () -> orso.DataFrame</h4></dt>
 </dl>
 <dl>
@@ -51,10 +66,8 @@ Orso is a DataFrame library implemented for Opteryx and HadroDB.
         Fetch a row from the DataFrame.
         <p><b>Parameters</b></p>
         <ul>
-            <li>
-                i: int<br />
-                The offset of the Row to fetch.
-            </li>
+            <b>i</b>: int<br />
+            The offset of the Row to fetch.
         </ul>
         <p><b>Returns</b></p>
         <p>orso.Row</p>
@@ -62,27 +75,30 @@ Orso is a DataFrame library implemented for Opteryx and HadroDB.
         <p>ValidationError</p>
     </dd>
 </dl>
+<dl>
 <dt><h4>def <b>select</b> () -> orso.DataFrame</h4></dt>
+</dl>
 <dl>
     <dt><h4>def <b>slice</b> (offset:int, length:int) -> orso.DataFrame</h4></dt>
     <dd>
         Slices a DataFrame.
         <p><b>Parameters</b></p>
         <ul>
-            <li>
-                offset: int (optional)<br />
-                The starting row of the slice, if not provided the slice starts from the first row. Negative values are offsets from the last record.
-            </li>
-            <li>
-                length: int (optional)<br />
-                The number of records to include in the slice.
-            </li>
+            <b>offset</b>: int (optional)<br />
+            The starting row of the slice, if not provided the slice starts from the first row. Negative values are offsets from the last record.<br />
+            <b>length</b>: int (optional)<br />
+            The number of records to include in the slice.
         </ul>
         <p><b>Returns</b></p>
         <p>orso.DataFrame</p>
     </dd>
 </dl>
+<dl>
 <dt><h4>def <b>to_arrow</b> () -> orso.DataFrame</h4></dt>
-
+</dl>
 </dd>
+</dl>
+
+<dl>
+    <dt><h2>class <b>Row</b> ()</h2></dt>  
 </dl>
