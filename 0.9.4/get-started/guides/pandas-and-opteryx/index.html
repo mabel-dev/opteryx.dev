@@ -1497,10 +1497,10 @@
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">results</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM nephews&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="opteryx-to-pandas">Opteryx to Pandas</h2>
-<p>Opteryx can output results as Pandas DataFrames using the <code>.to_df()</code> result-conversion method.</p>
+<p>Opteryx can output results as Pandas DataFrames using the <code>.pandas()</code> result-conversion method.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">opteryx</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">dataframe</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $planets&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_df</span><span class="p">()</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">dataframe</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $planets&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pandas</span><span class="p">()</span>
 </code></pre></div>
 
 
