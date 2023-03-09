@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Warnings
+
+- `.to_df()` will be replaced with `.pandas()` in version 0.11.
+
+### Fixed
+
+- [[#929](https://github.com/mabel-dev/opteryx/pull/929)] Improved error messages for malformed temporal clauses. [@joocer](https://github.com/joocer) 
+
 ### Changed
 
 - [[#925](https://github.com/mabel-dev/opteryx/pull/925)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.31.0 [dependabot](https://github.com/apps/dependabot) 
@@ -80,7 +88,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
-- Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.30.0 [dependabot](https://github.com/apps/dependabot)  
+- [[#789](https://github.com/mabel-dev/opteryx/pull/789)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.30.0 [dependabot](https://github.com/apps/dependabot)  
 
 ### Added
 
@@ -99,7 +107,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Internal refactoring relating to creation of metadata service. [@joocer](https://github.com/joocer)  
-- Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.29.0 [dependabot](https://github.com/apps/dependabot) 
+- [[#761](https://github.com/mabel-dev/opteryx/pull/761)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.29.0 [dependabot](https://github.com/apps/dependabot) 
 
 ### Added
 
@@ -147,7 +155,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
-- Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.27.0 [@joocer](https://github.com/joocer)  
+- [[#662](https://github.com/mabel-dev/opteryx/pull/662)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.27.0 [dependabot](https://github.com/apps/dependabot) 
 
 ### Added
 
