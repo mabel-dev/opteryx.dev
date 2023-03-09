@@ -33,10 +33,10 @@ results = opteryx.query("SELECT * FROM nephews")
 
 ## Opteryx to Pandas
 
-Opteryx can output results as Pandas DataFrames using the `.to_df()` result-conversion method.
+Opteryx can output results as Pandas DataFrames using the `.pandas()` result-conversion method.
 
 ~~~python
 import opteryx
 
-dataframe = opteryx.query("SELECT * FROM $planets").to_df()
+dataframe = opteryx.query("SELECT * FROM $planets").pandas()
 ~~~

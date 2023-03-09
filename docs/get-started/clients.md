@@ -13,7 +13,7 @@ result = opteryx.query('SELECT * FROM $planets')
 rows = cur.fetchall()
 ~~~
 
-The results of the query are availble via the cursor using `fetchone()` that returns a tuple, `fetchmany()` and `fetchall()` that return generators of tuples, `arrow()` that returns an [Arrow Table](https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table), or `to_df()` that returns a [pandas DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
+The results of the query are availble via the cursor using `fetchone()` that returns a tuple, `fetchmany()` and `fetchall()` that return generators of tuples, `arrow()` that returns an [Arrow Table](https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table), or `pandas()` that returns a [pandas DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
 
 ## Command Line Interface
 

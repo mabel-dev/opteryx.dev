@@ -89,7 +89,7 @@ This document describes the Python objects intended to be accessed by users of t
 
 <p><b>Returns</b></p><ul><li>pyarrow.Table</ul></dd></dl>
 
-<dl><dt><b>to_df</b> (size)</dt><dd>
+<dl><dt><b>pandas</b> (size)</dt><dd>
 </br>Fetch the resultset as a pandas DataFrame.
 
 <p><b>Parameters</b></p><ul><li>size:  int (optional)
