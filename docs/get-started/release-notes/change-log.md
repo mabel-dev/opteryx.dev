@@ -21,7 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - :octicons-alert-24: [[#906](https://github.com/mabel-dev/opteryx/pull/906)] Cursor `fetch` no longer accept `asdict` parameter, instead each tuple (Row) has an `as_dict` method [@joocer](https://github.com/joocer) 
 - [[#906](https://github.com/mabel-dev/opteryx/pull/906)] Cursor extends an [orso](https://github.com/mabel-dev/orso) DataFrame, providing additional functionality [@joocer](https://github.com/joocer) 
 
-## [0.9.4] - 2023-03-04
+## [0.9.3] - 2023-03-04
 
 ### Fixed
 
