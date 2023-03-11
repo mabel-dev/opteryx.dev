@@ -42,7 +42,7 @@ Orso is a DataFrame library implemented for Opteryx and HadroDB.
 
 <h3>Functions</h3>
 <dl>
-    <dt><h4>def <b>collect</b> (columns) -> list, list of lists</h4></dt>
+    <dt>def <b>collect</b> (columns) -> list, list of lists</dt>
     <dd>
         Fetch all of the values in specified columns.
         <p><b>Parameters</b></p>
@@ -55,13 +55,16 @@ Orso is a DataFrame library implemented for Opteryx and HadroDB.
     </dd>
 </dl>
 <dl>
-<dt><h4>def <b>distinct</b> () -> orso.DataFrame</h4></dt>
+<dt>def <b>distinct</b> () -> orso.DataFrame</dt>
 </dl>
 <dl>
-<dt><h4>def <b>query</b> () -> orso.DataFrame</h4></dt>
+<dt>def <b>filter</b> (mask) -> orso.DataFrame</dt>
 </dl>
 <dl>
-    <dt><h4>def <b>row</b> (i) -> orso.Row</h4></dt>
+<dt>def <b>query</b> () -> orso.DataFrame</dt>
+</dl>
+<dl>
+    <dt>def <b>row</b> (i) -> orso.Row</dt>
     <dd>
         Fetch a row from the DataFrame.
         <p><b>Parameters</b></p>
@@ -76,10 +79,10 @@ Orso is a DataFrame library implemented for Opteryx and HadroDB.
     </dd>
 </dl>
 <dl>
-<dt><h4>def <b>select</b> () -> orso.DataFrame</h4></dt>
+<dt>def <b>select</b> () -> orso.DataFrame</dt>
 </dl>
 <dl>
-    <dt><h4>def <b>slice</b> (offset:int, length:int) -> orso.DataFrame</h4></dt>
+    <dt>def <b>slice</b> (offset:int, length:int) -> orso.DataFrame</dt>
     <dd>
         Slices a DataFrame.
         <p><b>Parameters</b></p>
@@ -94,7 +97,7 @@ Orso is a DataFrame library implemented for Opteryx and HadroDB.
     </dd>
 </dl>
 <dl>
-<dt><h4>def <b>to_arrow</b> () -> orso.DataFrame</h4></dt>
+<dt>def <b>to_arrow</b> () -> orso.DataFrame</dt>
 </dl>
 </dd>
 </dl>
