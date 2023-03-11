@@ -319,6 +319,7 @@ strong {
 
     .home-footer {
         display: grid;
+        font-size: 0.8em;
         justify-content: space-between;
         grid-template-columns: 5% [col-start] 40% [col-start] 33% [col-start];
     }
@@ -405,4 +406,10 @@ strong>.twemoji {
 
 .item > img {
     height: 1.3em !important;
+}
+
+.python-kw {
+    color: #e05fa7 !important;
+    font-size: italic;
+    font-weight: 900;
 }
