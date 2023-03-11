@@ -410,6 +410,6 @@ strong>.twemoji {
 
 .python-kw {
     color: #e05fa7 !important;
-    font-size: italic;
+    font-size: italic !important;
     font-weight: 900;
 }
