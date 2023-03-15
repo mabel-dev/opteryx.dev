@@ -12,14 +12,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- [[#929](https://github.com/mabel-dev/opteryx/pull/929)] Improved error messages for malformed temporal clauses. [@joocer](https://github.com/joocer) 
-- :octicons-alert-24: (correction) [[#735](https://github.com/mabel-dev/opteryx/pull/735)] Cursor `fetchone` and `fetchmany` step over the record set. [@joocer](https://github.com/joocer) 
+- [[#929](https://github.com/mabel-dev/opteryx/issues/929)] Improved error messages for malformed temporal clauses. [@joocer](https://github.com/joocer) 
+- :octicons-alert-24: (correction) [[#735](https://github.com/mabel-dev/opteryx/issues/735)] Cursor `fetchone` and `fetchmany` step over the record set. [@joocer](https://github.com/joocer) 
 
 ### Changed
 
 - [[#925](https://github.com/mabel-dev/opteryx/pull/925)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.31.0 [dependabot](https://github.com/apps/dependabot) 
-- :octicons-alert-24: [[#931](https://github.com/mabel-dev/opteryx/pull/931)] Cursor `fetch` no longer accept `asdict` parameter, instead each tuple (Row) has an `as_dict` method [@joocer](https://github.com/joocer) 
-- [[#906](https://github.com/mabel-dev/opteryx/pull/906)] Cursor extends an [orso](https://github.com/mabel-dev/orso) DataFrame, providing additional functionality [@joocer](https://github.com/joocer) 
+- :octicons-alert-24: [[#931](https://github.com/mabel-dev/opteryx/issues/931)] Cursor `fetch` no longer accept `asdict` parameter, instead each tuple (Row) has an `as_dict` method [@joocer](https://github.com/joocer) 
+- [[#906](https://github.com/mabel-dev/opteryx/issues/906)] Cursor extends an [orso](https://github.com/mabel-dev/orso) DataFrame, providing additional functionality [@joocer](https://github.com/joocer) 
+- [[#938](https://github.com/mabel-dev/opteryx/pull/938)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.32.0 [dependabot](https://github.com/apps/dependabot)  
+- [[#940](https://github.com/mabel-dev/opteryx/issues/940)] CityHash moved to [orso](https://github.com/mabel-dev/orso).cityhash [@joocer](https://github.com/joocer) 
+
 
 ## [0.9.3] - 2023-03-04
 
