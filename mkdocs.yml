@@ -71,6 +71,7 @@ nav:
       - Polars Integration: get-started/guides/polars-and-opteryx.md
     - Deployment Guide: get-started/deployment-guide.md
     - Configuration Guide: get-started/configuration-guide.md
+    - Security: get-started/security.md
     - Ecosystem:
       - Dataframe (Orso): get-started/ecosystem/orso.md
       - Metastore (Tarchia): get-started/ecosystem/metastore.md

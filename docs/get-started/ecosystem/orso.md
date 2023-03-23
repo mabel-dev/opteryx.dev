@@ -34,9 +34,9 @@ Orso is a DataFrame library implemented for Opteryx and HadroDB.
 <dl>
     <dt><b>column_names</b> tuple of strings</dt>
     <dd>The names of the columns in the DataFrame.</dd>
-    <dt><b>num_columns</b> int</dt>
+    <dt><b>columncount</b> int</dt>
     <dd>The number of columns in the DataFrame.</dd>
-    <dt><b>num_rows</b> int</dt>
+    <dt><b>rowcount</b> int</dt>
     <dd>The number of rows in the DataFrame.</dd>
 </dl>
 
