@@ -1,6 +1,6 @@
 # Security
 
-## Statement Execution Restrictions
+## Statement Execution
 
 Opteryx allows you to prevent users from executing classes of query, for example you may limit a population of users to just being able to run `SELECT` statements, and prevent them from running other types of query.
 
@@ -33,7 +33,7 @@ import opteryx
 conn = opteryx.connect(permissions={"Query"})
 curr = conn.cursor()
 # The user does not have permissions to execute a SHOW COLUMNS statement
-# and this will return a oPermissionsError
+# and this will return a PermissionsError
 try:
     curr.execute("SHOW COLUMNS FROM $planets")
     print(curr.head())
@@ -41,19 +41,24 @@ except opteryx.exceptions.PermissionsError:
     print("User does not have permission to execute this query")
 ~~~
 
-Opteryx does not have any defined roles, however you can implement a Role-Based access model using code similar to the below.
+Opteryx does not have any defined roles, however we can implement Role-Based access model using code similar to the below.
 
 ~~~python
+import opteryx
+
 role_permissions = {
     "admin": opteryx.permissions,
     "user": {"Query"}
 }
 
-permissions = set()
-for role in user_roles:
-    if role in roles_permissions:
-        permissions |= roles_permissions[role]
-return permissions
+def get_user_permissions(user_roles):
+    permissions = set()
+    for role in user_roles:
+        if role in role_permissions:
+            permissions |= role_permissions[role]
+    return permissions
+
+user_permissions = get_user_permissions(["user"])
 ~~~
 
 In this code we have a variable `user_roles` which contains the roles a user has, and a dictionary `role_permissions` which contains the permissions each role has. When the code executes it sets the `permissons` variable with the all of the permissions which the user has.
