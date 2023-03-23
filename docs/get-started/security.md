@@ -24,3 +24,36 @@ ShowVariable  | `SHOW`
 !!! Note
     - `Analyze` and `Execute` and not fully supported statements.
     - `ShowVariable` only applies to queries that are not one of the more specific `SHOW` query types.
+
+Permissions are applied to connections using the `permissions` parameter, the default permissions are to allow all queries to be executed.
+
+~~~python
+import opteryx
+
+conn = opteryx.connect(permissions={"Query"})
+curr = conn.cursor()
+# The user does not have permissions to execute a SHOW COLUMNS statement
+# and this will return a oPermissionsError
+try:
+    curr.execute("SHOW COLUMNS FROM $planets")
+    print(curr.head())
+except opteryx.exceptions.PermissionsError:
+    print("User does not have permission to execute this query")
+~~~
+
+Opteryx does not have any defined roles, however you can implement a Role-Based access model using code similar to the below.
+
+~~~python
+role_permissions = {
+    "admin": opteryx.permissions,
+    "user": {"Query"}
+}
+
+permissions = set()
+for role in user_roles:
+    if role in roles_permissions:
+        permissions |= roles_permissions[role]
+return permissions
+~~~
+
+In this code we have a variable `user_roles` which contains the roles a user has, and a dictionary `role_permissions` which contains the permissions each role has. When the code executes it sets the `permissons` variable with the all of the permissions which the user has.
