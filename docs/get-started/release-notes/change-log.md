@@ -22,7 +22,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#906](https://github.com/mabel-dev/opteryx/issues/906)] Cursor extends an [orso](https://github.com/mabel-dev/orso) DataFrame, providing additional functionality [@joocer](https://github.com/joocer) 
 - [[#938](https://github.com/mabel-dev/opteryx/pull/938)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.32.0 [dependabot](https://github.com/apps/dependabot)  
 - [[#940](https://github.com/mabel-dev/opteryx/issues/940)] CityHash moved to [orso](https://github.com/mabel-dev/orso).cityhash [@joocer](https://github.com/joocer) 
+
+### Added
+
 - [[#952](https://github.com/mabel-dev/opteryx/issues/952)] Implement statement-based permissions model [@joocer](https://github.com/joocer) 
+- [[#951](https://github.com/mabel-dev/opteryx/issues/951)] Initial Support for Prepared Statements (`EXECUTE` queries) [@joocer](https://github.com/joocer) 
 
 ## [0.9.3] - 2023-03-04
 

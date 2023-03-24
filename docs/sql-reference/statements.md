@@ -2,20 +2,6 @@
 
 The following statement forms are supported.
 
-## EXPLAIN
-
-Show the logical execution plan of a statement.
-
-~~~sql
-EXPLAIN
-statement
-~~~
-
-The `EXPLAIN` clause outputs a summary of the execution plan for the query in the `SELECT` statement.
-
-!!! Warning  
-    The data returned by the `EXPLAIN` statement is intended for interactive usage only and the output format may change between releases. Applications should not depend on the output of the `EXPLAIN` statement.
-
 ## SELECT
 
 Retrieve rows from zero or more relations.
@@ -149,6 +135,30 @@ LIMIT count
 `ORDER BY`, `LIMIT` and `OFFSET` are output modifiers. Logically they are applied at the very end of the query. The `OFFSET` clause discards initial rows from the returned set, the `LIMIT` clause restricts the amount of rows fetched, and the `ORDER BY` clause sorts the rows on the sorting criteria in either ascending or descending order.
 
 `ORDER BY` expressions may use column numbers, however, this is not recommended for statements intended for reuse.
+
+## :octicons-beaker-24: EXPLAIN
+
+Show the logical execution plan of a statement.
+
+~~~sql
+EXPLAIN
+statement
+~~~
+
+The `EXPLAIN` clause outputs a summary of the execution plan for the query in the `SELECT` statement.
+
+!!! Warning  
+    The data returned by the `EXPLAIN` statement is intended for interactive usage only and the output format may change between releases. Applications should not depend on the output of the `EXPLAIN` statement.
+
+## EXECUTE
+
+Execute a preprated statement.
+
+~~~sql
+EXECUTE statement_name[(<parameter[, ...]>)]
+~~~
+
+The `EXECUTE` clause executes a prepared statement, the parameters supplied in the invocation clause are used to populate placeholders in the prepared statement.
 
 ## SET
 
