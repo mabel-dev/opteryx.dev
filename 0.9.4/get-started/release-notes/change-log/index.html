@@ -1744,7 +1744,11 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/906">#906</a>] Cursor extends an <a href="https://github.com/mabel-dev/orso">orso</a> DataFrame, providing additional functionality <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/938">#938</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.32.0 <a href="https://github.com/apps/dependabot">dependabot</a>  </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/940">#940</a>] CityHash moved to <a href="https://github.com/mabel-dev/orso">orso</a>.cityhash <a href="https://github.com/joocer">@joocer</a> </li>
+</ul>
+<h3 id="added">Added</h3>
+<ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/952">#952</a>] Implement statement-based permissions model <a href="https://github.com/joocer">@joocer</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/951">#951</a>] Initial Support for Prepared Statements (<code>EXECUTE</code> queries) <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
 <h2 id="093-2023-03-04">[0.9.3] - 2023-03-04</h2>
 <h3 id="fixed_1">Fixed</h3>
@@ -1794,7 +1798,7 @@
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/871">#871</a>] Consistently name internal variables relating to chunks of data to 'morsel' (technically breaking, but no user impact expected) <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/880">#880</a>] Minor performance improvements <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
-<h3 id="added">Added</h3>
+<h3 id="added_1">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/801">#801</a>] New helper function <code>opteryx.query()</code>. <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/818">#818</a>] Save query plans to disk (partial). <a href="https://github.com/joocer">@joocer</a> </li>
@@ -1812,7 +1816,7 @@
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/789">#789</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.30.0 <a href="https://github.com/apps/dependabot">dependabot</a>  </li>
 </ul>
-<h3 id="added_1">Added</h3>
+<h3 id="added_2">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/521">#521</a>] Query files directly. <a href="https://github.com/joocer">@joocer</a>  </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/786">#786</a>] Save dataset as pandas DataFrame. <a href="https://github.com/joocer">@joocer</a> </li>
@@ -1830,7 +1834,7 @@
 <li>Internal refactoring relating to creation of metadata service. <a href="https://github.com/joocer">@joocer</a>  </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/761">#761</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.29.0 <a href="https://github.com/apps/dependabot">dependabot</a> </li>
 </ul>
-<h3 id="added_2">Added</h3>
+<h3 id="added_3">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/750">#750</a>] CLI improvements. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/758">#758</a>] Support AVRO and TSV formatted files. <a href="https://github.com/joocer">@joocer</a> </li>
@@ -1856,7 +1860,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/722">#722</a>] Allow temporal <code>FOR</code> after alias <code>AS</code> clauses. <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/743">#743</a>] 'Did you mean' prompt for columns better suggestions when casing is different. <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
-<h3 id="added_3">Added</h3>
+<h3 id="added_4">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/515">#515</a>] Implement various new functions. <a href="https://github.com/joocer">@joocer</a>  </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/19">#19</a>] Initial support for CTE expressions. <a href="https://github.com/joocer">@joocer</a>  </li>
@@ -1875,7 +1879,7 @@
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/662">#662</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.27.0 <a href="https://github.com/apps/dependabot">dependabot</a> </li>
 </ul>
-<h3 id="added_4">Added</h3>
+<h3 id="added_5">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/629">#629</a>] Optimizer pre-evaluates constant expressions. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/439">#439</a>] Support <code>SHOW STORES</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
@@ -1909,7 +1913,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/619">#619</a>] Page defragmentation moved to an Operator and positioned by the Optimizer. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> (correction) cursor 'fetch*' methods return Python tuple, rather than Python lists. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
-<h3 id="added_5">Added</h3>
+<h3 id="added_6">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/533">#533</a>] Support <code>LIKE</code> on <code>SHOW FUNCTIONS</code>, see <a href="https://github.com/sqlparser-rs/sqlparser-rs/pull/620">sqlparser-rs/#620</a>. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/570">#570</a>] Query Optimizer rule to reduce steps in expression evaluation by partial elimination of negatives. <a href="https://github.com/joocer">@joocer</a>   </li>
@@ -1935,7 +1939,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/522">#522</a>] Implementation of LRU-K(2) for cache evictions. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/537">#537</a>] Significant refactor of Query Planner. <a href="https://github.com/joocer">@joocer</a>   </li>
 </ul>
-<h3 id="added_6">Added</h3>
+<h3 id="added_7">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/397">#397</a>] Time Travel with '$planets' dataset. <a href="https://github.com/joocer">@joocer</a>   </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/519">#519</a>] Introduce a size limit on <code>.as_arrow()</code>. <a href="https://github.com/joocer">@joocer</a>   </li>
@@ -1954,7 +1958,7 @@
 <li>Fixed missing <code>__init__</code> file. <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
 <h2 id="040-2022-09-12">[0.4.0] - 2022-09-12</h2>
-<h3 id="added_7">Added</h3>
+<h3 id="added_8">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/336">#366</a>] Implement 'function not found' suggestions. <a href="https://github.com/joocer">@joocer</a>    </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/443">#443</a>] Introduce a CLI. <a href="https://github.com/joocer">@joocer</a>   </li>
@@ -1984,7 +1988,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/489">#489</a>] Intermittent behaviour on hash <code>JOIN</code> algorithm. <a href="https://github.com/joocer">@joocer</a>  </li>
 </ul>
 <h2 id="030-2022-08-28">[0.3.0] - 2022-08-28</h2>
-<h3 id="added_8">Added</h3>
+<h3 id="added_9">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/196">#196</a>] Partial implementation of projection pushdown (Parquet Only). <a href="https://github.com/joocer">@joocer</a>    </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/41">#41</a>] Enable the results of functions to be used as parameters for other functions. <a href="https://github.com/joocer">@joocer</a>   </li>
@@ -2014,7 +2018,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/399">#399</a>] Strings in double quotes aren't parsed. (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h2 id="020-2022-07-31">[0.2.0] - 2022-07-31</h2>
-<h3 id="added_9">Added</h3>
+<h3 id="added_10">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/232">#232</a>] Support <code>DATEPART</code> and <code>EXTRACT</code> date functions. <a href="https://github.com/joocer">@joocer</a>    </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/63">#63</a>] Estimate row counts when reading blobs. (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -2042,7 +2046,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/312">#312</a>] Invalid dates in <code>FOR</code> clauses treated as <code>TODAY</code>. (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h2 id="010-2022-07-02">[0.1.0] - 2022-07-02</h2>
-<h3 id="added_10">Added</h3>
+<h3 id="added_11">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/165">#165</a>] Support S3/MinIO data stores for blobs. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li><code>FAKE</code> dataset constructor (part of <a href="https://github.com/mabel-dev/opteryx/issues/179">#179</a>). (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -2082,7 +2086,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/225">#225</a>] <code>UNNEST</code> does not assign a type to the column when all of the values are <code>NULL</code>. (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h2 id="002-2022-06-03">[0.0.2] - 2022-06-03</h2>
-<h3 id="added_11">Added</h3>
+<h3 id="added_12">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/72">#72</a>] Configuration is now read from <code>opteryx.yaml</code> rather than the environment. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/139">#139</a>] Gather statistics on planning reading of segements. (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -2104,7 +2108,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/144">#144</a>] Multiple <code>JOINS</code> in one query aren't recognized (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h2 id="001-2022-05-09">[0.0.1] - 2022-05-09</h2>
-<h3 id="added_12">Added</h3>
+<h3 id="added_13">Added</h3>
 <ul>
 <li>Additional statistics recording the time taken to scan partitions (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>Support for <code>FULL JOIN</code> and <code>RIGHT JOIN</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
