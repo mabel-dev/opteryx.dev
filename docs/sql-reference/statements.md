@@ -136,7 +136,7 @@ LIMIT count
 
 `ORDER BY` expressions may use column numbers, however, this is not recommended for statements intended for reuse.
 
-## :octicons-beaker-24: EXPLAIN
+## EXPLAIN
 
 Show the logical execution plan of a statement.
 
@@ -150,7 +150,7 @@ The `EXPLAIN` clause outputs a summary of the execution plan for the query in th
 !!! Warning  
     The data returned by the `EXPLAIN` statement is intended for interactive usage only and the output format may change between releases. Applications should not depend on the output of the `EXPLAIN` statement.
 
-## EXECUTE
+## EXECUTE :octicons-beaker-24: 
 
 Execute a preprated statement.
 
