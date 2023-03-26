@@ -2,7 +2,7 @@
 
 ## Incorporated Components
 
-Opteryx is built on the shoulders of other great libraries and components:
+Opteryx, HadroDB and orso are built on the shoulders of other great libraries and components:
 
 Library           | Disposition       | Copyright            | Licence   
 :---------------- | :---------------- | :------------------- | :--------------- 
@@ -55,6 +55,8 @@ Diagrams created using [ASCII Flow](https://asciiflow.com/) or [draw.io](https:/
 Website build using [mkdocs-material](https://github.com/squidfunk/mkdocs-material).
 
 SQL-92 conformity tests are based on [sqltest](https://github.com/elliotchance/sqltest).
+
+Documentation code color scheme based on [Dracula](https://draculatheme.com/).
 
 ## References and Guides
 
