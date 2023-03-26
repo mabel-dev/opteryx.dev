@@ -51,10 +51,11 @@ code {
 }
 
 pre > code {
-    background-color: #f8f8ff !important;
+    background-color: #282a36 !important;
     font-size: 1em !important;
     padding: 1em !important;
-    color: #822156 !important;
+    color: #ff79c6 !important;
+    border-radius: 5px !important;
 }
 
 body {
@@ -199,28 +200,32 @@ strong {
 }
 
 .k {
-    color: #006699 !important;
+    color: #50fa7b !important;
     font-weight: 700 !important;
 }
 
 .s1 {
-    color: #dd3300 !important;
+    color: #f1fa8c !important;
 }
 
 .err {
-    color: #555555 !important;
+    color: #bd93f9 !important;
 }
 
 .n {
-    color: #555555 !important;
+    color: #bd93f9 !important;
 }
 
 .mi {
-    color: #FF6600 !important;
+    color: #8be9fd !important;
 }
 
 .p {
-    color: #998000 !important;
+    color: #ff79c6 !important;
+}
+
+.o {
+    color: #ff79c6 !important;
 }
 
 .md-button {
