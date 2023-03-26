@@ -1,8 +1,8 @@
-# Orso
+# orso
 
 > IN DEVELOPMENT
 
-Orso is a DataFrame library implemented for Opteryx and HadroDB.
+orso is a DataFrame library implemented for Opteryx and HadroDB.
 
 <dl>
     <dt><h2>class <b>DataFrame</b> (<i>dictionaries</i>)</h2></dt>  
