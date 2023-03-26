@@ -25,6 +25,7 @@ These goals indicate which items are considered important for the engine to supp
 - :fontawesome-regular-square: Persisted materialized views
 - :fontawesome-regular-square: Distributed execution
 - :fontawesome-regular-square: Metastore used in planning and optimization
-- :fontawesome-regular-square: Permissions Model
+- :fontawesome-regular-square: Permissions Model for query types [v.10] and dataset access
 - :fontawesome-regular-square: Correctness benchmarks written [v0.6, v0.9] and acceptable pass-rate obtained
 - :fontawesome-regular-square: Performance benchmarks written [v0.5, v0.9] and monitored
+- :fontawesome-regular-square: JDBC connector
