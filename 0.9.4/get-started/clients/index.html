@@ -1471,24 +1471,26 @@
 
 
 <h1 id="client-connectivity-overview">Client Connectivity Overview</h1>
-<p>Opteryx supports two methods of invocation; as an importable Python library and as a command line tool.</p>
+<p>Opteryx supports two methods of invocation; as a Python library (embedded) and as a command line tool.</p>
 <h2 id="python-embedded">Python Embedded</h2>
-<p>Opteryx is an embeddable package into Python applications, scripts and Notebooks which implements a partial Python DBAPI (<a href="https://peps.python.org/pep-0249/">PEP 249</a>) interface.</p>
+<p>Opteryx is an embeddable package into Python applications, scripts and Notebooks and supports parts of the Python DBAPI (<a href="https://peps.python.org/pep-0249/">PEP 249</a>) interface.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">opteryx</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">result</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM $planets&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">connection</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">curr</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">curr</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM $planets&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">rows</span> <span class="o">=</span> <span class="n">curr</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </code></pre></div>
-<p>The results of the query are availble via the cursor using <code>fetchone()</code> that returns a tuple, <code>fetchmany()</code> and <code>fetchall()</code> that return generators of tuples, <code>arrow()</code> that returns an <a href="https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table">Arrow Table</a>, or <code>pandas()</code> that returns a <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">pandas DataFrame</a></p>
+<p>The results of the query are availble via the Cursor. The Cursor is an <a href="https://github.com/mabel-dev/orso">orso DataFrame</a> and support accessing results using the Cursor as an iterator, using <code>fetchone()</code>, <code>fetchmany()</code> and <code>fetchall()</code>, and using format conversion routines such as <code>arrow()</code> which returns an <a href="https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table">Arrow Table</a>, and <code>pandas()</code> which returns a <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">pandas DataFrame</a></p>
 <h2 id="command-line-interface">Command Line Interface</h2>
-<p>Opteryx Command Line Interface (CLI) provides a terminal-based interactive shell for running queries. The CLI is a Python script usually run by invoking Python, like this:</p>
+<p>Opteryx Command Line Interface (CLI) provides a terminal-based interface for running queries. The CLI is a Python script usually run by invoking Python, like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>opteryx<span class="w"> </span>--o<span class="w"> </span><span class="s1">&#39;planets.csv&#39;</span><span class="w"> </span><span class="s2">&quot;SELECT * FROM \$planets&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>CLI usage may have character escaping requirements, such as a backslash before dollar signs and backticks.</p>
 </div>
-<p>Querying individual files quires the relative path in place of the relation/table name in the query, this usually requires the filename to be put in quotes as filenames often contain illegal characters.</p>
+<p>Querying individual files requires the relative path in place of the relation/table name in the query, this usually requires the filename to be put in quotes as filenames often contain illegal characters.</p>
 <p>Abridged usage guidance is available below:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">Usage: python -m opteryx [OPTIONS] [SQL] </span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
@@ -1499,7 +1501,7 @@
 <p>To see the full help and usage details for the CLI use the <code>--help</code> option:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>opteryx<span class="w"> </span>--help
 </code></pre></div>
-<p>Supported output locations are the <strong>console</strong>, a <strong>parquet</strong> file, a <strong>csv</strong> file, or a <strong>jsonl</strong> file.</p>
+<p>Supported output locations include the <strong>console</strong>, a <strong>parquet</strong> file, a <strong>csv</strong> file, or a <strong>jsonl</strong> file.</p>
 
 
 
