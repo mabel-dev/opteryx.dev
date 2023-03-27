@@ -203,20 +203,44 @@ strong {
     color: #50fa7b !important;
     font-weight: 700 !important;
 }
+.gp {
+    color: #50fa7b !important;
+}
+.nb {
+    color: #50fa7b !important;
+}
 
 .s1 {
+    color: #f1fa8c !important;
+}
+.s2 {
     color: #f1fa8c !important;
 }
 
 .err {
     color: #bd93f9 !important;
 }
+.kc {
+    color: #bd93f9 !important;
+}
 
 .n {
     color: #bd93f9 !important;
 }
+.kn {
+    color: #50fa7b !important;
+}
+.ow {
+    color: #50fa7b !important;
+}
 
 .mi {
+    color: #8be9fd !important;
+}
+.nn {
+    color: #8be9fd !important;
+}
+.nf {
     color: #8be9fd !important;
 }
 
@@ -230,6 +254,9 @@ strong {
 
 .c1 {
     color: #6272a4 ! important;
+}
+.go {
+    color: #50fa7b ! important;
 }
 
 .md-button {
