@@ -45,7 +45,13 @@ Disable trying to set the process priority.
 ### Debug Settings
 
 `PROFILE_LOCATION` :octicons-beaker-24:   
-Save information about the query planning and execution to disk.
+Save information about the query planning and execution of the previous query to disk - if not set, no information is writte.
+
+`QUERY_LOG_LOCATION` :octicons-beaker-24:   
+Rolling log of recent queries - if not set, not log is written.
+
+`QUERY_LOG_SIZE` :octicons-beaker-24:   
+Size of the rolling query log - if not set, 10 entries are maintained.
 
 ## Environment Variables
 
