@@ -46,12 +46,16 @@ Opteryx does not have any defined roles, however we can implement Role-Based acc
 ~~~python
 import opteryx
 
+# Define which roles exist and the permissions each role has,
+# `opteryx.permissions` is all available permissions.
 role_permissions = {
     "admin": opteryx.permissions,
     "user": {"Query"}
 }
 
-def get_user_permissions(user_roles):
+def get_user_permissions(user_roles:list):
+    # return the accumulated permissions for a user by appending
+    # the permissions for each of the roles for that user
     permissions = set()
     for role in user_roles:
         if role in role_permissions:

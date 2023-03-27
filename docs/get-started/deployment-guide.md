@@ -16,7 +16,7 @@ Opteryx balances memory consumption with performance, however, being able to pro
     Opteryx contains no specific optimiations to make use of multiple CPUs, although multiple CPUs may be beneficial as some libraries Opteryx is built on may use multiple CPUs.
 
 !!! Warning
-    Non x86 environments, such as Raspberry Pi or the M1 Macs, may require additional set up steps.
+    Non x86 environments, such as Raspberry Pi or the Apple Silicon Macs (e.g. M1), may require additional set up steps.
 
 ### Operating System Support
 
@@ -33,14 +33,14 @@ Windows (x86)     | Partial    | Partial    | Partial     | Partial
 Ubuntu (x86)      | Full       | Full       | Full        | Full
 Debian (ARM)      | None       | Partial    | None        | None
 
-&emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from **Full** tests.  
+&emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from Ubuntu Python 3.10 tests.  
 &emsp;**Partial** - some tests are excluded from the test suite or that some tests fail.  
 &emsp;**None** - there is no automated test for this configuration.  
 
 !!! Note
     - PyPy regression suite fails due to issues with Apache Arrow.
-    - MacOs (M1) is not included in the regression suite due to lack of support on the test platform, but there is known usage on this configuration.
-    - Windows (ARM) is not included in the regression suite  due to lack of support on the test platform.
+    - MacOs (M1) is not included in the regression suite due to lack of support on the test platform, however there is known usage on this configuration.
+    - Windows (ARM) is not included in the regression suite due to lack of support on the test platform.
     - Partial coverage is primarily due to testing platform constraints, not core-compatibility issues.
 
 ### Python Environment
@@ -78,13 +78,16 @@ Running in the Generation 2 container environment is likely to result in faster 
 **Built-In Connectors**
 
 Platform             | Connector Name           | Implementation
--------------------- | ------------------------ | ---------------------
-Google Cloud Storage | GcpCloudStorageConnector | Blob/File Store
+-------------------- | ------------------------ | --------------------
 AWS S3               | AwsS3Connector           | Blob/File Store
-MinIo                | AwsS3Connector           | Blob/File Store
+Google Cloud Storage | GcpCloudStorageConnector | Blob/File Store
 Google FireStore     | GcpFireStoreConnector    | Document Store
-MongoDB              | MongoDbConnector         | Document Store
 Local Disk           | DiskConnector            | Blob/File Store
+MinIo                | AwsS3Connector           | Blob/File Store
+MongoDB              | MongoDbConnector         | Document Store
+MySQL                | SqlConnctor              | SQL Store
+Postgres             | SqlConnctor              | SQL Store
+SQLite               | SqlConnctor              | SQL Store
 
 Connectors are registered with the storage engine using the `register_store` method. Multiple prefixes can be added, using different connectors - multiple storage types can be combined into a single query.
 
@@ -117,7 +120,7 @@ print(cursor.fetchone())
 
 Opteryx references datasets using their relative path as the table name. For example in the following folder structure
 
-~~~json
+~~~xml
 /
  ├─ products/
  ├─ customers/
@@ -147,7 +150,7 @@ SELECT *
 
 To enable temporal queries, data must be structured into date hierarchy folders below the dataset folder. Using just the _products_ dataset from the above example, below the _products_ folder must be year, month and day folders like this:
 
-~~~json
+~~~xml
 /
  └─ products/
      └─ year_2022/
