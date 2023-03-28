@@ -105,6 +105,14 @@ This document describes the Python objects intended to be accessed by users of t
 
 <p><b>Returns</b></p><ul><li>polars.DataFrame</ul></dd></dl>
 
+<dl><dt><b>markdown</b> (size)</dt><dd>
+</br>Return the resultset as a markdown table.
+
+<p><b>Parameters</b></p><ul><li>size:  int (optional)
+</br>Return the head 'size' number of records.</li>
+
+<p><b>Returns</b></p><ul><li>string</ul></dd></dl>
+
 <dl><dt><b>close</b> ()</dt><dd>
 </br>close the connection</li></ul></dd></dl>
 <dl><dt><b>head</b> (size)</dt><dd></ul></dd></dl>

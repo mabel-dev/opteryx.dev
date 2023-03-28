@@ -4,7 +4,7 @@
 
 Opteryx's repository folder structure is described below:
 
-~~~xml
+~~~
 opteryx/                 <- main opteryx library
  ├── components/         <- the planning and management of the query engine
  ├── connectors/         <- modules to connect to data sources
