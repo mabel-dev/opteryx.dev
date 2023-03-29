@@ -43,7 +43,7 @@ $ git clone https://github.com/mabel-dev/opteryx
 ### 6. Install Dependencies   
 
 ~~~console
-sudo apt-get install python3-dev 
+$ sudo apt-get install python3-dev 
 ~~~
 
 ~~~console
