@@ -13,6 +13,7 @@ Library           | Disposition       | Copyright            | Licence
 [fuzzy](https://github.com/yougov/fuzzy)                   | Integrated  | [Jason R. Coombs](https://github.com/jaraco) | [MIT](https://github.com/yougov/fuzzy/blob/master/LICENSE)
 [levenshtein](https://gist.github.com/vatsal220/6aefbc245216bc9f2da8556f42e1c89c#file-lev_dist-py) | Integrated | [Vatsal Patel](https://gist.github.com/vatsal220) | Public Domain (assumed)
 [mbleven](https://github.com/fujimotos/mbleven)            | Integrated  | 2018 [Fujimoto Seiji](https://github.com/fujimotos) | [Public Domain](https://github.com/fujimotos/mbleven/blob/master/LICENSE)
+[mysql-mimic](https://github.com/kelsin/mysql-mimic)       | Derived     | 2022 [Christopher Giroir](https://github.com/kelsin) | [MIT](https://github.com/kelsin/mysql-mimic/blob/main/LICENSE)
 [numpy](https://github.com/numpy/numpy)                    | Installed   |  | [BSD-3](https://github.com/numpy/numpy/blob/main/LICENSE.txt)
 [orjson](https://github.com/ijl/orjson)                    | Installed   |  | [Apache 2.0](https://github.com/ijl/orjson/blob/master/LICENSE-APACHE)
 [pyarrow](https://github.com/apache/arrow/)                | Installed   |  | [Apache 2.0](https://github.com/apache/arrow/blob/master/LICENSE.txt)
