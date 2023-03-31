@@ -2,7 +2,7 @@
 
 > IN DEVELOPMENT
 
-Tarchia is in development and will be the metastore provider for Mabel and Opteryx.
+[Tarchia](https://github.com/mabel-dev/tarchia) is in development and will be the metastore provider for Mabel and Opteryx.
 
 It has two key parts:
 

@@ -77,6 +77,7 @@ nav:
       - Metastore (Tarchia): get-started/ecosystem/metastore.md
       - Storage Engine (HadroDB): get-started/ecosystem/hadrodb.md
       - Streaming Writer (Mabel): get-started/ecosystem/mabel.md
+      - Connector (Mesos): get-started/ecosystem/mesos.md
     - Standards & Benchmarks:
       - Python PEP249: get-started/external-standards/pep249.md
       - ANSI SQL-92: get-started/external-standards/sql92.md

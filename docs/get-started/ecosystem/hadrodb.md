@@ -2,4 +2,4 @@
 
 > IN DEVELOPMENT
 
-HardoDB is a Storage Engine for Opteryx.
+[HardoDB](https://github.com/mabel-dev/hadrodb) is a Storage Engine for Opteryx.
