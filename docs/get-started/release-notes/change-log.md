@@ -30,6 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#951](https://github.com/mabel-dev/opteryx/issues/951)] Initial Support for Prepared Statements (`EXECUTE` queries) [@joocer](https://github.com/joocer) 
 - [[#958](https://github.com/mabel-dev/opteryx/issues/958)] Log of recent queries [@joocer](https://github.com/joocer) 
 - [[#905](https://github.com/mabel-dev/opteryx/issues/905)] CLI includes REPL mode [@joocer](https://github.com/joocer) 
+- [[#942](https://github.com/mabel-dev/opteryx/issues/942)] CLI has option to output to Markdown format [@joocer](https://github.com/joocer) 
 
 ## [0.9.3] - 2023-03-04
 
