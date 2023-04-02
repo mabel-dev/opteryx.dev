@@ -2,302 +2,302 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/thankyou/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/blog/202209-building-our-first-optimizer/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/blog/unpublished/20220205%20Writing%20a%20Query%20Engine/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/blog/unpublished/202204%20Introduction%20to%20Query%20Engines/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/blog/unpublished/20221001%20Storage/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/blog/unpublished/202212%20Lessons%20Learnt%20so%20Far/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/contributing/code-of-conduct/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/contributing/contributing/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/contributing/etiquette/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/contributing/version-goals/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/contributing/internals/project-structure/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/contributing/internals/query-engine/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/contributing/internals/storage-engine/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/contributing/internals/testing/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/contributing/set-up-guides/debian/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/contributing/set-up-guides/macos/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/contributing/set-up-guides/windows/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/clients/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/configuration-guide/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/deployment-guide/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/dinosaurs/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/get-started/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/overview/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/schema-evolution/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/security/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/ecosystem/hadrodb/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/ecosystem/mabel/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/ecosystem/mesos/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/ecosystem/metastore/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/ecosystem/orso/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/external-standards/pep249/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/external-standards/sql92/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/external-standards/tpch/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/guides/_command-line-opteryx/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/guides/_gcp-and-opteryx/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/guides/_postgres-and-opteryx/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/guides/_sqlite-and-opteryx/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/guides/pandas-and-opteryx/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/guides/polars-and-opteryx/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/guides/python-client/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/release-notes/change-log/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/get-started/release-notes/notices/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/adv-engine-configuration/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/adv-null-semantics/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/adv-query-optimization/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/adv-sample-data/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/adv-temp-tables/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/adv-time-travel/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/adv-working-with-ips/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/adv-working-with-lists/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/adv-working-with-structs/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/adv-working-with-timestamps/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/aggregates/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/data-types/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/expressions/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/functions/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/introduction/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/joins/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mabel-dev.github.io/opteryx/latest/0.9.4/sql-reference/statements/</loc>
-         <lastmod>2023-04-01</lastmod>
+         <lastmod>2023-04-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
