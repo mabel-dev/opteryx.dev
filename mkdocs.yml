@@ -102,6 +102,7 @@ nav:
       - Null Semantics: sql-reference/adv-null-semantics.md
       - Temporary Tables: sql-reference/adv-temp-tables.md
       - Sample Data: sql-reference/adv-sample-data.md
+      - Information Schema: sql-reference/adv-information-schema.md
       - Engine Configuration: sql-reference/adv-engine-configuration.md
       - Query Optimization: sql-reference/adv-query-optimization.md
   - Contributing:
