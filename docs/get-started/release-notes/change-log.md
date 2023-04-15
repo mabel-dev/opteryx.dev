@@ -34,6 +34,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#905](https://github.com/mabel-dev/opteryx/issues/905)] CLI includes REPL mode [@joocer](https://github.com/joocer) 
 - [[#942](https://github.com/mabel-dev/opteryx/issues/942)] CLI has option to output to Markdown format [@joocer](https://github.com/joocer) 
 - [[#967](https://github.com/mabel-dev/opteryx/issues/967)] Initial Information Schema capability [@joocer](https://github.com/joocer) 
+- [[#978](https://github.com/mabel-dev/opteryx/issues/978)] Initial support for `USE` queries [@joocer](https://github.com/joocer) 
 
 ## [0.9.3] - 2023-03-04
 

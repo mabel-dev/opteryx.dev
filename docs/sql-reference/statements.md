@@ -293,3 +293,11 @@ LIKE pattern
 A case-insensitive `LIKE` clause to filter the results to the desired subset by the variable name. This does not require a left-hand operator, it will always filter by the variable name.
 
 **Related**: `SET`
+
+## USE :octicons-beaker-24:  
+
+This statement currently has no effect.
+
+~~~sql
+USE database
+~~~
