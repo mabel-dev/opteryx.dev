@@ -2,7 +2,7 @@
 
 ## Incorporated Components
 
-Opteryx, HadroDB and orso are built on the shoulders of other great libraries and components:
+Opteryx, HadroDB, mesos, and orso are built on the shoulders of other great libraries and components:
 
 Library           | Disposition       | Copyright            | Licence   
 :---------------- | :---------------- | :------------------- | :--------------- 
