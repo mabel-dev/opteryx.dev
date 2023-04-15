@@ -82,6 +82,7 @@ nav:
       - Python PEP249: get-started/external-standards/pep249.md
       - ANSI SQL-92: get-started/external-standards/sql92.md
       - TPC-H: get-started/external-standards/tpch.md
+      - Information Schema: get-started/external-standards/information-schema.md
     - Release Notes:
       - Change Log: get-started/release-notes/change-log.md
       - Notices: get-started/release-notes/notices.md
