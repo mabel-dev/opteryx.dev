@@ -6,7 +6,7 @@ An expression is a combination of values, operators and functions. Expressions a
 
 Logical Operators are used within Expressions to express how predicates combine.
 
-The following logical operators are available: `NOT`, `AND`, `OR`, and `XOR`.
+The following logical operators are available: `AND`, `OR`, `XOR`, and `NOT`.
 
 | a      | b     | a `AND` b | a `OR` b | a `XOR` b | `NOT` a |
 | :----: | :---: | :-------: | :------: | :-------: | :-----: |
@@ -48,10 +48,10 @@ Operator     | Description
 
 ### BETWEEN
 
-Predicate               | Description
------------------------ | ---------------------------------
-`a BETWEEN x AND y`     | equivalent to `a >= x AND a <= y`
-`a NOT BETWEEN x AND y` | equivalent to `a < x OR a > y`
+Predicate                 | Description
+------------------------- | ---------------------------------
+a `BETWEEN` x `AND` y     | equivalent to `a >= x AND a <= y`
+a `NOT BETWEEN` x `AND` y | equivalent to `a < x OR a > y`
 
 !!! Warning  
     Using `BETWEEN` with other predicates, especially when used with an `AND` conjunction, can cause the query parser to fail. 
