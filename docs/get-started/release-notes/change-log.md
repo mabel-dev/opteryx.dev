@@ -24,6 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#940](https://github.com/mabel-dev/opteryx/issues/940)] CityHash moved to [orso](https://github.com/mabel-dev/orso).cityhash [@joocer](https://github.com/joocer) 
 - [[#942](https://github.com/mabel-dev/opteryx/issues/942)] Profiler (and distogram) moved to [orso](https://github.com/mabel-dev/orso).cityhash [@joocer](https://github.com/joocer) 
 - :octicons-alert-24: [[#965](https://github.com/mabel-dev/opteryx/issues/965)] (MySQL Compatibility) `SHOW STORES` renamed to `SHOW DATABASES` [@joocer](https://github.com/joocer) 
+- [[#973](https://github.com/mabel-dev/opteryx/issues/973)] Improved readability of Sort nodes in `EXPLAIN` queries  [@joocer](https://github.com/joocer) 
 
 ### Added
 
