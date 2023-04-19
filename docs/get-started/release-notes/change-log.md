@@ -18,11 +18,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - [[#925](https://github.com/mabel-dev/opteryx/pull/925)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.31.0 [dependabot](https://github.com/apps/dependabot) 
-- :octicons-alert-24: [[#931](https://github.com/mabel-dev/opteryx/issues/931)] Cursor `fetch` no longer accept `asdict` parameter, instead each tuple (an orso Row) has an `as_dict` method [@joocer](https://github.com/joocer) 
+- :octicons-alert-24: [[#931](https://github.com/mabel-dev/opteryx/issues/931)] Cursor `fetch` no longer accept `asdict` parameter, instead each tuple (an [orso](https://github.com/mabel-dev/orso) Row) has an `as_dict` method [@joocer](https://github.com/joocer) 
 - [[#906](https://github.com/mabel-dev/opteryx/issues/906)] Cursor extends an [orso](https://github.com/mabel-dev/orso) DataFrame, providing additional functionality [@joocer](https://github.com/joocer) 
 - [[#938](https://github.com/mabel-dev/opteryx/pull/938)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.32.0 [dependabot](https://github.com/apps/dependabot)  
 - [[#940](https://github.com/mabel-dev/opteryx/issues/940)] CityHash moved to [orso](https://github.com/mabel-dev/orso).cityhash [@joocer](https://github.com/joocer) 
-- [[#942](https://github.com/mabel-dev/opteryx/issues/942)] Profiler (and distogram) moved to [orso](https://github.com/mabel-dev/orso).cityhash [@joocer](https://github.com/joocer) 
+- [[#942](https://github.com/mabel-dev/opteryx/issues/942)] Profiler (and distogram) moved to [orso](https://github.com/mabel-dev/orso) [@joocer](https://github.com/joocer) 
 - :octicons-alert-24: [[#965](https://github.com/mabel-dev/opteryx/issues/965)] (MySQL Compatibility) `SHOW STORES` renamed to `SHOW DATABASES` [@joocer](https://github.com/joocer) 
 - [[#973](https://github.com/mabel-dev/opteryx/issues/973)] Improved readability of Sort nodes in `EXPLAIN` queries  [@joocer](https://github.com/joocer) 
 - [[#984](https://github.com/mabel-dev/opteryx/pull/984)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.33.0 [dependabot](https://github.com/apps/dependabot) 
