@@ -350,7 +350,7 @@ Functions for examining and manipulating string values.
     ** :octicons-star-16: New in 0.10**    
     Splits **str** on **delimiter** and returns an array.
 
-!!! function "`SPLIT` (**str**: _varchar_, **delimiter**: _varchar_, **limit**: _integer**) → _array_:octicons-dot-16:"   
+!!! function "`SPLIT` (**str**: _varchar_, **delimiter**: _varchar_, **limit**: _integer_) → _array_:octicons-dot-16:"   
     ** :octicons-star-16: New in 0.10**    
     Splits **str** on **delimiter** and returns an array of size at most **limit**. The last element in the array contains the remaining part of the string. **limit** must be greater than zero.
 
