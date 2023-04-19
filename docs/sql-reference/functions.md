@@ -86,7 +86,6 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     Also implemented as individual extraction functions.
 
 !!! function "`FROM_UNIXTIME` (**timestamp**: _numeric_) → _timestamp_"    
-    ** :octicons-star-16: New in 0.8**      
     Return a timestamp representation of an [Unix Timestamp](https://www.unixtimestamp.com/).    
     Related: `UNIXTIME` 
 
@@ -123,12 +122,10 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     Alias for `EXTRACT`(second FROM **ts**)
 
 !!! function "`UNIXTIME` () → _numeric_:octicons-dot-16:"       
-    ** :octicons-star-16: New in 0.8**      
     Return the current time as a [Unix Timestamp](https://www.unixtimestamp.com/).    
     Related: `FROM_UNIXTIME`, `current_time` 
 
 !!! function "`UNIXTIME` (**timestamp**: _timestamp_) → _numeric_:octicons-dot-16:"    
-    ** :octicons-star-16: New in 0.8**      
     Return **timestamp** in [Unix Timestamp](https://www.unixtimestamp.com/) representation.    
     Related: `FROM_UNIXTIME` 
 
@@ -315,7 +312,6 @@ Functions for examining and manipulating string values.
     Returns the length of **str** in characters.    
 
 !!! function "`LEVENSHTEIN` (**str1**: _varchar_, **str2**: _varchar_) → _numeric_"   
-    ** :octicons-star-16: New in 0.8**    
     Returns the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) between **str1** and **str2**   
 
 !!! function "`LOWER` (**str**: _varchar_) → _varchar_"  
@@ -345,6 +341,18 @@ Functions for examining and manipulating string values.
 
 !!! function "`SEARCH` (**str**: _varchar_, **substring**: _varchar_) → _boolean_:octicons-dot-16:"  
     Return `true` if **str** contains **substring**.  
+
+!!! function "`SPLIT` (**str**: _varchar_) → _array_:octicons-dot-16:"   
+    ** :octicons-star-16: New in 0.10**    
+    Splits **str** on commas (`,`) and returns an array.
+
+!!! function "`SPLIT` (**str**: _varchar_, **delimiter**: _varchar_) → _array_:octicons-dot-16:"   
+    ** :octicons-star-16: New in 0.10**    
+    Splits **str** on **delimiter** and returns an array.
+
+!!! function "`SPLIT` (**str**: _varchar_, **delimiter**: _varchar_, **limit**: _integer**) → _array_:octicons-dot-16:"   
+    ** :octicons-star-16: New in 0.10**    
+    Splits **str** on **delimiter** and returns an array of size at most **limit**. The last element in the array contains the remaining part of the string. **limit** must be greater than zero.
 
 !!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_) → _varchar_:octicons-dot-16:" 
     Return substring from a string from **start** position to the end of **str**.  
