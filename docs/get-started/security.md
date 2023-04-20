@@ -49,7 +49,7 @@ import opteryx
 # Define which roles exist and the permissions each role has,
 # `opteryx.permissions` is all available permissions.
 role_permissions = {
-    "admin": opteryx.permissions,
+    "admin": opteryx.constants.PERMISSIONS,
     "user": {"Query"}
 }
 
