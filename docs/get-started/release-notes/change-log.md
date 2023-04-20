@@ -38,6 +38,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#978](https://github.com/mabel-dev/opteryx/issues/978)] Initial support for `USE` queries [@joocer](https://github.com/joocer) 
 - [[#989](https://github.com/mabel-dev/opteryx/issues/989)] REPL supports limited dot commands `.help` and `.exit` [@joocer](https://github.com/joocer) 
 - [[#991](https://github.com/mabel-dev/opteryx/issues/991)] Added `SPLIT` function [@joocer](https://github.com/joocer) 
+- [[#969](https://github.com/mabel-dev/opteryx/issues/969)] New functions supporting Power BI integration [@joocer](https://github.com/joocer) 
+
 
 ## [0.9.3] - 2023-03-04
 

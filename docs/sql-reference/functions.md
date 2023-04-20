@@ -121,6 +121,10 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     Returns the second of the minute from **ts**. The value ranges from `0` to `59`.  
     Alias for `EXTRACT`(second FROM **ts**)
 
+!!! function "`TIMEDIFF` (**unit**: _varchar_, **start**: _timestamp_) → _numeric_"   
+    ** :octicons-star-16: New in 0.10**    
+    Calculate the difference between the start and end times.  
+
 !!! function "`UNIXTIME` () → _numeric_:octicons-dot-16:"       
     Return the current time as a [Unix Timestamp](https://www.unixtimestamp.com/).    
     Related: `FROM_UNIXTIME`, `current_time` 
@@ -128,6 +132,10 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
 !!! function "`UNIXTIME` (**timestamp**: _timestamp_) → _numeric_:octicons-dot-16:"    
     Return **timestamp** in [Unix Timestamp](https://www.unixtimestamp.com/) representation.    
     Related: `FROM_UNIXTIME` 
+
+!!! function "`UTC_TIMESTAMP` () → _timestamp_"   
+    ** :octicons-star-16: New in 0.10**    
+    Alias for `current_time`
 
 !!! function "`WEEK` (**ts**: _timestamp_) → _numeric_"  
     Returns the week of the year from **ts**. The value ranges from `1` to `53`.  
