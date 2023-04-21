@@ -51,10 +51,11 @@ code {
 }
 
 pre > code {
-    background-color: #f8f8ff !important;
+    background-color: #282a36 !important;
     font-size: 1em !important;
     padding: 1em !important;
-    color: #822156 !important;
+    color: #ff79c6 !important;
+    border-radius: 5px !important;
 }
 
 body {
@@ -199,28 +200,63 @@ strong {
 }
 
 .k {
-    color: #006699 !important;
+    color: #50fa7b !important;
     font-weight: 700 !important;
+}
+.gp {
+    color: #50fa7b !important;
+}
+.nb {
+    color: #50fa7b !important;
 }
 
 .s1 {
-    color: #dd3300 !important;
+    color: #f1fa8c !important;
+}
+.s2 {
+    color: #f1fa8c !important;
 }
 
 .err {
-    color: #555555 !important;
+    color: #bd93f9 !important;
+}
+.kc {
+    color: #bd93f9 !important;
 }
 
 .n {
-    color: #555555 !important;
+    color: #bd93f9 !important;
+}
+.kn {
+    color: #50fa7b !important;
+}
+.ow {
+    color: #50fa7b !important;
 }
 
 .mi {
-    color: #FF6600 !important;
+    color: #8be9fd !important;
+}
+.nn {
+    color: #8be9fd !important;
+}
+.nf {
+    color: #8be9fd !important;
 }
 
 .p {
-    color: #998000 !important;
+    color: #ff79c6 !important;
+}
+
+.o {
+    color: #ff79c6 !important;
+}
+
+.c1 {
+    color: #6272a4 ! important;
+}
+.go {
+    color: #50fa7b ! important;
 }
 
 .md-button {
@@ -319,6 +355,7 @@ strong {
 
     .home-footer {
         display: grid;
+        font-size: 0.8em;
         justify-content: space-between;
         grid-template-columns: 5% [col-start] 40% [col-start] 33% [col-start];
     }
@@ -405,4 +442,10 @@ strong>.twemoji {
 
 .item > img {
     height: 1.3em !important;
+}
+
+.python-kw {
+    color: #e05fa7 !important;
+    font-size: italic !important;
+    font-weight: 900;
 }
