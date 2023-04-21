@@ -13,7 +13,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - [[#929](https://github.com/mabel-dev/opteryx/issues/929)] Improved error messages for malformed temporal clauses. [@joocer](https://github.com/joocer) 
-- :octicons-alert-24: [[#735](https://github.com/mabel-dev/opteryx/issues/735)] (correction) Cursor `fetchone` and `fetchmany` step over the record set. [@joocer](https://github.com/joocer) 
+- :octicons-alert-24: [[#735](https://github.com/mabel-dev/opteryx/issues/735)] (correction) Cursor `fetchone` and `fetchmany` step over the record set. [@joocer](https://github.com/joocer)  
+- [[#994](https://github.com/mabel-dev/opteryx/issues/994)] `LIMIT` didn't prevent additional files from being read after limit was met. [@joocer](https://github.com/joocer) 
 
 ### Changed
 
