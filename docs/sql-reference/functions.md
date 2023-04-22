@@ -42,6 +42,11 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 !!! function "`STRING` (**any**: _any_) → _varchar_"     
     Alias of `VARCHAR`(**any**) and `CAST`(**any** AS VARCHAR)
 
+!!! function "`STRUCT` (**any**: _any_) → _struct_"   
+    ** :octicons-star-16: New in 0.10**      
+    Cast **any** to a struct / dictionary.
+    Alias of `CAST`(**any** AS STRUCT)
+
 !!! function "`TIMESTAMP` **iso8601**: _varchar_ → _timestamp_"  
     Cast an [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format string to a timestamp, raises an error if cast is not possible. Note `TIMESTAMP` does not require parenthesis, however any aliases do.    
     Alias for `CAST`(**iso8601** AS TIMESTAMP)   

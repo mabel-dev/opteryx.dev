@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - :octicons-alert-24: [[#965](https://github.com/mabel-dev/opteryx/issues/965)] (MySQL Compatibility) `SHOW STORES` renamed to `SHOW DATABASES` [@joocer](https://github.com/joocer) 
 - [[#973](https://github.com/mabel-dev/opteryx/issues/973)] Improved readability of Sort nodes in `EXPLAIN` queries  [@joocer](https://github.com/joocer) 
 - [[#984](https://github.com/mabel-dev/opteryx/pull/984)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.33.0 [dependabot](https://github.com/apps/dependabot) 
+- [[#999](https://github.com/mabel-dev/opteryx/issues/999)] Improved error messages when using subscript functions [@joocer](https://github.com/joocer) 
 
 ### Added
 
@@ -41,7 +42,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#989](https://github.com/mabel-dev/opteryx/issues/989)] REPL supports limited dot commands `.help` and `.exit` [@joocer](https://github.com/joocer) 
 - [[#991](https://github.com/mabel-dev/opteryx/issues/991)] Added `SPLIT` function [@joocer](https://github.com/joocer) 
 - [[#969](https://github.com/mabel-dev/opteryx/issues/969)] New functions supporting Power BI integration [@joocer](https://github.com/joocer) 
-
+- [[#999](https://github.com/mabel-dev/opteryx/issues/999)] `STRUCT` casting functions [@joocer](https://github.com/joocer) 
 
 ## [0.9.3] - 2023-03-04
 
