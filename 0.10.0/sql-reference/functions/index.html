@@ -21,7 +21,7 @@
         <link rel="next" href="../aggregates/">
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
     
     
       
@@ -30,9 +30,6 @@
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
-      
-        
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -62,14 +59,11 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -119,6 +113,10 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+      </form>
     
     
     
@@ -1656,6 +1654,12 @@ Alias for <code>CAST</code>(<strong>any</strong> AS NUMERIC)   </p>
 <div class="admonition function">
 <p class="admonition-title"><code>STRING</code> (<strong>any</strong>: <em>any</em>) → <em>varchar</em></p>
 <p>Alias of <code>VARCHAR</code>(<strong>any</strong>) and <code>CAST</code>(<strong>any</strong> AS VARCHAR)</p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>STRUCT</code> (<strong>any</strong>: <em>any</em>) → <em>struct</em></p>
+<p><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> New in 0.10</strong>    <br />
+Cast <strong>any</strong> to a struct / dictionary.
+Alias of <code>CAST</code>(<strong>any</strong> AS STRUCT)</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TIMESTAMP</code> <strong>iso8601</strong>: <em>varchar</em> → <em>timestamp</em></p>

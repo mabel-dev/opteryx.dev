@@ -21,7 +21,7 @@
         <link rel="next" href="../notices/">
       
       <link rel="icon" href="../../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
     
     
       
@@ -30,9 +30,6 @@
     
     
       <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
-      
-        
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -62,14 +59,11 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -119,6 +113,10 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+      </form>
     
     
     
@@ -1779,6 +1777,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/929">#929</a>] Improved error messages for malformed temporal clauses. <a href="https://github.com/joocer">@joocer</a> </li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/735">#735</a>] (correction) Cursor <code>fetchone</code> and <code>fetchmany</code> step over the record set. <a href="https://github.com/joocer">@joocer</a>  </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/994">#994</a>] <code>LIMIT</code> didn't prevent additional files from being read after limit was met. <a href="https://github.com/joocer">@joocer</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/996">#996</a>] Performance issues with <code>LIMIT</code> and serialization steps. <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
 <h3 id="changed">Changed</h3>
 <ul>
@@ -1791,6 +1790,7 @@
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/965">#965</a>] (MySQL Compatibility) <code>SHOW STORES</code> renamed to <code>SHOW DATABASES</code> <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/973">#973</a>] Improved readability of Sort nodes in <code>EXPLAIN</code> queries  <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/984">#984</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.33.0 <a href="https://github.com/apps/dependabot">dependabot</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/999">#999</a>] Improved error messages when using subscript functions <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
 <h3 id="added">Added</h3>
 <ul>
@@ -1804,6 +1804,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/989">#989</a>] REPL supports limited dot commands <code>.help</code> and <code>.exit</code> <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/991">#991</a>] Added <code>SPLIT</code> function <a href="https://github.com/joocer">@joocer</a> </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/969">#969</a>] New functions supporting Power BI integration <a href="https://github.com/joocer">@joocer</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/999">#999</a>] <code>STRUCT</code> casting functions <a href="https://github.com/joocer">@joocer</a> </li>
 </ul>
 <h2 id="093-2023-03-04">[0.9.3] - 2023-03-04</h2>
 <h3 id="fixed_1">Fixed</h3>
