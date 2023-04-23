@@ -24,6 +24,7 @@ ShowVariable  | `SHOW`
 !!! Note
     - `Analyze` and `Execute` and not fully supported statements.
     - `ShowVariable` only applies to queries that are not one of the more specific `SHOW` query types.
+    - Permissions exist for query types supported by the parser library but not supported by Opteryx.
 
 Permissions are applied to connections using the `permissions` parameter, the default permissions are to allow all queries to be executed.
 

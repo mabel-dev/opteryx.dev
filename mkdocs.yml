@@ -60,12 +60,12 @@ extra:
 
 # Page tree
 nav:
-  - Home: index.md
-  - Get Started:
+  - HOME: index.md
+  - GET STARTED:
     - get-started/overview.md
     - Get Started: get-started/get-started.md
-    - Client Overview: get-started/clients.md
-    - Python Guide:
+    - CLI API: get-started/command-line-guide.md
+    - Python API:
       - get-started/guides/python-client.md
       - Pandas Integration: get-started/guides/pandas-and-opteryx.md
       - Polars Integration: get-started/guides/polars-and-opteryx.md
@@ -86,7 +86,7 @@ nav:
     - Release Notes:
       - Change Log: get-started/release-notes/change-log.md
       - Notices: get-started/release-notes/notices.md
-  - SQL Reference:
+  - SQL REFERENCE:
     - sql-reference/introduction.md
     - Statements: sql-reference/statements.md
     - Data Types: sql-reference/data-types.md
@@ -106,7 +106,7 @@ nav:
       - Information Schema: sql-reference/adv-information-schema.md
       - Engine Configuration: sql-reference/adv-engine-configuration.md
       - Query Optimization: sql-reference/adv-query-optimization.md
-  - Contributing:
+  - CONTRIBUTING:
       - contributing/contributing.md
       - Code of Conduct: contributing/code-of-conduct.md
       - Etiquette: contributing/etiquette.md
@@ -120,7 +120,7 @@ nav:
         - Storage Engine: contributing/internals/storage-engine.md
         - Testing Approach: contributing/internals/testing.md
       - Version Goals: contributing/version-goals.md
-  - Blog:
-      - Year 2022:
-        - Building our first Optimizer: blog/202209-building-our-first-optimizer.md
+#  - Blog:
+#      - Year 2022:
+#        - Building our first Optimizer: blog/202209-building-our-first-optimizer.md
 

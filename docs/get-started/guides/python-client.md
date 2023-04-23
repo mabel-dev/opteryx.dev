@@ -1,5 +1,20 @@
 # Python Client
 
+Opteryx is an embeddable package into Python applications, scripts and Notebooks and supports parts of the Python DBAPI ([PEP 249](https://peps.python.org/pep-0249/)) interface.
+
+~~~python
+import opteryx
+
+conn = opteryx.connection()
+curr = conn.cursor()
+curr.execute('SELECT * FROM $planets')
+rows = curr.fetchall()
+~~~
+
+The results of the query are availble via the Cursor. The Cursor is an [orso DataFrame](https://github.com/mabel-dev/orso) and support accessing results using the Cursor as an iterator, using `fetchone()`, `fetchmany()` and `fetchall()`, and using format conversion routines such as `arrow()` which returns an [Arrow Table](https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table), and `pandas()` which returns a [pandas DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
+
+## Python API
+
 This document describes the Python objects intended to be accessed by users of the library. The library has many other components and interfaces which can be called, accessing these is generally not recommended.
 
 <!--- this page is automatically build from connection.py --->

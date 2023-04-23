@@ -44,7 +44,7 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 
 !!! function "`STRUCT` (**any**: _any_) → _struct_"   
     ** :octicons-star-16: New in 0.10**      
-    Cast **any** to a struct / dictionary.
+    Cast **any** to a struct / dictionary.   
     Alias of `CAST`(**any** AS STRUCT)
 
 !!! function "`TIMESTAMP` **iso8601**: _varchar_ → _timestamp_"  

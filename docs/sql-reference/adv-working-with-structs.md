@@ -4,6 +4,12 @@ A struct is a collection of zero or more key, value pairs. Keys must be `VARCHAR
 
 ## Actions
 
+### Construct
+
+~~~
+STRUCT(json string)
+~~~
+
 ### Reading
 
 ~~~

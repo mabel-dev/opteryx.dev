@@ -8,6 +8,16 @@
     src: url('FiraMono-Regular.ttf');
 }
 
+  /* roboto-condensed-regular - latin */
+  @font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('roboto-condensed-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('roboto-condensed-v19-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
 table {
     width: 100% !important;
     line-height: 1.3em;
@@ -74,11 +84,14 @@ dd {
 .md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
     font-size: 1.1em !important;
     color: #11595c !important;
+    font-family: 'Roboto Condensed';
 }
 
 .md-nav__title {
     font-size: 1.2em !important;
     color: #11595c !important;
+    font-family: 'Roboto Condensed';
+    text-transform: uppercase;
 }
 
 .md-logo {
@@ -186,9 +199,10 @@ strong {
 }
 
 .md-nav__link {
-    font-size: 1em;
-    color: #555 !important;
+    font-size: 1.1em;
+    color: #777 !important;
     font-weight: 400;
+    font-family: 'Roboto Condensed';
 }
 
 .md-nav__link:hover {
@@ -264,6 +278,7 @@ strong {
     font-weight: 400 !important;
     color: #d83790 !important;
     border-color: #d83790 !important;;
+    font-family: 'Roboto Condensed';
 }
 
 .md-button:hover {
@@ -276,6 +291,7 @@ strong {
 
 .btn {
     white-space: nowrap;
+    font-family: 'Roboto Condensed';
 }
 
 .btn-github {
@@ -325,6 +341,11 @@ strong {
     text-decoration-color: #d83790;
     text-decoration-thickness: 2px;
     font-weight: 400;
+}
+
+.md-tabs__list {
+    font-family: 'Roboto Condensed';
+    font-size: 1.25em;
 }
 
 .home-heading {
@@ -448,4 +469,8 @@ strong>.twemoji {
     color: #e05fa7 !important;
     font-size: italic !important;
     font-weight: 900;
+}
+
+strong {
+    color: #571639 !important;
 }

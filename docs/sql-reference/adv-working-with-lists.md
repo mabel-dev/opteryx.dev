@@ -4,6 +4,12 @@ A list is an ordered collection of zero or more `VARCHAR` values.
 
 ## Actions
 
+### Construct
+
+~~~
+SPLIT(string)
+~~~
+
 ### Accessing
 
 ~~~
