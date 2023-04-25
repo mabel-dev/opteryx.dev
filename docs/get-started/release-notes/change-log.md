@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#994](https://github.com/mabel-dev/opteryx/issues/994)] `LIMIT` didn't prevent additional files from being read after limit was met. [@joocer](https://github.com/joocer) 
 - [[#996](https://github.com/mabel-dev/opteryx/issues/996)] Performance issues with `LIMIT` and serialization steps. [@joocer](https://github.com/joocer) 
 - [[#1008](https://github.com/mabel-dev/opteryx/issues/1008)] `JOIN` on a literal fails when attempting to find good match. [@joocer](https://github.com/joocer) 
+- [[#1006](https://github.com/mabel-dev/opteryx/issues/1006)] Errors handling filenames with multiple dots in the name. [@joocer](https://github.com/joocer) 
 
 ### Changed
 
