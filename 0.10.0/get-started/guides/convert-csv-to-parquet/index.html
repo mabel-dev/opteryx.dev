@@ -12,24 +12,24 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://opteryx.dev/0.10.0/sql-reference/adv-null-semantics/">
+        <link rel="canonical" href="https://opteryx.dev/0.10.0/get-started/guides/convert-csv-to-parquet/">
       
       
-        <link rel="prev" href="../adv-time-travel/">
+        <link rel="prev" href="../polars-and-opteryx/">
       
       
-        <link rel="next" href="../adv-temp-tables/">
+        <link rel="next" href="../execute-sql-on-csv/">
       
-      <link rel="icon" href="../../icarus-opteryx.png">
+      <link rel="icon" href="../../../icarus-opteryx.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
     
     
       
-        <title>Null Semantics - Opteryx</title>
+        <title>Convert CSV to Parquet - Opteryx</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
       
       
 
@@ -45,11 +45,11 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../termynal.css">
+      <link rel="stylesheet" href="../../../termynal.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#null-semantics" class="md-skip">
+        <a href="#convert-csv-to-parquet-using-opteryx" class="md-skip">
           Skip to content
         </a>
       
@@ -89,9 +89,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../../.." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="../../icarus-opteryx.png" alt="logo">
+  <img src="../../../icarus-opteryx.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Null Semantics
+              Convert CSV to Parquet
             
           </span>
         </div>
@@ -149,26 +149,10 @@
 
 
   <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       HOME
     </a>
   </li>
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../get-started/overview/" class="md-tabs__link">
-        GET STARTED
-      </a>
-    </li>
-  
 
       
         
@@ -182,7 +166,23 @@
   
   
     <li class="md-tabs__item">
-      <a href="../introduction/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../overview/" class="md-tabs__link md-tabs__link--active">
+        GET STARTED
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../sql-reference/introduction/" class="md-tabs__link">
         SQL REFERENCE
       </a>
     </li>
@@ -198,7 +198,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../contributing/contributing/" class="md-tabs__link">
+      <a href="../../../contributing/contributing/" class="md-tabs__link">
         CONTRIBUTING
       </a>
     </li>
@@ -226,9 +226,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../../.." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="../../icarus-opteryx.png" alt="logo">
+  <img src="../../../icarus-opteryx.png" alt="logo">
 
     </a>
     Opteryx
@@ -256,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         HOME
       </a>
     </li>
@@ -269,14 +269,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
@@ -285,7 +287,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           GET STARTED
@@ -298,7 +300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/overview/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         Opteryx Overview
       </a>
     </li>
@@ -312,7 +314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/get-started/" class="md-nav__link">
+      <a href="../../get-started/" class="md-nav__link">
         Get Started
       </a>
     </li>
@@ -326,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/command-line-guide/" class="md-nav__link">
+      <a href="../../command-line-guide/" class="md-nav__link">
         CLI API
       </a>
     </li>
@@ -340,7 +342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/python-client/" class="md-nav__link">
+      <a href="../../python-client/" class="md-nav__link">
         Python API
       </a>
     </li>
@@ -352,14 +354,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
       
       
       
@@ -368,7 +372,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           Guides
@@ -381,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/guides/pandas-and-opteryx/" class="md-nav__link">
+      <a href="../pandas-and-opteryx/" class="md-nav__link">
         Pandas Integration
       </a>
     </li>
@@ -395,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/guides/polars-and-opteryx/" class="md-nav__link">
+      <a href="../polars-and-opteryx/" class="md-nav__link">
         Polars Integration
       </a>
     </li>
@@ -407,11 +411,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../get-started/guides/convert-csv-to-parquet/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Convert CSV to Parquet
       </a>
+      
     </li>
   
 
@@ -423,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/guides/execute-sql-on-csv/" class="md-nav__link">
+      <a href="../execute-sql-on-csv/" class="md-nav__link">
         Execute SQL on CSVs
       </a>
     </li>
@@ -444,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/deployment-guide/" class="md-nav__link">
+      <a href="../../deployment-guide/" class="md-nav__link">
         Deployment Guide
       </a>
     </li>
@@ -458,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/configuration-guide/" class="md-nav__link">
+      <a href="../../configuration-guide/" class="md-nav__link">
         Configuration Guide
       </a>
     </li>
@@ -472,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/security/" class="md-nav__link">
+      <a href="../../security/" class="md-nav__link">
         Security
       </a>
     </li>
@@ -513,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/ecosystem/orso/" class="md-nav__link">
+      <a href="../../ecosystem/orso/" class="md-nav__link">
         Dataframe (orso)
       </a>
     </li>
@@ -527,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/ecosystem/metastore/" class="md-nav__link">
+      <a href="../../ecosystem/metastore/" class="md-nav__link">
         Metastore (Tarchia)
       </a>
     </li>
@@ -541,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/ecosystem/hadrodb/" class="md-nav__link">
+      <a href="../../ecosystem/hadrodb/" class="md-nav__link">
         Storage Engine (HadroDB)
       </a>
     </li>
@@ -555,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/ecosystem/mabel/" class="md-nav__link">
+      <a href="../../ecosystem/mabel/" class="md-nav__link">
         Streaming Writer (Mabel)
       </a>
     </li>
@@ -569,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/ecosystem/mesos/" class="md-nav__link">
+      <a href="../../ecosystem/mesos/" class="md-nav__link">
         Connector (mesos)
       </a>
     </li>
@@ -617,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/external-standards/pep249/" class="md-nav__link">
+      <a href="../../external-standards/pep249/" class="md-nav__link">
         Python PEP249
       </a>
     </li>
@@ -631,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/external-standards/sql92/" class="md-nav__link">
+      <a href="../../external-standards/sql92/" class="md-nav__link">
         ANSI SQL-92
       </a>
     </li>
@@ -645,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/external-standards/tpch/" class="md-nav__link">
+      <a href="../../external-standards/tpch/" class="md-nav__link">
         TPC-H
       </a>
     </li>
@@ -659,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/external-standards/information-schema/" class="md-nav__link">
+      <a href="../../external-standards/information-schema/" class="md-nav__link">
         Information Schema
       </a>
     </li>
@@ -707,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/release-notes/change-log/" class="md-nav__link">
+      <a href="../../release-notes/change-log/" class="md-nav__link">
         Change Log
       </a>
     </li>
@@ -721,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/release-notes/notices/" class="md-nav__link">
+      <a href="../../release-notes/notices/" class="md-nav__link">
         Notices
       </a>
     </li>
@@ -748,16 +762,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
@@ -766,7 +778,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           SQL REFERENCE
@@ -779,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
+      <a href="../../../sql-reference/introduction/" class="md-nav__link">
         SQL Introduction
       </a>
     </li>
@@ -793,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../statements/" class="md-nav__link">
+      <a href="../../../sql-reference/statements/" class="md-nav__link">
         Statements
       </a>
     </li>
@@ -807,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-types/" class="md-nav__link">
+      <a href="../../../sql-reference/data-types/" class="md-nav__link">
         Data Types
       </a>
     </li>
@@ -821,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../expressions/" class="md-nav__link">
+      <a href="../../../sql-reference/expressions/" class="md-nav__link">
         Expressions
       </a>
     </li>
@@ -835,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/" class="md-nav__link">
+      <a href="../../../sql-reference/functions/" class="md-nav__link">
         Functions
       </a>
     </li>
@@ -849,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aggregates/" class="md-nav__link">
+      <a href="../../../sql-reference/aggregates/" class="md-nav__link">
         Aggregates
       </a>
     </li>
@@ -863,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../joins/" class="md-nav__link">
+      <a href="../../../sql-reference/joins/" class="md-nav__link">
         Joins
       </a>
     </li>
@@ -875,16 +887,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
       
       
       
@@ -893,7 +903,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_8">
           <span class="md-nav__icon md-icon"></span>
           Advanced
@@ -906,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-timestamps/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-timestamps/" class="md-nav__link">
         Working with Timestamps
       </a>
     </li>
@@ -920,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-lists/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-lists/" class="md-nav__link">
         Working with Lists
       </a>
     </li>
@@ -934,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-structs/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-structs/" class="md-nav__link">
         Working with Structs
       </a>
     </li>
@@ -948,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-ips/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-ips/" class="md-nav__link">
         Working with IPs
       </a>
     </li>
@@ -962,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-time-travel/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-time-travel/" class="md-nav__link">
         Time Travel
       </a>
     </li>
@@ -974,21 +984,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../sql-reference/adv-null-semantics/" class="md-nav__link">
         Null Semantics
       </a>
-      
     </li>
   
 
@@ -1000,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-temp-tables/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-temp-tables/" class="md-nav__link">
         Temporary Tables
       </a>
     </li>
@@ -1014,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-sample-data/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-sample-data/" class="md-nav__link">
         Sample Data
       </a>
     </li>
@@ -1028,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-information-schema/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-information-schema/" class="md-nav__link">
         Information Schema
       </a>
     </li>
@@ -1042,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-engine-configuration/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-engine-configuration/" class="md-nav__link">
         Engine Configuration
       </a>
     </li>
@@ -1056,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-query-optimization/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-query-optimization/" class="md-nav__link">
         Query Optimization
       </a>
     </li>
@@ -1112,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/contributing/" class="md-nav__link">
+      <a href="../../../contributing/contributing/" class="md-nav__link">
         Contributor Guide
       </a>
     </li>
@@ -1126,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/code-of-conduct/" class="md-nav__link">
+      <a href="../../../contributing/code-of-conduct/" class="md-nav__link">
         Code of Conduct
       </a>
     </li>
@@ -1140,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/etiquette/" class="md-nav__link">
+      <a href="../../../contributing/etiquette/" class="md-nav__link">
         Etiquette
       </a>
     </li>
@@ -1181,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/set-up-guides/debian/" class="md-nav__link">
+      <a href="../../../contributing/set-up-guides/debian/" class="md-nav__link">
         Debian/Ubuntu
       </a>
     </li>
@@ -1195,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/set-up-guides/macos/" class="md-nav__link">
+      <a href="../../../contributing/set-up-guides/macos/" class="md-nav__link">
         MacOS
       </a>
     </li>
@@ -1209,7 +1209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/set-up-guides/windows/" class="md-nav__link">
+      <a href="../../../contributing/set-up-guides/windows/" class="md-nav__link">
         Windows
       </a>
     </li>
@@ -1257,7 +1257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/internals/project-structure/" class="md-nav__link">
+      <a href="../../../contributing/internals/project-structure/" class="md-nav__link">
         Project Structure
       </a>
     </li>
@@ -1271,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/internals/query-engine/" class="md-nav__link">
+      <a href="../../../contributing/internals/query-engine/" class="md-nav__link">
         Query Engine
       </a>
     </li>
@@ -1285,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/internals/storage-engine/" class="md-nav__link">
+      <a href="../../../contributing/internals/storage-engine/" class="md-nav__link">
         Storage Engine
       </a>
     </li>
@@ -1299,7 +1299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/internals/testing/" class="md-nav__link">
+      <a href="../../../contributing/internals/testing/" class="md-nav__link">
         Testing Approach
       </a>
     </li>
@@ -1320,7 +1320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/version-goals/" class="md-nav__link">
+      <a href="../../../contributing/version-goals/" class="md-nav__link">
         Version Goals
       </a>
     </li>
@@ -1370,40 +1370,15 @@
   
 
 
-<h1 id="null-semantics">NULL Semantics</h1>
-<p>Most comparisons to <code>null</code> return <code>null</code>. Exceptions are generally in functions or comparisons specifically to handle <code>null</code>, such as <code>IS NULL</code>.</p>
-<p>When the outcome of a comparison is <code>null</code>, this will be coerced to <code>false</code> when used in a filter (<code>WHERE</code> or <code>HAVING</code>) but return as <code>null</code> in a <code>SELECT</code> statement.</p>
-<p>To demonstrate, first a <code>null</code> comparison in a <code>SELECT</code> statement:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span><span class="p">;</span>
-</code></pre></div></p>
-<p>This returns <code>null</code> for all values.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> name=null
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>-----------
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> null
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a> null
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a> null
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a> null
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a> null
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a> null
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a> null
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a> null
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a> null
+<h1 id="convert-csv-to-parquet-using-opteryx">Convert CSV to Parquet using Opteryx</h1>
+<p>You can use Opteryx to convert CSV files to parquet files on the command line.</p>
+<p>This feature can also be used for all of the file typles Opteryx supports including parquet, avro, jsonl and orc as input files, and parquet, jsonl and CSV as outputs.</p>
+<p><strong>Command Line</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>opteryx<span class="w"> </span>--taxi_trips.parquet<span class="w"> </span><span class="s2">&quot;SELECT * FROM &#39;taxi_trips.csv&#39;;&quot;</span>
 </code></pre></div>
-<p>Using a <code>null</code> comparison in a <code>WHERE</code> statement will always result in <code>false</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
-</code></pre></div>
-<p>Returns an empty set, this is true even for inequality tests:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
-</code></pre></div>
-<p>Also, returns an empty set.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code>null</code> comparison returning <code>null</code> holds true even for <code>null = null</code>. Do not test for null using an equals condition, use <code>IS NULL</code>.</p>
+<p>The terminal may require some special characters to be escaped</p>
 </div>
 
 
@@ -1499,12 +1474,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
       
-        <script src="../../termynal.js"></script>
+        <script src="../../../termynal.js"></script>
       
     
   </body>
