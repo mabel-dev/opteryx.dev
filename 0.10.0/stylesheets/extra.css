@@ -475,3 +475,7 @@ strong>.twemoji {
 strong {
     color: #571639 !important;
 }
+
+#get-started > .item > img {
+    height: 6em !important;
+}
