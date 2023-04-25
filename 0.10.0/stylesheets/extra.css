@@ -82,13 +82,13 @@ dd {
 }
 
 .md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
-    font-size: 1.1em !important;
+    font-size: 1.3em !important;
     color: #11595c !important;
     font-family: 'Roboto Condensed';
 }
 
 .md-nav__title {
-    font-size: 1.2em !important;
+    font-size: 1.3em !important;
     color: #11595c !important;
     font-family: 'Roboto Condensed';
     text-transform: uppercase;
@@ -101,7 +101,7 @@ dd {
 .md-ellipsis {
     font-family: "DM Serif Display", 'Times New Roman', Times, serif;
     font-weight: 900 !important;
-    font-size: 1.4em !important;
+    font-size: 1.6em !important;
 }
 
 h1 {
@@ -199,7 +199,7 @@ strong {
 }
 
 .md-nav__link {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #777 !important;
     font-weight: 400;
     font-family: 'Roboto Condensed';
@@ -333,6 +333,7 @@ strong {
 
 .md-tabs__link {
     color: #fff !important;
+    font-size: 1.3em;
 }
 
 .md-tabs__link--active {
@@ -345,7 +346,7 @@ strong {
 
 .md-tabs__list {
     font-family: 'Roboto Condensed';
-    font-size: 1.25em;
+    font-size: 1.3em !important;
 }
 
 .home-heading {
