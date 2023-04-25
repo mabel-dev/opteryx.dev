@@ -1429,32 +1429,32 @@
 
 
 <h1 id="command-line-interface">Command Line Interface</h1>
-<p>Opteryx Command Line Interface (CLI) provides a terminal-based interface for executing queries. It can be used as an interactive shell (REPL), or can be used execute individual queries (Batch).</p>
-<p>Both modes require a working Python environment and Opteryx to be installed. To install Python, refer to the <a href="https://www.python.org/">Python website</a>. To install Opteryx follow the <a href="../get-started/">Installation</a> help.</p>
+<p>The Opteryx Command Line Interface (CLI) provides a terminal-based interface for executing queries. You can use it either as an interactive shell (REPL) or to execute individual queries (Batch).</p>
+<p>Both modes require a working Python environment and Opteryx to be installed. To install Python, refer to the <a href="https://www.python.org/">Python website</a>. To install Opteryx follow the <a href="../get-started/">Installation</a> guide.</p>
 <h2 id="repl-interactive-mode">REPL (Interactive) Mode</h2>
-<p>To start Opteryx in REPL mode, execute Opteryx without providing a SQL statement.</p>
+<p>To start Opteryx in REPL mode, execute Opteryx without providing a SQL statement:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>opteryx
 </code></pre></div>
-<p>You will then be presented with a prompt similar to the below</p>
+<p>You will then be presented with a prompt similar to the following:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Opteryx version 0.10.0
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  Enter &#39;.help&#39; for usage hints
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  Enter &#39;.exit&#39; to exit this program
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>opteryx&gt; 
 </code></pre></div>
-<p>Once the CLI has been opened, the <code>opteryx&gt;</code> prompt indicates a SQL statement can be entered, hitting enter will  execute the statement and the results will be displayed in a table in the terminal.</p>
+<p>Once the CLI has been opened, the <code>opteryx&gt;</code> prompt indicates that you can enter a SQL statement. Hitting enter will execute the statement, and the results will be displayed in a table in the terminal.</p>
 <p>The CLI supports all of Opteryx's SQL syntax.</p>
 <h3 id="special-commands-dot-commands">Special Commands (Dot Commands)</h3>
-<p>In addition to SQL syntax, special dot commands may be entered that are specific to the CLI client. To use one of these commands, begin the line with a period/fullstop (<code>.</code>) immediately followed by the name of the command you wish to execute. <code>.help</code> will display the full set of supported Dot Commands.</p>
+<p>In addition to SQL syntax, special dot commands may be entered that are specific to the CLI client. To use one of these commands, begin the line with a period/full stop (<code>.</code>) immediately followed by the name of the command you wish to execute. For example, <code>.help</code> will display the full set of supported Dot Commands.</p>
 <h2 id="batch-mode">Batch Mode</h2>
-<p>Opteryx Command Line Interface (CLI) provides a terminal-based interface for running queries. The CLI is a Python script usually run by invoking Python, like this:</p>
+<p>Opteryx Command Line Interface (CLI) provides a terminal-based interface for running queries. The CLI is a Python script that is usually run by invoking Python, like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>opteryx<span class="w"> </span>--o<span class="w"> </span><span class="s1">&#39;planets.csv&#39;</span><span class="w"> </span><span class="s2">&quot;SELECT * FROM \$planets&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>CLI usage may have character escaping requirements, such as a backslash before dollar signs and backticks.</p>
 </div>
-<p>Querying individual files requires the relative path in place of the relation/table name in the query, this usually requires the filename to be put in quotes as filenames often contain illegal characters.</p>
+<p>Querying individual files requires the relative path in place of the relation/table name in the query. This usually requires putting the filename in quotes, as filenames often contain illegal characters.</p>
 <p>Abridged usage guidance is available below:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">Usage: python -m opteryx [OPTIONS] [SQL] </span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
@@ -1462,16 +1462,16 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="go">--no-color    Do not colorize console output. </span>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="go">--help        Show the full help details.          </span>
 </code></pre></div>
-<p>To see the full help and usage details for the CLI use the <code>--help</code> option:</p>
+<p>To see the full help and usage details for the CLI, use the <code>--help</code> option:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>opteryx<span class="w"> </span>--help
 </code></pre></div>
 <h3 id="output-formats">Output Formats</h3>
-<p>Batch mode can be used to save the results of a SQL statement to a file, the format of the file is determined from the provided file extention. The following formats are supported:</p>
+<p>Batch mode can be used to save the results of a SQL statement to a file. The format of the file is determined by the provided file extension. The following formats are supported:</p>
 <table>
 <thead>
 <tr>
-<th>extention</th>
-<th>format</th>
+<th>Extension</th>
+<th>Format</th>
 </tr>
 </thead>
 <tbody>
@@ -1481,7 +1481,7 @@
 </tr>
 <tr>
 <td>jsonl</td>
-<td>JSON lines</td>
+<td>JSON Lines</td>
 </tr>
 <tr>
 <td>md</td>

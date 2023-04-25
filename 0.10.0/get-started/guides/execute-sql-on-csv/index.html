@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#execute-sql-on-csv-files-using-opteryx" class="md-skip">
+        <a href="#executing-sql-queries-on-csv-files-with-opteryx" class="md-skip">
           Skip to content
         </a>
       
@@ -1370,24 +1370,26 @@
   
 
 
-<h1 id="execute-sql-on-csv-files-using-opteryx">Execute SQL on CSV files using Opteryx</h1>
-<p>You can use Opteryx to execute SQL queries on CSV files. This is as simple as replacing the table name in a query with the location of the CSV file.</p>
-<p>This feature can also be used to query all of the file typles Opteryx supports including parquet, avro, jsonl and orc.</p>
+<h1 id="executing-sql-queries-on-csv-files-with-opteryx">Executing SQL Queries on CSV Files with Opteryx</h1>
+<p>You can use Opteryx to execute SQL queries on CSV files. Simply replace the table name in a query with the location of the CSV file.</p>
+<p>This feature can also be used to query all of the file types Opteryx supports, including Parquet, Avro, JSONL, and ORC.</p>
 <p>Querying CSV files is supported in both the CLI and Python APIs.</p>
 <p><strong>Command Line</strong></p>
+<p>To execute an SQL query on a CSV file using the CLI, use the following command:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>opteryx<span class="w"> </span><span class="s2">&quot;SELECT * FROM &#39;taxi_trips.csv&#39;;&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The terminal may require some special characters to be escaped</p>
+<p>The terminal may require some special characters to be escaped.</p>
 </div>
 <p><strong>Python</strong></p>
+<p>To execute an SQL query on a CSV file using the Python API, use the following code:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">opteryx</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">taxi_trips</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM &#39;taxi_trips.csv&#39;;&quot;</span><span class="p">)</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">taxi_trips</span><span class="p">)</span>
 </code></pre></div>
-<p>The full power of SQL is available, including joining CSV files with other files.</p>
+<p>The full power of SQL is available, including the ability to join CSV files with other files.</p>
 
 
 

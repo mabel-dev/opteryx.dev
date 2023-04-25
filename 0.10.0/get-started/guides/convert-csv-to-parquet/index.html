@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#convert-csv-to-parquet-using-opteryx" class="md-skip">
+        <a href="#converting-csv-to-parquet-using-opteryx" class="md-skip">
           Skip to content
         </a>
       
@@ -1370,15 +1370,16 @@
   
 
 
-<h1 id="convert-csv-to-parquet-using-opteryx">Convert CSV to Parquet using Opteryx</h1>
-<p>You can use Opteryx to convert CSV files to parquet files on the command line.</p>
-<p>This feature can also be used for all of the file typles Opteryx supports including parquet, avro, jsonl and orc as input files, and parquet, jsonl and CSV as outputs.</p>
+<h1 id="converting-csv-to-parquet-using-opteryx">Converting CSV to Parquet using Opteryx</h1>
+<p>You can use Opteryx to convert CSV files to Parquet files from the command line.</p>
+<p>This feature can also be used to convert between all of the file types Opteryx supports. Input file types include Parquet, Avro, JSONL, and ORC. Output file types include Parquet, JSONL, and CSV.</p>
 <p><strong>Command Line</strong></p>
+<p>To convert a CSV file to a Parquet file, use the following command:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>opteryx<span class="w"> </span>--taxi_trips.parquet<span class="w"> </span><span class="s2">&quot;SELECT * FROM &#39;taxi_trips.csv&#39;;&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The terminal may require some special characters to be escaped</p>
+<p>The terminal may require some special characters to be escaped.</p>
 </div>
 
 
