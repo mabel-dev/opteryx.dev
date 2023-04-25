@@ -1,4 +1,4 @@
-# Polars Integration
+# Polars and Opteryx Integration
 
 This short guide will demonstrate how to integrate Polars and Opteryx, showing you how to query a Polars dataframe with Opteryx and how to return Polars dataframe from Opteryx.
 

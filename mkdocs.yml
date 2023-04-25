@@ -65,10 +65,12 @@ nav:
     - get-started/overview.md
     - Get Started: get-started/get-started.md
     - CLI API: get-started/command-line-guide.md
-    - Python API:
-      - get-started/guides/python-client.md
+    - Python API: get-started/python-client.md
+    - Guides:
       - Pandas Integration: get-started/guides/pandas-and-opteryx.md
       - Polars Integration: get-started/guides/polars-and-opteryx.md
+      - Convert CSV to Parquet: get-started/guides/convert-csv-to-parquet.md
+      - Execute SQL on CSVs: get-started/guides/execute-sql-on-csv.md
     - Deployment Guide: get-started/deployment-guide.md
     - Configuration Guide: get-started/configuration-guide.md
     - Security: get-started/security.md

@@ -43,6 +43,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#991](https://github.com/mabel-dev/opteryx/issues/991)] Added `SPLIT` function [@joocer](https://github.com/joocer) 
 - [[#969](https://github.com/mabel-dev/opteryx/issues/969)] New functions supporting Power BI integration [@joocer](https://github.com/joocer) 
 - [[#999](https://github.com/mabel-dev/opteryx/issues/999)] `STRUCT` casting functions [@joocer](https://github.com/joocer) 
+- [[#1003](https://github.com/mabel-dev/opteryx/issues/1003)] DuckDB compatibility tests [@joocer](https://github.com/joocer) 
+- [[#1002](https://github.com/mabel-dev/opteryx/issues/1002)] Limit function ignored [@joocer](https://github.com/joocer) 
 
 ## [0.9.3] - 2023-03-04
 
