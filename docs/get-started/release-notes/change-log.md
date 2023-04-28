@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1006](https://github.com/mabel-dev/opteryx/issues/1006)] Errors handling filenames with multiple dots in the name. [@joocer](https://github.com/joocer) 
 - [[#1010](https://github.com/mabel-dev/opteryx/issues/1010)] Predicates not pushed for ZSTD compressed files. [@joocer](https://github.com/joocer) 
 - [[#1007](https://github.com/mabel-dev/opteryx/issues/1007)] Wildcards not interpretted correctly in some projection pushdowns [@joocer](https://github.com/joocer) 
+- [[#1015](https://github.com/mabel-dev/opteryx/issues/1015)] Column comparisons not working as expected in predicate pushdowns [@joocer](https://github.com/joocer) 
 
 ### Changed
 
