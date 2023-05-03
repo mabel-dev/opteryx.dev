@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+{% block site_nav %} {% endblock %}
+
+
+{% block content %}
+
+    <section id="hero" class="home-hero">
+      <span>
+        <h1>Opteryx</h1>
+        <p><b>Query your data, where it lives.</b></p>
+        <div>
+          <a href="/latest/get-started/get-started/" class="btn btn-cta">Get Started <i class="fa-fw fa-regular fa-circle-right"></i></a>
+          <a href="https://github.com/mabel-dev/opteryx" class="btn btn-github"><i class="fa-fw fa-brands fa-github"></i> Star on Github</a>
+        </div>
+      </span>
+      <span class="centro"><img src="home-diagram.svg" width="400px"/></span>
+    </section>
+
+    <hr />
+
+    <h2>Opteryx is a SQL Query Engine with cross-platform, command-line and embedded Python skills.</h2>
+
+    <h2 class="home-features-heading home-heading">Features</h2>
+    <section id="features" class="home-features">
+      <div class="item">
+        <h3>Multi-platform</h3>
+        <p>Runs most places you can run Python; GCP, AWS, Azure, Kubernetes, Knative, your own servers or a Raspberry Pi.</p>
+      </div>
+      <div class="item">
+        <h3>In Place Analytics</h3>
+        <p>Run queries against data in without loading or migrating into another system.</p>
+      </div>
+      <div class="item">
+        <h3>Simple</h3>
+        <p>Use SQL to query your data, no learning curve for analysts.</p>
+      </div>
+      <div class="item">
+        <h3>Elastic & Available</h3>
+        <p>Scale down to zero, and scale up to respond to thousands of concurrent queries within seconds.</p>
+        <p>Shared nothing, each query runs in its own environment.</p>
+      </div>
+      <div class="item">
+        <h3>Time Travel</h3>
+        <p>Query data as at a point in time in the past to replay decision algorithms against facts as they were known in the past.</p>
+      </div>
+      <div class="item">
+        <h3>Open Source & Extensible</h3>
+        <p>Fork, contribute, and review. Opteryx is available to all.</p>
+      </div>
+    </section>
+
+    <hr />
+
+    <h2 class="home-use-cases-heading home-heading">Use Cases</h2>
+    <section id="use-cases" class="home-use-cases">
+      <div class="item">
+        <img src="iconmonstr-file-38.svg" height="24px" />
+        Use Opteryx to enable querying of data written by another process, such as logs.
+      </div>
+      <div class="item">
+        <img src="iconmonstr-terminal-lined.svg" height="24px" />
+        Use Opteryx as a command line tool - bring the power and flexibility of SQL to filter and transform files
+      </div>
+      <div class="item">
+        <img src="iconmonstr-apps-filled.svg" height="24px" />
+        Use Opteryx as an embeddable engine - a low-cost option to allow hundreds of analysts to each have part-time databases
+      </div>
+    </section>
+
+<!----
+    <hr />
+
+    <h2 class="home-use-cases-heading home-heading">Negative Use Cases</h2>
+    <section id="use-cases" class="home-use-cases">
+      <div class="item">
+        <img src="iconmonstr-coin-9.svg" height="24px" />
+        Don't use Opteryx for accounting or transactional systems, Opteryx is designed for bulk analysis of data.
+      </div>
+      <div class="item">
+        <img src="iconmonstr-user-29.svg" height="24px" />
+        Don't use Opteryx for end-customer facing systems, Opteryx is a low-cost solution, not a high-speed solution.
+      </div>
+    </section>
+---->
+
+    <hr />
+
+    <h2 class="home-get-started-heading home-heading">Resources to Get Started</h2>
+    <section id="get-started" class="home-get-started">
+      <div class="item">
+        <img src="https://raw.githubusercontent.com/mabel-dev/opteryx.dev/main/assets/iconmonstr-book-20.svg" alt="open book">
+        <h3>Read the Docs</h3>
+        Helpful for new and experienced users, our documentation includes information on
+        how to setup, configure and use Opteryx.
+        <div class="block-footer"><a href="/latest/get-started/get-started/" class="btn btn-cta">docs <i class="fa-fw fa-regular fa-circle-right"></i></a></div>
+      </div>
+      <div class="item">
+        <img src="https://raw.githubusercontent.com/mabel-dev/opteryx.dev/main/assets/iconmonstr-terminal-filled.svg" alt="console">
+        <h3>Run Examples</h3>
+        Try out the example Google Colab Notebooks to get you started.
+        <div class="block-footer"><a href="https://github.com/mabel-dev/opteryx#further-examples" class="btn btn-cta">notebooks <i class="fa-fw fa-regular fa-circle-right"></i></a></div>
+      </div>
+      <div class="item">
+        <img src="https://raw.githubusercontent.com/mabel-dev/opteryx.dev/main/assets/iconmonstr-handshake-2.svg">
+        <h3>Community Support</h3>
+        Reach out to us with any questions you have on setting up, or using Opteryx.
+        <div class="block-footer"><a href="https://gitter.im/mabel-opteryx/community" class="btn btn-cta">gitter <i class="fa-fw fa-regular fa-circle-right"></i></a></div>
+      </div>
+    </section>
+
+
+
+{% endblock %}
+
+{% block footer %}
+  <section class="home-footer">
+    <div class="item"></div>
+    <div class="item">
+      
+    </div>
+    <div class="item">
+      <h2>Let's stay in touch</h2>
+      <ul>
+        <li><i class="fa-fw fa-brands fa-twitter"></i> <a href="https://twitter.com/OpteryxSQL" target="_blank">Follow <b>@OpteryxSQL</b> on <b>Twitter</b></a></li>
+        <li><i class="fa-fw fa-brands fa-gitter"></i> <a href="https://gitter.im/mabel-opteryx/community" target="_blank">Ask for help on <b>Gitter</b></a></li>
+        <li><i class="fa-fw fa-brands fa-github"></i> <a href="https://github.com/mabel-dev/opteryx" target="_blank">Optertx on <b>GitHub</b></a></li>
+        <li><i class="fa-fw fa-brands fa-python"></i> <a href="https://pypi.org/project/opteryx/" target="_blank">Opteryx on <b>PyPI</b></a></li>
+      </ul>
+    </div>
+  </section>
+    {{super()}}
+{% endblock %}
