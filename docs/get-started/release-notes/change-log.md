@@ -34,6 +34,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#973](https://github.com/mabel-dev/opteryx/issues/973)] Improved readability of Sort nodes in `EXPLAIN` queries  [@joocer](https://github.com/joocer) 
 - [[#984](https://github.com/mabel-dev/opteryx/pull/984)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.33.0 [dependabot](https://github.com/apps/dependabot) 
 - [[#999](https://github.com/mabel-dev/opteryx/issues/999)] Improved error messages when using subscript functions [@joocer](https://github.com/joocer) 
+- [[#1019](https://github.com/mabel-dev/opteryx/issues/1019)] CircularLog renamed RollingLog [@joocer](https://github.com/joocer) 
 
 ### Added
 
