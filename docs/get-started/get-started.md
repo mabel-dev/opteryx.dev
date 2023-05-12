@@ -12,7 +12,7 @@ $ pip install --upgrade opteryx
 
 **Build from Source**
 
-The lastest version, including pre-release and beta versions can be built from code on GitHub, this is not recommended for production use and may involve additional steps and requirements.
+The latest version, including pre-release and beta versions can be built from code on GitHub. This is not recommended for production use and may involve additional steps and requirements in order to bring to an executable condition.
 
 ~~~console
 $ pip install git+https://github.com/mabel-dev/opteryx

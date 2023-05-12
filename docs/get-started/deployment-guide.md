@@ -77,6 +77,8 @@ Running in the Generation 2 container environment is likely to result in faster 
 
 **Built-In Connectors**
 
+The following connectors are part of the base installation of Opteryx and are tested as part of each deployment to ensure they operate as expected.
+
 Platform             | Connector Name           | Implementation
 -------------------- | ------------------------ | --------------------
 AWS S3               | AwsS3Connector           | Blob/File Store
@@ -85,9 +87,10 @@ Google FireStore     | GcpFireStoreConnector    | Document Store
 Local Disk           | DiskConnector            | Blob/File Store
 MinIo                | AwsS3Connector           | Blob/File Store
 MongoDB              | MongoDbConnector         | Document Store
-MySQL                | SqlConnctor              | SQL Store
-Postgres             | SqlConnctor              | SQL Store
-SQLite               | SqlConnctor              | SQL Store
+DuckDB               | SqlConnector             | SQL Store
+MySQL                | SqlConnector             | SQL Store
+Postgres             | SqlConnector             | SQL Store
+SQLite               | SqlConnector             | SQL Store
 
 Connectors are registered with the storage engine using the `register_store` method. Multiple prefixes can be added, using different connectors - multiple storage types can be combined into a single query.
 
