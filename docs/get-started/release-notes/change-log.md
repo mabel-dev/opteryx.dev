@@ -17,7 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## Added
 
-
+- [[#1034](https://github.com/mabel-dev/opteryx/issues/1024)] Schemas added for the internal sample datasets. [@joocer](https://github.com/joocer) 
 
 ## [0.10.0] - 2023-05-03
 
