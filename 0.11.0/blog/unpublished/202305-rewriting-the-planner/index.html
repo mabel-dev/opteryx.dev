@@ -12,20 +12,16 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://opteryx.dev/0.11.0/get-started/external-standards/information-schema/">
+        <link rel="canonical" href="https://opteryx.dev/0.11.0/blog/unpublished/202305-rewriting-the-planner/">
       
       
-        <link rel="prev" href="../tpch/">
-      
-      
-        <link rel="next" href="../../release-notes/change-log/">
       
       <link rel="icon" href="../../../icarus-opteryx.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>Information Schema - Opteryx</title>
+        <title>202305 rewriting the planner - Opteryx</title>
       
     
     
@@ -70,11 +66,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#information-schema-conformity-mysql" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Information Schema
+              202305 rewriting the planner
             
           </span>
         </div>
@@ -158,15 +149,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../overview/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../get-started/overview/" class="md-tabs__link">
         GET STARTED
       </a>
     </li>
@@ -269,16 +258,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
@@ -287,7 +274,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           GET STARTED
@@ -300,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/" class="md-nav__link">
+      <a href="../../../get-started/overview/" class="md-nav__link">
         Opteryx Overview
       </a>
     </li>
@@ -314,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/" class="md-nav__link">
+      <a href="../../../get-started/get-started/" class="md-nav__link">
         Get Started
       </a>
     </li>
@@ -328,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../command-line-guide/" class="md-nav__link">
+      <a href="../../../get-started/command-line-guide/" class="md-nav__link">
         CLI API
       </a>
     </li>
@@ -342,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python-client/" class="md-nav__link">
+      <a href="../../../get-started/python-client/" class="md-nav__link">
         Python API
       </a>
     </li>
@@ -383,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/pandas-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/pandas-and-opteryx/" class="md-nav__link">
         Pandas Integration
       </a>
     </li>
@@ -397,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/polars-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/polars-and-opteryx/" class="md-nav__link">
         Polars Integration
       </a>
     </li>
@@ -411,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/convert-csv-to-parquet/" class="md-nav__link">
+      <a href="../../../get-started/guides/convert-csv-to-parquet/" class="md-nav__link">
         Convert CSV to Parquet
       </a>
     </li>
@@ -425,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/execute-sql-on-csv/" class="md-nav__link">
+      <a href="../../../get-started/guides/execute-sql-on-csv/" class="md-nav__link">
         Execute SQL on CSVs
       </a>
     </li>
@@ -446,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment-guide/" class="md-nav__link">
+      <a href="../../../get-started/deployment-guide/" class="md-nav__link">
         Deployment Guide
       </a>
     </li>
@@ -460,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration-guide/" class="md-nav__link">
+      <a href="../../../get-started/configuration-guide/" class="md-nav__link">
         Configuration Guide
       </a>
     </li>
@@ -474,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/" class="md-nav__link">
+      <a href="../../../get-started/security/" class="md-nav__link">
         Security
       </a>
     </li>
@@ -515,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/orso/" class="md-nav__link">
+      <a href="../../../get-started/ecosystem/orso/" class="md-nav__link">
         Dataframe (orso)
       </a>
     </li>
@@ -529,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/metastore/" class="md-nav__link">
+      <a href="../../../get-started/ecosystem/metastore/" class="md-nav__link">
         Metastore (Tarchia)
       </a>
     </li>
@@ -543,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/hadrodb/" class="md-nav__link">
+      <a href="../../../get-started/ecosystem/hadrodb/" class="md-nav__link">
         Storage Engine (HadroDB)
       </a>
     </li>
@@ -557,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/mabel/" class="md-nav__link">
+      <a href="../../../get-started/ecosystem/mabel/" class="md-nav__link">
         Streaming Writer (Mabel)
       </a>
     </li>
@@ -571,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/mesos/" class="md-nav__link">
+      <a href="../../../get-started/ecosystem/mesos/" class="md-nav__link">
         Connector (mesos)
       </a>
     </li>
@@ -590,16 +577,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
       
       
       
@@ -608,7 +593,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_10">
           <span class="md-nav__icon md-icon"></span>
           Standards & Benchmarks
@@ -621,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pep249/" class="md-nav__link">
+      <a href="../../../get-started/external-standards/pep249/" class="md-nav__link">
         Python PEP249
       </a>
     </li>
@@ -635,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql92/" class="md-nav__link">
+      <a href="../../../get-started/external-standards/sql92/" class="md-nav__link">
         ANSI SQL-92
       </a>
     </li>
@@ -649,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tpch/" class="md-nav__link">
+      <a href="../../../get-started/external-standards/tpch/" class="md-nav__link">
         TPC-H
       </a>
     </li>
@@ -661,52 +646,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Information Schema
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../get-started/external-standards/information-schema/" class="md-nav__link">
         Information Schema
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#schema" class="md-nav__link">
-    Schema
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -752,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release-notes/change-log/" class="md-nav__link">
+      <a href="../../../get-started/release-notes/change-log/" class="md-nav__link">
         Change Log
       </a>
     </li>
@@ -766,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release-notes/notices/" class="md-nav__link">
+      <a href="../../../get-started/release-notes/notices/" class="md-nav__link">
         Notices
       </a>
     </li>
@@ -1382,23 +1326,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#schema" class="md-nav__link">
-    Schema
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1416,45 +1343,21 @@
   
 
 
-<h1 id="information-schema-conformity-mysql">Information Schema Conformity (MySQL)</h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Conformance is a work in progress and this information represents the current state in order to provide transparent information about progress and capability.</p>
-</div>
-<p>Opteryx aims to implement parts of the <a href="https://dev.mysql.com/doc/refman/8.0/en/information-schema-table-reference.html">MySQL Information Schema</a> interface. If a view is not listed below, the current intention is to not support it.</p>
-<p>The initial use cases for support for the Information Schema is to allow tools like Power BI to connect to Opteryx (via <a href="https://github.com/mabel-dev/mesos">mesos</a>).</p>
-<h2 id="schema">Schema</h2>
-<table>
-<thead>
-<tr>
-<th align="left">View</th>
-<th align="left">Support</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">information_schema.columns</td>
-<td align="left">None</td>
-</tr>
-<tr>
-<td align="left">information_schema.schemata</td>
-<td align="left">None</td>
-</tr>
-<tr>
-<td align="left">information_schema.tables</td>
-<td align="left">Empty Response</td>
-</tr>
-<tr>
-<td align="left">information_schema.views</td>
-<td align="left">Empty Response</td>
-</tr>
-</tbody>
-</table>
-<p>Support statuses in this table:</p>
+  <h1>202305 rewriting the planner</h1>
+
+<p>Writing the query planner isn't a small task, it's one of the four big components of Opteryx:</p>
 <ul>
-<li><strong>None</strong> The feature is not supported.  </li>
-<li><strong>Empty Response</strong> Responses are empty or incomplete</li>
+<li>The planner</li>
+<li>The optimizer</li>
+<li>The operators</li>
+<li>The execution engine</li>
 </ul>
+<p>Looked at SQLGlot, which I recommend if you're looking at writing an engine from scratch; it comes with a hueristic optimizer.</p>
+<p>We're continuing to use sqlparser-rs, this is in part because there's some syntax SQLGlot doesn't support and there is already a wealth of supporting code in Opteryx for sqlparser-rs.</p>
+<p>Why?</p>
+<p>The need for significant changes to the planning phase was primarily driven by wanting to improve the optimizer. Whilst some heuristic optimizations have been implemented, some relied on queries only having a single table (predicate pushdowns) or relied on run-time trial-and-error (projection pushdowns). This was almost entirely due to not knowing the columns in the table before the execution step ran.</p>
+<p>We knew we wanted to start moving towards a cost-based optimizer, and have been looking at data profiling approaches, but if we were waiting until the data was being read to learn its schema, we weren't going to be able to optimize based on statistics.</p>
+<p>Whilst query optimization was the feature that we thought we had to rewrite the planner; there had been a number of bugs and feature requests which the existing planner could be forced to support, but would be easier with a new planner (e.g. support for UNION queries and support for CTEs to reference other CTEs).</p>
 
 
 
