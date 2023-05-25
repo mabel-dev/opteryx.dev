@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#808](https://github.com/mabel-dev/opteryx/issues/808)] Rewrite of AST to Logical plan. [@joocer](https://github.com/joocer) 
 - [[#1031](https://github.com/mabel-dev/opteryx/issues/1031)] `.to_df` deprecation complete. [@joocer](https://github.com/joocer) 
 - [[#356](https://github.com/mabel-dev/opteryx/issues/356)]/1 Prepositioning changes for extended types. [@joocer](https://github.com/joocer) 
+- [[#1046](https://github.com/mabel-dev/opteryx/pull/1046)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.34.0 [dependabot](https://github.com/apps/dependabot) 
 
 ## Added
 
