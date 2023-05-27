@@ -6,11 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.11.0] - Unreleased
 
-## Warnings
+### Warnings
 
-## Fixed
+### Fixed
 
-## Changed
+### Changed
 
 - [[#808](https://github.com/mabel-dev/opteryx/issues/808)] Rewrite of AST to Logical plan. [@joocer](https://github.com/joocer) 
 - [[#1031](https://github.com/mabel-dev/opteryx/issues/1031)] `.to_df` deprecation complete. [@joocer](https://github.com/joocer) 
@@ -18,7 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1046](https://github.com/mabel-dev/opteryx/pull/1046)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.34.0 [dependabot](https://github.com/apps/dependabot) 
 - [[#1017](https://github.com/mabel-dev/opteryx/discussions/1017)]/1 Fuzzy matching for suggestions is punctuation insensitive [@joocer](https://github.com/joocer) 
 
-## Added
+### Added
 
 - [[#1034](https://github.com/mabel-dev/opteryx/issues/1024)] Schemas added for the internal sample datasets. [@joocer](https://github.com/joocer) 
 
