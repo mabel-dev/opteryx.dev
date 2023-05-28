@@ -18,13 +18,14 @@ Create a [SQLAlchemy Engine](https://docs.sqlalchemy.org/en/20/tutorial/engine.h
 
 ~~~python
 from sqlalchemy import create_engine
-# Replace with your connection string, for more information on SQLAlchemy Engine, see
+# Replace with your connection string, for more information on SQLAlchemy
+# Engine, see:
 # https://docs.sqlalchemy.org/en/20/tutorial/engine.html#tutorial-engine
 connection_string = "postgresql+psycopg2://<user>:<password>@<server>/"
 sqlalchemy_engine = create_engine(connection_string)
 
-# Register as a store, so we know queries for this relations with the provided prefix 
-# should be directed to this database
+# Register as a store, so we know queries for this relations with the
+# provided prefix  should be directed to this database
 opteryx.register_store(
     prefix="postgres_example",  # can be any string
     connector=SqlConnector,
