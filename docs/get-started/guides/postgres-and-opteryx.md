@@ -25,7 +25,7 @@ connection_string = "postgresql+psycopg2://<user>:<password>@<server>/"
 sqlalchemy_engine = create_engine(connection_string)
 
 # Register as a store, so we know queries for this relations with the
-# provided prefix  should be directed to this database
+# provided prefix should be directed to this database
 opteryx.register_store(
     prefix="postgres_example",  # can be any string
     connector=SqlConnector,
