@@ -69,6 +69,7 @@ nav:
     - Guides:
       - Pandas Integration: get-started/guides/pandas-and-opteryx.md
       - Polars Integration: get-started/guides/polars-and-opteryx.md
+      - Connect to Postgres: get-started/guides/postgres-and-opteryx.md
       - Convert CSV to Parquet: get-started/guides/convert-csv-to-parquet.md
       - Execute SQL on CSVs: get-started/guides/execute-sql-on-csv.md
     - Deployment Guide: get-started/deployment-guide.md
