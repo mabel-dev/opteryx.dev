@@ -12,16 +12,20 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://opteryx.dev/0.11.0/get-started/guides/_postgres-and-opteryx/">
+        <link rel="canonical" href="https://opteryx.dev/0.11.0/get-started/guides/postgres-and-opteryx/">
       
       
+        <link rel="prev" href="../polars-and-opteryx/">
+      
+      
+        <link rel="next" href="../convert-csv-to-parquet/">
       
       <link rel="icon" href="../../../icarus-opteryx.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>postgres and opteryx - Opteryx</title>
+        <title>Connect to Postgres - Opteryx</title>
       
     
     
@@ -66,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#connecting-to-postgres-using-opteryx" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-               postgres and opteryx
+              Connect to Postgres
             
           </span>
         </div>
@@ -149,13 +158,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../overview/" class="md-tabs__link">
+      <a href="../../overview/" class="md-tabs__link md-tabs__link--active">
         GET STARTED
       </a>
     </li>
@@ -258,14 +269,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
@@ -274,7 +287,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           GET STARTED
@@ -341,14 +354,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
       
       
       
@@ -357,7 +372,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           Guides
@@ -387,6 +402,75 @@
       <a href="../polars-and-opteryx/" class="md-nav__link">
         Polars Integration
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Connect to Postgres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Connect to Postgres
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-postgres-with-opteryx" class="md-nav__link">
+    Registering Postgres with Opteryx
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#querying-postgres-from-opteryx" class="md-nav__link">
+    Querying Postgres from Opteryx
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1326,6 +1410,37 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-postgres-with-opteryx" class="md-nav__link">
+    Registering Postgres with Opteryx
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#querying-postgres-from-opteryx" class="md-nav__link">
+    Querying Postgres from Opteryx
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1343,9 +1458,38 @@
   
 
 
-  <h1> postgres and opteryx</h1>
-
-
+<h1 id="connecting-to-postgres-using-opteryx">Connecting to Postgres using Opteryx</h1>
+<p>This short guide will demonstrate how to connect to Postgres using Opteryx using <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>.</p>
+<h2 id="installation">Installation</h2>
+<p>Install Opteryx and optional libraries for connecting to Postgres.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>opteryx
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>sqlalchemy
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>psycopg2-binary
+</code></pre></div>
+<h2 id="registering-postgres-with-opteryx">Registering Postgres with Opteryx</h2>
+<p>Create a <a href="https://docs.sqlalchemy.org/en/20/tutorial/engine.html#tutorial-engine">SQLAlchemy Engine</a> and register it as a store with Opteryx.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># Replace with your connection string, for more information on SQLAlchemy Engine, see</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># https://docs.sqlalchemy.org/en/20/tutorial/engine.html#tutorial-engine</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">connection_string</span> <span class="o">=</span> <span class="s2">&quot;postgresql+psycopg2://&lt;user&gt;:&lt;password&gt;@&lt;server&gt;/&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">sqlalchemy_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">connection_string</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Register as a store, so we know queries for this relations with the provided prefix </span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1"># should be directed to this database</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">opteryx</span><span class="o">.</span><span class="n">register_store</span><span class="p">(</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;postgres_example&quot;</span><span class="p">,</span>  <span class="c1"># can be any string</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">connector</span><span class="o">=</span><span class="n">SqlConnector</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">remove_prefix</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># the prefix isn&#39;t part of the SQLite table name</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">engine</span><span class="o">=</span><span class="n">sqlalchemy_engine</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">)</span>
+</code></pre></div>
+<h2 id="querying-postgres-from-opteryx">Querying Postgres from Opteryx</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Execute query against the store, the prefix we registered above is used to tell</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># Opteryx that this relation should be read from Postgres using the Engine created</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># and registered above</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM postgres_example.planets LIMIT 5;&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">result</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
 
 
 

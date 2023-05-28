@@ -191,11 +191,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.11.0/get-started/guides/_postgres-and-opteryx/</loc>
-         <lastmod>2023-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://opteryx.dev/0.11.0/get-started/guides/_sqlite-and-opteryx/</loc>
          <lastmod>2023-05-28</lastmod>
          <changefreq>daily</changefreq>
@@ -217,6 +212,11 @@
     </url>
     <url>
          <loc>https://opteryx.dev/0.11.0/get-started/guides/polars-and-opteryx/</loc>
+         <lastmod>2023-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://opteryx.dev/0.11.0/get-started/guides/postgres-and-opteryx/</loc>
          <lastmod>2023-05-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
