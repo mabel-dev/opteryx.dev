@@ -37,9 +37,9 @@ opteryx.register_store(
 ## Querying Postgres from Opteryx
 
 ~~~python
-# Execute query against the store, the prefix we registered above is used to tell
-# Opteryx that this relation should be read from Postgres using the Engine created
-# and registered above
+# Execute query against the store, the prefix we registered above is used
+# to tell Opteryx that this relation should be read from Postgres using
+# the Engine created and registered above
 result = opteryx.query("SELECT * FROM postgres_example.planets LIMIT 5;")
 result.head()
 ~~~
