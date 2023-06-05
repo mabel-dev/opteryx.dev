@@ -16,8 +16,8 @@ We recommend using [pyenv](https://github.com/pyenv/pyenv) to install and manage
 
 ### 2. Install pip   
 
-~~~bash
-python -m ensurepip --upgrade
+~~~console
+> python -m ensurepip --upgrade
 ~~~
 
 ### 3. Install Git   
@@ -30,24 +30,24 @@ Follow the instructions at https://rustup.rs/
 
 ### 5. Clone the Repository   
 
-~~~bash
-git clone https://github.com/mabel-dev/opteryx
+~~~console
+> clone https://github.com/mabel-dev/opteryx
 ~~~
 
 ### 5. Install Dependencies   
 
-~~~bash
-python -m pip install --upgrade -r requirements.txt
+~~~console
+> python -m pip install --upgrade -r requirements.txt
 ~~~
 
-~~~bash
-python -m pip install --upgrade setuptools setuptools_rust numpy cython
+~~~console
+> python -m pip install --upgrade setuptools setuptools_rust numpy cython
 ~~~
 
 ### 6. Build Binaries   
 
-~~~bash
-python setup.py build_ext --inplace
+~~~console
+> python setup.py build_ext --inplace
 ~~~
 
 ## Running Tests
@@ -56,14 +56,14 @@ To run the regression and unit tests:
 
 First, install the optional dependencies:
 
-~~~bash
-python -m pip install --upgrade -r tests/requirements.txt
+~~~console
+> python -m pip install --upgrade -r tests/requirements.txt
 ~~~
 
 Then run the regression tests.
 
-~~~
-python -m pytest
+~~~console
+> python -m pytest
 ~~~
 
 !!! note

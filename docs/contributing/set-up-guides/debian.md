@@ -25,7 +25,7 @@ $ sudo apt-get update
 ~~~
 
 ~~~console
-$sudo apt-get install git
+$ sudo apt-get install git
 ~~~
 
 ### 4. Install Rust
