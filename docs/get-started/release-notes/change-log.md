@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#1034](https://github.com/mabel-dev/opteryx/issues/1034)] Schemas added for the internal sample datasets. [@joocer](https://github.com/joocer) 
 - [[#1038](https://github.com/mabel-dev/opteryx/issues/1038)] Able to pass SqlAlchemy Engine to the SQL Connectors, allowing for more complex authentication scenarios. [@joocer](https://github.com/joocer) 
+- [[#1065](https://github.com/mabel-dev/opteryx/issues/1065)] Support integer division operator `DIV`. [@joocer](https://github.com/joocer) 
 
 ## [0.10.0] - 2023-05-03
 

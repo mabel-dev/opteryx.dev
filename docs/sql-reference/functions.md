@@ -175,6 +175,10 @@ These are functions that are called similar to comparison operators:
 !!! function "_numeric_ `/` _numeric_ → _numeric_"  
     Numeric division
 
+!!! function "_numeric_ `DIV` _numeric_ → _integer_"   
+    ** :octicons-star-16: New in 0.11**  
+    Integer division
+
 !!! function "_numeric_ `%` _numeric_ → _numeric_"  
     Numeric modulo (remainder)
 
