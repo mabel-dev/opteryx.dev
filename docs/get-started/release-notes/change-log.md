@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
+- [[#1069](https://github.com/mabel-dev/opteryx/issues/1069)] Minor improvements identified during code review. [@joocer](https://github.com/joocer) 
+
 ### Changed
 
 - [[#808](https://github.com/mabel-dev/opteryx/issues/808)] Rewrite of AST to Logical plan. [@joocer](https://github.com/joocer) 
