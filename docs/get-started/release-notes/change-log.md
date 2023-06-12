@@ -10,7 +10,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- [[#1069](https://github.com/mabel-dev/opteryx/issues/1069)] Minor improvements identified during code review. [@joocer](https://github.com/joocer) 
+- [[#1069](https://github.com/mabel-dev/opteryx/issues/1069)] Minor improvements identified during code review of code to generate numeric series. [@joocer](https://github.com/joocer) 
+- [[#1072](https://github.com/mabel-dev/opteryx/issues/1072)] Minor improvements identified during code review of code to handle dates and intervals. [@joocer](https://github.com/joocer) 
+
 
 ### Changed
 
