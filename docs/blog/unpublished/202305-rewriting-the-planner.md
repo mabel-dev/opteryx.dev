@@ -1,4 +1,12 @@
 
+Version 0.11 looks pretty bare on the changelog, however a lot of work has been going on writing the new query planner. This is a major overhaul of this component and is the core part of phase one of a two-phase piece of work which aims to improve performance of the engine by implementing the following:
+
+- Parallel execution of plans
+- Predicate and Projection Pushdowns (*)
+
+(*) This currently is done by trial-and-error and only on queries on a single relation
+
+The second phase is primarily focused on rewriting the execution engine.
 
 Writing the query planner isn't a small task, it's one of the four big components of Opteryx:
 
@@ -7,7 +15,7 @@ Writing the query planner isn't a small task, it's one of the four big component
 - The operators
 - The execution engine
 
-Looked at SQLGlot, which I recommend if you're looking at writing an engine from scratch; it comes with a hueristic optimizer.
+We took a serious look at SQLGlot, submitting some PRs whilst we reviewed to help ensure we were familiar with the internals of this library. We would recommend that if you're looking at writing an query engine in Python from scratch, it has a lot of great features included.
 
 We're continuing to use sqlparser-rs, this is in part because there's some syntax SQLGlot doesn't support and there is already a wealth of supporting code in Opteryx for sqlparser-rs.
 

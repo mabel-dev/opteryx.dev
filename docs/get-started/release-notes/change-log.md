@@ -6,22 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.11.0] - Unreleased
 
-### Warnings
-
 ### Fixed
 
 - [[#1069](https://github.com/mabel-dev/opteryx/issues/1069)] Minor improvements identified during code review of code to generate numeric series. [@joocer](https://github.com/joocer) 
 - [[#1072](https://github.com/mabel-dev/opteryx/issues/1072)] Minor improvements identified during code review of code to handle dates and intervals. [@joocer](https://github.com/joocer) 
-
+- [[#1026](https://github.com/mabel-dev/opteryx/pull/1026)] Removed pin to version 0.11 of PyArrow [dependabot](https://github.com/apps/dependabot) 
 
 ### Changed
 
 - [[#808](https://github.com/mabel-dev/opteryx/issues/808)] Rewrite of AST to Logical plan. [@joocer](https://github.com/joocer) 
 - [[#1031](https://github.com/mabel-dev/opteryx/issues/1031)] `.to_df` deprecation complete. [@joocer](https://github.com/joocer) 
-- [[#356](https://github.com/mabel-dev/opteryx/issues/356)]/1 Prepositioning changes for extended types. [@joocer](https://github.com/joocer) 
+- [[#356](https://github.com/mabel-dev/opteryx/issues/356)] Prepositioning changes for extended types. [@joocer](https://github.com/joocer) 
 - [[#1046](https://github.com/mabel-dev/opteryx/pull/1046)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.34.0 [dependabot](https://github.com/apps/dependabot) 
 - [[#1017](https://github.com/mabel-dev/opteryx/discussions/1017)] Fuzzy matching for suggestions is punctuation insensitive [@joocer](https://github.com/joocer) 
 - [[#1060](https://github.com/mabel-dev/opteryx/issues/1060)] Conditional test execution made more explicit. [@joocer](https://github.com/joocer) 
+- [[#1026](https://github.com/mabel-dev/opteryx/pull/1026)] Timeout FireStore connection. [@joocer](https://github.com/joocer) 
 
 ### Added
 
