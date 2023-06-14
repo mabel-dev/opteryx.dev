@@ -1359,6 +1359,13 @@
 
   <h1>202305 rewriting the planner</h1>
 
+<p>Version 0.11 looks pretty bare on the changelog, however a lot of work has been going on writing the new query planner. This is a major overhaul of this component and is the core part of phase one of a two-phase piece of work which aims to improve performance of the engine by implementing the following:</p>
+<ul>
+<li>Parallel execution of plans</li>
+<li>Predicate and Projection Pushdowns (*)</li>
+</ul>
+<p>(*) This currently is done by trial-and-error and only on queries on a single relation</p>
+<p>The second phase is primarily focused on rewriting the execution engine.</p>
 <p>Writing the query planner isn't a small task, it's one of the four big components of Opteryx:</p>
 <ul>
 <li>The planner</li>
@@ -1366,7 +1373,7 @@
 <li>The operators</li>
 <li>The execution engine</li>
 </ul>
-<p>Looked at SQLGlot, which I recommend if you're looking at writing an engine from scratch; it comes with a hueristic optimizer.</p>
+<p>We took a serious look at SQLGlot, submitting some PRs whilst we reviewed to help ensure we were familiar with the internals of this library. We would recommend that if you're looking at writing an query engine in Python from scratch, it has a lot of great features included.</p>
 <p>We're continuing to use sqlparser-rs, this is in part because there's some syntax SQLGlot doesn't support and there is already a wealth of supporting code in Opteryx for sqlparser-rs.</p>
 <p>Why?</p>
 <p>The need for significant changes to the planning phase was primarily driven by wanting to improve the optimizer. Whilst some heuristic optimizations have been implemented, some relied on queries only having a single table (predicate pushdowns) or relied on run-time trial-and-error (projection pushdowns). This was almost entirely due to not knowing the columns in the table before the execution step ran.</p>
