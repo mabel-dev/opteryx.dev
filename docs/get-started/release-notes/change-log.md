@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.12.0] - Unreleased
+
+### Fixed
+
+- [[#1080](https://github.com/mabel-dev/opteryx/issues/1080)] Windows regression test failures. [@joocer](https://github.com/joocer) 
+
 ## [0.11.0] - 2023-06-16
 
 ### Fixed
