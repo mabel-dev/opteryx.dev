@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#1080](https://github.com/mabel-dev/opteryx/issues/1080)] Windows regression test failures. [@joocer](https://github.com/joocer) 
 
+### Changed
+
+- [[#1083](https://github.com/mabel-dev/opteryx/issues/1083)] Simplify the handling of Query Statistics. [@joocer](https://github.com/joocer) 
+
 ## [0.11.0] - 2023-06-16
 
 ### Fixed
