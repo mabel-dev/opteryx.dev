@@ -16,10 +16,9 @@ jobs:
       - run: git config user.email XB500@users.noreply.github.com
       - run: git fetch origin gh-pages --depth=1
       - run: pip install --upgrade mkdocs-material mike termynal
-  
-      - run: mike delete "0.4.1"
-      - run: mike delete "0.5.0"
-      - run: mike delete "0.6.0"
+
+#      keep five versions  
+#      - run: mike delete "0.6.0"
 
       # this should match the version
 #      - run: mike delete latest
