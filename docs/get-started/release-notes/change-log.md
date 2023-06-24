@@ -12,7 +12,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
-- [[#1083](https://github.com/mabel-dev/opteryx/issues/1083)] Simplify the handling of Query Statistics. [@joocer](https://github.com/joocer) 
+- [[#1083](https://github.com/mabel-dev/opteryx/issues/1083)] Simplify the handling of Query Statistics. [@joocer](https://github.com/joocer)
+- [[#1086](https://github.com/mabel-dev/opteryx/pull/1086)] Update [Pythonize](https://github.com/davidhewitt/pythonize) to v0.19 and [py03](https://github.com/PyO3/pyo3) to v0.19.0 [dependabot](https://github.com/apps/dependabot) 
+
 
 ## [0.11.0] - 2023-06-16
 
