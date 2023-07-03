@@ -21,7 +21,7 @@
         <link rel="next" href="../adv-information-schema/">
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -1386,18 +1386,21 @@
 
 <h1 id="sample-data">Sample Data</h1>
 <p>There are three built-in relations for demonstration and testing.</p>
-<p>&emsp;<code>$satellites</code> (8 columns, 177 rows) <br />
-&emsp;<code>$planets</code> (20 columns, 9 rows) <strong>#plutoisaplanet</strong> <br />
-&emsp;<code>$astronauts</code> (19 columns,  357 rows)   </p>
+<ul>
+<li><code>$satellites</code> (8 columns, 177 rows)   </li>
+<li><code>$planets</code> (20 columns, 9 rows) <strong>#plutoisaplanet</strong>   </li>
+<li><code>$astronauts</code> (19 columns,  357 rows)   </li>
+</ul>
 <p>Satellite and Planet datasets acquired from <a href="https://github.com/devstronomy/nasa-data-scraper/tree/f610e541a053f05e26573570604aed50b358cc43/data/json">this source</a>.</p>
 <p>Astronaut dataset acquired from <a href="https://www.kaggle.com/nasa/astronaut-yearbook">Kaggle</a>.</p>
 <p>These relations are prefixed with a dollar sign (<code>$</code>) and can be accessed as per user datasets. For example:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span><span class="p">;</span>
 </code></pre></div>
+<p>These datasets are used extensively for regression testing Opteryx, but may also be used for testing and demonstration.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A dataset called <code>$no_table</code> is used internally to represent no table has been specified, this is not intended for end-users and should not be used.</p>
+<p>A dataset called <code>$no_table</code> and a dataset called <code>$calculated</code> are used internally and are not intended for end-users and should not be used.</p>
 </div>
 
 
@@ -1493,10 +1496,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
           <script src="../../termynal.js"></script>
