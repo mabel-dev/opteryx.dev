@@ -6,19 +6,20 @@ The engine supports a reduced set of types compared to full DBMS platforms.
 
 Name        | Description
 ----------- | --------------
+`ARRAY`     |
 `BOOLEAN`   | Logical boolean (True/False).
-`NUMERIC`   | All numeric types.
-`LIST`      | An ordered sequence of strings.
+`DOUBLE`    | 
+`INTEGER`   |
+`DECIMAL` :octicons-star-16:  |
 `VARCHAR`   | Variable-length character string.
 `STRUCT`    | A dictionary of multiple named values, where each key is a string, but the value can be a different type for each key.
+`DATE`      |
 `TIMESTAMP` | Combination of date and time.
-`INTERVAL`  | The difference between two TIMESTAMP values
-`INET`      | Network Range
+`INTERVAL` :octicons-star-16: | The difference between two TIMESTAMP values
+`INET`     :octicons-star-16: | Network Range
 
 !!! Note  
-    - `INTERVAL` may not support all functions in all circumstances.  
-    - `LIST`s of non-string values have limited support.
-    - `INET` has very limited support.
+    Types marked with :octicons-star-16: (DECIMAL, INTERVAL and INET) have limited support.
 
 ## Casting
 
@@ -42,11 +43,11 @@ Where unit can be 'Year', 'Month', 'Day', 'Hour', 'Minute' or 'Second'.
 
 ## Coercion
 
-### Timestamps
+### Timestamps & Dates
 
-Literal values in quotes may be in interpreted as a `TIMESTAMP` when they match a valid date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)  format (e.g. `YYYY-MM-DD` and `YYYY-MM-DD HH:MM`).
+Literal values in quotes may be in interpreted as a `TIMESTAMP` or `DATE` when they match a valid date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)  format (e.g. `YYYY-MM-DD` and `YYYY-MM-DD HH:MM`). The decision regarding coercising to a `DATE` if there is no time component to the value, otherwise it will be coerced to a `TIMESTAMP`. 
 
-All `TIMESTAMP` and date values read from datasets are coerced to nanosecond precision timestamps.
+All `TIMESTAMP` and values read from datasets are coerced to nanosecond precision timestamps.
 
 ### Numbers
 
