@@ -21,7 +21,7 @@
         <link rel="next" href="../adv-null-semantics/">
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -1507,7 +1507,7 @@
 <p>Data from a specific, single, date can be obtained using the <code>FOR date</code> syntax. </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>FOR date
 </code></pre></div>
-<p>Date values in <code>FOR</code> clauses must either be in 'YYYY-MM-DD' format or a recognised date placeholder, for example.</p>
+<p>Date values in <code>FOR</code> clauses must either be in 'YYYY-MM-DD [HH:MM]' format or a recognised date placeholder, for example.</p>
 <ul>
 <li><code>FOR TODAY</code></li>
 <li><code>FOR YESTERDAY</code></li>
@@ -1517,9 +1517,12 @@
 <p>Data within a range of dates can be specified using <code>FOR DATES BETWEEN</code> or <code>FOR DATES IN</code> syntax. Where data is retrieved for multiple dates, the datasets for each day have an implicit <code>UNION ALL</code> applied to them.</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>FOR DATES BETWEEN start AND end
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>FOR DATES IN range
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>FOR DATES SINCE start
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FOR DATES IN range
 </code></pre></div></p>
-<p>Date values in <code>BETWEEN</code> clauses must either be in 'YYYY-MM-DD' format or a recognized date placeholder, for example:</p>
+<p><code>SINCE</code> clauses select a temporal range which spans from the provided start time until now.</p>
+<p>Date values in <code>BETWEEN</code> and <code>SINCE</code> clauses must either be in 'YYYY-MM-DD [HH:MM]' format or a recognized date placeholder, for example:</p>
 <ul>
 <li><code>FOR DATES BETWEEN '2000-01-01' AND TODAY</code></li>
 <li><code>FOR DATES BETWEEN '2020-04-01' AND '2020-04-30'</code></li>
@@ -1571,33 +1574,33 @@
 </div>
 <h2 id="time-travel_1">Time Travel</h2>
 <p>You can query dates or date ranges using a <code>FOR</code> clause in your query. For example to view the contents of partition</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="n">YESTERDAY</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="n">YESTERDAY</span><span class="p">;</span>
 </code></pre></div>
 <p>This technique is well suited to viewing snapshotted datasets from a previoud point in time. </p>
 <p>The '$planets' sample dataset has special handling to respond to temporal queries; Uranus was discovered in 1846 and Pluto was discovered in 1930, we and use the <code>FOR</code> clause to query the '$planets' relation from before those planets were discovered like this:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="s1">&#39;1846-01-01&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="s1">&#39;1846-01-01&#39;</span><span class="p">;</span>
 </code></pre></div>
 <p>Returns (order may differ):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>name
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>-------
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Mercury
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Venus
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Earth
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Mars
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>Jupiter
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Saturn
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>Neptune
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>name
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>-------
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Mercury
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Venus
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Earth
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>Mars
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>Jupiter
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>Saturn
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Neptune
 </code></pre></div>
 <h2 id="accumulation">Accumulation</h2>
 <p>For datasets which are continually added to, such as logs, the <code>FOR</code> clause can be used to quickly filter ranges of records to search over. The <code>FOR</code> clause will most likely record the date the record was written (the 'SYSTEM_TIME' for the record) which may not be the same as the logical or effective date for a record, especially in situations where there is a lag in the records being recorded.</p>
 <p>The <code>BETWEEN</code> keyword can be used to describe ranges of records, this is useful for querying logged data between two dates.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="n">DATES</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;2021-01-01&#39;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="s1">&#39;2022-12-31&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="n">DATES</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;2021-01-01&#39;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="s1">&#39;2022-12-31&#39;</span><span class="p">;</span>
 </code></pre></div>
 
 
