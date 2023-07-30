@@ -24,7 +24,7 @@ Data from a specific, single, date can be obtained using the `FOR date` syntax.
 FOR date
 ~~~
 
-Date values in `FOR` clauses must either be in 'YYYY-MM-DD' format or a recognised date placeholder, for example.
+Date values in `FOR` clauses must either be in 'YYYY-MM-DD [HH:MM]' format or a recognised date placeholder, for example.
 
 - `FOR TODAY`
 - `FOR YESTERDAY`
@@ -38,10 +38,15 @@ Data within a range of dates can be specified using `FOR DATES BETWEEN` or `FOR 
 FOR DATES BETWEEN start AND end
 ~~~
 ~~~
+FOR DATES SINCE start
+~~~
+~~~
 FOR DATES IN range
 ~~~
 
-Date values in `BETWEEN` clauses must either be in 'YYYY-MM-DD' format or a recognized date placeholder, for example:
+`SINCE` clauses select a temporal range which spans from the provided start time until now.
+
+Date values in `BETWEEN` and `SINCE` clauses must either be in 'YYYY-MM-DD [HH:MM]' format or a recognized date placeholder, for example:
 
 - `FOR DATES BETWEEN '2000-01-01' AND TODAY`
 - `FOR DATES BETWEEN '2020-04-01' AND '2020-04-30'`
