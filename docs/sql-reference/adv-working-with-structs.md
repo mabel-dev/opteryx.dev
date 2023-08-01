@@ -47,7 +47,7 @@ Structs have the following limitations
 
 - Statements cannot `ORDER BY` a struct column
 - Statements cannot contain `DISTINCT` and `JOIN` when the relations include struct columns
-- Structs cannot be used in comparisons
+- Structs cannot be used in comparisons, however, their component values can be
 
 !!! Note  
     Some restrictions may be resolved by the query optimizer, for example, Projection Pushdown may remove struct columns as part of optimization. However, you should not rely on the optimizer to take any particular action.
