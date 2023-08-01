@@ -1515,12 +1515,12 @@
 </ul>
 <h2 id="date-ranges">Date Ranges</h2>
 <p>Data within a range of dates can be specified using <code>FOR DATES BETWEEN</code> or <code>FOR DATES IN</code> syntax. Where data is retrieved for multiple dates, the datasets for each day have an implicit <code>UNION ALL</code> applied to them.</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>FOR DATES BETWEEN start AND end
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>FOR DATES BETWEEN start AND end
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>FOR DATES SINCE start
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FOR DATES IN range
-</code></pre></div></p>
+</code></pre></div>
 <p><code>SINCE</code> clauses select a temporal range which spans from the provided start time until now.</p>
 <p>Date values in <code>BETWEEN</code> and <code>SINCE</code> clauses must either be in 'YYYY-MM-DD [HH:MM]' format or a recognized date placeholder, for example:</p>
 <ul>

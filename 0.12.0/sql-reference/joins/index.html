@@ -1487,10 +1487,10 @@
 <h1 id="joins">Joins</h1>
 <p>Joins allow you to combine data from multiple relations into a single relation. There are a number of different join types available, each combines relations in different ways.</p>
 <h2 id="cross-join">CROSS JOIN</h2>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>FROM left_relation CROSS JOIN right_relation
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>FROM left_relation CROSS JOIN right_relation
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>FROM left_relation, right_relation
-</code></pre></div></p>
+</code></pre></div>
 <p>A <code>CROSS JOIN</code> returns the Cartesian product (all combinations) of two relations. Cross joins can either be specified using the explicit <code>CROSS JOIN</code> syntax or by specifying multiple relations in the <code>FROM</code> clause.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">left_relation</span>
