@@ -17,7 +17,9 @@ SELECT *
   FROM $planets;
 ~~~
 
-These datasets are used extensively for regression testing Opteryx, but may also be used for testing and demonstration.
+These datasets are used extensively for regression testing Opteryx, but may also be used for testing and demonstration. They are part of the query engine and are available to be queried on all operational instances of Opteryx. Although these datasets may represent data that may change over time, these datasets are fixed in content to provide a reliable and consistent dataset for testing.
+
+Note however, that the `$planets` dataset is temporal and using the [Time Travel](../adv-time-travel/) feature of Opteryx will return different results based on the date provided.
 
 !!! Note  
-    A dataset called `$no_table` and a dataset called `$derived` are used internally and are not intended for end-users and should not be used.
+    Other internal datasets exist, these all have a first character of `$`. These are not intended for end-users and should not be used. Their name, purpose and structure is not guarnteed to remain consistent or intended to be useful outside the internal state of Opteryx.
