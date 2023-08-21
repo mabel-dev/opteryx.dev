@@ -22,8 +22,18 @@ Example:
 
 ~~~sql
 SELECT birth_place['town']
-  FROM $astronauts
+  FROM $astronauts;
 ~~~
+
+Struct values can be treated the same as other identifiers and, for example, used within `SELECT`, `WHERE` and `GROUP BY` clauses:
+
+~~~sql
+SELECT birth_place['town'], COUNT(*)
+  FROM $astronauts
+ WHERE birth_place['state'] IS NOT NULL
+ GROUP BY birth_place['town'];
+~~~
+
 
 ### Searching
 
@@ -38,7 +48,7 @@ Example:
 ~~~sql
 SELECT name,
        SEARCH(birth_place, 'Italy')
-  FROM $astronauts
+  FROM $astronauts;
 ~~~
 
 ## Limitations
@@ -48,6 +58,7 @@ Structs have the following limitations
 - Statements cannot `ORDER BY` a struct column
 - Statements cannot contain `DISTINCT` and `JOIN` when the relations include struct columns
 - Structs cannot be used in comparisons, however, their component values can be
+- Subscript references (the bit in square brackets) must be in single quotes only
 
 !!! Note  
     Some restrictions may be resolved by the query optimizer, for example, Projection Pushdown may remove struct columns as part of optimization. However, you should not rely on the optimizer to take any particular action.
