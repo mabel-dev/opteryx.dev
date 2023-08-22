@@ -20,20 +20,8 @@ The above query batch contains two statements, the `SET` and the `SELECT` separa
 
 Query parameters which affect the execution of the query can be tuned on a per-query basis using the `SET` statement.
 
-!!! function "`enable_optimizer`: _boolean_ = **True**"    
-    Use the query optimizer.
-
-!!! function "`internal_batch_size`: _int_ = **500**"    
-    The maximum input frame size for `JOIN`s.
-
-!!! function "`max_join_size`: _int_ = **10000**"    
-    The maximum number of records to create in a `CROSS JOIN` frame.
-
-!!! function "`morsel_size`: _int_ = **67108864**"     
-    Target morsel Size in bytes - default is 64Mb.
-
-!!! function "`enable_morsel_defragmentation`: _boolean_ = **True**"
-    Use the internal morsel defragmentation (split large morsels and merge small morsels)
+!!! function "`disable_optimizer`: _boolean_ = **false**"    
+    Disable the use of the query optimizer (default is **false**).
 
 ## WITH hints
 
