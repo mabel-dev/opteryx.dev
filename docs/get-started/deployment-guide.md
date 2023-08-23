@@ -24,20 +24,21 @@ Opteryx balances memory consumption with performance, however, being able to pro
 
 Opteryx can be installed and deployed on a number of different platforms. It has heavy dependency on [Apache Arrow](https://arrow.apache.org/) and cannot be run on systems which do not support Arrow.
 
-The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.8, 3.9, 3.10 and 3.11. The below table shows regression suite coverage:
+The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.9, 3.10 and 3.11. The below table shows regression suite coverage:
 
-OS                | Python 3.8 | Python 3.9 | Python 3.10 | Python 3.11 |
------------------ | :--------: | :--------: | :---------: | :---------: |
-MacOS (x86/Intel) | Partial    | Partial    | Partial     | Partial
-Windows (x86)     | Partial    | Partial    | Partial     | Partial
-Ubuntu (x86)      | Full       | Full       | Full        | Full
-Debian (ARM)      | None       | Partial    | None        | None
+OS                | Python 3.9 | Python 3.10 | Python 3.11 |
+----------------- | :--------: | :---------: | :---------: |
+MacOS (x86/Intel) | Partial    | Partial     | Partial
+Windows (x86)     | Partial    | Partial     | Partial
+Ubuntu (x86)      | Full       | Full        | Full
+Debian (ARM)      | Partial    | None        | None
 
 &emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from Ubuntu Python 3.10 tests.  
 &emsp;**Partial** - some tests are excluded from the test suite or that some tests fail.  
 &emsp;**None** - there is no automated test for this configuration.  
 
 !!! Note
+    - Python 3.8 last supported version 0.11.0
     - PyPy regression suite fails due to issues with Apache Arrow.
     - MacOs (M1) is not included in the regression suite due to lack of support on the test platform, however there is known usage on this configuration.
     - Windows (ARM) is not included in the regression suite due to lack of support on the test platform.
@@ -47,11 +48,11 @@ Debian (ARM)      | None       | Partial    | None        | None
 
 **Recommended Version**: 3.9
 
-Opteryx supports Python versions 3.8, 3.9, 3.10 and 3.11.
+Opteryx supports Python versions 3.9, 3.10 and 3.11.
 
-Opteryx has builds for Python 3.8, 3.9, 3.10 and 3.11 on 64-bit (x86) versions of Windows, MacOS and Linux and ARM versions of MacOS and Linux.
+Opteryx has builds for Python 3.9, 3.10 and 3.11 on 64-bit (x86) versions of Windows, MacOS and Linux and ARM versions of MacOS and Linux.
 
-Opteryx is primarily developed on workstations running Python 3.10 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 has the greatest test coverage due to it being supported on more platforms.
+Opteryx is primarily developed on workstations running Python 3.11 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 has the greatest test coverage due to it being supported on more platforms.
 
 ### Jupyter Notebooks
 
@@ -86,7 +87,7 @@ Google Cloud Storage | GcpCloudStorageConnector | Blob/File Store
 Google FireStore     | GcpFireStoreConnector    | Document Store
 Local Disk           | DiskConnector            | Blob/File Store
 MinIo                | AwsS3Connector           | Blob/File Store
-MongoDB              | MongoDbConnector         | Document Store
+MongoDB *            | MongoDbConnector         | Document Store
 DuckDB               | SqlConnector             | SQL Store
 MySQL                | SqlConnector             | SQL Store
 Postgres             | SqlConnector             | SQL Store
@@ -200,7 +201,7 @@ Opteryx supports:
 
 ### File Sizes
 
-Opteryx loads entire files (morsels) into memory one at a time, this requires the following to be considered:
+Opteryx loads entire files into memory at a time, this requires the following to be considered:
 
 - Reading one record from a file loads the entire blob. If you regularly only read a few records, prefer smaller blobs.
 - Reading each blob, particularly from Cloud Storage (S3/GCS), incurs a per-read overhead. If you have large datasets, prefer larger blobs.

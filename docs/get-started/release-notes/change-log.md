@@ -29,6 +29,10 @@ _The following features were previously supported by the engine but have not bee
 
 ### Added
 
+### Removed
+
+- :octicons-alert-24: Python 3.8 is no longer supported. [@joocer](https://github.com/joocer)  
+
 - `DATES SINCE` temporal filter syntax added. [@joocer](https://github.com/joocer) 
 
 ## [0.11.0] - 2023-06-16
