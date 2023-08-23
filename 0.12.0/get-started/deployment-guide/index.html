@@ -1890,12 +1890,11 @@
 <h3 id="operating-system-support">Operating System Support</h3>
 <p><strong>Recommended Operating System</strong>: Ubuntu 20 (64bit)</p>
 <p>Opteryx can be installed and deployed on a number of different platforms. It has heavy dependency on <a href="https://arrow.apache.org/">Apache Arrow</a> and cannot be run on systems which do not support Arrow.</p>
-<p>The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.8, 3.9, 3.10 and 3.11. The below table shows regression suite coverage:</p>
+<p>The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.9, 3.10 and 3.11. The below table shows regression suite coverage:</p>
 <table>
 <thead>
 <tr>
 <th>OS</th>
-<th style="text-align: center;">Python 3.8</th>
 <th style="text-align: center;">Python 3.9</th>
 <th style="text-align: center;">Python 3.10</th>
 <th style="text-align: center;">Python 3.11</th>
@@ -1907,11 +1906,9 @@
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
-<td style="text-align: center;">Partial</td>
 </tr>
 <tr>
 <td>Windows (x86)</td>
-<td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
@@ -1921,11 +1918,9 @@
 <td style="text-align: center;">Full</td>
 <td style="text-align: center;">Full</td>
 <td style="text-align: center;">Full</td>
-<td style="text-align: center;">Full</td>
 </tr>
 <tr>
 <td>Debian (ARM)</td>
-<td style="text-align: center;">None</td>
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">None</td>
 <td style="text-align: center;">None</td>
@@ -1938,6 +1933,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
+<li>Python 3.8 last supported version 0.11.0</li>
 <li>PyPy regression suite fails due to issues with Apache Arrow.</li>
 <li>MacOs (M1) is not included in the regression suite due to lack of support on the test platform, however there is known usage on this configuration.</li>
 <li>Windows (ARM) is not included in the regression suite due to lack of support on the test platform.</li>
@@ -1946,9 +1942,9 @@
 </div>
 <h3 id="python-environment">Python Environment</h3>
 <p><strong>Recommended Version</strong>: 3.9</p>
-<p>Opteryx supports Python versions 3.8, 3.9, 3.10 and 3.11.</p>
-<p>Opteryx has builds for Python 3.8, 3.9, 3.10 and 3.11 on 64-bit (x86) versions of Windows, MacOS and Linux and ARM versions of MacOS and Linux.</p>
-<p>Opteryx is primarily developed on workstations running Python 3.10 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 has the greatest test coverage due to it being supported on more platforms.</p>
+<p>Opteryx supports Python versions 3.9, 3.10 and 3.11.</p>
+<p>Opteryx has builds for Python 3.9, 3.10 and 3.11 on 64-bit (x86) versions of Windows, MacOS and Linux and ARM versions of MacOS and Linux.</p>
+<p>Opteryx is primarily developed on workstations running Python 3.11 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 has the greatest test coverage due to it being supported on more platforms.</p>
 <h3 id="jupyter-notebooks">Jupyter Notebooks</h3>
 <p>Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3.</p>
 <p>It is recommended that the Notebook host is located close to the data being queried - such as running Vertex AI Notebooks if the data sources are primarily on GCP, or querying local files if running Jupyter on a local device. Other configurations will work, but are less optimal.</p>
@@ -1997,7 +1993,7 @@
 <td>Blob/File Store</td>
 </tr>
 <tr>
-<td>MongoDB</td>
+<td>MongoDB *</td>
 <td>MongoDbConnector</td>
 <td>Document Store</td>
 </tr>
@@ -2106,7 +2102,7 @@
 </ul>
 </div>
 <h3 id="file-sizes">File Sizes</h3>
-<p>Opteryx loads entire files (morsels) into memory one at a time, this requires the following to be considered:</p>
+<p>Opteryx loads entire files into memory at a time, this requires the following to be considered:</p>
 <ul>
 <li>Reading one record from a file loads the entire blob. If you regularly only read a few records, prefer smaller blobs.</li>
 <li>Reading each blob, particularly from Cloud Storage (S3/GCS), incurs a per-read overhead. If you have large datasets, prefer larger blobs.</li>
