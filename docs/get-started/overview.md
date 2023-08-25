@@ -2,7 +2,7 @@
 
 Opteryx is a SQL query engine designed to query large datasets in low-cost serverless environments. While it can respond to a subset of SQL statements like a database, Opteryx is not a database itself and does not support activities that insert, update, or delete data.
 
-Opteryx is not intended to replace databases like SQL Server, MySQL, or Postgres. Rather, it's designed to allow querying of data sources as part of a data analytics process.
+Opteryx is not intended to replace databases like SQL Server, MySQL, or Postgres. Instead, it's designed to allow querying of data sources as part of a data analytics process.
 
 Opteryx doesn't rely on any internal state between queries. This means it can run in serverless environments where servers can be created and destroyed regularly, or even between every query. While the engine does use caching to improve performance, it doesn't maintain any persistent state, making it an ideal solution for cloud-based analytics. (_the engine does use caching to improve performance_)
 

@@ -43,3 +43,7 @@ opteryx.register_store(
 result = opteryx.query("SELECT * FROM postgres_example.planets LIMIT 5;")
 result.head()
 ~~~
+
+## Other Services
+
+Opteryx supports connecting to other SQL engines using this method, such as MySQL, CockroachDB and DuckDB.

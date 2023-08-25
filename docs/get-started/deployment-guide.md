@@ -88,6 +88,7 @@ Google FireStore     | GcpFireStoreConnector    | Document Store
 Local Disk           | DiskConnector            | Blob/File Store
 MinIo                | AwsS3Connector           | Blob/File Store
 MongoDB *            | MongoDbConnector         | Document Store
+Cockroach DB         | SqlConnector             | SQL Store
 DuckDB               | SqlConnector             | SQL Store
 MySQL                | SqlConnector             | SQL Store
 Postgres             | SqlConnector             | SQL Store
