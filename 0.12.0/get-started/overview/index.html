@@ -392,6 +392,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cloud-native" class="md-nav__link">
+    Cloud Native
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1871,6 +1878,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cloud-native" class="md-nav__link">
+    Cloud Native
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1890,9 +1904,8 @@
 
 
 <h1 id="opteryx-overview">Opteryx Overview</h1>
-<p>Opteryx is a SQL query engine designed to query large datasets in low-cost serverless environments. While it can respond to a subset of SQL statements like a database, Opteryx is not a database itself and does not support activities that insert, update, or delete data.</p>
-<p>Opteryx is not intended to replace databases like SQL Server, MySQL, or Postgres. Instead, it's designed to allow querying of data sources as part of a data analytics process.</p>
-<p>Opteryx doesn't rely on any internal state between queries. This means it can run in serverless environments where servers can be created and destroyed regularly, or even between every query. While the engine does use caching to improve performance, it doesn't maintain any persistent state, making it an ideal solution for cloud-based analytics. (<em>the engine does use caching to improve performance</em>)</p>
+<p>Opteryx revolutionizes your data landscape by serving as a seamless federator for diverse data sources. With Opteryx, you're not just querying a database — you're operating a data control room. Unify your data sources, viewing across Postgres databases, Parquet files, and even more specialized storage solutions, all through a single pane of glass. Opteryx empowers you to transcend data silos, synchronize insights, and command your entire data ecosystem with unparalleled speed and reliability.</p>
+<p>Opteryx is not intended to replace databases like SQL Server, MySQL, or Postgres. Instead, it's designed to allow querying of data sources as part of a data analytics process. By bridging the gap between various data storages, Opteryx enhances your analytics pipeline, enabling you to focus on drawing actionable insights rather than wrestling with data access and compatibility issues.</p>
 <h2 id="benefits">Benefits</h2>
 <ul>
 <li><strong>Querying large datasets across multiple platforms</strong> - Opteryx allows you to query multiple query engines and storage formats in a single query. This makes it useful for querying large datasets that are stored in different formats or locations.</li>
@@ -1913,6 +1926,10 @@
 <p>'X' is great, and for your use case it may be a better option. Opteryx isn't for all users and all use cases - and we're okay with that.</p>
 <p>SQLite and DuckDB are great choices if you're looking for an embedded database engine. We like them so much we have SQLite and DuckDB integration tests in our CI test-suite.</p>
 <p>Postgres and MySQL are great choices if you're looking for a server/client style database engine. They are tried and tested and solve this problem very well. We like them so much we have Postgres and MySQL integration tests in our CI test-suite.</p>
+<p>Opteryx allows you to have the right database or datastore for the job, and combine them all together. Want to combine Customer database in Postgres, logs in JSONL and monthly sales reports in Parquet; do it - you have the freedom to choose the right tool for a specific task and still be able to join and search across all of them with Opteryx.</p>
+<h2 id="cloud-native">Cloud Native</h2>
+<p>Opteryx is a SQL query engine designed to query large datasets in low-cost serverless environments. While it can respond to a subset of SQL statements like a database, Opteryx is not a database itself and does not support activities that insert, update, or delete data.</p>
+<p>Opteryx doesn't rely on any internal state between queries. This means it can run in serverless environments where servers can be created and destroyed regularly, or even between every query. While the engine does use caching to improve performance, it doesn't maintain any persistent state, making it an ideal solution for cloud-based analytics. (<em>the engine does use caching to improve performance</em>)</p>
 
 
 
