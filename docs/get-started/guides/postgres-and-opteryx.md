@@ -29,7 +29,7 @@ sqlalchemy_engine = create_engine(connection_string)
 opteryx.register_store(
     prefix="postgres_example",  # can be any string
     connector=SqlConnector,
-    remove_prefix=True,  # the prefix isn't part of the SQLite table name
+    remove_prefix=True,  # the prefix isn't part of the Postgres table name
     engine=sqlalchemy_engine,
 )
 ~~~
