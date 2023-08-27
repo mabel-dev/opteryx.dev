@@ -1816,7 +1816,7 @@
 <p>This feature can also be used to convert between all of the file types Opteryx supports. Input file types include Parquet, Avro, JSONL, and ORC. Output file types include Parquet, JSONL, and CSV.</p>
 <p><strong>Command Line</strong></p>
 <p>To convert a CSV file to a Parquet file, use the following command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>opteryx<span class="w"> </span>--taxi_trips.parquet<span class="w"> </span><span class="s2">&quot;SELECT * FROM &#39;taxi_trips.csv&#39;;&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>opteryx<span class="w"> </span>--o<span class="w"> </span><span class="s1">&#39;taxi_trips.parquet&#39;</span><span class="w"> </span><span class="s2">&quot;SELECT * FROM &#39;taxi_trips.csv&#39;;&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
