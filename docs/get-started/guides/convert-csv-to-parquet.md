@@ -9,7 +9,7 @@ This feature can also be used to convert between all of the file types Opteryx s
 To convert a CSV file to a Parquet file, use the following command:
 
 ~~~ console
-$ opteryx --taxi_trips.parquet "SELECT * FROM 'taxi_trips.csv';"
+$ python -m opteryx --o 'taxi_trips.parquet' "SELECT * FROM 'taxi_trips.csv';"
 ~~~
 
 !!! Note
