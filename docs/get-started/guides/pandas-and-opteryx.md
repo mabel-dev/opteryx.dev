@@ -4,6 +4,8 @@ This short guide will demonstrate how to integrate Pandas and Opteryx, showing y
 
 ## Installation
 
+Install Opteryx and Pandas.
+
 ~~~console
 $ pip install opteryx
 $ pip install pandas

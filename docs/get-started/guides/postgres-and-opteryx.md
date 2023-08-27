@@ -4,7 +4,7 @@ This short guide will demonstrate how to connect to Postgres using Opteryx using
 
 ## Installation
 
-Install Opteryx and optional libraries for connecting to Postgres.
+Install Opteryx and libraries for connecting to Postgres.
 
 ~~~console
 $ pip install opteryx

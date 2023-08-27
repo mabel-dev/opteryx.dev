@@ -4,6 +4,8 @@ This short guide will demonstrate how to integrate Polars and Opteryx, showing y
 
 ## Installation
 
+Install Opteryx and Polars.
+
 ~~~console
 $ pip install opteryx
 $ pip install polars
@@ -33,7 +35,7 @@ results = opteryx.query("SELECT * FROM nephews")
 
 ## Opteryx to Polars
 
-Opteryx can output results as Pandas DataFrames using the `.polars()` result-conversion method.
+Opteryx can output results as Polars DataFrames using the `.polars()` result-conversion method.
 
 ~~~python
 import opteryx
