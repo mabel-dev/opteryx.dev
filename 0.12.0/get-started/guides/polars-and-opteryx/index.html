@@ -1874,6 +1874,7 @@
 <h1 id="polars-and-opteryx-integration">Polars and Opteryx Integration</h1>
 <p>This short guide will demonstrate how to integrate Polars and Opteryx, showing you how to query a Polars dataframe with Opteryx and how to return Polars dataframe from Opteryx.</p>
 <h2 id="installation">Installation</h2>
+<p>Install Opteryx and Polars.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>opteryx
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>polars
 </code></pre></div>
@@ -1896,7 +1897,7 @@
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">results</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM nephews&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="opteryx-to-polars">Opteryx to Polars</h2>
-<p>Opteryx can output results as Pandas DataFrames using the <code>.polars()</code> result-conversion method.</p>
+<p>Opteryx can output results as Polars DataFrames using the <code>.polars()</code> result-conversion method.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">opteryx</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">dataframe</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $planets&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">polars</span><span class="p">()</span>
