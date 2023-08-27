@@ -6,22 +6,22 @@ Opteryx is an embeddable package into Python applications, scripts and Notebooks
 import opteryx
 
 conn = opteryx.connection()
-curr = conn.cursor()
-curr.execute("SELECT * FROM $planets;")
-rows = curr.fetchall()
+cursor = conn.cursor()
+cursor.execute("SELECT * FROM $planets;")
+rows = cursor.fetchall()
 ~~~
 
 The results of the query are availble via the Cursor. The Cursor is an [orso DataFrame](https://github.com/mabel-dev/orso) and support accessing results using the Cursor as an iterator, using `fetchone()`, `fetchmany()` and `fetchall()`, and using format conversion routines such as `arrow()` which returns an [Arrow Table](https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table), and `pandas()` which returns a [pandas DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
 
 **Short Form API**
 
-Opteryx also offers a short form API where default values are assumed for the creation of the Connection and Cursor: 
+Opteryx also offers a short form API where default values are assumed for the creation of the Connection and Cursor. The cursor returned from the `.query()` function is the same as the cursor in the first example.
 
 ~~~python
 import opteryx
 
-curr = opteryx.query("SELECT * FROM $planets;")
-rows = curr.fetchall()
+cursor = opteryx.query("SELECT * FROM $planets;")
+rows = cursor.fetchall()
 ~~~
 
 <!---
