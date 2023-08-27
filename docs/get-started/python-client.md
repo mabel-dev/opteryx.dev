@@ -15,7 +15,7 @@ The results of the query are availble via the Cursor. The Cursor is an [orso Dat
 
 **Short Form API**
 
-Opteryx also offers a short form API where default values are assumed for the creation of the Connection and Cursor. The cursor returned from the `.query()` function is the same as the cursor in the first example.
+Opteryx also offers a short form API where default values are assumed for the creation of the Connection and Cursor. The cursor returned from the `query()` function is the same as the cursor in the first example.
 
 ~~~python
 import opteryx
