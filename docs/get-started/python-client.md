@@ -13,9 +13,22 @@ rows = curr.fetchall()
 
 The results of the query are availble via the Cursor. The Cursor is an [orso DataFrame](https://github.com/mabel-dev/orso) and support accessing results using the Cursor as an iterator, using `fetchone()`, `fetchmany()` and `fetchall()`, and using format conversion routines such as `arrow()` which returns an [Arrow Table](https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table), and `pandas()` which returns a [pandas DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
 
+**Short Form API**
+
+Opteryx also offers a short form API where default values are assumed for the creation of the Connection and Cursor: 
+
+~~~python
+import opteryx
+
+curr = opteryx.query('SELECT * FROM $planets')
+rows = curr.fetchall()
+~~~
+
+<!---
 ## Python API
 
 This document describes the Python objects intended to be accessed by users of the library. The library has many other components and interfaces which can be called, accessing these is generally not recommended.
+--->
 
 <!--- this page is automatically build from connection.py --->
 
@@ -70,6 +83,7 @@ This document describes the Python objects intended to be accessed by users of t
 --->
 
 <!--- start --->
+<!---
 <dl><dt><h2>class <b>Connection</b> ()</h2></ul></dd></dl><dl><dt><b>cursor</b> ()</dt><dd>
 </br>return a cursor object</li></ul></dd></dl>
 <dl><dt><b>close</b> ()</dt><dd>
@@ -133,3 +147,4 @@ This document describes the Python objects intended to be accessed by users of t
 <dl><dt><b>head</b> (size)</dt><dd></ul></dd></dl>
 
 <hr><p>This file has been automatically generated from the source code.</p>
+--->
