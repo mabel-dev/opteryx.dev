@@ -7,7 +7,7 @@ import opteryx
 
 conn = opteryx.connection()
 curr = conn.cursor()
-curr.execute('SELECT * FROM $planets')
+curr.execute("SELECT * FROM $planets;")
 rows = curr.fetchall()
 ~~~
 
@@ -20,7 +20,7 @@ Opteryx also offers a short form API where default values are assumed for the cr
 ~~~python
 import opteryx
 
-curr = opteryx.query('SELECT * FROM $planets')
+curr = opteryx.query("SELECT * FROM $planets;")
 rows = curr.fetchall()
 ~~~
 
