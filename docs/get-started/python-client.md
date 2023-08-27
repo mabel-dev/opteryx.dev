@@ -5,7 +5,7 @@ Opteryx is an embeddable package into Python applications, scripts and Notebooks
 ~~~python
 import opteryx
 
-conn = opteryx.connection()
+conn = opteryx.connect()
 cursor = conn.cursor()
 cursor.execute("SELECT * FROM $planets;")
 rows = cursor.fetchall()
