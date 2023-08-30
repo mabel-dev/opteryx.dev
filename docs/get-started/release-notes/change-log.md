@@ -14,7 +14,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Unsupported
 _The following features were previously supported by the engine but have not been reimplemented as part of the new planner:_
-- `JOIN ... USING` syntax
 - Filters on `SHOW` queries
 
 ### Fixed
@@ -32,6 +31,7 @@ _The following features were previously supported by the engine but have not bee
 ### Added
 
 - [[#1117](https://github.com/mabel-dev/opteryx/pull/1117)] Cockroach Labs regression tests [@joocer](https://github.com/joocer)
+- [[#1128](https://github.com/mabel-dev/opteryx/pull/1128)] Specialized handlers for `IS NOT TRUE` and `IS NOT FALSE` [@joocer](https://github.com/joocer)
 
 ### Removed
 
