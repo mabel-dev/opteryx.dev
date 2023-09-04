@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 > 0.12.0 has a number of significant changes, these changes will result in changes to behaviour of the engine and for new bugs to have been introduced:
 > - A logical plan phase has been introduced
 > - A binder has been introduced
-> - The storage connectors have been refactored   
+> - The storage connectors have been refactored    
 
 ### Unsupported
 _The following features were previously supported by the engine but have not been reimplemented as part of the new planner:_
