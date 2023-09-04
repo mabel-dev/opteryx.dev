@@ -39,7 +39,6 @@ _The following features were previously supported by the engine but have not bee
 - :octicons-alert-24: Python 3.8 is no longer supported. [@joocer](https://github.com/joocer)  
 
 
-
 ## [0.11.0] - 2023-06-16
 
 ### Fixed
