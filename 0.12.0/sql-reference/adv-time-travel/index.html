@@ -1351,6 +1351,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#temporal-self-joins" class="md-nav__link">
+    Temporal Self-Joins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1901,6 +1915,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#temporal-self-joins" class="md-nav__link">
+    Temporal Self-Joins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2035,6 +2063,20 @@
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="n">DATES</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;2021-01-01&#39;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="s1">&#39;2022-12-31&#39;</span><span class="p">;</span>
 </code></pre></div>
+<h2 id="temporal-self-joins">Temporal Self-Joins</h2>
+<p>Having multiple snapshots of the same table available in the same query creates oppurtunities for finding deltas. For example, to find which planets were not known about in 1600 which are known about today we can <code>LEFT JOIN</code> on the '$planets' dataset on those two dates like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">today</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="n">TODAY</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">today</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="s1">&#39;1600-01-01&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">sixteen</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">sixteen</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">today</span><span class="p">.</span><span class="n">id</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">sixteen</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w"> </span><span class="o">~~~</span>
+</code></pre></div>
+<h2 id="name">name</h2>
+<p>Uranus
+Neptune
+Pluto
+~~~</p>
 
 
 
