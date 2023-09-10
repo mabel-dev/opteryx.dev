@@ -115,3 +115,23 @@ SELECT name
   FROM $planets
    FOR DATES BETWEEN '2021-01-01' and '2022-12-31';
 ~~~
+
+## Temporal Self-Joins
+
+Having multiple snapshots of the same table available in the same query creates oppurtunities for finding deltas. For example, to find which planets were not known about in 1600 which are known about today we can `LEFT JOIN` on the '$planets' dataset on those two dates like this:
+
+~~~sql
+SELECT today.name
+  FROM $planets FOR TODAY AS today
+  LEFT JOIN $planets FOR '1600-01-01' AS sixteen
+    ON sixteen.id = today.id
+ WHERE sixteen.id IS NULL
+ ~~~
+
+~~~
+name
+-------
+Uranus
+Neptune
+Pluto
+~~~
