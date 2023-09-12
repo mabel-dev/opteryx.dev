@@ -1997,7 +1997,8 @@
 
 <h1 id="debug-logging">Debug Logging</h1>
 <h2 id="overview">Overview</h2>
-<p>This feature automatically transforms specific comment lines into debugging print statements during development. Comments in the form # <code>DEBUG: log &lt;string&gt;</code> will be converted to <code>print(&lt;string&gt;)</code>. The goal is to facilitate debugging without permanently altering the codebase.</p>
+<p>This feature automatically transforms specific comment lines into debugging print statements during development. Comments in the form <code># DEBUG: log(&lt;string&gt;)</code> will be converted to <code>print(&lt;string&gt;)</code>. The goal is to facilitate debugging without permanently altering the codebase.</p>
+<p>The <code># DEBUG: log</code> function supports <code>print</code> functionality such as formatting with f-strings and printing comma separated values.</p>
 <h2 id="activation">Activation</h2>
 <p>To enable this feature, set an environment variable <code>OPTERYX_DEBUG</code>.</p>
 <p>Via the terminal:</p>
@@ -2010,9 +2011,10 @@
 <p>or via a .env file</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="na">OPTERYX_DEBUG</span><span class="o">=</span><span class="s">1</span>
 </code></pre></div>
-<blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>using a .env file requiores <a href="https://pypi.org/project/python-dotenv/">dotenv</a> to be installed</p>
-</blockquote>
+</div>
 <h2 id="usage">Usage</h2>
 <p>Insert comments in your code following this template:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># DEBUG: log &quot;Debug message.&quot;</span>
