@@ -18,7 +18,7 @@ export OPTERYX_DEBUG=1
 or via code:
 ~~~python
 import os
-os.environ["OPTERYX_DEBUG"] = 1
+os.environ["OPTERYX_DEBUG"] = "1"
 ~~~
 
 or via a .env file
