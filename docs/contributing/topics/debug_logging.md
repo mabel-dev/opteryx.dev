@@ -1,7 +1,10 @@
 # Debug Logging
 
 ## Overview
-This feature automatically transforms specific comment lines into debugging print statements during development. Comments in the form # `DEBUG: log <string>` will be converted to `print(<string>)`. The goal is to facilitate debugging without permanently altering the codebase.
+
+This feature automatically transforms specific comment lines into debugging print statements during development. Comments in the form `# DEBUG: log(<string>)` will be converted to `print(<string>)`. The goal is to facilitate debugging without permanently altering the codebase.
+
+The `# DEBUG: log` function supports `print` functionality such as formatting with f-strings and printing comma separated values.
 
 ## Activation
 
@@ -22,7 +25,8 @@ or via a .env file
 ~~~ini
 OPTERYX_DEBUG=1
 ~~~
-> using a .env file requiores [dotenv](https://pypi.org/project/python-dotenv/) to be installed
+!!! note
+    using a .env file requiores [dotenv](https://pypi.org/project/python-dotenv/) to be installed
 
 ## Usage
 Insert comments in your code following this template:
