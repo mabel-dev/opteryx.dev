@@ -41,13 +41,13 @@ When this is not active, it will remain a comment.
 
 ## Rationale
 
-**Debugging**: Facilitates the addition of debugging log points without requiring code changes.
-**Code Cleanliness**: Avoids cluttering the codebase with `if`s for debugging statements.
+**Debugging**: Facilitates the addition of debugging log points without requiring code changes.   
+**Code Cleanliness**: Avoids cluttering the codebase with `if`s for debugging statements.   
 **Convenience**: Controlled through an environment variable, allowing for easy toggling.
 
 ## Caveats
 
-**Performance**: There may be a slight performance impact during the import stage.
+**Performance**: There may be a slight performance impact during the import stage.   
 **Complexity**: The feature performs dynamic code modification, so developers should understand its implications.
 
 ## Contribution
