@@ -123,6 +123,8 @@ nav:
         - Query Engine: contributing/internals/query-engine.md
         - Storage Engine: contributing/internals/storage-engine.md
         - Testing Approach: contributing/internals/testing.md
+      - Features:
+        - Debug Logging: contributing/topics/debug_logging.md
       - Version Goals: contributing/version-goals.md
 #  - Blog:
 #      - Year 2022:
