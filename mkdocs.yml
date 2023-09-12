@@ -51,8 +51,8 @@ extra:
   social:
     - icon: fontawesome/brands/twitter 
       link: https://twitter.com/opteryxsql
-    - icon: fontawesome/brands/gitter 
-      link: https://gitter.im/mabel-opteryx/community
+    - icon: fontawesome/brands/discord 
+      link: https://discord.gg/PHqKAb9Y
     - icon: fontawesome/brands/github 
       link: https://github.com/mabel-dev/opteryx
     - icon: fontawesome/brands/python 

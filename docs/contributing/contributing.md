@@ -29,12 +29,6 @@ Changes should have:
 - Updated documentation (code-level, module-level and docs/ folder as appropriate)
 - Attributed external sources  
 
-### Gitter
-
-Gitter is our target contact channel for support queries.
-
-[:fontawesome-brands-gitter: Join us on Gitter](https://gitter.im/mabel-opteryx/community){ .md-button }
-
 ### Discord
 
 Discord is our target channel for community and discussion.
