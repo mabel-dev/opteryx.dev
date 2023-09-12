@@ -33,7 +33,7 @@ Changes should have:
 
 Discord is our target channel for community and discussion.
 
-[:fontawesome-brands-discord: Join us on Discord](https://discord.gg/PHqKAb9Y){ .md-button }
+[:fontawesome-brands-discord: Join us on Discord](https://discord.gg/qpv2tr989x){ .md-button }
 
 ## Licence
 
