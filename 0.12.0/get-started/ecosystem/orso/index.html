@@ -18,7 +18,7 @@
         <link rel="prev" href="../../security/">
       
       
-        <link rel="next" href="../metastore/">
+        <link rel="next" href="../mabel/">
       
       
       <link rel="icon" href="../../../icarus-opteryx.png">
@@ -683,46 +683,6 @@
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../metastore/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Metastore (Tarchia)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hadrodb/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Storage Engine (HadroDB)
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1874,10 +1834,7 @@
 
 
 <h1 id="orso">orso</h1>
-<blockquote>
-<p>IN DEVELOPMENT</p>
-</blockquote>
-<p><a href="https://github.com/mabel-dev/orso">orso</a> is a DataFrame library implemented for Opteryx and HadroDB.</p>
+<p><a href="https://github.com/mabel-dev/orso">orso</a> is a DataFrame library.</p>
 <dl>
     <dt><h2>class <b>DataFrame</b> (<i>dictionaries</i>)</h2></dt>  
     <dd>
@@ -1916,69 +1873,103 @@
 
 <h3>Functions</h3>
 <dl>
-    <dt><span class="python-kw">def</span> <b>collect</b> (columns) -> list, list of lists</dt>
-    <dd>
-        Fetch all of the values in specified columns.
-        <p><b>Parameters</b></p>
-        <ul>
-            <b>columns</b>: int, str, list of int, list of str<br />
-            If an int, fetch the column with that offset. If a str, fetch the column with that name, if a list of ints, fetch the columns at the given offsets, if a list of strings, fetch the columns with those names.
-        </ul>
-        <p><b>Returns</b></p>
-        <p>list, if a single column has been specified. list of lists, if multiple columns have been specified.</p>
-    </dd>
-</dl>
-<dl>
-<dt><span class="python-kw">def</span> <b>distinct</b> () -> orso.DataFrame</dt>
-</dl>
-<dl>
-<dt><span class="python-kw">def</span> <b>filter</b> (mask) -> orso.DataFrame</dt>
-</dl>
-<dl>
-<dt><span class="python-kw">def</span> <b>query</b> () -> orso.DataFrame</dt>
-</dl>
-<dl>
-    <dt><span class="python-kw">def</span> <b>row</b> (i) -> orso.Row</dt>
-    <dd>
-        Fetch a row from the DataFrame.
-        <p><b>Parameters</b></p>
-        <ul>
-            <b>i</b>: int<br />
-            The offset of the Row to fetch.
-        </ul>
-        <p><b>Returns</b></p>
-        <p>orso.Row</p>
-        <p><b>Raises</b></p>
-        <p>ValidationError</p>
-    </dd>
-</dl>
-<dl>
-<dt><span class="python-kw">def</span> <b>select</b> () -> orso.DataFrame</dt>
-</dl>
-<dl>
-    <dt><span class="python-kw">def</span> <b>slice</b> (offset:int, length:int) -> orso.DataFrame</dt>
-    <dd>
-        Slices a DataFrame.
-        <p><b>Parameters</b></p>
-        <ul>
-            <b>offset</b>: int (optional)<br />
-            The starting row of the slice, if not provided the slice starts from the first row. Negative values are offsets from the last record.<br />
-            <b>length</b>: int (optional)<br />
-            The number of records to include in the slice.
-        </ul>
-        <p><b>Returns</b></p>
-        <p>orso.DataFrame</p>
-    </dd>
-</dl>
-<dl>
-<dt><span class="python-kw">def</span> <b>to_arrow</b> () -> orso.DataFrame</dt>
-</dl>
+    <dt><span class="python-kw">def</span> <b>append</b> (row) -> None</dt>
+<dd>
+    Appends a row to the DataFrame.
+    <p><b>Parameters</b></p>
+    <ul>
+        <b>row</b>: Tuple<br />
+        Tuple containing the data for the new row.
+    </ul>
 </dd>
-</dl>
 
-<dl>
-    <dt><h2>class <b>Row</b> ()</h2></dt>  
-</dl>
+<dt><span class="python-kw">def</span> <b>collect</b> (columns) -> list, list of lists</dt>
+<dd>
+    Collects specified columns from the internal row storage into a tuple of lists.
+    <p><b>Parameters</b></p>
+    <ul>
+        <b>columns</b>: int, str, list of int, list of str<br />
+        Integer index, string name, or list of columns to collect.
+    </ul>
+    <p><b>Returns</b></p>
+    <p>list, if a single column has been specified. list of lists, if multiple columns have been specified.</p>
+</dd>
+
+<dt><span class="python-kw">def</span> <b>slice</b> (offset, length=None) -> DataFrame</dt>
+<dd>
+    Returns a sliced DataFrame.
+    <p><b>Parameters</b></p>
+    <ul>
+        <b>offset</b>: int<br />
+        Start index for the slice.
+        <b>length</b>: int, optional<br />
+        Length of the slice.
+    </ul>
+    <p><b>Returns</b></p>
+    <p>A new DataFrame containing the sliced data.</p>
+</dd>
+
+<dt><span class="python-kw">def</span> <b>filter</b> (mask) -> DataFrame</dt>
+<dd>
+    Select rows from the DataFrame based on a boolean array.
+    <p><b>Parameters</b></p>
+    <ul>
+        <b>mask</b>: boolean array<br />
+        Boolean array for filtering rows.
+    </ul>
+    <p><b>Returns</b></p>
+    <p>A new DataFrame containing the filtered data.</p>
+</dd>
+
+<dt><span class="python-kw">def</span> <b>take</b> (indexes) -> DataFrame</dt>
+<dd>
+    Select rows from the DataFrame based on their index.
+    <p><b>Parameters</b></p>
+    <ul>
+        <b>indexes</b>: list of int<br />
+        List of row indexes to take.
+    </ul>
+    <p><b>Returns</b></p>
+    <p>A new DataFrame containing the specified rows.</p>
+</dd>
+
+<dt><span class="python-kw">def</span> <b>row</b> (i) -> Row</dt>
+<dd>
+    Returns a single row from the DataFrame.
+    <p><b>Parameters</b></p>
+    <ul>
+        <b>i</b>: int<br />
+        Index of the row.
+    </ul>
+    <p><b>Returns</b></p>
+    <p>A Row object.</p>
+</dd>
+
+<dt><span class="python-kw">def</span> <b>fetchone</b> () -> Row or None</dt>
+<dd>
+    Fetches a single row from the DataFrame.
+    <p><b>Returns</b></p>
+    <p>A Row object or None if no more rows are available.</p>
+</dd>
+
+<dt><span class="python-kw">def</span> <b>fetchmany</b> (size=None) -> list of Row</dt>
+<dd>
+    Fetches multiple rows from the DataFrame.
+    <p><b>Parameters</b></p>
+    <ul>
+        <b>size</b>: int, optional<br />
+        Number of rows to fetch (defaults to arraysize).
+    </ul>
+    <p><b>Returns</b></p>
+    <p>A list of Row objects.</p>
+</dd>
+
+<dt><span class="python-kw">def</span> <b>fetchall</b> () -> list of Row</dt>
+<dd>
+    Fetches all rows from the DataFrame.
+    <p><b>Returns</b></p>
+    <p>A list of all Row objects in the DataFrame.</p>
+</dd>
 
 
 
