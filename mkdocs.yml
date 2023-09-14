@@ -78,8 +78,6 @@ nav:
     - Security: get-started/security.md
     - Ecosystem:
       - Dataframe (orso): get-started/ecosystem/orso.md
-      - Metastore (Tarchia): get-started/ecosystem/metastore.md
-      - Storage Engine (HadroDB): get-started/ecosystem/hadrodb.md
       - Streaming Writer (Mabel): get-started/ecosystem/mabel.md
       - Connector (mesos): get-started/ecosystem/mesos.md
     - Standards & Benchmarks:
