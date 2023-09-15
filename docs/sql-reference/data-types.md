@@ -53,6 +53,8 @@ All `TIMESTAMP` and values read from datasets are coerced to nanosecond precisio
 
 All numeric values included in SQL statements and read from datasets are coerced to 64bit floats.
 
+Hex literals can be provided using `0x` prefix, for example `0xc0ffee` is handled as the integer `12648430`.
+
 ### IPv4 Network Ranges
 
 IPv4 Network Range comparisions automatically interpret IP addresses and ranges.

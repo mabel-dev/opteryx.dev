@@ -34,6 +34,7 @@ _The following features were previously supported by the engine but have not bee
 - [[#1128](https://github.com/mabel-dev/opteryx/pull/1128)] Specialized handlers for `IS NOT TRUE` and `IS NOT FALSE` [@joocer](https://github.com/joocer)
 - `DATES SINCE` temporal filter syntax added. [@joocer](https://github.com/joocer)  
 - [[#1145](https://github.com/mabel-dev/opteryx/pull/1145)] Debug Logging [@joocer](https://github.com/joocer)
+- [[#1156](https://github.com/mabel-dev/opteryx/pull/1156)] Bitwise operators and Hex literals [@joocer](https://github.com/joocer)
 
 ### Removed
 

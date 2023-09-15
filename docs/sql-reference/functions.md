@@ -43,7 +43,6 @@ New functions for this version are annotated with the :octicons-star-16: icon.
     Alias of `VARCHAR`(**any**) and `CAST`(**any** AS VARCHAR)
 
 !!! function "`STRUCT` (**any**: _any_) → _struct_"   
-    ** :octicons-star-16: New in 0.10**      
     Cast **any** to a struct / dictionary.   
     Alias of `CAST`(**any** AS STRUCT)
 
@@ -127,7 +126,6 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     Alias for `EXTRACT`(second FROM **ts**)
 
 !!! function "`TIMEDIFF` (**unit**: _varchar_, **start**: _timestamp_) → _numeric_"   
-    ** :octicons-star-16: New in 0.10**    
     Calculate the difference between the start and end times.  
 
 !!! function "`UNIXTIME` () → _numeric_:octicons-dot-16:"       
@@ -139,7 +137,6 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     Related: `FROM_UNIXTIME` 
 
 !!! function "`UTC_TIMESTAMP` () → _timestamp_"   
-    ** :octicons-star-16: New in 0.10**    
     Alias for `current_time`
 
 !!! function "`WEEK` (**ts**: _timestamp_) → _numeric_"  
@@ -187,6 +184,18 @@ These are functions that are called similar to comparison operators:
 
 !!! function "_inet_ `|` _inet_ → _bool_"   
     IP address containment
+
+!!! function "_integer_ `|` _integer_ → _integer_"   
+    ** :octicons-star-16: New in 0.12**    
+    Bitwise OR
+
+!!! function "_integer_ `&` _integer_ → _integer_"  
+    ** :octicons-star-16: New in 0.12**     
+    Bitwise AND
+
+!!! function "_integer_ `^` _integer_ → _integer_"   
+    ** :octicons-star-16: New in 0.12**    
+    Bitwise XOR
 
 ## List Functions
 
@@ -360,15 +369,12 @@ Functions for examining and manipulating string values.
     Return `true` if **str** contains **substring**.  
 
 !!! function "`SPLIT` (**str**: _varchar_) → _array_:octicons-dot-16:"   
-    ** :octicons-star-16: New in 0.10**    
     Splits **str** on commas (`,`) and returns an array.
 
 !!! function "`SPLIT` (**str**: _varchar_, **delimiter**: _varchar_) → _array_:octicons-dot-16:"   
-    ** :octicons-star-16: New in 0.10**    
     Splits **str** on **delimiter** and returns an array.
 
 !!! function "`SPLIT` (**str**: _varchar_, **delimiter**: _varchar_, **limit**: _integer_) → _array_:octicons-dot-16:"   
-    ** :octicons-star-16: New in 0.10**    
     Splits **str** on **delimiter** and returns an array of size at most **limit**. The last element in the array contains the remaining part of the string. **limit** must be greater than zero.
 
 !!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_) → _varchar_:octicons-dot-16:" 
