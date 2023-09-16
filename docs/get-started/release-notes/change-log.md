@@ -27,6 +27,7 @@ _The following features were previously supported by the engine but have not bee
 - [[#1086](https://github.com/mabel-dev/opteryx/pull/1086)] Update [Pythonize](https://github.com/davidhewitt/pythonize) to v0.19 and [py03](https://github.com/PyO3/pyo3) to v0.19.0 [dependabot](https://github.com/apps/dependabot) 
 - [[#1042](https://github.com/mabel-dev/opteryx/pull/1042)] Create a generic base connector and use for all access [@joocer](https://github.com/joocer)
 - [[#1032](https://github.com/mabel-dev/opteryx/pull/1032)] Introduce a query binder [@joocer](https://github.com/joocer)
+- [[#1158](https://github.com/mabel-dev/opteryx/pull/1158)] Resync sqloxide [@joocer](https://github.com/joocer)
 
 ### Added
 
