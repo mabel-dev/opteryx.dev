@@ -2,8 +2,8 @@
 
 Opteryx undertakes two approaches to managing external dependencies:
 
-1) Assimilation into the Opteryx codebase, where possible
-2) Automatic Installation via package managers
+- Assimilation into the Opteryx codebase, where possible   
+- Automatic Installation via package managers
 
 ## Assimilation
 
