@@ -35,7 +35,7 @@ Discord is our target channel for community and discussion.
 
 [:fontawesome-brands-discord: Join us on Discord](https://discord.gg/qpv2tr989x){ .md-button }
 
-## License
+## Licensing
 
 All code is licensed under the Apache Software License 2.0, unless clearly stated otherwise.
 
@@ -43,15 +43,17 @@ Unless you explicitly state otherwise, any contribution intentionally submitted 
 
 Any submissions with incompatible license or license conditions may be rejected from inclusion.
 
-## Get Started Now
+## 🚀 Get Started Now!
 
 We hope this guide has provided you with all the information you need to start contributing to Opteryx. Here's how you can take the next steps:
 
-- **Star the Project**: Show your support by starring the project on [GitHub](https://github.com/mabel-dev/opteryx).
-- **Fork and Clone**: Fork the project and clone it to your local machine. Follow our setup guide to get your environment ready.
-- **Find an Issue**: Browse through our open issues to find one that interests you. If you're new to the project, look for issues tagged as good first issue.
-- **Join the Discussion**: If you have ideas or want to collaborate, join our [Discord](https://discord.gg/qpv2tr989x) channel and introduce yourself.
-- **Submit a Pull Request**: Once you're ready with your changes, create a pull request. Make sure to review the PR guidelines one last time to ensure a smooth process.
-- **Spread the Word**: If you find Opteryx helpful, let the community know! Blog about your experiences, tweet about it, or present it at meetups.
+- **Star the Project:** Show your support by starring the project on [GitHub](https://github.com/mabel-dev/opteryx).
+- **Fork and Clone:** Fork the project and clone it to your local machine. Follow our [setup guide](link-to-setup-guide) to get your environment ready.
+- **Find an Issue:** Browse through our [open issues](https://github.com/mabel-dev/opteryx/issues) to find one that interests you. If you're new to the project, look for issues tagged as `good first issue`.
+- **Join the Discussion:** If you have ideas or want to collaborate, join our [Discord channel](https://discord.gg/qpv2tr989x) and introduce yourself.
+- **Submit a Pull Request:** Once you're ready with your changes, create a pull request. Make sure to review the PR guidelines one last time to ensure a smooth process.
+- **Spread the Word:** If you find Opteryx helpful, let the community know! Blog about your experiences, tweet about it, or present it at meetups.
 
 Remember, every contribution counts, be it code, documentation, or outreach. We're excited to have you on board!
+
+Feel free to reach out to the maintainers if you have any questions. We're here to help!
