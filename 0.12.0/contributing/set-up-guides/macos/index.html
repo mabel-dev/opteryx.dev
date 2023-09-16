@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macos" class="md-skip">
+        <a href="#macos-setup-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -1919,20 +1919,22 @@
   
 
 
-<h1 id="macos">MacOS</h1>
-<p>This guide will help you to set up a MacOS workstation to work with the code and develop Opteryx.</p>
-<p>Intel/x86 is the recommended environment, however Opteryx does run on ARM and some parts of the guide may require additional steps in order to work correctly.</p>
+<h1 id="macos-setup-guide">MacOS Setup Guide</h1>
+<p>This guide will help you set up a macOS workstation to work with the code and develop Opteryx.</p>
+<p>Both Intel/x86 and ARM environments are supported, but some parts of the guide may require additional steps for ARM.</p>
 <h2 id="setting-up">Setting Up</h2>
 <h3 id="1-install-python">1. Install Python</h3>
-<p><strong>3.10 recommended</strong></p>
-<p>We recommend using <a href="https://github.com/pyenv/pyenv">pyenv</a> to install and manage Python environments, particularly in development and test environments.</p>
+<p><strong>Python 3.10 recommended</strong></p>
+<p>We recommend using <a href="https://github.com/pyenv/pyenv">pyenv</a> to install and manage Python environments. Follow the pyenv installation instructions for macOS.</p>
 <h3 id="2-install-pip">2. Install pip</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>ensurepip<span class="w"> </span>--upgrade
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>ensurepip<span class="w"> </span>--upgrade
 </code></pre></div>
 <h3 id="3-install-git">3. Install Git</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">$ </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<p>First, update Homebrew:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">$ </span>brew<span class="w"> </span>update
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp">$ </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git
+<p>Then, install Git:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp">$ </span>brew<span class="w"> </span>install<span class="w"> </span>git
 </code></pre></div>
 <h3 id="4-install-rust">4. Install Rust</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp">$ </span>curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">&#39;=https&#39;</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span>https://sh.rustup.rs<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
@@ -1941,23 +1943,23 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mabel-dev/opteryx
 </code></pre></div>
 <h3 id="6-install-dependencies">6. Install Dependencies</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>setuptools<span class="w"> </span>setuptools_rust<span class="w"> </span>numpy<span class="w"> </span>cython
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>setuptools<span class="w"> </span>setuptools_rust<span class="w"> </span>numpy<span class="w"> </span>cython
 </code></pre></div>
 <h3 id="7-build-binaries">7. Build Binaries</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="gp">$ </span>python3<span class="w"> </span>setup.py<span class="w"> </span>build_ext<span class="w"> </span>--inplace
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="gp">$ </span>python<span class="w"> </span>setup.py<span class="w"> </span>build_ext<span class="w"> </span>--inplace
 </code></pre></div>
 <h2 id="running-tests">Running Tests</h2>
 <p>To run the regression and unit tests:</p>
 <p>First, install the optional dependencies, on intel-based Macs:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>-r<span class="w"> </span>tests/requirements.txt
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>-r<span class="w"> </span>tests/requirements.txt
 </code></pre></div>
 <p>On M-series (ARM) CPU Macs:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>-r<span class="w"> </span>tests/requirements_arm.txt
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>-r<span class="w"> </span>tests/requirements_arm.txt
 </code></pre></div>
 <p>Then run the regression tests.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>pytest
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pytest
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
