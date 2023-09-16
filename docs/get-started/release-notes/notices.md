@@ -2,14 +2,13 @@
 
 ## Incorporated Components
 
-Opteryx, HadroDB, mesos, and orso are built on the shoulders of other great libraries and components:
+Opteryx, mesos, and orso are built on the shoulders of other great libraries and components:
 
-Library           | Disposition       | Copyright            | Licence   
+Library           | Inclusion Type    | Copyright            | Licence   
 :---------------- | :---------------- | :------------------- | :--------------- 
 [cityhash](https://github.com/google/cityhash)             | Integrated  | 2011 [Google](https://github.com/google) | [MIT](https://github.com/google/cityhash/blob/master/COPYING)  
 [cython](https://github.com/cython/cython)                 | Installed   |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
 [distogram](https://github.com/maki-nage/distogram)        | Integrated  | 2020 [Romain Picard](https://github.com/MainRo) | [MIT](https://github.com/maki-nage/distogram/blob/master/LICENSE.txt)
-[fastlogging](https://github.com/brmmm3/fastlogging)       | Integrated  | 2018 [Martin Bammer](https://github.com/brmmm3) | [MIT](https://github.com/brmmm3/fastlogging/blob/master/LICENSE.txt)
 [fuzzy](https://github.com/yougov/fuzzy)                   | Integrated  | [Jason R. Coombs](https://github.com/jaraco) | [MIT](https://github.com/yougov/fuzzy/blob/master/LICENSE)
 [levenshtein](https://gist.github.com/vatsal220/6aefbc245216bc9f2da8556f42e1c89c#file-lev_dist-py) | Integrated | [Vatsal Patel](https://gist.github.com/vatsal220) | Public Domain (assumed)
 [mbleven](https://github.com/fujimotos/mbleven)            | Integrated  | 2018 [Fujimoto Seiji](https://github.com/fujimotos) | [Public Domain](https://github.com/fujimotos/mbleven/blob/master/LICENSE)
@@ -24,17 +23,17 @@ Library           | Disposition       | Copyright            | Licence
 [travers](https://github.com/joocer/travers)               | Integrated  | 2023 [Justin Joyce](https://github.com/joocer)  | [Apache 2.0](https://github.com/joocer/travers/blob/main/LICENSE)
 [typer](https://github.com/tiangolo/typer)                 | Installed   |   | [MIT](https://github.com/tiangolo/typer/blob/master/LICENSE)
 
-Disposition statuses in this table:
+Inclusion Types in this table:
 
-- **Derived** components originated from this module but has undergone significant change.  
+- **Derived** components originated from this module but have undergone significant change.  
 - **Installed** components are installed from PyPI/Cargo.  
 - **Integrated** components have their source code (or significant parts of) included in the Opteryx codebase.  
 
 This list does not include transitive dependencies nor is guaranteed to be complete. See the [dependency graph on GitHub](https://github.com/mabel-dev/opteryx/network/dependencies) for a more complete view of components used.
 
-Only components which have been integrated have copyright information noted, best efforts have been made to ensure this information is correct. Corrections should be [raised as issues](https://github.com/mabel-dev/opteryx/issues/new?assignees=joocer&labels=Bug+%F0%9F%AA%B2&template=bug_report.md&title=%F0%9F%AA%B2) for remediation. 
+Only integrated components have copyright information listed, and best efforts have been made to ensure this information is accurate. However, if the copyright information is crucial for your use-case, we recommend verifying it independently. Should you find any inaccuracies, please [raise them as issues](https://github.com/mabel-dev/opteryx/issues/new?assignees=joocer&labels=Bug+%F0%9F%AA%B2&template=bug_report.md&title=%F0%9F%AA%B2) for prompt remediation. 
 
-Integrated components may differ from their original form. Cosmetic changes are not generally noted however where functionality has been added or altered, this is recorded in comments. Derived components do not note individual changes as the codebase generally has changed too much for such annotation to be meaningful.
+Integrated components may differ from their original versions. While we generally do not note cosmetic changes, any alterations or additions to functionality are documented in the code comments. For derived components, we do not provide individual change notes, as these parts of the codebase have usually undergone substantial modifications, making such annotations less meaningful.
 
 !!! Note   
     License information was last checked on 2022-06-03, or when specific entries were added to this document, if later.

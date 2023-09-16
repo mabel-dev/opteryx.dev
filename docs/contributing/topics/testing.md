@@ -1,6 +1,6 @@
 # How Opteryx is Tested
 
-Opteryx utilizes a number of test approaches to help ensure the system is performant, secure and correct. The key test harnesses which are used to test Opteryx are listed here.
+Testing in Opteryx is a cornerstone to ensure the system's performance, security, and correctness. This document outlines the key test harnesses used to maintain the high-quality standard of Opteryx.
 
 Most testing is part of the main Opteryx repository on GitHub, however, some testing is located in other respositories.
 
@@ -10,11 +10,7 @@ Most testing is part of the main Opteryx repository on GitHub, however, some tes
 **Maturity**: Medium  
 **Location**: [mabel-dev/opteryx](https://github.com/mabel-dev/opteryx/tree/main/tests)
 
-Part of the CI process. Tests specific aspects of the internals.
-
-Combined with the SQL Battery test, the aim is for 95% coverage (with explicit exceptions). Whilst 95% coverage does not ensure the tests are 'good', it does help ensures any material changes to the function of the system are captured early.
-
-Note that the SQL battery tests also contribute to the coverage metrics.
+These tests are part of the CI process and focus on specific aspects of the internals. Combined with the SQL Battery test, the aim is for 95% coverage, with explicit exceptions. While 95% coverage does not guarantee that the tests are 'good,' it helps ensure that any material changes to the system function are captured early.
 
 ## SQL Battery
 
@@ -73,3 +69,7 @@ Fuzzing supplies some key functions with random data to try to capture scenarios
 **Location**: [mabel-dev/opteryx](https://github.com/mabel-dev/opteryx/tree/main/tests)
 
 Various other tests are performed to help ensure code quality is maintained, these include security, form, typing, secret detection and test coverage checks using the following tools: Bandit, Semgrep, Black, MyPy, PyLint, PerfLint, Fides, SonarCloud, and Coverage.
+
+## Summary
+
+Opteryx employs a multifaceted testing approach, ranging from Unit Testing and SQL Battery to specialized performance and security assessments, all geared towards ensuring the SQL query engine's performance, security, and reliability. With robust regression testing, incremental evolution, and a focus on adaptability, we're committed to continually refining our test suites as the system evolves, aiming for the highest standards of quality and resilience in SQL query engine technology.
