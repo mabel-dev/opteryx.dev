@@ -12,13 +12,13 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://opteryx.dev/0.12.0/contributing/internals/testing/">
+        <link rel="canonical" href="https://opteryx.dev/0.12.0/contributing/topics/testing/">
       
       
-        <link rel="prev" href="../storage-engine/">
+        <link rel="prev" href="../dependencies/">
       
       
-        <link rel="next" href="../../topics/debug_logging/">
+        <link rel="next" href="../../version-goals/">
       
       
       <link rel="icon" href="../../../icarus-opteryx.png">
@@ -1578,19 +1578,17 @@
                 
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
             
@@ -1603,7 +1601,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             System Internals
@@ -1616,7 +1614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project-structure/" class="md-nav__link">
+      <a href="../../internals/project-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1636,7 +1634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../query-engine/" class="md-nav__link">
+      <a href="../../internals/query-engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1656,11 +1654,95 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage-engine/" class="md-nav__link">
+      <a href="../../internals/storage-engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Storage Engine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
+        
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debug_logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debug Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependencies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dependency Management
   </span>
   
 
@@ -1763,72 +1845,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
-        
-          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Features
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6">
-            <span class="md-nav__icon md-icon"></span>
-            Features
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../topics/debug_logging/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Debug Logging
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1937,6 +1964,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1956,15 +1990,13 @@
 
 
 <h1 id="how-opteryx-is-tested">How Opteryx is Tested</h1>
-<p>Opteryx utilizes a number of test approaches to help ensure the system is performant, secure and correct. The key test harnesses which are used to test Opteryx are listed here.</p>
+<p>Testing in Opteryx is a cornerstone to ensure the system's performance, security, and correctness. This document outlines the key test harnesses used to maintain the high-quality standard of Opteryx.</p>
 <p>Most testing is part of the main Opteryx repository on GitHub, however, some testing is located in other respositories.</p>
 <h2 id="unit-testing">Unit Testing</h2>
 <p><strong>Frequency</strong>: On Commit to GitHub <br />
 <strong>Maturity</strong>: Medium<br />
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/opteryx/tree/main/tests">mabel-dev/opteryx</a></p>
-<p>Part of the CI process. Tests specific aspects of the internals.</p>
-<p>Combined with the SQL Battery test, the aim is for 95% coverage (with explicit exceptions). Whilst 95% coverage does not ensure the tests are 'good', it does help ensures any material changes to the function of the system are captured early.</p>
-<p>Note that the SQL battery tests also contribute to the coverage metrics.</p>
+<p>These tests are part of the CI process and focus on specific aspects of the internals. Combined with the SQL Battery test, the aim is for 95% coverage, with explicit exceptions. While 95% coverage does not guarantee that the tests are 'good,' it helps ensure that any material changes to the system function are captured early.</p>
 <h2 id="sql-battery">SQL Battery</h2>
 <p><strong>Frequency</strong>: On Commit to GitHub  <br />
 <strong>Maturity</strong>: Medium<br />
@@ -2003,6 +2035,8 @@
 <strong>Maturity</strong>: Medium<br />
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/opteryx/tree/main/tests">mabel-dev/opteryx</a></p>
 <p>Various other tests are performed to help ensure code quality is maintained, these include security, form, typing, secret detection and test coverage checks using the following tools: Bandit, Semgrep, Black, MyPy, PyLint, PerfLint, Fides, SonarCloud, and Coverage.</p>
+<h2 id="summary">Summary</h2>
+<p>Opteryx employs a multifaceted testing approach, ranging from Unit Testing and SQL Battery to specialized performance and security assessments, all geared towards ensuring the SQL query engine's performance, security, and reliability. With robust regression testing, incremental evolution, and a focus on adaptability, we're committed to continually refining our test suites as the system evolves, aiming for the highest standards of quality and resilience in SQL query engine technology.</p>
 
 
 

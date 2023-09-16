@@ -1731,26 +1731,6 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../contributing/internals/testing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Testing Approach
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1804,6 +1784,46 @@
   
   <span class="md-ellipsis">
     Debug Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/topics/dependencies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dependency Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/topics/testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing Approach
   </span>
   
 
@@ -1915,12 +1935,12 @@
 
 <h1 id="notices">Notices</h1>
 <h2 id="incorporated-components">Incorporated Components</h2>
-<p>Opteryx, HadroDB, mesos, and orso are built on the shoulders of other great libraries and components:</p>
+<p>Opteryx, mesos, and orso are built on the shoulders of other great libraries and components:</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Library</th>
-<th style="text-align: left;">Disposition</th>
+<th style="text-align: left;">Inclusion Type</th>
 <th style="text-align: left;">Copyright</th>
 <th style="text-align: left;">Licence</th>
 </tr>
@@ -1943,12 +1963,6 @@
 <td style="text-align: left;">Integrated</td>
 <td style="text-align: left;">2020 <a href="https://github.com/MainRo">Romain Picard</a></td>
 <td style="text-align: left;"><a href="https://github.com/maki-nage/distogram/blob/master/LICENSE.txt">MIT</a></td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="https://github.com/brmmm3/fastlogging">fastlogging</a></td>
-<td style="text-align: left;">Integrated</td>
-<td style="text-align: left;">2018 <a href="https://github.com/brmmm3">Martin Bammer</a></td>
-<td style="text-align: left;"><a href="https://github.com/brmmm3/fastlogging/blob/master/LICENSE.txt">MIT</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="https://github.com/yougov/fuzzy">fuzzy</a></td>
@@ -2030,15 +2044,15 @@
 </tr>
 </tbody>
 </table>
-<p>Disposition statuses in this table:</p>
+<p>Inclusion Types in this table:</p>
 <ul>
-<li><strong>Derived</strong> components originated from this module but has undergone significant change.  </li>
+<li><strong>Derived</strong> components originated from this module but have undergone significant change.  </li>
 <li><strong>Installed</strong> components are installed from PyPI/Cargo.  </li>
 <li><strong>Integrated</strong> components have their source code (or significant parts of) included in the Opteryx codebase.  </li>
 </ul>
 <p>This list does not include transitive dependencies nor is guaranteed to be complete. See the <a href="https://github.com/mabel-dev/opteryx/network/dependencies">dependency graph on GitHub</a> for a more complete view of components used.</p>
-<p>Only components which have been integrated have copyright information noted, best efforts have been made to ensure this information is correct. Corrections should be <a href="https://github.com/mabel-dev/opteryx/issues/new?assignees=joocer&amp;labels=Bug+%F0%9F%AA%B2&amp;template=bug_report.md&amp;title=%F0%9F%AA%B2">raised as issues</a> for remediation. </p>
-<p>Integrated components may differ from their original form. Cosmetic changes are not generally noted however where functionality has been added or altered, this is recorded in comments. Derived components do not note individual changes as the codebase generally has changed too much for such annotation to be meaningful.</p>
+<p>Only integrated components have copyright information listed, and best efforts have been made to ensure this information is accurate. However, if the copyright information is crucial for your use-case, we recommend verifying it independently. Should you find any inaccuracies, please <a href="https://github.com/mabel-dev/opteryx/issues/new?assignees=joocer&amp;labels=Bug+%F0%9F%AA%B2&amp;template=bug_report.md&amp;title=%F0%9F%AA%B2">raise them as issues</a> for prompt remediation. </p>
+<p>Integrated components may differ from their original versions. While we generally do not note cosmetic changes, any alterations or additions to functionality are documented in the code comments. For derived components, we do not provide individual change notes, as these parts of the codebase have usually undergone substantial modifications, making such annotations less meaningful.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>License information was last checked on 2022-06-03, or when specific entries were added to this document, if later.</p>
