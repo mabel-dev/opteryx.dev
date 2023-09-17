@@ -125,7 +125,9 @@ nav:
         - Dependency Management: contributing/topics/dependencies.md
         - Testing Approach: contributing/topics/testing.md
       - Version Goals: contributing/version-goals.md
-#  - Blog:
-#      - Year 2022:
-#        - Building our first Optimizer: blog/202209-building-our-first-optimizer.md
+  - Blog:
+      - Year 2022:
+        - Building our first Optimizer: blog/202209-building-our-first-optimizer.md
+      - Year 2023:
+        - A Sneak Peek into v0.12: blog/202309-v012-sneak-peak.md
 
