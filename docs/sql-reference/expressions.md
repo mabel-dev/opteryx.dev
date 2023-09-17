@@ -43,6 +43,9 @@ Operator     | Description
 `~*`         | case insensitive regular expression match
 `!~*`        | inverse results of `~*`
 `IS`         | special comparison for `true`, `false` and `null`
+`|`          | Bitwise OR
+`&`          | Bitwise AND
+`^`          | Bitwise XOR
 
 ## Other Comparisons
 

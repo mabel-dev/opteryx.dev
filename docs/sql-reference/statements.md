@@ -94,6 +94,9 @@ FOR DATES BETWEEN start AND end
 ~~~
 FOR DATES IN range
 ~~~
+~~~
+FOR DATES SINCE start
+~~~
 
 The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation in a `FROM` or `JOIN` clause. If not provided `FOR TODAY` is assumed.
 

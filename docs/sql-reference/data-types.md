@@ -37,6 +37,11 @@ INTERVAL 'value' unit
 
 Where unit can be 'Year', 'Month', 'Day', 'Hour', 'Minute' or 'Second'.
 
+Example:
+~~~sql
+SELECT INTERVAL '1' YEAR
+~~~
+
 **Other**
 
 `BOOLEAN`, `NUMERIC` and `TIMESTAMP` also support 'type hint' notation (`SELECT TIMESTAMP '2022-01-01';`) to perform casting.
@@ -50,8 +55,6 @@ Literal values in quotes may be in interpreted as a `TIMESTAMP` or `DATE` when t
 All `TIMESTAMP` and values read from datasets are coerced to nanosecond precision timestamps.
 
 ### Numbers
-
-All numeric values included in SQL statements and read from datasets are coerced to 64bit floats.
 
 Hex literals can be provided using `0x` prefix, for example `0xc0ffee` is handled as the integer `12648430`.
 
