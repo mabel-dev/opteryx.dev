@@ -2000,6 +2000,9 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>INTERVAL &#39;value&#39; unit
 </code></pre></div>
 <p>Where unit can be 'Year', 'Month', 'Day', 'Hour', 'Minute' or 'Second'.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="w"> </span><span class="k">YEAR</span>
+</code></pre></div>
 <p><strong>Other</strong></p>
 <p><code>BOOLEAN</code>, <code>NUMERIC</code> and <code>TIMESTAMP</code> also support 'type hint' notation (<code>SELECT TIMESTAMP '2022-01-01';</code>) to perform casting.</p>
 <h2 id="coercion">Coercion</h2>
@@ -2007,7 +2010,6 @@
 <p>Literal values in quotes may be in interpreted as a <code>TIMESTAMP</code> or <code>DATE</code> when they match a valid date in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>  format (e.g. <code>YYYY-MM-DD</code> and <code>YYYY-MM-DD HH:MM</code>). The decision regarding coercising to a <code>DATE</code> if there is no time component to the value, otherwise it will be coerced to a <code>TIMESTAMP</code>. </p>
 <p>All <code>TIMESTAMP</code> and values read from datasets are coerced to nanosecond precision timestamps.</p>
 <h3 id="numbers">Numbers</h3>
-<p>All numeric values included in SQL statements and read from datasets are coerced to 64bit floats.</p>
 <p>Hex literals can be provided using <code>0x</code> prefix, for example <code>0xc0ffee</code> is handled as the integer <code>12648430</code>.</p>
 <h3 id="ipv4-network-ranges">IPv4 Network Ranges</h3>
 <p>IPv4 Network Range comparisions automatically interpret IP addresses and ranges.</p>
