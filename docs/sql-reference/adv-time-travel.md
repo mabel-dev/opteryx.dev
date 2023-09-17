@@ -29,6 +29,7 @@ Date values in `FOR` clauses must either be in 'YYYY-MM-DD [HH:MM]' format or a 
 - `FOR TODAY`
 - `FOR YESTERDAY`
 - `FOR '2022-02-14'`
+- `FOR '2023-09-17 23:00'`
 
 ## Date Ranges
 
@@ -126,8 +127,9 @@ SELECT today.name
   LEFT JOIN $planets FOR '1600-01-01' AS sixteen
     ON sixteen.id = today.id
  WHERE sixteen.id IS NULL
- ~~~
+~~~
 
+Returns:
 ~~~
 name
 -------
