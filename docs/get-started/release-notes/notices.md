@@ -48,11 +48,15 @@ Astronaut dataset acquired from [Kaggle](https://www.kaggle.com/nasa/astronaut-y
 
 Exoplanet dataset acquired from [Kaggle](https://www.kaggle.com/datasets/nasa/kepler-exoplanet-search-results).
 
-English wordlist acquired from [wordlists](https://github.com/kkrypt0nn/wordlists)
+English wordlist acquired from [wordlists](https://github.com/kkrypt0nn/wordlists).
+
+Spotify Charts dataset acquired from [Kaggle](https://www.kaggle.com/datasets/dhruvildave/spotify-charts) on September 17, 2023.
+
+Space Mission dataset acquired from [Kaggle](https://www.kaggle.com/datasets/agirlcoding/all-space-missions-from-1957).
 
 Diagrams created using [ASCII Flow](https://asciiflow.com/) or [draw.io](https://github.com/jgraph/drawio).
 
-Website build using [mkdocs-material](https://github.com/squidfunk/mkdocs-material).
+Website built using [mkdocs-material](https://github.com/squidfunk/mkdocs-material).
 
 SQL-92 conformity tests are based on [sqltest](https://github.com/elliotchance/sqltest).
 
@@ -65,3 +69,7 @@ The following resources have been used as guides, references or patterns:
 - [sqlglot](https://github.com/tobymao/sqlglot) Python Library
 - [CMU DB Group](https://www.youtube.com/c/CMUDatabaseGroup) Lectures
 - [DuckDB](https://duckdb.org/) embedded OLAP SQL Engine
+
+## Uncredited Authors
+
+ChatGPT has assisted in writing, debugging and documenting code.
