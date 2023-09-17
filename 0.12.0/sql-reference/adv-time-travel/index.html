@@ -1345,13 +1345,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#name" class="md-nav__link">
-    name
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2156,13 +2149,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#name" class="md-nav__link">
-    name
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2207,6 +2193,7 @@
 <li><code>FOR TODAY</code></li>
 <li><code>FOR YESTERDAY</code></li>
 <li><code>FOR '2022-02-14'</code></li>
+<li><code>FOR '2023-09-17 23:00'</code></li>
 </ul>
 <h2 id="date-ranges">Date Ranges</h2>
 <p>Data within a range of dates can be specified using <code>FOR DATES BETWEEN</code> or <code>FOR DATES IN</code> syntax. Where data is retrieved for multiple dates, the datasets for each day have an implicit <code>UNION ALL</code> applied to them.</p>
@@ -2304,13 +2291,14 @@
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="s1">&#39;1600-01-01&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">sixteen</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">sixteen</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">today</span><span class="p">.</span><span class="n">id</span>
 <a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">sixteen</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w"> </span><span class="o">~~~</span>
 </code></pre></div>
-<h2 id="name">name</h2>
-<p>Uranus
-Neptune
-Pluto
-~~~</p>
+<p>Returns:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>name
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>-------
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Uranus
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>Neptune
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Pluto
+</code></pre></div>
 
 
 
