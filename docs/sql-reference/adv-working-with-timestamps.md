@@ -94,7 +94,7 @@ year     | ✓          | ✓       | ✓        | ✓           |
 
 ## Implicit Casting
 
-In many situation where a timestamp is expected, if an ISO1806 formatted string is provided, the engine will interpret as a timestamp.
+In many situation where a timestamp is expected, if an [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted string is provided, the engine will interpret as a timestamp.
 
 ## Timezones
 
