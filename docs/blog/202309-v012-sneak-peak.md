@@ -1,4 +1,7 @@
-# Preparing for Opteryx v0.12: A Sneak Peek into Our Revamped Query Planner and More
+# Preparing for Opteryx v0.12
+**A Sneak Peek into Our Revamped Query Planner and More**
+
+_17th September 2023_
 
 As we gear up for the next release of Opteryx version 0.12, which has been a few months coming, we're thrilled to offer a sneak peek into some of the groundbreaking changes coming your way. While the journey of crafting a query engine has always been an ambitious endeavor, the upcoming version promises to take it to the next level.
 
