@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://opteryx.dev/0.12.0/blog/202309-v012-sneak-peak/</loc>
+         <lastmod>2023-09-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://opteryx.dev/0.12.0/blog/unpublished/20220205%20Writing%20a%20Query%20Engine/</loc>
          <lastmod>2023-09-17</lastmod>
          <changefreq>daily</changefreq>

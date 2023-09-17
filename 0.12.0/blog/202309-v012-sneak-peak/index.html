@@ -12,13 +12,11 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://opteryx.dev/0.12.0/sql-reference/adv-temp-tables/">
+        <link rel="canonical" href="https://opteryx.dev/0.12.0/blog/202309-v012-sneak-peak/">
       
       
-        <link rel="prev" href="../adv-null-semantics/">
+        <link rel="prev" href="../202209-building-our-first-optimizer/">
       
-      
-        <link rel="next" href="../adv-sample-data/">
       
       
       <link rel="icon" href="../../icarus-opteryx.png">
@@ -26,7 +24,7 @@
     
     
       
-        <title>Temporary Tables - Opteryx</title>
+        <title>A Sneak Peek into v0.12 - Opteryx</title>
       
     
     
@@ -75,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#relation-constructors" class="md-skip">
+        <a href="#preparing-for-opteryx-v012-a-sneak-peek-into-our-revamped-query-planner-and-more" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Temporary Tables
+              A Sneak Peek into v0.12
             
           </span>
         </div>
@@ -186,13 +184,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../introduction/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../sql-reference/introduction/" class="md-tabs__link">
           
   
   SQL REFERENCE
@@ -224,17 +220,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../blog/202209-building-our-first-optimizer/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../202209-building-our-first-optimizer/" class="md-tabs__link">
           
   
   Blog
@@ -964,19 +964,17 @@
       
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -989,7 +987,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             SQL REFERENCE
@@ -1002,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
+      <a href="../../sql-reference/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1022,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../statements/" class="md-nav__link">
+      <a href="../../sql-reference/statements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1042,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-types/" class="md-nav__link">
+      <a href="../../sql-reference/data-types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1062,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../expressions/" class="md-nav__link">
+      <a href="../../sql-reference/expressions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1082,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/" class="md-nav__link">
+      <a href="../../sql-reference/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1102,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aggregates/" class="md-nav__link">
+      <a href="../../sql-reference/aggregates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1122,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../joins/" class="md-nav__link">
+      <a href="../../sql-reference/joins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1140,19 +1138,17 @@
                 
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
         
           <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
             
@@ -1165,7 +1161,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             Advanced
@@ -1178,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-timestamps/" class="md-nav__link">
+      <a href="../../sql-reference/adv-working-with-timestamps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1198,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-lists/" class="md-nav__link">
+      <a href="../../sql-reference/adv-working-with-lists/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1218,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-structs/" class="md-nav__link">
+      <a href="../../sql-reference/adv-working-with-structs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1238,7 +1234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-ips/" class="md-nav__link">
+      <a href="../../sql-reference/adv-working-with-ips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1258,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-time-travel/" class="md-nav__link">
+      <a href="../../sql-reference/adv-time-travel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1278,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-null-semantics/" class="md-nav__link">
+      <a href="../../sql-reference/adv-null-semantics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1296,29 +1292,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Temporary Tables
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../sql-reference/adv-temp-tables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1327,54 +1303,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#using-values" class="md-nav__link">
-    Using VALUES
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-unnest" class="md-nav__link">
-    Using UNNEST
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-generate_series" class="md-nav__link">
-    Using generate_series
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-fake" class="md-nav__link">
-    Using FAKE
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1386,7 +1314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-sample-data/" class="md-nav__link">
+      <a href="../../sql-reference/adv-sample-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1406,7 +1334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-information-schema/" class="md-nav__link">
+      <a href="../../sql-reference/adv-information-schema/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1426,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-engine-configuration/" class="md-nav__link">
+      <a href="../../sql-reference/adv-engine-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1446,7 +1374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-query-optimization/" class="md-nav__link">
+      <a href="../../sql-reference/adv-query-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1906,17 +1834,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
@@ -1929,7 +1859,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -1976,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/202209-building-our-first-optimizer/" class="md-nav__link">
+      <a href="../202209-building-our-first-optimizer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2002,17 +1932,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
@@ -2025,7 +1957,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Year 2023
@@ -2036,9 +1968,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../blog/202309-v012-sneak-peak/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    A Sneak Peek into v0.12
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2047,6 +1999,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-query-planner-a-complete-overhaul" class="md-nav__link">
+    The Query Planner: A Complete Overhaul
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizer-new-capabilities-on-the-horizon" class="md-nav__link">
+    Optimizer: New Capabilities on the Horizon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overcoming-soft-challenges-the-human-aspect" class="md-nav__link">
+    Overcoming Soft Challenges: The Human Aspect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-on-the-horizon-the-push-based-execution-engine" class="md-nav__link">
+    What's on the Horizon: The Push-Based Execution Engine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#our-new-team-member-chatgpt" class="md-nav__link">
+    Our New Team Member: ChatGPT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stay-tuned-for-the-full-release" class="md-nav__link">
+    Stay Tuned for the Full Release
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2094,29 +2108,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-values" class="md-nav__link">
-    Using VALUES
+  <a href="#the-query-planner-a-complete-overhaul" class="md-nav__link">
+    The Query Planner: A Complete Overhaul
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-unnest" class="md-nav__link">
-    Using UNNEST
+  <a href="#optimizer-new-capabilities-on-the-horizon" class="md-nav__link">
+    Optimizer: New Capabilities on the Horizon
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-generate_series" class="md-nav__link">
-    Using generate_series
+  <a href="#overcoming-soft-challenges-the-human-aspect" class="md-nav__link">
+    Overcoming Soft Challenges: The Human Aspect
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-fake" class="md-nav__link">
-    Using FAKE
+  <a href="#whats-on-the-horizon-the-push-based-execution-engine" class="md-nav__link">
+    What's on the Horizon: The Push-Based Execution Engine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#our-new-team-member-chatgpt" class="md-nav__link">
+    Our New Team Member: ChatGPT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stay-tuned-for-the-full-release" class="md-nav__link">
+    Stay Tuned for the Full Release
   </a>
   
 </li>
@@ -2139,167 +2167,32 @@
   
 
 
-<h1 id="relation-constructors">Relation Constructors</h1>
-<p>There are multiple options to create temporary relations as part of query definitions. These relations exist only for the execution of the query that defines them.</p>
-<h2 id="using-values">Using <code>VALUES</code></h2>
-<p><code>VALUES</code> allows you to create a multi-column temporary relation where the values in the relation are explicitly defined in the statement.</p>
-<p>A simple example is as follows:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">         </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;High&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">),</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">                </span><span class="p">(</span><span class="s1">&#39;Medium&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">                </span><span class="p">(</span><span class="s1">&#39;Low&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">       </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ratings</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">rating</span><span class="p">);</span>
-</code></pre></div>
-<p>Result:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> name   | rating
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>--------+--------
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> High   |      3
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a> Medium |      2
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a> Low    |      1
-</code></pre></div>
-<h2 id="using-unnest">Using <code>UNNEST</code></h2>
-<p><code>UNNEST</code> allows you to create a single column temporary relation where the values in the relation are explicitly defined in the statement.</p>
-<p>A simple example is as follows:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="k">UNNEST</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">));</span>
-</code></pre></div>
-<p>Result:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> unnest 
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>--------
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>      1
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>      2
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>      3
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The values in the <code>UNNEST</code> function are in two sets of parenthesis. The function accepts a list of values, parenthesis is used to wrap parameters to functions and also used to define lists.</p>
-</div>
-<h2 id="using-generate_series">Using <code>generate_series</code></h2>
-<p><code>generate_series</code> allows you to create series by defining the bounds of the series, and optionally, an interval to step between values in the created series. </p>
-<p><code>generate_series</code> supports the following variations:</p>
-<table>
-<thead>
-<tr>
-<th>Form</th>
-<th>Types</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>generate_series(start, stop)</code></td>
-<td>NUMERIC, NUMERIC</td>
-<td>Generate a NUMERIC series between 'start' and 'stop', with a step of 1</td>
-</tr>
-<tr>
-<td><code>generate_series(start, stop, step)</code></td>
-<td>NUMERIC, NUMERIC, NUMERIC</td>
-<td>Generate a NUMERIC series between 'start' and 'stop', with an explicit step size</td>
-</tr>
-<tr>
-<td><code>generate_series(start, stop, interval)</code></td>
-<td>TIMESTAMP, TIMESTAMP, INTERVAL</td>
-<td>Generate a TIMESTAMP series between 'start' and 'stop', with a given interval</td>
-</tr>
-</tbody>
-</table>
-<p>Two parameter Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> generate_series 
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>-----------------
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>               2
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>               3
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>               4
-</code></pre></div>
-<p>Three parameter NUMERIC Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> generate_series 
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>-----------------
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>              -5
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>               0
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>               5
-</code></pre></div>
-<p>Three parameter TIMESTAMP example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2025-12-31&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1y&#39;</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>  generate_series 
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>------------------
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a> 2020-01-01 00:00
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a> 2021-01-01 00:00
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a> 2022-01-01 00:00
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a> 2023-01-01 00:00
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a> 2024-01-01 00:00
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a> 2025-01-01 00:00
-</code></pre></div>
-<h3 id="interval-definitions">Interval Definitions</h3>
-<p>Intervals are defined quantifying one or more periods which make up the interval, supported periods and their notation are:</p>
-<p>Recognized interval parts for the <code>GENERATE_SERIES</code> function are:</p>
-<table>
-<thead>
-<tr>
-<th>Period</th>
-<th style="text-align: left;">Symbol</th>
-<th>Aliases</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Years</td>
-<td style="text-align: left;"><strong>year</strong> / <strong>years</strong></td>
-<td>y / yr / yrs</td>
-</tr>
-<tr>
-<td>Months</td>
-<td style="text-align: left;"><strong>month</strong> / <strong>months</strong></td>
-<td>mo / mon / mons / mth / mths</td>
-</tr>
-<tr>
-<td>Weeks</td>
-<td style="text-align: left;"><strong>week</strong> / <strong>weeks</strong></td>
-<td>w / wk / wks</td>
-</tr>
-<tr>
-<td>Days</td>
-<td style="text-align: left;"><strong>day</strong> / <strong>days</strong></td>
-<td>d</td>
-</tr>
-<tr>
-<td>Hours</td>
-<td style="text-align: left;"><strong>hour</strong> / <strong>hours</strong></td>
-<td>h / hr / hrs</td>
-</tr>
-<tr>
-<td>Minutes</td>
-<td style="text-align: left;"><strong>minute</strong> / <strong>minutes</strong></td>
-<td>m / min / mins</td>
-</tr>
-<tr>
-<td>Seconds</td>
-<td style="text-align: left;"><strong>second</strong> / <strong>seconds</strong></td>
-<td>s / sec / secs</td>
-</tr>
-</tbody>
-</table>
-<p>Where required, periods can be combined to define more complex intervals, for example <code>1h30m</code> represents one hour and 30 minutes.</p>
-<h2 id="using-fake">Using <code>FAKE</code></h2>
-<p><code>FAKE</code> creates a table of random integers from provided row and column counts. This functionality has limited application outside of creating datasets for testing.</p>
-<p>A simple example is as follows:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">FAKE</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<p>Result:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>   column_0 │   column_1 
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>------------┼------------
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>      32981 │      50883
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>       5037 │      42087
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>      51741 │      49456
-</code></pre></div>
+<h1 id="preparing-for-opteryx-v012-a-sneak-peek-into-our-revamped-query-planner-and-more">Preparing for Opteryx v0.12: A Sneak Peek into Our Revamped Query Planner and More</h1>
+<p>As we gear up for the next release of Opteryx version 0.12, which has been a few months coming, we're thrilled to offer a sneak peek into some of the groundbreaking changes coming your way. While the journey of crafting a query engine has always been an ambitious endeavor, the upcoming version promises to take it to the next level.</p>
+<h2 id="the-query-planner-a-complete-overhaul">The Query Planner: A Complete Overhaul</h2>
+<p>The most significant update in v0.12 is a complete rewrite of the query planner. This rewrite aims to retain existing functionalities and maintain API consistency, but it also paves the way for new and exciting optimizations.</p>
+<p>Not all features will be immediately available in v0.12, these should be less well-trodden features such as filters on <code>SHOW</code> queries and <code>IN</code> subquery. The goal is to restore anything missing by v0.14.</p>
+<h2 id="optimizer-new-capabilities-on-the-horizon">Optimizer: New Capabilities on the Horizon</h2>
+<p>v0.13 will likely be a stability release, where limited new features are added, but rather the focus will be on edge cases and documentation. v0.14 will likely see the reintroduction of a query optimizer:</p>
+<p><strong>Advanced Projection and Predicate Pushing</strong>: Not just limited to single-table queries anymore. <br />
+<strong>Cost-based Expression Evaluation</strong>: In the pipeline, contingent upon a rewritten function catalogue. <br />
+<strong>Join Order Optimization</strong>: In planning, and dependent on new data profiles. <br />
+<strong>Pushing Group By, Sort, and Limits</strong>: More freedom to offload these tasks to the database sources.   </p>
+<h2 id="overcoming-soft-challenges-the-human-aspect">Overcoming Soft Challenges: The Human Aspect</h2>
+<p>We've had our share of ups and downs, from struggling to maintain motivation amidst a sea of failed unit tests to wrestling with focus when other exciting parts of the project catch our attention. Despite these hurdles, we've managed to turn challenges into stepping stones.</p>
+<h2 id="whats-on-the-horizon-the-push-based-execution-engine">What's on the Horizon: The Push-Based Execution Engine</h2>
+<p>The rewrite of the planning phases is a strategic move to facilitate our transition to a push-based execution engine that incorporates parallel execution, aiming to further accelerate query performance.</p>
+<p>The inclusion of the binder into the planning phase has shifted a significant amount of logic out of the execution phase. Making the execution phase stateless is a precursor to parallelizing these activities, which is the long-term goal.</p>
+<h2 id="our-new-team-member-chatgpt">Our New Team Member: ChatGPT</h2>
+<p>We have been using ChatGPT in diverse roles:</p>
+<p><strong>Code Reviewer</strong>: Analyzing and offering improvements for code. <br />
+<strong>Test Analyst</strong>: Assisting in creating robust unit tests. <br />
+<strong>Senior Developer</strong>: Identifying performance bottlenecks and providing solutions. <br />
+<strong>Technical Writer</strong>: Writing docstrings and contributing to technical documentation.   </p>
+<p>While ChatGPT has had a variable performance and sometimes has not been as helpful as the hype will have you believe, its contributions have been invaluable.</p>
+<h2 id="stay-tuned-for-the-full-release">Stay Tuned for the Full Release</h2>
+<p>We're putting the finishing touches on v0.12 and look forward to sharing the full details with you in the coming weeks. We're incredibly excited about what's ahead and hope you are too.</p>
+<p>As always, we appreciate your support and welcome any questions or feedback. Keep an eye out for the full release details coming soon!</p>
 
 
 
