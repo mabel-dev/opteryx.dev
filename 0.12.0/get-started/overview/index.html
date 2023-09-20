@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Opteryx - Query your data, where it lives.">
+        <meta name="description" content="Opteryx is a SQL Query Engine written in Python. Designed for speed and accuracy, it utilizes sqlparser-rs for SQL to AST parsing and PyArrow for internal data handling. Ideal for fast, reliable, and extensible data querying.">
       
       
         <meta name="author" content="Justin Joyce">
@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.30068a00.min.css">
       
       
 
@@ -2156,6 +2156,7 @@
 <li><strong>Python-Based Data Processing</strong> - Opteryx is written in Python and can be easily integrated into Python code, including Jupyter Notebooks. This makes it a good choice for data processing and analytics workflows that are already written in Python.</li>
 <li><strong>Consolidating Backend Systems</strong> - Opteryx creates a common SQL-layer over multiple data platforms, allowing you to upgrade, migrate, or consolidate backend systems without changing any Opteryx code. This makes it a good choice for organizations that want to streamline their data infrastructure.</li>
 </ol>
+<p>Opteryx supports accessing multiple database backends, each with their own authentication and access controls. This capability allows Opteryx to serve as a unified access tool for external databases, simplifying challenges such as shifting data schemas and inconsistent API behaviors.</p>
 <h2 id="why-opteryx-rather-than-x">Why Opteryx rather than 'X'</h2>
 <p>'X' is great, and for your use case it may be a better option. Opteryx isn't for all users and all use cases - and we're okay with that.</p>
 <p>SQLite and DuckDB are great choices if you're looking for an embedded database engine. We like them so much we have SQLite and DuckDB integration tests in our CI test-suite.</p>
