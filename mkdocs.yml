@@ -1,7 +1,7 @@
 site_name: Opteryx
 site_url: https://opteryx.dev/
 site_author: Justin Joyce
-site_description: Opteryx - Query your data, where it lives.
+site_description: Opteryx is a SQL Query Engine written in Python. Designed for speed and accuracy, it utilizes sqlparser-rs for SQL to AST parsing and PyArrow for internal data handling. Ideal for fast, reliable, and extensible data querying.
 copyright: Copyright &copy; 2021 - 2023 Justin Joyce (@joocer)
 
 theme:

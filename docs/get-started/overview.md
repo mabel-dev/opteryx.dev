@@ -20,6 +20,8 @@ Opteryx is not intended to replace databases like SQL Server, MySQL, or Postgres
 4. **Python-Based Data Processing** - Opteryx is written in Python and can be easily integrated into Python code, including Jupyter Notebooks. This makes it a good choice for data processing and analytics workflows that are already written in Python.
 5. **Consolidating Backend Systems** - Opteryx creates a common SQL-layer over multiple data platforms, allowing you to upgrade, migrate, or consolidate backend systems without changing any Opteryx code. This makes it a good choice for organizations that want to streamline their data infrastructure.
 
+Opteryx supports accessing multiple database backends, each with their own authentication and access controls. This capability allows Opteryx to serve as a unified access tool for external databases, simplifying challenges such as shifting data schemas and inconsistent API behaviors.
+
 ## Why Opteryx rather than 'X'
 
 'X' is great, and for your use case it may be a better option. Opteryx isn't for all users and all use cases - and we're okay with that.
