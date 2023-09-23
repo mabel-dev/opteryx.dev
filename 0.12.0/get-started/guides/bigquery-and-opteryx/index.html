@@ -12,25 +12,25 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://opteryx.dev/0.12.0/get-started/overview/">
+        <link rel="canonical" href="https://opteryx.dev/0.12.0/get-started/guides/bigquery-and-opteryx/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../polars-and-opteryx/">
       
       
-        <link rel="next" href="../get-started/">
+        <link rel="next" href="../mysql-and-opteryx/">
       
       
-      <link rel="icon" href="../../icarus-opteryx.png">
+      <link rel="icon" href="../../../icarus-opteryx.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.1">
     
     
       
-        <title>Opteryx Overview - Opteryx</title>
+        <title>Connect to BigQuery - Opteryx</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.72749a73.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.72749a73.min.css">
       
       
 
@@ -49,11 +49,11 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../termynal.css">
+      <link rel="stylesheet" href="../../../termynal.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#opteryx-overview" class="md-skip">
+        <a href="#connecting-to-bigquery-using-opteryx" class="md-skip">
           Skip to content
         </a>
       
@@ -93,9 +93,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../../.." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="../../icarus-opteryx.png" alt="logo">
+  <img src="../../../icarus-opteryx.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Opteryx Overview
+              Connect to BigQuery
             
           </span>
         </div>
@@ -153,7 +153,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -174,7 +174,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../../overview/" class="md-tabs__link">
           
   
   GET STARTED
@@ -192,7 +192,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../sql-reference/introduction/" class="md-tabs__link">
+        <a href="../../../sql-reference/introduction/" class="md-tabs__link">
           
   
   SQL REFERENCE
@@ -210,7 +210,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../contributing/contributing/" class="md-tabs__link">
+        <a href="../../../contributing/contributing/" class="md-tabs__link">
           
   
   CONTRIBUTING
@@ -234,7 +234,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../blog/202209-building-our-first-optimizer/" class="md-tabs__link">
+        <a href="../../../blog/202209-building-our-first-optimizer/" class="md-tabs__link">
           
   
   BLOG
@@ -270,9 +270,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../../.." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="../../icarus-opteryx.png" alt="logo">
+  <img src="../../../icarus-opteryx.png" alt="logo">
 
     </a>
     Opteryx
@@ -298,7 +298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -351,6 +351,162 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opteryx Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../command-line-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLI API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python-client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pandas-and-opteryx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pandas Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../polars-and-opteryx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Polars Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -366,7 +522,7 @@
           
   
   <span class="md-ellipsis">
-    Opteryx Overview
+    Connect to BigQuery
   </span>
   
 
@@ -377,7 +533,7 @@
         
   
   <span class="md-ellipsis">
-    Opteryx Overview
+    Connect to BigQuery
   </span>
   
 
@@ -399,29 +555,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#benefits" class="md-nav__link">
-    Benefits
+  <a href="#installation" class="md-nav__link">
+    Installation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uses-for-opteryx" class="md-nav__link">
-    Uses for Opteryx
+  <a href="#registering-postgres-with-opteryx" class="md-nav__link">
+    Registering Postgres with Opteryx
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-opteryx-rather-than-x" class="md-nav__link">
-    Why Opteryx rather than 'X'
+  <a href="#querying-bigquery-from-opteryx" class="md-nav__link">
+    Querying BigQuery from Opteryx
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cloud-native" class="md-nav__link">
-    Cloud Native
+  <a href="#other-services" class="md-nav__link">
+    Other Services
   </a>
   
 </li>
@@ -441,161 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../get-started/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Get Started
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../command-line-guide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    CLI API
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../python-client/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Python API
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
-        
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Guides
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
-            <span class="md-nav__icon md-icon"></span>
-            Guides
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/pandas-and-opteryx/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Pandas Integration
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/polars-and-opteryx/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Polars Integration
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/bigquery-and-opteryx/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connect to BigQuery
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/mysql-and-opteryx/" class="md-nav__link">
+      <a href="../mysql-and-opteryx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -615,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guides/postgres-and-opteryx/" class="md-nav__link">
+      <a href="../postgres-and-opteryx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -635,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guides/convert-csv-to-parquet/" class="md-nav__link">
+      <a href="../convert-csv-to-parquet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guides/execute-sql-on-csv/" class="md-nav__link">
+      <a href="../execute-sql-on-csv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deployment-guide/" class="md-nav__link">
+      <a href="../../deployment-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration-guide/" class="md-nav__link">
+      <a href="../../configuration-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -723,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../security/" class="md-nav__link">
+      <a href="../../security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecosystem/orso/" class="md-nav__link">
+      <a href="../../ecosystem/orso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -797,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecosystem/mabel/" class="md-nav__link">
+      <a href="../../ecosystem/mabel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -817,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecosystem/mesos/" class="md-nav__link">
+      <a href="../../ecosystem/mesos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -879,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../external-standards/pep249/" class="md-nav__link">
+      <a href="../../external-standards/pep249/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../external-standards/sql92/" class="md-nav__link">
+      <a href="../../external-standards/sql92/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -919,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../external-standards/tpch/" class="md-nav__link">
+      <a href="../../external-standards/tpch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -939,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../external-standards/information-schema/" class="md-nav__link">
+      <a href="../../external-standards/information-schema/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../release-notes/change-log/" class="md-nav__link">
+      <a href="../../release-notes/change-log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1021,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../release-notes/notices/" class="md-nav__link">
+      <a href="../../release-notes/notices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1090,7 +1092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/introduction/" class="md-nav__link">
+      <a href="../../../sql-reference/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1110,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/statements/" class="md-nav__link">
+      <a href="../../../sql-reference/statements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1130,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/data-types/" class="md-nav__link">
+      <a href="../../../sql-reference/data-types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1150,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/expressions/" class="md-nav__link">
+      <a href="../../../sql-reference/expressions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1170,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/functions/" class="md-nav__link">
+      <a href="../../../sql-reference/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1190,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/aggregates/" class="md-nav__link">
+      <a href="../../../sql-reference/aggregates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1210,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/joins/" class="md-nav__link">
+      <a href="../../../sql-reference/joins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/adv-working-with-timestamps/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-timestamps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1284,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/adv-working-with-lists/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-lists/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1304,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/adv-working-with-structs/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-structs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1324,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/adv-working-with-ips/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-ips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1344,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/adv-time-travel/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-time-travel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1364,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/adv-null-semantics/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-null-semantics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1384,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/adv-temp-tables/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-temp-tables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/adv-sample-data/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-sample-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1424,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/adv-information-schema/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-information-schema/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1444,7 +1446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/adv-engine-configuration/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-engine-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1464,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql-reference/adv-query-optimization/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-query-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1533,7 +1535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/contributing/" class="md-nav__link">
+      <a href="../../../contributing/contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1553,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/code-of-conduct/" class="md-nav__link">
+      <a href="../../../contributing/code-of-conduct/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1573,7 +1575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/etiquette/" class="md-nav__link">
+      <a href="../../../contributing/etiquette/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1627,7 +1629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/set-up-guides/debian/" class="md-nav__link">
+      <a href="../../../contributing/set-up-guides/debian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1647,7 +1649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/set-up-guides/macos/" class="md-nav__link">
+      <a href="../../../contributing/set-up-guides/macos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1667,7 +1669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/set-up-guides/windows/" class="md-nav__link">
+      <a href="../../../contributing/set-up-guides/windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1729,7 +1731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/internals/project-structure/" class="md-nav__link">
+      <a href="../../../contributing/internals/project-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1749,7 +1751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/internals/query-engine/" class="md-nav__link">
+      <a href="../../../contributing/internals/query-engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1769,7 +1771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/internals/storage-engine/" class="md-nav__link">
+      <a href="../../../contributing/internals/storage-engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1831,7 +1833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/topics/debug_logging/" class="md-nav__link">
+      <a href="../../../contributing/topics/debug_logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,7 +1853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/topics/dependencies/" class="md-nav__link">
+      <a href="../../../contributing/topics/dependencies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1871,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/topics/testing/" class="md-nav__link">
+      <a href="../../../contributing/topics/testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1899,7 +1901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/version-goals/" class="md-nav__link">
+      <a href="../../../contributing/version-goals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1994,7 +1996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/202209-building-our-first-optimizer/" class="md-nav__link">
+      <a href="../../../blog/202209-building-our-first-optimizer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2056,7 +2058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/202309-v012-sneak-peak/" class="md-nav__link">
+      <a href="../../../blog/202309-v012-sneak-peak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2112,29 +2114,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#benefits" class="md-nav__link">
-    Benefits
+  <a href="#installation" class="md-nav__link">
+    Installation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uses-for-opteryx" class="md-nav__link">
-    Uses for Opteryx
+  <a href="#registering-postgres-with-opteryx" class="md-nav__link">
+    Registering Postgres with Opteryx
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-opteryx-rather-than-x" class="md-nav__link">
-    Why Opteryx rather than 'X'
+  <a href="#querying-bigquery-from-opteryx" class="md-nav__link">
+    Querying BigQuery from Opteryx
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cloud-native" class="md-nav__link">
-    Cloud Native
+  <a href="#other-services" class="md-nav__link">
+    Other Services
   </a>
   
 </li>
@@ -2157,34 +2159,43 @@
   
 
 
-<h1 id="opteryx-overview">Opteryx Overview</h1>
-<p>Opteryx revolutionizes your data landscape by serving as a seamless federator for diverse data sources. With Opteryx, you're not just querying a database — you're operating a data control room. Unify your data sources, viewing across Postgres databases, Parquet files, and even more specialized storage solutions, all through a single pane of glass. Opteryx empowers you to transcend data silos, synchronize insights, and command your entire data ecosystem with unparalleled speed and reliability.</p>
-<p>Opteryx is not intended to replace databases like SQL Server, MySQL, or Postgres. Instead, it's designed to allow querying of data sources as part of a data analytics process. By bridging the gap between various data storages, Opteryx enhances your analytics pipeline, enabling you to focus on drawing actionable insights rather than wrestling with data access and compatibility issues.</p>
-<h2 id="benefits">Benefits</h2>
-<ul>
-<li><strong>Querying large datasets across multiple platforms</strong> - Opteryx allows you to query multiple query engines and storage formats in a single query. This makes it useful for querying large datasets that are stored in different formats or locations.</li>
-<li><strong>Analyzing data in real-time</strong> - Opteryx is designed to run in serverless environments where servers can be created and destroyed regularly or even between every query. This makes it well-suited for real-time data analytics, where you need to analyze data quickly and efficiently.</li>
-<li><strong>Cost-effective data analytics</strong> - Opteryx is consumption-based billing friendly, making it great for low-volume usage or situations where you have many environments. This makes it a cost-effective alternative to traditional database deployment.</li>
-<li><strong>Replaying decisions against past data</strong> - Opteryx allows you to query data at a point in time in the past to replay decision algorithms against facts as they were known in the past. This makes it useful for situations where you need to analyze data retroactively.</li>
-<li><strong>Integration with Python</strong> - Opteryx is Python native and can be easily integrated into Python code, including Jupyter Notebooks. This makes it useful for data analysts and data scientists who use Python as their primary programming language.</li>
-</ul>
-<h2 id="uses-for-opteryx">Uses for Opteryx</h2>
-<ol>
-<li><strong>Data Analytics</strong> - Opteryx is designed for querying large data sets and can support complex analytics use cases. Its time travel feature allows you to query data as it existed in the past, making it well-suited for replaying decision algorithms against past facts.</li>
-<li><strong>Cloud-Native Data Processing</strong> - Opteryx is designed to run in low-cost, serverless environments like Google Cloud Run. This makes it a great choice for organizations that want to minimize infrastructure costs while still being able to query large datasets.</li>
-<li><strong>Data Warehousing</strong> - Opteryx allows you to query data directly in the systems where it is stored, eliminating the need to duplicate data into a common store for analytics. This can save you the cost and effort of maintaining duplicates, and is a good option for data warehousing use cases.</li>
-<li><strong>Python-Based Data Processing</strong> - Opteryx is written in Python and can be easily integrated into Python code, including Jupyter Notebooks. This makes it a good choice for data processing and analytics workflows that are already written in Python.</li>
-<li><strong>Consolidating Backend Systems</strong> - Opteryx creates a common SQL-layer over multiple data platforms, allowing you to upgrade, migrate, or consolidate backend systems without changing any Opteryx code. This makes it a good choice for organizations that want to streamline their data infrastructure.</li>
-</ol>
-<p>Opteryx supports accessing multiple database backends, each with their own authentication and access controls. This capability allows Opteryx to serve as a unified access tool for external databases, simplifying challenges such as shifting data schemas and inconsistent API behaviors.</p>
-<h2 id="why-opteryx-rather-than-x">Why Opteryx rather than 'X'</h2>
-<p>'X' is great, and for your use case it may be a better option. Opteryx isn't for all users and all use cases - and we're okay with that.</p>
-<p>SQLite and DuckDB are great choices if you're looking for an embedded database engine. We like them so much we have SQLite and DuckDB integration tests in our CI test-suite.</p>
-<p>Postgres and MySQL are great choices if you're looking for a server/client style database engine. They are tried and tested and solve this problem very well. We like them so much we have Postgres and MySQL integration tests in our CI test-suite.</p>
-<p>Opteryx allows you to have the right database or datastore for the job, and combine them all together. Want to combine Customer database in Postgres, logs in JSONL and monthly sales reports in Parquet; do it - you have the freedom to choose the right tool for a specific task and still be able to join and search across all of them with Opteryx.</p>
-<h2 id="cloud-native">Cloud Native</h2>
-<p>Opteryx is a SQL query engine designed to query large datasets in low-cost serverless environments. While it can respond to a subset of SQL statements like a database, Opteryx is not a database itself and does not support activities that insert, update, or delete data.</p>
-<p>Opteryx doesn't rely on any internal state between queries. This means it can run in serverless environments where servers can be created and destroyed regularly, or even between every query. While the engine does use caching to improve performance, it doesn't maintain any persistent state, making it an ideal solution for cloud-based analytics. (<em>the engine does use caching to improve performance</em>)</p>
+<h1 id="connecting-to-bigquery-using-opteryx">Connecting to BigQuery using Opteryx</h1>
+<p>This short guide will demonstrate how to connect to <a href="https://cloud.google.com/bigquery">BigQuery</a> using Opteryx using <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>.</p>
+<h2 id="installation">Installation</h2>
+<p>Install Opteryx and libraries for connecting to BigQuery.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>opteryx
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>sqlalchemy
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>sqlalchemy-bigquery
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>google-cloud-bigquery-storage
+</code></pre></div>
+<h2 id="registering-postgres-with-opteryx">Registering Postgres with Opteryx</h2>
+<p>Create a <a href="https://docs.sqlalchemy.org/en/20/tutorial/engine.html#tutorial-engine">SQLAlchemy Engine</a> and register it as a store with Opteryx.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Create an SqlAlchemy Engine connecting to your GCP project. See the following</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># URL for more information: https://pypi.org/project/sqlalchemy-bigquery/</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">sqlalchemy.engine</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">from</span> <span class="nn">opteryx.connectors</span> <span class="kn">import</span> <span class="n">SqlConnector</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">GCP_PROJECT</span><span class="p">:</span><span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;your GCP project&quot;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;bigquery://</span><span class="si">{</span><span class="n">GCP_PROJECT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># Register as a store, so we know queries for relations with the</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># provided prefix (bq) should be directed to BigQuery</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">opteryx</span><span class="o">.</span><span class="n">register_store</span><span class="p">(</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="s2">&quot;bq&quot;</span><span class="p">,</span>  <span class="c1"># The prefix to indicate to use this store</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">SqlConnector</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">remove_prefix</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># the prefix isn&#39;t part of the BigQuery table name</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">engine</span><span class="o">=</span><span class="n">engine</span>  <span class="c1"># The SqlAlchemy Engine we created above</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">)</span>
+</code></pre></div>
+<h2 id="querying-bigquery-from-opteryx">Querying BigQuery from Opteryx</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Execute query against the store, the prefix we registered above is used</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># to tell Opteryx that this relation should be read from BigQuery using</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># the Engine created and registered above</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM bq.planets LIMIT 5;&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">result</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="other-services">Other Services</h2>
+<p>Opteryx supports connecting to other SQL engines using this method, such as MySQL, CockroachDB and DuckDB.</p>
 
 
 
@@ -2280,12 +2291,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
       
-        <script src="../../termynal.js"></script>
+        <script src="../../../termynal.js"></script>
       
     
   </body>
