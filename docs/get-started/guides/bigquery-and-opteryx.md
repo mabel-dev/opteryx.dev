@@ -19,8 +19,9 @@ Create a [SQLAlchemy Engine](https://docs.sqlalchemy.org/en/20/tutorial/engine.h
 
 ~~~python
 
-# Create an SqlAlchemy Engine connecting to your GCP project. See the following
-# URL for more information: https://pypi.org/project/sqlalchemy-bigquery/
+# Create an SqlAlchemy Engine connecting to your GCP project. See the
+# following libj for more information:
+# https://pypi.org/project/sqlalchemy-bigquery/
 from sqlalchemy.engine import create_engine
 from opteryx.connectors import SqlConnector
 
