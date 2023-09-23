@@ -64,7 +64,7 @@ pre > code {
     background-color: #282a36 !important;
     font-size: 1em !important;
     padding: 1em !important;
-    color: #ff79c6 !important;
+    color: #ff99cc !important;
     border-radius: 5px !important;
 }
 
@@ -266,11 +266,11 @@ strong {
 }
 
 .p {
-    color: #ff79c6 !important;
+    color: #ff99cc !important;
 }
 
 .o {
-    color: #ff79c6 !important;
+    color: #ff99cc !important;
 }
 
 .c1 {
