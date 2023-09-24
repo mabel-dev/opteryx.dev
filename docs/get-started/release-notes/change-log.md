@@ -37,6 +37,7 @@ _The following features were previously supported by the engine but have not bee
 - [[#1145](https://github.com/mabel-dev/opteryx/pull/1145)] Debug Logging [@joocer](https://github.com/joocer)
 - [[#1156](https://github.com/mabel-dev/opteryx/pull/1156)] Bitwise operators and Hex literals [@joocer](https://github.com/joocer)  
 - [[#1141](https://github.com/mabel-dev/opteryx/pull/1141)] BiQuery regression tests and documentation [@joocer](https://github.com/joocer)
+- [[#1171](https://github.com/mabel-dev/opteryx/pull/1171)] Support `NATURAL JOIN` syntax [@joocer](https://github.com/joocer)
 
 ### Removed
 
