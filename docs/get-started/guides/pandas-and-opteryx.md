@@ -1,6 +1,6 @@
 # Pandas and Opteryx Integration
 
-This short guide will demonstrate how to integrate Pandas and Opteryx, showing you how to query a Pandas dataframe with Opteryx and how to return Pandas dataframe from Opteryx.
+This short guide demonstrates how to integrate Pandas and Opteryx, showing you how to query a Pandas dataframe with Opteryx and how to return Pandas dataframe from Opteryx.
 
 ## Installation
 

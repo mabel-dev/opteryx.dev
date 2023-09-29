@@ -13,7 +13,7 @@ $ pip install sqlalchemy-bigquery
 $ pip install google-cloud-bigquery-storage
 ~~~
 
-## Registering Postgres with Opteryx
+## Registering BigQuery with Opteryx
 
 Create a [SQLAlchemy Engine](https://docs.sqlalchemy.org/en/20/tutorial/engine.html#tutorial-engine) and register it as a store with Opteryx.
 
