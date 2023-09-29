@@ -17,7 +17,7 @@ We recommend installing Opteryx within a virtual environment. This will install 
 $ python -m venv myenv
 $ source myenv/bin/activate  # On Windows, use `myenv\Scripts\activate`
 $ pip install --upgrade opteryx
-~~~~
+~~~
 
 ## Build from Source
 
