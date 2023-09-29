@@ -1,6 +1,6 @@
 # Connecting to BigQuery using Opteryx
 
-This short guide will demonstrate how to connect to [BigQuery](https://cloud.google.com/bigquery) using Opteryx using [SQLAlchemy](https://www.sqlalchemy.org/).
+This short guide demonstrates how to connect to [BigQuery](https://cloud.google.com/bigquery) using Opteryx using [SQLAlchemy](https://www.sqlalchemy.org/).
 
 ## Installation
 
@@ -18,32 +18,36 @@ $ pip install google-cloud-bigquery-storage
 Create a [SQLAlchemy Engine](https://docs.sqlalchemy.org/en/20/tutorial/engine.html#tutorial-engine) and register it as a store with Opteryx.
 
 ~~~python
-
-# Create an SqlAlchemy Engine connecting to your GCP project. See the
-# following libj for more information:
-# https://pypi.org/project/sqlalchemy-bigquery/
-from sqlalchemy.engine import create_engine
+import opteryx
 from opteryx.connectors import SqlConnector
+from sqlalchemy.engine import create_engine
 
+# Create an SqlAlchemy Engine connecting to your GCP project.
+# See the following page for more information:
+# https://pypi.org/project/sqlalchemy-bigquery/
 GCP_PROJECT:str = "your GCP project"
 engine = create_engine(f"bigquery://{GCP_PROJECT}")
 
 # Register as a store, so we know queries for relations with the
 # provided prefix (bq) should be directed to BigQuery
 opteryx.register_store(
-    "bq",  # The prefix to indicate to use this store
-    SqlConnector,
+    prefix="bq",  # The prefix to indicate to use this store
+    connector=SqlConnector,
     remove_prefix=True,  # the prefix isn't part of the BigQuery table name
     engine=engine  # The SqlAlchemy Engine we created above
 )
 ~~~
 
+## Parameters Explained
+- `prefix`: A string to identify which queries should be directed to this database.
+- `connector`: The type of connector to use.
+- `remove_prefix`: Boolean flag to indicate if the prefix should be removed when querying the actual BigQuery table.
+- `engine`: SQLAlchemy Engine to connect to BigQuery.
+
 ## Querying BigQuery from Opteryx
 
 ~~~python
-# Execute query against the store, the prefix we registered above is used
-# to tell Opteryx that this relation should be read from BigQuery using
-# the Engine created and registered above
+# Execute query against the store.
 result = opteryx.query("SELECT * FROM bq.planets LIMIT 5;")
 result.head()
 ~~~

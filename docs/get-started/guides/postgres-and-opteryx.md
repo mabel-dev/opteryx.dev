@@ -1,6 +1,6 @@
 # Connecting to Postgres using Opteryx
 
-This short guide will demonstrate how to connect to Postgres using Opteryx using [SQLAlchemy](https://www.sqlalchemy.org/).
+This short guide demonstrates how to connect to Postgres using Opteryx using [SQLAlchemy](https://www.sqlalchemy.org/).
 
 ## Installation
 
@@ -17,10 +17,11 @@ $ pip install psycopg2-binary
 Create a [SQLAlchemy Engine](https://docs.sqlalchemy.org/en/20/tutorial/engine.html#tutorial-engine) and register it as a store with Opteryx.
 
 ~~~python
+import opteryx
 from opteryx.connectors import SqlConnector
 from sqlalchemy import create_engine
-# Replace with your connection string, for more information on SQLAlchemy
-# Engine, see:
+# Replace with your connection string.
+# For more information on SQLAlchemy Engine, see:
 # https://docs.sqlalchemy.org/en/20/tutorial/engine.html#tutorial-engine
 connection_string = "postgresql+psycopg2://<user>:<password>@<server>/"
 sqlalchemy_engine = create_engine(connection_string)
@@ -35,12 +36,17 @@ opteryx.register_store(
 )
 ~~~
 
+## Parameters Explained
+
+- `prefix`: A string to identify which queries should be directed to this database.
+- `connector`: The type of connector to use.
+- `remove_prefix`: Boolean flag to indicate if the prefix should be removed when querying the actual Postgres table.
+- `engine`: SQLAlchemy Engine to connect to Postgres.
+
 ## Querying Postgres from Opteryx
 
 ~~~python
-# Execute query against the store, the prefix we registered above is used
-# to tell Opteryx that this relation should be read from Postgres using
-# the Engine created and registered above
+# Execute query against the store.
 result = opteryx.query("SELECT * FROM postgres_example.planets LIMIT 5;")
 result.head()
 ~~~
