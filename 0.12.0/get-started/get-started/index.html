@@ -430,6 +430,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2137,6 +2151,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2157,14 +2185,41 @@
 
 <h1 id="get-started">Get Started</h1>
 <h2 id="installation">Installation</h2>
-<p><strong>Install from PyPI (recommended)</strong></p>
-<p>This will install the latest release version.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>opteryx
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Operating System: macOS, Linux or Windows</li>
+<li>Python:<ul>
+<li>3.9 or later</li>
+<li><strong>Note</strong>: For Apple Silicon Mac, Python 3.11 or later is required</li>
+</ul>
+</li>
+</ul>
+<h3 id="install-from-pypi-recommended">Install from PyPI (recommended)</h3>
+<p>We recommend installing Opteryx within a virtual environment. This will install the latest release version.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>myenv/bin/activate<span class="w">  </span><span class="c1"># On Windows, use `myenv\Scripts\activate`</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>opteryx
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="go">~~~~</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gp">#</span><span class="c1"># Build from Source</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="go">To get the latest version, including pre-release and beta versions, you can build from the source code on GitHub.</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="go">~~~console</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/mabel-dev/opteryx
 </code></pre></div>
-<p><strong>Build from Source</strong></p>
-<p>The latest version, including pre-release and beta versions can be built from code on GitHub. This is not recommended for production use and may involve additional steps and requirements in order to bring to an executable condition.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/mabel-dev/opteryx
-</code></pre></div>
+<p>!!! warn:<br />
+    This is not recommended for production use and involves additional steps and requirements dependant on the operating system and environment.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="../python-client/">API Documentation</a></li>
+<li><a href="https://github.com/mabel-dev/opteryx#examples">Usage Examples</a></li>
+<li><a href="https://discord.gg/qpv2tr989x">Discord Server</a></li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="faq">FAQ</h3>
+<p><strong>Q</strong>: What is the most common cause of installation problems? <br />
+<strong>A</strong>: Often, the issue is related to the Python version. Ensure you have Python 3.9 or later, and for Apple Silicon Mac, Python 3.11 or later is required.</p>
 
 
 
