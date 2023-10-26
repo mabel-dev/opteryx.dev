@@ -87,7 +87,20 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
 
 !!! function "`EXTRACT` (**unit** FROM _timestamp_) → _numeric_"       
     Extract **unit** of a timestamp.   
-    Also implemented as individual extraction functions.
+    - `NANOSECOND`  
+    - `MICROSECOND`  
+    - `MILLISECOND`  
+    - `SECOND`  
+    - `MINUTE`  
+    - `HOUR`  
+    - `DAY`  
+    - `DOW` (Day of Week)   
+    - `WEEK`  
+    - `MONTH`  
+    - `QUARTER`  
+    - `DOY` (Day of Year)  
+    - `YEAR`  
+    - `ISOYEAR`  
 
 !!! function "`FROM_UNIXTIME` (**timestamp**: _numeric_) → _timestamp_"    
     Return a timestamp representation of an [Unix Timestamp](https://www.unixtimestamp.com/).    
