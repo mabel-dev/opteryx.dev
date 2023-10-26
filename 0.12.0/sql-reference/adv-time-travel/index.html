@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.d451bc0e.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
       
 
@@ -2257,12 +2257,12 @@
 </ul>
 <h2 id="date-ranges">Date Ranges</h2>
 <p>Data within a range of dates can be specified using <code>FOR DATES BETWEEN</code> or <code>FOR DATES IN</code> syntax. Where data is retrieved for multiple dates, the datasets for each day have an implicit <code>UNION ALL</code> applied to them.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>FOR DATES BETWEEN start AND end
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>FOR DATES BETWEEN start AND end
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>FOR DATES SINCE start
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FOR DATES IN range
-</code></pre></div>
+</code></pre></div></p>
 <p><code>SINCE</code> clauses select a temporal range which spans from the provided start time until now.</p>
 <p>Date values in <code>BETWEEN</code> and <code>SINCE</code> clauses must either be in 'YYYY-MM-DD [HH:MM]' format or a recognized date placeholder, for example:</p>
 <ul>
@@ -2352,13 +2352,13 @@
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">sixteen</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">today</span><span class="p">.</span><span class="n">id</span>
 <a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">sixteen</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span>
 </code></pre></div>
-<p>Returns:</p>
+<p>Returns:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>name
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>-------
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Uranus
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>Neptune
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Pluto
-</code></pre></div>
+</code></pre></div></p>
 
 
 
@@ -2372,10 +2372,10 @@
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Back to top
-          </button>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -2454,10 +2454,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.726fbb30.min.js"></script>
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
       
         <script src="../../termynal.js"></script>
       
