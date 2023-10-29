@@ -8,7 +8,7 @@ Retrieve rows from zero or more relations.
 
 ~~~sql
   WITH <cte> AS <statement> [, ..] 
-SELECT [ DISTINCT ] <expression> [, ..]
+SELECT [ DISTINCT [ ON (<columns>) ] ] <expression> [, ..]
   FROM <relation> [AS <alias>]
    FOR <period> [ WITH (NO_CACHE|NO_PARTITION|NO_PUSH_PROJECTION|NO_PUSH_SELECTION) ]
        [ INNER ] JOIN <relation> | <function> | (<subquery>)
@@ -40,12 +40,12 @@ Unlike some platforms, Opteryx handles CTEs by inserting them as subqueries into
 ### SELECT clause
 
 ~~~
-SELECT [ DISTINCT ] expression [, ...]
+SELECT [ DISTINCT [ ON (columns )]] expression [, ...]
 ~~~
 
 The `SELECT` clause specifies the list of columns that will be returned by the query. While it appears first in the clause, logically the expressions here are executed after most other clauses. The `SELECT` clause can contain arbitrary expressions that transform the output, as well as aggregate functions.
 
-The `DISTINCT` modifier is specified, only unique rows are included in the result set. In this case, each output column must be of a type that allows comparison.
+The `DISTINCT` modifier is specified, only unique rows are included in the result set. In this case, each output column must be of a type that allows comparison. `DISTINCT ON ()` will perform a distinct on the specified columns and select one value for other columns. 
 
 ### FROM / JOIN clauses
 

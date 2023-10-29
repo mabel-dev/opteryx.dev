@@ -67,38 +67,38 @@ Two parameter Example:
 
 ~~~sql
 SELECT *
-  FROM generate_series(2, 4)
+  FROM generate_series(2, 4) AS series;
 ~~~
 ~~~
- generate_series 
------------------
-               2
-               3
-               4
+ series 
+--------
+      2
+      3
+      4
 ~~~
 
 Three parameter NUMERIC Example:
 
 ~~~sql
 SELECT *
-  FROM generate_series(-5, 5, 5)
+  FROM generate_series(-5, 5, 5) AS series;
 ~~~
 ~~~
- generate_series 
------------------
-              -5
-               0
-               5
+ series 
+--------
+     -5
+      0
+      5
 ~~~
 
 Three parameter TIMESTAMP example:
 
 ~~~sql
 SELECT *
-  FROM generate_series('2020-01-01', '2025-12-31', '1y')
+  FROM generate_series('2020-01-01', '2025-12-31', '1y') AS series;
 ~~~
 ~~~
-  generate_series 
+           series 
 ------------------
  2020-01-01 00:00
  2021-01-01 00:00
@@ -134,10 +134,10 @@ A simple example is as follows:
 
 ~~~sql
 SELECT * 
-  FROM FAKE(3, 2);
+  FROM FAKE(3, 2) AS temp; 
 ~~~
 
-Result:
+Example Result:
 
 ~~~
    column_0 │   column_1 
@@ -146,3 +146,30 @@ Result:
        5037 │      42087
       51741 │      49456
 ~~~
+
+`FAKE` supports optionally providing types and names for the columns, these optional features can be used together.
+
+~~~sql
+SELECT *
+  FROM FAKE(3, (NAME, INTEGER, VARCHAR)) AS temp(user, age, password)
+~~~
+
+Example Result:
+
+~~~
+ user            │       age  │ password
+-----------------┼------------┼-----------------
+ Stephanie Wiley │  195792458 │ 94275740545bfd0 
+ Charlie Curry   │ 1970388722 │ af94b1eda94155e8
+ Wayne Lyons     │ 4205624016 │ ae883b48b8cd0   
+~~~
+
+The following column types are able to be faked:
+- `INTEGER`
+- `VARCHAR` (between 8 and 24 randomly selected alpha numeric characters)
+- `BOOLEAN`
+- `DECIMAL` (random floating point number between 0 and 1)
+- `DOUBLE`
+- `TIMESTAMP` (randomly selected date between 1960-01-01 and 2100-12-31)
+- `AGE` (an `INTEGER` value between 0 and 100)
+- `NAME` (a randomly generated english name as a `VARCHAR`)

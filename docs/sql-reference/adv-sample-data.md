@@ -6,6 +6,9 @@ There are three built-in relations for demonstration and testing.
 - `$planets` (20 columns, 9 rows) **#plutoisaplanet**   
 - `$astronauts` (19 columns,  357 rows)   
 
+!!! Note
+    You can also create randomized data using [`FAKE` temporary tables](../adv-temp-tables/).
+
 Satellites and Planets datasets acquired from [this source](https://github.com/devstronomy/nasa-data-scraper/tree/f610e541a053f05e26573570604aed50b358cc43/data/json).
 
 Astronauts dataset acquired from [Kaggle](https://www.kaggle.com/nasa/astronaut-yearbook).
