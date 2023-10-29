@@ -27,6 +27,8 @@ SELECT *
 
 The size of the resultant dataset when using `CROSS JOIN` is length of the two datasets multiplied together (2 x 3 = 6, in the pictorial example), which can easily result in extremely large datasets. When an alternate join approach is possible, it will almost always perform better than a `CROSS JOIN`.
 
+`CROSS JOIN UNNEST` is a specific variation of a `CROSS JOIN`, where the values in an ARRAY column are treated like a single column relation.
+
 ## INNER JOIN
 
 ~~~
@@ -50,13 +52,17 @@ SELECT *
 
 In this example, the blue column is used as the joining column in both relations. Only the value `1` occurs in both relations so the resultant dataset is the combination of the row with `1` in _right_relation_ and the row with `1` in _left_relation_.
 
+`INNER JOIN ... ON` maintains all of the columns in relations on both sides of the `JOIN`.
+
+`INNER JOIN ... USING` keeps a single instance of the columns in the `USING` clause, these columns are not considered a member of either of the left or right relations.
+
 ## NATURAL JOIN
 
 ~~~
 FROM left_relation NATURAL JOIN right_relation
 ~~~
 
-A `NATURAL JOIN` performs an `INNER JOIN` where the join conditions are automatically determined as equals conditions between columns with the same names in the two relations. This may be error prone, especially in situations where schemas may change.
+A `NATURAL JOIN` performs a similar join to an `INNER JOIN ... ON` where the join conditions are automatically determined as equals conditions between columns with the same names in the two relations. This is not recommended in queries supporting production systems as these queries are brittle, especially in situations where schemas may change.
 
 Performing a self `NATURAL JOIN` (the same relation for the left and right relations) removes rows which contain `NULL` values.
 
@@ -101,3 +107,49 @@ SELECT *
 ~~~
 
 ![FULL JOIN](full-join.svg)
+
+## LEFT SEMI JOIN
+
+~~~
+FROM left_relation LEFT SEMI JOIN right_relation ON condition
+~~~
+
+The `LEFT SEMI JOIN` keyword performs an `INNER JOIN` between the left and right relations but only return columns from the left_relation.
+
+**Syntax**
+
+~~~sql
+SELECT *
+  FROM left_relation
+  LEFT SEMI JOIN right_relation
+    ON left_relation.column_name = right_relation.column_name;
+~~~
+
+![LEFT SEMI JOIN](left-semi-join.svg)
+
+## RIGHT SEMI JOIN
+
+A `RIGHT SEMI JOIN` is the same as a `LEFT SEMI JOIN` with the relations swapped.
+
+## LEFT ANTI JOIN
+
+~~~
+FROM left_relation LEFT ANTI JOIN right_relation ON condition
+~~~
+
+The `LEFT ANTI JOIN` keyword performs an `INNER JOIN` between the left and right relations, however, instead of returning matching rows, only rows from the left_relation where there is no match are returned, and no columns or rows from the right_relation are returned.
+
+**Syntax**
+
+~~~sql
+SELECT *
+  FROM left_relation
+  LEFT ANTI JOIN right_relation
+    ON left_relation.column_name = right_relation.column_name;
+~~~
+
+![LEFT ANTI JOIN](left-anti-join.svg)
+
+## RIGHT ANTI JOIN
+
+A `RIGHT ANTI JOIN` is the same as a `LEFT ANTI JOIN` with the relations swapped.
