@@ -66,6 +66,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://opteryx.dev/0.12.0/contributing/internals/binder/</loc>
+         <lastmod>2023-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://opteryx.dev/0.12.0/contributing/internals/project-structure/</loc>
          <lastmod>2023-10-29</lastmod>
          <changefreq>daily</changefreq>
