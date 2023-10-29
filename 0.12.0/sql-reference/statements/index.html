@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
       
 
@@ -2300,7 +2300,7 @@
 <h2 id="select">SELECT</h2>
 <p>Retrieve rows from zero or more relations.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="k">WITH</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cte</span><span class="o">&gt;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="o">&lt;</span><span class="k">statement</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="p">..]</span><span class="w"> </span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="p">..]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">columns</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="p">..]</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">relation</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[</span><span class="k">AS</span><span class="w"> </span><span class="o">&lt;</span><span class="k">alias</span><span class="o">&gt;</span><span class="p">]</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="o">&lt;</span><span class="k">period</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="p">(</span><span class="n">NO_CACHE</span><span class="o">|</span><span class="n">NO_PARTITION</span><span class="o">|</span><span class="n">NO_PUSH_PROJECTION</span><span class="o">|</span><span class="n">NO_PUSH_SELECTION</span><span class="p">)</span><span class="w"> </span><span class="p">]</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">       </span><span class="p">[</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">relation</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">&lt;</span><span class="k">function</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">subquery</span><span class="o">&gt;</span><span class="p">)</span>
@@ -2323,10 +2323,10 @@
 <p>The <code>WITH</code> clause, known as a <em>Common Table Expression</em>, or CTE, is used to define a temporary view which can be referenced within <code>FROM</code> and <code>JOIN</code> clauses. The statement in the CTE supports the full syntax for <code>SELECT</code> statements.</p>
 <p>Unlike some platforms, Opteryx handles CTEs by inserting them as subqueries into the main statement and not by executing them and referencing the result.</p>
 <h3 id="select-clause">SELECT clause</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SELECT [ DISTINCT ] expression [, ...]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SELECT [ DISTINCT [ ON (columns )]] expression [, ...]
 </code></pre></div>
 <p>The <code>SELECT</code> clause specifies the list of columns that will be returned by the query. While it appears first in the clause, logically the expressions here are executed after most other clauses. The <code>SELECT</code> clause can contain arbitrary expressions that transform the output, as well as aggregate functions.</p>
-<p>The <code>DISTINCT</code> modifier is specified, only unique rows are included in the result set. In this case, each output column must be of a type that allows comparison.</p>
+<p>The <code>DISTINCT</code> modifier is specified, only unique rows are included in the result set. In this case, each output column must be of a type that allows comparison. <code>DISTINCT ON ()</code> will perform a distinct on the specified columns and select one value for other columns. </p>
 <h3 id="from-join-clauses">FROM / JOIN clauses</h3>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FROM relation [AS alias] [FOR period] [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PROJECTION, NO_PUSH_SELECTION)] [, ...] 
 </code></pre></div>

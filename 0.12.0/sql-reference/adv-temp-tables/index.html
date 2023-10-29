@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
       
 
@@ -2266,29 +2266,29 @@
 </table>
 <p>Two parameter Example:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">series</span><span class="p">;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> generate_series 
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>-----------------
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>               2
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>               3
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>               4
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> series 
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>--------
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>      2
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>      3
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>      4
 </code></pre></div></p>
 <p>Three parameter NUMERIC Example:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">series</span><span class="p">;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> generate_series 
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>-----------------
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>              -5
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>               0
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>               5
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> series 
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>--------
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>     -5
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>      0
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      5
 </code></pre></div></p>
 <p>Three parameter TIMESTAMP example:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2025-12-31&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1y&#39;</span><span class="p">)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2025-12-31&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1y&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">series</span><span class="p">;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>  generate_series 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>           series 
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>------------------
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a> 2020-01-01 00:00
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a> 2021-01-01 00:00
@@ -2351,15 +2351,35 @@
 <p><code>FAKE</code> creates a table of random integers from provided row and column counts. This functionality has limited application outside of creating datasets for testing.</p>
 <p>A simple example is as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">FAKE</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">FAKE</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
-<p>Result:</p>
+<p>Example Result:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>   column_0 │   column_1 
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>------------┼------------
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>      32981 │      50883
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>       5037 │      42087
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>      51741 │      49456
 </code></pre></div>
+<p><code>FAKE</code> supports optionally providing types and names for the columns, these optional features can be used together.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">FAKE</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">NAME</span><span class="p">,</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">temp</span><span class="p">(</span><span class="k">user</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">)</span>
+</code></pre></div>
+<p>Example Result:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a> user            │       age  │ password
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>-----------------┼------------┼-----------------
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a> Stephanie Wiley │  195792458 │ 94275740545bfd0 
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a> Charlie Curry   │ 1970388722 │ af94b1eda94155e8
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a> Wayne Lyons     │ 4205624016 │ ae883b48b8cd0   
+</code></pre></div>
+<p>The following column types are able to be faked:
+- <code>INTEGER</code>
+- <code>VARCHAR</code> (between 8 and 24 randomly selected alpha numeric characters)
+- <code>BOOLEAN</code>
+- <code>DECIMAL</code> (random floating point number between 0 and 1)
+- <code>DOUBLE</code>
+- <code>TIMESTAMP</code> (randomly selected date between 1960-01-01 and 2100-12-31)
+- <code>AGE</code> (an <code>INTEGER</code> value between 0 and 100)
+- <code>NAME</code> (a randomly generated english name as a <code>VARCHAR</code>)</p>
 
 
 
