@@ -93,14 +93,20 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     - `SECOND`  
     - `MINUTE`  
     - `HOUR`  
+    - `TIME`  
+    - `DATE`  
     - `DAY`  
-    - `DOW` (Day of Week)   
+    - `DAYOFWEEK` \ `DOW`  
     - `WEEK`  
+    - `ISOWEEK`  
     - `MONTH`  
     - `QUARTER`  
-    - `DOY` (Day of Year)  
+    - `DAYOFYEAR` \ `DOY`  
     - `YEAR`  
-    - `ISOYEAR`  
+    - `ISOYEAR`
+    - `DECADE`  
+    - `CENTURY`  
+    - `EPOCH`     
 
 !!! function "`FROM_UNIXTIME` (**timestamp**: _numeric_) → _timestamp_"    
     Return a timestamp representation of an [Unix Timestamp](https://www.unixtimestamp.com/).    
