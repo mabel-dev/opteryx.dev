@@ -96,14 +96,14 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     - `TIME`  
     - `DATE`  
     - `DAY`  
-    - `DAYOFWEEK` \ `DOW`  
+    - `DAYOFWEEK` / `DOW`  
     - `WEEK`  
     - `ISOWEEK`  
     - `MONTH`  
     - `QUARTER`  
-    - `DAYOFYEAR` \ `DOY`  
+    - `DAYOFYEAR` / `DOY`  
     - `YEAR`  
-    - `ISOYEAR`
+    - `ISOYEAR`  
     - `DECADE`  
     - `CENTURY`  
     - `EPOCH`     
