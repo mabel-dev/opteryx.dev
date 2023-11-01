@@ -106,7 +106,8 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     - `ISOYEAR`  
     - `DECADE`  
     - `CENTURY`  
-    - `EPOCH`     
+    - `EPOCH`   
+    - `JULIAN`    
 
 !!! function "`FROM_UNIXTIME` (**timestamp**: _numeric_) → _timestamp_"    
     Return a timestamp representation of an [Unix Timestamp](https://www.unixtimestamp.com/).    
