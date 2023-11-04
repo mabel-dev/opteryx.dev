@@ -164,7 +164,7 @@ Example Result:
  Wayne Lyons     │ 4205624016 │ ae883b48b8cd0   
 ~~~
 
-The following column types are able to be faked:
+The following column types are able to be faked:  
 - `INTEGER`   
 - `VARCHAR` (between 8 and 24 randomly selected alpha numeric characters)   
 - `BOOLEAN`   
