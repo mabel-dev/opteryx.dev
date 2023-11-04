@@ -130,8 +130,8 @@ Having multiple snapshots of the same table available in the same query creates 
 
 Returns:
 ~~~
-name
--------
+today.name
+-----------
 Uranus
 Neptune
 Pluto
