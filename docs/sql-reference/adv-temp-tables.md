@@ -165,11 +165,11 @@ Example Result:
 ~~~
 
 The following column types are able to be faked:
-- `INTEGER`
-- `VARCHAR` (between 8 and 24 randomly selected alpha numeric characters)
-- `BOOLEAN`
-- `DECIMAL` (random floating point number between 0 and 1)
-- `DOUBLE`
-- `TIMESTAMP` (randomly selected date between 1960-01-01 and 2100-12-31)
-- `AGE` (an `INTEGER` value between 0 and 100)
-- `NAME` (a randomly generated english name as a `VARCHAR`)
+- `INTEGER`   
+- `VARCHAR` (between 8 and 24 randomly selected alpha numeric characters)   
+- `BOOLEAN`   
+- `DECIMAL`    
+- `DOUBLE` (random floating point number between 0 and 1)     
+- `TIMESTAMP` (randomly selected date between 1960-01-01 and 2100-12-31)   
+- `AGE` (an `INTEGER` value between 0 and 100)   
+- `NAME` (a randomly generated english name as a `VARCHAR`)   
