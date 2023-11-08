@@ -38,11 +38,10 @@ _The following features were previously supported by the engine but have not bee
 - [[#1156](https://github.com/mabel-dev/opteryx/pull/1156)] Bitwise operators and Hex literals [@joocer](https://github.com/joocer)  
 - [[#1141](https://github.com/mabel-dev/opteryx/pull/1141)] BiQuery regression tests and documentation [@joocer](https://github.com/joocer)
 - [[#1171](https://github.com/mabel-dev/opteryx/pull/1171)] Support `NATURAL JOIN` syntax [@joocer](https://github.com/joocer)  
+- [[#1171](https://github.com/mabel-dev/opteryx/pull/1171)] Support `SEMI` and `ANTI` join syntax [@joocer](https://github.com/joocer)  
 - [[#1219](https://github.com/mabel-dev/opteryx/pull/1219)] Extended `FAKE` syntax [@joocer](https://github.com/joocer)
 - [[#1219](https://github.com/mabel-dev/opteryx/pull/1219)] `DISTINCT ON` syntax added [@joocer](https://github.com/joocer)
 - [[#1220](https://github.com/mabel-dev/opteryx/pull/1220)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.39.0 [dependabot](https://github.com/apps/dependabot) 
-
-https://github.com/mabel-dev/opteryx/pull/1220
 
 ### Removed
 
