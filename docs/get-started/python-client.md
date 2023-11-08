@@ -34,7 +34,7 @@ Query results can be accessed through the Cursor, which is an [Orso DataFrame](h
 
 ## Short Form API
 
-Opteryx also provides a simplified, short-form API that assumes default values for creating the Connection and Cursor objects.
+Opteryx also provides a simplified, short-form, API that assumes default values for creating the Connection and Cursor objects.
 
 ### Usage
 
