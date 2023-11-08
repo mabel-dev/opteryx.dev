@@ -1140,48 +1140,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#show-create-table" class="md-nav__link">
-    SHOW CREATE TABLE
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#show-functions" class="md-nav__link">
-    SHOW FUNCTIONS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#show-parameter" class="md-nav__link">
-    SHOW PARAMETER
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#show-databases" class="md-nav__link">
-    SHOW DATABASES
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#show-variables" class="md-nav__link">
-    SHOW VARIABLES
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use" class="md-nav__link">
-    USE 
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2235,48 +2193,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#show-create-table" class="md-nav__link">
-    SHOW CREATE TABLE
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#show-functions" class="md-nav__link">
-    SHOW FUNCTIONS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#show-parameter" class="md-nav__link">
-    SHOW PARAMETER
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#show-databases" class="md-nav__link">
-    SHOW DATABASES
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#show-variables" class="md-nav__link">
-    SHOW VARIABLES
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use" class="md-nav__link">
-    USE 
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2418,6 +2334,10 @@
 <p>The data returned by the <code>EXPLAIN</code> statement is intended for interactive usage only and the output format may change between releases. Applications should not depend on the output of the <code>EXPLAIN</code> statement.</p>
 </div>
 <h2 id="execute">EXECUTE <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>EXECUTE Support is currently removed as part of the planner rewrite.</p>
+</div>
 <p>Execute a preprated statement.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">EXECUTE</span><span class="w"> </span><span class="n">statement_name</span><span class="p">[(</span><span class="o">&lt;</span><span class="k">parameter</span><span class="p">[,</span><span class="w"> </span><span class="p">...]</span><span class="o">&gt;</span><span class="p">)]</span>
 </code></pre></div>
@@ -2441,6 +2361,10 @@
 <h3 id="full-modifier">FULL modifier</h3>
 <p>Inclusion of the <code>FULL</code> modifier uses the entire dataset in order to return complete column information, rather than just the first morsel from the dataset.</p>
 <h3 id="like-clause">LIKE clause</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Support for filtering SHOW statements is currently removed as part of the planner rewrite.</p>
+</div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>LIKE pattern
 </code></pre></div>
 <p>A case-insensitive <code>LIKE</code> clause to filter the results to the desired subset by the column name. This does not require a left-hand operator, it will always filter by the column name.</p>
@@ -2453,51 +2377,84 @@
 </code></pre></div></p>
 <p>The <code>FOR</code> clause is a non-standard clause which filters data by the date it was recorded for. When provided <code>FOR</code> clauses must directly follow the relation name the <code>FROM</code> clause. If not provided <code>FOR TODAY</code> is assumed.</p>
 <p>See <a href="../adv-time-travel/">Time Travel</a> for more information on <code>FOR</code> syntax and functionality.</p>
-<h2 id="show-create-table">SHOW CREATE TABLE</h2>
-<p>Show an approximation of the SQL to create a specified relation.</p>
+<!---
+
+## SHOW CREATE TABLE
+
+Show an approximation of the SQL to create a specified relation.
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">period</span>
 </code></pre></div>
-<p>The SQL generated by this statement is unlikely to be able to be used with any SQL engine to create the table without some intervention and edits. It is intended to reduce effort to obtain this SQL, not eliminate it.</p>
-<h3 id="for-clause_2">FOR clause</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>FOR date
+
+The SQL generated by this statement is unlikely to be able to be used with any SQL engine to create the table without some intervention and edits. It is intended to reduce effort to obtain this SQL, not eliminate it.
+
+### FOR clause
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>FOR date
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>FOR DATES BETWEEN start AND end
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>FOR DATES IN range
-</code></pre></div></p>
-<p>The <code>FOR</code> clause is a non-standard clause which filters data by the date it was recorded for. When provided <code>FOR</code> clauses must directly follow the relation name. If not provided <code>FOR TODAY</code> is assumed.</p>
-<h2 id="show-functions">SHOW FUNCTIONS</h2>
-<p>List the functions and aggregators supported by the engine.</p>
+</code></pre></div>
+
+The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation name. If not provided `FOR TODAY` is assumed.
+
+## SHOW FUNCTIONS
+
+List the functions and aggregators supported by the engine.
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">FUNCTIONS</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span>
 </code></pre></div>
-<h3 id="like-clause_1">LIKE clause</h3>
+
+### LIKE clause
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>LIKE pattern
 </code></pre></div>
-<p>A case-insensitive <code>LIKE</code> clause to filter the results to the desired subset by the function name. This does not require a left-hand operator, it will always filter by the function name.</p>
-<h2 id="show-parameter">SHOW PARAMETER</h2>
-<p>Display the value of a given configuration setting.</p>
+
+A case-insensitive `LIKE` clause to filter the results to the desired subset by the function name. This does not require a left-hand operator, it will always filter by the function name.
+
+## SHOW PARAMETER
+
+Display the value of a given configuration setting.
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="k">PARAMETER</span><span class="w"> </span><span class="k">parameter</span>
 </code></pre></div>
-<h2 id="show-databases">SHOW DATABASES</h2>
-<p>Display the set of configured data stores.</p>
+
+## SHOW DATABASES
+
+Display the set of configured data stores.
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">DATABASES</span>
 </code></pre></div>
-<h2 id="show-variables">SHOW VARIABLES</h2>
-<p>List the variables set in the query batch.</p>
+
+## SHOW VARIABLES
+
+List the variables set in the query batch.
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">VARIABLES</span>
 <a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span>
 </code></pre></div>
-<h3 id="like-clause_2">LIKE clause</h3>
+
+### LIKE clause
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>LIKE pattern
 </code></pre></div>
-<p>A case-insensitive <code>LIKE</code> clause to filter the results to the desired subset by the variable name. This does not require a left-hand operator, it will always filter by the variable name.</p>
-<p><strong>Related</strong>: <code>SET</code></p>
-<h2 id="use">USE <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span></h2>
-<p>This statement currently has no effect.</p>
+
+A case-insensitive `LIKE` clause to filter the results to the desired subset by the variable name. This does not require a left-hand operator, it will always filter by the variable name.
+
+**Related**: `SET`
+
+## USE :octicons-beaker-24:  
+
+This statement currently has no effect.
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">USE</span><span class="w"> </span><span class="k">database</span>
 </code></pre></div>
+
+
+--->
 
 
 
