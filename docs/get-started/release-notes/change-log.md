@@ -13,7 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 > - The storage connectors have been refactored       
 
 ### Unsupported
-_The following features were previously supported by the engine but have not been reimplemented as part of the new planner:_
+_The following features were previously supported by the engine but have not been reimplemented as part of the new planner:_  
 - Filters on `SHOW` queries
 
 ### Fixed
