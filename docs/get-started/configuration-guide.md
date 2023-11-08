@@ -1,5 +1,8 @@
 # Configuration Guide
 
+!!! warning
+    This information may not be current for version 0.12 onwards
+
 ## Configuration File
 
 Configuration values are set a [`opteryx.yaml`](opteryx.yaml) file in the directory the application is run from.

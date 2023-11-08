@@ -40,7 +40,7 @@ Debian (ARM)      | Partial    | None        | None
 !!! Note
     - Python 3.8 last supported version 0.11.0
     - PyPy regression suite fails due to issues with Apache Arrow.
-    - MacOs (M1) is not included in the regression suite due to lack of support on the test platform, however there is known usage on this configuration.
+    - MacOs (M1/M2/M3) is not included in the regression suite due to lack of support on the test platform, however there is known usage on this chipset on Python 3.11.
     - Windows (ARM) is not included in the regression suite due to lack of support on the test platform.
     - Partial coverage is primarily due to testing platform constraints, not core-compatibility issues.
 
@@ -88,6 +88,7 @@ Google FireStore     | GcpFireStoreConnector    | Document Store
 Local Disk           | DiskConnector            | Blob/File Store
 MinIo                | AwsS3Connector           | Blob/File Store
 MongoDB *            | MongoDbConnector         | Document Store
+BigQuery             | SqlConnector             | SQL Store
 Cockroach DB         | SqlConnector             | SQL Store
 DuckDB               | SqlConnector             | SQL Store
 MySQL                | SqlConnector             | SQL Store
@@ -197,12 +198,12 @@ Opteryx supports:
 
 !!! note
     - ORC is not supported on Windows environments
-    - CSV and TSV support is limited and is not recommended beyond trivial usage
+    - CSV and TSV support is limited and is not recommended beyond trivial use cases
     - Avro is not recommended for use in performance-sensitive contexts
 
 ### File Sizes
 
-Opteryx loads entire files into memory at a time, this requires the following to be considered:
+Opteryx usually loads entire files into memory at a time, this requires the following to be considered:
 
 - Reading one record from a file loads the entire blob. If you regularly only read a few records, prefer smaller blobs.
 - Reading each blob, particularly from Cloud Storage (S3/GCS), incurs a per-read overhead. If you have large datasets, prefer larger blobs.
