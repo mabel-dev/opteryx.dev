@@ -39,10 +39,10 @@ opteryx.register_store(
 
 ## Parameters Explained
 
-- `prefix`: A string to identify which queries should be directed to this database.
-- `connector`: The type of connector to use.
-- `remove_prefix`: Boolean flag to indicate if the prefix should be removed when querying the actual MySQL table.
-- `engine`: SQLAlchemy Engine to connect to MySQL.
+- `prefix` A string to identify which queries should be directed to this database.
+- `connector` The type of connector to use.
+- `remove_prefix` Boolean flag to indicate if the prefix should be removed when querying the actual MySQL table.
+- `engine` SQLAlchemy Engine to connect to MySQL.
 
 ## Querying MySQL from Opteryx
 
