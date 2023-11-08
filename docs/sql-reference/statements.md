@@ -158,6 +158,9 @@ The `EXPLAIN` clause outputs a summary of the execution plan for the query in th
 
 ## EXECUTE :octicons-beaker-24: 
 
+!!! Note
+    EXECUTE Support is currently removed as part of the planner rewrite.
+
 Execute a preprated statement.
 
 ~~~sql
@@ -201,6 +204,9 @@ Inclusion of the `FULL` modifier uses the entire dataset in order to return comp
 
 ### LIKE clause
 
+!!! Note
+    Support for filtering SHOW statements is currently removed as part of the planner rewrite.
+
 ~~~
 LIKE pattern
 ~~~
@@ -222,6 +228,8 @@ FOR DATES IN range
 The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation name the `FROM` clause. If not provided `FOR TODAY` is assumed.
 
 See [Time Travel](../adv-time-travel/) for more information on `FOR` syntax and functionality.
+
+<!---
 
 ## SHOW CREATE TABLE
 
@@ -307,3 +315,6 @@ This statement currently has no effect.
 ~~~sql
 USE database
 ~~~
+
+
+--->
