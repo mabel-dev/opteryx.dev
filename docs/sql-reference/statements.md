@@ -28,6 +28,9 @@ OFFSET <offset>
 
 ### WITH clause
 
+!!! Note
+    CTE Support is currently removed as part of the planner rewrite.
+
 ~~~
 WITH <cte> AS <statement> [, ..] 
 ~~~
