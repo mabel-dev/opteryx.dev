@@ -2249,7 +2249,7 @@
 <ul>
 <li>Python 3.8 last supported version 0.11.0</li>
 <li>PyPy regression suite fails due to issues with Apache Arrow.</li>
-<li>MacOs (M1) is not included in the regression suite due to lack of support on the test platform, however there is known usage on this configuration.</li>
+<li>MacOs (M1/M2/M3) is not included in the regression suite due to lack of support on the test platform, however there is known usage on this chipset on Python 3.11.</li>
 <li>Windows (ARM) is not included in the regression suite due to lack of support on the test platform.</li>
 <li>Partial coverage is primarily due to testing platform constraints, not core-compatibility issues.</li>
 </ul>
@@ -2310,6 +2310,11 @@
 <td>MongoDB *</td>
 <td>MongoDbConnector</td>
 <td>Document Store</td>
+</tr>
+<tr>
+<td>BigQuery</td>
+<td>SqlConnector</td>
+<td>SQL Store</td>
 </tr>
 <tr>
 <td>Cockroach DB</td>
@@ -2416,12 +2421,12 @@
 <p class="admonition-title">Note</p>
 <ul>
 <li>ORC is not supported on Windows environments</li>
-<li>CSV and TSV support is limited and is not recommended beyond trivial usage</li>
+<li>CSV and TSV support is limited and is not recommended beyond trivial use cases</li>
 <li>Avro is not recommended for use in performance-sensitive contexts</li>
 </ul>
 </div>
 <h3 id="file-sizes">File Sizes</h3>
-<p>Opteryx loads entire files into memory at a time, this requires the following to be considered:</p>
+<p>Opteryx usually loads entire files into memory at a time, this requires the following to be considered:</p>
 <ul>
 <li>Reading one record from a file loads the entire blob. If you regularly only read a few records, prefer smaller blobs.</li>
 <li>Reading each blob, particularly from Cloud Storage (S3/GCS), incurs a per-read overhead. If you have large datasets, prefer larger blobs.</li>
