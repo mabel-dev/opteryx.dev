@@ -35,7 +35,7 @@ A simple example is as follows:
 
 ~~~sql
 SELECT *
-  FROM UNNEST((1,2,3));
+  FROM UNNEST((1,2,3)) AS TEMP;
 ~~~
 
 Result:

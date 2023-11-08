@@ -27,7 +27,7 @@ To get the latest version, including pre-release and beta versions, you can buil
 $ pip install git+https://github.com/mabel-dev/opteryx
 ~~~
 
-!!! note:  
+!!! Note  
     This is not recommended for production use and involves additional steps and requirements dependant on the operating system and environment.
 
 ## Additional Resources
