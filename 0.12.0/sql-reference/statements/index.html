@@ -2318,6 +2318,10 @@
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="o">&lt;</span><span class="k">limit</span><span class="o">&gt;</span>
 </code></pre></div>
 <h3 id="with-clause">WITH clause</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>CTE Support is currently removed as part of the planner rewrite.</p>
+</div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>WITH &lt;cte&gt; AS &lt;statement&gt; [, ..] 
 </code></pre></div>
 <p>The <code>WITH</code> clause, known as a <em>Common Table Expression</em>, or CTE, is used to define a temporary view which can be referenced within <code>FROM</code> and <code>JOIN</code> clauses. The statement in the CTE supports the full syntax for <code>SELECT</code> statements.</p>
