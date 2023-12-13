@@ -33,7 +33,7 @@ Date values in `FOR` clauses must either be in 'YYYY-MM-DD [HH:MM]' format or a 
 
 ## Date Ranges
 
-Data within a range of dates can be specified using `FOR DATES BETWEEN` or `FOR DATES IN` syntax. Where data is retrieved for multiple dates, the datasets for each day have an implicit `UNION ALL` applied to them.
+Data within a range of dates can be specified using `FOR DATES BETWEEN`, `FOR DATES SINCE` or `FOR DATES IN` syntax. Where data is retrieved for multiple dates, the datasets for each day have an implicit `UNION ALL` applied to them.
 
 ~~~
 FOR DATES BETWEEN start AND end
