@@ -43,6 +43,7 @@ _The following features were previously supported by the engine but have not bee
 - [[#1219](https://github.com/mabel-dev/opteryx/pull/1219)] `DISTINCT ON` syntax added [@joocer](https://github.com/joocer)
 - [[#1220](https://github.com/mabel-dev/opteryx/pull/1220)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.39.0 [dependabot](https://github.com/apps/dependabot) 
 - [[#1329](https://github.com/mabel-dev/opteryx/pull/1329)] Add Redis as remote read cache option. [@joocer](https://github.com/joocer)
+- [[#1337](https://github.com/mabel-dev/opteryx/pull/1337)] Support `RLIKE` [@joocer](https://github.com/joocer)
 
 ### Removed
 

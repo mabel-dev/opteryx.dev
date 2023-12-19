@@ -38,8 +38,8 @@ Operator     | Description
 `NOT LIKE`   | inverse results of `LIKE`         
 `ILIKE`      | case-insensitive pattern match 
 `NOT ILIKE`  | inverse results of `ILIKE`     
-`~`          | regular expression match (also `SIMILAR TO`)     
-`!~`         | inverse results of `~` (also `NOT SIMILAR TO`)
+`RLIKE`      | regular expression match (also `~` and `SIMILAR TO`)     
+`NOT RLIKE`  | inverse results of `RLIKE` (also `!~` and `NOT SIMILAR TO`)
 `~*`         | case insensitive regular expression match
 `!~*`        | inverse results of `~*`
 `IS`         | special comparison for `true`, `false` and `null`
