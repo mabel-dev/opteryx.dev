@@ -18,26 +18,64 @@ list[index]
 
 ### Testing
 
-~~~
-value IN list
-~~~
-
-### Searching
+#### ANY
 
 ~~~
-SEARCH(list, value)
+value <operator> ANY(column)
 ~~~
+
+The `any` function is used to apply a filter to each item in an array, and returns `True` if any item in the array matches the condition.
+
+A limited set of operators are supported: `=`, `!=`, `<`, and `>`. 
+
+~~~sql
+SELECT * 
+  FROM $astronauts
+ WHERE 'Apollo 11' = any(missions);
 ~~~
-IN UNNEST(list)
+
+!!! Note
+    `any` is experimental - it is likely to be faster than other options for list containment, but may not perform as expected in all situations.
+
+#### ALL
+
 ~~~
+value <operator> ALL(column)
 ~~~
-LIST_CONTAINS   
+
+The `all` function is used to apply a filter to each item in an array, and returns `True` if all items in the array matches the condition.
+
+A limited set of operators are supported: `=`, `!=`. 
+
+!!! Note
+    `all` is experimental - it is likely to be faster than other options for list containment, but may not perform as expected in all situations.
+
+#### SEARCH
+
+~~~sql
+SELECT *
+  FROM $astronauts
+ WHERE Search(missions, 'Apollo 11')
 ~~~
+
+#### IN
+
+The `IN` operator allows a column to be tested against a list of values.
+
+~~~sql
+SELECT *
+  FROM $planets
+ WHERE name IN ('Earth', 'Mars')
 ~~~
-LIST_CONTAINS_ANY   
-~~~
-~~~
-LIST_CONTAINS_ALL
+
+#### IN UNNEST
+
+The combination of `IN UNNEST` allows a value to be tested for containment in a column.
+
+~~~sql
+SELECT *
+  FROM $astronauts
+ WHERE 'Apollo 11' IN UNNEST(missions)
 ~~~
 
 ### Transforms
