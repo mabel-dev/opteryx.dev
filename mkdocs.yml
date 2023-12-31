@@ -1,8 +1,8 @@
 site_name: Opteryx
 site_url: https://opteryx.dev/
 site_author: Justin Joyce
-site_description: Opteryx is a SQL Query Engine written in Python. Designed for speed and accuracy, it utilizes sqlparser-rs for SQL to AST parsing and PyArrow for internal data handling. Ideal for fast, reliable, and extensible data querying.
-copyright: Copyright &copy; 2021 - 2023 Justin Joyce (@joocer)
+site_description: A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.
+copyright: Copyright &copy; 2021 - 2024 Justin Joyce (@joocer)
 
 theme:
   name: material
@@ -49,8 +49,6 @@ extra:
     provider: mike
     default: latest
   social:
-    - icon: fontawesome/brands/twitter 
-      link: https://twitter.com/opteryxsql
     - icon: fontawesome/brands/discord 
       link: https://discord.gg/qpv2tr989x
     - icon: fontawesome/brands/github 
@@ -85,7 +83,7 @@ nav:
       - Python PEP249: get-started/external-standards/pep249.md
       - ANSI SQL-92: get-started/external-standards/sql92.md
       - TPC-H: get-started/external-standards/tpch.md
-      - Information Schema: get-started/external-standards/information-schema.md
+#      - Information Schema: get-started/external-standards/information-schema.md
     - Release Notes:
       - Change Log: get-started/release-notes/change-log.md
       - Notices: get-started/release-notes/notices.md
@@ -106,8 +104,8 @@ nav:
       - Null Semantics: sql-reference/adv-null-semantics.md
       - Temporary Tables: sql-reference/adv-temp-tables.md
       - Sample Data: sql-reference/adv-sample-data.md
-      - Information Schema: sql-reference/adv-information-schema.md
-      - Engine Configuration: sql-reference/adv-engine-configuration.md
+#      - Information Schema: sql-reference/adv-information-schema.md
+#      - Engine Configuration: sql-reference/adv-engine-configuration.md
       - Query Optimization: sql-reference/adv-query-optimization.md
   - CONTRIBUTING:
       - contributing/contributing.md
