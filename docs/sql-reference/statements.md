@@ -7,14 +7,13 @@ The following statement forms are supported.
 Retrieve rows from zero or more relations.
 
 ~~~sql
-  WITH <cte> AS <statement> [, ..] 
 SELECT [ DISTINCT [ ON (<columns>) ] ] <expression> [, ..]
   FROM <relation> [AS <alias>]
-   FOR <period> [ WITH (NO_CACHE|NO_PARTITION|NO_PUSH_PROJECTION|NO_PUSH_SELECTION) ]
+   FOR <period>
        [ INNER ] JOIN <relation> | <function> | (<subquery>)
        CROSS JOIN <relation> | <function> | (<subquery>)
-       LEFT [ OUTER ] JOIN <relation> | <function> | (<subquery>)
-       RIGHT [ OUTER ] JOIN <relation> | <function> | (<subquery>)
+       LEFT [ OUTER | ANTI | SEMI ] JOIN <relation> | <function> | (<subquery>)
+       RIGHT [ OUTER | ANTI | SEMI ] JOIN <relation> | <function> | (<subquery>)
        FULL [ OUTER ] JOIN <relation> | <function> | (<subquery>)
                       ON <expression>
                       USING (<columns>)
@@ -25,20 +24,6 @@ SELECT [ DISTINCT [ ON (<columns>) ] ] <expression> [, ..]
 OFFSET <offset>
  LIMIT <limit>
 ~~~
-
-### WITH clause
-
-!!! Note
-    CTE Support is currently removed as part of the planner rewrite.
-
-~~~
-WITH <cte> AS <statement> [, ..] 
-~~~
-
-The `WITH` clause, known as a _Common Table Expression_, or CTE, is used to define a temporary view which can be referenced within `FROM` and `JOIN` clauses. The statement in the CTE supports the full syntax for `SELECT` statements.
-
-Unlike some platforms, Opteryx handles CTEs by inserting them as subqueries into the main statement and not by executing them and referencing the result.
-
 
 ### SELECT clause
 
@@ -59,10 +44,13 @@ FROM relation [AS alias] [FOR period] [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PRO
 FROM relation [AS alias] [FOR period] [ INNER ] JOIN relation [FOR period] < USING (columns) | ON condition >
 ~~~ 
 ~~~
-FROM relation [AS alias] [FOR period] LEFT [ OUTER ] JOIN relation [FOR period] < USING (columns) | ON condition >
+FROM relation [AS alias] [FOR period] LEFT [ OUTER | ANTI | SEMI ] JOIN relation [FOR period] < USING (columns) | ON condition >
 ~~~ 
 ~~~
-FROM relation [AS alias] [FOR period] < RIGHT | FULL > [OUTER ] JOIN relation [FOR period]
+FROM relation [AS alias] [FOR period] RIGHT [ OUTER | ANTI | SEMI ] JOIN relation [FOR period] < USING (columns) | ON condition >
+~~~ 
+~~~
+FROM relation [AS alias] [FOR period] FULL [OUTER ] JOIN relation [FOR period]
 ~~~
 ~~~
 FROM relation [AS alias] [FOR period] CROSS JOIN < relation [FOR period] | UNNEST(column) >
@@ -73,18 +61,6 @@ The `FROM` clause specifies the source of the data on which the remainder of the
 `JOIN` clauses allow you to combine data from multiple relations. If no `JOIN` qualifier is provided, `INNER` will be used. `JOIN` qualifiers are mutually exclusive. `ON` and `USING` clauses are also mutually exclusive and can only be used with `INNER` and `LEFT` joins.
 
 See [Joins](../joins/) for more information on `JOIN` syntax and functionality.
-
-Hints can be provided as part of the statement to direct the query planner and executor to make decisions. Relation hints are declared as `WITH` statements following a relation in the `FROM` and `JOIN` clauses, for example `FROM $astronauts WITH (NO_CACHE)`. Reconised hints are:
-
-Hint               | Effect                         
------------------- | -------------------------------------------------
-NO_CACHE           | Ignores any cache configuration 
-NO_PARTITION       | Do not use partition configuration when reading
-NO_PUSH_PROJECTION | Do not attempt to prune columns when reading 
-NO_PUSH_SELECTION  | Do not use the source system to prefilter rows
-
-!!! Note  
-    Hints are not guaranteed to be followed, the query planner and executor may ignore hints in specific circumstances.
 
 ### FOR clause
 
@@ -158,9 +134,6 @@ The `EXPLAIN` clause outputs a summary of the execution plan for the query in th
 
 ## EXECUTE :octicons-beaker-24: 
 
-!!! Note
-    EXECUTE Support is currently removed as part of the planner rewrite.
-
 Execute a preprated statement.
 
 ~~~sql
@@ -190,7 +163,6 @@ List the columns in a relation along with their data type. Without any modifiers
 ~~~sql
 SHOW [EXTENDED] [FULL] COLUMNS
 FROM relation
-LIKE pattern
  FOR period
 ~~~
 
@@ -202,17 +174,6 @@ Inclusion of the `EXTENDED` modifier includes summary statistics about the colum
 
 Inclusion of the `FULL` modifier uses the entire dataset in order to return complete column information, rather than just the first morsel from the dataset.
 
-### LIKE clause
-
-!!! Note
-    Support for filtering SHOW statements is currently removed as part of the planner rewrite.
-
-~~~
-LIKE pattern
-~~~
-
-A case-insensitive `LIKE` clause to filter the results to the desired subset by the column name. This does not require a left-hand operator, it will always filter by the column name.
-
 ### FOR clause
 
 ~~~
@@ -223,6 +184,9 @@ FOR DATES BETWEEN start AND end
 ~~~
 ~~~
 FOR DATES IN range
+~~~
+~~~
+FOR DATES SINCE start
 ~~~
 
 The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation name the `FROM` clause. If not provided `FOR TODAY` is assumed.

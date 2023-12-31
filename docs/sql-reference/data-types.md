@@ -6,20 +6,20 @@ The engine supports a reduced set of types compared to full DBMS platforms.
 
 Name        | Description
 ----------- | --------------
-`ARRAY`     |
+`ARRAY`     | A list of items of the same type
 `BOOLEAN`   | Logical boolean (True/False).
-`DOUBLE`    | 
-`INTEGER`   |
+`DOUBLE`    | floating point number
+`INTEGER`   | Whole number
 `DECIMAL` :octicons-star-16:  |
-`VARCHAR`   | Variable-length character string.
+`VARCHAR`   | Variable-length character string
 `STRUCT`    | A dictionary of multiple named values, where each key is a string, but the value can be a different type for each key.
-`DATE`      |
+`DATE`      | The date component of a TIMESTAMP
+`TIME` :octicons-star-16: | The time component of a TIMESTAMP
 `TIMESTAMP` | Combination of date and time.
 `INTERVAL` :octicons-star-16: | The difference between two TIMESTAMP values
-`INET`     :octicons-star-16: | Network Range
 
 !!! Note  
-    Types marked with :octicons-star-16: (DECIMAL, INTERVAL and INET) have limited support.
+    Types marked with :octicons-star-16: (DECIMAL, TIME, and INTERVAL) have limited support.
 
 ## Casting
 
@@ -44,7 +44,7 @@ SELECT INTERVAL '1' YEAR
 
 **Other**
 
-`BOOLEAN`, `NUMERIC` and `TIMESTAMP` also support 'type hint' notation (`SELECT TIMESTAMP '2022-01-01';`) to perform casting.
+`BOOLEAN`, `DOUBLE`, `INTEGER` and `TIMESTAMP` also support 'type hint' notation (`SELECT TIMESTAMP '2022-01-01';`) to perform casting.
 
 ## Coercion
 
@@ -57,7 +57,3 @@ All `TIMESTAMP` and values read from datasets are coerced to nanosecond precisio
 ### Numbers
 
 Hex literals can be provided using `0x` prefix, for example `0xc0ffee` is handled as the integer `12648430`.
-
-### IPv4 Network Ranges
-
-IPv4 Network Range comparisions automatically interpret IP addresses and ranges.

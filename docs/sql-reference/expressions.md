@@ -43,7 +43,7 @@ Operator     | Description
 `~*`         | case insensitive regular expression match
 `!~*`        | inverse results of `~*`
 `IS`         | special comparison for `true`, `false` and `null`
-`|`          | Bitwise OR
+`|`          | Bitwise OR, or IP containment
 `&`          | Bitwise AND
 `^`          | Bitwise XOR
 
@@ -103,19 +103,4 @@ SELECT name,
            ELSE 'lots' 
        END as how_many_moons
   FROM $planets;
-~~~
-
-## Subqueries
-
-The `IN` operator can reference a sub query, this sub query cannot include a temporal clause (`FOR`), but otherwise the full syntax for `SELECT` queries are supported.
-
-For example, to find the planets without any satellites.
-
-~~~sql
-SELECT name
-  FROM $planets
- WHERE id NOT IN (
-       SELECT DISTINCT planetId
-         FROM $satellites
-       );
 ~~~

@@ -26,8 +26,6 @@ value <operator> ANY(column)
 
 The `any` function is used to apply a filter to each item in an array, and returns `True` if any item in the array matches the condition.
 
-A limited set of operators are supported: `=`, `!=`, `<`, and `>`. 
-
 ~~~sql
 SELECT * 
   FROM $astronauts
@@ -35,7 +33,7 @@ SELECT *
 ~~~
 
 !!! Note
-    `any` is experimental - it is likely to be faster than other options for list containment, but may not perform as expected in all situations.
+    `any` currently supports a subset of predicates: `=`, `!=`, `>`, `<`. 
 
 #### ALL
 
@@ -45,10 +43,8 @@ value <operator> ALL(column)
 
 The `all` function is used to apply a filter to each item in an array, and returns `True` if all items in the array matches the condition.
 
-A limited set of operators are supported: `=`, `!=`. 
-
 !!! Note
-    `all` is experimental - it is likely to be faster than other options for list containment, but may not perform as expected in all situations.
+    `all` currently supports a subset of predicates: `=`, `!=`. 
 
 #### SEARCH
 
