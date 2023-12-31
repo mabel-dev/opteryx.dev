@@ -2194,7 +2194,7 @@
 <tr>
 <td style="text-align: left;">query1</td>
 <td style="text-align: left;">no</td>
-<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
 </tr>
 <tr>
 <td style="text-align: left;">query2</td>
@@ -2249,7 +2249,7 @@
 <tr>
 <td style="text-align: left;">query12</td>
 <td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
 </tr>
 <tr>
 <td style="text-align: left;">query13</td>
@@ -2259,7 +2259,7 @@
 <tr>
 <td style="text-align: left;">query14</td>
 <td style="text-align: left;">no</td>
-<td style="text-align: left;">unknown</td>
+<td style="text-align: left;">no</td>
 </tr>
 <tr>
 <td style="text-align: left;">query15</td>
@@ -2284,7 +2284,7 @@
 <tr>
 <td style="text-align: left;">query19</td>
 <td style="text-align: left;">no</td>
-<td style="text-align: left;">unknown</td>
+<td style="text-align: left;">yes <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: left;">query20</td>
@@ -2303,6 +2303,9 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span> query doesn't complete within a reasonable time</p>
+</blockquote>
 <p>All queries have been modified to refer to the location of the datasets, <strong>modified</strong> in the above table is where the SQL has been written to replace unsupported functionality with supported functionality - this is where the original query either created a view or a temporary table, both of these have been replaced with a CTE definition.</p>
 <p>The test suite for this benchmark is in the <a href="https://github.com/mabel-dev/wrenchy-bench">Opteryx Benchmarking</a> repository.</p>
 <p>TPC-H is Copyright © 1993-2022 Transaction Processing Performance Council. The full TPC-H specification in PDF format can be found <a href="https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-H_v3.0.1.pdf">here</a>.</p>
