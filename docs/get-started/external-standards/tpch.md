@@ -7,7 +7,7 @@
 
 Query   | Modified | Pass
 :------ | :------- | :-----
-query1  | no       | yes
+query1  | no       | no
 query2  | yes      | no
 query3  | no       | no
 query4  | no       | no
@@ -18,17 +18,19 @@ query8  | no       | no
 query9  | no       | no
 query10 | no       | no
 query11 | yes      | no
-query12 | no       | no
+query12 | no       | yes
 query13 | no       | no
-query14 | no       | unknown
+query14 | no       | no
 query15 | yes      | no
 query16 | no       | no
 query17 | no       | no
 query18 | yes      | no
-query19 | no       | unknown
+query19 | no       | yes :octicons-dot-16:
 query20 | no       | no
 query21 | yes      | no
 query22 | yes      | no
+
+> :octicons-dot-16: query doesn't complete within a reasonable time
 
 All queries have been modified to refer to the location of the datasets, **modified** in the above table is where the SQL has been written to replace unsupported functionality with supported functionality - this is where the original query either created a view or a temporary table, both of these have been replaced with a CTE definition.
 
