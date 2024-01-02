@@ -20,7 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - [[#1083](https://github.com/mabel-dev/opteryx/issues/1083)] Simplify the handling of Query Statistics. [@joocer](https://github.com/joocer)
-- [[#1086](https://github.com/mabel-dev/opteryx/pull/1086)] Update [Pythonize](https://github.com/davidhewitt/pythonize) to v0.19 and [py03](https://github.com/PyO3/pyo3) to v0.19.0 [dependabot](https://github.com/apps/dependabot) 
+- [[#1086](https://github.com/mabel-dev/opteryx/pull/1086)] Update [Pythonize](https://github.com/davidhewitt/pythonize) to v0.19 and [py03](https://github.com/PyO3/pyo3) to v0.20.0 [dependabot](https://github.com/apps/dependabot) 
 - [[#1042](https://github.com/mabel-dev/opteryx/pull/1042)] Create a generic base connector and use for all access [@joocer](https://github.com/joocer)
 - [[#1032](https://github.com/mabel-dev/opteryx/pull/1032)] Introduce a query binder [@joocer](https://github.com/joocer)
 - [[#1158](https://github.com/mabel-dev/opteryx/pull/1158)] Resync sqloxide [@joocer](https://github.com/joocer)
@@ -37,7 +37,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1171](https://github.com/mabel-dev/opteryx/pull/1171)] Support `SEMI` and `ANTI` join syntax [@joocer](https://github.com/joocer)  
 - [[#1219](https://github.com/mabel-dev/opteryx/pull/1219)] Extended `FAKE` syntax [@joocer](https://github.com/joocer)
 - [[#1219](https://github.com/mabel-dev/opteryx/pull/1219)] `DISTINCT ON` syntax added [@joocer](https://github.com/joocer)
-- [[#1220](https://github.com/mabel-dev/opteryx/pull/1220)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.39.0 [dependabot](https://github.com/apps/dependabot) 
+- [[#1339](https://github.com/mabel-dev/opteryx/pull/1339)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.41.0 [dependabot](https://github.com/apps/dependabot) 
 - [[#1329](https://github.com/mabel-dev/opteryx/pull/1329)] Add Redis as remote read cache option. [@joocer](https://github.com/joocer)
 - [[#1337](https://github.com/mabel-dev/opteryx/pull/1337)] Support `RLIKE` [@joocer](https://github.com/joocer)
 - [[#1344](https://github.com/mabel-dev/opteryx/pull/1344)] Initial Support for `ANY` and `ALL` array containment syntax [@joocer](https://github.com/joocer)
