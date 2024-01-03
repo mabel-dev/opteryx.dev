@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.12.0] - Unreleased
+## [0.12.0] - 2024-01-02
 
 > IMPORTANT!  
 > 0.12.0 has a number of significant changes, these changes will result in changes to behaviour of the engine, removal of some features, and for new bugs to have been introduced:   
