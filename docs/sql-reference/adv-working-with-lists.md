@@ -24,16 +24,15 @@ list[index]
 value <operator> ANY(column)
 ~~~
 
-The `any` function is used to apply a filter to each item in an array, and returns `True` if any item in the array matches the condition.
+The `ANY` function is used to apply a filter to each item in an array, and returns `True` if any item in the array matches the condition.
 
 ~~~sql
 SELECT * 
   FROM $astronauts
- WHERE 'Apollo 11' = any(missions);
+ WHERE 'Apollo 11' = ANY(missions);
 ~~~
 
-!!! Note
-    `any` currently supports a subset of predicates: `=`, `!=`, `>`, `<`. 
+`ANY` supports the following operators: `=`, `!=`, `>`, `<`, `>=`, and `<=`. 
 
 #### ALL
 
@@ -41,10 +40,10 @@ SELECT *
 value <operator> ALL(column)
 ~~~
 
-The `all` function is used to apply a filter to each item in an array, and returns `True` if all items in the array matches the condition.
+The `ALL` function is used to apply a filter to each item in an array, and returns `True` if all items in the array matches the condition.
 
 !!! Note
-    `all` currently supports a subset of predicates: `=`, `!=`. 
+    `ALL` currently supports a subset of operators: `=`, `!=`. 
 
 #### SEARCH
 
