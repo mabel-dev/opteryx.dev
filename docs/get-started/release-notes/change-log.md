@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.13.0] - UNRELEASED
+
+### Added
+
+- [[#1362](https://github.com/mabel-dev/opteryx/pull/1362)] Shortcut OR evaluations [@joocer](https://github.com/joocer)
+- [[#1365](https://github.com/mabel-dev/opteryx/pull/1365)] Shortcut nested AND evaluations [@joocer](https://github.com/joocer)
 
 ## [0.12.0] - 2024-01-02    
 
