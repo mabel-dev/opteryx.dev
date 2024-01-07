@@ -2197,22 +2197,19 @@
 <h4 id="any">ANY</h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>value &lt;operator&gt; ANY(column)
 </code></pre></div>
-<p>The <code>any</code> function is used to apply a filter to each item in an array, and returns <code>True</code> if any item in the array matches the condition.</p>
+<p>The <code>ANY</code> function is used to apply a filter to each item in an array, and returns <code>True</code> if any item in the array matches the condition.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="s1">&#39;Apollo 11&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">any</span><span class="p">(</span><span class="n">missions</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="s1">&#39;Apollo 11&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">ANY</span><span class="p">(</span><span class="n">missions</span><span class="p">);</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>any</code> currently supports a subset of predicates: <code>=</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>. </p>
-</div>
+<p><code>ANY</code> supports the following operators: <code>=</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, and <code>&lt;=</code>. </p>
 <h4 id="all">ALL</h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>value &lt;operator&gt; ALL(column)
 </code></pre></div>
-<p>The <code>all</code> function is used to apply a filter to each item in an array, and returns <code>True</code> if all items in the array matches the condition.</p>
+<p>The <code>ALL</code> function is used to apply a filter to each item in an array, and returns <code>True</code> if all items in the array matches the condition.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code>all</code> currently supports a subset of predicates: <code>=</code>, <code>!=</code>. </p>
+<p><code>ALL</code> currently supports a subset of operators: <code>=</code>, <code>!=</code>. </p>
 </div>
 <h4 id="search">SEARCH</h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
