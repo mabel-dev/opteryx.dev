@@ -7,6 +7,7 @@ The following statement forms are supported.
 Retrieve rows from zero or more relations.
 
 ~~~sql
+[ statement UNION [ ALL ] ... ]
 SELECT [ DISTINCT [ ON (<columns>) ] ] <expression> [, ..]
   FROM <relation> [AS <alias>]
    FOR <period>
@@ -24,6 +25,16 @@ SELECT [ DISTINCT [ ON (<columns>) ] ] <expression> [, ..]
 OFFSET <offset>
  LIMIT <limit>
 ~~~
+
+### UNION class
+
+~~~
+statement UNION [ ALL ] statement
+~~~
+
+The `UNION` class appends the results of two queries together one after the other. The names and types of the resulting columns are taken from the first statement, names in the second statement are ignored and types are coerced where possible.
+
+The default behaviour of the `UNION` class is to deduplicate rows, to return all rows, including duplicates the `ALL` modifier must be used.
 
 ### SELECT clause
 

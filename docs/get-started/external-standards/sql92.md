@@ -58,7 +58,7 @@ E061-13  | Correlated subqueries                                     | unknown
 E061-14  | Search condition                                          | unknown
 **E071** | **Basic query expressions**                               | unknown
 E071-01  | `UNION DISTINCT` table operator                           | no
-E071-02  | `UNION ALL` table operator                                | no
+E071-02  | `UNION ALL` table operator                                | partial
 E071-03  | `EXCEPT DISTINCT` table operator                          | no
 E071-05  | Columns combined via table operators need not have exactly the same data type | partial
 E071-06  | Table operators in subqueries                             | unknown
