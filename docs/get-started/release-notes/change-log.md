@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.13.0] - UNRELEASED
+## [0.12.2] - 2024-01-10
 
 ### Added
 
@@ -16,6 +16,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - [[#1370](https://github.com/mabel-dev/opteryx/issues/1370)] Compare DATE and TIMESTAMP. [@joocer](https://github.com/joocer)
+
+### Changed
+
+- [[#1366](https://github.com/mabel-dev/opteryx/issues/1355)] Subscript refactor for performance (~3x faster). [@joocer](https://github.com/joocer)
 
 ## [0.12.0] - 2024-01-02    
 
