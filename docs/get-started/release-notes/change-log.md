@@ -8,11 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- [[#1362](https://github.com/mabel-dev/opteryx/pull/1362)] Shortcut OR evaluations [@joocer](https://github.com/joocer)
-- [[#1365](https://github.com/mabel-dev/opteryx/pull/1365)] Shortcut nested AND evaluations [@joocer](https://github.com/joocer)
-- [[#1367](https://github.com/mabel-dev/opteryx/pull/1367)] Support UNION statements [@joocer](https://github.com/joocer)
-- [[#1369](https://github.com/mabel-dev/opteryx/pull/1369)] New Optimization: Constant Expression Evaluations [@joocer](https://github.com/joocer)
+- [[#1355](https://github.com/mabel-dev/opteryx/issues/1355)] Shortcut OR evaluations [@joocer](https://github.com/joocer)
+- [[#1363](https://github.com/mabel-dev/opteryx/issues/1363)] Shortcut nested AND evaluations [@joocer](https://github.com/joocer)
+- [[#21](https://github.com/mabel-dev/opteryx/issues/21)] Support UNION statements [@joocer](https://github.com/joocer)
+- [[#1354](https://github.com/mabel-dev/opteryx/issues/1354)] New Optimization: Constant Expression Evaluations [@joocer](https://github.com/joocer)
 
+### Fixed
+
+- [[#1370](https://github.com/mabel-dev/opteryx/issues/1370)] Compare DATE and TIMESTAMP. [@joocer](https://github.com/joocer)
 
 ## [0.12.0] - 2024-01-02    
 
