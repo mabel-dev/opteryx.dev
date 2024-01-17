@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.13.0] - UNRELEASED
 
-- [[#1374](https://github.com/mabel-dev/opteryx/issues/1374)] GCS access improvements (up to 2x faster). [@joocer](https://github.com/joocer)
+- [[#1374](https://github.com/mabel-dev/opteryx/issues/1374)] GCS access improvements (up to 2.5x faster IO). [@joocer](https://github.com/joocer)
 
 ## [0.12.2] - 2024-01-10
 
