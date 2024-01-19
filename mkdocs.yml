@@ -109,6 +109,7 @@ nav:
       - Query Optimization: sql-reference/adv-query-optimization.md
   - CONTRIBUTING:
       - contributing/contributing.md
+      - Project Goals: contributing/project-goals.md
       - Code of Conduct: contributing/code-of-conduct.md
       - Etiquette: contributing/etiquette.md
       - Set Up Guides:
@@ -124,7 +125,6 @@ nav:
         - Debug Logging: contributing/topics/debug_logging.md
         - Dependency Management: contributing/topics/dependencies.md
         - Testing Approach: contributing/topics/testing.md
-      - Version Goals: contributing/version-goals.md
   - BLOG:
       - Year 2022:
         - Building our first Optimizer: blog/202209-building-our-first-optimizer.md
