@@ -12,13 +12,13 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://opteryx.dev/0.13.0/get-started/external-standards/tpch/">
+        <link rel="canonical" href="https://opteryx.dev/0.13.0/contributing/internals/optimization-strategies/">
       
       
-        <link rel="prev" href="../sql92/">
+        <link rel="prev" href="../storage-engine/">
       
       
-        <link rel="next" href="../../release-notes/change-log/">
+        <link rel="next" href="../../topics/debug_logging/">
       
       
       <link rel="icon" href="../../../icarus-opteryx.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>TPC-H - Opteryx</title>
+        <title>Optimization Strategies - Opteryx</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tpc-h-benchmark" class="md-skip">
+        <a href="#optimization-strategies" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TPC-H
+              Optimization Strategies
             
           </span>
         </div>
@@ -168,13 +168,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../overview/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../get-started/overview/" class="md-tabs__link">
           
   
   GET STARTED
@@ -206,11 +204,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../contributing/contributing/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../contributing/" class="md-tabs__link">
           
   
   CONTRIBUTING
@@ -316,8 +316,6 @@
       
   
   
-    
-  
   
   
     
@@ -328,12 +326,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -347,7 +345,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             GET STARTED
@@ -361,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/" class="md-nav__link">
+      <a href="../../../get-started/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/" class="md-nav__link">
+      <a href="../../../get-started/get-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -403,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../command-line-guide/" class="md-nav__link">
+      <a href="../../../get-started/command-line-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -424,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python-client/" class="md-nav__link">
+      <a href="../../../get-started/python-client/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/pandas-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/pandas-and-opteryx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -503,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/polars-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/polars-and-opteryx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -524,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/bigquery-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/bigquery-and-opteryx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/mysql-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/mysql-and-opteryx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -566,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/postgres-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/postgres-and-opteryx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -587,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/convert-csv-to-parquet/" class="md-nav__link">
+      <a href="../../../get-started/guides/convert-csv-to-parquet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -608,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/execute-sql-on-csv/" class="md-nav__link">
+      <a href="../../../get-started/guides/execute-sql-on-csv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -637,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment-guide/" class="md-nav__link">
+      <a href="../../../get-started/deployment-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -658,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/" class="md-nav__link">
+      <a href="../../../get-started/security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/orso/" class="md-nav__link">
+      <a href="../../../get-started/ecosystem/orso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/mabel/" class="md-nav__link">
+      <a href="../../../get-started/ecosystem/mabel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -758,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/mesos/" class="md-nav__link">
+      <a href="../../../get-started/ecosystem/mesos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -784,21 +782,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
         
           
           <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
@@ -812,7 +808,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             Standards & Benchmarks
@@ -826,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pep249/" class="md-nav__link">
+      <a href="../../../get-started/external-standards/pep249/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -847,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql92/" class="md-nav__link">
+      <a href="../../../get-started/external-standards/sql92/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -865,19 +861,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../get-started/external-standards/tpch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -886,7 +873,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -944,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release-notes/change-log/" class="md-nav__link">
+      <a href="../../../get-started/release-notes/change-log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -965,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release-notes/notices/" class="md-nav__link">
+      <a href="../../../get-started/release-notes/notices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1426,8 +1412,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1436,12 +1424,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -1455,7 +1443,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             CONTRIBUTING
@@ -1469,7 +1457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/contributing/" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1490,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/code-of-conduct/" class="md-nav__link">
+      <a href="../../code-of-conduct/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1511,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/etiquette/" class="md-nav__link">
+      <a href="../../etiquette/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1569,7 +1557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/set-up-guides/debian/" class="md-nav__link">
+      <a href="../../set-up-guides/debian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1590,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/set-up-guides/macos/" class="md-nav__link">
+      <a href="../../set-up-guides/macos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1611,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/set-up-guides/windows/" class="md-nav__link">
+      <a href="../../set-up-guides/windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1637,19 +1625,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -1663,7 +1653,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             System Internals
@@ -1677,7 +1667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/internals/project-structure/" class="md-nav__link">
+      <a href="../project-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1698,7 +1688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/internals/query-engine/" class="md-nav__link">
+      <a href="../query-engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1719,7 +1709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/internals/storage-engine/" class="md-nav__link">
+      <a href="../storage-engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1737,10 +1727,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../contributing/internals/optimization-strategies/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1749,6 +1748,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1806,7 +1806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/topics/debug_logging/" class="md-nav__link">
+      <a href="../../topics/debug_logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1827,7 +1827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/topics/dependencies/" class="md-nav__link">
+      <a href="../../topics/dependencies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1848,7 +1848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/topics/testing/" class="md-nav__link">
+      <a href="../../topics/testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1877,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/version-goals/" class="md-nav__link">
+      <a href="../../version-goals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2113,140 +2113,160 @@
   
 
 
-<h1 id="tpc-h-benchmark">TPC-H Benchmark</h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Conformance is a work in progress and this information represents the current state in order to provide transparent information about progress and capability.</p>
-</div>
-<p><a href="https://www.tpc.org/">TPC</a> publish a set of benchmarks for computer and database systems. <a href="https://www.tpc.org/tpch/default5.asp">TPC-H</a> is a decision support benchmark which consists of a set of business-oriented queries. This benchmark demonstrates a decision support system that examines large amounts of data, executes highly complex queries, and answers key business questions. </p>
+<h1 id="optimization-strategies">Optimization Strategies</h1>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Query</th>
-<th style="text-align: left;">Modified</th>
-<th style="text-align: left;">Pass</th>
+<th style="text-align: left;">Strategy</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">query1</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#split-conjunctive-predicates">Split Conjunctive Predicates</a></td>
+<td style="text-align: left;">Heuristic</td>
+<td style="text-align: left;">Implemented</td>
 </tr>
 <tr>
-<td style="text-align: left;">query2</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#predicate-pushdown">Predicate Pushdown</a></td>
+<td style="text-align: left;">Schema-Aware</td>
+<td style="text-align: left;">Implemented</td>
 </tr>
 <tr>
-<td style="text-align: left;">query3</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#projection-pushdown">Projection Pushdown</a></td>
+<td style="text-align: left;">Schema-Aware</td>
+<td style="text-align: left;">Implemented</td>
 </tr>
 <tr>
-<td style="text-align: left;">query4</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#constant-folding">Constant Folding</a></td>
+<td style="text-align: left;">Heuristic</td>
+<td style="text-align: left;">Implemented</td>
 </tr>
 <tr>
-<td style="text-align: left;">query5</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#morsel-defragmentation">Morsel Defragmentation</a></td>
+<td style="text-align: left;">Heuristic</td>
+<td style="text-align: left;">Designed</td>
 </tr>
 <tr>
-<td style="text-align: left;">query6</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">yes</td>
+<td style="text-align: left;"><a href="#predicate-rewriter">Predicate Rewriter</a></td>
+<td style="text-align: left;">Heuristic</td>
+<td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;">query7</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#aggregate-pushdown">Aggregate Pushdown</a></td>
+<td style="text-align: left;">Schema-Aware</td>
+<td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;">query8</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#literal-join-rewrite">Literal JOIN rewrite</a></td>
+<td style="text-align: left;">Schema-Aware</td>
+<td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;">query9</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#use-heap-sort">Use Heap Sort</a></td>
+<td style="text-align: left;">Heuristic</td>
+<td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;">query10</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#use-pass-thru-distinct">Use pass-thru DISTINCT</a></td>
+<td style="text-align: left;">Heuristic</td>
+<td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;">query11</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#limit-pushdown">Limit Pushdown</a></td>
+<td style="text-align: left;">Heuristic</td>
+<td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;">query12</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">yes</td>
+<td style="text-align: left;"><a href="#in-subquery-to-join">IN (subquery) to JOIN</a></td>
+<td style="text-align: left;">Schema-Aware</td>
+<td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;">query13</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#cte-rewrite">CTE rewrite</a></td>
+<td style="text-align: left;">Heuristic</td>
+<td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;">query14</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#subquery-flattening">Subquery flattening</a></td>
+<td style="text-align: left;">Schema-Aware</td>
+<td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;">query15</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#join-ordering">JOIN ordering</a></td>
+<td style="text-align: left;">Cost-Based</td>
+<td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;">query16</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#join-ordering">Predicate Ordering</a></td>
+<td style="text-align: left;">Cost-Based</td>
+<td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;">query17</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
-</tr>
-<tr>
-<td style="text-align: left;">query18</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">no</td>
-</tr>
-<tr>
-<td style="text-align: left;">query19</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">yes <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></td>
-</tr>
-<tr>
-<td style="text-align: left;">query20</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">no</td>
-</tr>
-<tr>
-<td style="text-align: left;">query21</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">no</td>
-</tr>
-<tr>
-<td style="text-align: left;">query22</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">no</td>
+<td style="text-align: left;"><a href="#predicate-flattening">Predicate Flattening</a></td>
+<td style="text-align: left;">Schema-Aware</td>
+<td style="text-align: left;">Attempted</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span> query doesn't complete within a reasonable time</p>
-</blockquote>
-<p>All queries have been modified to refer to the location of the datasets, <strong>modified</strong> in the above table is where the SQL has been written to replace unsupported functionality with supported functionality - this is where the original query either created a view or a temporary table, both of these have been replaced with a CTE definition.</p>
-<p>The test suite for this benchmark is in the <a href="https://github.com/mabel-dev/wrenchy-bench">Opteryx Benchmarking</a> repository.</p>
-<p>TPC-H is Copyright © 1993-2022 Transaction Processing Performance Council. The full TPC-H specification in PDF format can be found <a href="https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-H_v3.0.1.pdf">here</a>.</p>
-<p>TPC, TPC Benchmark, TPC-H are trademarks of the Transaction Processing Performance Council.</p>
+<h3 id="split-conjunctive-predicates">Split Conjunctive Predicates</h3>
+<p><strong>status</strong> implemented<br />
+<strong>goal</strong> prepare<br />
+<strong>description</strong> Split ANDed (conjunctions) predicates into separate steps in the query plan</p>
+<p>This optimization step is preparing for later optimizations, it splits filter conditions at ANDs to try to create smaller, simpler individual conditions (predicates). These predicates are then handled in subsequent strategies, for example <a href="#predicate-pushdown">Predicate Pushdown</a> and <a href="#predicate-ordering">Predicate Ordering</a>.</p>
+<p>To split conditions, no information is needed about the schema or about costs, this strategy is executed before the binder.</p>
+<h3 id="predicate-pushdown">Predicate Pushdown</h3>
+<p><strong>status</strong> implemented<br />
+<strong>goal</strong> reduce rows<br />
+<strong>description</strong> Move filters earlier in the query plan </p>
+<p>This optimization aims to reduce the number of records as quickly as possible running through the execution engine by executing filters as soon as possible. This can include pushing filters into the actual data read (e.g. for SQL and parquet), straight after reading, or into JOIN conditions.</p>
+<p>This optimization needs to know which relation identifiers are from to be able to push toward the correct scan/JOIN, this strategy is run after the binder.</p>
+<p><strong>improvements</strong>
+- Push complex predicates (e.g. ORed) to SQL sources
+- Where filters can be inferred from statistics and JOINs, create and push these</p>
+<h3 id="projection-pushdown">Projection Pushdown</h3>
+<p><strong>status</strong> implemented<br />
+<strong>goal</strong> reduce columns<br />
+<strong>description</strong> Trim unwanted columns at read </p>
+<p>This optimization aims to increase the number of records per morsel by removing unwanted columns from relations. This is generally done during the actual read, or straight after reading (e.g. for JSONL and CSV).</p>
+<p>This optimization needs to know which relation identifiers are from to be able to push toward the correct scan, this strategy is run after the binder.</p>
+<p><strong>improvements</strong>
+- Push common functions and transforms to SQL sources</p>
+<h3 id="constant-folding">Constant Folding</h3>
+<p><strong>status</strong> implemented<br />
+<strong>goal</strong> reduce calculations<br />
+<strong>description</strong> Pre-evaluate expressions  </p>
+<p>This optimization aims to reduce the work done to evaluate expressions by pre-evaluating expressions which don't rely on data from relations. This includes fixed constants (e.g. literals, <code>PI()</code>), variable constants (<code>current_time</code>) and variables.</p>
+<p>This optimization requires variables to be resolved so is run after the binder.</p>
+<p><strong>improvements</strong>
+- filters which evaluate to FALSE (when ANDed) should avoid the scan(s) below it
+- filters which evaluate to TRUE (when ORed) should remove the entire filter</p>
+<h3 id="morsel-defragmentation">Morsel Defragmentation</h3>
+<p><strong>status</strong> designed<br />
+<strong>goal</strong> reduce morsels<br />
+<strong>description</strong> Combine small morsels together</p>
+<p>This optimization aims to reduce the number of times the execution engine executes each step by combining small morsels together. Morsels are up to 64Mb in size, but as filters and other operations are run to eliminate records, the engine may be processing 100 morsels of 0.5Mb each. By combining, we have fewer function calls and steps which benefit from seeing as much data as possible (e.g. JOINs) execute faster.</p>
+<p>This optimization does not require any information about schemas, but operates on a nearly finished plan so is run after the binder.</p>
+<p><strong>notes</strong>
+- This should be implemented to run after filters (including when pushed into readers)</p>
+<h3 id="predicate-rewriter">Predicate Rewriter</h3>
+<ul>
+<li>demorgans laws</li>
+<li>negative filter reduction</li>
+</ul>
+<h3 id="aggregate-pushdown">Aggregate Pushdown</h3>
+<p>into SQL sources</p>
+<h3 id="literal-join-rewrite">Literal JOIN rewrite</h3>
+<h3 id="use-heap-sort">Use Heap Sort</h3>
+<h3 id="use-pass-thru-limit">Use pass-thru LIMIT</h3>
+<h3 id="limit-pushdown">Limit Pushdown</h3>
+<h3 id="in-subquery-to-join">IN (subquery) to JOIN</h3>
+<h3 id="cte-rewrite">CTE rewrite</h3>
+<h3 id="subquery-flattening">Subquery flattening</h3>
+<h3 id="join-ordering">JOIN ordering</h3>
+<h3 id="predicate-ordering">Predicate Ordering</h3>
+<h3 id="predicate-flattening">Predicate Flattening</h3>
 
 
 
