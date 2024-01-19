@@ -1,0 +1,113 @@
+# Optimization Strategies
+
+Strategy                     | Type         | Status
+:--------------------------- | :----------- | :----------
+[Split Conjunctive Predicates](#split-conjunctive-predicates) | Heuristic    | Implemented
+[Predicate Pushdown](#predicate-pushdown)                     | Schema-Aware | Implemented
+[Projection Pushdown](#projection-pushdown)                   | Schema-Aware | Implemented
+[Constant Folding](#constant-folding)                         | Heuristic    | Implemented
+[Morsel Defragmentation](#morsel-defragmentation)             | Heuristic    | Designed
+[Predicate Rewriter](#predicate-rewriter)                     | Heuristic    | Considered
+[Aggregate Pushdown](#aggregate-pushdown)                     | Schema-Aware | Considered
+[Literal JOIN rewrite](#literal-join-rewrite)                 | Schema-Aware | Considered
+[Use Heap Sort](#use-heap-sort)                               | Heuristic    | Considered
+[Use pass-thru DISTINCT](#use-pass-thru-distinct)             | Heuristic    | Considered
+[Limit Pushdown](#limit-pushdown)                             | Heuristic    | Considered
+[IN (subquery) to JOIN](#in-subquery-to-join)                 | Schema-Aware | Considered
+[CTE rewrite](#cte-rewrite)                                   | Heuristic    | Considered
+[Subquery flattening](#subquery-flattening)                   | Schema-Aware | Considered
+[JOIN ordering](#join-ordering)                               | Cost-Based   | Considered
+[Predicate Ordering](#join-ordering)                          | Cost-Based   | Considered
+[Predicate Flattening](#predicate-flattening)                 | Schema-Aware | Attempted
+
+
+### Split Conjunctive Predicates
+
+**status** implemented  
+**goal** prepare  
+**description** Split ANDed (conjunctions) predicates into separate steps in the query plan
+
+This optimization step is preparing for later optimizations, it splits filter conditions at ANDs to try to create smaller, simpler individual conditions (predicates). These predicates are then handled in subsequent strategies, for example [Predicate Pushdown](#predicate-pushdown) and [Predicate Ordering](#predicate-ordering).
+
+To split conditions, no information is needed about the schema or about costs, this strategy is executed before the binder.
+
+### Predicate Pushdown
+
+**status** implemented  
+**goal** reduce rows  
+**description** Move filters earlier in the query plan 
+
+This optimization aims to reduce the number of records as quickly as possible running through the execution engine by executing filters as soon as possible. This can include pushing filters into the actual data read (e.g. for SQL and parquet), straight after reading, or into JOIN conditions.
+
+This optimization needs to know which relation identifiers are from to be able to push toward the correct scan/JOIN, this strategy is run after the binder.
+
+**improvements**
+- Push complex predicates (e.g. ORed) to SQL sources
+- Where filters can be inferred from statistics and JOINs, create and push these
+
+### Projection Pushdown
+
+**status** implemented  
+**goal** reduce columns  
+**description** Trim unwanted columns at read 
+
+This optimization aims to increase the number of records per morsel by removing unwanted columns from relations. This is generally done during the actual read, or straight after reading (e.g. for JSONL and CSV).
+
+This optimization needs to know which relation identifiers are from to be able to push toward the correct scan, this strategy is run after the binder.
+
+**improvements**
+- Push common functions and transforms to SQL sources
+
+### Constant Folding
+
+**status** implemented  
+**goal** reduce calculations  
+**description** Pre-evaluate expressions  
+
+This optimization aims to reduce the work done to evaluate expressions by pre-evaluating expressions which don't rely on data from relations. This includes fixed constants (e.g. literals, `PI()`), variable constants (`current_time`) and variables.
+
+This optimization requires variables to be resolved so is run after the binder.
+
+**improvements**
+- filters which evaluate to FALSE (when ANDed) should avoid the scan(s) below it
+- filters which evaluate to TRUE (when ORed) should remove the entire filter
+
+### Morsel Defragmentation
+
+**status** designed  
+**goal** reduce morsels  
+**description** Combine small morsels together
+
+This optimization aims to reduce the number of times the execution engine executes each step by combining small morsels together. Morsels are up to 64Mb in size, but as filters and other operations are run to eliminate records, the engine may be processing 100 morsels of 0.5Mb each. By combining, we have fewer function calls and steps which benefit from seeing as much data as possible (e.g. JOINs) execute faster.
+
+This optimization does not require any information about schemas, but operates on a nearly finished plan so is run after the binder.
+
+**notes**
+- This should be implemented to run after filters (including when pushed into readers)
+
+### Predicate Rewriter
+- demorgans laws
+- negative filter reduction
+
+### Aggregate Pushdown
+into SQL sources
+
+### Literal JOIN rewrite
+
+### Use Heap Sort
+
+### Use pass-thru LIMIT
+
+### Limit Pushdown
+
+### IN (subquery) to JOIN
+
+### CTE rewrite
+
+### Subquery flattening
+
+### JOIN ordering
+
+### Predicate Ordering
+
+### Predicate Flattening
