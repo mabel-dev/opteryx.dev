@@ -6,7 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.13.0] - UNRELEASED
 
+### Fixed
+
+- [[#1402](https://github.com/mabel-dev/opteryx/issues/1402)] Force consistent blob read order. [@joocer](https://github.com/joocer)
+- [[#1391](https://github.com/mabel-dev/opteryx/issues/1391)] Rolling Log doesn't truncate records. [@joocer](https://github.com/joocer)
+- [[#1395](https://github.com/mabel-dev/opteryx/issues/1395)] Incorrect error raised on type errors on JOINs. [@joocer](https://github.com/joocer)
+- [[#1397](https://github.com/mabel-dev/opteryx/issues/1397)] Subscript SPLIT results. [@joocer](https://github.com/joocer)
+
+### Changed
+
 - [[#1374](https://github.com/mabel-dev/opteryx/issues/1374)] GCS access improvements (up to 2.5x faster IO). [@joocer](https://github.com/joocer)
+- [[#1393](https://github.com/mabel-dev/opteryx/issues/1393)] Performance Tuning blob reading. [@joocer](https://github.com/joocer)
 
 ## [0.12.2] - 2024-01-10
 
