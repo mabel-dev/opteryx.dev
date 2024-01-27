@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.13.0] - UNRELEASED
 
+### Added
+
+- [[#1404](https://github.com/mabel-dev/opteryx/issues/1404)] Optimize single element literal IN conditions [@joocer](https://github.com/joocer)
+
 ### Fixed
 
 - [[#1402](https://github.com/mabel-dev/opteryx/issues/1402)] Force consistent blob read order. [@joocer](https://github.com/joocer)
