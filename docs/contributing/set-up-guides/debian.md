@@ -2,7 +2,7 @@
 
 This guide will help you to set up a Debian or Ubuntu workstation to work with the code and develop Opteryx.
 
-Intel/x86 is the recommended environment, however Opteryx does run on ARM and some parts of the guide may require additional steps in order to work correctly.
+Intel/x86 is the recommended environment, however Opteryx does run on ARM (e.g. a Raspberry Pi) and some parts of the guide may require additional steps in order to work correctly.
 
 ## Setting Up
 
@@ -11,6 +11,8 @@ Intel/x86 is the recommended environment, however Opteryx does run on ARM and so
 **3.10 recommended** 
 
 We recommend using [pyenv](https://github.com/pyenv/pyenv) to install and manage Python environments, particularly in development and test environments.
+
+> We follow [this guide](https://www.samwestby.com/tutorials/rpi-pyenv) to set up Python on our Raspberry Pi
 
 ### 2. Install pip  
 
