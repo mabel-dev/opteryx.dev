@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1391](https://github.com/mabel-dev/opteryx/issues/1391)] Rolling Log doesn't truncate records. [@joocer](https://github.com/joocer)
 - [[#1395](https://github.com/mabel-dev/opteryx/issues/1395)] Incorrect error raised on type errors on JOINs. [@joocer](https://github.com/joocer)
 - [[#1397](https://github.com/mabel-dev/opteryx/issues/1397)] Subscript SPLIT results. [@joocer](https://github.com/joocer)
+- [[#1379](https://github.com/mabel-dev/opteryx/issues/1379)] Unable to run on ARM. [@joocer](https://github.com/joocer)
 
 ### Changed
 
