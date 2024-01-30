@@ -46,13 +46,21 @@ Debian (ARM)      | Partial    | None        | None
 
 ### Python Environment
 
-**Recommended Version**: 3.9
+**Recommended Version**: 3.11
 
-Opteryx supports Python versions 3.9, 3.10 and 3.11.
+Opteryx supports Python versions 3.9, 3.10 and 3.11. Due to variations in support for parts of Opteryx and environments to reliably test and build, not all environments support each version of Python. 3.11 has the broadest compatibility
 
-Opteryx has builds for Python 3.9, 3.10 and 3.11 on 64-bit (x86) versions of Windows, MacOS and Linux and ARM versions of MacOS and Linux.
+Environment       | Python Versions Supported
+----------------- | -----------------------------------
+Linux 64bit x86   | 3.9, 3.10, 3.11
+Linux ARM         | 3.10, 3.11
+MacOS Intel       | 3.9, 3.10, 3.11
+MacOS Apple (M)   | 3.11
+Windows 64bit x86 | 3.9, 3.10, 3.11
 
-Opteryx is primarily developed on workstations running Python 3.11 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 has the greatest test coverage due to it being supported on more platforms.
+Opteryx is primarily developed on workstations running Python 3.11 (Debian x86, Raspian, and MacOS M2) and is known to be deployed in production environments running Python 3.9 and Python 3.11 on Debian. 
+
+Python 3.11 has the greatest test coverage due to it being supported on more platforms.
 
 ### Jupyter Notebooks
 
@@ -96,6 +104,9 @@ Postgres             | SqlConnector             | SQL Store
 SQLite               | SqlConnector             | SQL Store
 
 Connectors are registered with the storage engine using the `register_store` method. Multiple prefixes can be added, using different connectors - multiple storage types can be combined into a single query.
+
+!!! note
+    Other data sources compatible with [SqlAlchemy](https://www.sqlalchemy.org/) are likely to be supported, however are not tested as part of regular automated testing of Opteryx.
 
 ~~~python
 opteryx.storage.register_store("tests", DiskConnector)
