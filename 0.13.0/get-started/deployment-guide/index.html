@@ -2275,10 +2275,40 @@
 </ul>
 </div>
 <h3 id="python-environment">Python Environment</h3>
-<p><strong>Recommended Version</strong>: 3.9</p>
-<p>Opteryx supports Python versions 3.9, 3.10 and 3.11.</p>
-<p>Opteryx has builds for Python 3.9, 3.10 and 3.11 on 64-bit (x86) versions of Windows, MacOS and Linux and ARM versions of MacOS and Linux.</p>
-<p>Opteryx is primarily developed on workstations running Python 3.11 (Debian, MacOS), is known to be deployed in production environments running Python 3.9 (Debian). Python 3.9 has the greatest test coverage due to it being supported on more platforms.</p>
+<p><strong>Recommended Version</strong>: 3.11</p>
+<p>Opteryx supports Python versions 3.9, 3.10 and 3.11. Due to variations in support for parts of Opteryx and environments to reliably test and build, not all environments support each version of Python. 3.11 has the broadest compatibility</p>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Python Versions Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linux 64bit x86</td>
+<td>3.9, 3.10, 3.11</td>
+</tr>
+<tr>
+<td>Linux ARM</td>
+<td>3.10, 3.11</td>
+</tr>
+<tr>
+<td>MacOS Intel</td>
+<td>3.9, 3.10, 3.11</td>
+</tr>
+<tr>
+<td>MacOS Apple (M)</td>
+<td>3.11</td>
+</tr>
+<tr>
+<td>Windows 64bit x86</td>
+<td>3.9, 3.10, 3.11</td>
+</tr>
+</tbody>
+</table>
+<p>Opteryx is primarily developed on workstations running Python 3.11 (Debian x86, Raspian, and MacOS M2) and is known to be deployed in production environments running Python 3.9 and Python 3.11 on Debian. </p>
+<p>Python 3.11 has the greatest test coverage due to it being supported on more platforms.</p>
 <h3 id="jupyter-notebooks">Jupyter Notebooks</h3>
 <p>Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3.</p>
 <p>It is recommended that the Notebook host is located close to the data being queried - such as running Vertex AI Notebooks if the data sources are primarily on GCP, or querying local files if running Jupyter on a local device. Other configurations will work, but are less optimal.</p>
@@ -2364,6 +2394,10 @@
 </tbody>
 </table>
 <p>Connectors are registered with the storage engine using the <code>register_store</code> method. Multiple prefixes can be added, using different connectors - multiple storage types can be combined into a single query.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Other data sources compatible with <a href="https://www.sqlalchemy.org/">SqlAlchemy</a> are likely to be supported, however are not tested as part of regular automated testing of Opteryx.</p>
+</div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">opteryx</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">register_store</span><span class="p">(</span><span class="s2">&quot;tests&quot;</span><span class="p">,</span> <span class="n">DiskConnector</span><span class="p">)</span>
 </code></pre></div>
 <p>A more complete example using the <code>register_store</code> method to set up a connector to Google Cloud Storage (GCS) and then query data on GCS is below:</p>
