@@ -8,7 +8,7 @@ Intel/x86 is the recommended environment, however Opteryx does run on ARM (e.g. 
 
 ### 1. Install Python 
 
-**3.10 recommended** 
+**3.11 recommended** 
 
 We recommend using [pyenv](https://github.com/pyenv/pyenv) to install and manage Python environments, particularly in development and test environments.
 

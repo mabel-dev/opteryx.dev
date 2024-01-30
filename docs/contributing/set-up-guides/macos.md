@@ -8,7 +8,7 @@ Both Intel/x86 and ARM environments are supported, but some parts of the guide m
 
 ### 1. Install Python
 
-**Python 3.10 recommended**
+**Python 3.11 recommended**
 
 We recommend using [pyenv](https://github.com/pyenv/pyenv) to install and manage Python environments. Follow the pyenv installation instructions for macOS.
 
