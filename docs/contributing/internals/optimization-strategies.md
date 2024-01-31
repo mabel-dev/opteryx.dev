@@ -9,7 +9,7 @@ Strategy                     | Type         | Status
 [Morsel Defragmentation](#morsel-defragmentation)             | Heuristic    | Designed
 [Predicate Rewriter](#predicate-rewriter)                     | Heuristic    | Considered
 [Aggregate Pushdown](#aggregate-pushdown)                     | Schema-Aware | Considered
-[Literal JOIN rewrite](#literal-join-rewrite)                 | Schema-Aware | Considered
+[IN (literal) to JOIN](#in-literal-to-join)                   | Schema-Aware | Considered
 [Use Heap Sort](#use-heap-sort)                               | Heuristic    | Considered
 [Use pass-thru DISTINCT](#use-pass-thru-distinct)             | Heuristic    | Considered
 [Limit Pushdown](#limit-pushdown)                             | Heuristic    | Considered
@@ -17,8 +17,14 @@ Strategy                     | Type         | Status
 [CTE rewrite](#cte-rewrite)                                   | Heuristic    | Considered
 [Subquery flattening](#subquery-flattening)                   | Schema-Aware | Considered
 [JOIN ordering](#join-ordering)                               | Cost-Based   | Considered
-[Predicate Ordering](#join-ordering)                          | Cost-Based   | Considered
+[Predicate Ordering](#join-ordering)                          | Cost-Based   | Attempted
 [Predicate Flattening](#predicate-flattening)                 | Schema-Aware | Attempted
+[Predicate Compaction](#predicate-compaction)                 | Schema-Aware | Designed
+[Correlated Predicates](#correlated-predicates)               | Schema-Aware | Considered
+[JOIN Elimination](#join-elimination)                         | Schema-Aware | Considered
+
+3. Redundant Join Elimination
+In some cases, value ranges could lead to the identification of redundant JOINs. For instance, if the value ranges of the joining columns do not overlap, the JOIN will not produce any results, and it might be optimized away entirely.
 
 
 ### Split Conjunctive Predicates
@@ -69,7 +75,7 @@ This optimization aims to reduce the work done to evaluate expressions by pre-ev
 This optimization requires variables to be resolved so is run after the binder.
 
 **improvements**
-- filters which evaluate to FALSE (when ANDed) should avoid the scan(s) below it
+- filters which evaluate to FALSE (when ANDed) should prune the scan(s) below it
 - filters which evaluate to TRUE (when ORed) should remove the entire filter
 
 ### Morsel Defragmentation
@@ -92,13 +98,19 @@ This optimization does not require any information about schemas, but operates o
 ### Aggregate Pushdown
 into SQL sources
 
-### Literal JOIN rewrite
+### IN (literal) to JOIN
 
 ### Use Heap Sort
 
+When performing an ORDER BY and a LIMIT, use a heap sort in batches to avoid loading the entire dataset into memory
+
 ### Use pass-thru LIMIT
 
+When dealing with large number of records, rather than load them all into memory to to the distinct, use a pass-thru limit approach
+
 ### Limit Pushdown
+
+Push limits to the SQL reader
 
 ### IN (subquery) to JOIN
 
@@ -111,3 +123,11 @@ into SQL sources
 ### Predicate Ordering
 
 ### Predicate Flattening
+
+### Correlated Predicates
+
+If a column participating in a JOIN has a known value range, push down corresponding filters to both sides of the JOIN, reducing the size of the datasets that need to be joined.
+
+### JOIN Elimination
+
+Value range information for fields participating in JOINs could lead to the identification of redundant JOINs. Where the value ranges of the joining columns do not overlap, the JOIN will not produce any results, the entire sub-tree below the JOIN could be pruned.
