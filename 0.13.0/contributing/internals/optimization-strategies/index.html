@@ -2159,7 +2159,7 @@
 <td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="#literal-join-rewrite">Literal JOIN rewrite</a></td>
+<td style="text-align: left;"><a href="#in-literal-to-join">IN (literal) to JOIN</a></td>
 <td style="text-align: left;">Schema-Aware</td>
 <td style="text-align: left;">Considered</td>
 </tr>
@@ -2201,15 +2201,34 @@
 <tr>
 <td style="text-align: left;"><a href="#join-ordering">Predicate Ordering</a></td>
 <td style="text-align: left;">Cost-Based</td>
-<td style="text-align: left;">Considered</td>
+<td style="text-align: left;">Attempted</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="#predicate-flattening">Predicate Flattening</a></td>
 <td style="text-align: left;">Schema-Aware</td>
 <td style="text-align: left;">Attempted</td>
 </tr>
+<tr>
+<td style="text-align: left;"><a href="#predicate-compaction">Predicate Compaction</a></td>
+<td style="text-align: left;">Schema-Aware</td>
+<td style="text-align: left;">Designed</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#correlated-predicates">Correlated Predicates</a></td>
+<td style="text-align: left;">Schema-Aware</td>
+<td style="text-align: left;">Considered</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#join-elimination">JOIN Elimination</a></td>
+<td style="text-align: left;">Schema-Aware</td>
+<td style="text-align: left;">Considered</td>
+</tr>
 </tbody>
 </table>
+<ol>
+<li>Redundant Join Elimination
+In some cases, value ranges could lead to the identification of redundant JOINs. For instance, if the value ranges of the joining columns do not overlap, the JOIN will not produce any results, and it might be optimized away entirely.</li>
+</ol>
 <h3 id="split-conjunctive-predicates">Split Conjunctive Predicates</h3>
 <p><strong>status</strong> implemented<br />
 <strong>goal</strong> prepare<br />
@@ -2240,7 +2259,7 @@
 <p>This optimization aims to reduce the work done to evaluate expressions by pre-evaluating expressions which don't rely on data from relations. This includes fixed constants (e.g. literals, <code>PI()</code>), variable constants (<code>current_time</code>) and variables.</p>
 <p>This optimization requires variables to be resolved so is run after the binder.</p>
 <p><strong>improvements</strong>
-- filters which evaluate to FALSE (when ANDed) should avoid the scan(s) below it
+- filters which evaluate to FALSE (when ANDed) should prune the scan(s) below it
 - filters which evaluate to TRUE (when ORed) should remove the entire filter</p>
 <h3 id="morsel-defragmentation">Morsel Defragmentation</h3>
 <p><strong>status</strong> designed<br />
@@ -2257,16 +2276,23 @@
 </ul>
 <h3 id="aggregate-pushdown">Aggregate Pushdown</h3>
 <p>into SQL sources</p>
-<h3 id="literal-join-rewrite">Literal JOIN rewrite</h3>
+<h3 id="in-literal-to-join">IN (literal) to JOIN</h3>
 <h3 id="use-heap-sort">Use Heap Sort</h3>
+<p>When performing an ORDER BY and a LIMIT, use a heap sort in batches to avoid loading the entire dataset into memory</p>
 <h3 id="use-pass-thru-limit">Use pass-thru LIMIT</h3>
+<p>When dealing with large number of records, rather than load them all into memory to to the distinct, use a pass-thru limit approach</p>
 <h3 id="limit-pushdown">Limit Pushdown</h3>
+<p>Push limits to the SQL reader</p>
 <h3 id="in-subquery-to-join">IN (subquery) to JOIN</h3>
 <h3 id="cte-rewrite">CTE rewrite</h3>
 <h3 id="subquery-flattening">Subquery flattening</h3>
 <h3 id="join-ordering">JOIN ordering</h3>
 <h3 id="predicate-ordering">Predicate Ordering</h3>
 <h3 id="predicate-flattening">Predicate Flattening</h3>
+<h3 id="correlated-predicates">Correlated Predicates</h3>
+<p>If a column participating in a JOIN has a known value range, push down corresponding filters to both sides of the JOIN, reducing the size of the datasets that need to be joined.</p>
+<h3 id="join-elimination">JOIN Elimination</h3>
+<p>Value range information for fields participating in JOINs could lead to the identification of redundant JOINs. Where the value ranges of the joining columns do not overlap, the JOIN will not produce any results, the entire sub-tree below the JOIN could be pruned.</p>
 
 
 
