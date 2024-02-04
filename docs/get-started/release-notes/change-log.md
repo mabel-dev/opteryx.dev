@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.14.0] - UNRELEASED
+
+- [[#1421](https://github.com/mabel-dev/opteryx/issues/1421)] Improve `CROSS JOIN UNNEST` performance. [@joocer](https://github.com/joocer)
+
 ## [0.13.0] - 2024-02-03
 
 ### Added
