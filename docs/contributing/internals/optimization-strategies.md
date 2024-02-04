@@ -1,7 +1,7 @@
 # Optimization Strategies
 
-Strategy                     | Type         | Status
-:--------------------------- | :----------- | :----------
+Strategy                                                      | Type         | Status
+:------------------------------------------------------------ | :----------- | :----------
 [Split Conjunctive Predicates](#split-conjunctive-predicates) | Heuristic    | Implemented
 [Predicate Pushdown](#predicate-pushdown)                     | Schema-Aware | Implemented
 [Projection Pushdown](#projection-pushdown)                   | Schema-Aware | Implemented
@@ -22,9 +22,6 @@ Strategy                     | Type         | Status
 [Predicate Compaction](#predicate-compaction)                 | Schema-Aware | Designed
 [Correlated Predicates](#correlated-predicates)               | Schema-Aware | Considered
 [JOIN Elimination](#join-elimination)                         | Schema-Aware | Considered
-
-3. Redundant Join Elimination
-In some cases, value ranges could lead to the identification of redundant JOINs. For instance, if the value ranges of the joining columns do not overlap, the JOIN will not produce any results, and it might be optimized away entirely.
 
 
 ### Split Conjunctive Predicates
