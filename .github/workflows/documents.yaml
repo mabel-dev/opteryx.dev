@@ -18,7 +18,6 @@ jobs:
       - run: pip install --upgrade mkdocs-material mike termynal
 
 #      keep five versions  
-      - run: mike delete "0.8.0"
       - run: mike delete "0.8.1"
       - run: mike delete "0.8.2"
       - run: mike delete "0.8.3"
