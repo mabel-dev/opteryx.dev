@@ -17,7 +17,8 @@ jobs:
       - run: git fetch origin gh-pages --depth=1
       - run: pip install --upgrade mkdocs-material mike termynal pdoc orso
 
-      - run: pdoc orso --no-show-source --mermaid -no-search -o ./docs/get-started/ecosystem/orso
+      - run: git clone https://github.com/mabel-dev/orso
+      - run: pdoc ./orso --no-show-source --mermaid -no-search -o ./docs/get-started/ecosystem/orso
 #      keep five versions  
 #      - run: mike delete "0.8.1"
 #      - run: mike delete "0.8.2"
