@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.14.0] - UNRELEASED
 
+### Added
+
+- [[#1427](https://github.com/mabel-dev/opteryx/issues/1427)] Boolean simplification optimization strategy. [@joocer](https://github.com/joocer)
+
 ### Fixed
 
 - [[#1421](https://github.com/mabel-dev/opteryx/issues/1421)] Improve `CROSS JOIN UNNEST` performance. [@joocer](https://github.com/joocer)
@@ -15,16 +19,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- [[#1404](https://github.com/mabel-dev/opteryx/issues/1404)] Optimize single element literal IN conditions [@joocer](https://github.com/joocer)
+- [[#1404](https://github.com/mabel-dev/opteryx/issues/1404)] Optimize single element literal `IN` conditions [@joocer](https://github.com/joocer)
 
 ### Fixed
 
 - [[#1402](https://github.com/mabel-dev/opteryx/issues/1402)] Force consistent blob read order. [@joocer](https://github.com/joocer)
 - [[#1391](https://github.com/mabel-dev/opteryx/issues/1391)] Rolling Log doesn't truncate records. [@joocer](https://github.com/joocer)
-- [[#1395](https://github.com/mabel-dev/opteryx/issues/1395)] Incorrect error raised on type errors on JOINs. [@joocer](https://github.com/joocer)
-- [[#1397](https://github.com/mabel-dev/opteryx/issues/1397)] Subscript SPLIT results. [@joocer](https://github.com/joocer)
+- [[#1395](https://github.com/mabel-dev/opteryx/issues/1395)] Incorrect error raised on type errors on `JOIN`s. [@joocer](https://github.com/joocer)
+- [[#1397](https://github.com/mabel-dev/opteryx/issues/1397)] Subscript `SPLIT` results. [@joocer](https://github.com/joocer)
 - [[#1379](https://github.com/mabel-dev/opteryx/issues/1379)] Unable to run on ARM. [@joocer](https://github.com/joocer)
-- [[#1183](https://github.com/mabel-dev/opteryx/issues/1183)] JOIN on literals fails. [@joocer](https://github.com/joocer)
+- [[#1183](https://github.com/mabel-dev/opteryx/issues/1183)] `JOIN` on literals fails. [@joocer](https://github.com/joocer)
 
 ### Changed
 
@@ -37,14 +41,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- [[#1355](https://github.com/mabel-dev/opteryx/issues/1355)] Shortcut OR evaluations [@joocer](https://github.com/joocer)
-- [[#1363](https://github.com/mabel-dev/opteryx/issues/1363)] Shortcut nested AND evaluations [@joocer](https://github.com/joocer)
-- [[#21](https://github.com/mabel-dev/opteryx/issues/21)] Support UNION statements [@joocer](https://github.com/joocer)
+- [[#1355](https://github.com/mabel-dev/opteryx/issues/1355)] Shortcut `OR` evaluations [@joocer](https://github.com/joocer)
+- [[#1363](https://github.com/mabel-dev/opteryx/issues/1363)] Shortcut nested `AND` evaluations [@joocer](https://github.com/joocer)
+- [[#21](https://github.com/mabel-dev/opteryx/issues/21)] Support `UNION` statements [@joocer](https://github.com/joocer)
 - [[#1354](https://github.com/mabel-dev/opteryx/issues/1354)] New Optimization: Constant Expression Evaluations [@joocer](https://github.com/joocer)
 
 ### Fixed
 
-- [[#1370](https://github.com/mabel-dev/opteryx/issues/1370)] Compare DATE and TIMESTAMP. [@joocer](https://github.com/joocer)
+- [[#1370](https://github.com/mabel-dev/opteryx/issues/1370)] Compare `DATE` and `TIMESTAMP`. [@joocer](https://github.com/joocer)
 
 ### Changed
 

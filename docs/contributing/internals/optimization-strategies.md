@@ -6,8 +6,8 @@ Strategy                                                      | Type         | S
 [Predicate Pushdown](#predicate-pushdown)                     | Schema-Aware | Implemented
 [Projection Pushdown](#projection-pushdown)                   | Schema-Aware | Implemented
 [Constant Folding](#constant-folding)                         | Heuristic    | Implemented
-[Morsel Defragmentation](#morsel-defragmentation)             | Heuristic    | Designed
-[Predicate Rewriter](#predicate-rewriter)                     | Heuristic    | Considered
+[Predicate Rewriter](#predicate-rewriter)                     | Heuristic    | Implemented
+[Morsel Defragmentation](#morsel-defragmentation)             | Heuristic    | Attempted
 [Aggregate Pushdown](#aggregate-pushdown)                     | Schema-Aware | Considered
 [IN (literal) to JOIN](#in-literal-to-join)                   | Schema-Aware | Considered
 [Use Heap Sort](#use-heap-sort)                               | Heuristic    | Considered
