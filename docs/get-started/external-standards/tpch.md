@@ -7,7 +7,7 @@
 
 Query   | Modified | Pass
 :------ | :------- | :-----
-query1  | no       | no
+query1  | no       | yes
 query2  | yes      | no
 query3  | no       | no
 query4  | no       | no
@@ -20,7 +20,7 @@ query10 | no       | no
 query11 | yes      | no
 query12 | no       | yes
 query13 | no       | no
-query14 | no       | no
+query14 | no       | yes
 query15 | yes      | no
 query16 | no       | no
 query17 | no       | no
