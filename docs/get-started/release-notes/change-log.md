@@ -14,6 +14,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#1421](https://github.com/mabel-dev/opteryx/issues/1421)] Improve `CROSS JOIN UNNEST` performance. [@joocer](https://github.com/joocer)
 - [[#1413](https://github.com/mabel-dev/opteryx/issues/1413)] Regression test failures on Windows. [@joocer](https://github.com/joocer)
+- [[#1320](https://github.com/mabel-dev/opteryx/issues/1320)] Errors due to binding memoization. [@joocer](https://github.com/joocer)
+- [[#1433](https://github.com/mabel-dev/opteryx/issues/1433)] [Bandit](https://bandit.readthedocs.io/en/latest/index.html) tests misconfigured. [@joocer](https://github.com/joocer)
 
 ## [0.13.0] - 2024-02-03
 
