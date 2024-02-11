@@ -18,7 +18,8 @@ jobs:
       - run: pip install --upgrade mkdocs-material mike termynal pdoc
 
       - run: git clone https://github.com/mabel-dev/orso
-      - run: pdoc ./orso --no-show-source --mermaid -no-search -t ./template -o ./docs/get-started/ecosystem/orso
+      - run: ls
+      - run: pdoc ./orso --no-show-source --mermaid --no-search -t ./template -o ./docs/get-started/ecosystem/orso
 
 
 #      keep five versions  
