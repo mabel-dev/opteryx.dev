@@ -18,7 +18,7 @@ jobs:
       - run: pip install --upgrade mkdocs-material mike termynal pdoc markdownify
 
       - run: pip install --upgrade orso
-      - run: pdoc orso --no-show-source --mermaid --no-search -t ./template -o ./docs/get-started/ecosystem/orso
+      - run: pdoc orso --no-show-source --mermaid --no-search -o ./docs/get-started/ecosystem/orso
       - run: markdownify ./docs/get-started/ecosystem/orso/orso.html > ./docs/get-started/ecosystem/orso/orso.md
 
 
