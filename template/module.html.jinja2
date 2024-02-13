@@ -1,6 +1,4 @@
----
-title: {{ module.modulename if module else "Documentation" }}
----
+# {{ module.modulename if module else "Documentation" }}
 
 <div>
     {% block content %}{% endblock %}
@@ -12,9 +10,6 @@ title: {{ module.modulename if module else "Documentation" }}
             Ideally we would still include Bootstrap Reboot, but that breaks mkdocs' theme.
             <style>{% include "resources/bootstrap-reboot.min.css" %}</style>
             #}
-            <style>{% include "syntax-highlighting.css" %}</style>
-            <style>{% include "theme.css" %}</style>
-            <style>{% include "content.css" %}</style>
         {% endblock %}
     {% endfilter %}
 </div>

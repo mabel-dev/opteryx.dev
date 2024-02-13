@@ -17,6 +17,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1320](https://github.com/mabel-dev/opteryx/issues/1320)] Errors due to binding memoization. [@joocer](https://github.com/joocer)
 - [[#1433](https://github.com/mabel-dev/opteryx/issues/1433)] [Bandit](https://bandit.readthedocs.io/en/latest/index.html) tests misconfigured. [@joocer](https://github.com/joocer)
 
+### Changes
+
+- [[#1410](https://github.com/mabel-dev/opteryx/issues/1410)] Whilst working on `JOIN` improvements, improvements to `DISTINCT` made. [@joocer](https://github.com/joocer)
+
 ## [0.13.0] - 2024-02-03
 
 ### Added
