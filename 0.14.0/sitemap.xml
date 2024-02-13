@@ -176,6 +176,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://opteryx.dev/0.14.0/get-started/ecosystem/orso/orso/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://opteryx.dev/0.14.0/get-started/external-standards/information-schema/</loc>
          <lastmod>2024-02-13</lastmod>
          <changefreq>daily</changefreq>
