@@ -19,6 +19,7 @@ jobs:
 
       - run: pip install --upgrade orso
       - run: pdoc orso --no-show-source --mermaid --no-search -t ./template -o ./docs/get-started/ecosystem/orso
+      - run: ls ./docs/get-started/ecosystem/orso
       - run: mv ./docs/get-started/ecosystem/orso/orso/index.html ./docs/get-started/ecosystem/orso/orso.md
 
 
