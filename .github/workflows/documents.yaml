@@ -15,11 +15,11 @@ jobs:
       - run: git config user.name XB500
       - run: git config user.email XB500@users.noreply.github.com
       - run: git fetch origin gh-pages --depth=1
-      - run: pip install --upgrade mkdocs-material mike termynal pdoc
+      - run: pip install --upgrade mkdocs-material mike termynal pdoc markdownify
 
       - run: pip install --upgrade orso
       - run: pdoc orso --no-show-source --mermaid --no-search -t ./template -o ./docs/get-started/ecosystem/orso
-      - run: mv ./docs/get-started/ecosystem/orso/orso.html ./docs/get-started/ecosystem/orso/orso.md
+      - run: markdownify ./docs/get-started/ecosystem/orso/orso.html > ./docs/get-started/ecosystem/orso/orso.md
 
 
 #      keep five versions  
