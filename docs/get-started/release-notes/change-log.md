@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#1421](https://github.com/mabel-dev/opteryx/issues/1421)] Improve `CROSS JOIN UNNEST` performance. [@joocer](https://github.com/joocer)
 - [[#1410](https://github.com/mabel-dev/opteryx/issues/1410)] Whilst working on `JOIN` improvements, improvements to `DISTINCT` made. [@joocer](https://github.com/joocer)
+- Refactored SQL Fuzzer regression test script. [@joocer](https://github.com/joocer)
 
 ## [0.13.0] - 2024-02-03
 
