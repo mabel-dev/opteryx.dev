@@ -6,11 +6,10 @@ Opteryx, mesos, and orso are built on the shoulders of other great libraries and
 
 Library           | Inclusion Type    | Copyright            | Licence   
 :---------------- | :---------------- | :------------------- | :--------------- 
-[cityhash](https://github.com/google/cityhash)             | Integrated  | 2011 [Google](https://github.com/google) | [MIT](https://github.com/google/cityhash/blob/master/COPYING)  
+[cityhash](https://github.com/google/cityhash)             | Installed  | 2011 [Google](https://github.com/google) | [MIT](https://github.com/google/cityhash/blob/master/COPYING)  
 [cython](https://github.com/cython/cython)                 | Installed   |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
 [distogram](https://github.com/maki-nage/distogram)        | Integrated  | 2020 [Romain Picard](https://github.com/MainRo) | [MIT](https://github.com/maki-nage/distogram/blob/master/LICENSE.txt)
 [fuzzy](https://github.com/yougov/fuzzy)                   | Integrated  | [Jason R. Coombs](https://github.com/jaraco) | [MIT](https://github.com/yougov/fuzzy/blob/master/LICENSE)
-[levenshtein](https://gist.github.com/vatsal220/6aefbc245216bc9f2da8556f42e1c89c#file-lev_dist-py) | Integrated | [Vatsal Patel](https://gist.github.com/vatsal220) | Public Domain (assumed)
 [mbleven](https://github.com/fujimotos/mbleven)            | Integrated  | 2018 [Fujimoto Seiji](https://github.com/fujimotos) | [Public Domain](https://github.com/fujimotos/mbleven/blob/master/LICENSE)
 [mysql-mimic](https://github.com/kelsin/mysql-mimic)       | Derived     | 2022 [Christopher Giroir](https://github.com/kelsin) | [MIT](https://github.com/kelsin/mysql-mimic/blob/main/LICENSE)
 [numpy](https://github.com/numpy/numpy)                    | Installed   |  | [BSD-3](https://github.com/numpy/numpy/blob/main/LICENSE.txt)
@@ -72,4 +71,4 @@ The following resources have been used as guides, references or patterns:
 
 ## Uncredited Authors
 
-ChatGPT has assisted in writing, debugging and documenting code.
+ChatGPT has been used to assist in designing, refactoring, testing, debugging and documenting code.

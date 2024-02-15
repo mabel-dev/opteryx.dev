@@ -6,7 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.14.0] - UNRELEASED
 
+### Changed
+
 - [[#1448](https://github.com/mabel-dev/opteryx/issues/1448)] Improved error message on `GROUP BY` errors. [@joocer](https://github.com/joocer)
+- [[#1447](https://github.com/mabel-dev/opteryx/issues/1447)] Levenshtein implementation rewritten. [@joocer](https://github.com/joocer)
 
 ## [0.13.3] - 2024-02-13
 
