@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.14.0] - UNRELEASED
 
+### Added
+
+- [[#1460](https://github.com/mabel-dev/opteryx/issues/1460)] Support PyArrow's IPC formated files. [@joocer](https://github.com/joocer)
+
 ### Changed
 
 - [[#1448](https://github.com/mabel-dev/opteryx/issues/1448)] Improved error message on `GROUP BY` errors. [@joocer](https://github.com/joocer)
@@ -13,12 +17,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1451](https://github.com/mabel-dev/opteryx/issues/1451)] Improved IP containment testing performance. [@joocer](https://github.com/joocer)
 - [[#1410](https://github.com/mabel-dev/opteryx/issues/1410)] Rewrite `INNER JOIN` [@joocer](https://github.com/joocer) + [[#190](https://github.com/mabel-dev/opteryx/issues/190)]
 
+### Fixed
+
+- [[#1462](https://github.com/mabel-dev/opteryx/issues/1462)] Unhandled exception on empty datasets. [@joocer](https://github.com/joocer)
+
+
 ## [0.13.3] - 2024-02-13
 
 ### Added
 
 - [[#1427](https://github.com/mabel-dev/opteryx/issues/1427)] Boolean simplification optimization strategy. [@joocer](https://github.com/joocer)
-- [[#1460](https://github.com/mabel-dev/opteryx/issues/1460)] Support PyArrow's IPC formated files. [@joocer](https://github.com/joocer)
+
 
 ### Fixed
 
