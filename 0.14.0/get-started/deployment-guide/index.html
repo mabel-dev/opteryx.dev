@@ -2229,7 +2229,7 @@
 <h3 id="operating-system-support">Operating System Support</h3>
 <p><strong>Recommended Operating System</strong>: Ubuntu 20 (64bit)</p>
 <p>Opteryx can be installed and deployed on a number of different platforms. It has heavy dependency on <a href="https://arrow.apache.org/">Apache Arrow</a> and cannot be run on systems which do not support Arrow.</p>
-<p>The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.9, 3.10 and 3.11. The below table shows regression suite coverage:</p>
+<p>The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.9, 3.10, 3.11, and 3.12. The below table shows regression suite coverage:</p>
 <table>
 <thead>
 <tr>
@@ -2237,11 +2237,13 @@
 <th style="text-align: center;">Python 3.9</th>
 <th style="text-align: center;">Python 3.10</th>
 <th style="text-align: center;">Python 3.11</th>
+<th style="text-align: center;">Python 3.12</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>MacOS (x86/Intel)</td>
+<td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
@@ -2251,9 +2253,11 @@
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
+<td style="text-align: center;">Partial</td>
 </tr>
 <tr>
 <td>Ubuntu (x86)</td>
+<td style="text-align: center;">Full</td>
 <td style="text-align: center;">Full</td>
 <td style="text-align: center;">Full</td>
 <td style="text-align: center;">Full</td>
@@ -2261,6 +2265,7 @@
 <tr>
 <td>Debian (ARM)</td>
 <td style="text-align: center;">Partial</td>
+<td style="text-align: center;">None</td>
 <td style="text-align: center;">None</td>
 <td style="text-align: center;">None</td>
 </tr>
@@ -2292,23 +2297,23 @@
 <tbody>
 <tr>
 <td>Linux 64bit x86</td>
-<td>3.9, 3.10, 3.11</td>
+<td>3.9, 3.10, 3.11, 3.12</td>
 </tr>
 <tr>
 <td>Linux ARM</td>
-<td>3.10, 3.11</td>
+<td>build from source</td>
 </tr>
 <tr>
 <td>MacOS Intel</td>
-<td>3.9, 3.10, 3.11</td>
+<td>3.9, 3.10, 3.11, 3.12</td>
 </tr>
 <tr>
 <td>MacOS Apple (M)</td>
-<td>3.11</td>
+<td>3.11, 3.12</td>
 </tr>
 <tr>
 <td>Windows 64bit x86</td>
-<td>3.9, 3.10, 3.11</td>
+<td>3.9, 3.10, 3.11, 3.12</td>
 </tr>
 </tbody>
 </table>
@@ -2474,6 +2479,7 @@
 <li>JSONL formatted files which have been <a href="http://facebook.github.io/zstd/">Zstandard</a> compressed (<code>.zstd</code>)</li>
 <li>ORC formatted files (<code>.orc</code>)</li>
 <li>Feather (Arrow) formatted files (<code>.arrow</code>)</li>
+<li>Arrow IPC format (<code>.ipc</code>)</li>
 <li>Avro formatted files (<code>.avro</code>)</li>
 </ul>
 <div class="admonition note">
