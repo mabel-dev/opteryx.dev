@@ -9,13 +9,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - [[#1460](https://github.com/mabel-dev/opteryx/issues/1460)] Support PyArrow's IPC formated files. [@joocer](https://github.com/joocer)
+- [[#1464](https://github.com/mabel-dev/opteryx/issues/1464)] `LIKE` with no wildcards rewritten as `=` [@joocer](https://github.com/joocer)
 
 ### Changed
 
 - [[#1448](https://github.com/mabel-dev/opteryx/issues/1448)] Improved error message on `GROUP BY` errors. [@joocer](https://github.com/joocer)
 - [[#1447](https://github.com/mabel-dev/opteryx/issues/1447)] Levenshtein implementation rewritten. [@joocer](https://github.com/joocer)
 - [[#1451](https://github.com/mabel-dev/opteryx/issues/1451)] Improved IP containment testing performance. [@joocer](https://github.com/joocer)
-- [[#1410](https://github.com/mabel-dev/opteryx/issues/1410)] Rewrite `INNER JOIN` [@joocer](https://github.com/joocer) + [[#190](https://github.com/mabel-dev/opteryx/issues/190)]
+- [[#1410](https://github.com/mabel-dev/opteryx/issues/1410)]  + [[#190](https://github.com/mabel-dev/opteryx/issues/190)] Rewrite `INNER JOIN` [@joocer](https://github.com/joocer)
 
 ### Fixed
 
