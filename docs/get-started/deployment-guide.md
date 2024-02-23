@@ -24,14 +24,14 @@ Opteryx balances memory consumption with performance, however, being able to pro
 
 Opteryx can be installed and deployed on a number of different platforms. It has heavy dependency on [Apache Arrow](https://arrow.apache.org/) and cannot be run on systems which do not support Arrow.
 
-The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.9, 3.10 and 3.11. The below table shows regression suite coverage:
+The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.9, 3.10, 3.11, and 3.12. The below table shows regression suite coverage:
 
-OS                | Python 3.9 | Python 3.10 | Python 3.11 |
------------------ | :--------: | :---------: | :---------: |
-MacOS (x86/Intel) | Partial    | Partial     | Partial
-Windows (x86)     | Partial    | Partial     | Partial
-Ubuntu (x86)      | Full       | Full        | Full
-Debian (ARM)      | Partial    | None        | None
+OS                | Python 3.9 | Python 3.10 | Python 3.11 | Python 3.12 |
+----------------- | :--------: | :---------: | :---------: | :---------: |
+MacOS (x86/Intel) | Partial    | Partial     | Partial     | Partial     |
+Windows (x86)     | Partial    | Partial     | Partial     | Partial     |
+Ubuntu (x86)      | Full       | Full        | Full        | Full        |
+Debian (ARM)      | Partial    | None        | None        | None        |
 
 &emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from Ubuntu Python 3.10 tests.  
 &emsp;**Partial** - some tests are excluded from the test suite or that some tests fail.  
@@ -52,11 +52,11 @@ Opteryx supports Python versions 3.9, 3.10 and 3.11. Due to variations in suppor
 
 Environment       | Python Versions Supported
 ----------------- | -----------------------------------
-Linux 64bit x86   | 3.9, 3.10, 3.11
-Linux ARM         | 3.10, 3.11
-MacOS Intel       | 3.9, 3.10, 3.11
-MacOS Apple (M)   | 3.11
-Windows 64bit x86 | 3.9, 3.10, 3.11
+Linux 64bit x86   | 3.9, 3.10, 3.11, 3.12
+Linux ARM         | build from source
+MacOS Intel       | 3.9, 3.10, 3.11, 3.12
+MacOS Apple (M)   | 3.11, 3.12
+Windows 64bit x86 | 3.9, 3.10, 3.11, 3.12
 
 Opteryx is primarily developed on workstations running Python 3.11 (Debian x86, Raspian, and MacOS M2) and is known to be deployed in production environments running Python 3.9 and Python 3.11 on Debian. 
 
@@ -205,6 +205,7 @@ Opteryx supports:
 - JSONL formatted files which have been [Zstandard](http://facebook.github.io/zstd/) compressed (`.zstd`)
 - ORC formatted files (`.orc`)
 - Feather (Arrow) formatted files (`.arrow`)
+- Arrow IPC format (`.ipc`)
 - Avro formatted files (`.avro`)
 
 !!! note
