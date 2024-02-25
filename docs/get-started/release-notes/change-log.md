@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#1462](https://github.com/mabel-dev/opteryx/issues/1462)] Unhandled exception on empty datasets. [@joocer](https://github.com/joocer)
 - [[#1465](https://github.com/mabel-dev/opteryx/issues/1465)] Clashing column names not aliased correctly. [@joocer](https://github.com/joocer)
+- :octicons-alert-24: [[#1445](https://github.com/mabel-dev/opteryx/issues/1445)] `SHOW EXTENDED COLUMNS` not working as expected - changes made to data profile format. [@joocer](https://github.com/joocer)
 
 ## [0.13.3] - 2024-02-13
 
