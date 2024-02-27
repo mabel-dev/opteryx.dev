@@ -12,7 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1464](https://github.com/mabel-dev/opteryx/issues/1464)] `LIKE` with no wildcards rewritten as `=` [@joocer](https://github.com/joocer)
 - [[#1468](https://github.com/mabel-dev/opteryx/issues/1468)] Python 3.12 support [@joocer](https://github.com/joocer)
 - [[#1459](https://github.com/mabel-dev/opteryx/issues/1459)] Primitive support for `EXECUTE` queries [@joocer](https://github.com/joocer)
-
+- [[#1479](https://github.com/mabel-dev/opteryx/issues/1479)] Unary (`IS TRUE`) operators pushed to SQL sources [@joocer](https://github.com/joocer)
 
 ### Changed
 
