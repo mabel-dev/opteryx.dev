@@ -29,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - :octicons-alert-24: [[#1445](https://github.com/mabel-dev/opteryx/issues/1445)] `SHOW EXTENDED COLUMNS` not working as expected - changes made to data profile format. [@joocer](https://github.com/joocer)
 - [[#1473](https://github.com/mabel-dev/opteryx/issues/1473)] `INNER JOIN` statistics not correct. [@joocer](https://github.com/joocer)
 - [[#1474](https://github.com/mabel-dev/opteryx/issues/1474)] Unhelpful error message when `SELECT *` is mixed with column references [@joocer](https://github.com/joocer)
+- [[#1487](https://github.com/mabel-dev/opteryx/issues/1487)] Filters are not applied to scans on specific conditions involving `JOIN`s [@joocer](https://github.com/joocer)
 
 ## [0.13.3] - 2024-02-13
 
