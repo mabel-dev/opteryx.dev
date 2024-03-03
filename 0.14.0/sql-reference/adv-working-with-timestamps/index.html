@@ -1291,6 +1291,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#precision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precision
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2192,6 +2201,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#precision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precision
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2211,48 +2229,65 @@
 
 
 <h1 id="working-with-timestamps">Working with Timestamps</h1>
-<p>Working with Timestamps often involves working with Intervals.</p>
+<p>Working with DATE and TIMESTAMP often involves working with INTERVALs. </p>
+<p>INTERVALs may not always act as expected, especially when working with months and years, primarily due to complexities in quickly and accurately determining if an number of days is a given number of months.</p>
 <h2 id="actions">Actions</h2>
 <h3 id="addsubtract">Add/Subtract</h3>
 <p><em>timestamp</em> <code>+</code> <em>interval</em> → <em>timestamp</em>  </p>
 <p><em>timestamp</em> <code>-</code> <em>interval</em> → <em>timestamp</em>  </p>
-<p><em>timestamp</em> <code>-</code> <em>timestamp</em> → <em>interval</em>  </p>
+<p><em>timestamp</em> <code>-</code> <em>timestamp</em> → <em>interval</em> *</p>
+<p><em>interval</em> <code>+</code> <em>interval</em> -&gt; <em>interval</em></p>
+<p><em>interval</em> <code>-</code> <em>interval</em> -&gt; <em>interval</em></p>
+<p><em>timestamp</em> <code>+</code> <em>timestamp</em> -&gt; <strong>not possible</strong></p>
 <p><code>DATEDIFF</code> (<strong>unit</strong>: <em>varchar</em>, <strong>start</strong>: <em>timestamp</em>, <strong>end</strong>: <em>timestamp</em>) → <em>numeric</em>  </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>INTERVAL</code> may not support all functions in all circumstances.  </p>
-</div>
+<p><strong>Note</strong> INTERVALs created as the result of date and timestamp substraction have no month or year component and are handled internally as seconds. This may result in unexpected outcomes, for example when mixed with month calculations.</p>
+<p>If determing differences in months or years, this form is supported:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>WHERE birth + INTERVAL &#39;100&#39; YEAR &gt; death
+</code></pre></div>
+<p>this form is not</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>WHERE death - birth &gt; INTERVAL &#39;100&#39; YEAR
+</code></pre></div>
 <h3 id="construct">Construct</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>INTERVAL values units
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>INTERVAL values units
 </code></pre></div>
+<p>Examples:</p>
+<p><code>INTERVAL '1' YEAR</code>
+<code>INTERVAL '1' DAY</code>
+<code>INTERVAL '1 1' DAY TO HOUR</code></p>
+<p>Supported units:
+<code>YEAR</code>, <code>MONTH</code>, <code>DAY</code>, <code>HOUR</code>, <code>MINUTE</code>, <code>SECOND</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>TIMESTAMP value
+</code></pre></div>
+<p>Examples:</p>
+<p><code>TIMESTAMP '2024-02-14'</code></p>
 <h3 id="extract">Extract</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>EXTRACT(part FROM timestamp)
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>EXTRACT(part FROM timestamp)
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>DATE(timestamp)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>DATE(timestamp)
 </code></pre></div></p>
 <h3 id="format">Format</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>DATE_FORMAT(timestamp, format)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>DATE_FORMAT(timestamp, format)
 </code></pre></div>
 <h3 id="parse">Parse</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>CAST(field AS TIMESTAMP)
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>CAST(field AS TIMESTAMP)
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>TIMESTAMP(field)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>TIMESTAMP(field)
 </code></pre></div></p>
 <h3 id="truncate">Truncate</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>DATE_TRUNC(part, timestamp)
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>DATE_TRUNC(part, timestamp)
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>TIME_BUCKET(timestamp, multiple, unit)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>TIME_BUCKET(timestamp, multiple, unit)
 </code></pre></div></p>
 <h3 id="generate">Generate</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>current_date
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>current_date
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>current_time
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>current_time
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>YESTERDAY()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>YESTERDAY()
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>TIME()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>TIME()
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>generate_series()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>generate_series()
 </code></pre></div></p>
 <p>Note that <code>current_date</code> and <code>current_time</code> support being called without parenthesis.</p>
 <p>Recognized date parts and periods and support across various functions:</p>
@@ -2354,6 +2389,10 @@
 <p>In many situation where a timestamp is expected, if an <a href="https://datatracker.ietf.org/doc/html/rfc3339">RFC 3339</a> formatted string is provided, the engine will interpret as a timestamp.</p>
 <h2 id="timezones">Timezones</h2>
 <p>The engine is opinionated to run in UTC - all instances where the system time is requested, UTC is used.</p>
+<h2 id="precision">Precision</h2>
+<p>INTERVALs are maintained internally with a millisecond precision.</p>
+<p>TIMESTAMPs are maintained internally with a nanosecond precision.</p>
+<p>DATEs are maintained internally with a day precision.</p>
 
 
 
