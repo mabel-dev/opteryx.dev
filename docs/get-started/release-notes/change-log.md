@@ -20,7 +20,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1447](https://github.com/mabel-dev/opteryx/issues/1447)] Levenshtein implementation rewritten. [@joocer](https://github.com/joocer)
 - [[#1451](https://github.com/mabel-dev/opteryx/issues/1451)] Improved IP containment testing performance. [@joocer](https://github.com/joocer)
 - [[#1410](https://github.com/mabel-dev/opteryx/issues/1410)]  + [[#190](https://github.com/mabel-dev/opteryx/issues/190)] Rewrite `INNER JOIN` [@joocer](https://github.com/joocer)
-- [[#1481](https://github.com/mabel-dev/opteryx/issues/1481)] Improvements to DATE +/- INTERVAL performance. [@joocer](https://github.com/joocer)
+- [[#1481](https://github.com/mabel-dev/opteryx/issues/1481)] Improvements to `DATE` +/- `INTERVAL` performance. [@joocer](https://github.com/joocer)
+- [[#1486](https://github.com/mabel-dev/opteryx/issues/1486)] Implement bespoke `INTERVAL` operators [@joocer](https://github.com/joocer)
 
 ### Fixed
 
@@ -30,6 +31,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1473](https://github.com/mabel-dev/opteryx/issues/1473)] `INNER JOIN` statistics not correct. [@joocer](https://github.com/joocer)
 - [[#1474](https://github.com/mabel-dev/opteryx/issues/1474)] Unhelpful error message when `SELECT *` is mixed with column references [@joocer](https://github.com/joocer)
 - [[#1487](https://github.com/mabel-dev/opteryx/issues/1487)] Filters are not applied to scans on specific conditions involving `JOIN`s [@joocer](https://github.com/joocer)
+- [[#1480](https://github.com/mabel-dev/opteryx/issues/1480)] `INTERVAL` cannot be compared to durations [@joocer](https://github.com/joocer)
+
 
 ## [0.13.3] - 2024-02-13
 
