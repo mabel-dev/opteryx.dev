@@ -205,15 +205,15 @@ These are functions that are called similar to comparison operators:
     IP address containment
 
 !!! function "_integer_ `|` _integer_ → _integer_"   
-    ** :octicons-star-16: New in 0.12**    
+    :octicons-star-16: **New in 0.12**   
     Bitwise OR
 
 !!! function "_integer_ `&` _integer_ → _integer_"  
-    ** :octicons-star-16: New in 0.12**     
+    :octicons-star-16: **New in 0.12**    
     Bitwise AND
 
 !!! function "_integer_ `^` _integer_ → _integer_"   
-    ** :octicons-star-16: New in 0.12**    
+    :octicons-star-16: **New in 0.12**   
     Bitwise XOR
 
 ## List Functions
@@ -426,11 +426,11 @@ Functions for examining and manipulating string values.
 For more details, see [Working with Structs](../adv-working-with-structs/).
 
 !!! function "_struct_ `->` _key_ → _value_:octicons-beaker-24: "  
-    ** :octicons-star-16: New in 0.14**     
+    :octicons-star-16: **New in 0.14**     
     Return the value for **key** from **object**. 
 
 !!! function "_struct_ `->>` _key_ → _varchar_:octicons-beaker-24: "  
-    ** :octicons-star-16: New in 0.14**     
+    :octicons-star-16: **New in 0.14**     
     Return the value for **key** from **object**, non `NULL` values are cast to `VARCHAR`. 
     Related: `->` operator
 
