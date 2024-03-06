@@ -426,11 +426,21 @@ Functions for examining and manipulating string values.
 
 For more details, see [Working with Structs](../adv-working-with-structs/).
 
+!!! :octicons-beaker-24: function "_struct_ `->` _key_ → _value_"  
+    ** :octicons-star-16: New in 0.14**     
+    Return the value for **key** from **object**. 
+
+!!! :octicons-beaker-24: function "_struct_ `->>` _key_ → _varchar_"  
+    ** :octicons-star-16: New in 0.14**     
+    Return the value for **key** from **object**, non `NULL` values are cast to `VARCHAR`. 
+    Related: `->` operator
+
 !!! function "**object**: _struct_`[`**key**: _varchar_`]` → _value_:octicons-dot-16:"  
-    Subscript operator, return the value for **key** from **object**. 
+    Subscript operator
+    Alias of **object**`->`**key**  
 
 !!! function "`GET` (**object**: _struct_, **key**: _varchar_) → _value_:octicons-dot-16:"  
-    Alias of **object**`[`**key**`]`  
+    Alias of **object**`->`**key**  
 
 !!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → _boolean_:octicons-dot-16:"  
     Return `true` if any of the values in **object** is **value**. Note `SEARCH` does not match struct keys.

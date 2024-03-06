@@ -34,6 +34,16 @@ SELECT birth_place['town'], COUNT(*)
  GROUP BY birth_place['town'];
 ~~~
 
+:octicons-beaker-24: **Beta Functionality**
+~~~
+struct -> key
+~~~
+
+~~~
+struct ->> key
+~~~
+
+Values within structs can be accessed by key using Accessor notation, support is limited.
 
 ### Searching
 
