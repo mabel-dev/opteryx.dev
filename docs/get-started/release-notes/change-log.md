@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1459](https://github.com/mabel-dev/opteryx/issues/1459)] Primitive support for `EXECUTE` queries [@joocer](https://github.com/joocer)
 - [[#1479](https://github.com/mabel-dev/opteryx/issues/1479)] Unary (`IS TRUE`) operators pushed to SQL sources [@joocer](https://github.com/joocer)
 - [[#540](https://github.com/mabel-dev/opteryx/issues/540)] Initial support for JSON Accessors `->` and `->>`. [@joocer](https://github.com/joocer)
+- [[#1499](https://github.com/mabel-dev/opteryx/issues/1499)] Error when `EXECUTE USING` syntax is attempted. [@joocer](https://github.com/joocer)
 
 ### Changed
 
