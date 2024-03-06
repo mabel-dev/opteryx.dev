@@ -193,7 +193,6 @@ These are functions that are called similar to comparison operators:
     Numeric division
 
 !!! function "_numeric_ `DIV` _numeric_ → _integer_"   
-    ** :octicons-star-16: New in 0.11**  
     Integer division
 
 !!! function "_numeric_ `%` _numeric_ → _numeric_"  
@@ -426,11 +425,11 @@ Functions for examining and manipulating string values.
 
 For more details, see [Working with Structs](../adv-working-with-structs/).
 
-!!! :octicons-beaker-24: function "_struct_ `->` _key_ → _value_"  
+!!! function "_struct_ `->` _key_ → _value_:octicons-beaker-24: "  
     ** :octicons-star-16: New in 0.14**     
     Return the value for **key** from **object**. 
 
-!!! :octicons-beaker-24: function "_struct_ `->>` _key_ → _varchar_"  
+!!! function "_struct_ `->>` _key_ → _varchar_:octicons-beaker-24: "  
     ** :octicons-star-16: New in 0.14**     
     Return the value for **key** from **object**, non `NULL` values are cast to `VARCHAR`. 
     Related: `->` operator
