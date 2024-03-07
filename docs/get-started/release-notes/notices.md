@@ -32,7 +32,7 @@ This list does not include transitive dependencies nor is guaranteed to be compl
 
 Only integrated components have copyright information listed, and best efforts have been made to ensure this information is accurate. However, if the copyright information is crucial for your use-case, we recommend verifying it independently. Should you find any inaccuracies, please [raise them as issues](https://github.com/mabel-dev/opteryx/issues/new?assignees=joocer&labels=Bug+%F0%9F%AA%B2&template=bug_report.md&title=%F0%9F%AA%B2) for prompt remediation. 
 
-Integrated components may differ from their original versions. While we generally do not note cosmetic changes, any alterations or additions to functionality are documented in the code comments. For derived components, we do not provide individual change notes, as these parts of the codebase have usually undergone substantial modifications, making such annotations less meaningful.
+Integrated components may differ from their original versions. While we generally do not note cosmetic changes (e.g. PEP8 formatting), any alterations or additions to functionality are documented in the code comments. For derived components, we do not provide individual change notes, as these parts of the codebase have usually undergone substantial modifications, making such annotations less meaningful.
 
 !!! Note   
     License information was last checked on 2022-06-03, or when specific entries were added to this document, if later.
