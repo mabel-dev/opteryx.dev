@@ -35,7 +35,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1474](https://github.com/mabel-dev/opteryx/issues/1474)] Unhelpful error message when `SELECT *` is mixed with column references [@joocer](https://github.com/joocer)
 - [[#1487](https://github.com/mabel-dev/opteryx/issues/1487)] Filters are not applied to scans on specific conditions involving `JOIN`s [@joocer](https://github.com/joocer)
 - [[#1480](https://github.com/mabel-dev/opteryx/issues/1480)] `INTERVAL` cannot be compared to durations [@joocer](https://github.com/joocer)
-
+- [[#1485](https://github.com/mabel-dev/opteryx/issues/1485)] Improved handling of `COUNT(*)` when pushing to parquet and SQL [@joocer](https://github.com/joocer)
 
 ## [0.13.3] - 2024-02-13
 
