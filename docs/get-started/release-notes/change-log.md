@@ -44,7 +44,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#1427](https://github.com/mabel-dev/opteryx/issues/1427)] Boolean simplification optimization strategy. [@joocer](https://github.com/joocer)
 
-
 ### Fixed
 
 - [[#1413](https://github.com/mabel-dev/opteryx/issues/1413)] Regression test failures on Windows. [@joocer](https://github.com/joocer)
@@ -77,7 +76,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1374](https://github.com/mabel-dev/opteryx/issues/1374)] GCS access improvements (up to 2.5x faster IO). [@joocer](https://github.com/joocer)
 - [[#1393](https://github.com/mabel-dev/opteryx/issues/1393)] Performance Tuning blob reading. [@joocer](https://github.com/joocer)
 - [[#1411](https://github.com/mabel-dev/opteryx/pull/1411)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.43.1 [dependabot](https://github.com/apps/dependabot) 
-
 
 ## [0.12.2] - 2024-01-10
 
