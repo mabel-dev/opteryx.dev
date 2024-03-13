@@ -148,10 +148,10 @@ The `EXPLAIN` clause outputs a summary of the execution plan for the query in th
 Execute a preprated statement.
 
 ~~~sql
-EXECUTE statement_name[(<parameter[, ...]>)]
+EXECUTE statement_name[(<parameter=value[, ...]>)]
 ~~~
 
-The `EXECUTE` clause executes a prepared statement, the parameters supplied in the invocation clause are used to populate placeholders in the prepared statement.
+The `EXECUTE` clause executes a prepared statement, the parameters supplied in the invocation clause are used to populate placeholders in the prepared statement. The supplied parameters must be named, for example `EXECUTE PLANETS_BY_ID (id=1)`.
 
 ## SET
 
