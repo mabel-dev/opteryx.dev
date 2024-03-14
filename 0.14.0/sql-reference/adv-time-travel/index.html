@@ -2311,6 +2311,7 @@
 <li><code>FOR DATES IN LAST_MONTH</code></li>
 </ul>
 <h2 id="placeholders">Placeholders</h2>
+<p>Our system supports a variety of placeholders for date and time conditions in queries. These placeholders allow you to dynamically reference specific time periods without specifying exact dates. Below is a table of available placeholders, their applicability, and descriptions:</p>
 <table>
 <thead>
 <tr>
@@ -2323,22 +2324,27 @@
 <tr>
 <td><code>TODAY</code></td>
 <td>FOR, BETWEEN</td>
-<td>This calendar day</td>
+<td>Refers to the current calendar day.</td>
 </tr>
 <tr>
 <td><code>YESTERDAY</code></td>
 <td>FOR, BETWEEN</td>
-<td>The previous calendar day</td>
+<td>Refers to the day immediately before the current calendar day.</td>
+</tr>
+<tr>
+<td>DAY OF WEEK</td>
+<td>FOR, BETWEEN</td>
+<td>Represents the most recent past date of the specified day of the week (e.g., <code>MONDAY</code> refers to the most recent Monday).</td>
 </tr>
 <tr>
 <td><code>THIS_MONTH</code></td>
 <td>IN</td>
-<td>Since the first of the current month</td>
+<td>Covers the period starting from the first day of the current month up to the current date.</td>
 </tr>
 <tr>
 <td><code>LAST_MONTH</code></td>
 <td>IN</td>
-<td>The previous calendar month (also <code>PREVIOUS_MONTH</code>)</td>
+<td>Denotes the entire previous calendar month. PREVIOUS_MONTH can also be used as an alternative.</td>
 </tr>
 </tbody>
 </table>
