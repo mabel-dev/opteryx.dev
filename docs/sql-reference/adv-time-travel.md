@@ -58,12 +58,15 @@ Date range values in `IN` clauses must be recognized date range placeholders, fo
 
 ## Placeholders
 
+Our system supports a variety of placeholders for date and time conditions in queries. These placeholders allow you to dynamically reference specific time periods without specifying exact dates. Below is a table of available placeholders, their applicability, and descriptions:
+
 Placeholder  | Applicability   | Description
 ------------ | --------------- | ------------
-`TODAY`      | FOR, BETWEEN    | This calendar day
-`YESTERDAY`  | FOR, BETWEEN    | The previous calendar day
-`THIS_MONTH` | IN              | Since the first of the current month
-`LAST_MONTH` | IN              | The previous calendar month (also `PREVIOUS_MONTH`)
+`TODAY`      | FOR, BETWEEN    | Refers to the current calendar day.
+`YESTERDAY`  | FOR, BETWEEN    | Refers to the day immediately before the current calendar day.
+DAY OF WEEK  | FOR, BETWEEN    | Represents the most recent past date of the specified day of the week (e.g., `MONDAY` refers to the most recent Monday).
+`THIS_MONTH` | IN              | Covers the period starting from the first day of the current month up to the current date.
+`LAST_MONTH` | IN              | Denotes the entire previous calendar month. PREVIOUS_MONTH can also be used as an alternative.
 
 !!! caution  
     - `FOR` clauses cannot contain comments or reference column values or aliases  
