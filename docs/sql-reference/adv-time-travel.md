@@ -70,7 +70,6 @@ DAY OF WEEK  | FOR, BETWEEN    | Represents the most recent past date of the spe
 
 !!! caution  
     - `FOR` clauses cannot contain comments or reference column values or aliases  
-    - Dates can not include times and must be in the format 'YYYY-MM-DD'  
     - The default partition scheme does not support Temporal queries  
     - Temporal clauses must follow the relation name they relate to, and they only apply to that relation.
 

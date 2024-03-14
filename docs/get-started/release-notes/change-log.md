@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1499](https://github.com/mabel-dev/opteryx/issues/1499)] Error when `EXECUTE USING` syntax is attempted. [@joocer](https://github.com/joocer)
 - [[#1491](https://github.com/mabel-dev/opteryx/issues/1491)] New test dataset `$missions`. [@joocer](https://github.com/joocer)
 - [[#1300](https://github.com/mabel-dev/opteryx/issues/1300)] Support named Parameters. [@joocer](https://github.com/joocer)
+- [[#1516](https://github.com/mabel-dev/opteryx/issues/1516)] Day of Week placeholders for temporal queries. [@joocer](https://github.com/joocer)
 
 ### Changed
 
