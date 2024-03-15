@@ -14,9 +14,13 @@ New functions for this version are annotated with the :octicons-star-16: icon.
     Cast **any** to a `BOOLEAN`, raises an error if cast is not possible. Note `BOOLEAN` does not require parenthesis, however any aliases do.      
     Alias for `CAST`(**any** AS BOOLEAN)   
 
+!!! function "`BLOB` (**varchar**: _varchar_) → _blob_"  
+    :octicons-star-16: **New in 0.14**   
+    Cast **varchar** to **blob**, raises an error if cast is not possible.   
+
 !!! function "`CAST` (**any**: _any_ AS **type**) → _type_"  
     Cast **any** to **type**, raises an error if cast is not possible.   
-    Also implemented as individual cast functions.
+    Also implemented as individual cast functions (`BOOLEAN`, `INTEGER`, `FLOAT`, `VARCHAR`).
 
 !!! function "`INT` (**num**: _numeric_) → _numeric_"  
     Alias for `INTEGER`
