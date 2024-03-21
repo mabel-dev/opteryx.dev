@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1410](https://github.com/mabel-dev/opteryx/issues/1410)]  + [[#190](https://github.com/mabel-dev/opteryx/issues/190)] Rewrite `INNER JOIN` [@joocer](https://github.com/joocer)
 - [[#1481](https://github.com/mabel-dev/opteryx/issues/1481)] Improvements to `DATE` +/- `INTERVAL` performance. [@joocer](https://github.com/joocer)
 - [[#1486](https://github.com/mabel-dev/opteryx/issues/1486)] Implement bespoke `INTERVAL` operators [@joocer](https://github.com/joocer)
+- [[#1535](https://github.com/mabel-dev/opteryx/issues/1535)] Native implementation of `LEFT JOIN` [@joocer](https://github.com/joocer)
 
 ### Fixed
 
