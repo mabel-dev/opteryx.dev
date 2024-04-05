@@ -102,11 +102,13 @@ DuckDB               | SqlConnector             | SQL Store
 MySQL                | SqlConnector             | SQL Store
 Postgres             | SqlConnector             | SQL Store
 SQLite               | SqlConnector             | SQL Store
+Cassandra            | CqlConnector             | CQL Store
+Datastax Astra       | CqlConnector             | CQL Store
 
 Connectors are registered with the storage engine using the `register_store` method. Multiple prefixes can be added, using different connectors - multiple storage types can be combined into a single query.
 
 !!! note
-    Other data sources compatible with [SqlAlchemy](https://www.sqlalchemy.org/) are likely to be supported, however are not tested as part of regular automated testing of Opteryx.
+    Other data sources with [SqlAlchemy](https://www.sqlalchemy.org/) connectors or which support the Cassandra Driver are likely to be supported, however, are not part of the automated test suite.
 
 ~~~python
 opteryx.storage.register_store("tests", DiskConnector)
