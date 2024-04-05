@@ -2401,12 +2401,22 @@
 <td>SqlConnector</td>
 <td>SQL Store</td>
 </tr>
+<tr>
+<td>Cassandra</td>
+<td>CqlConnector</td>
+<td>CQL Store</td>
+</tr>
+<tr>
+<td>Datastax Astra</td>
+<td>CqlConnector</td>
+<td>CQL Store</td>
+</tr>
 </tbody>
 </table>
 <p>Connectors are registered with the storage engine using the <code>register_store</code> method. Multiple prefixes can be added, using different connectors - multiple storage types can be combined into a single query.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Other data sources compatible with <a href="https://www.sqlalchemy.org/">SqlAlchemy</a> are likely to be supported, however are not tested as part of regular automated testing of Opteryx.</p>
+<p>Other data sources with <a href="https://www.sqlalchemy.org/">SqlAlchemy</a> connectors or which support the Cassandra Driver are likely to be supported, however, are not part of the automated test suite.</p>
 </div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">opteryx</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">register_store</span><span class="p">(</span><span class="s2">&quot;tests&quot;</span><span class="p">,</span> <span class="n">DiskConnector</span><span class="p">)</span>
 </code></pre></div>
