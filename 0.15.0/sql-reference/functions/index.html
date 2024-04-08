@@ -2568,18 +2568,15 @@ Alias for <code>EXTRACT</code>(year FROM <strong>ts</strong>)</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><em>integer</em> <code>|</code> <em>integer</em> → <em>integer</em></p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> <strong>New in 0.12</strong> <br />
-Bitwise OR</p>
+<p>Bitwise OR</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><em>integer</em> <code>&amp;</code> <em>integer</em> → <em>integer</em></p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> <strong>New in 0.12</strong>  <br />
-Bitwise AND</p>
+<p>Bitwise AND</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><em>integer</em> <code>^</code> <em>integer</em> → <em>integer</em></p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> <strong>New in 0.12</strong> <br />
-Bitwise XOR</p>
+<p>Bitwise XOR</p>
 </div>
 <h2 id="list-functions">List Functions</h2>
 <p>For more details, see <a href="../adv-working-with-lists/">Working with Lists</a>.</p>
@@ -2894,6 +2891,11 @@ Related: <code>BASE85_DECODE</code></p>
 <p class="admonition-title"><code>COALESCE</code> (<strong>arg1</strong>, <strong>arg2</strong>, ...) → <em>value</em></p>
 <p>Return the first item from args which is not <code>null</code>.  <br />
 Related: <code>IFNULL</code></p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>COSINE_SIMILARITY</code>  (<strong>str</strong>: <em>varchar</em>, <strong>value</strong>: <em>varchar</em>) → <em>double</em></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> <strong>New in 0.15</strong> <br />
+Perform an ad hoc cosine similarity comparison between <strong>str</strong> and <strong>value</strong></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>) → <em>list</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span></p>
