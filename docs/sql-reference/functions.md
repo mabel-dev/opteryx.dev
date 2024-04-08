@@ -209,15 +209,12 @@ These are functions that are called similar to comparison operators:
     IP address containment
 
 !!! function "_integer_ `|` _integer_ → _integer_"   
-    :octicons-star-16: **New in 0.12**   
     Bitwise OR
 
 !!! function "_integer_ `&` _integer_ → _integer_"  
-    :octicons-star-16: **New in 0.12**    
     Bitwise AND
 
 !!! function "_integer_ `^` _integer_ → _integer_"   
-    :octicons-star-16: **New in 0.12**   
     Bitwise XOR
 
 ## List Functions
@@ -474,6 +471,10 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
 !!! function "`COALESCE` (**arg1**, **arg2**, ...) → _value_"  
     Return the first item from args which is not `null`.    
     Related: `IFNULL`
+
+!!! function "`COSINE_SIMILARITY`  (**str**: _varchar_, **value**: _varchar_) → _double_"   
+    :octicons-star-16: **New in 0.15**   
+    Perform an ad hoc cosine similarity comparison between **str** and **value**
 
 !!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_) → _list_<_numeric_>:octicons-dot-16:"   
     Return a numeric list between **start** and **stop**, with a step of 1.
