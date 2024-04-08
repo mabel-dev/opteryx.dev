@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.15.0] - UNRELEASED
+
+### Added
+
+- [[#1571](https://github.com/mabel-dev/opteryx/issues/1571)] Initial `COSINE_SIMILARITY` support (ad hoc). [@joocer](https://github.com/joocer)
+
 ## [0.14.0] - 2024-04-07
 
 ### Added
