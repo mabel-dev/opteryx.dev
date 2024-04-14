@@ -368,6 +368,11 @@ Functions for examining and manipulating string values.
     Remove leading whitespace from **str**.   
     Related: `RTRIM`, `TRIM`
 
+!!! function "`MATCH` (**column**: _varchar_) `AGAINST` (**query**: _varchar_) → _boolean_"   
+    :octicons-star-16: **New in 0.15** :octicons-beaker-24:    
+    Perform a fulltext search of **column** for the values in query.  
+    Note: Values in `$stop_words` are ignored.
+
 !!! function "`POSITION` (**substring**: _varchar_ IN **string**: _varchar_) → _numeric_"    
     Returns the starting position of the first instance of **substring** in **string**. Positions start with 1. If not found, 0 is returned.   
 
@@ -473,8 +478,9 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     Related: `IFNULL`
 
 !!! function "`COSINE_SIMILARITY`  (**str**: _varchar_, **value**: _varchar_) → _double_"   
-    :octicons-star-16: **New in 0.15**   
-    Perform an ad hoc cosine similarity comparison between **str** and **value**
+    :octicons-star-16: **New in 0.15** :octicons-beaker-24:     
+    Perform an ad hoc cosine similarity comparison between **str** and **value**.   
+    Note: Values in `$stop_words` are ignored.
 
 !!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_) → _list_<_numeric_>:octicons-dot-16:"   
     Return a numeric list between **start** and **stop**, with a step of 1.
