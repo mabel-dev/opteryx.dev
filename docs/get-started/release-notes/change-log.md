@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - [[#723](https://github.com/mabel-dev/opteryx/issues/723)] Initial `MATCH AGAINST` support. [@joocer](https://github.com/joocer)
+- [[#346](https://github.com/mabel-dev/opteryx/issues/346)] Permissions Model. [@joocer](https://github.com/joocer)  
+- [[#1582](https://github.com/mabel-dev/opteryx/issues/1582)] Lemmatize full text searches [@joocer](https://github.com/joocer)
 
 ## [0.14.1] - 2024-04-13
 

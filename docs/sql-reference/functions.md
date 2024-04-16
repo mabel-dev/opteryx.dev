@@ -221,40 +221,50 @@ These are functions that are called similar to comparison operators:
 
 For more details, see [Working with Lists](../adv-working-with-lists/).
 
-!!! function "**array**: _list_`[`**index**: _numeric_`]` → _value_:octicons-dot-16:"  
+!!! function "**array**: _array_`[`**index**: _numeric_`]` → _value_:octicons-dot-16:"  
     Return the **index**th element from **array**. 
 
-!!! function "`GET` (**array**: _list_, **index**: _numeric_) → _value_:octicons-dot-16:"   
+!!! function "`ARRAY_CONTAINS` (**array**: _array_, **value**) → _boolean_"  
+    Return `true` if **array** contains **value**.  
+    See also `SEARCH`(**array**, **value**)  
+    See also `ANY`
+
+!!! function "`ARRAY_CONTAINS_ANY` (**array**: _array_, **values**: _array_) → _boolean_"    
+    Return `true` if **array** contains any elements in **values**.
+
+!!! function "`ARRAY_CONTAINS_ALL` (**array**: _array_, **values**: _array_) → _boolean_"   
+    Return `true` if **array** contains all of elements in **values**.
+
+!!! function "`GET` (**array**: _array_, **index**: _numeric_) → _value_:octicons-dot-16:"   
     Alias of **array**`[`**index**`]`  
 
-!!! function "`GREATEST` (**array**: _list_) → _value_"   
+!!! function "`GREATEST` (**array**: _array_) → _value_"   
     Return the greatest value in **array**.  
     _Related:_ `LEAST`
 
-!!! function "`LEAST` (**array**: _list_) → _value_"   
+!!! function "`LEAST` (**array**: _array_) → _value_"   
     Return the smallest value in **array**.  
     _Related:_ `GREATEST`
 
-!!! function "`LEN` (**array**: _list_) → _numeric_:octicons-dot-16:"   
+!!! function "`LEN` (**array**: _array_) → _numeric_:octicons-dot-16:"   
     Alias of `LENGTH`(**array**)
 
-!!! function "`LENGTH` (**array**: _list_) → _numeric_:octicons-dot-16:"   
+!!! function "`LENGTH` (**array**: _array_) → _numeric_:octicons-dot-16:"   
     Returns the number of elements in **array**.
 
-!!! function "`LIST_CONTAINS` (**array**: _list_, **value**) → _boolean_"  
-    Return `true` if **array** contains **value**.  
-    See also `SEARCH`(**array**, **value**)  
+!!! function "`LIST_CONTAINS` (**array**: _array_, **value**) → _boolean_"  
+    Alias of `ARRAY_CONTAINS`
 
-!!! function "`LIST_CONTAINS_ANY` (**array**: _list_, **values**: _list_) → _boolean_"    
-    Return `true` if **array** contains any elements in **values**.
+!!! function "`LIST_CONTAINS_ANY` (**array**: _array_, **values**: _array_) → _boolean_"    
+    Alias of `ARRAY_CONTAINS_ANY`
 
-!!! function "`LIST_CONTAINS_ALL` (**array**: _list_, **values**: _list_) → _boolean_"   
-    Return `true` if **array** contains all of elements in **values**.
+!!! function "`LIST_CONTAINS_ALL` (**array**: _array_, **values**: _array_) → _boolean_"   
+    Alias of `ARRAY_CONTAINS_ALL`
 
-!!! function "`SEARCH` (**array**: _list_, **value**) → _boolean_:octicons-dot-16:"  
+!!! function "`SEARCH` (**array**: _array_, **value**) → _boolean_:octicons-dot-16:"  
     Return `true` if **array** contains **value**. 
 
-!!! function "`SORT` (**array**: _list_) → _list_"  
+!!! function "`SORT` (**array**: _array_) → _array_"  
     Return **array** in ascending order. 
 
 ## Numeric Functions
@@ -482,13 +492,13 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     Perform an ad hoc cosine similarity comparison between **str** and **value**.   
     _Note:_ Values in `$stop_words` are ignored.
 
-!!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_) → _list_<_numeric_>:octicons-dot-16:"   
+!!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_) → _array_<_numeric_>:octicons-dot-16:"   
     Return a numeric list between **start** and **stop**, with a step of 1.
 
-!!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_, **step**: _numeric_) → _list_<_numeric_>:octicons-dot-16:"  
+!!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_, **step**: _numeric_) → _array_<_numeric_>:octicons-dot-16:"  
     Return a numeric list between **start** and **stop**, with an increment of **step**.
 
-!!! function "`GENERATE_SERIES` (**start**: _timestamp_, **stop**: _timestamp_, _interval_) → _list_<_timestamp_>:octicons-dot-16:"    
+!!! function "`GENERATE_SERIES` (**start**: _timestamp_, **stop**: _timestamp_, _interval_) → _array_<_timestamp_>:octicons-dot-16:"    
     Return a timestamp list between **start** and **stop**, with a interval of **step**.     
 
 !!! function "`HASH` (**value**: _any_) → _varchar_"  
@@ -547,6 +557,6 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     Calculate the SHA512 hash of **str**.  
     _Related:_ `SHA1`, `SHA224`, `SHA256`, `SHA384`
 
-!!! function "`UNNEST` (**array**: _list_) → _relation_"  
+!!! function "`UNNEST` (**array**: _array_) → _relation_"  
     Create a virtual relation with a row for each element in **array**.
 
