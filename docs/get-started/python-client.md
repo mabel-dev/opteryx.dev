@@ -91,9 +91,10 @@ print(f"Query planning time: {stats['time_planning']} seconds")
     Not all statistics are available for every query. Some metrics depend on the specific operations performed and the data involved.
 
 **Usage Tips**
-- Debugging: Use .messages to identify potential minor issues in query execution.  
-- Optimization: Review .stats to pinpoint performance bottlenecks like excessive data reads or long planning times.  
-- Monitoring: Regularly check these metrics to understand the health and performance of your database interactions.  
+
+- Debugging: Use .messages to identify potential minor issues in query execution.   
+- Optimization: Review .stats to pinpoint performance bottlenecks like excessive data reads or long planning times.   
+- Monitoring: Regularly check these metrics to understand the health and performance of your database interactions.   
 
 ## Simplified Short-Form API
 
