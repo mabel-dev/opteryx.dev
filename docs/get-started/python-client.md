@@ -2,7 +2,7 @@
 
 Opteryx provides Python bindings compliant with a subset of the [PEP 249](https://peps.python.org/pep-0249/) DBAPI specification. This allows for seamless integration into Python applications, scripts, and Jupyter notebooks, facilitating easy manipulation and querying of data.
 
-### Basic Usage
+## Basic Usage
 
 This section demonstrates how to establish a connection to Opteryx, execute a query, and fetch results.
 
@@ -21,7 +21,7 @@ cursor.execute("SELECT * FROM $planets;")
 rows = cursor.fetchall()
 ~~~
 
-### Using Parameterized Queries
+## Using Parameterized Queries
 
 Parameterized queries are essential for securing SQL statements against injection attacks. By using placeholders, you can safely incorporate user inputs into your SQL queries, preventing malicious code from being executed.
 
@@ -42,7 +42,7 @@ cursor.execute("SELECT * FROM $planets WHERE id = :user_provided_id;",
 rows = cursor.fetchall()
 ~~~
 
-### Handling Query Results
+## Handling Query Results
 
 Opteryx returns query results as [Orso DataFrames](https://github.com/mabel-dev/orso) accessible through the cursor. You can interact with the results in multiple ways:
 
@@ -53,7 +53,7 @@ Opteryx returns query results as [Orso DataFrames](https://github.com/mabel-dev/
     - `pandas()` for a [pandas DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
     - `polars()` for a [Polars DataFrame](https://pola-rs.github.io/polars/py-polars/html/reference/dataframe/index.html)
 
-### Query Statistics and Messages
+## Query Statistics and Messages
 
 Opteryx provides detailed statistical data and messages about the execution of queries through the cursor object. This information can be invaluable for debugging and optimizing performance.
 
