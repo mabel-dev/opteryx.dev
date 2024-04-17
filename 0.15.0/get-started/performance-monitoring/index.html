@@ -12,13 +12,9 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://opteryx.dev/0.15.0/get-started/python-client/">
+        <link rel="canonical" href="https://opteryx.dev/0.15.0/get-started/performance-monitoring/">
       
       
-        <link rel="prev" href="../command-line-guide/">
-      
-      
-        <link rel="next" href="../guides/pandas-and-opteryx/">
       
       
       <link rel="icon" href="../../icarus-opteryx.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>Python API - Opteryx</title>
+        <title>Performance monitoring - Opteryx</title>
       
     
     
@@ -71,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#python-client" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python API
+              Performance monitoring
             
           </span>
         </div>
@@ -168,12 +159,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../overview/" class="md-tabs__link">
           
   
@@ -316,28 +305,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -348,7 +332,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             GET STARTED
@@ -422,30 +406,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Python API
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../python-client/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -454,35 +418,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#simplified-short-form-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simplified Short-Form API
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2136,25 +2071,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#simplified-short-form-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simplified Short-Form API
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2172,101 +2088,130 @@
   
 
 
-<h1 id="python-client">Python Client</h1>
-<p>Opteryx provides Python bindings compliant with a subset of the <a href="https://peps.python.org/pep-0249/">PEP 249</a> DBAPI specification. This allows for seamless integration into Python applications, scripts, and Jupyter notebooks, facilitating easy manipulation and querying of data.</p>
-<h3 id="basic-usage">Basic Usage</h3>
-<p>This section demonstrates how to establish a connection to Opteryx, execute a query, and fetch results.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">opteryx</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Establish a connection</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># Create a cursor object</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># Execute a SQL query</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $planets;&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># Fetch all rows</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</code></pre></div>
-<h3 id="using-parameterized-queries">Using Parameterized Queries</h3>
-<p>Parameterized queries are essential for securing SQL statements against injection attacks. By using placeholders, you can safely incorporate user inputs into your SQL queries, preventing malicious code from being executed.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">opteryx</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Establish a connection</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Create a cursor object</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1"># Execute a SQL query</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $planets WHERE id = :user_provided_id;&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="p">{</span> <span class="s2">&quot;user_provided_id&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="p">)</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># Fetch all rows</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</code></pre></div>
-<h3 id="handling-query-results">Handling Query Results</h3>
-<p>Opteryx returns query results as <a href="https://github.com/mabel-dev/orso">Orso DataFrames</a> accessible through the cursor. You can interact with the results in multiple ways:</p>
-<ul>
-<li><strong>Iteration</strong>: Loop over the cursor directly.</li>
-<li><strong>Fetching Methods</strong>: Utilize <code>fetchone()</code>, <code>fetchmany(size)</code>, and <code>fetchall()</code> for specific result sets.</li>
-<li><strong>Conversion Routines</strong>:<ul>
-<li><code>arrow()</code> for an <a href="https://arrow.apache.org/docs/python/generated/pyarrow.Table.html#pyarrow.Table">Arrow Table</a></li>
-<li><code>pandas()</code> for a <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">pandas DataFrame</a></li>
-<li><code>polars()</code> for a <a href="https://pola-rs.github.io/polars/py-polars/html/reference/dataframe/index.html">Polars DataFrame</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="query-statistics-and-messages">Query Statistics and Messages</h3>
-<p>Opteryx provides detailed statistical data and messages about the execution of queries through the cursor object. This information can be invaluable for debugging and optimizing performance.</p>
-<p><strong>Messages</strong></p>
-<p>The <code>.messages</code> attribute of the cursor object provides a list of warnings and advisories generated during query processing. These messages can help you understand any issues or optimizations made by the engine:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Assuming cursor is already defined and used for a query</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">messages</span><span class="p">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Message from query execution:&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Statistics</strong></p>
-<p>The <code>.stats</code> attribute offers detailed execution metrics. These statistics are useful for performance tuning and understanding the internal workings of the query engine.</p>
-<p>Here’s a brief description of some key statistics:</p>
-<ul>
-<li>blobs_read: The number of data blobs the engine read from storage.</li>
-<li>bytes_processed: Total data processed during the query execution.</li>
-<li>rows_read: Rows read after applying filters and projections.</li>
-<li>time_planning: Time spent planning the query execution.</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Not all statistics are available for every query. Some metrics depend on the specific operations performed and the data involved.</p>
-</div>
-<p>Here’s how you can access these statistics:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Assuming cursor is already defined and used for a query</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">stats</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">stats</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Data processed: </span><span class="si">{</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;bytes_processed&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> bytes&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query planning time: </span><span class="si">{</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;time_planning&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Usage Tips</strong>
-- Debugging: Use .messages to identify potential minor issues in query execution.
-- Optimization: Review .stats to pinpoint performance bottlenecks like excessive data reads or long planning times.
-- Monitoring: Regularly check these metrics to understand the health and performance of your database interactions.</p>
-<h2 id="simplified-short-form-api">Simplified Short-Form API</h2>
-<p>For convenience, Opteryx provides a streamlined API that abstracts connection and cursor creation, suitable for quick queries.</p>
-<h3 id="basic-short-form-usage">Basic Short-Form Usage</h3>
-<p>Execute a SQL query and immediately fetch all results:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">opteryx</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># Execute a SQL query and get the results</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">cursor</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $planets;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</code></pre></div>
-<h3 id="parameterized-short-form-usage">Parameterized Short-Form Usage</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">opteryx</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># Execute a SQL query and get a cursor</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">cursor</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="s2">&quot;SELECT * FROM $planets WHERE id = :user_provided_id;&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="p">{</span> <span class="s2">&quot;user_provided_id&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</code></pre></div>
+  <h1>Performance monitoring</h1>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>blobs_read</td>
+<td>The number of blobs read</td>
+</tr>
+<tr>
+<td>bytes_processed</td>
+<td>Sum of the datasets processed by the engine</td>
+</tr>
+<tr>
+<td>bytes_read</td>
+<td>Sum of the size of all blobs read</td>
+</tr>
+<tr>
+<td>cache_evictions</td>
+<td>Count of blobs removed from cache</td>
+</tr>
+<tr>
+<td>cache_hits</td>
+<td>Count of blobs read from cache</td>
+</tr>
+<tr>
+<td>cache_misses</td>
+<td>Count of blobs read from source</td>
+</tr>
+<tr>
+<td>cache_oversize</td>
+<td>Count of blobs not cached due to size</td>
+</tr>
+<tr>
+<td>columns_read</td>
+<td>Count of columns read following projection pushdown</td>
+</tr>
+<tr>
+<td>morsel_merges</td>
+<td>Count of internal defragmentations</td>
+</tr>
+<tr>
+<td>morsel_splits</td>
+<td>Count of internal forced fragmentation</td>
+</tr>
+<tr>
+<td>rows_read</td>
+<td>Count of rows read following selection pushdown</td>
+</tr>
+<tr>
+<td>rows_seen</td>
+<td>Count of all rows seen by the reader</td>
+</tr>
+<tr>
+<td>unreadable_data_blobs</td>
+<td>Count of blobs which failed decoding</td>
+</tr>
+<tr>
+<td>time_aggregating</td>
+<td>Seconds taken aggregating</td>
+</tr>
+<tr>
+<td>time_cross_join_unnest</td>
+<td>Seconds taken performing CROSS JOIN UNNEST</td>
+</tr>
+<tr>
+<td>time_defragmenting</td>
+<td>Seconds taken performing internal data defragmentation</td>
+</tr>
+<tr>
+<td>time_distincting</td>
+<td>Seconds taken performing DISTINCT</td>
+</tr>
+<tr>
+<td>time_evaluate_dataset</td>
+<td>Seconds taken creating function defined datasets</td>
+</tr>
+<tr>
+<td>time_evaluating</td>
+<td>Seconds taken in executing functions and expressions</td>
+</tr>
+<tr>
+<td>time_exiting</td>
+<td>Seconds taken preparing the final record set</td>
+</tr>
+<tr>
+<td>time_grouping</td>
+<td>Seconds taken performing GROUP BY</td>
+</tr>
+<tr>
+<td>time_inner_join</td>
+<td>Seconds taken performing INNER JOIN</td>
+</tr>
+<tr>
+<td>time_limiting</td>
+<td>Seconds taken performing LIMIT</td>
+</tr>
+<tr>
+<td>time_outer_join</td>
+<td>Seconds taken performing OUTER JOINs</td>
+</tr>
+<tr>
+<td>time_planning</td>
+<td>Seconds taken in query planning</td>
+</tr>
+<tr>
+<td>time_ordering</td>
+<td>Seconds taken to ordering results</td>
+</tr>
+<tr>
+<td>time_reading_blobs</td>
+<td>Seconds taken reading blobs</td>
+</tr>
+<tr>
+<td>time_waiting_sql</td>
+<td>Seconds waiting for remote SQL server</td>
+</tr>
+</tbody>
+</table>
 
 
 
