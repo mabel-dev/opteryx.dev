@@ -78,9 +78,6 @@ Here’s a brief description of some key statistics:
 - rows_read: Rows read after applying filters and projections.
 - time_planning: Time spent planning the query execution.
 
-!!! note
-    Not all statistics are available for every query. Some metrics depend on the specific operations performed and the data involved.
-
 Here’s how you can access these statistics:
 
 ~~~python
@@ -90,10 +87,13 @@ print(f"Data processed: {stats['bytes_processed']} bytes")
 print(f"Query planning time: {stats['time_planning']} seconds")
 ~~~
 
+!!! note
+    Not all statistics are available for every query. Some metrics depend on the specific operations performed and the data involved.
+
 **Usage Tips**
-- Debugging: Use .messages to identify potential minor issues in query execution.
-- Optimization: Review .stats to pinpoint performance bottlenecks like excessive data reads or long planning times.
-- Monitoring: Regularly check these metrics to understand the health and performance of your database interactions.
+- Debugging: Use .messages to identify potential minor issues in query execution.  
+- Optimization: Review .stats to pinpoint performance bottlenecks like excessive data reads or long planning times.  
+- Monitoring: Regularly check these metrics to understand the health and performance of your database interactions.  
 
 ## Simplified Short-Form API
 
