@@ -2235,20 +2235,20 @@
 <li>rows_read: Rows read after applying filters and projections.</li>
 <li>time_planning: Time spent planning the query execution.</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Not all statistics are available for every query. Some metrics depend on the specific operations performed and the data involved.</p>
-</div>
 <p>Here’s how you can access these statistics:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Assuming cursor is already defined and used for a query</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">stats</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">stats</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Data processed: </span><span class="si">{</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;bytes_processed&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> bytes&quot;</span><span class="p">)</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query planning time: </span><span class="si">{</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;time_planning&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not all statistics are available for every query. Some metrics depend on the specific operations performed and the data involved.</p>
+</div>
 <p><strong>Usage Tips</strong>
-- Debugging: Use .messages to identify potential minor issues in query execution.
-- Optimization: Review .stats to pinpoint performance bottlenecks like excessive data reads or long planning times.
-- Monitoring: Regularly check these metrics to understand the health and performance of your database interactions.</p>
+- Debugging: Use .messages to identify potential minor issues in query execution.<br />
+- Optimization: Review .stats to pinpoint performance bottlenecks like excessive data reads or long planning times.<br />
+- Monitoring: Regularly check these metrics to understand the health and performance of your database interactions.  </p>
 <h2 id="simplified-short-form-api">Simplified Short-Form API</h2>
 <p>For convenience, Opteryx provides a streamlined API that abstracts connection and cursor creation, suitable for quick queries.</p>
 <h3 id="basic-short-form-usage">Basic Short-Form Usage</h3>
