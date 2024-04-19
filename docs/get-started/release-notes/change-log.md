@@ -13,6 +13,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1582](https://github.com/mabel-dev/opteryx/issues/1582)] Lemmatize full text searches [@joocer](https://github.com/joocer)
 - [[#1584](https://github.com/mabel-dev/opteryx/issues/1584)] Additional Statistics [@joocer](https://github.com/joocer)
 
+### Fixed
+
+- [[#1587](https://github.com/mabel-dev/opteryx/issues/1587)] Filtering on `CROSS JOIN UNNEST` columns pushed too far. [@joocer](https://github.com/joocer)
+
 ## [0.14.1] - 2024-04-13
 
 ### Added
@@ -21,7 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- [[#1573](https://github.com/mabel-dev/opteryx/issues/1573)] Parquet COUNT(*) returns unfiltered row count. [@joocer](https://github.com/joocer)
+- [[#1573](https://github.com/mabel-dev/opteryx/issues/1573)] Parquet `COUNT(*)` returns unfiltered row count. [@joocer](https://github.com/joocer)
 
 ## [0.14.0] - 2024-04-07
 
