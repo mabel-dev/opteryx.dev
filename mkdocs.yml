@@ -65,6 +65,7 @@ nav:
     - CLI API: get-started/command-line-guide.md
     - Python API: get-started/python-client.md
     - Guides:
+      - Using Opteryx with Jupyter Notebooks: get-started/guides/using-opteryx-with-jupyter.md
       - Pandas Integration: get-started/guides/pandas-and-opteryx.md
       - Polars Integration: get-started/guides/polars-and-opteryx.md
       - Connect to BigQuery: get-started/guides/bigquery-and-opteryx.md
