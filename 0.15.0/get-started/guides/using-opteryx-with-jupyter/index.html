@@ -12,25 +12,25 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://opteryx.dev/0.15.0/sql-reference/adv-temp-tables/">
+        <link rel="canonical" href="https://opteryx.dev/0.15.0/get-started/guides/using-opteryx-with-jupyter/">
       
       
-        <link rel="prev" href="../adv-null-semantics/">
+        <link rel="prev" href="../../python-client/">
       
       
-        <link rel="next" href="../adv-sample-data/">
+        <link rel="next" href="../pandas-and-opteryx/">
       
       
-      <link rel="icon" href="../../icarus-opteryx.png">
+      <link rel="icon" href="../../../icarus-opteryx.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
     
     
       
-        <title>Temporary Tables - Opteryx</title>
+        <title>Using Opteryx with Jupyter Notebooks - Opteryx</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
       
       
 
@@ -49,11 +49,11 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../termynal.css">
+      <link rel="stylesheet" href="../../../termynal.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#relation-constructors" class="md-skip">
+        <a href="#using-opteryx-with-jupyter-notebooks" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +90,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../../.." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="../../icarus-opteryx.png" alt="logo">
+  <img src="../../../icarus-opteryx.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Temporary Tables
+              Using Opteryx with Jupyter Notebooks
             
           </span>
         </div>
@@ -153,7 +153,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -168,11 +168,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../get-started/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../overview/" class="md-tabs__link">
           
   
   GET STARTED
@@ -186,13 +188,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../introduction/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../sql-reference/introduction/" class="md-tabs__link">
           
   
   SQL REFERENCE
@@ -210,7 +210,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../contributing/contributing/" class="md-tabs__link">
+        <a href="../../../contributing/contributing/" class="md-tabs__link">
           
   
   CONTRIBUTING
@@ -234,7 +234,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../blog/202209-building-our-first-optimizer/" class="md-tabs__link">
+        <a href="../../../blog/202209-building-our-first-optimizer/" class="md-tabs__link">
           
   
   BLOG
@@ -270,9 +270,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../../.." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="../../icarus-opteryx.png" alt="logo">
+  <img src="../../../icarus-opteryx.png" alt="logo">
 
     </a>
     Opteryx
@@ -299,7 +299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -316,23 +316,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -343,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             GET STARTED
@@ -357,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/overview/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -378,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/get-started/" class="md-nav__link">
+      <a href="../../get-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -399,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/command-line-guide/" class="md-nav__link">
+      <a href="../../command-line-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -420,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/python-client/" class="md-nav__link">
+      <a href="../../python-client/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,6 +443,8 @@
                 
   
   
+    
+  
   
   
     
@@ -447,11 +454,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -465,7 +472,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Guides
@@ -476,10 +483,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../get-started/guides/using-opteryx-with-jupyter/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Using Opteryx with Jupyter Notebooks
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -488,6 +515,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -500,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/guides/pandas-and-opteryx/" class="md-nav__link">
+      <a href="../pandas-and-opteryx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -521,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/guides/polars-and-opteryx/" class="md-nav__link">
+      <a href="../polars-and-opteryx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -542,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/guides/bigquery-and-opteryx/" class="md-nav__link">
+      <a href="../bigquery-and-opteryx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -563,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/guides/mysql-and-opteryx/" class="md-nav__link">
+      <a href="../mysql-and-opteryx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/guides/postgres-and-opteryx/" class="md-nav__link">
+      <a href="../postgres-and-opteryx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -605,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/guides/convert-csv-to-parquet/" class="md-nav__link">
+      <a href="../convert-csv-to-parquet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/guides/execute-sql-on-csv/" class="md-nav__link">
+      <a href="../execute-sql-on-csv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/deployment-guide/" class="md-nav__link">
+      <a href="../../deployment-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -676,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/security/" class="md-nav__link">
+      <a href="../../security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -735,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/ecosystem/orso/orso/" class="md-nav__link">
+      <a href="../../ecosystem/orso/orso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -756,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/ecosystem/mabel/" class="md-nav__link">
+      <a href="../../ecosystem/mabel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/ecosystem/mesos/" class="md-nav__link">
+      <a href="../../ecosystem/mesos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -844,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/external-standards/pep249/" class="md-nav__link">
+      <a href="../../external-standards/pep249/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -865,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/external-standards/sql92/" class="md-nav__link">
+      <a href="../../external-standards/sql92/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -886,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/external-standards/tpch/" class="md-nav__link">
+      <a href="../../external-standards/tpch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -953,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/release-notes/change-log/" class="md-nav__link">
+      <a href="../../release-notes/change-log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -974,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get-started/release-notes/notices/" class="md-nav__link">
+      <a href="../../release-notes/notices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1007,28 +1063,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1039,7 +1090,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             SQL REFERENCE
@@ -1053,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
+      <a href="../../../sql-reference/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1074,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../statements/" class="md-nav__link">
+      <a href="../../../sql-reference/statements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1095,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-types/" class="md-nav__link">
+      <a href="../../../sql-reference/data-types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1116,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../expressions/" class="md-nav__link">
+      <a href="../../../sql-reference/expressions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1137,7 +1188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/" class="md-nav__link">
+      <a href="../../../sql-reference/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1158,7 +1209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aggregates/" class="md-nav__link">
+      <a href="../../../sql-reference/aggregates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1179,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../joins/" class="md-nav__link">
+      <a href="../../../sql-reference/joins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1197,8 +1248,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1208,11 +1257,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
         
           
           <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
@@ -1226,7 +1275,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             Advanced
@@ -1240,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-timestamps/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-timestamps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1261,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-lists/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-lists/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1282,7 +1331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-structs/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-structs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1303,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-working-with-ips/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-ips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1324,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-time-travel/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-time-travel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1345,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-null-semantics/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-null-semantics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1363,30 +1412,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Temporary Tables
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../sql-reference/adv-temp-tables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1395,62 +1424,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#using-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using VALUES
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-unnest" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using UNNEST
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-generate_series" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using generate_series
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-fake" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using FAKE
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1463,7 +1436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-sample-data/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-sample-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1484,7 +1457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adv-query-optimization/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-query-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1558,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/contributing/" class="md-nav__link">
+      <a href="../../../contributing/contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/project-goals/" class="md-nav__link">
+      <a href="../../../contributing/project-goals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/code-of-conduct/" class="md-nav__link">
+      <a href="../../../contributing/code-of-conduct/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/etiquette/" class="md-nav__link">
+      <a href="../../../contributing/etiquette/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1680,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/set-up-guides/debian/" class="md-nav__link">
+      <a href="../../../contributing/set-up-guides/debian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1701,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/set-up-guides/macos/" class="md-nav__link">
+      <a href="../../../contributing/set-up-guides/macos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1722,7 +1695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/set-up-guides/windows/" class="md-nav__link">
+      <a href="../../../contributing/set-up-guides/windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1789,7 +1762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/internals/project-structure/" class="md-nav__link">
+      <a href="../../../contributing/internals/project-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1810,7 +1783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/internals/query-engine/" class="md-nav__link">
+      <a href="../../../contributing/internals/query-engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1831,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/internals/storage-engine/" class="md-nav__link">
+      <a href="../../../contributing/internals/storage-engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1852,7 +1825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/internals/optimization-strategies/" class="md-nav__link">
+      <a href="../../../contributing/internals/optimization-strategies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1919,7 +1892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/topics/debug_logging/" class="md-nav__link">
+      <a href="../../../contributing/topics/debug_logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1940,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/topics/dependencies/" class="md-nav__link">
+      <a href="../../../contributing/topics/dependencies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1961,7 +1934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/topics/testing/" class="md-nav__link">
+      <a href="../../../contributing/topics/testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2073,7 +2046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/202209-building-our-first-optimizer/" class="md-nav__link">
+      <a href="../../../blog/202209-building-our-first-optimizer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2140,7 +2113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/202309-v012-sneak-peak/" class="md-nav__link">
+      <a href="../../../blog/202309-v012-sneak-peak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2196,36 +2169,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-values" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Using VALUES
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-unnest" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using UNNEST
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-generate_series" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using generate_series
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-fake" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using FAKE
+      Installation
     </span>
   </a>
   
@@ -2249,187 +2195,16 @@
   
 
 
-<h1 id="relation-constructors">Relation Constructors</h1>
-<p>There are multiple options to create temporary relations as part of query definitions. These relations exist only for the execution of the query that defines them.</p>
-<h2 id="using-values">Using <code>VALUES</code></h2>
-<p><code>VALUES</code> allows you to create a multi-column temporary relation where the values in the relation are explicitly defined in the statement.</p>
-<p>A simple example is as follows:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">         </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;High&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">),</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">                </span><span class="p">(</span><span class="s1">&#39;Medium&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">                </span><span class="p">(</span><span class="s1">&#39;Low&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">       </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ratings</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">rating</span><span class="p">);</span>
+<h1 id="using-opteryx-with-jupyter-notebooks">Using Opteryx with Jupyter Notebooks</h1>
+<p>This short guide demonstrates how to use Opteryx with Jupyter Notebooks.</p>
+<h2 id="installation">Installation</h2>
+<p>For this guide, we assume you have a working Jupyter environment, for assistance on setting up Jupyter, see <a href="https://jupyter.org/install">Installing Jupyter</a>.</p>
+<blockquote>
+<p>Also available for using Opteryx in a Notebook environement are prebuilt <a href="https://mybinder.org/v2/gh/mabel-dev/labs/HEAD">Binder</a> Notebooks.</p>
+</blockquote>
+<p>In a cell in your notebook, install Opteryx using <code>pip</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="go">pip install opteryx</span>
 </code></pre></div>
-<p>Result:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> name   | rating
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>--------+--------
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> High   |      3
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a> Medium |      2
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a> Low    |      1
-</code></pre></div>
-<h2 id="using-unnest">Using <code>UNNEST</code></h2>
-<p><code>UNNEST</code> allows you to create a single column temporary relation where the values in the relation are explicitly defined in the statement.</p>
-<p>A simple example is as follows:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="k">UNNEST</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TEMP</span><span class="p">;</span>
-</code></pre></div>
-<p>Result:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> unnest 
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>--------
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>      1
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>      2
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>      3
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The values in the <code>UNNEST</code> function are in two sets of parenthesis. The function accepts a list of values, parenthesis is used to wrap parameters to functions and also used to define lists.</p>
-</div>
-<h2 id="using-generate_series">Using <code>generate_series</code></h2>
-<p><code>generate_series</code> allows you to create series by defining the bounds of the series, and optionally, an interval to step between values in the created series. </p>
-<p><code>generate_series</code> supports the following variations:</p>
-<table>
-<thead>
-<tr>
-<th>Form</th>
-<th>Types</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>generate_series(start, stop)</code></td>
-<td>NUMERIC, NUMERIC</td>
-<td>Generate a NUMERIC series between 'start' and 'stop', with a step of 1</td>
-</tr>
-<tr>
-<td><code>generate_series(start, stop, step)</code></td>
-<td>NUMERIC, NUMERIC, NUMERIC</td>
-<td>Generate a NUMERIC series between 'start' and 'stop', with an explicit step size</td>
-</tr>
-<tr>
-<td><code>generate_series(start, stop, interval)</code></td>
-<td>TIMESTAMP, TIMESTAMP, INTERVAL</td>
-<td>Generate a TIMESTAMP series between 'start' and 'stop', with a given interval</td>
-</tr>
-</tbody>
-</table>
-<p>Two parameter Example:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">series</span><span class="p">;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> series 
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>--------
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>      2
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>      3
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>      4
-</code></pre></div></p>
-<p>Three parameter NUMERIC Example:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">series</span><span class="p">;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> series 
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>--------
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>     -5
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>      0
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      5
-</code></pre></div></p>
-<p>Three parameter TIMESTAMP example:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2025-12-31&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1y&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">series</span><span class="p">;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>           series 
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>------------------
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a> 2020-01-01 00:00
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a> 2021-01-01 00:00
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a> 2022-01-01 00:00
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a> 2023-01-01 00:00
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a> 2024-01-01 00:00
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a> 2025-01-01 00:00
-</code></pre></div></p>
-<h3 id="interval-definitions">Interval Definitions</h3>
-<p>Intervals are defined quantifying one or more periods which make up the interval, supported periods and their notation are:</p>
-<p>Recognized interval parts for the <code>GENERATE_SERIES</code> function are:</p>
-<table>
-<thead>
-<tr>
-<th>Period</th>
-<th style="text-align: left;">Symbol</th>
-<th>Aliases</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Years</td>
-<td style="text-align: left;"><strong>year</strong> / <strong>years</strong></td>
-<td>y / yr / yrs</td>
-</tr>
-<tr>
-<td>Months</td>
-<td style="text-align: left;"><strong>month</strong> / <strong>months</strong></td>
-<td>mo / mon / mons / mth / mths</td>
-</tr>
-<tr>
-<td>Weeks</td>
-<td style="text-align: left;"><strong>week</strong> / <strong>weeks</strong></td>
-<td>w / wk / wks</td>
-</tr>
-<tr>
-<td>Days</td>
-<td style="text-align: left;"><strong>day</strong> / <strong>days</strong></td>
-<td>d</td>
-</tr>
-<tr>
-<td>Hours</td>
-<td style="text-align: left;"><strong>hour</strong> / <strong>hours</strong></td>
-<td>h / hr / hrs</td>
-</tr>
-<tr>
-<td>Minutes</td>
-<td style="text-align: left;"><strong>minute</strong> / <strong>minutes</strong></td>
-<td>m / min / mins</td>
-</tr>
-<tr>
-<td>Seconds</td>
-<td style="text-align: left;"><strong>second</strong> / <strong>seconds</strong></td>
-<td>s / sec / secs</td>
-</tr>
-</tbody>
-</table>
-<p>Where required, periods can be combined to define more complex intervals, for example <code>1h30m</code> represents one hour and 30 minutes.</p>
-<h2 id="using-fake">Using <code>FAKE</code></h2>
-<p><code>FAKE</code> creates a table of random integers from provided row and column counts. This functionality has limited application outside of creating datasets for testing.</p>
-<p>A simple example is as follows:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">FAKE</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span><span class="w"> </span>
-</code></pre></div>
-<p>Example Result:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>   column_0 │   column_1 
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>------------┼------------
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>      32981 │      50883
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>       5037 │      42087
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>      51741 │      49456
-</code></pre></div>
-<p><code>FAKE</code> supports optionally providing types and names for the columns, these optional features can be used together.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">FAKE</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">NAME</span><span class="p">,</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">temp</span><span class="p">(</span><span class="k">user</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">)</span>
-</code></pre></div>
-<p>Example Result:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a> user            │       age  │ password
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>-----------------┼------------┼-----------------
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a> Stephanie Wiley │  195792458 │ 94275740545bfd0 
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a> Charlie Curry   │ 1970388722 │ af94b1eda94155e8
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a> Wayne Lyons     │ 4205624016 │ ae883b48b8cd0   
-</code></pre></div>
-<p>The following column types are able to be faked:<br />
-- <code>INTEGER</code> <br />
-- <code>VARCHAR</code> (between 8 and 24 randomly selected alpha numeric characters) <br />
-- <code>BOOLEAN</code> <br />
-- <code>DECIMAL</code>  <br />
-- <code>DOUBLE</code> (random floating point number between 0 and 1)   <br />
-- <code>TIMESTAMP</code> (randomly selected date between 1960-01-01 and 2100-12-31) <br />
-- <code>AGE</code> (an <code>INTEGER</code> value between 0 and 100) <br />
-- <code>NAME</code> (a randomly generated english name as a <code>VARCHAR</code>)   </p>
 
 
 
@@ -2523,12 +2298,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
       
-        <script src="../../termynal.js"></script>
+        <script src="../../../termynal.js"></script>
       
     
   </body>
