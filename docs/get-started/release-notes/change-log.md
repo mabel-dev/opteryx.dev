@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - [[#1587](https://github.com/mabel-dev/opteryx/issues/1587)] Filtering on `CROSS JOIN UNNEST` columns pushed too far. [@joocer](https://github.com/joocer)
+- [[#1592](https://github.com/mabel-dev/opteryx/issues/1592)] Prevent `RANDOM` being evaluated once in optimizer. [@joocer](https://github.com/joocer)
 
 ## [0.14.1] - 2024-04-13
 
