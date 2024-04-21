@@ -3,7 +3,7 @@ import random
 import opteryx
 
 # Create a CSV file with 1 million rows
-num_rows = 10_000_000
+num_rows = 1_000_000
 categories = ["A", "B", "C", "D", "E"]
 
 with open("large_dataset.csv", "w", newline='') as csvfile:
@@ -41,10 +41,10 @@ start_time = time.time()
 # Read and filter the CSV using Opteryx
 filtered_df = opteryx.query(
     """
-    SELECT * FROM large_dataset.csv 
+    SELECT id, value, category FROM large_dataset.csv 
     WHERE category = 'A';
     """
-).arrow().to_pandas()
+).pandas()
 
 end_time = time.time()
 opteryx_time = end_time - start_time
