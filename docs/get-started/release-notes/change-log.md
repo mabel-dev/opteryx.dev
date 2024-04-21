@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#346](https://github.com/mabel-dev/opteryx/issues/346)] Permissions Model. [@joocer](https://github.com/joocer)  
 - [[#1582](https://github.com/mabel-dev/opteryx/issues/1582)] Lemmatize full text searches [@joocer](https://github.com/joocer)
 - [[#1584](https://github.com/mabel-dev/opteryx/issues/1584)] Additional Statistics [@joocer](https://github.com/joocer)
+- [[#1590](https://github.com/mabel-dev/opteryx/issues/1590)] Push filters into sub queries [@joocer](https://github.com/joocer)
 
 ### Fixed
 
