@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1584](https://github.com/mabel-dev/opteryx/issues/1584)] Additional Statistics [@joocer](https://github.com/joocer)
 - [[#1590](https://github.com/mabel-dev/opteryx/issues/1590)] Push filters into sub queries [@joocer](https://github.com/joocer)
 - [[#1588](https://github.com/mabel-dev/opteryx/issues/1588)] Push filters into `UNNEST` [@joocer](https://github.com/joocer)
+- [[#1613](https://github.com/mabel-dev/opteryx/issues/1613)] Parallelize reads of GCS storage [@joocer](https://github.com/joocer)
 
 ### Changed
 
