@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1592](https://github.com/mabel-dev/opteryx/issues/1592)] Prevent `RANDOM` being evaluated once in optimizer. [@joocer](https://github.com/joocer)
 - [[#1598](https://github.com/mabel-dev/opteryx/issues/1598)] Buffer Pool inefficiencies. [@joocer](https://github.com/joocer)
 - [[#1620](https://github.com/mabel-dev/opteryx/issues/1620)] Failure to set in Memcache shouldn't be fatal. [@joocer](https://github.com/joocer)
+- [[#1622](https://github.com/mabel-dev/opteryx/issues/1622)] Incorrect handling of nulls in JOIN conditions. [@joocer](https://github.com/joocer)
 
 ## [0.14.1] - 2024-04-13
 
