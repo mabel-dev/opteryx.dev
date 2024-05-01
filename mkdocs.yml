@@ -123,8 +123,8 @@ nav:
         - Storage Engine: contributing/internals/storage-engine.md
         - Optimization Strategies: contributing/internals/optimization-strategies.md
         - Implementation:
-          - Memory Pool: contributions/internals/implementations/memory_pool.md
-          - Storage IO: contributions/internal/implementations/storage_io.md
+          - Memory Pool: contributing/internals/implementations/memory_pool.md
+          - Storage IO: contributing/internals/implementations/storage_io.md
       - Features:
         - Debug Logging: contributing/topics/debug_logging.md
         - Dependency Management: contributing/topics/dependencies.md
