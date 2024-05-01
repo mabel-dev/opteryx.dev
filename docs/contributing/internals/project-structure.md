@@ -6,8 +6,8 @@ Opteryx's repository folder structure is described below:
 
 ~~~
 opteryx/                 <- main opteryx library
- ├── components/         <- the planning and management of the query engine
  ├── connectors/         <- modules to connect to data sources
+ ├── compiled/           <- cython modules
  ├── functions/          <- modules to execute functions within SQL statements
  ├── managers/           <- libraries responsible for key functional units
  │   ├── cache/          <- modules implementing caching systems
@@ -16,12 +16,12 @@ opteryx/                 <- main opteryx library
  │   └── schemes/        <- modules implementing storage schemes
  ├── models/             <- internal data models
  ├── operators/          <- modules implementing steps in the query plan
- ├── samples/            <- sample data ($planets, $astronauts, $satellites)
+ ├── planner/            <- the planning and management of the query engine
+ ├── virtual_data/       <- sample data (e.g. $planets, $astronauts, $satellites)
  ├── shared/             <- global resources
  ├── third_party/        <- third party code
  │   ├── distogram/ 
  │   ├── fuzzy/   
- │   ├── pyarrow_ops/ 
  │   └── ...  
  ├── utils/              <- helper libraries
  └── ...       
