@@ -21,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1550](https://github.com/mabel-dev/opteryx/issues/1550)] Additional Statistics [@joocer](https://github.com/joocer)
 - [[#731](https://github.com/mabel-dev/opteryx/issues/731)] Buffer Pool Statistics [@joocer](https://github.com/joocer)
 - [[#1604](https://github.com/mabel-dev/opteryx/issues/1604)] Internal 'Node' object performance [@joocer](https://github.com/joocer)
+- [[#1643](https://github.com/mabel-dev/opteryx/issues/1643)] Mabel Planning Improvements [@joocer](https://github.com/joocer)
 
 ### Fixed
 
