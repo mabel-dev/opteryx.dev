@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1588](https://github.com/mabel-dev/opteryx/issues/1588)] Push filters into `UNNEST` [@joocer](https://github.com/joocer)
 - [[#1613](https://github.com/mabel-dev/opteryx/issues/1613)] Parallelize reads of GCS storage [@joocer](https://github.com/joocer)
 - [[#1652](https://github.com/mabel-dev/opteryx/issues/1652)] `BLOB` and `VARCHAR` values can be compared [@joocer](https://github.com/joocer)
+- [[#1666](https://github.com/mabel-dev/opteryx/issues/1666)] Heap Sort fused operator (`LIMIT` and `ORDER BY` implemented) [@joocer](https://github.com/joocer)
 
 ### Changed
 
