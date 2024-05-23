@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
@@ -2379,6 +2379,7 @@
 <p>Types marked with <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></svg></span> (DECIMAL, TIME, and INTERVAL) have limited support.</p>
 </div>
 <h2 id="casting">Casting</h2>
+<h3 id="functions">Functions</h3>
 <p>Values can be cast using the <code>CAST</code> function, its form is <code>CAST(any AS type)</code>. Where values are incompatible, an error will be thrown, to avoid errors <code>TRY_CAST</code> (or <code>SAFE_CAST</code>) can be used instead which will return <code>null</code> instead of error.</p>
 <h3 id="type-hints">Type Hints</h3>
 <p><strong>Intervals</strong></p>
@@ -2391,6 +2392,10 @@
 </code></pre></div></p>
 <p><strong>Other</strong></p>
 <p><code>BOOLEAN</code>, <code>DOUBLE</code>, <code>INTEGER</code> and <code>TIMESTAMP</code> also support 'type hint' notation (<code>SELECT TIMESTAMP '2022-01-01';</code>) to perform casting.</p>
+<h3 id="type-annotations">Type Annotations</h3>
+<p>Some types support type annotations in the form <code>&lt;value&gt;::&lt;type&gt;</code>, for example <code>1::double</code> is equivalent to <code>1.0</code>.</p>
+<h3 id="byte-strings">Byte Strings</h3>
+<p><code>b</code> prefixes can be used to mark string literals as byte strings. For example <code>b'abc'</code> is equivalent to <code>blob('abc')</code>.</p>
 <h2 id="coercion">Coercion</h2>
 <h3 id="timestamps-dates">Timestamps &amp; Dates</h3>
 <p>Literal values in quotes may be in interpreted as a <code>TIMESTAMP</code> or <code>DATE</code> when they match a valid date in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>  format (e.g. <code>YYYY-MM-DD</code> and <code>YYYY-MM-DD HH:MM</code>). The decision regarding coercising to a <code>DATE</code> if there is no time component to the value, otherwise it will be coerced to a <code>TIMESTAMP</code>. </p>
@@ -2493,7 +2498,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
       
         <script src="../../termynal.js"></script>
       
