@@ -23,6 +23,8 @@ Name        | Description
 
 ## Casting
 
+### Functions
+
 Values can be cast using the `CAST` function, its form is `CAST(any AS type)`. Where values are incompatible, an error will be thrown, to avoid errors `TRY_CAST` (or `SAFE_CAST`) can be used instead which will return `null` instead of error.
 
 ### Type Hints
@@ -45,6 +47,14 @@ SELECT INTERVAL '1' YEAR
 **Other**
 
 `BOOLEAN`, `DOUBLE`, `INTEGER` and `TIMESTAMP` also support 'type hint' notation (`SELECT TIMESTAMP '2022-01-01';`) to perform casting.
+
+### Type Annotations
+
+Some types support type annotations in the form `<value>::<type>`, for example `1::double` is equivalent to `1.0`.
+
+### Byte Strings
+
+`b` prefixes can be used to mark string literals as byte strings. For example `b'abc'` is equivalent to `blob('abc')`.
 
 ## Coercion
 

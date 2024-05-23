@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.15.0] - UNRELEASED
+## [0.15.0] - 2024-05-23
 
 ### Added
 
@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1613](https://github.com/mabel-dev/opteryx/issues/1613)] Parallelize reads of GCS storage [@joocer](https://github.com/joocer)
 - [[#1652](https://github.com/mabel-dev/opteryx/issues/1652)] `BLOB` and `VARCHAR` values can be compared [@joocer](https://github.com/joocer)
 - [[#1666](https://github.com/mabel-dev/opteryx/issues/1666)] Heap Sort fused operator (`LIMIT` and `ORDER BY` implemented) [@joocer](https://github.com/joocer)
+- [[#1665](https://github.com/mabel-dev/opteryx/issues/1665)] Smart buffer size allocations [@joocer](https://github.com/joocer)
 
 ### Changed
 
@@ -32,6 +33,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1598](https://github.com/mabel-dev/opteryx/issues/1598)] Buffer Pool inefficiencies. [@joocer](https://github.com/joocer)
 - [[#1620](https://github.com/mabel-dev/opteryx/issues/1620)] Failure to set in Memcache shouldn't be fatal. [@joocer](https://github.com/joocer)
 - [[#1622](https://github.com/mabel-dev/opteryx/issues/1622)] Incorrect handling of nulls in JOIN conditions. [@joocer](https://github.com/joocer)
+- [[#1664](https://github.com/mabel-dev/opteryx/issues/1664)] Memory Pool stats not correct [@joocer](https://github.com/joocer)
+- [[#1674](https://github.com/mabel-dev/opteryx/issues/1674)] Errors with large chunks [@joocer](https://github.com/joocer)
+
 
 ## [0.14.1] - 2024-04-13
 
