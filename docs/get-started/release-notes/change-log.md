@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1666](https://github.com/mabel-dev/opteryx/issues/1666)] Heap Sort fused operator (`LIMIT` and `ORDER BY` implemented) [@joocer](https://github.com/joocer)
 - [[#1665](https://github.com/mabel-dev/opteryx/issues/1665)] Smart buffer size allocations [@joocer](https://github.com/joocer)
 - [[#1676](https://github.com/mabel-dev/opteryx/issues/1676)] b-prefixed blob literals [@joocer](https://github.com/joocer)
+- [[#1586](https://github.com/mabel-dev/opteryx/issues/1586)] Initial VIEWs functionality [@joocer](https://github.com/joocer)
 
 ### Changed
 
