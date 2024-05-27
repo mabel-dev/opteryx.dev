@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.16.0] - UNRELEASED
+
+- [[#1685](https://github.com/mabel-dev/opteryx/issues/1685)] [ClickBench] Include BLOB as column types for predicate pushdowns [@joocer](https://github.com/joocer)
+
 ## [0.15.0] - 2024-05-26
 
 ### Added
