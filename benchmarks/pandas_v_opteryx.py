@@ -1,5 +1,9 @@
 import csv
 import random
+
+import os, sys
+sys.path.insert(1, os.path.join(sys.path[0], "../../opteryx"))
+
 import opteryx
 
 # Create a CSV file with 1 million rows
@@ -39,12 +43,11 @@ del df
 start_time = time.time()
 
 # Read and filter the CSV using Opteryx
-filtered_df = opteryx.query(
+filtered_df = opteryx.query_to_arrow(
     """
-    SELECT id, value, category FROM large_dataset.csv 
-    WHERE category = 'A';
+    SELECT id, value, category FROM large_dataset.csv WHERE category = 'A';
     """
-).pandas()
+).to_pandas()
 
 end_time = time.time()
 opteryx_time = end_time - start_time
