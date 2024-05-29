@@ -91,7 +91,7 @@ This optimization does not require any information about schemas, but operates o
 ### Predicate Rewriter
 
 **status** implemented  
-**goal** faster implementations
+**goal** faster implementations  
 **description** replace predicates with faster versions
 
 Some predicates can support complex filtering but are used to perform trivial filtering, where a complex predicate is used to perform a trivial check, replace the check with an simpler function call which is faster.
@@ -114,8 +114,8 @@ into SQL sources
 ### Use Heap Sort
 
 **status** implemented  
-**goal** reduce memory usage & sort complexity 
-**description** incremental sort
+**goal** reduce memory usage & sort complexity   
+**description** incremental sort  
 
 When performing an ORDER BY and a LIMIT, use a heap sort in batches to avoid loading the entire dataset into memory.
 
