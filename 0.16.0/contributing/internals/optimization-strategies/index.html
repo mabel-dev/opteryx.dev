@@ -2280,7 +2280,7 @@
 <tr>
 <td style="text-align: left;"><a href="#use-heap-sort">Use Heap Sort</a></td>
 <td style="text-align: left;">Heuristic</td>
-<td style="text-align: left;">Considered</td>
+<td style="text-align: left;">Implemented</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="#use-pass-thru-distinct">Use pass-thru DISTINCT</a></td>
@@ -2380,15 +2380,28 @@
 <p><strong>notes</strong>
 - This should be implemented to run after filters (including when pushed into readers)</p>
 <h3 id="predicate-rewriter">Predicate Rewriter</h3>
+<p><strong>status</strong> implemented<br />
+<strong>goal</strong> faster implementations
+<strong>description</strong> replace predicates with faster versions</p>
+<p>Some predicates can support complex filtering but are used to perform trivial filtering, where a complex predicate is used to perform a trivial check, replace the check with an simpler function call which is faster.</p>
 <ul>
 <li>demorgans laws</li>
 <li>negative filter reduction</li>
+<li>LIKE to STARTS_WITH, ENDS_WITH, SEARCH</li>
+<li>Single element IN to equals</li>
+<li>No wildcard LIKE to equals</li>
 </ul>
+<p><strong>improvements</strong>
+Identify other functions which have faster versions.</p>
 <h3 id="aggregate-pushdown">Aggregate Pushdown</h3>
 <p>into SQL sources</p>
 <h3 id="in-literal-to-join">IN (literal) to JOIN</h3>
 <h3 id="use-heap-sort">Use Heap Sort</h3>
-<p>When performing an ORDER BY and a LIMIT, use a heap sort in batches to avoid loading the entire dataset into memory</p>
+<p><strong>status</strong> implemented<br />
+<strong>goal</strong> reduce memory usage &amp; sort complexity 
+<strong>description</strong> incremental sort</p>
+<p>When performing an ORDER BY and a LIMIT, use a heap sort in batches to avoid loading the entire dataset into memory.</p>
+<p>This works by acquiring tuples to sort in batches, sorting the batch, keeping the number of tuples to satisfy the limit and then fetching the next batch.</p>
 <h3 id="use-pass-thru-limit">Use pass-thru LIMIT</h3>
 <p>When dealing with large number of records, rather than load them all into memory to to the distinct, use a pass-thru limit approach</p>
 <h3 id="limit-pushdown">Limit Pushdown</h3>
