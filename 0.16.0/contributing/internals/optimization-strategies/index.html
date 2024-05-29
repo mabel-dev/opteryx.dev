@@ -2381,7 +2381,7 @@
 - This should be implemented to run after filters (including when pushed into readers)</p>
 <h3 id="predicate-rewriter">Predicate Rewriter</h3>
 <p><strong>status</strong> implemented<br />
-<strong>goal</strong> faster implementations
+<strong>goal</strong> faster implementations<br />
 <strong>description</strong> replace predicates with faster versions</p>
 <p>Some predicates can support complex filtering but are used to perform trivial filtering, where a complex predicate is used to perform a trivial check, replace the check with an simpler function call which is faster.</p>
 <ul>
@@ -2398,8 +2398,8 @@ Identify other functions which have faster versions.</p>
 <h3 id="in-literal-to-join">IN (literal) to JOIN</h3>
 <h3 id="use-heap-sort">Use Heap Sort</h3>
 <p><strong>status</strong> implemented<br />
-<strong>goal</strong> reduce memory usage &amp; sort complexity 
-<strong>description</strong> incremental sort</p>
+<strong>goal</strong> reduce memory usage &amp; sort complexity <br />
+<strong>description</strong> incremental sort  </p>
 <p>When performing an ORDER BY and a LIMIT, use a heap sort in batches to avoid loading the entire dataset into memory.</p>
 <p>This works by acquiring tuples to sort in batches, sorting the batch, keeping the number of tuples to satisfy the limit and then fetching the next batch.</p>
 <h3 id="use-pass-thru-limit">Use pass-thru LIMIT</h3>
