@@ -10,7 +10,7 @@ Strategy                                                      | Type         | S
 [Morsel Defragmentation](#morsel-defragmentation)             | Heuristic    | Attempted
 [Aggregate Pushdown](#aggregate-pushdown)                     | Schema-Aware | Considered
 [IN (literal) to JOIN](#in-literal-to-join)                   | Schema-Aware | Considered
-[Use Heap Sort](#use-heap-sort)                               | Heuristic    | Considered
+[Use Heap Sort](#use-heap-sort)                               | Heuristic    | Implemented
 [Use pass-thru DISTINCT](#use-pass-thru-distinct)             | Heuristic    | Considered
 [Limit Pushdown](#limit-pushdown)                             | Heuristic    | Considered
 [IN (subquery) to JOIN](#in-subquery-to-join)                 | Schema-Aware | Considered
@@ -89,17 +89,37 @@ This optimization does not require any information about schemas, but operates o
 - This should be implemented to run after filters (including when pushed into readers)
 
 ### Predicate Rewriter
+
+**status** implemented  
+**goal** faster implementations
+**description** replace predicates with faster versions
+
+Some predicates can support complex filtering but are used to perform trivial filtering, where a complex predicate is used to perform a trivial check, replace the check with an simpler function call which is faster.
+
 - demorgans laws
 - negative filter reduction
+- LIKE to STARTS_WITH, ENDS_WITH, SEARCH
+- Single element IN to equals
+- No wildcard LIKE to equals
+
+**improvements**
+Identify other functions which have faster versions.
 
 ### Aggregate Pushdown
+
 into SQL sources
 
 ### IN (literal) to JOIN
 
 ### Use Heap Sort
 
-When performing an ORDER BY and a LIMIT, use a heap sort in batches to avoid loading the entire dataset into memory
+**status** implemented  
+**goal** reduce memory usage & sort complexity 
+**description** incremental sort
+
+When performing an ORDER BY and a LIMIT, use a heap sort in batches to avoid loading the entire dataset into memory.
+
+This works by acquiring tuples to sort in batches, sorting the batch, keeping the number of tuples to satisfy the limit and then fetching the next batch.
 
 ### Use pass-thru LIMIT
 
