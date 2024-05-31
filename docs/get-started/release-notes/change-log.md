@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.16.0] - UNRELEASED
+## [0.15.1] - 2024-05-31
 
 ### Added 
 
@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1697](https://github.com/mabel-dev/opteryx/issues/1697)] [ClickBench] Optimizer removes redundant operators [@joocer](https://github.com/joocer)
 - [[#1698](https://github.com/mabel-dev/opteryx/issues/1698)] [ClickBench] Replace `LIKE` conditions with `STARTS_WITH` and `ENDS_WITH` functions [@joocer](https://github.com/joocer)
 - [[#1581](https://github.com/mabel-dev/opteryx/issues/1581)] `ANY` operator supports literal lists [@joocer](https://github.com/joocer)
+- [[#1690](https://github.com/mabel-dev/opteryx/issues/1690)] Support `REGEXP_REPLACE` function [@joocer](https://github.com/joocer)
 
 ## [0.15.0] - 2024-05-26
 
