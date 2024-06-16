@@ -6,12 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.16.0] - UNRELEASED
 
+### Added
+
+- [[#1764](https://github.com/mabel-dev/opteryx/issues/1764)] Support legacy Mabel LZMA compressed JSONL files [@joocer](https://github.com/joocer)
+
+### Changed
+
 - [[#1714](https://github.com/mabel-dev/opteryx/issues/1714)] [ClickBench] GROUP BY literals [@joocer](https://github.com/joocer)
 - [[#1696](https://github.com/mabel-dev/opteryx/issues/1696)] Prevent predicates being pushed past limits [@joocer](https://github.com/joocer)
 
 ## [0.15.3] - 2024-06-06
 
-### Changfed
+### Changed
 
 - [[#1715](https://github.com/mabel-dev/opteryx/issues/1715)] More optimizations `AND`, `OR` and `XOR` aware  [@joocer](https://github.com/joocer)
 - [[#1717](https://github.com/mabel-dev/opteryx/issues/1717)] Memcahed notified when resource read from local buffers [@joocer](https://github.com/joocer)
