@@ -8,7 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- [[#1764](https://github.com/mabel-dev/opteryx/issues/1764)] Support legacy Mabel LZMA compressed JSONL files [@joocer](https://github.com/joocer)
+- [[#1746](https://github.com/mabel-dev/opteryx/issues/1746)] Support legacy Mabel LZMA compressed JSONL files [@joocer](https://github.com/joocer)
+- [[#1748](https://github.com/mabel-dev/opteryx/issues/1748)] S3 Connector supports async reads [@joocer](https://github.com/joocer)
 
 ### Changed
 
