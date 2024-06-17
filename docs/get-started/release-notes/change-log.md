@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.16.0] - UNRELEASED
+## [0.15.4] - 2024-06-17
 
 ### Added
 
@@ -15,6 +15,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#1714](https://github.com/mabel-dev/opteryx/issues/1714)] [ClickBench] GROUP BY literals [@joocer](https://github.com/joocer)
 - [[#1696](https://github.com/mabel-dev/opteryx/issues/1696)] Prevent predicates being pushed past limits [@joocer](https://github.com/joocer)
+- [[#1753](https://github.com/mabel-dev/opteryx/issues/1753)] Error on `SELECT TOP` syntax [@joocer](https://github.com/joocer)
+
+### Fixed
+
+- [[#1756](https://github.com/mabel-dev/opteryx/issues/1756)] Sort incorrectly returning zero records when first morsel is empty [@joocer](https://github.com/joocer)
 
 ## [0.15.3] - 2024-06-06
 
