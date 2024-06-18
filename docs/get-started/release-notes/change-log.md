@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.15.5] - 2024-06-18
+
+### Changed
+
+- [[#1759](https://github.com/mabel-dev/opteryx/issues/1759)] `->` and `->>` operators able to parse JSON strings and bytes [@joocer](https://github.com/joocer)
+
 ## [0.15.4] - 2024-06-17
 
 ### Added
