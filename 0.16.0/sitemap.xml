@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://opteryx.dev/0.16.0/blog/engineering/202406%20Clickbench/</loc>
+         <lastmod>2024-06-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://opteryx.dev/0.16.0/blog/unpublished/20220205%20Writing%20a%20Query%20Engine/</loc>
          <lastmod>2024-06-18</lastmod>
          <changefreq>daily</changefreq>
