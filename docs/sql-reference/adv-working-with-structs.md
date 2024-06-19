@@ -43,6 +43,10 @@ struct -> key
 struct ->> key
 ~~~
 
+~~~
+struct @? key
+~~~
+
 Values within structs can be accessed by key using Accessor notation, support is limited.
 
 ### Searching

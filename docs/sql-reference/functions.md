@@ -447,12 +447,19 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
 
 !!! function "_struct_ `->` _key_ → _value_:octicons-beaker-24: "  
     :octicons-star-16: **New in 0.14**     
-    Return the value for **key** from **object**. 
+    Return the value for **key** from **object**.   
+    Struct values can be `VARCHAR` or `BLOB` formatted JSON strings.
 
 !!! function "_struct_ `->>` _key_ → _varchar_:octicons-beaker-24: "  
     :octicons-star-16: **New in 0.14**     
-    Return the value for **key** from **object**, non `NULL` values are cast to `VARCHAR`. 
+    Return the value for **key** from **object**, non `NULL` values are cast to `VARCHAR`.   
+    Struct values can be `VARCHAR` or `BLOB` formatted JSON strings.
     _Related:_ `->` operator
+
+!!! function "_struct_ `@?` _key_ → _value_:octicons-beaker-24: "  
+    :octicons-star-16: **New in 0.15**     
+    Return true if _struct_ contains the key _key_.   
+    Struct values can be `VARCHAR` or `BLOB` formatted JSON strings.  
 
 !!! function "**object**: _struct_`[`**key**: _varchar_`]` → _value_:octicons-dot-16:"  
     Subscript operator

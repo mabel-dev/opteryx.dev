@@ -8,6 +8,7 @@ Name        | Description
 ----------- | --------------
 `ARRAY`     | A list of items of the same type
 `BOOLEAN`   | Logical boolean (True/False).
+`BLOB` :octicons-star-16:     | Variable-length binary data
 `DOUBLE`    | floating point number
 `INTEGER`   | Whole number
 `DECIMAL` :octicons-star-16:  |
@@ -46,7 +47,9 @@ SELECT INTERVAL '1' YEAR
 
 **Other**
 
-`BOOLEAN`, `DOUBLE`, `INTEGER` and `TIMESTAMP` also support 'type hint' notation (`SELECT TIMESTAMP '2022-01-01';`) to perform casting.
+`BOOLEAN`, `DOUBLE`, `INTEGER` and `TIMESTAMP` also support 'type hint' notation (e.g. `SELECT TIMESTAMP '2022-01-01';`) to perform casting.
+
+`BLOB` supports `b` prefix notation (e.g. `b'string'`)
 
 ### Type Annotations
 

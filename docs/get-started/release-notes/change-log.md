@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.15.8] - UNRELEASED
+
+### Added
+
+- [[#1763](https://github.com/mabel-dev/opteryx/issues/1763)] Support `@?` JSON Accessor [@joocer](https://github.com/joocer)
+
 ## [0.15.5] - 2024-06-18
 
 ### Changed
@@ -15,11 +21,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - [[#1746](https://github.com/mabel-dev/opteryx/issues/1746)] Support legacy Mabel LZMA compressed JSONL files [@joocer](https://github.com/joocer)
-- [[#1748](https://github.com/mabel-dev/opteryx/issues/1748)] S3 Connector supports async reads [@joocer](https://github.com/joocer)
+- [[#1748](https://github.com/mabel-dev/opteryx/issues/1748)] S3/MinIO Connector supports async reads [@joocer](https://github.com/joocer)
 
 ### Changed
 
-- [[#1714](https://github.com/mabel-dev/opteryx/issues/1714)] [ClickBench] GROUP BY literals [@joocer](https://github.com/joocer)
+- [[#1714](https://github.com/mabel-dev/opteryx/issues/1714)] [ClickBench] `GROUP BY` literals [@joocer](https://github.com/joocer)
 - [[#1696](https://github.com/mabel-dev/opteryx/issues/1696)] Prevent predicates being pushed past limits [@joocer](https://github.com/joocer)
 - [[#1753](https://github.com/mabel-dev/opteryx/issues/1753)] Error on `SELECT TOP` syntax [@joocer](https://github.com/joocer)
 
@@ -38,7 +44,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added 
 
-- [[#1685](https://github.com/mabel-dev/opteryx/issues/1685)] [ClickBench] Include BLOB as column types for predicate pushdowns [@joocer](https://github.com/joocer)
+- [[#1685](https://github.com/mabel-dev/opteryx/issues/1685)] [ClickBench] Include `BLOB` as column types for predicate pushdowns [@joocer](https://github.com/joocer)
 - [[#1697](https://github.com/mabel-dev/opteryx/issues/1697)] [ClickBench] Optimizer removes redundant operators [@joocer](https://github.com/joocer)
 - [[#1698](https://github.com/mabel-dev/opteryx/issues/1698)] [ClickBench] Replace `LIKE` conditions with `STARTS_WITH` and `ENDS_WITH` functions [@joocer](https://github.com/joocer)
 - [[#1581](https://github.com/mabel-dev/opteryx/issues/1581)] `ANY` operator supports literal lists [@joocer](https://github.com/joocer)
