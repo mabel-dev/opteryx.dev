@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - [[#1763](https://github.com/mabel-dev/opteryx/issues/1763)] Support `@?` JSON Accessor [@joocer](https://github.com/joocer)
+- [[#1670](https://github.com/mabel-dev/opteryx/issues/1670)] Inital [Tarchia](https://github.com/mabel-dev/tarchia) catalog support [@joocer](https://github.com/joocer)
 
 ## [0.15.5] - 2024-06-18
 
