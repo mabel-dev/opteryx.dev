@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1778](https://github.com/mabel-dev/opteryx/issues/1778)] Specialized `INNER JOIN` operator for `INTEGERS` and `VARCHARS` [@joocer](https://github.com/joocer)
 - [[#1768](https://github.com/mabel-dev/opteryx/issues/1768)] Date calculation predicate rewriter (optimizer) [@joocer](https://github.com/joocer)
 
+### Fixed
+
+- [[#1788](https://github.com/mabel-dev/opteryx/issues/1788)] Errors reading files reported as SQL syntax errors. [@joocer](https://github.com/joocer)
+
 ## [0.15.8] - 2024-06-29
 
 ### Added
