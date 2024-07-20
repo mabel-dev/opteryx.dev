@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.16.0] - 2024-07-20
+
+### Added
+
+- [[#1802](https://github.com/mabel-dev/opteryx/issues/1802)] Table-level permissions [@joocer](https://github.com/joocer)
+- [[#1803](https://github.com/mabel-dev/opteryx/issues/1803)] Push date filters to Parquet reader [@joocer](https://github.com/joocer)
+- [[#1784](https://github.com/mabel-dev/opteryx/issues/1784)] Support for Tarchia catalog [@joocer](https://github.com/joocer)
+
+### Fixed
+
+- [[#1806](https://github.com/mabel-dev/opteryx/issues/1806)] Linux build failures. [@joocer](https://github.com/joocer)
+
 ## [0.15.9] - 2024-06-29
 
 ### Added
