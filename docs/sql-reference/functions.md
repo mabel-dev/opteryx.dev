@@ -342,6 +342,16 @@ Functions for examining and manipulating string values.
 !!! function "**str**: _varchar_`[`**index**: _numeric_`]` → _varchar_:octicons-dot-16:"  
     Subscript operator, return the **index**th character from **str**. 
 
+!!! function "`ASCII` (**string**: _char_) → _integer_"   
+    :octicons-star-16: **New in 0.16**    
+    Returns the ASCII code for a given character.  
+    _Related:_ `CHAR`
+
+!!! function "`CHAR` (**code**: _integer_) → _char_"   
+    :octicons-star-16: **New in 0.16**    
+    Returns the character for a given ASCII code.  
+    _Related:_ `ASCII`
+
 !!! function "`CONCAT` (**list**: _array_<_varchar_>) → _varchar_"   
     Returns the result of concatenating, or joining, of two or more string values in an end-to-end manner.  
     _Related:_ `CONCAT_WS`
