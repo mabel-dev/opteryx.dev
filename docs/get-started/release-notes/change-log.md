@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- [[#1813](https://github.com/mabel-dev/opteryx/issues/1813)] ASCII and CHAR functions [@joocer](https://github.com/joocer)
+- [[#1813](https://github.com/mabel-dev/opteryx/issues/1813)] `ASCII`, `CHAR`, `LPAD` and `RPAD` functions [@joocer](https://github.com/joocer)
 
 ## [0.16.0] - 2024-07-20
 

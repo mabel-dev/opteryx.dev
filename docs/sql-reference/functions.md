@@ -384,6 +384,11 @@ Functions for examining and manipulating string values.
     Converts **str** to lowercase.   
     _Related:_ `UPPER`, `TITLE`
 
+!!! function "`LPAD` (**string**: _varchar_, **width**: _integer_, **fill**: _char_) → _varchar_"   
+    :octicons-star-16: **New in 0.16**    
+    Returns a string at least **width** characters wide, with **fill** used to pad the string, to the left, to fill to the required width.
+    _Related:_ `RPAD`
+
 !!! function "`LTRIM` (**str**: _varchar_) → _varchar_"    
     Remove leading whitespace from **str**.   
     _Related:_ `RTRIM`, `TRIM`
@@ -406,6 +411,11 @@ Functions for examining and manipulating string values.
 !!! function "`RIGHT` (**str**: _varchar_, **n**: _numeric_) → _varchar_"  
     Extract the right-most **n** characters of **str**.   
     _Related:_ `LEFT`
+
+!!! function "`RPAD` (**string**: _varchar_, **width**: _integer_, **fill**: _char_) → _varchar_"   
+    :octicons-star-16: **New in 0.16**    
+    Returns a string at least **width** characters wide, with **fill** used to pad the string, to the right, to fill to the required width.
+    _Related:_ `LPAD`
 
 !!! function "`RTRIM` (**str**: _varchar_) → _varchar_"     
     Remove trailing whitespace from **str**.   
