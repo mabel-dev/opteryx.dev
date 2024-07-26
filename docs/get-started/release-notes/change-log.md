@@ -4,11 +4,16 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.16.2] - UNRELEASED
+## [0.16.4] - UNRELEASED
 
 ### Added
 
 - [[#1813](https://github.com/mabel-dev/opteryx/issues/1813)] `ASCII`, `CHAR`, `LPAD` and `RPAD` functions [@joocer](https://github.com/joocer)
+- [[#998](https://github.com/mabel-dev/opteryx/issues/998)] Initial `HTTP` function relation [@joocer](https://github.com/joocer)
+
+### Fixed
+
+- [[#1837](https://github.com/mabel-dev/opteryx/issues/1837)] Unhelpful error on `CROSS JOIN UNNEST`. [@joocer](https://github.com/joocer)
 
 ## [0.16.0] - 2024-07-20
 

@@ -126,6 +126,17 @@ Seconds | **second** / **seconds** | s / sec / secs
 
 Where required, periods can be combined to define more complex intervals, for example `1h30m` represents one hour and 30 minutes.
 
+## Using `HTTP`
+
+`HTTP` attempts to download and create a relation from a file which can be accessed by the engine - this functionality is experimental and the interface is likely to change in future releases.
+
+A simple example is as follows:
+
+~~~sql
+SELECT HEX
+  FROM HTTP('https://storage.googleapis.com/opteryx/color_srgb.csv') AS colors
+~~~
+
 ## Using `FAKE`
 
 `FAKE` creates a table of random integers from provided row and column counts. This functionality has limited application outside of creating datasets for testing.
