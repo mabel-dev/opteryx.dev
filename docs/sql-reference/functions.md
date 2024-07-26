@@ -17,6 +17,7 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 !!! function "`BLOB` (**varchar**: _varchar_) → _blob_"  
     :octicons-star-16: **New in 0.14**   
     Cast **varchar** to **blob**, raises an error if cast is not possible.   
+    _Note_: prefixing can also be used to define a literal blob string, `b'value'` is equivalent to `blob('value')`.   
 
 !!! function "`CAST` (**any**: _any_ AS **type**) → _type_"  
     Cast **any** to **type**, raises an error if cast is not possible.   
