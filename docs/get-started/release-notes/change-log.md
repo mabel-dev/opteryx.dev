@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - [[#1837](https://github.com/mabel-dev/opteryx/issues/1837)] Unhelpful error on `CROSS JOIN UNNEST`. [@joocer](https://github.com/joocer)
+- [[#1848](https://github.com/mabel-dev/opteryx/issues/1848)] Unary (`IS`) operators fail on zero row tables. [@joocer](https://github.com/joocer)
 
 ## [0.16.0] - 2024-07-20
 
