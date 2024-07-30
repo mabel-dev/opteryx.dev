@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1848](https://github.com/mabel-dev/opteryx/issues/1848)] Unary (`IS`) operators fail on zero row tables. [@joocer](https://github.com/joocer)
 - [[#1849](https://github.com/mabel-dev/opteryx/issues/1849)] Cannot use `UNION` and `FOR` clauses together. [@joocer](https://github.com/joocer)
 - [[#1850](https://github.com/mabel-dev/opteryx/issues/1850)] Cannot `IFNULL` an `ARRAY` column. [@joocer](https://github.com/joocer)
+- [[#1854](https://github.com/mabel-dev/opteryx/issues/1854)] Implicit `CROSS JOIN` using function datasets fails. [@joocer](https://github.com/joocer)
 
 ### Updated
 
