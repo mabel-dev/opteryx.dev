@@ -19,6 +19,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1849](https://github.com/mabel-dev/opteryx/issues/1849)] Cannot use `UNION` and `FOR` clauses together. [@joocer](https://github.com/joocer)
 - [[#1850](https://github.com/mabel-dev/opteryx/issues/1850)] Cannot `IFNULL` an `ARRAY` column. [@joocer](https://github.com/joocer)
 
+### Updated
+
+- [[#1877](https://github.com/mabel-dev/opteryx/pull/1847)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.49.0. [@joocer](https://github.com/joocer)
+
+
 ## [0.16.0] - 2024-07-20
 
 ### Added
