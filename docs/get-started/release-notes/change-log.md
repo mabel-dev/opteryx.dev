@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1813](https://github.com/mabel-dev/opteryx/issues/1813)] `ASCII`, `CHAR`, `LPAD` and `RPAD` functions [@joocer](https://github.com/joocer)
 - [[#998](https://github.com/mabel-dev/opteryx/issues/998)] Initial `HTTP` function relation [@joocer](https://github.com/joocer)
 - [[#1838](https://github.com/mabel-dev/opteryx/issues/1838)] `JSONB_OBJECT_KEYS` function [@joocer](https://github.com/joocer)
+- [[#1871](https://github.com/mabel-dev/opteryx/issues/1871)] Basic `JOIN` fuzzer [@joocer](https://github.com/joocer)
 
 ### Fixed
 
