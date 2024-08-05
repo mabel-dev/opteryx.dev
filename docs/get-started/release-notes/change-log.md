@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1857](https://github.com/mabel-dev/opteryx/issues/1857)] Cannot use json accessors in conditions. [@joocer](https://github.com/joocer)
 - [[#1861](https://github.com/mabel-dev/opteryx/issues/1861)] `TRY_CAST` doesn't safely fail on empty strings [@joocer](https://github.com/joocer)
 - [[#1865](https://github.com/mabel-dev/opteryx/issues/1865)] `COUNT(*)` and date filters pushed to Parquet reader [@joocer](https://github.com/joocer)
+- [[#1875](https://github.com/mabel-dev/opteryx/issues/1875)] `IFNULL` errors in some circumstances [@joocer](https://github.com/joocer)
 
 ### Updated
 
