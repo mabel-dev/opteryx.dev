@@ -25,6 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1865](https://github.com/mabel-dev/opteryx/issues/1865)] `COUNT(*)` and date filters pushed to Parquet reader [@joocer](https://github.com/joocer)
 - [[#1875](https://github.com/mabel-dev/opteryx/issues/1875)] `IFNULL` errors in some circumstances [@joocer](https://github.com/joocer)
 - [[#1867](https://github.com/mabel-dev/opteryx/issues/1867)] Reliability of JSON Accessors [@joocer](https://github.com/joocer)
+- [[#1878](https://github.com/mabel-dev/opteryx/issues/1878)] `COUNT(*)` optimization restored [@joocer](https://github.com/joocer)
 
 ### Updated
 
