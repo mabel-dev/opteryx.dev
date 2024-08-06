@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1875](https://github.com/mabel-dev/opteryx/issues/1875)] `IFNULL` errors in some circumstances [@joocer](https://github.com/joocer)
 - [[#1867](https://github.com/mabel-dev/opteryx/issues/1867)] Reliability of JSON Accessors [@joocer](https://github.com/joocer)
 - [[#1878](https://github.com/mabel-dev/opteryx/issues/1878)] `COUNT(*)` optimization restored [@joocer](https://github.com/joocer)
+- [[#1880](https://github.com/mabel-dev/opteryx/issues/1880)] `!=` incorrectly pushed into `CROSS JOIN UNNEST` [@joocer](https://github.com/joocer)
 
 ### Updated
 
