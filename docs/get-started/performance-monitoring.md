@@ -1,4 +1,13 @@
 
+## System Statistics
+
+~~~sql
+SELECT * FROM $statistics;
+~~~
+
+## Per Query Statistics
+
+**Statistics are subject to change and documentation lag behind updates**
 
 Key                    | Description
 ---------------------- | ----------------------------------------------
