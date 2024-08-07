@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#system-statistics" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2181,6 +2186,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Statistics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-query-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per Query Statistics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2199,6 +2230,11 @@
 
   <h1>Performance monitoring</h1>
 
+<h2 id="system-statistics">System Statistics</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="k">statistics</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="per-query-statistics">Per Query Statistics</h2>
+<p><strong>Statistics are subject to change and documentation lag behind updates</strong></p>
 <table>
 <thead>
 <tr>
