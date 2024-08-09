@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.16.5] - UNRELEASED
+## [0.16.6] - UNRELEASED
 
 ### Added
 
@@ -29,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1867](https://github.com/mabel-dev/opteryx/issues/1867)] Reliability of JSON Accessors [@joocer](https://github.com/joocer)
 - [[#1878](https://github.com/mabel-dev/opteryx/issues/1878)] `COUNT(*)` optimization restored [@joocer](https://github.com/joocer)
 - [[#1880](https://github.com/mabel-dev/opteryx/issues/1880)] `!=` incorrectly pushed into `CROSS JOIN UNNEST` [@joocer](https://github.com/joocer)
+- [[#1887](https://github.com/mabel-dev/opteryx/issues/1887)] Incorrectly pushed filters to left side of `LEFT OUTER JOIN` [@joocer](https://github.com/joocer)
 
 ### Changed
 
