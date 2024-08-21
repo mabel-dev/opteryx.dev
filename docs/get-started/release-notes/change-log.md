@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1838](https://github.com/mabel-dev/opteryx/issues/1838)] `JSONB_OBJECT_KEYS` function [@joocer](https://github.com/joocer)
 - [[#1871](https://github.com/mabel-dev/opteryx/issues/1871)] Basic `JOIN` fuzzer [@joocer](https://github.com/joocer)
 - [[#1889](https://github.com/mabel-dev/opteryx/issues/1889)] `$statistics` virtual dataset, initially reporting bufferpool statistics [@joocer](https://github.com/joocer)
+- [[#1904](https://github.com/mabel-dev/opteryx/pull/1904)] Optional scale attribute to `CIEL` and `FLOOR` functions [@joocer](https://github.com/joocer)
 
 
 ### Fixed
@@ -34,8 +35,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - [[#1877](https://github.com/mabel-dev/opteryx/pull/1847)] Updated [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) to version 0.49.0 [@joocer](https://github.com/joocer)
-- [[#1891](https://github.com/mabel-dev/opteryx/pull/1891)] `DISTINCT` performance improvements [@joocer](https://github.com/joocer)
-- [[#1906](https://github.com/mabel-dev/opteryx/pull/1906)] Improve performance of AVRO files [@joocer](https://github.com/joocer)
+- [[#1891](https://github.com/mabel-dev/opteryx/issues/1891)] `DISTINCT` performance improvements [@joocer](https://github.com/joocer)
+- [[#1906](https://github.com/mabel-dev/opteryx/issues/1906)] Improve performance of AVRO files [@joocer](https://github.com/joocer)
 
 ## [0.16.0] - 2024-07-20
 

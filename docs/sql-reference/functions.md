@@ -276,19 +276,20 @@ For more details, see [Working with Lists](../adv-working-with-lists/).
 !!! function "`ABSOLUTE` (**x**: _numeric_) → _numeric_"  
     Returns the absolute value of **x**.   
 
-!!! function "`CEIL` (**x**: _numeric_) → _numeric_"  
-    Alias of `CEILING`  
+!!! function "`CEIL` (**x**: _numeric_, **scale**: _integer_) → _double_"  
+    Returns the nearest equal or larger whole number to **x**, or to the nearest equal or larger double with **scale** places after the decimal point.   
+    _Related:_ `FLOOR`   
 
-!!! function "`CEILING` (**x**: _numeric_) → _numeric_"  
-    Returns **x** rounded up to the nearest integer.   
-    _Related:_ `FLOOR` 
+!!! function "`CEILING` (**x**: _numeric_, **scale**: _integer_) → _double_"   
+    Alias of `CEIL`  
 
 !!! function "`E` () → _numeric_"  
     Returns the constant _e_, also known as [_Euler's number_](https://en.wikipedia.org/wiki/E_(mathematical_constant)).  
     _Related:_ `LN`.
 
 !!! function "`FLOOR` (**x**: _numeric_) → _numeric_"  
-    Returns **x** rounded down to the nearest integer.   
+    Returns the nearest equal or lesser whole number to **x**, or to the nearest equal or lesser double with **scale** places after the decimal point.   
+    _Related:_ `CEIL`    
 
 !!! function "`PHI` () → _numeric_"  
     Returns the constant φ (_phi_), also known as [_the golden ratio_](https://en.wikipedia.org/wiki/Golden_ratio).  
