@@ -2760,13 +2760,13 @@ See also <code>ANY</code></p>
 <p>Returns the absolute value of <strong>x</strong>.   </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>CEIL</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Alias of <code>CEILING</code>  </p>
+<p class="admonition-title"><code>CEIL</code> (<strong>x</strong>: <em>numeric</em>, <strong>scale</strong>: <em>integer</em>) → <em>double</em></p>
+<p>Returns the nearest equal or larger whole number to <strong>x</strong>, or to the nearest equal or larger double with <strong>scale</strong> places after the decimal point. <br />
+<em>Related:</em> <code>FLOOR</code>   </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>CEILING</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns <strong>x</strong> rounded up to the nearest integer. <br />
-<em>Related:</em> <code>FLOOR</code> </p>
+<p class="admonition-title"><code>CEILING</code> (<strong>x</strong>: <em>numeric</em>, <strong>scale</strong>: <em>integer</em>) → <em>double</em></p>
+<p>Alias of <code>CEIL</code>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>E</code> () → <em>numeric</em></p>
@@ -2775,7 +2775,8 @@ See also <code>ANY</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>FLOOR</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns <strong>x</strong> rounded down to the nearest integer.   </p>
+<p>Returns the nearest equal or lesser whole number to <strong>x</strong>, or to the nearest equal or lesser double with <strong>scale</strong> places after the decimal point. <br />
+<em>Related:</em> <code>CEIL</code>    </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>PHI</code> () → <em>numeric</em></p>
