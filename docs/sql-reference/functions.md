@@ -281,7 +281,7 @@ For more details, see [Working with Lists](../adv-working-with-lists/).
     _Related:_ `FLOOR`   
 
 !!! function "`CEILING` (**x**: _numeric_, **scale**: _integer_) → _double_"   
-    Alias of `CEIL`  
+    **DEPRECATED** 
 
 !!! function "`E` () → _numeric_"  
     Returns the constant _e_, also known as [_Euler's number_](https://en.wikipedia.org/wiki/E_(mathematical_constant)).  
