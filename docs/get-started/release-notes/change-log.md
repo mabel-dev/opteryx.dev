@@ -14,7 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1871](https://github.com/mabel-dev/opteryx/issues/1871)] Basic `JOIN` fuzzer [@joocer](https://github.com/joocer)
 - [[#1889](https://github.com/mabel-dev/opteryx/issues/1889)] `$statistics` virtual dataset, initially reporting bufferpool statistics [@joocer](https://github.com/joocer)
 - [[#1904](https://github.com/mabel-dev/opteryx/pull/1904)] Optional scale attribute to `CIEL` and `FLOOR` functions [@joocer](https://github.com/joocer)
-
+- [[#1926](https://github.com/mabel-dev/opteryx/pull/1926)] Add support for Pipe Separated Value (psv) data files [@joocer](https://github.com/joocer)
 
 ### Fixed
 
