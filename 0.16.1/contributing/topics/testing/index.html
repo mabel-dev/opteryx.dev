@@ -2398,7 +2398,7 @@
 <p><strong>Frequency</strong>: On Commit to GitHub <br />
 <strong>Maturity</strong>: Medium<br />
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/opteryx/tree/main/tests">mabel-dev/opteryx</a></p>
-<p>These tests are part of the CI process and focus on specific aspects of the internals. Combined with the SQL Battery test, the aim is for 95% coverage, with explicit exceptions. While 95% coverage does not guarantee that the tests are 'good,' it helps ensure that any material changes to the system function are captured early.</p>
+<p>These tests are part of the CI process and focus on specific aspects of the internals (for example do functions like <code>SOUNDEX</code> produce the correct result). Combined with the SQL Battery test, the aim is for 95% coverage, with explicit exceptions. While 95% coverage does not guarantee that the tests are 'good,' it helps ensure that any material changes to the system function are captured early.</p>
 <h2 id="sql-battery">SQL Battery</h2>
 <p><strong>Frequency</strong>: On Commit to GitHub  <br />
 <strong>Maturity</strong>: Medium<br />
@@ -2409,11 +2409,10 @@
 <ul>
 <li>Does the Query run - with no checking or validation of the outputs. Focussed on testing syntax and parsing.</li>
 <li>Does the Query fail - for scenarios when the query is expected to fail. Focused on negative testing.</li>
-<li>Is the shape of the results as expected - only the row and column counts are checked. Focused on high volume query execution testing.</li>
+<li>Is the shape of the results as expected - only the row and column counts are checked. Focused on high-volume query execution testing.</li>
 <li>Does the Query return the right results - the returned dataset is checked. Focused on ensuring results are correct.</li>
-<li>SQL Fuzzing - execute randomly generated SQL queries. Focused on removing developer bias from test cases.</li>
 </ul>
-<p>The SQL Battery the most effective test to identify when functionality has been broken or changed by updates. The shape testing is currently considered the best value of this suite - it is fast and easy to write new tests for this suite, and the execution give reasonable considence in the correctness of the result in most situations.</p>
+<p>The SQL Battery the most effective test to identify when functionality has been broken or changed by updates. The shape testing is currently considered the best value of this suite - it is fast and easy to write new tests for, and the execution give reasonable considence in the correctness of the result in most situations.</p>
 <h2 id="performance-testing">Performance Testing</h2>
 <p><strong>Frequency</strong>: Ad hoc<br />
 <strong>Maturity</strong>: Low<br />
@@ -2421,22 +2420,26 @@
 <p>The performance testing framework is only able to be run ad hoc, and there is currently no meaningful treatment or tracking out outcomes. It us currently used to confirm optimizations do have the impact of reducing query execution times.</p>
 <h2 id="sql-logic-test">SQL Logic Test</h2>
 <p><strong>Frequency</strong>: Ad hoc<br />
-<strong>Maturity</strong>: Low<br />
+<strong>Maturity</strong>: Very Low<br />
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/wrenchy-bench">mabel-dev/wrenchy-bench</a></p>
 <p>Runs SQL statements in both Operyx and DuckDB to verify Opteryx returns the same answer as DuckDB. This has a growing set of tests which are executed, but as how relations are referenced in these systems, most queries require some hand-tuning and many are not possible with the framework as it currently is written.</p>
 <p>What has been able to be tested has demonstrated some deviation between these systems, so is a valuable and useful test, even in its current form.</p>
 <h2 id="fuzzing">Fuzzing</h2>
-<p><strong>Frequency</strong>: On Commit to GitHub &amp; Nightly<br />
+<p><strong>Frequency</strong>: On Commit to GitHub
 <strong>Maturity</strong>: Low<br />
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/opteryx/tree/main/tests">mabel-dev/opteryx</a></p>
-<p>As part of the CI process, executes 100 iterations of random inputs.</p>
-<p>As part of a nightly test, executes 100,000 iterations of random inputs.</p>
-<p>Fuzzing supplies some key functions with random data to try to capture scenarios which are unexpected or unhandled.</p>
+<p>Fuzzing executes randomized data against the engine. There are currently three fuzzers:</p>
+<ul>
+<li>Random inputs fuzzer - used to help ensure the robustness of parameter handling</li>
+<li>Random <code>SELECT</code> statements - generates single table queries </li>
+<li>Ransom <code>JOIN</code> statements - generates random JOIN conditions</li>
+</ul>
+<p>The variation created by the statement fuzzers is limited and primarily is focused on creating variation in testing and in removing developer bias from test cases.</p>
 <h2 id="security-code-quality-testing">Security &amp; Code Quality Testing</h2>
 <p><strong>Frequency</strong>: On Commit to GitHub  <br />
 <strong>Maturity</strong>: Medium<br />
 <strong>Location</strong>: <a href="https://github.com/mabel-dev/opteryx/tree/main/tests">mabel-dev/opteryx</a></p>
-<p>Various other tests are performed to help ensure code quality is maintained, these include security, form, typing, secret detection and test coverage checks using the following tools: Bandit, Semgrep, Black, MyPy, PyLint, PerfLint, Fides, SonarCloud, and Coverage.</p>
+<p>Various other tests are performed to help ensure code quality is maintained, these include security, form, typing, secret detection and test coverage checks using the following tools: Bandit, Ruff, MyPy, PyLint, PerfLint, Fides, SonarCloud, and Coverage.</p>
 <h2 id="summary">Summary</h2>
 <p>Opteryx employs a multifaceted testing approach, ranging from Unit Testing and SQL Battery to specialized performance and security assessments, all geared towards ensuring the SQL query engine's performance, security, and reliability. With robust regression testing, incremental evolution, and a focus on adaptability, we're committed to continually refining our test suites as the system evolves, aiming for the highest standards of quality and resilience in SQL query engine technology.</p>
 
