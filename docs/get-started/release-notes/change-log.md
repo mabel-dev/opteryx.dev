@@ -41,6 +41,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1891](https://github.com/mabel-dev/opteryx/issues/1891)] `DISTINCT` performance improvements [@joocer](https://github.com/joocer)
 - [[#1906](https://github.com/mabel-dev/opteryx/issues/1906)] Improve performance of AVRO files [@joocer](https://github.com/joocer)
 - [[#1923](https://github.com/mabel-dev/opteryx/issues/1923)] Improve performance of `DISTINCT` [@joocer](https://github.com/joocer)
+- [[#1939](https://github.com/mabel-dev/opteryx/issues/1939)] Improve performance of `JOIN`s [@joocer](https://github.com/joocer)
 
 
 ## [0.16.0] - 2024-07-20
