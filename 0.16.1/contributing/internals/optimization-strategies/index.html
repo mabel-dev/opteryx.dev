@@ -2333,6 +2333,11 @@
 <td style="text-align: left;">Considered</td>
 </tr>
 <tr>
+<td style="text-align: left;"><a href="#predicate-elimination">Predicate Elimination</a></td>
+<td style="text-align: left;">Heuristic</td>
+<td style="text-align: left;">Implemented</td>
+</tr>
+<tr>
 <td style="text-align: left;"><a href="#join-elimination">JOIN Elimination</a></td>
 <td style="text-align: left;">Schema-Aware</td>
 <td style="text-align: left;">Considered</td>
@@ -2412,6 +2417,8 @@ Identify other functions which have faster versions.</p>
 <h3 id="join-ordering">JOIN ordering</h3>
 <h3 id="predicate-ordering">Predicate Ordering</h3>
 <h3 id="predicate-flattening">Predicate Flattening</h3>
+<h3 id="predicate-elimination">Predicate Elimination</h3>
+<p>Where logical expressions contain boolean literals, these can be removed sometimes resulting in the entire expression being removed. E.g. <code>1 = 1 OR name = 'Alice'</code> can be completely removed avoiding any further handling of the check against the name column.</p>
 <h3 id="correlated-predicates">Correlated Predicates</h3>
 <p>If a column participating in a JOIN has a known value range, push down corresponding filters to both sides of the JOIN, reducing the size of the datasets that need to be joined.</p>
 <h3 id="join-elimination">JOIN Elimination</h3>
