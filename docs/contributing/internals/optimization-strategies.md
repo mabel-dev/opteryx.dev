@@ -21,6 +21,7 @@ Strategy                                                      | Type         | S
 [Predicate Flattening](#predicate-flattening)                 | Schema-Aware | Attempted
 [Predicate Compaction](#predicate-compaction)                 | Schema-Aware | Designed
 [Correlated Predicates](#correlated-predicates)               | Schema-Aware | Considered
+[Predicate Elimination](#predicate-elimination)               | Heuristic    | Implemented
 [JOIN Elimination](#join-elimination)                         | Schema-Aware | Considered
 
 
@@ -140,6 +141,10 @@ Push limits to the SQL reader
 ### Predicate Ordering
 
 ### Predicate Flattening
+
+### Predicate Elimination
+
+Where logical expressions contain boolean literals, these can be removed sometimes resulting in the entire expression being removed. E.g. `1 = 1 OR name = 'Alice'` can be completely removed avoiding any further handling of the check against the name column.
 
 ### Correlated Predicates
 
