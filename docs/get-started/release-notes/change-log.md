@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1904](https://github.com/mabel-dev/opteryx/pull/1904)] Optional scale attribute to `CIEL` and `FLOOR` functions [@joocer](https://github.com/joocer)
 - [[#1926](https://github.com/mabel-dev/opteryx/pull/1926)] Add support for Pipe Separated Value (psv) data files [@joocer](https://github.com/joocer)
 - [[#1931](https://github.com/mabel-dev/opteryx/pull/1931)] TPC-H regression suite [@joocer](https://github.com/joocer)
+- [[#1944](https://github.com/mabel-dev/opteryx/issues/1944)] Boolean expression elimination optimizer strategy [@joocer](https://github.com/joocer)
 
 ### Fixed
 
@@ -34,7 +35,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1887](https://github.com/mabel-dev/opteryx/issues/1887)] Incorrectly pushed filters to left side of `LEFT OUTER JOIN` [@joocer](https://github.com/joocer)
 - [[#1918](https://github.com/mabel-dev/opteryx/issues/1918)] JSON Accessors broken by parser update [@joocer](https://github.com/joocer)
 - [[#1935](https://github.com/mabel-dev/opteryx/issues/1935)] `BLOB` cast double encodes binary data [@joocer](https://github.com/joocer)
-- [[#1944](https://github.com/mabel-dev/opteryx/issues/1944)] Boolean expression elimination optimizer strategy [@joocer](https://github.com/joocer)
+- [[#1955](https://github.com/mabel-dev/opteryx/issues/1955)] `ANY`/`ALL` ops fail on `null` values [@joocer](https://github.com/joocer)
+- [[#1952](https://github.com/mabel-dev/opteryx/issues/1952)] JSON Accessors are not comparisons [@joocer](https://github.com/joocer)
+- [[#1958](https://github.com/mabel-dev/opteryx/issues/1958)] Inconsisitent handling of `null` in `INNER JOIN` [@joocer](https://github.com/joocer)
 
 ### Changed
 
@@ -43,6 +46,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1906](https://github.com/mabel-dev/opteryx/issues/1906)] Improve performance of AVRO files [@joocer](https://github.com/joocer)
 - [[#1923](https://github.com/mabel-dev/opteryx/issues/1923)] Improve performance of `DISTINCT` [@joocer](https://github.com/joocer)
 - [[#1939](https://github.com/mabel-dev/opteryx/issues/1939)] Improve performance of `JOIN`s [@joocer](https://github.com/joocer)
+- [[#1960](https://github.com/mabel-dev/opteryx/issues/1960)] Remove evaluation context [@joocer](https://github.com/joocer)
+- [[#1962](https://github.com/mabel-dev/opteryx/issues/1962)] Predicate rewriter stand alone strategy [@joocer](https://github.com/joocer)
+- [[#1963](https://github.com/mabel-dev/opteryx/issues/1963)] Constant Folding should traverse expression tree [@joocer](https://github.com/joocer)
 
 
 ## [0.16.0] - 2024-07-20

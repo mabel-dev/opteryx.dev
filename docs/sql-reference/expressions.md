@@ -41,7 +41,6 @@ Operator     | Description
 `RLIKE`      | regular expression match (also `~` and `SIMILAR TO`)     
 `NOT RLIKE`  | inverse results of `RLIKE` (also `!~` and `NOT SIMILAR TO`)
 `~*`         | case insensitive regular expression match
-`!~*`        | inverse results of `~*`
 `IS`         | special comparison for `true`, `false` and `null`
 `|`          | Bitwise OR, or IP containment
 `&`          | Bitwise AND
