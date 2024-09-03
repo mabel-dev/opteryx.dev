@@ -25,7 +25,7 @@ query15 | yes      | no     | [Multiway CROSS JOINs](https://github.com/mabel-de
 query16 | no       | no     | [Implied Aliases](https://github.com/mabel-dev/opteryx/issues/1683) & [IN Subquery](https://github.com/mabel-dev/opteryx/issues/1361)
 query17 | no       | no     | [Reimplement CTEs](https://github.com/mabel-dev/opteryx/issues/1352)
 query18 | yes      | no     | [Multiway CROSS JOINs](https://github.com/mabel-dev/opteryx/issues/1438)
-query19 | no       | no     | Internal Error
+query19 | no       | yes    | -
 query20 | no       | no     | [IN Subquery](https://github.com/mabel-dev/opteryx/issues/1361)
 query21 | yes      | no     | [Non-Equi JOINs](https://github.com/mabel-dev/opteryx/issues/1921)
 query22 | yes      | no     | [Reimplement CTEs](https://github.com/mabel-dev/opteryx/issues/1352)

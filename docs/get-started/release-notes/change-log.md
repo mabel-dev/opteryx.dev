@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.16.6] - UNRELEASED
+## [0.17.0] - UNRELEASED
 
 ### Added
 
@@ -38,6 +38,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1955](https://github.com/mabel-dev/opteryx/issues/1955)] `ANY`/`ALL` ops fail on `null` values [@joocer](https://github.com/joocer)
 - [[#1952](https://github.com/mabel-dev/opteryx/issues/1952)] JSON Accessors are not comparisons [@joocer](https://github.com/joocer)
 - [[#1958](https://github.com/mabel-dev/opteryx/issues/1958)] Inconsisitent handling of `null` in `INNER JOIN` [@joocer](https://github.com/joocer)
+- [[#1977](https://github.com/mabel-dev/opteryx/issues/1977)] Unable to perform arithmetic on result of `GENERATE_SERIES` [@joocer](https://github.com/joocer)
 
 ### Changed
 
