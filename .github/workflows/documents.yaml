@@ -25,7 +25,7 @@ jobs:
 #      keep five versions  
 #      - run: mike delete "0.9.1"
 #      - run: mike delete "0.9.2"
-      - run: mike delete "0.16.1"
+#      - run: mike delete "0.16.1"
 
 #      # this should match the version
       - run: mike delete latest
