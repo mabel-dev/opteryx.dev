@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.18.0] - UNRELEASED
 
+### Added
+
+- [[#1993](https://github.com/mabel-dev/opteryx/pull/1993)] [ClickBench](https://github.com/ClickHouse/ClickBench) regression suite [@joocer](https://github.com/joocer)
+
 ### Fixed
 
 - [[#1981](https://github.com/mabel-dev/opteryx/issues/1981)] `null` handling by functions. [@joocer](https://github.com/joocer)
@@ -298,7 +302,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `DATES SINCE` temporal filter syntax added. [@joocer](https://github.com/joocer)  
 - [[#1145](https://github.com/mabel-dev/opteryx/pull/1145)] Debug Logging [@joocer](https://github.com/joocer)
 - [[#1156](https://github.com/mabel-dev/opteryx/pull/1156)] Bitwise operators and Hex literals [@joocer](https://github.com/joocer)  
-- [[#1141](https://github.com/mabel-dev/opteryx/pull/1141)] BiQuery regression tests and documentation [@joocer](https://github.com/joocer)
+- [[#1141](https://github.com/mabel-dev/opteryx/pull/1141)] BigQuery regression tests and documentation [@joocer](https://github.com/joocer)
 - [[#1171](https://github.com/mabel-dev/opteryx/pull/1171)] Support `NATURAL JOIN` syntax [@joocer](https://github.com/joocer)  
 - [[#1171](https://github.com/mabel-dev/opteryx/pull/1171)] Support `SEMI` and `ANTI` join syntax [@joocer](https://github.com/joocer)  
 - [[#1219](https://github.com/mabel-dev/opteryx/pull/1219)] Extended `FAKE` syntax [@joocer](https://github.com/joocer)
