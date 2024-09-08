@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.18.0] - UNRELEASED
+
+### Fixed
+
+- [[#1981](https://github.com/mabel-dev/opteryx/issues/1981)] `null` handling by functions. [@joocer](https://github.com/joocer)
+
 ## [0.17.0] - 2024-09-05
 
 ### Added
