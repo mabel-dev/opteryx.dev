@@ -8,11 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- [[#1993](https://github.com/mabel-dev/opteryx/pull/1993)] [ClickBench](https://github.com/ClickHouse/ClickBench) regression suite [@joocer](https://github.com/joocer)
+- [[#1993](https://github.com/mabel-dev/opteryx/issues/1993)] [ClickBench](https://github.com/ClickHouse/ClickBench) regression suite [@joocer](https://github.com/joocer)
+- [[#2003](https://github.com/mabel-dev/opteryx/issues/2003)] Push equals filters to Firestore [@joocer](https://github.com/joocer)
 
 ### Fixed
 
 - [[#1981](https://github.com/mabel-dev/opteryx/issues/1981)] `null` handling by functions. [@joocer](https://github.com/joocer)
+- [[#2002](https://github.com/mabel-dev/opteryx/issues/2002)] IP containment fails on nulls [@joocer](https://github.com/joocer)
 
 ### Changed
 
