@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1993](https://github.com/mabel-dev/opteryx/issues/1993)] [ClickBench](https://github.com/ClickHouse/ClickBench) regression suite [@joocer](https://github.com/joocer)
 - [[#2003](https://github.com/mabel-dev/opteryx/issues/2003)] Push equals filters to Firestore [@joocer](https://github.com/joocer)
 - [[#2008](https://github.com/mabel-dev/opteryx/issues/2008)] Push not equals filters to Firestore [@joocer](https://github.com/joocer)
+- [[#2000](https://github.com/mabel-dev/opteryx/issues/2000)] Initial `SHOW CREATE VIEW` support [@joocer](https://github.com/joocer)
 
 ### Fixed
 

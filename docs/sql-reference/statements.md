@@ -204,6 +204,16 @@ The `FOR` clause is a non-standard clause which filters data by the date it was 
 
 See [Time Travel](../adv-time-travel/) for more information on `FOR` syntax and functionality.
 
+## SHOW CREATE VIEW
+
+Show an approximation of the SQL to create a specified relation.
+
+~~~sql
+SHOW CREATE VIEW view
+~~~
+
+Returns the SQL (including comments) which is executed when the view is accessed.
+
 <!---
 
 ## SHOW CREATE TABLE
