@@ -17,6 +17,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#1981](https://github.com/mabel-dev/opteryx/issues/1981)] `null` handling by functions. [@joocer](https://github.com/joocer)
 - [[#2002](https://github.com/mabel-dev/opteryx/issues/2002)] IP containment fails on nulls [@joocer](https://github.com/joocer)
+- [[#1994](https://github.com/mabel-dev/opteryx/issues/1994)] ClickBench test failures [@joocer](https://github.com/joocer)
+- [[#2017](https://github.com/mabel-dev/opteryx/issues/2017)] `OFFSET` fails when zero records [@joocer](https://github.com/joocer)
+
 
 ### Changed
 
