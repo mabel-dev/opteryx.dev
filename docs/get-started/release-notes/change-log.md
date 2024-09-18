@@ -25,6 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#1990](https://github.com/mabel-dev/opteryx/issues/1990)] Flag `LIST_CONTAINS_ANY` and `LIST_CONTAINS_ALL` as Deprecated [@joocer](https://github.com/joocer)
 - [[#2013](https://github.com/mabel-dev/opteryx/issues/2013)] MemoryPool based on Python's multiprocessing buffer for storage [@joocer](https://github.com/joocer)
+- :octicons-alert-24: [[#2021](https://github.com/mabel-dev/opteryx/issues/2021)] Error raised when subqueries expose columns with duplicate names. [@joocer](https://github.com/joocer)
 
 ## [0.17.0] - 2024-09-05
 
