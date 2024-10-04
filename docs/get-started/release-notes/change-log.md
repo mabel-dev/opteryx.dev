@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2008](https://github.com/mabel-dev/opteryx/issues/2008)] Push not equals filters to Firestore [@joocer](https://github.com/joocer)
 - [[#2000](https://github.com/mabel-dev/opteryx/issues/2000)] Initial `SHOW CREATE VIEW` support [@joocer](https://github.com/joocer)
 - [[#2040](https://github.com/mabel-dev/opteryx/issues/2040)] Additional items in `$statistics` table [@joocer](https://github.com/joocer)
+- [[#1984](https://github.com/mabel-dev/opteryx/issues/1984)] Reduce columns exposed by subqueries if not used out outer queries [@joocer](https://github.com/joocer)
 
 ### Fixed
 
