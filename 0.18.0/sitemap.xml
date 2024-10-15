@@ -2,318 +2,318 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://opteryx.dev/0.18.0/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/thankyou/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/blog/202209-building-our-first-optimizer/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/blog/202309-v012-sneak-peak/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/blog/202404-supercharge-cassandra/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/blog/engineering/202406%20Clickbench/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/blog/unpublished/20220205%20Writing%20a%20Query%20Engine/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/blog/unpublished/202204%20Introduction%20to%20Query%20Engines/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/blog/unpublished/20221001%20Storage/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/blog/unpublished/202212%20Lessons%20Learnt%20so%20Far/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/blog/unpublished/202305-rewriting-the-planner/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/blog/unpublished/202401%20Faster%20GCS/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/code-of-conduct/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/contributing/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/etiquette/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/project-goals/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/internals/binder/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/internals/joins/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/internals/optimization-strategies/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/internals/overview/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/internals/project-structure/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/internals/query-engine/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/internals/storage-engine/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/internals/implementations/memory_pool/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/internals/implementations/storage_io/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/set-up-guides/debian/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/set-up-guides/macos/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/set-up-guides/windows/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/topics/debug_logging/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/topics/dependencies/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/contributing/topics/testing/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/command-line-guide/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/configuration-guide/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/deployment-guide/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/get-started/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/overview/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/performance-monitoring/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/python-client/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/schema-evolution/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/security/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/ecosystem/hadro/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/ecosystem/mabel/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/ecosystem/mesos/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/ecosystem/orso/orso/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/external-standards/information-schema/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/external-standards/pep249/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/external-standards/sql92/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/external-standards/tpch/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/guides/_command-line-opteryx/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/guides/_gcp-and-opteryx/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/guides/_sqlite-and-opteryx/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/guides/bigquery-and-opteryx/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/guides/convert-csv-to-parquet/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/guides/execute-sql-on-csv/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/guides/mysql-and-opteryx/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/guides/pandas-and-opteryx/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/guides/polars-and-opteryx/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/guides/postgres-and-opteryx/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/guides/using-opteryx-with-jupyter/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/release-notes/change-log/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/get-started/release-notes/notices/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/adv-engine-configuration/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/adv-information-schema/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/adv-null-semantics/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/adv-query-optimization/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/adv-sample-data/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/adv-temp-tables/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/adv-time-travel/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/adv-working-with-ips/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/adv-working-with-lists/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/adv-working-with-structs/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/adv-working-with-timestamps/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/aggregates/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/data-types/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/expressions/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/functions/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/introduction/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/joins/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.18.0/sql-reference/statements/</loc>
-         <lastmod>2024-10-07</lastmod>
+         <lastmod>2024-10-15</lastmod>
     </url>
 </urlset>
