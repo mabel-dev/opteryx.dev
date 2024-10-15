@@ -1,6 +1,6 @@
-# Working with Lists
+# Working with Arrays
 
-A list is an ordered collection of zero or more `VARCHAR` values.
+An Array is an ordered collection of zero or more `VARCHAR` values.
 
 ## Actions
 
@@ -71,6 +71,12 @@ The combination of `IN UNNEST` allows a value to be tested for containment in a 
 SELECT *
   FROM $astronauts
  WHERE 'Apollo 11' IN UNNEST(missions)
+~~~
+
+#### Accessors
+
+~~~
+Array @? Array
 ~~~
 
 ### Transforms

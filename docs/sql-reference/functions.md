@@ -218,12 +218,16 @@ These are functions that are called similar to comparison operators:
 !!! function "_integer_ `^` _integer_ → _integer_"   
     Bitwise XOR
 
-## List Functions
+## Array Functions
 
-For more details, see [Working with Lists](../adv-working-with-lists/).
+For more details, see [Working with Arrays](../adv-working-with-lists/).
 
 !!! function "**array**: _array_`[`**index**: _numeric_`]` → _value_:octicons-dot-16:"  
     Return the **index**th element from **array**. 
+
+!!! function "**array**: _array_ `@>` **values**: _array_ → _boolean_"   
+    Return `true` if **array** contains any of the elements in **values**.   
+    _Related:_ `ARRAY_CONTAINS_ANY`   
 
 !!! function "`ARRAY_CONTAINS` (**array**: _array_, **value**) → _boolean_"  
     Return `true` if **array** contains **value**.  
@@ -231,7 +235,7 @@ For more details, see [Working with Lists](../adv-working-with-lists/).
     See also `ANY`
 
 !!! function "`ARRAY_CONTAINS_ANY` (**array**: _array_, **values**: _array_) → _boolean_"    
-    Return `true` if **array** contains any elements in **values**.
+    Return `true` if **array** contains any of the elements in **values**.
 
 !!! function "`ARRAY_CONTAINS_ALL` (**array**: _array_, **values**: _array_) → _boolean_"   
     Return `true` if **array** contains all of elements in **values**.
@@ -254,12 +258,16 @@ For more details, see [Working with Lists](../adv-working-with-lists/).
     Returns the number of elements in **array**.
 
 !!! function "`LIST_CONTAINS` (**array**: _array_, **value**) → _boolean_"  
+    **DEPRECATED**
     Alias of `ARRAY_CONTAINS`
 
 !!! function "`LIST_CONTAINS_ANY` (**array**: _array_, **values**: _array_) → _boolean_"    
+    **DEPRECATED**
     Alias of `ARRAY_CONTAINS_ANY`
+    _Related:_ `@>`
 
 !!! function "`LIST_CONTAINS_ALL` (**array**: _array_, **values**: _array_) → _boolean_"   
+    **DEPRECATED**
     Alias of `ARRAY_CONTAINS_ALL`
 
 !!! function "`SEARCH` (**array**: _array_, **value**) → _boolean_:octicons-dot-16:"  
