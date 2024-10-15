@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.18.0] - UNRELEASED
+## [0.18.0] - 2024-10-15
 
 ### Added
 
@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2040](https://github.com/mabel-dev/opteryx/issues/2040)] Additional items in `$statistics` table [@joocer](https://github.com/joocer)
 - [[#1984](https://github.com/mabel-dev/opteryx/issues/1984)] Reduce columns exposed by subqueries if not used out outer queries [@joocer](https://github.com/joocer)
 - [[#2043](https://github.com/mabel-dev/opteryx/issues/2043)] Statistics include when optimizations have been triggered [@joocer](https://github.com/joocer)
+- [[#1899](https://github.com/mabel-dev/opteryx/issues/1899)] Support `@>` for `ARRAY` containment [@joocer](https://github.com/joocer)
 
 ### Fixed
 
@@ -34,6 +35,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1990](https://github.com/mabel-dev/opteryx/issues/1990)] Flag `LIST_CONTAINS_ANY` and `LIST_CONTAINS_ALL` as Deprecated [@joocer](https://github.com/joocer)
 - [[#2013](https://github.com/mabel-dev/opteryx/issues/2013)] MemoryPool based on Python's multiprocessing buffer for storage [@joocer](https://github.com/joocer)
 - :octicons-alert-24: [[#2021](https://github.com/mabel-dev/opteryx/issues/2021)] Error raised when subqueries expose columns with duplicate names. [@joocer](https://github.com/joocer)
+- [[#2066](https://github.com/mabel-dev/opteryx/issues/2066)] Reduce materialization of `ARRAY` columns. [@joocer](https://github.com/joocer)
 
 ## [0.17.0] - 2024-09-05
 
