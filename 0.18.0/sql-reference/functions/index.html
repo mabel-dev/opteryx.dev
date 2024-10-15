@@ -1210,9 +1210,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#list-functions" class="md-nav__link">
+  <a href="#array-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      List Functions
+      Array Functions
     </span>
   </a>
   
@@ -2354,9 +2354,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#list-functions" class="md-nav__link">
+  <a href="#array-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      List Functions
+      Array Functions
     </span>
   </a>
   
@@ -2688,11 +2688,16 @@ Alias for <code>EXTRACT</code>(year FROM <strong>ts</strong>)</p>
 <p class="admonition-title"><em>integer</em> <code>^</code> <em>integer</em> → <em>integer</em></p>
 <p>Bitwise XOR</p>
 </div>
-<h2 id="list-functions">List Functions</h2>
-<p>For more details, see <a href="../adv-working-with-lists/">Working with Lists</a>.</p>
+<h2 id="array-functions">Array Functions</h2>
+<p>For more details, see <a href="../adv-working-with-lists/">Working with Arrays</a>.</p>
 <div class="admonition function">
 <p class="admonition-title"><strong>array</strong>: <em>array</em><code>[</code><strong>index</strong>: <em>numeric</em><code>]</code> → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
 <p>Return the <strong>index</strong>th element from <strong>array</strong>. </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><strong>array</strong>: <em>array</em> <code>@&gt;</code> <strong>values</strong>: <em>array</em> → <em>boolean</em></p>
+<p>Return <code>true</code> if <strong>array</strong> contains any of the elements in <strong>values</strong>. <br />
+<em>Related:</em> <code>ARRAY_CONTAINS_ANY</code>   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>ARRAY_CONTAINS</code> (<strong>array</strong>: <em>array</em>, <strong>value</strong>) → <em>boolean</em></p>
@@ -2702,7 +2707,7 @@ See also <code>ANY</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>ARRAY_CONTAINS_ANY</code> (<strong>array</strong>: <em>array</em>, <strong>values</strong>: <em>array</em>) → <em>boolean</em></p>
-<p>Return <code>true</code> if <strong>array</strong> contains any elements in <strong>values</strong>.</p>
+<p>Return <code>true</code> if <strong>array</strong> contains any of the elements in <strong>values</strong>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>ARRAY_CONTAINS_ALL</code> (<strong>array</strong>: <em>array</em>, <strong>values</strong>: <em>array</em>) → <em>boolean</em></p>
@@ -2732,15 +2737,19 @@ See also <code>ANY</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LIST_CONTAINS</code> (<strong>array</strong>: <em>array</em>, <strong>value</strong>) → <em>boolean</em></p>
-<p>Alias of <code>ARRAY_CONTAINS</code></p>
+<p><strong>DEPRECATED</strong>
+Alias of <code>ARRAY_CONTAINS</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LIST_CONTAINS_ANY</code> (<strong>array</strong>: <em>array</em>, <strong>values</strong>: <em>array</em>) → <em>boolean</em></p>
-<p>Alias of <code>ARRAY_CONTAINS_ANY</code></p>
+<p><strong>DEPRECATED</strong>
+Alias of <code>ARRAY_CONTAINS_ANY</code>
+<em>Related:</em> <code>@&gt;</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LIST_CONTAINS_ALL</code> (<strong>array</strong>: <em>array</em>, <strong>values</strong>: <em>array</em>) → <em>boolean</em></p>
-<p>Alias of <code>ARRAY_CONTAINS_ALL</code></p>
+<p><strong>DEPRECATED</strong>
+Alias of <code>ARRAY_CONTAINS_ALL</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SEARCH</code> (<strong>array</strong>: <em>array</em>, <strong>value</strong>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>

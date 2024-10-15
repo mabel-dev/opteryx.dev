@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-with-lists" class="md-skip">
+        <a href="#working-with-arrays" class="md-skip">
           Skip to content
         </a>
       
@@ -2319,8 +2319,8 @@
   
 
 
-<h1 id="working-with-lists">Working with Lists</h1>
-<p>A list is an ordered collection of zero or more <code>VARCHAR</code> values.</p>
+<h1 id="working-with-arrays">Working with Arrays</h1>
+<p>An Array is an ordered collection of zero or more <code>VARCHAR</code> values.</p>
 <h2 id="actions">Actions</h2>
 <h3 id="construct">Construct</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SPLIT(string)
@@ -2363,14 +2363,17 @@
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="s1">&#39;Apollo 11&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="k">UNNEST</span><span class="p">(</span><span class="n">missions</span><span class="p">)</span>
 </code></pre></div>
+<h4 id="accessors">Accessors</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Array @? Array
+</code></pre></div>
 <h3 id="transforms">Transforms</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>SORT
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>SORT
 </code></pre></div>
 <h2 id="converting-lists-to-relations">Converting Lists to Relations</h2>
 <h3 id="using-unnest">Using <code>UNNEST</code></h3>
 <p><code>UNNEST</code> allows you to create a single column table either as a list of literals, or from a column of LIST type in a dataset.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="k">UNNEST</span><span class="p">((</span><span class="k">True</span><span class="p">,</span><span class="w"> </span><span class="k">False</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Booleans</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="k">UNNEST</span><span class="p">((</span><span class="k">True</span><span class="p">,</span><span class="w"> </span><span class="k">False</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Booleans</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="limitations">Limitations</h2>
 <p>Lists have the following limitations</p>
