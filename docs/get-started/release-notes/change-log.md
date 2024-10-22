@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.19.0] - UNRELEASED
+
+### Added
+
+[[#2073](https://github.com/mabel-dev/opteryx/issues/2073)] Support for JSON path syntax `$.key`, for `@?` operator [@joocer](https://github.com/joocer)
+[[#1701](https://github.com/mabel-dev/opteryx/issues/1701)] Initial implementation of push down for `LIMIT` [@joocer](https://github.com/joocer)
+[[#2074](https://github.com/mabel-dev/opteryx/issues/2074)] Able to chain `->` and `->>` json accessors [@joocer](https://github.com/joocer)
+[[#2025](https://github.com/mabel-dev/opteryx/issues/2025)] Use `EXTRACT` and `SUBSTRING` with temporal clauses [@joocer](https://github.com/joocer)
+
 ## [0.18.0] - 2024-10-15
 
 ### Added

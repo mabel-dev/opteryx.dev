@@ -44,8 +44,8 @@ E051-08  | Correlation names in the `FROM` clause                    | unknown
 E051-09  | Rename columns in the `FROM` clause                       | unknown
 **E061** | **Basic predicates and search conditions**                | unknown
 E061-01  | Comparison predicate                                      | unknown
-E061-02  | `BETWEEN` predicate                                       | unknown
-E061-03  | `IN` predicate with list of values                        | unknown
+E061-02  | `BETWEEN` predicate                                       | yes
+E061-03  | `IN` predicate with list of values                        | yes
 E061-04  | `LIKE` predicate                                          | yes
 E061-05  | `LIKE` predicate: `ESCAPE` clause                         | unknown
 E061-06  | `NULL` predicate                                          | unknown
@@ -134,9 +134,9 @@ F031-16  | `DROP VIEW` statement: `RESTRICT` clause                  | n/a
 F031-19  | `REVOKE` statement: `RESTRICT` clause                     | unknown
 **F041** | **Basic joined table**                                    | unknown
 F041-01  | Inner join (but not necessarily the `INNER` keyword)      | unknown
-F041-02  | `INNER` keyword                                           | unknown
-F041-03  | `LEFT OUTER JOIN`                                         | unknown
-F041-04  | `RIGHT OUTER JOIN`                                        | unknown
+F041-02  | `INNER` keyword                                           | yes
+F041-03  | `LEFT OUTER JOIN`                                         | yes
+F041-04  | `RIGHT OUTER JOIN`                                        | yes
 F041-05  | Outer joins can be nested                                 | unknown
 F041-07  | The inner table in a left or right outer join can also be used in an inner join   | unknown
 F041-08  | All comparison operators are supported (rather than just `=`)                     | unknown
