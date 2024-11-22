@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
@@ -2387,7 +2387,7 @@
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">                      </span><span class="k">ON</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">                      </span><span class="k">USING</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">columns</span><span class="o">&gt;</span><span class="p">)</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">XOR</span><span class="w"> </span><span class="p">..</span><span class="w"> </span><span class="p">]</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="p">..]</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">       </span><span class="k">HAVING</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">XOR</span><span class="w"> </span><span class="p">..</span><span class="w"> </span><span class="p">]</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="p">..]</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="k">OFFSET</span><span class="w"> </span><span class="o">&lt;</span><span class="k">offset</span><span class="o">&gt;</span>
@@ -2452,10 +2452,10 @@
 <p><code>ORDER BY</code> expressions may use column numbers, however, this is not recommended for statements intended for reuse.</p>
 <h2 id="explain">EXPLAIN</h2>
 <p>Show the logical execution plan of a statement.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">EXPLAIN</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">EXPLAIN</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">ANALYZE</span><span class="w"> </span><span class="p">]</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">statement</span>
 </code></pre></div>
-<p>The <code>EXPLAIN</code> clause outputs a summary of the execution plan for the query in the <code>SELECT</code> statement.</p>
+<p>The <code>EXPLAIN</code> clause outputs a summary of the execution plan for the query in the <code>SELECT</code> statement. The <code>ANALYZE</code> modifier is used to execute the query and return additional information about the execution of the query.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The data returned by the <code>EXPLAIN</code> statement is intended for interactive usage only and the output format may change between releases. Applications should not depend on the output of the <code>EXPLAIN</code> statement.</p>
