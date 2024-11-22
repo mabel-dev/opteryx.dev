@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 [[#1701](https://github.com/mabel-dev/opteryx/issues/1701)] Initial implementation of push down for `LIMIT` [@joocer](https://github.com/joocer)
 [[#2074](https://github.com/mabel-dev/opteryx/issues/2074)] Able to chain `->` and `->>` json accessors [@joocer](https://github.com/joocer)
 [[#2025](https://github.com/mabel-dev/opteryx/issues/2025)] Use `EXTRACT` and `SUBSTRING` with temporal clauses [@joocer](https://github.com/joocer)
+[[#2105](https://github.com/mabel-dev/opteryx/issues/2105)] Support `LIKE ANY` and `ILIKE ANY` [@joocer](https://github.com/joocer)
 
 ### Fixed
 

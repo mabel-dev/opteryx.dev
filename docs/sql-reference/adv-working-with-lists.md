@@ -18,10 +18,10 @@ list[index]
 
 ### Testing
 
-#### ANY
+#### ANY (comparision)
 
 ~~~
-value <operator> ANY(column)
+value <operator> ANY (column)
 ~~~
 
 The `ANY` function is used to apply a filter to each item in an array, and returns `True` if any item in the array matches the condition.
@@ -33,6 +33,22 @@ SELECT *
 ~~~
 
 `ANY` supports the following operators: `=`, `!=`, `>`, `<`, `>=`, and `<=`. 
+
+#### ANY (similarity)
+
+~~~
+value column <operator> ANY (patterns)
+~~~
+
+The `ANY` modifier is used to perform a similarity search against all of the items in an array for each item in an array, and returns `True` is any item in the array matches the pattern.
+
+~~~sql
+SELECT *
+  FROM $astronauts
+ WHERE missions LIKE ANY ('Mercury%', 'Gemini%', 'Apollo%')
+~~~
+
+`ANY` supports the following operators: `LIKE`, `NOT LIKE`, `ILIKE`, `NOT ILIKE`
 
 #### ALL
 
