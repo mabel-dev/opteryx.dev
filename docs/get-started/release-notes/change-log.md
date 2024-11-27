@@ -20,6 +20,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2085](https://github.com/mabel-dev/opteryx/issues/2085)] LEFT/RIGHT side in a `LEFT JOIN` occassionally swapped. [@joocer](https://github.com/joocer)  
 - [[#2082](https://github.com/mabel-dev/opteryx/issues/2082)] Buffer Pool eviction puts reader into an invalid state [@joocer](https://github.com/joocer)
 - [[#2091](https://github.com/mabel-dev/opteryx/issues/2091)] Command Line interface fails with unhelpful errors [@joocer](https://github.com/joocer)
+- [[#2113](https://github.com/mabel-dev/opteryx/issues/2113)] Improve reliability of `NULLIF` function [@joocer](https://github.com/joocer)
+
 
 ## [0.18.0] - 2024-10-15
 
