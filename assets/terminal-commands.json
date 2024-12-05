@@ -1,0 +1,106 @@
+{
+    "newCommands": [
+        {
+            "line": "wget https://storage.googleapis.com/opteryx/space_missions/space_missions.parquet",
+            "timeout": 10,
+            "path": "~",
+            "shouldType": true
+        },
+        {
+            "line": "space_missions.parquet 100%[===============================>]  90.99K  --.-KB/s    in 0.04s",
+            "timeout": "10",
+            "path": "",
+            "shouldType": false
+        },
+        {
+            "line": "'space_missions.parquet' saved [93169/93169]",
+            "timeout": "10",
+            "path": "",
+            "shouldType": false
+        },
+        {
+            "line": "opteryx \"SELECT COUNT(*) FROM 'space_missions.parquet'\"",
+            "timeout": "250",
+            "path": "~",
+            "shouldType": true
+        },
+        {
+            "line": "",
+            "timeout": "0",
+            "path": "",
+            "shouldType": false
+        },
+        {
+            "line": "      COUNT(*) ",
+            "timeout": "0",
+            "path": "",
+            "shouldType": false
+        },
+        {
+            "line": "═════════════",
+            "timeout": "0",
+            "path": "",
+            "shouldType": false
+        },
+        {
+            "line": " 1        4630 ",
+            "timeout": "0",
+            "path": "",
+            "shouldType": false
+        },
+        {
+            "line": "[ 1 rows x 1 columns ] ( 0.242 seconds )",
+            "timeout": "0",
+            "path": "",
+            "shouldType": false
+        }
+    ],
+    "newSettings": {
+        "width": {
+            "value": 900,
+            "default": 700
+        },
+        "height": {
+            "value": 280,
+            "default": 300
+        },
+        "fontFamily": {
+            "value": "Courier Prime Regular"
+        },
+        "fontSize": {
+            "value": 15,
+            "default": 15
+        },
+        "typeWaitMs": {
+            "value": 30,
+            "default": 50
+        }
+    },
+    "newColors": {
+        "header": {
+            "text": "Header",
+            "color": "#334756",
+            "default": "#334756"
+        },
+        "leftBtn": {
+            "text": "Header left button",
+            "color": "tomato",
+            "default": "tomato"
+        },
+        "rightBtn": {
+            "text": "Header right button",
+            "color": "lime",
+            "default": "lime"
+        },
+        "path": {
+            "text": "Path",
+            "color": "#49FF00",
+            "default": "#49FF00"
+        },
+        "command": {
+            "text": "Command",
+            "color": "white",
+            "default": "white"
+        }
+    }
+}
