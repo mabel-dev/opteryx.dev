@@ -8,12 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-[[#2073](https://github.com/mabel-dev/opteryx/issues/2073)] Support for JSON path syntax `$.key`, for `@?` operator [@joocer](https://github.com/joocer)
-[[#1701](https://github.com/mabel-dev/opteryx/issues/1701)] Initial implementation of push down for `LIMIT` [@joocer](https://github.com/joocer)
-[[#2074](https://github.com/mabel-dev/opteryx/issues/2074)] Able to chain `->` and `->>` json accessors [@joocer](https://github.com/joocer)
-[[#2025](https://github.com/mabel-dev/opteryx/issues/2025)] Use `EXTRACT` and `SUBSTRING` with temporal clauses [@joocer](https://github.com/joocer)
-[[#2105](https://github.com/mabel-dev/opteryx/issues/2105)] Support `LIKE ANY` and `ILIKE ANY` [@joocer](https://github.com/joocer)
-[[#2111](https://github.com/mabel-dev/opteryx/issues/2111)] `x LIKE '%'` written to `x IS NOT NULL` [@joocer](https://github.com/joocer)
+- [[#2073](https://github.com/mabel-dev/opteryx/issues/2073)] Support for JSON path syntax `$.key`, for `@?` operator [@joocer](https://github.com/joocer)
+- [[#1701](https://github.com/mabel-dev/opteryx/issues/1701)] Initial implementation of push down for `LIMIT` [@joocer](https://github.com/joocer)
+- [[#2074](https://github.com/mabel-dev/opteryx/issues/2074)] Able to chain `->` and `->>` json accessors [@joocer](https://github.com/joocer)
+- [[#2025](https://github.com/mabel-dev/opteryx/issues/2025)] Use `EXTRACT` and `SUBSTRING` with temporal clauses [@joocer](https://github.com/joocer)
+- [[#2105](https://github.com/mabel-dev/opteryx/issues/2105)] Support `LIKE ANY` and `ILIKE ANY` [@joocer](https://github.com/joocer)
+- [[#2111](https://github.com/mabel-dev/opteryx/issues/2111)] `x LIKE '%'` written to `x IS NOT NULL` [@joocer](https://github.com/joocer)
 
 ### Fixed
 
@@ -21,7 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2082](https://github.com/mabel-dev/opteryx/issues/2082)] Buffer Pool eviction puts reader into an invalid state [@joocer](https://github.com/joocer)
 - [[#2091](https://github.com/mabel-dev/opteryx/issues/2091)] Command Line interface fails with unhelpful errors [@joocer](https://github.com/joocer)
 - [[#2113](https://github.com/mabel-dev/opteryx/issues/2113)] Improve reliability of `NULLIF` function [@joocer](https://github.com/joocer)
-
+- [[#2128](https://github.com/mabel-dev/opteryx/issues/2128)] GCS limited to 1000 files [@joocer](https://github.com/joocer)
 
 ## [0.18.0] - 2024-10-15
 
