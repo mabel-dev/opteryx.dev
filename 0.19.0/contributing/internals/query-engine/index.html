@@ -2416,7 +2416,7 @@
 <li>Small chunks are merged together (referred to as 'defragmentation') before activities which operate on the entire chunk-at-a-time (such as selections)</li>
 <li>Projections are pushed to the blob parser, either to prevent parsing of unwanted fields (Parquet), or before passing to the next operation</li>
 <li>A buffer pool is used to maintain an in-memory cache of blobs</li>
-<li>A shared blob cache can be used (e.g. memcached) to reduce reads to attached or remote storage</li>
+<li>A shared blob cache can be used (e.g. memcached, redis or valkey) to reduce reads to attached or remote storage</li>
 <li>An <a href="https://en.wikipedia.org/wiki/Page_replacement_algorithm#Variants_on_LRU">LRU-K</a> cache eviction strategy with a fixed eviction budget per query to help ensure effective use of the blob cache</li>
 <li>Aggressive pruning of date partitioned datasets</li>
 <li>SIMD and vectorized execution where available (via <a href="https://numpy.org/devdocs/reference/simd/index.html">Numpy</a> and <a href="https://arrow.apache.org/docs/format/Columnar.html">PyArrow</a>)</li>

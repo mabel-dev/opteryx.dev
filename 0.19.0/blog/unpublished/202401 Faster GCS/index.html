@@ -22,7 +22,7 @@
     
     
       
-        <title>Reducing GCS - Opteryx</title>
+        <title>Reducing GCS ReadTimes - Opteryx</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reducing-gcs" class="md-skip">
+        <a href="#reducing-gcs-readtimes" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reducing GCS
+              Reducing GCS ReadTimes
             
           </span>
         </div>
@@ -2204,10 +2204,10 @@
   
 
 
-<h1 id="reducing-gcs">Reducing GCS</h1>
+<h1 id="reducing-gcs-readtimes">Reducing GCS ReadTimes</h1>
 <p>When observing performance statistics for Opteryx one thing is clear, IO is the single largest contributor to query time; a simple query over a gigabytes of data can take 10s of seconds, with IO being over 90% of the execution time.</p>
 <p>Our exemplar user runs Opteryx on the Google Cloud Platform with the bulk of their data in buckets on GCS. This is a great low-cost platform and it holds terabytes of data which Opteryx is used to query.</p>
-<p>Seeing GCS access times were a significant part of the execution time, Opteryx implemented the ability to use Memcache or Redis as a cache, this is great and it brings the performance of reading blobs not far away from local spinning disk speeds.</p>
+<p>Seeing GCS access times were a significant part of the execution time, Opteryx implemented the ability to use Memcache, Redis or Valkey as a cache, this is great and it brings the performance of reading blobs not far away from local spinning disk speeds.</p>
 <p>But there's two key things this doesn't solve:
 1) Fresh or infrequently access blobs.
 2) Getting the list of blobs to read.</p>

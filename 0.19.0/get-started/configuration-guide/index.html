@@ -2261,7 +2261,9 @@ The maximum size of an item to store in the cache.</p>
 <p><code>MEMCACHED_SERVER</code><br />
 Address of Memcached server, in <code>IP:PORT</code> format.</p>
 <p><code>REDIS_CONNECTION</code>
-Redis connection string</p>
+Redis connection string.</p>
+<p><code>VALKEY_CONNECTION</code>
+Valkey URL connection string.</p>
 <h3 id="data-size-management-settings">Data Size Management Settings</h3>
 <p><code>INTERNAL_BATCH_SIZE</code>=500<br />
 Batch size for left-table of a join processes.</p>
@@ -2291,7 +2293,7 @@ Size of the rolling query log - if not set and a log location is set, 10 entries
 <h2 id="caching-for-blob-stores">Caching for Blob Stores</h2>
 <h3 id="read-cache">Read Cache</h3>
 <p>The observed bottleneck for query performance is almost always IO. It is not uncommon for 90% of the execution time is initial load of data - this can vary considerably by storage and query.</p>
-<p>The Read Cache currently can make use of either <a href="https://memcached.org/">Memcached</a> or <a href="https://redis.io/">Redis</a>.</p>
+<p>The Read Cache currently can make use of <a href="https://memcached.org/">Memcached</a>, <a href="https://redis.io/">Redis</a>, or <a href="https://valkey.io/">Valkey</a>.</p>
 <p>When your main storage is local disk, using a Read Cache is unlikely to provide significant performance improvement. However, when using remote storage, such as S3 or GCS, Read Cache can provide significant improvements. </p>
 <p>As will all optimization recommendations, test in your unique set of circumstances before assuming this to always be true.</p>
 <p>Read Cache is only used for Blob stores, and is not used for Document stores.</p>
