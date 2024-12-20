@@ -30,7 +30,10 @@ The maximum size of an item to store in the cache.
 Address of Memcached server, in `IP:PORT` format.
 
 `REDIS_CONNECTION`
-Redis connection string
+Redis connection string.
+
+`VALKEY_CONNECTION`
+Valkey URL connection string.
 
 ### Data Size Management Settings
 
@@ -75,7 +78,7 @@ The environment is the preferred location for secrets, although the engine will 
 
 The observed bottleneck for query performance is almost always IO. It is not uncommon for 90% of the execution time is initial load of data - this can vary considerably by storage and query.
 
-The Read Cache currently can make use of either [Memcached](https://memcached.org/) or [Redis](https://redis.io/).
+The Read Cache currently can make use of [Memcached](https://memcached.org/), [Redis](https://redis.io/), or [Valkey](https://valkey.io/).
 
 When your main storage is local disk, using a Read Cache is unlikely to provide significant performance improvement. However, when using remote storage, such as S3 or GCS, Read Cache can provide significant improvements. 
 

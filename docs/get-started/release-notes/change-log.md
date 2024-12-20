@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2025](https://github.com/mabel-dev/opteryx/issues/2025)] Use `EXTRACT` and `SUBSTRING` with temporal clauses [@joocer](https://github.com/joocer)
 - [[#2105](https://github.com/mabel-dev/opteryx/issues/2105)] Support `LIKE ANY` and `ILIKE ANY` [@joocer](https://github.com/joocer)
 - [[#2111](https://github.com/mabel-dev/opteryx/issues/2111)] `x LIKE '%'` written to `x IS NOT NULL` [@joocer](https://github.com/joocer)
+- [[#2133](https://github.com/mabel-dev/opteryx/issues/2133)] Add support for ValKey cache [@joocer](https://github.com/joocer)
 
 ### Fixed
 

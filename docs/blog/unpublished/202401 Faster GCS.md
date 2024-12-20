@@ -1,10 +1,10 @@
-# Reducing GCS
+# Reducing GCS ReadTimes
 
 When observing performance statistics for Opteryx one thing is clear, IO is the single largest contributor to query time; a simple query over a gigabytes of data can take 10s of seconds, with IO being over 90% of the execution time.
 
 Our exemplar user runs Opteryx on the Google Cloud Platform with the bulk of their data in buckets on GCS. This is a great low-cost platform and it holds terabytes of data which Opteryx is used to query.
 
-Seeing GCS access times were a significant part of the execution time, Opteryx implemented the ability to use Memcache or Redis as a cache, this is great and it brings the performance of reading blobs not far away from local spinning disk speeds.
+Seeing GCS access times were a significant part of the execution time, Opteryx implemented the ability to use Memcache, Redis or Valkey as a cache, this is great and it brings the performance of reading blobs not far away from local spinning disk speeds.
 
 But there's two key things this doesn't solve:
 1) Fresh or infrequently access blobs.

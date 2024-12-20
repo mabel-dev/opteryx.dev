@@ -68,7 +68,7 @@ The following features are build into the query engine to improve performance
 - Small chunks are merged together (referred to as 'defragmentation') before activities which operate on the entire chunk-at-a-time (such as selections)
 - Projections are pushed to the blob parser, either to prevent parsing of unwanted fields (Parquet), or before passing to the next operation
 - A buffer pool is used to maintain an in-memory cache of blobs
-- A shared blob cache can be used (e.g. memcached) to reduce reads to attached or remote storage
+- A shared blob cache can be used (e.g. memcached, redis or valkey) to reduce reads to attached or remote storage
 - An [LRU-K](https://en.wikipedia.org/wiki/Page_replacement_algorithm#Variants_on_LRU) cache eviction strategy with a fixed eviction budget per query to help ensure effective use of the blob cache
 - Aggressive pruning of date partitioned datasets
 - SIMD and vectorized execution where available (via [Numpy](https://numpy.org/devdocs/reference/simd/index.html) and [PyArrow](https://arrow.apache.org/docs/format/Columnar.html))
