@@ -25,6 +25,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2128](https://github.com/mabel-dev/opteryx/issues/2128)] GCS limited to 1000 files [@joocer](https://github.com/joocer)
 - [[#2134](https://github.com/mabel-dev/opteryx/issues/2134)] Nested JSON in NDJSON/JSONL incorrectly normalized [@joocer](https://github.com/joocer)
 
+### Changed
+
+- [[#2129](https://github.com/mabel-dev/opteryx/issues/2129)] Rewritten `LEFT ANTI JOIN` operator [@joocer](https://github.com/joocer)
+
 ## [0.18.0] - 2024-10-15
 
 ### Added
