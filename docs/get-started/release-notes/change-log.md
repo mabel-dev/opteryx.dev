@@ -30,6 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - [[#2129](https://github.com/mabel-dev/opteryx/issues/2129)] Rewritten `LEFT ANTI JOIN` operator [@joocer](https://github.com/joocer)
+- [[#2149](https://github.com/mabel-dev/opteryx/issues/2129)] `ANTI` and `SEMI` joins moved to their own operator [@joocer](https://github.com/joocer)
 
 ## [0.18.0] - 2024-10-15
 
