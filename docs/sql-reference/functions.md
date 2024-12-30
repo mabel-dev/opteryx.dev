@@ -392,7 +392,7 @@ Functions for examining and manipulating string values.
     _Related:_ `UPPER`, `TITLE`
 
 !!! function "`LPAD` (**string**: _varchar_, **width**: _integer_, **fill**: _char_) → _varchar_"   
-    Returns a string at least **width** characters wide, with **fill** used to pad the string, to the left, to fill to the required width.
+    Returns a string at least **width** characters wide, with **fill** used to pad the string, to the left, to fill to the required width.   
     _Related:_ `RPAD`
 
 !!! function "`LTRIM` (**str**: _varchar_) → _varchar_"    
