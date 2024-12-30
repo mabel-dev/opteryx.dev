@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2134](https://github.com/mabel-dev/opteryx/issues/2134)] Nested JSON in NDJSON/JSONL incorrectly normalized [@joocer](https://github.com/joocer)
 - [[#2144](https://github.com/mabel-dev/opteryx/issues/2144)] `NULLIF` doesn't warn `VARCHAR` and `BLOB` won't match [@joocer](https://github.com/joocer)
 - [[#2151](https://github.com/mabel-dev/opteryx/issues/2151)] Slow aggregations on calculations [@joocer](https://github.com/joocer)
-
+- [[#2159](https://github.com/mabel-dev/opteryx/issues/2159)] Added `IFNOTNULL` function [@joocer](https://github.com/joocer)
 
 ### Changed
 

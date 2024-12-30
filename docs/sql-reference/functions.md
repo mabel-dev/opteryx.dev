@@ -15,7 +15,6 @@ New functions for this version are annotated with the :octicons-star-16: icon.
     Alias for `CAST`(**any** AS BOOLEAN)   
 
 !!! function "`BLOB` (**varchar**: _varchar_) → _blob_"  
-    :octicons-star-16: **New in 0.14**   
     Cast **varchar** to **blob**, raises an error if cast is not possible.   
     _Note_: prefixing can also be used to define a literal blob string, `b'value'` is equivalent to `blob('value')`.   
 
@@ -353,12 +352,10 @@ Functions for examining and manipulating string values.
     Subscript operator, return the **index**th character from **str**. 
 
 !!! function "`ASCII` (**string**: _char_) → _integer_"   
-    :octicons-star-16: **New in 0.16**    
     Returns the ASCII code for a given character.  
     _Related:_ `CHAR`
 
 !!! function "`CHAR` (**code**: _integer_) → _char_"   
-    :octicons-star-16: **New in 0.16**    
     Returns the character for a given ASCII code.  
     _Related:_ `ASCII`
 
@@ -395,7 +392,6 @@ Functions for examining and manipulating string values.
     _Related:_ `UPPER`, `TITLE`
 
 !!! function "`LPAD` (**string**: _varchar_, **width**: _integer_, **fill**: _char_) → _varchar_"   
-    :octicons-star-16: **New in 0.16**    
     Returns a string at least **width** characters wide, with **fill** used to pad the string, to the left, to fill to the required width.
     _Related:_ `RPAD`
 
@@ -403,8 +399,7 @@ Functions for examining and manipulating string values.
     Remove leading whitespace from **str**.   
     _Related:_ `RTRIM`, `TRIM`
 
-!!! function "`MATCH` (**column**: _varchar_) `AGAINST` (**query**: _varchar_) → _boolean_"   
-    :octicons-star-16: **New in 0.15** :octicons-beaker-24:    
+!!! function "`MATCH` (**column**: _varchar_) `AGAINST` (**query**: _varchar_) → _boolean_"    
     Perform a fulltext search of **column** for the values in **query**.  
     _Note:_ Values in `$stop_words` are ignored.
 
@@ -412,7 +407,6 @@ Functions for examining and manipulating string values.
     Returns the starting position of the first instance of **substring** in **string**. Positions start with 1. If not found, 0 is returned.   
 
 !!! function "`REGEXP_REPLACE` (**str**: _varchar_, **pattern**: _varchar_, **replace**: _varchar_) → _varchar_"   
-    :octicons-star-16: **New in 0.15** :octicons-beaker-24:    
     Performs a replace based on regular expressions.  
 
 !!! function "`REVERSE` (**str**: _varchar_) → _varchar_"  
@@ -423,7 +417,6 @@ Functions for examining and manipulating string values.
     _Related:_ `LEFT`
 
 !!! function "`RPAD` (**string**: _varchar_, **width**: _integer_, **fill**: _char_) → _varchar_"   
-    :octicons-star-16: **New in 0.16**    
     Returns a string at least **width** characters wide, with **fill** used to pad the string, to the right, to fill to the required width.
     _Related:_ `LPAD`
 
@@ -475,21 +468,23 @@ Functions for examining and manipulating string values.
 
 For more details, see [Working with Structs](../adv-working-with-structs/).
 
-!!! function "_struct_ `->` _key_ → _value_:octicons-beaker-24: "  
-    :octicons-star-16: **New in 0.14**     
+!!! function "_struct_ `->` _key_ → _value_ "    
     Return the value for **key** from **object**.   
     Struct values can be `VARCHAR` or `BLOB` formatted JSON strings.
 
-!!! function "_struct_ `->>` _key_ → _varchar_:octicons-beaker-24: "  
-    :octicons-star-16: **New in 0.14**     
+!!! function "_struct_ `->>` _key_ → _varchar_ "   
     Return the value for **key** from **object**, non `NULL` values are cast to `VARCHAR`.   
     Struct values can be `VARCHAR` or `BLOB` formatted JSON strings.
     _Related:_ `->` operator
 
-!!! function "_struct_ `@?` _key_ → _value_:octicons-beaker-24: "  
-    :octicons-star-16: **New in 0.15**     
+!!! function "_struct_ `@?` _key_ → _value_ "   
     Return true if _struct_ contains the key _key_.   
     Struct values can be `VARCHAR` or `BLOB` formatted JSON strings.  
+
+!!! function "_struct_ `@?` _jsonpath_ → _value_:octicons-beaker-24: "  
+    :octicons-star-16: **New in 0.19** :octicons-beaker-24:     
+    Return true if _struct_ contains a value at _jsonpath_.   
+    Struct values can be `VARCHAR` or `BLOB` formatted JSON strings. 
 
 !!! function "**object**: _struct_`[`**key**: _varchar_`]` → _value_:octicons-dot-16:"  
     Subscript operator
@@ -498,8 +493,7 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
 !!! function "`GET` (**object**: _struct_, **key**: _varchar_) → _value_:octicons-dot-16:"  
     Alias of **object**`->`**key**    
 
-!!! function "`JSONB_OBJECT_KEYS` (**object**: _struct_) → _array_:octicons-dot-16:"  
-    :octicons-star-16: **New in 0.16**     
+!!! function "`JSONB_OBJECT_KEYS` (**object**: _struct_) → _array_:octicons-dot-16:"   
     Returnan array of the keys in a struct value.   
     Struct values can be `STRUCT` values, or `VARCHAR` or `BLOB` formatted JSON strings.   
 
@@ -533,8 +527,7 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     Return the first item from args which is not `null`.    
     _Related:_ `IFNULL`
 
-!!! function "`COSINE_SIMILARITY`  (**str**: _varchar_, **value**: _varchar_) → _double_"   
-    :octicons-star-16: **New in 0.15** :octicons-beaker-24:     
+!!! function "`COSINE_SIMILARITY`  (**str**: _varchar_, **value**: _varchar_) → _double_"     
     Perform an ad hoc cosine similarity comparison between **str** and **value**.   
     _Note:_ Values in `$stop_words` are ignored.
 
@@ -561,9 +554,14 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
 !!! function "`IIF` (**condition**, **true_value**, **false_value**) → _input type_"  
     Return the **true_value** if the condition evaluates to `True`, otherwise return the **false_value**.
 
+!!! function "`IFNOYNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _input type_"  
+    :octicons-star-16: **New in 0.19**   
+    Returns **check_expression** if not `null`, otherwise returns **replacement_value**.   
+    _Related:_ `IFNULL`   
+
 !!! function "`IFNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _input type_"  
-    Returns **check_expression** if not `null`, otherwise returns **replacement_value**.
-    _Related:_ `COALESCE` 
+    Returns **check_expression** if `null`, otherwise returns **replacement_value**.
+    _Related:_ `COALESCE`, `IFNOTNULL` 
 
 !!! function "`NORMAL` () → _numeric_"  
     Random number from a normal (Gaussian) distribution; distribution is centred at 0.0 and has a standard deviation of 1.0. Per record.
