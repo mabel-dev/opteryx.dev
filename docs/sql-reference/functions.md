@@ -560,7 +560,7 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     _Related:_ `IFNULL`   
 
 !!! function "`IFNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _input type_"  
-    Returns **check_expression** if `null`, otherwise returns **replacement_value**.
+    Returns **check_expression** if `null`, otherwise returns **replacement_value**.   
     _Related:_ `COALESCE`, `IFNOTNULL` 
 
 !!! function "`NORMAL` () → _numeric_"  
