@@ -257,16 +257,16 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
     Returns the number of elements in **array**.
 
 !!! function "`LIST_CONTAINS` (**array**: _array_, **value**) → _boolean_"  
-    **DEPRECATED**
+    **DEPRECATED**   
     Alias of `ARRAY_CONTAINS`
 
 !!! function "`LIST_CONTAINS_ANY` (**array**: _array_, **values**: _array_) → _boolean_"    
-    **DEPRECATED**
-    Alias of `ARRAY_CONTAINS_ANY`
+    **DEPRECATED**   
+    Alias of `ARRAY_CONTAINS_ANY`   
     _Related:_ `@>`
 
 !!! function "`LIST_CONTAINS_ALL` (**array**: _array_, **values**: _array_) → _boolean_"   
-    **DEPRECATED**
+    **DEPRECATED**   
     Alias of `ARRAY_CONTAINS_ALL`
 
 !!! function "`SEARCH` (**array**: _array_, **value**) → _boolean_:octicons-dot-16:"  
@@ -554,7 +554,7 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
 !!! function "`IIF` (**condition**, **true_value**, **false_value**) → _input type_"  
     Return the **true_value** if the condition evaluates to `True`, otherwise return the **false_value**.
 
-!!! function "`IFNOYNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _input type_"  
+!!! function "`IFNOTNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _input type_"  
     :octicons-star-16: **New in 0.19**   
     Returns **check_expression** if not `null`, otherwise returns **replacement_value**.   
     _Related:_ `IFNULL`   
