@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2111](https://github.com/mabel-dev/opteryx/issues/2111)] `x LIKE '%'` written to `x IS NOT NULL` [@joocer](https://github.com/joocer)
 - [[#2133](https://github.com/mabel-dev/opteryx/issues/2133)] Add support for ValKey cache [@joocer](https://github.com/joocer)
 - [[#1866](https://github.com/mabel-dev/opteryx/issues/1866)] Rewrite aggregegations on constants to literal values [@joocer](https://github.com/joocer)
+- [[#2159](https://github.com/mabel-dev/opteryx/issues/2159)] Added `IFNOTNULL` and `PASSTHRU` functions [@joocer](https://github.com/joocer)
 
 ### Fixed
 
@@ -27,7 +28,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2134](https://github.com/mabel-dev/opteryx/issues/2134)] Nested JSON in NDJSON/JSONL incorrectly normalized [@joocer](https://github.com/joocer)
 - [[#2144](https://github.com/mabel-dev/opteryx/issues/2144)] `NULLIF` doesn't warn `VARCHAR` and `BLOB` won't match [@joocer](https://github.com/joocer)
 - [[#2151](https://github.com/mabel-dev/opteryx/issues/2151)] Slow aggregations on calculations [@joocer](https://github.com/joocer)
-- [[#2159](https://github.com/mabel-dev/opteryx/issues/2159)] Added `IFNOTNULL` function [@joocer](https://github.com/joocer)
+- [[#2177](https://github.com/mabel-dev/opteryx/issues/2177)] Unable to determine type of nested identifiers [@joocer](https://github.com/joocer)
+- [[#2159](https://github.com/mabel-dev/opteryx/issues/2159)] Constant-folding wasn't always null-aware [@joocer](https://github.com/joocer)
+- [[#2180](https://github.com/mabel-dev/opteryx/issues/2180)] Parentheses in `ORDER BY` and `GROUP BY` clauses weren't handled [@joocer](https://github.com/joocer)
+- [[#2181](https://github.com/mabel-dev/opteryx/issues/2181)] Complex boolean functions weren't always null-aware [@joocer](https://github.com/joocer)
 
 ### Changed
 
