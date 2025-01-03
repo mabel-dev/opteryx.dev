@@ -23,13 +23,13 @@ jobs:
 
 
 #      keep five versions  
-      - run: mike delete "0.11.0"
-      - run: mike delete "0.12.0"
-      - run: mike delete "0.12.2"
+#      - run: mike delete "0.11.0"
+#      - run: mike delete "0.12.0"
+#      - run: mike delete "0.12.2"
 
 #      # this should match the version
-      - run: mike delete latest
-      - run: mike deploy -p "0.19.0" latest
-      - run: mike delete dev
+#      - run: mike delete latest
+#      - run: mike deploy -p "0.19.0" latest
+#      - run: mike delete dev
  
       - run: mike deploy -p "0.20.0" dev

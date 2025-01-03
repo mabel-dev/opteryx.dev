@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.20.0] - UNRELEASED
+
+### Fixed
+
+- [[#1954](https://github.com/mabel-dev/opteryx/issues/1954)] JSON Accessors rewritten for `literal = document->key` form. [@joocer](https://github.com/joocer) 
+
 ## [0.19.0] - 2025-01-02
 
 ### Added
