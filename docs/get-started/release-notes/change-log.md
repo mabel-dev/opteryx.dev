@@ -9,6 +9,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - [[#1954](https://github.com/mabel-dev/opteryx/issues/1954)] JSON Accessors rewritten for `literal = document->key` form. [@joocer](https://github.com/joocer) 
+- [[#2190](https://github.com/mabel-dev/opteryx/issues/2190)] [[clickbech](https://benchmark.clickhouse.com/)] Resolve failing queries (partial) [@joocer](https://github.com/joocer)
+
+### Changed
+
+- [[#2197](https://github.com/mabel-dev/opteryx/issues/2197)] [[clickbech](https://benchmark.clickhouse.com/)] Rewritten local file access routines [@joocer](https://github.com/joocer)
+- [[#1453](https://github.com/mabel-dev/opteryx/issues/1453)] Compiled code restructure [@joocer](https://github.com/joocer)
+- [[#2205](https://github.com/mabel-dev/opteryx/issues/2205)] Prefer [Abseil](https://abseil.io/) containers [@joocer](https://github.com/joocer)
+- [[#2202](https://github.com/mabel-dev/opteryx/issues/2197)] [[clickbech](https://benchmark.clickhouse.com/)] Allow local reads to use pyarrow multithreading [@joocer](https://github.com/joocer)
+
 
 ## [0.19.0] - 2025-01-02
 

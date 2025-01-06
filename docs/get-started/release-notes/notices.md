@@ -6,6 +6,7 @@ Opteryx, mesos, and orso are built on the shoulders of other great libraries and
 
 Library           | Inclusion Type    | Copyright            | Licence   
 :---------------- | :---------------- | :------------------- | :--------------- 
+[abseil-cpp](https://github.com/abseil/abseil-cpp)         | Integrated | 2017 [Abseil](https://abseil.io/#) | [Apache 2.0](https://github.com/abseil/abseil-cpp/blob/master/LICENSE)
 [cityhash](https://github.com/google/cityhash)             | Installed  | 2011 [Google](https://github.com/google) | [MIT](https://github.com/google/cityhash/blob/master/COPYING)  
 [cython](https://github.com/cython/cython)                 | Installed   |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
 [distogram](https://github.com/maki-nage/distogram)        | Integrated  | 2020 [Romain Picard](https://github.com/MainRo) | [MIT](https://github.com/maki-nage/distogram/blob/master/LICENSE.txt)
@@ -26,11 +27,11 @@ Inclusion Types in this table:
 
 - **Derived** components originated from this module but have undergone significant change.  
 - **Installed** components are installed from PyPI/Cargo.  
-- **Integrated** components have their source code (or significant parts of) included in the Opteryx codebase.  
+- **Integrated** components have their source code (or significant parts of) included in the Opteryx/Orso codebase.  
 
 This list does not include transitive dependencies nor is guaranteed to be complete. See the [dependency graph on GitHub](https://github.com/mabel-dev/opteryx/network/dependencies) for a more complete view of components used.
 
-Only integrated components have copyright information listed, and best efforts have been made to ensure this information is accurate. However, if the copyright information is crucial for your use-case, we recommend verifying it independently. Should you find any inaccuracies, please [raise them as issues](https://github.com/mabel-dev/opteryx/issues/new?assignees=joocer&labels=Bug+%F0%9F%AA%B2&template=bug_report.md&title=%F0%9F%AA%B2) for prompt remediation. 
+Only integrated components have copyright information listed, and best efforts have been made to ensure this information is accurate. If the copyright information is crucial for your use-case, we recommend verifying it independently. Should you find any inaccuracies, please [raise them as issues](https://github.com/mabel-dev/opteryx/issues/new?assignees=joocer&labels=Bug+%F0%9F%AA%B2&template=bug_report.md&title=%F0%9F%AA%B2) for correction. 
 
 Integrated components may differ from their original versions. While we generally do not note cosmetic changes (e.g. PEP8 formatting), any alterations or additions to functionality are documented in the code comments. For derived components, we do not provide individual change notes, as these parts of the codebase have usually undergone substantial modifications, making such annotations less meaningful.
 
