@@ -17,7 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1453](https://github.com/mabel-dev/opteryx/issues/1453)] Compiled code restructure [@joocer](https://github.com/joocer)
 - [[#2205](https://github.com/mabel-dev/opteryx/issues/2205)] Prefer [Abseil](https://abseil.io/) containers [@joocer](https://github.com/joocer)
 - [[#2202](https://github.com/mabel-dev/opteryx/issues/2197)] [[clickbech](https://benchmark.clickhouse.com/)] Allow local reads to use pyarrow multithreading [@joocer](https://github.com/joocer)
-
+- [[#2205](https://github.com/mabel-dev/opteryx/issues/2197)] Prefer [uv](https://github.com/astral-sh/uv) as package manager [@joocer](https://github.com/joocer)
 
 ## [0.19.0] - 2025-01-02
 
@@ -80,14 +80,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2039](https://github.com/mabel-dev/opteryx/issues/2039)] Over committing to buffer pool [@joocer](https://github.com/joocer)
 - [[#2034](https://github.com/mabel-dev/opteryx/pull/2034)] Improvements to `COUNT(*)` for parquet files [@joocer](https://github.com/joocer)
 - [[#2029](https://github.com/mabel-dev/opteryx/issues/2029)] Heap Sort sorts data twice in some situations [@joocer](https://github.com/joocer)
-- :octicons-alert-24: [[#2050](https://github.com/mabel-dev/opteryx/issues/2050)] `RANDOM_STRING` incorrectly invoked [@joocer](https://github.com/joocer)
+- [[#2050](https://github.com/mabel-dev/opteryx/issues/2050)] :octicons-alert-24: `RANDOM_STRING` incorrectly invoked [@joocer](https://github.com/joocer)
 - [[#2051](https://github.com/mabel-dev/opteryx/issues/2051)] `CASE` statements failed on `null` values [@joocer](https://github.com/joocer)
 
 ### Changed
 
 - [[#1990](https://github.com/mabel-dev/opteryx/issues/1990)] Flag `LIST_CONTAINS_ANY` and `LIST_CONTAINS_ALL` as Deprecated [@joocer](https://github.com/joocer)
 - [[#2013](https://github.com/mabel-dev/opteryx/issues/2013)] MemoryPool based on Python's multiprocessing buffer for storage [@joocer](https://github.com/joocer)
-- :octicons-alert-24: [[#2021](https://github.com/mabel-dev/opteryx/issues/2021)] Error raised when subqueries expose columns with duplicate names. [@joocer](https://github.com/joocer)
+- [[#2021](https://github.com/mabel-dev/opteryx/issues/2021)] :octicons-alert-24: Error raised when subqueries expose columns with duplicate names. [@joocer](https://github.com/joocer)
 - [[#2066](https://github.com/mabel-dev/opteryx/issues/2066)] Reduce materialization of `ARRAY` columns. [@joocer](https://github.com/joocer)
 
 ## [0.17.0] - 2024-09-05
