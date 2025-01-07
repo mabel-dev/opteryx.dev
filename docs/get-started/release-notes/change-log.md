@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#1954](https://github.com/mabel-dev/opteryx/issues/1954)] JSON Accessors rewritten for `literal = document->key` form. [@joocer](https://github.com/joocer) 
 - [[#2190](https://github.com/mabel-dev/opteryx/issues/2190)] [[clickbech](https://benchmark.clickhouse.com/)] Resolve failing queries (partial) [@joocer](https://github.com/joocer)
+- [[#2167](https://github.com/mabel-dev/opteryx/issues/2167)] Use [freezegun](https://github.com/spulec/freezegun) to reduce flaky tests [@joocer](https://github.com/joocer)
 
 ### Changed
 
