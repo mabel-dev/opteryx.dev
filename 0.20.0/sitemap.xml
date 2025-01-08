@@ -9,46 +9,6 @@
          <lastmod>2025-01-08</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.20.0/blog/202209-building-our-first-optimizer/</loc>
-         <lastmod>2025-01-08</lastmod>
-    </url>
-    <url>
-         <loc>https://opteryx.dev/0.20.0/blog/202309-v012-sneak-peak/</loc>
-         <lastmod>2025-01-08</lastmod>
-    </url>
-    <url>
-         <loc>https://opteryx.dev/0.20.0/blog/202404-supercharge-cassandra/</loc>
-         <lastmod>2025-01-08</lastmod>
-    </url>
-    <url>
-         <loc>https://opteryx.dev/0.20.0/blog/engineering/202406%20Clickbench/</loc>
-         <lastmod>2025-01-08</lastmod>
-    </url>
-    <url>
-         <loc>https://opteryx.dev/0.20.0/blog/unpublished/20220205%20Writing%20a%20Query%20Engine/</loc>
-         <lastmod>2025-01-08</lastmod>
-    </url>
-    <url>
-         <loc>https://opteryx.dev/0.20.0/blog/unpublished/202204%20Introduction%20to%20Query%20Engines/</loc>
-         <lastmod>2025-01-08</lastmod>
-    </url>
-    <url>
-         <loc>https://opteryx.dev/0.20.0/blog/unpublished/20221001%20Storage/</loc>
-         <lastmod>2025-01-08</lastmod>
-    </url>
-    <url>
-         <loc>https://opteryx.dev/0.20.0/blog/unpublished/202212%20Lessons%20Learnt%20so%20Far/</loc>
-         <lastmod>2025-01-08</lastmod>
-    </url>
-    <url>
-         <loc>https://opteryx.dev/0.20.0/blog/unpublished/202305-rewriting-the-planner/</loc>
-         <lastmod>2025-01-08</lastmod>
-    </url>
-    <url>
-         <loc>https://opteryx.dev/0.20.0/blog/unpublished/202401%20Faster%20GCS/</loc>
-         <lastmod>2025-01-08</lastmod>
-    </url>
-    <url>
          <loc>https://opteryx.dev/0.20.0/contributing/code-of-conduct/</loc>
          <lastmod>2025-01-08</lastmod>
     </url>
@@ -106,10 +66,6 @@
     </url>
     <url>
          <loc>https://opteryx.dev/0.20.0/contributing/set-up-guides/macos/</loc>
-         <lastmod>2025-01-08</lastmod>
-    </url>
-    <url>
-         <loc>https://opteryx.dev/0.20.0/contributing/set-up-guides/windows/</loc>
          <lastmod>2025-01-08</lastmod>
     </url>
     <url>
@@ -174,6 +130,10 @@
     </url>
     <url>
          <loc>https://opteryx.dev/0.20.0/get-started/ecosystem/orso/orso/</loc>
+         <lastmod>2025-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://opteryx.dev/0.20.0/get-started/external-standards/clickbench/</loc>
          <lastmod>2025-01-08</lastmod>
     </url>
     <url>
