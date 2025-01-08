@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2213](https://github.com/mabel-dev/opteryx/issues/2213)] Specialized buffer for collecting ints [@joocer](https://github.com/joocer)
 - [[#2185](https://github.com/mabel-dev/opteryx/issues/2185)] Initial support for [Iceberg](https://iceberg.apache.org/) catalogs [@joocer](https://github.com/joocer)
 - [[#2209](https://github.com/mabel-dev/opteryx/issues/2209)] Initial support for Excel (xlsx) files [@joocer](https://github.com/joocer)
-- [[#2223](https://github.com/mabel-dev/opteryx/issues/2223)] Avoid creating tables for simple `COUNT(*)` queries [@joocer](https://github.com/joocer)
+- [[#2223](https://github.com/mabel-dev/opteryx/issues/2223)] [[clickbech](https://benchmark.clickhouse.com/)] Avoid creating tables for simple `COUNT(*)` queries [@joocer](https://github.com/joocer)
 
 ### Fixed
 
