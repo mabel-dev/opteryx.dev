@@ -29,7 +29,6 @@ The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.
 OS                | Python 3.9 | Python 3.10 | Python 3.11 | Python 3.12 |
 ----------------- | :--------: | :---------: | :---------: | :---------: |
 MacOS (x86/Intel) | Partial    | Partial     | Partial     | Partial     |
-Windows (x86)     | Partial    | Partial     | Partial     | Partial     |
 Ubuntu (x86)      | Full       | Full        | Full        | Full        |
 Debian (ARM)      | Partial    | None        | None        | None        |
 
@@ -38,6 +37,7 @@ Debian (ARM)      | Partial    | None        | None        | None        |
 &emsp;**None** - there is no automated test for this configuration.  
 
 !!! Note
+    - Windows (x86) last supported version 0.19.0
     - Python 3.8 last supported version 0.11.0
     - PyPy regression suite fails due to issues with Apache Arrow.
     - MacOs (M1/M2/M3) is not included in the regression suite due to lack of support on the test platform, however there is known usage on this chipset on Python 3.11.
@@ -55,8 +55,7 @@ Environment       | Python Versions Supported
 Linux 64bit x86   | 3.9, 3.10, 3.11, 3.12
 Linux ARM         | build from source
 MacOS Intel       | 3.9, 3.10, 3.11, 3.12
-MacOS Apple (M)   | 3.11, 3.12
-Windows 64bit x86 | 3.9, 3.10, 3.11, 3.12
+MacOS Apple (M)   | 3.9, 3.10, 3.11, 3.12
 
 Opteryx is primarily developed on workstations running Python 3.11 (Debian x86, Raspian, and MacOS M2) and is known to be deployed in production environments running Python 3.9 and Python 3.11 on Debian. 
 

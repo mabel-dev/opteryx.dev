@@ -84,6 +84,7 @@ nav:
       - Python PEP249: get-started/external-standards/pep249.md
       - ANSI SQL-92: get-started/external-standards/sql92.md
       - TPC-H: get-started/external-standards/tpch.md
+      - Clickbench: get-started/external-standards/clickbench.md
 #      - Information Schema: get-started/external-standards/information-schema.md
     - Release Notes:
       - Change Log: get-started/release-notes/change-log.md
@@ -116,7 +117,6 @@ nav:
       - Set Up Guides:
         - Debian/Ubuntu: contributing/set-up-guides/debian.md
         - MacOS: contributing/set-up-guides/macos.md
-        - Windows: contributing/set-up-guides/windows.md
       - System Internals:
         - Project Structure: contributing/internals/project-structure.md
         - Query Engine: contributing/internals/query-engine.md
@@ -129,9 +129,4 @@ nav:
         - Debug Logging: contributing/topics/debug_logging.md
         - Dependency Management: contributing/topics/dependencies.md
         - Testing Approach: contributing/topics/testing.md
-  - BLOG:
-      - Year 2022:
-        - Building our first Optimizer: blog/202209-building-our-first-optimizer.md
-      - Year 2023:
-        - A Sneak Peek into v0.12: blog/202309-v012-sneak-peak.md
 
