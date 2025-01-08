@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - [[#2213](https://github.com/mabel-dev/opteryx/issues/2213)] Specialized buffer for collecting ints [@joocer](https://github.com/joocer)
+- [[#2185](https://github.com/mabel-dev/opteryx/issues/2185)] Initial support for [Iceberg](https://iceberg.apache.org/) catalogs [@joocer](https://github.com/joocer)
 
 ### Fixed
 
