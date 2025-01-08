@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.20.0] - UNRELEASED
 
+
+### Added
+
+- [[#2213](https://github.com/mabel-dev/opteryx/issues/2213)] Specialized buffer for collecting ints [@joocer](https://github.com/joocer)
+
 ### Fixed
 
 - [[#1954](https://github.com/mabel-dev/opteryx/issues/1954)] JSON Accessors rewritten for `literal = document->key` form. [@joocer](https://github.com/joocer) 
