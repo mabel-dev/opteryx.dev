@@ -25,6 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2205](https://github.com/mabel-dev/opteryx/issues/2205)] Prefer [Abseil](https://abseil.io/) containers [@joocer](https://github.com/joocer)
 - [[#2202](https://github.com/mabel-dev/opteryx/issues/2197)] [[clickbech](https://benchmark.clickhouse.com/)] Allow local reads to use pyarrow multithreading [@joocer](https://github.com/joocer)
 - [[#2205](https://github.com/mabel-dev/opteryx/issues/2197)] Prefer [uv](https://github.com/astral-sh/uv) as package manager [@joocer](https://github.com/joocer)
+- [[#2220](https://github.com/mabel-dev/opteryx/issues/2220)] Remove steps from `MATCH() AGAINST()` [@joocer](https://github.com/joocer)
 
 ## [0.19.0] - 2025-01-02
 
