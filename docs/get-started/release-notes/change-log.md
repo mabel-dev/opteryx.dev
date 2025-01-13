@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2209](https://github.com/mabel-dev/opteryx/issues/2209)] Initial support for Excel (xlsx) files [@joocer](https://github.com/joocer)
 - [[#2223](https://github.com/mabel-dev/opteryx/issues/2223)] [[clickbech](https://benchmark.clickhouse.com/)] Avoid creating tables for simple `COUNT(*)` queries [@joocer](https://github.com/joocer)
 - [[#2228](https://github.com/mabel-dev/opteryx/issues/2228)] Push `LIMIT` to Iceberg [@joocer](https://github.com/joocer)
+- [[#2215](https://github.com/mabel-dev/opteryx/issues/2215)] Create connector capability for colum statistics [@joocer](https://github.com/joocer)
 
 ### Fixed
 
@@ -32,6 +33,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2202](https://github.com/mabel-dev/opteryx/issues/2197)] [[clickbech](https://benchmark.clickhouse.com/)] Allow local reads to use pyarrow multithreading [@joocer](https://github.com/joocer)
 - [[#2205](https://github.com/mabel-dev/opteryx/issues/2197)] Prefer [uv](https://github.com/astral-sh/uv) as package manager [@joocer](https://github.com/joocer)
 - [[#2220](https://github.com/mabel-dev/opteryx/issues/2220)] Remove steps from `MATCH() AGAINST()` [@joocer](https://github.com/joocer)
+- [[#2233](https://github.com/mabel-dev/opteryx/issues/2233)] Bypass OS cache for disk access [@joocer](https://github.com/joocer)
 
 ## [0.19.0] - 2025-01-02
 
