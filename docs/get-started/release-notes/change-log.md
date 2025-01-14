@@ -18,6 +18,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2223](https://github.com/mabel-dev/opteryx/issues/2223)] [[clickbech](https://benchmark.clickhouse.com/)] Avoid creating tables for simple `COUNT(*)` queries [@joocer](https://github.com/joocer)
 - [[#2228](https://github.com/mabel-dev/opteryx/issues/2228)] Push `LIMIT` to Iceberg [@joocer](https://github.com/joocer)
 - [[#2215](https://github.com/mabel-dev/opteryx/issues/2215)] Create connector capability for colum statistics [@joocer](https://github.com/joocer)
+- [[#2234](https://github.com/mabel-dev/opteryx/issues/2234)] Capture column and relation statistics [@joocer](https://github.com/joocer)
+- [[#2241](https://github.com/mabel-dev/opteryx/issues/2241)] Initial implementation of correlated filtering [@joocer](https://github.com/joocer)
+- [[#2238](https://github.com/mabel-dev/opteryx/issues/2238)] Create row-estimates for multi-file datasets [@joocer](https://github.com/joocer)
 
 ### Fixed
 
