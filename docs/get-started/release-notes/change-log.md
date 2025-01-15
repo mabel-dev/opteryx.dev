@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1954](https://github.com/mabel-dev/opteryx/issues/1954)] JSON Accessors rewritten for `literal = document->key` form. [@joocer](https://github.com/joocer) 
 - [[#2190](https://github.com/mabel-dev/opteryx/issues/2190)] [[clickbech](https://benchmark.clickhouse.com/)] Resolve failing queries (partial) [@joocer](https://github.com/joocer)
 - [[#2167](https://github.com/mabel-dev/opteryx/issues/2167)] Use [freezegun](https://github.com/spulec/freezegun) to reduce flaky tests [@joocer](https://github.com/joocer)
+- [[#2247](https://github.com/mabel-dev/opteryx/issues/2247)] Non Existant SQL tables returned incorrect error [@joocer](https://github.com/joocer)
 
 ### Changed
 
@@ -37,6 +38,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2205](https://github.com/mabel-dev/opteryx/issues/2197)] Prefer [uv](https://github.com/astral-sh/uv) as package manager [@joocer](https://github.com/joocer)
 - [[#2220](https://github.com/mabel-dev/opteryx/issues/2220)] Remove steps from `MATCH() AGAINST()` [@joocer](https://github.com/joocer)
 - [[#2233](https://github.com/mabel-dev/opteryx/issues/2233)] Bypass OS cache for disk access [@joocer](https://github.com/joocer)
+- [[#2248](https://github.com/mabel-dev/opteryx/issues/2248)] Specialized operator for `LIKE '%x%'` conditions [@joocer](https://github.com/joocer)
 
 ## [0.19.0] - 2025-01-02
 

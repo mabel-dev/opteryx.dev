@@ -10,7 +10,7 @@ Query   | Modified | Pass   | Issue
 query1  | no       | yes    | -
 query2  | yes      | no     | [Multiway CROSS JOINs](https://github.com/mabel-dev/opteryx/issues/1438)
 query3  | no       | no     | [Multiway CROSS JOINs](https://github.com/mabel-dev/opteryx/issues/1438)
-query4  | no       | no     | [Support EXISTS](https://github.com/mabel-dev/opteryx/issues/538)
+query4  | yes      | yes    | [Support EXISTS](https://github.com/mabel-dev/opteryx/issues/538)
 query5  | no       | no     | [Multiway CROSS JOINs](https://github.com/mabel-dev/opteryx/issues/1438)
 query6  | no       | yes    | -
 query7  | no       | no     | [Multiway CROSS JOINs](https://github.com/mabel-dev/opteryx/issues/1438)
@@ -19,7 +19,7 @@ query9  | no       | no     | [Multiway CROSS JOINs](https://github.com/mabel-de
 query10 | no       | no     | [Multiway CROSS JOINs](https://github.com/mabel-dev/opteryx/issues/1438)
 query11 | yes      | no     | [Multiway CROSS JOINs](https://github.com/mabel-dev/opteryx/issues/1438)
 query12 | no       | no     | [TPC-H 12 failure](https://github.com/mabel-dev/opteryx/issues/1920)
-query13 | no       | no     | [Non-Equi JOINs](https://github.com/mabel-dev/opteryx/issues/1921)
+query13 | yes      | yes    | [Non-Equi JOINs](https://github.com/mabel-dev/opteryx/issues/1921)
 query14 | no       | no     | Temporal Clauses
 query15 | yes      | no     | [Multiway CROSS JOINs](https://github.com/mabel-dev/opteryx/issues/1438)
 query16 | no       | no     | [Implied Aliases](https://github.com/mabel-dev/opteryx/issues/1683) & [IN Subquery](https://github.com/mabel-dev/opteryx/issues/1361)
