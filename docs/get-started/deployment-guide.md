@@ -20,17 +20,19 @@ Opteryx balances memory consumption with performance, however, being able to pro
 
 ### Operating System Support
 
-**Recommended Operating System**: Ubuntu 20 (64bit)
+**Recommended Operating System**: Ubuntu 24 (64bit)
 
 Opteryx can be installed and deployed on a number of different platforms. It has heavy dependency on [Apache Arrow](https://arrow.apache.org/) and cannot be run on systems which do not support Arrow.
 
-The full regression suite is run on Ubuntu (Ubuntu 20.04) for Python versions 3.9, 3.10, 3.11, and 3.12. The below table shows regression suite coverage:
+The full regression suite is run on Ubuntu (Ubuntu 24) for Python versions 3.10, 3.11, and 3.12. The below table shows regression suite coverage:
 
-OS                | Python 3.9 | Python 3.10 | Python 3.11 | Python 3.12 |
------------------ | :--------: | :---------: | :---------: | :---------: |
-MacOS (x86/Intel) | Partial    | Partial     | Partial     | Partial     |
-Ubuntu (x86)      | Full       | Full        | Full        | Full        |
-Debian (ARM)      | Partial    | None        | None        | None        |
+OS                | Python 3.10 | Python 3.11 | Python 3.12 |
+----------------- | :---------: | :---------: | :---------: |
+MacOS (x86/Intel) | Partial     | Partial     | None        |
+MacOS (M-series)  | Partial     | Partial     | Partial     |
+Ubuntu (x86)      | Full        | Full        | Full        |
+Ubuntu (ARM)      | Partial     | Partial     | Partial     |
+
 
 &emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from Ubuntu Python 3.10 tests.  
 &emsp;**Partial** - some tests are excluded from the test suite or that some tests fail.  
@@ -39,9 +41,6 @@ Debian (ARM)      | Partial    | None        | None        | None        |
 !!! Note
     - Windows (x86) last supported version 0.19.0
     - Python 3.8 last supported version 0.11.0
-    - PyPy regression suite fails due to issues with Apache Arrow.
-    - MacOs (M1/M2/M3) is not included in the regression suite due to lack of support on the test platform, however there is known usage on this chipset on Python 3.11.
-    - Windows (ARM) is not included in the regression suite due to lack of support on the test platform.
     - Partial coverage is primarily due to testing platform constraints, not core-compatibility issues.
 
 ### Python Environment
@@ -92,6 +91,7 @@ Platform             | Connector Name           | Implementation
 AWS S3               | AwsS3Connector           | Blob/File Store
 Google Cloud Storage | GcpCloudStorageConnector | Blob/File Store
 Google FireStore     | GcpFireStoreConnector    | Document Store
+Apache Iceberg       | IcebergConnector         | Specialized
 Local Disk           | DiskConnector            | Blob/File Store
 MinIo                | AwsS3Connector           | Blob/File Store
 MongoDB *            | MongoDbConnector         | Document Store

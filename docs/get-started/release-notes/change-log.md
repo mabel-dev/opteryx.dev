@@ -21,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2234](https://github.com/mabel-dev/opteryx/issues/2234)] Capture column and relation statistics [@joocer](https://github.com/joocer)
 - [[#2241](https://github.com/mabel-dev/opteryx/issues/2241)] Initial implementation of correlated filtering [@joocer](https://github.com/joocer)
 - [[#2238](https://github.com/mabel-dev/opteryx/issues/2238)] Create row-estimates for multi-file datasets [@joocer](https://github.com/joocer)
+- [[#2253](https://github.com/mabel-dev/opteryx/issues/2253)] Ubuntu ARM included in CI test-suite [@joocer](https://github.com/joocer)
 
 ### Fixed
 

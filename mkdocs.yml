@@ -55,6 +55,8 @@ extra:
       link: https://github.com/mabel-dev/opteryx
     - icon: fontawesome/brands/python 
       link: https://pypi.org/project/opteryx/
+    - icon: fontawesome/brands/mastodon 
+      link: https://mastodon.social/@opteryx
 
 # Page tree
 nav:
@@ -66,6 +68,7 @@ nav:
     - Python API: get-started/python-client.md
     - Guides:
       - Use with Jupyter Notebooks: get-started/guides/using-opteryx-with-jupyter.md
+      - Iceberg Integration: get-started/guides/iceberg-and-opteryx.md
       - Pandas Integration: get-started/guides/pandas-and-opteryx.md
       - Polars Integration: get-started/guides/polars-and-opteryx.md
       - Connect to BigQuery: get-started/guides/bigquery-and-opteryx.md
