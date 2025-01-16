@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2190](https://github.com/mabel-dev/opteryx/issues/2190)] [[clickbech](https://benchmark.clickhouse.com/)] Resolve failing queries (partial) [@joocer](https://github.com/joocer)
 - [[#2167](https://github.com/mabel-dev/opteryx/issues/2167)] Use [freezegun](https://github.com/spulec/freezegun) to reduce flaky tests [@joocer](https://github.com/joocer)
 - [[#2247](https://github.com/mabel-dev/opteryx/issues/2247)] Non Existant SQL tables returned incorrect error [@joocer](https://github.com/joocer)
+- [[#2231](https://github.com/mabel-dev/opteryx/issues/2231)] Visibility Filters don't accept array literals [@joocer](https://github.com/joocer)
 
 ### Changed
 
