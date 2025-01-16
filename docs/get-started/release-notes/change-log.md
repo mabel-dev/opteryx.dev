@@ -41,6 +41,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2233](https://github.com/mabel-dev/opteryx/issues/2233)] Bypass OS cache for disk access [@joocer](https://github.com/joocer)
 - [[#2248](https://github.com/mabel-dev/opteryx/issues/2248)] Specialized operator for `LIKE '%x%'` conditions [@joocer](https://github.com/joocer)
 - [[#2252](https://github.com/mabel-dev/opteryx/issues/2252)] Streamline `DATE_TRUNC` function [@joocer](https://github.com/joocer)
+- [[#2251](https://github.com/mabel-dev/opteryx/issues/2251)] Specialized operator for `ILIKE '%x%'` conditions [@joocer](https://github.com/joocer)
 
 ## [0.19.0] - 2025-01-02
 
