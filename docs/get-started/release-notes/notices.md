@@ -9,7 +9,7 @@ Library           | Inclusion Type    | Copyright            | Licence
 [abseil-cpp](https://github.com/abseil/abseil-cpp)         | Integrated | 2017 [Abseil](https://abseil.io/#) | [Apache 2.0](https://github.com/abseil/abseil-cpp/blob/master/LICENSE)
 [cityhash](https://github.com/google/cityhash)             | Installed  | 2011 [Google](https://github.com/google) | [MIT](https://github.com/google/cityhash/blob/master/COPYING)  
 [cython](https://github.com/cython/cython)                 | Installed   |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
-[distogram](https://github.com/maki-nage/distogram)        | Integrated  | 2020 [Romain Picard](https://github.com/MainRo) | [MIT](https://github.com/maki-nage/distogram/blob/master/LICENSE.txt)
+[datafusion-sqlparser-rs](https://github.com/apache/datafusion-sqlparser-rs) | Installed |  | [Apache 2.0](https://github.com/apache/datafusion-sqlparser-rs/blob/main/LICENSE.TXT)
 [fuzzy](https://github.com/yougov/fuzzy)                   | Integrated  | [Jason R. Coombs](https://github.com/jaraco) | [MIT](https://github.com/yougov/fuzzy/blob/master/LICENSE)
 [mbleven](https://github.com/fujimotos/mbleven)            | Integrated  | 2018 [Fujimoto Seiji](https://github.com/fujimotos) | [Public Domain](https://github.com/fujimotos/mbleven/blob/master/LICENSE)
 [mysql-mimic](https://github.com/kelsin/mysql-mimic)       | Derived     | 2022 [Christopher Giroir](https://github.com/kelsin) | [MIT](https://github.com/kelsin/mysql-mimic/blob/main/LICENSE)
@@ -19,9 +19,7 @@ Library           | Inclusion Type    | Copyright            | Licence
 [pyarrow_ops](https://github.com/TomScheffers/pyarrow_ops) | Derived  | [TomScheffers](https://github.com/TomScheffers) (assumed) | [Apache 2.0](https://github.com/TomScheffers/pyarrow_ops/blob/main/LICENSE)
 [query-builder](https://death.andgravity.com/query-builder-how) | Integrated | 2021 [lemon24](https://github.com/lemon24) (assumed) | [BSD-3](https://github.com/lemon24/reader/blob/15121f667a6f2e388f0072a3fcd715f533883899/LICENSE)
 [sqloxide](https://github.com/wseaton/sqloxide)            | Integrated  | 2020 [Will Eaton](https://github.com/wseaton) | [MIT](https://github.com/wseaton/sqloxide/blob/master/LICENSE)
-[sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) | Installed |  | [Apache 2.0](https://github.com/sqlparser-rs/sqlparser-rs/blob/main/LICENSE.TXT)
-[travers](https://github.com/joocer/travers)               | Integrated  | 2023 [Justin Joyce](https://github.com/joocer)  | [Apache 2.0](https://github.com/joocer/travers/blob/main/LICENSE)
-[typer](https://github.com/tiangolo/typer)                 | Installed   |   | [MIT](https://github.com/tiangolo/typer/blob/master/LICENSE)
+[xxHash](https://github.com/Cyan4973/xxHash) | Integrated | 2023 [Yann Collet](https://github.com/Cyan4973) | [BSD-2](https://github.com/Cyan4973/xxHash/blob/dev/LICENSE)
 
 Inclusion Types in this table:
 
@@ -31,7 +29,9 @@ Inclusion Types in this table:
 
 This list does not include transitive dependencies nor is guaranteed to be complete. See the [dependency graph on GitHub](https://github.com/mabel-dev/opteryx/network/dependencies) for a more complete view of components used.
 
-Only integrated components have copyright information listed, and best efforts have been made to ensure this information is accurate. If the copyright information is crucial for your use-case, we recommend verifying it independently. Should you find any inaccuracies, please [raise them as issues](https://github.com/mabel-dev/opteryx/issues/new?assignees=joocer&labels=Bug+%F0%9F%AA%B2&template=bug_report.md&title=%F0%9F%AA%B2) for correction. 
+Only integrated components have copyright information listed, and best efforts have been made to ensure this information is accurate. 
+
+If the copyright or licence information is crucial for your use-case, we recommend verifying it independently. Should you find any inaccuracies, please [raise them as issues](https://github.com/mabel-dev/opteryx/issues/new?assignees=joocer&labels=Bug+%F0%9F%AA%B2&template=bug_report.md&title=%F0%9F%AA%B2) for correction. 
 
 Integrated components may differ from their original versions. While we generally do not note cosmetic changes (e.g. PEP8 formatting), any alterations or additions to functionality are documented in the code comments. For derived components, we do not provide individual change notes, as these parts of the codebase have usually undergone substantial modifications, making such annotations less meaningful.
 
