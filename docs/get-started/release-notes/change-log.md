@@ -25,6 +25,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2271](https://github.com/mabel-dev/opteryx/issues/2271)] Specialized simple aggregatros [@joocer](https://github.com/joocer)
 - [[#2266](https://github.com/mabel-dev/opteryx/issues/2266)] Prefilter `INNER JOIN` using a bloom filter [@joocer](https://github.com/joocer)
 - [[#2292](https://github.com/mabel-dev/opteryx/issues/2292)] Introduce new fuzzer - same query on different Connectors [@joocer](https://github.com/joocer)
+- [[#2303](https://github.com/mabel-dev/opteryx/issues/2303)] Column statistics for Iceberg [@joocer](https://github.com/joocer)
+
 
 ### Fixed
 
