@@ -24,6 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2253](https://github.com/mabel-dev/opteryx/issues/2253)] Ubuntu ARM included in CI test-suite [@joocer](https://github.com/joocer)
 - [[#2271](https://github.com/mabel-dev/opteryx/issues/2271)] Specialized simple aggregatros [@joocer](https://github.com/joocer)
 - [[#2266](https://github.com/mabel-dev/opteryx/issues/2266)] Prefilter `INNER JOIN` using a bloom filter [@joocer](https://github.com/joocer)
+- [[#2292](https://github.com/mabel-dev/opteryx/issues/2292)] Introduce new fuzzer - same query on different Connectors [@joocer](https://github.com/joocer)
 
 ### Fixed
 
@@ -34,6 +35,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2231](https://github.com/mabel-dev/opteryx/issues/2231)] Visibility Filters don't accept array literals [@joocer](https://github.com/joocer)
 - [[#2300](https://github.com/mabel-dev/opteryx/issues/2300)] Visibility Filters don't restrict when no filter provided [@joocer](https://github.com/joocer)
 - [[#2299](https://github.com/mabel-dev/opteryx/issues/2299)] Unable to sort by `DECIMAL` columns which contain null values [@joocer](https://github.com/joocer)
+- [[#2302](https://github.com/mabel-dev/opteryx/issues/2302)] [Fuzzer] `IS TRUE` isn't handled consistently by different connectors [@joocer](https://github.com/joocer)
 
 ### Changed
 
