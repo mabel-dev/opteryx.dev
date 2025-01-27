@@ -26,7 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2266](https://github.com/mabel-dev/opteryx/issues/2266)] Prefilter `INNER JOIN` using a bloom filter [@joocer](https://github.com/joocer)
 - [[#2292](https://github.com/mabel-dev/opteryx/issues/2292)] Introduce new fuzzer - same query on different Connectors [@joocer](https://github.com/joocer)
 - [[#2303](https://github.com/mabel-dev/opteryx/issues/2303)] [Iceberg] Column statistics for Iceberg [@joocer](https://github.com/joocer)
-
+- [[#2297](https://github.com/mabel-dev/opteryx/issues/2297)] Optimization killer questions to avoid execution [@joocer](https://github.com/joocer)
 
 ### Fixed
 
@@ -38,6 +38,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2300](https://github.com/mabel-dev/opteryx/issues/2300)] Visibility Filters don't restrict when no filter provided [@joocer](https://github.com/joocer)
 - [[#2299](https://github.com/mabel-dev/opteryx/issues/2299)] [Fuzzer] Unable to sort by `DECIMAL` columns which contain null values [@joocer](https://github.com/joocer)
 - [[#2302](https://github.com/mabel-dev/opteryx/issues/2302)] [Fuzzer] `IS TRUE` isn't handled consistently by different connectors [@joocer](https://github.com/joocer)
+- [[#2319](https://github.com/mabel-dev/opteryx/issues/2319)] `COUNT(*)` and `DISTINCT` optimizations conflict [@joocer](https://github.com/joocer)
+
 
 ### Changed
 
