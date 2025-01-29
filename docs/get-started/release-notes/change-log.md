@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### :octicons-alert-24: Removed
 
-- Windows Build
+- Windows Support
 
 ### Added
 
@@ -17,16 +17,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2209](https://github.com/mabel-dev/opteryx/issues/2209)] Initial support for Excel (xlsx) files [@joocer](https://github.com/joocer)
 - [[#2223](https://github.com/mabel-dev/opteryx/issues/2223)] [[Clickbench](https://benchmark.clickhouse.com/)] Avoid creating tables for simple `COUNT(*)` queries [@joocer](https://github.com/joocer)
 - [[#2228](https://github.com/mabel-dev/opteryx/issues/2228)] [Iceberg] Push `LIMIT` to Iceberg [@joocer](https://github.com/joocer)
-- [[#2215](https://github.com/mabel-dev/opteryx/issues/2215)] Create connector capability for colum statistics [@joocer](https://github.com/joocer)
+- [[#2215](https://github.com/mabel-dev/opteryx/issues/2215)] Create connector capability for column statistics [@joocer](https://github.com/joocer)
 - [[#2234](https://github.com/mabel-dev/opteryx/issues/2234)] Capture column and relation statistics [@joocer](https://github.com/joocer)
-- [[#2241](https://github.com/mabel-dev/opteryx/issues/2241)] Initial implementation of correlated filtering [@joocer](https://github.com/joocer)
+- [[#2241](https://github.com/mabel-dev/opteryx/issues/2241)] [Optimizer] Initial implementation of correlated filtering [@joocer](https://github.com/joocer)
 - [[#2238](https://github.com/mabel-dev/opteryx/issues/2238)] Create row-estimates for multi-file datasets [@joocer](https://github.com/joocer)
 - [[#2253](https://github.com/mabel-dev/opteryx/issues/2253)] [CI] Ubuntu ARM included in CI test-suite [@joocer](https://github.com/joocer)
-- [[#2271](https://github.com/mabel-dev/opteryx/issues/2271)] Specialized simple aggregatros [@joocer](https://github.com/joocer)
+- [[#2271](https://github.com/mabel-dev/opteryx/issues/2271)] Specialized simple aggregators [@joocer](https://github.com/joocer)
 - [[#2266](https://github.com/mabel-dev/opteryx/issues/2266)] Prefilter `INNER JOIN` using a bloom filter [@joocer](https://github.com/joocer)
 - [[#2292](https://github.com/mabel-dev/opteryx/issues/2292)] Introduce new fuzzer - same query on different Connectors [@joocer](https://github.com/joocer)
 - [[#2303](https://github.com/mabel-dev/opteryx/issues/2303)] [Iceberg] Column statistics for Iceberg [@joocer](https://github.com/joocer)
-- [[#2297](https://github.com/mabel-dev/opteryx/issues/2297)] Optimization killer questions to avoid execution [@joocer](https://github.com/joocer)
+- [[#2297](https://github.com/mabel-dev/opteryx/issues/2297)] [Optimizer] Optimization killer questions to avoid execution [@joocer](https://github.com/joocer)
+- [[#2332](https://github.com/mabel-dev/opteryx/issues/2332)] Introduce `r` string prefix to represent raw strings [@joocer](https://github.com/joocer)
 
 ### Fixed
 
@@ -36,10 +37,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2247](https://github.com/mabel-dev/opteryx/issues/2247)] Non Existant SQL tables returned incorrect error [@joocer](https://github.com/joocer)
 - [[#2231](https://github.com/mabel-dev/opteryx/issues/2231)] Visibility Filters don't accept array literals [@joocer](https://github.com/joocer)
 - [[#2300](https://github.com/mabel-dev/opteryx/issues/2300)] Visibility Filters don't restrict when no filter provided [@joocer](https://github.com/joocer)
-- [[#2299](https://github.com/mabel-dev/opteryx/issues/2299)] [Fuzzer] Unable to sort by `DECIMAL` columns which contain null values [@joocer](https://github.com/joocer)
+- [[#2299](https://github.com/mabel-dev/opteryx/issues/2299)] [Fuzzer] Unable to sort by `DECIMAL` columns which contain `NULL` values [@joocer](https://github.com/joocer)
 - [[#2302](https://github.com/mabel-dev/opteryx/issues/2302)] [Fuzzer] `IS TRUE` isn't handled consistently by different connectors [@joocer](https://github.com/joocer)
-- [[#2319](https://github.com/mabel-dev/opteryx/issues/2319)] `COUNT(*)` and `DISTINCT` optimizations conflict [@joocer](https://github.com/joocer)
-
+- [[#2319](https://github.com/mabel-dev/opteryx/issues/2319)] [Optimizer] `COUNT(*)` and `DISTINCT` optimizations conflict [@joocer](https://github.com/joocer)
 
 ### Changed
 
@@ -47,12 +47,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1453](https://github.com/mabel-dev/opteryx/issues/1453)] Compiled code restructure [@joocer](https://github.com/joocer)
 - [[#2205](https://github.com/mabel-dev/opteryx/issues/2205)] Prefer [Abseil](https://abseil.io/) containers [@joocer](https://github.com/joocer)
 - [[#2202](https://github.com/mabel-dev/opteryx/issues/2197)] [[Clickbench](https://benchmark.clickhouse.com/)] Allow local reads to use pyarrow multithreading [@joocer](https://github.com/joocer)
-- [[#2205](https://github.com/mabel-dev/opteryx/issues/2197)] Prefer [uv](https://github.com/astral-sh/uv) as package manager [@joocer](https://github.com/joocer)
+- [[#2205](https://github.com/mabel-dev/opteryx/issues/2197)] [CI] Prefer [uv](https://github.com/astral-sh/uv) as package manager [@joocer](https://github.com/joocer)
 - [[#2220](https://github.com/mabel-dev/opteryx/issues/2220)] Remove steps from `MATCH() AGAINST()` [@joocer](https://github.com/joocer)
 - [[#2233](https://github.com/mabel-dev/opteryx/issues/2233)] Bypass OS cache for disk access [@joocer](https://github.com/joocer)
-- [[#2248](https://github.com/mabel-dev/opteryx/issues/2248)] Specialized operator for `LIKE '%x%'` conditions [@joocer](https://github.com/joocer)
+- [[#2248](https://github.com/mabel-dev/opteryx/issues/2248)] [Optimizer] Specialized operator for `LIKE '%x%'` conditions [@joocer](https://github.com/joocer)
 - [[#2252](https://github.com/mabel-dev/opteryx/issues/2252)] Streamline `DATE_TRUNC` function [@joocer](https://github.com/joocer)
-- [[#2251](https://github.com/mabel-dev/opteryx/issues/2251)] Specialized operator for `ILIKE '%x%'` conditions [@joocer](https://github.com/joocer)
+- [[#2251](https://github.com/mabel-dev/opteryx/issues/2251)] [Optimizer] Specialized operator for `ILIKE '%x%'` conditions [@joocer](https://github.com/joocer)
 - [[#2279](https://github.com/mabel-dev/opteryx/issues/2279)] Performance improvements to bloom filter [@joocer](https://github.com/joocer)
 - [[#2312](https://github.com/mabel-dev/opteryx/issues/2312)] `DISTINCT` functions with prehashing don't rehash when adding to HashSet [@joocer](https://github.com/joocer)
 

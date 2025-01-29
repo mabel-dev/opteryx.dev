@@ -6,26 +6,27 @@ Opteryx, mesos, and orso are built on the shoulders of other great libraries and
 
 Library           | Inclusion Type    | Copyright            | Licence   
 :---------------- | :---------------- | :------------------- | :--------------- 
-[abseil-cpp](https://github.com/abseil/abseil-cpp)         | Integrated | 2017 [Abseil](https://abseil.io/#) | [Apache 2.0](https://github.com/abseil/abseil-cpp/blob/master/LICENSE)
-[cityhash](https://github.com/google/cityhash)             | Installed  | 2011 [Google](https://github.com/google) | [MIT](https://github.com/google/cityhash/blob/master/COPYING)  
-[cython](https://github.com/cython/cython)                 | Installed   |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
-[datafusion-sqlparser-rs](https://github.com/apache/datafusion-sqlparser-rs) | Installed |  | [Apache 2.0](https://github.com/apache/datafusion-sqlparser-rs/blob/main/LICENSE.TXT)
-[fuzzy](https://github.com/yougov/fuzzy)                   | Integrated  | [Jason R. Coombs](https://github.com/jaraco) | [MIT](https://github.com/yougov/fuzzy/blob/master/LICENSE)
-[mbleven](https://github.com/fujimotos/mbleven)            | Integrated  | 2018 [Fujimoto Seiji](https://github.com/fujimotos) | [Public Domain](https://github.com/fujimotos/mbleven/blob/master/LICENSE)
-[mysql-mimic](https://github.com/kelsin/mysql-mimic)       | Derived     | 2022 [Christopher Giroir](https://github.com/kelsin) | [MIT](https://github.com/kelsin/mysql-mimic/blob/main/LICENSE)
-[numpy](https://github.com/numpy/numpy)                    | Installed   |  | [BSD-3](https://github.com/numpy/numpy/blob/main/LICENSE.txt)
-[orjson](https://github.com/ijl/orjson)                    | Installed   |  | [Apache 2.0](https://github.com/ijl/orjson/blob/master/LICENSE-APACHE)
-[pyarrow](https://github.com/apache/arrow/)                | Installed   |  | [Apache 2.0](https://github.com/apache/arrow/blob/master/LICENSE.txt)
-[pyarrow_ops](https://github.com/TomScheffers/pyarrow_ops) | Derived  | [TomScheffers](https://github.com/TomScheffers) (assumed) | [Apache 2.0](https://github.com/TomScheffers/pyarrow_ops/blob/main/LICENSE)
-[query-builder](https://death.andgravity.com/query-builder-how) | Integrated | 2021 [lemon24](https://github.com/lemon24) (assumed) | [BSD-3](https://github.com/lemon24/reader/blob/15121f667a6f2e388f0072a3fcd715f533883899/LICENSE)
-[sqloxide](https://github.com/wseaton/sqloxide)            | Integrated  | 2020 [Will Eaton](https://github.com/wseaton) | [MIT](https://github.com/wseaton/sqloxide/blob/master/LICENSE)
-[xxHash](https://github.com/Cyan4973/xxHash) | Integrated | 2023 [Yann Collet](https://github.com/Cyan4973) | [BSD-2](https://github.com/Cyan4973/xxHash/blob/dev/LICENSE)
+[abseil-cpp](https://github.com/abseil/abseil-cpp)         | Vendored   | 2017 [Abseil](https://abseil.io/#) | [Apache 2.0](https://github.com/abseil/abseil-cpp/blob/master/LICENSE)
+[cityhash](https://github.com/google/cityhash)             | Dependency | 2011 [Google](https://github.com/google) | [MIT](https://github.com/google/cityhash/blob/master/COPYING)  
+[cython](https://github.com/cython/cython)                 | Dependency |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
+[datafusion-sqlparser-rs](https://github.com/apache/datafusion-sqlparser-rs) | Dependency |  | [Apache 2.0](https://github.com/apache/datafusion-sqlparser-rs/blob/main/LICENSE.TXT)
+[fuzzy](https://github.com/yougov/fuzzy)                   | Vendored   | [Jason R. Coombs](https://github.com/jaraco) | [MIT](https://github.com/yougov/fuzzy/blob/master/LICENSE)
+[mbleven](https://github.com/fujimotos/mbleven)            | Vendored   | 2018 [Fujimoto Seiji](https://github.com/fujimotos) | [Public Domain](https://github.com/fujimotos/mbleven/blob/master/LICENSE)
+[mysql-mimic](https://github.com/kelsin/mysql-mimic)       | Derived    | 2022 [Christopher Giroir](https://github.com/kelsin) | [MIT](https://github.com/kelsin/mysql-mimic/blob/main/LICENSE)
+[numpy](https://github.com/numpy/numpy)                    | Dependency |  | [BSD-3](https://github.com/numpy/numpy/blob/main/LICENSE.txt)
+[orjson](https://github.com/ijl/orjson)                    | Dependency |  | [Apache 2.0](https://github.com/ijl/orjson/blob/master/LICENSE-APACHE)
+[pyarrow](https://github.com/apache/arrow/)                | Dependency |  | [Apache 2.0](https://github.com/apache/arrow/blob/master/LICENSE.txt)
+[pyarrow_ops](https://github.com/TomScheffers/pyarrow_ops) | Derived    | [TomScheffers](https://github.com/TomScheffers) (assumed) | [Apache 2.0](https://github.com/TomScheffers/pyarrow_ops/blob/main/LICENSE)
+[query-builder](https://death.andgravity.com/query-builder-how) | Vendored | 2021 [lemon24](https://github.com/lemon24) (assumed) | [BSD-3](https://github.com/lemon24/reader/blob/15121f667a6f2e388f0072a3fcd715f533883899/LICENSE)
+[regex](https://github.com/mrabarnett/mrab-regex)          | Vendored   | 2020 [Matthew Barnett](https://github.com/mrabarnett) | [Apache 2.0](https://github.com/mrabarnett/mrab-regex/blob/hg/LICENSE.txt)
+[sqloxide](https://github.com/wseaton/sqloxide)            | Vendored   | 2020 [Will Eaton](https://github.com/wseaton) | [MIT](https://github.com/wseaton/sqloxide/blob/master/LICENSE)
+[xxHash](https://github.com/Cyan4973/xxHash)               | Vendored   | 2023 [Yann Collet](https://github.com/Cyan4973) | [BSD-2](https://github.com/Cyan4973/xxHash/blob/dev/LICENSE)
 
 Inclusion Types in this table:
 
 - **Derived** components originated from this module but have undergone significant change.  
-- **Installed** components are installed from PyPI/Cargo.  
-- **Integrated** components have their source code (or significant parts of) included in the Opteryx/Orso codebase.  
+- **Dependency** components are installed from PyPI/Cargo.  
+- **Vendored** components have their source code (or significant parts of) included in the Opteryx/Orso codebase.  
 
 This list does not include transitive dependencies nor is guaranteed to be complete. See the [dependency graph on GitHub](https://github.com/mabel-dev/opteryx/network/dependencies) for a more complete view of components used.
 
