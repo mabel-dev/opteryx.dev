@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2303](https://github.com/mabel-dev/opteryx/issues/2303)] [Iceberg] Column statistics for Iceberg [@joocer](https://github.com/joocer)
 - [[#2297](https://github.com/mabel-dev/opteryx/issues/2297)] [Optimizer] Optimization killer questions to avoid execution [@joocer](https://github.com/joocer)
 - [[#2332](https://github.com/mabel-dev/opteryx/issues/2332)] Introduce `r` string prefix to represent raw strings [@joocer](https://github.com/joocer)
+- [[#2216](https://github.com/mabel-dev/opteryx/issues/2216)] [Iceberg] Push predicates to Iceberg [@joocer](https://github.com/joocer)
 
 ### Fixed
 
@@ -39,7 +40,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2300](https://github.com/mabel-dev/opteryx/issues/2300)] Visibility Filters don't restrict when no filter provided [@joocer](https://github.com/joocer)
 - [[#2299](https://github.com/mabel-dev/opteryx/issues/2299)] [Fuzzer] Unable to sort by `DECIMAL` columns which contain `NULL` values [@joocer](https://github.com/joocer)
 - [[#2302](https://github.com/mabel-dev/opteryx/issues/2302)] [Fuzzer] `IS TRUE` isn't handled consistently by different connectors [@joocer](https://github.com/joocer)
-- [[#2319](https://github.com/mabel-dev/opteryx/issues/2319)] [Optimizer] `COUNT(*)` and `DISTINCT` optimizations conflict [@joocer](https://github.com/joocer)
 
 ### Changed
 
