@@ -32,14 +32,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- [[#1954](https://github.com/mabel-dev/opteryx/issues/1954)] JSON Accessors rewritten for `literal = document->key` form. [@joocer](https://github.com/joocer) 
+- [[#1954](https://github.com/mabel-dev/opteryx/issues/1954)] JSON Accessors rewritten to support `literal = document->key` form [@joocer](https://github.com/joocer) 
 - [[#2190](https://github.com/mabel-dev/opteryx/issues/2190)] [[Clickbench](https://benchmark.clickhouse.com/)] Resolve failing queries (partial) [@joocer](https://github.com/joocer)
-- [[#2167](https://github.com/mabel-dev/opteryx/issues/2167)] Use [freezegun](https://github.com/spulec/freezegun) to reduce flaky tests [@joocer](https://github.com/joocer)
+- [[#2167](https://github.com/mabel-dev/opteryx/issues/2167)] [CI] Use [freezegun](https://github.com/spulec/freezegun) to reduce flaky tests [@joocer](https://github.com/joocer)
 - [[#2247](https://github.com/mabel-dev/opteryx/issues/2247)] Non Existant SQL tables returned incorrect error [@joocer](https://github.com/joocer)
 - [[#2231](https://github.com/mabel-dev/opteryx/issues/2231)] Visibility Filters don't accept array literals [@joocer](https://github.com/joocer)
 - [[#2300](https://github.com/mabel-dev/opteryx/issues/2300)] Visibility Filters don't restrict when no filter provided [@joocer](https://github.com/joocer)
 - [[#2299](https://github.com/mabel-dev/opteryx/issues/2299)] [Fuzzer] Unable to sort by `DECIMAL` columns which contain `NULL` values [@joocer](https://github.com/joocer)
 - [[#2302](https://github.com/mabel-dev/opteryx/issues/2302)] [Fuzzer] `IS TRUE` isn't handled consistently by different connectors [@joocer](https://github.com/joocer)
+- [[#2340](https://github.com/mabel-dev/opteryx/issues/2340)] [Fuzzer] `!=` with `NULL` isn't handled correctly by all connectors [@joocer](https://github.com/joocer)
 
 ### Changed
 
