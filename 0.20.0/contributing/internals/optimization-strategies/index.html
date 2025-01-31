@@ -2262,7 +2262,7 @@
 <p>This optimization aims to reduce the work done to evaluate expressions by pre-evaluating expressions which don't rely on data from relations. This includes fixed constants (e.g. literals, <code>PI()</code>), variable constants (<code>current_time</code>) and variables.</p>
 <p>This optimization requires variables to be resolved so is run after the binder.</p>
 <p><strong>improvements</strong>
-- filters which evaluate to <code>FALSE</code> (when <code>AND</code>ed) should prune the scan(s) below it</p>
+- filters which evaluate to <code>false</code> (when <code>AND</code>ed) should prune the scan(s) below it</p>
 <h3 id="predicate-rewriter">Predicate Rewriter</h3>
 <p><strong>status</strong> implemented<br />
 <strong>goal</strong> faster implementations<br />

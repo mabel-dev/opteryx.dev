@@ -2364,11 +2364,11 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>FROM left_relation NATURAL JOIN right_relation
 </code></pre></div>
 <p>A <code>NATURAL JOIN</code> performs a similar join to an <code>INNER JOIN ... ON</code> where the join conditions are automatically determined as equals conditions between columns with the same names in the two relations. This is not recommended in queries supporting production systems as these queries are brittle, especially in situations where schemas may change.</p>
-<p>Performing a self <code>NATURAL JOIN</code> (the same relation for the left and right relations) removes rows which contain <code>NULL</code> values.</p>
+<p>Performing a self <code>NATURAL JOIN</code> (the same relation for the left and right relations) removes rows which contain <code>null</code> values.</p>
 <h2 id="left-join">LEFT JOIN</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>FROM left_relation LEFT [ OUTER ] JOIN right_relation ON condition
 </code></pre></div>
-<p>A <code>LEFT JOIN</code> returns all rows from the left relation, and rows from the right relation where there is a matching row, otherwise the fields for the right relation are populated with <code>NULL</code>.</p>
+<p>A <code>LEFT JOIN</code> returns all rows from the left relation, and rows from the right relation where there is a matching row, otherwise the fields for the right relation are populated with <code>null</code>.</p>
 <p><strong>Syntax</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">left_relation</span>
@@ -2381,7 +2381,7 @@
 <h2 id="full-join">FULL JOIN</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>FROM left_relation FULL [ OUTER ] JOIN right_relation ON condition
 </code></pre></div>
-<p>The <code>FULL JOIN</code> keyword returns all rows from the left relation, and all rows from the right relation. Where they have a matching value in the joining column, the rows will be aligned, otherwise the fields will be populated with <code>NULL</code>.</p>
+<p>The <code>FULL JOIN</code> keyword returns all rows from the left relation, and all rows from the right relation. Where they have a matching value in the joining column, the rows will be aligned, otherwise the fields will be populated with <code>null</code>.</p>
 <p><strong>Syntax</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">left_relation</span>
