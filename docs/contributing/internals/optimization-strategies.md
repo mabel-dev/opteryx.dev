@@ -81,7 +81,7 @@ This optimization aims to reduce the work done to evaluate expressions by pre-ev
 This optimization requires variables to be resolved so is run after the binder.
 
 **improvements**
-- filters which evaluate to `FALSE` (when `AND`ed) should prune the scan(s) below it
+- filters which evaluate to `false` (when `AND`ed) should prune the scan(s) below it
 
 ### Predicate Rewriter
 

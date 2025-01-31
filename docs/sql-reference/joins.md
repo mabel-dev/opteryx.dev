@@ -64,7 +64,7 @@ FROM left_relation NATURAL JOIN right_relation
 
 A `NATURAL JOIN` performs a similar join to an `INNER JOIN ... ON` where the join conditions are automatically determined as equals conditions between columns with the same names in the two relations. This is not recommended in queries supporting production systems as these queries are brittle, especially in situations where schemas may change.
 
-Performing a self `NATURAL JOIN` (the same relation for the left and right relations) removes rows which contain `NULL` values.
+Performing a self `NATURAL JOIN` (the same relation for the left and right relations) removes rows which contain `null` values.
 
 ## LEFT JOIN
 
@@ -72,7 +72,7 @@ Performing a self `NATURAL JOIN` (the same relation for the left and right relat
 FROM left_relation LEFT [ OUTER ] JOIN right_relation ON condition
 ~~~
 
-A `LEFT JOIN` returns all rows from the left relation, and rows from the right relation where there is a matching row, otherwise the fields for the right relation are populated with `NULL`.
+A `LEFT JOIN` returns all rows from the left relation, and rows from the right relation where there is a matching row, otherwise the fields for the right relation are populated with `null`.
 
 **Syntax**
 
@@ -95,7 +95,7 @@ A `RIGHT JOIN` is the same as a `LEFT JOIN` with the relations swapped.
 FROM left_relation FULL [ OUTER ] JOIN right_relation ON condition
 ~~~
 
-The `FULL JOIN` keyword returns all rows from the left relation, and all rows from the right relation. Where they have a matching value in the joining column, the rows will be aligned, otherwise the fields will be populated with `NULL`.
+The `FULL JOIN` keyword returns all rows from the left relation, and all rows from the right relation. Where they have a matching value in the joining column, the rows will be aligned, otherwise the fields will be populated with `null`.
 
 **Syntax**
 

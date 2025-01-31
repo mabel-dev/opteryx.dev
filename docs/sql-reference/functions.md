@@ -477,7 +477,7 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     Struct values can be `VARCHAR` or `BLOB` formatted JSON strings.
 
 !!! function "_struct_ `->>` _key_ → _varchar_ "   
-    Return the value for **key** from **object**, non `NULL` values are cast to `VARCHAR`.   
+    Return the value for **key** from **object**, non `null` values are cast to `VARCHAR`.   
     Struct values can be `VARCHAR` or `BLOB` formatted JSON strings.
     _Related:_ `->` operator
 

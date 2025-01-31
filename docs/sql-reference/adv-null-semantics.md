@@ -5,6 +5,7 @@ Most comparisons to `null` return `null`. Exceptions are generally in functions 
 When the outcome of a comparison is `null`, this will be coerced to `false` when used in a filter (`WHERE` or `HAVING`) but return as `null` in a `SELECT` statement.
 
 To demonstrate, first a `null` comparison in a `SELECT` statement:
+
 ~~~sql
 SELECT name = null
  FROM $planets;
@@ -46,3 +47,6 @@ Also, returns an empty set.
 
 !!! note
     `null` comparison returning `null` holds true even for `null = null`. Do not test for null using an equals condition, use `IS NULL`.
+
+!!! note
+    A column which contains `null` values will return these `null`s as matches to a `!=` comparison, e.g. `WHERE name != 'bob'` will include rows with `null` in the name column.
