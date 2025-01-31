@@ -25,6 +25,10 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 !!! function "`INT` (**num**: _numeric_) → _numeric_"  
     Alias for `INTEGER`
 
+!!! function "`HUMANIZE` (**num**: _numeric_) → _varchar_"     
+    :octicons-star-16: **New in 0.20** :octicons-beaker-24:    
+    Convert large numbers to forms easier for humans to read.
+
 !!! function "`INTEGER` (**num**: _numeric_) → _numeric_"  
     Convert **num** to an integer.   
     `INTEGER` is a psuedo-type, `CAST` is not supported and values may be coerced to `NUMERIC`.
