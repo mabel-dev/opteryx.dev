@@ -31,7 +31,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2216](https://github.com/mabel-dev/opteryx/issues/2216)] [Iceberg] Push predicates to Iceberg [@joocer](https://github.com/joocer)
 - [[#2330](https://github.com/mabel-dev/opteryx/issues/2330)] Add `HUMANIZE` function [@joocer](https://github.com/joocer)
 
-
 ### Fixed
 
 - [[#1954](https://github.com/mabel-dev/opteryx/issues/1954)] JSON Accessors rewritten to support `literal = document->key` form [@joocer](https://github.com/joocer) 
@@ -43,6 +42,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2299](https://github.com/mabel-dev/opteryx/issues/2299)] [Fuzzer] Unable to sort by `DECIMAL` columns which contain `NULL` values [@joocer](https://github.com/joocer)
 - [[#2302](https://github.com/mabel-dev/opteryx/issues/2302)] [Fuzzer] `IS TRUE` isn't handled consistently by different connectors [@joocer](https://github.com/joocer)
 - [[#2340](https://github.com/mabel-dev/opteryx/issues/2340)] [Fuzzer] `!=` with `NULL` isn't handled correctly by all connectors [@joocer](https://github.com/joocer)
+- [[#2343](https://github.com/mabel-dev/opteryx/issues/2343)] [Fuzzer] `IS TRUE` isn't handled consistently by different connectors [@joocer](https://github.com/joocer)
 
 ### Changed
 
