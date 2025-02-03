@@ -58,6 +58,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2251](https://github.com/mabel-dev/opteryx/issues/2251)] [Optimizer] Specialized operator for `ILIKE '%x%'` conditions [@joocer](https://github.com/joocer)
 - [[#2279](https://github.com/mabel-dev/opteryx/issues/2279)] Performance improvements to bloom filter [@joocer](https://github.com/joocer)
 - [[#2312](https://github.com/mabel-dev/opteryx/issues/2312)] `DISTINCT` functions with prehashing don't rehash when adding to HashSet [@joocer](https://github.com/joocer)
+- [[#2346](https://github.com/mabel-dev/opteryx/issues/2346)] Compiled function for `IN` set containment testing [@joocer](https://github.com/joocer)
 
 ## [0.19.0] - 2025-01-02
 
