@@ -30,6 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2332](https://github.com/mabel-dev/opteryx/issues/2332)] Introduce `r` string prefix to represent raw strings [@joocer](https://github.com/joocer)
 - [[#2216](https://github.com/mabel-dev/opteryx/issues/2216)] [Iceberg] Push predicates to Iceberg [@joocer](https://github.com/joocer)
 - [[#2330](https://github.com/mabel-dev/opteryx/issues/2330)] Add `HUMANIZE` function [@joocer](https://github.com/joocer)
+- [[#2293](https://github.com/mabel-dev/opteryx/issues/2293)] [Optimizer] Rewrite `CASE` statements to `IFNULL` where possible [@joocer](https://github.com/joocer)
 
 ### Fixed
 
