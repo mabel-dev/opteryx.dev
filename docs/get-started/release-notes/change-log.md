@@ -33,7 +33,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2293](https://github.com/mabel-dev/opteryx/issues/2293)] [Optimizer] Rewrite `CASE` statements to `IFNULL` where possible [@joocer](https://github.com/joocer)
 - [[#2357](https://github.com/mabel-dev/opteryx/issues/2357)] Prefer nested loop join for small relations [@joocer](https://github.com/joocer)
 
-
 ### Fixed
 
 - [[#1954](https://github.com/mabel-dev/opteryx/issues/1954)] JSON Accessors rewritten to support `literal = document->key` form [@joocer](https://github.com/joocer) 
