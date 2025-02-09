@@ -62,6 +62,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2312](https://github.com/mabel-dev/opteryx/issues/2312)] `DISTINCT` functions with prehashing don't rehash when adding to HashSet [@joocer](https://github.com/joocer)
 - [[#2346](https://github.com/mabel-dev/opteryx/issues/2346)] Compiled function for `IN` set containment testing [@joocer](https://github.com/joocer)
 - [[#2361](https://github.com/mabel-dev/opteryx/issues/2361)] Split `list_ops` to function per file [@joocer](https://github.com/joocer)
+- [[#2356](https://github.com/mabel-dev/opteryx/issues/2356)] [Parser] Create an Opteryx dialect for [sqlparser-rs](https://github.com/apache/datafusion-sqlparser-rs) [@joocer](https://github.com/joocer)
+- [[#2376](https://github.com/mabel-dev/opteryx/issues/2376)] [Parser] Support hyphens in identifier names [@joocer](https://github.com/joocer)
+- [[#2327](https://github.com/mabel-dev/opteryx/pull/2327)] Updated [sqlparser-rs](https://github.com/apache/datafusion-sqlparser-rs) to version 0.54.0 [dependabot](https://github.com/apps/dependabot) 
 
 ## [0.19.0] - 2025-01-02
 
