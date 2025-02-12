@@ -8,7 +8,7 @@ Retrieve rows from zero or more relations.
 
 ~~~sql
 [ statement UNION [ ALL ] ... ]
-SELECT [ DISTINCT [ ON (<columns>) ] ] <expression> [, ..]
+SELECT [ DISTINCT [ ON (<columns>) ] ] <expression> [, ..] [EXCEPT (<columns>)]
   FROM <relation> [AS <alias>]
    FOR <period>
        [ INNER ] JOIN <relation> | <function> | (<subquery>)
@@ -41,10 +41,15 @@ The default behaviour of the `UNION` class is to deduplicate rows, to return all
 ~~~
 SELECT [ DISTINCT [ ON (columns )]] expression [, ...]
 ~~~
+~~~
+SELECT * EXCEPT (column[, ... ])
+~~~
 
 The `SELECT` clause specifies the list of columns that will be returned by the query. While it appears first in the clause, logically the expressions here are executed after most other clauses. The `SELECT` clause can contain arbitrary expressions that transform the output, as well as aggregate functions.
 
 The `DISTINCT` modifier is specified, only unique rows are included in the result set. In this case, each output column must be of a type that allows comparison. `DISTINCT ON ()` will perform a distinct on the specified columns and select one value for other columns. 
+
+`EXCEPT` can be used to list columns to exclude from results.
 
 ### FROM / JOIN clauses
 

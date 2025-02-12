@@ -47,6 +47,3 @@ Also, returns an empty set.
 
 !!! note
     `null` comparison returning `null` holds true even for `null = null`. Do not test for null using an equals condition, use `IS NULL`.
-
-!!! note
-    A column which contains `null` values will return these `null`s as matches to a `!=` comparison, e.g. `WHERE name != 'bob'` will include rows with `null` in the name column.

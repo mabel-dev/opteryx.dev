@@ -17,8 +17,8 @@ Library           | Inclusion Type    | Copyright            | Licence
 [orjson](https://github.com/ijl/orjson)                    | Dependency |  | [Apache 2.0](https://github.com/ijl/orjson/blob/master/LICENSE-APACHE)
 [pyarrow](https://github.com/apache/arrow/)                | Dependency |  | [Apache 2.0](https://github.com/apache/arrow/blob/master/LICENSE.txt)
 [pyarrow_ops](https://github.com/TomScheffers/pyarrow_ops) | Derived    | [TomScheffers](https://github.com/TomScheffers) (assumed) | [Apache 2.0](https://github.com/TomScheffers/pyarrow_ops/blob/main/LICENSE)
+[pysimdjson](https://github.com/TkTech/pysimdjson)         | Vendored   | 2019 [Tyler Kennedy](https://github.com/TkTech) | [Apache 2.0](https://github.com/TkTech/pysimdjson/blob/master/LICENSE)
 [query-builder](https://death.andgravity.com/query-builder-how) | Vendored | 2021 [lemon24](https://github.com/lemon24) (assumed) | [BSD-3](https://github.com/lemon24/reader/blob/15121f667a6f2e388f0072a3fcd715f533883899/LICENSE)
-[regex](https://github.com/mrabarnett/mrab-regex)          | Vendored   | 2020 [Matthew Barnett](https://github.com/mrabarnett) | [Apache 2.0](https://github.com/mrabarnett/mrab-regex/blob/hg/LICENSE.txt)
 [sqloxide](https://github.com/wseaton/sqloxide)            | Vendored   | 2020 [Will Eaton](https://github.com/wseaton) | [MIT](https://github.com/wseaton/sqloxide/blob/master/LICENSE)
 [xxHash](https://github.com/Cyan4973/xxHash)               | Vendored   | 2023 [Yann Collet](https://github.com/Cyan4973) | [BSD-2](https://github.com/Cyan4973/xxHash/blob/dev/LICENSE)
 
