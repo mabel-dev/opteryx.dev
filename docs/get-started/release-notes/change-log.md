@@ -31,8 +31,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2216](https://github.com/mabel-dev/opteryx/issues/2216)] [Iceberg] Push predicates to Iceberg [@joocer](https://github.com/joocer)
 - [[#2330](https://github.com/mabel-dev/opteryx/issues/2330)] Add `HUMANIZE` function [@joocer](https://github.com/joocer)
 - [[#2293](https://github.com/mabel-dev/opteryx/issues/2293)] [Optimizer] Rewrite `CASE` statements to `IFNULL` where possible [@joocer](https://github.com/joocer)
+<<<<<<< HEAD
 - [[#2179](https://github.com/mabel-dev/opteryx/issues/2179)] Python 3.13 builds [@joocer](https://github.com/joocer)
 - [[#2391](https://github.com/mabel-dev/opteryx/issues/2391)] Vendor [pysimdjson](https://github.com/TkTech/pysimdjson) [@joocer](https://github.com/joocer)
+=======
+- [[#2357](https://github.com/mabel-dev/opteryx/issues/2357)] Prefer nested loop join for small relations [@joocer](https://github.com/joocer)
+- [[#2372](https://github.com/mabel-dev/opteryx/issues/2372)] Add support from `SELECT * EXCEPT` [@joocer](https://github.com/joocer)
+>>>>>>> 4e0832bd0fd42858f18facbb62e906d0833f2efe
 
 ### Fixed
 
@@ -62,6 +67,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2279](https://github.com/mabel-dev/opteryx/issues/2279)] Performance improvements to bloom filter [@joocer](https://github.com/joocer)
 - [[#2312](https://github.com/mabel-dev/opteryx/issues/2312)] `DISTINCT` functions with prehashing don't rehash when adding to HashSet [@joocer](https://github.com/joocer)
 - [[#2346](https://github.com/mabel-dev/opteryx/issues/2346)] Compiled function for `IN` set containment testing [@joocer](https://github.com/joocer)
+- [[#2361](https://github.com/mabel-dev/opteryx/issues/2361)] Split `list_ops` to function per file [@joocer](https://github.com/joocer)
+- [[#2356](https://github.com/mabel-dev/opteryx/issues/2356)] [Parser] Create an Opteryx dialect for [sqlparser-rs](https://github.com/apache/datafusion-sqlparser-rs) [@joocer](https://github.com/joocer)
+- [[#2376](https://github.com/mabel-dev/opteryx/issues/2376)] [Parser] Support hyphens in identifier names [@joocer](https://github.com/joocer)
+- [[#2327](https://github.com/mabel-dev/opteryx/pull/2327)] Updated [sqlparser-rs](https://github.com/apache/datafusion-sqlparser-rs) to version 0.54.0 [dependabot](https://github.com/apps/dependabot) 
 
 ## [0.19.0] - 2025-01-02
 
