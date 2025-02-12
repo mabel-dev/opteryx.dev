@@ -26,20 +26,23 @@ Opteryx can be installed and deployed on a number of different platforms. It has
 
 The full regression suite is run on Ubuntu (Ubuntu 24) for Python versions 3.10, 3.11, and 3.12. The below table shows regression suite coverage:
 
-OS                | Python 3.10 | Python 3.11 | Python 3.12 |
------------------ | :---------: | :---------: | :---------: |
-MacOS (x86/Intel) | Partial     | Partial     | None        |
-MacOS (M-series)  | Partial     | Partial     | Partial     |
-Ubuntu (x86)      | Full        | Full        | Full        |
-Ubuntu (ARM)      | Partial     | Partial     | Partial     |
+OS                | Python 3.9  | Python 3.10 | Python 3.11 | Python 3.12 | Python 3.13 |
+----------------- | :---------: | :---------: | :---------: | :---------: | :---------: | 
+MacOS (x86/Intel) | None        | Partial     | Partial     | None        | None        |
+MacOS (M-series)  | None        | Partial     | Partial     | Partial     | Partial     |
+Ubuntu (x86)      | None        | Full        | Full        | Full        | Partial     |
+Ubuntu (ARM)      | None        | Partial     | Partial     | Partial     | Partial     |
+Windows (x86)     | None        | None        | None        | None        | **No Build** |
 
 
 &emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from Ubuntu Python 3.10 tests.  
 &emsp;**Partial** - some tests are excluded from the test suite or that some tests fail.  
 &emsp;**None** - there is no automated test for this configuration.  
+&emsp;**No Build** - compatibility issues prevent this combination from being built. 
 
 !!! Note
-    - Windows (x86) last supported version 0.19.0
+    - Python 3.9 is not recommended
+    - Windows (x86) last supported version 0.19.0, builds are still created but not recommended for use beyond prototyping
     - Python 3.8 last supported version 0.11.0
     - Partial coverage is primarily due to testing platform constraints, not core-compatibility issues.
 
@@ -51,14 +54,13 @@ Opteryx supports Python versions 3.9, 3.10 and 3.11. Due to variations in suppor
 
 Environment       | Python Versions Supported
 ----------------- | -----------------------------------
-Linux 64bit x86   | 3.9, 3.10, 3.11, 3.12
-Linux ARM         | build from source
-MacOS Intel       | 3.9, 3.10, 3.11, 3.12
-MacOS Apple (M)   | 3.9, 3.10, 3.11, 3.12
+Linux 64bit x86   | 3.9, 3.10, 3.11, 3.12, 3.13
+Linux ARM         | 3.9, 3.10, 3.11, 3.12, 3.13
+MacOS Intel       | 3.9, 3.10, 3.11, 3.12, 3.13
+MacOS Apple (M)   | 3.9, 3.10, 3.11, 3.12, 3.13
+Windows x86       | 3.9, 3.10, 3.11, 3.12
 
 Opteryx is primarily developed on workstations running Python 3.11 (Debian x86, Raspian, and MacOS M2) and is known to be deployed in production environments running Python 3.9 and Python 3.11 on Debian. 
-
-Python 3.11 has the greatest test coverage due to it being supported on more platforms.
 
 ### Jupyter Notebooks
 

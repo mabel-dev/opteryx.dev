@@ -4,10 +4,10 @@
 
 ### Requirements
 
-- Operating System: macOS, Linux or Windows
+- Operating System: MacOS, Linux or Windows
 - Python:
     - 3.9 or later
-    - **Note**: For Apple Silicon Mac, Python 3.11 or later is required
+    - **Note**: Windows is not recommented
 
 ### Install from PyPI (recommended)
 
