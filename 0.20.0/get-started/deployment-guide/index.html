@@ -2228,45 +2228,65 @@
 <thead>
 <tr>
 <th>OS</th>
+<th style="text-align: center;">Python 3.9</th>
 <th style="text-align: center;">Python 3.10</th>
 <th style="text-align: center;">Python 3.11</th>
 <th style="text-align: center;">Python 3.12</th>
+<th style="text-align: center;">Python 3.13</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>MacOS (x86/Intel)</td>
+<td style="text-align: center;">None</td>
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
+<td style="text-align: center;">None</td>
 <td style="text-align: center;">None</td>
 </tr>
 <tr>
 <td>MacOS (M-series)</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
 </tr>
 <tr>
 <td>Ubuntu (x86)</td>
+<td style="text-align: center;">None</td>
 <td style="text-align: center;">Full</td>
 <td style="text-align: center;">Full</td>
 <td style="text-align: center;">Full</td>
+<td style="text-align: center;">Partial</td>
 </tr>
 <tr>
 <td>Ubuntu (ARM)</td>
+<td style="text-align: center;">None</td>
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
 <td style="text-align: center;">Partial</td>
+<td style="text-align: center;">Partial</td>
+</tr>
+<tr>
+<td>Windows (x86)</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;"><strong>No Build</strong></td>
 </tr>
 </tbody>
 </table>
 <p>&emsp;<strong>Full</strong> - no tests are excluded from the test suite - coverage statistics are from Ubuntu Python 3.10 tests.<br />
 &emsp;<strong>Partial</strong> - some tests are excluded from the test suite or that some tests fail.<br />
-&emsp;<strong>None</strong> - there is no automated test for this configuration.  </p>
+&emsp;<strong>None</strong> - there is no automated test for this configuration.<br />
+&emsp;<strong>No Build</strong> - compatibility issues prevent this combination from being built. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
-<li>Windows (x86) last supported version 0.19.0</li>
+<li>Python 3.9 is not recommended</li>
+<li>Windows (x86) last supported version 0.19.0, builds are still created but not recommended for use beyond prototyping</li>
 <li>Python 3.8 last supported version 0.11.0</li>
 <li>Partial coverage is primarily due to testing platform constraints, not core-compatibility issues.</li>
 </ul>
@@ -2284,24 +2304,27 @@
 <tbody>
 <tr>
 <td>Linux 64bit x86</td>
-<td>3.9, 3.10, 3.11, 3.12</td>
+<td>3.9, 3.10, 3.11, 3.12, 3.13</td>
 </tr>
 <tr>
 <td>Linux ARM</td>
-<td>build from source</td>
+<td>3.9, 3.10, 3.11, 3.12, 3.13</td>
 </tr>
 <tr>
 <td>MacOS Intel</td>
-<td>3.9, 3.10, 3.11, 3.12</td>
+<td>3.9, 3.10, 3.11, 3.12, 3.13</td>
 </tr>
 <tr>
 <td>MacOS Apple (M)</td>
+<td>3.9, 3.10, 3.11, 3.12, 3.13</td>
+</tr>
+<tr>
+<td>Windows x86</td>
 <td>3.9, 3.10, 3.11, 3.12</td>
 </tr>
 </tbody>
 </table>
 <p>Opteryx is primarily developed on workstations running Python 3.11 (Debian x86, Raspian, and MacOS M2) and is known to be deployed in production environments running Python 3.9 and Python 3.11 on Debian. </p>
-<p>Python 3.11 has the greatest test coverage due to it being supported on more platforms.</p>
 <h3 id="jupyter-notebooks">Jupyter Notebooks</h3>
 <p>Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3.</p>
 <p>It is recommended that the Notebook host is located close to the data being queried - such as running Vertex AI Notebooks if the data sources are primarily on GCP, or querying local files if running Jupyter on a local device. Other configurations will work, but are less optimal.</p>
