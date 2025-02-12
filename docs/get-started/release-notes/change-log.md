@@ -6,10 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.20.0] - UNRELEASED
 
-### :octicons-alert-24: Removed
-
-- Windows Support
-
 ### Added
 
 - [[#2213](https://github.com/mabel-dev/opteryx/issues/2213)] Specialized buffer for collecting Integers [@joocer](https://github.com/joocer)
