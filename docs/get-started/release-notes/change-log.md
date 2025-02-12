@@ -31,13 +31,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2216](https://github.com/mabel-dev/opteryx/issues/2216)] [Iceberg] Push predicates to Iceberg [@joocer](https://github.com/joocer)
 - [[#2330](https://github.com/mabel-dev/opteryx/issues/2330)] Add `HUMANIZE` function [@joocer](https://github.com/joocer)
 - [[#2293](https://github.com/mabel-dev/opteryx/issues/2293)] [Optimizer] Rewrite `CASE` statements to `IFNULL` where possible [@joocer](https://github.com/joocer)
-<<<<<<< HEAD
 - [[#2179](https://github.com/mabel-dev/opteryx/issues/2179)] Python 3.13 builds [@joocer](https://github.com/joocer)
 - [[#2391](https://github.com/mabel-dev/opteryx/issues/2391)] Vendor [pysimdjson](https://github.com/TkTech/pysimdjson) [@joocer](https://github.com/joocer)
-=======
 - [[#2357](https://github.com/mabel-dev/opteryx/issues/2357)] Prefer nested loop join for small relations [@joocer](https://github.com/joocer)
 - [[#2372](https://github.com/mabel-dev/opteryx/issues/2372)] Add support from `SELECT * EXCEPT` [@joocer](https://github.com/joocer)
->>>>>>> 4e0832bd0fd42858f18facbb62e906d0833f2efe
 
 ### Fixed
 
