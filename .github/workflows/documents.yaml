@@ -28,8 +28,8 @@ jobs:
 #      - run: mike delete "0.12.2"
 
 #      # this should match the version
-#      - run: mike delete latest
-#      - run: mike deploy -p "0.19.0" latest
-#      - run: mike delete dev
+      - run: mike delete latest
+      - run: mike deploy -p "0.20.0" latest
+      - run: mike delete dev
  
-      - run: mike deploy -p "0.20.0" dev
+      - run: mike deploy -p "0.21.0" dev
