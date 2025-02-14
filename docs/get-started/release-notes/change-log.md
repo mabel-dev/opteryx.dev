@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.21.0] - UNRELEASED
+
+### Added
+
+- [[#2401](https://github.com/mabel-dev/opteryx/issues/2401)] [Optimizer] Rewrite aggregations to reduce elementwise calculations [@joocer](https://github.com/joocer)
+
+### Fixed
+
+- [HOUSEKEEPING] - Feature flag always set to `True` [@joocer](https://github.com/joocer)
+
+### Changed
+
+- [[#2405](https://github.com/mabel-dev/opteryx/pull/2405)] Refactor of IntBuffer for performance [@joocer](https://github.com/joocer)
+
 ## [0.20.0] - 2025-02-13
 
 ### Added
