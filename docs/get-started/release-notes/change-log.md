@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - [HOUSEKEEPING] - Feature flag always set to `True` [@joocer](https://github.com/joocer)
+- [[#2259](https://github.com/mabel-dev/opteryx/pull/2259)] High number of calls to Aggregate Operators [@joocer](https://github.com/joocer)
 
 ### Changed
 
