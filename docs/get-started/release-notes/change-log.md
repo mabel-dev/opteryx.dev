@@ -10,10 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2401](https://github.com/mabel-dev/opteryx/issues/2401)] [Optimizer] Rewrite aggregations to reduce elementwise calculations [@joocer](https://github.com/joocer)
 - [[#2410](https://github.com/mabel-dev/opteryx/issues/2410)] [NumPy](https://numpy.org/) v2 support [@joocer](https://github.com/joocer)
+- [[#2406](https://github.com/mabel-dev/opteryx/issues/2406)] [Security] Row visibility filters accept boolean literals as identifiers [@joocer](https://github.com/joocer)
 
 ### Fixed
 
-- [HOUSEKEEPING] - Feature flag always set to `True` [@joocer](https://github.com/joocer)
 - [[#2259](https://github.com/mabel-dev/opteryx/pull/2259)] High number of calls to Aggregate Operators [@joocer](https://github.com/joocer)
 
 ### Changed
@@ -21,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2405](https://github.com/mabel-dev/opteryx/pull/2405)] Refactor of IntBuffer for performance [@joocer](https://github.com/joocer)
 - [[#2412](https://github.com/mabel-dev/opteryx/pull/2412)] Improve `INSTR` performance [@joocer](https://github.com/joocer)
 - [[#2416](https://github.com/mabel-dev/opteryx/pull/2416)] Cythonize `align_tables` [@joocer](https://github.com/joocer)
+- [[#2420](https://github.com/mabel-dev/opteryx/pull/2420)] Tidy up C++ code [@joocer](https://github.com/joocer)
 
 ## [0.20.0] - 2025-02-13
 
