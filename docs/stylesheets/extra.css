@@ -486,3 +486,7 @@ strong {
 #get-started > .item > img {
     height: 6em !important;
 }
+
+.iceberg {
+    color: #80FFEA !important;
+}
