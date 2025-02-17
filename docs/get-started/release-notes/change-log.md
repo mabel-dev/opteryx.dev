@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2405](https://github.com/mabel-dev/opteryx/pull/2405)] Refactor of IntBuffer for performance [@joocer](https://github.com/joocer)
 - [[#2412](https://github.com/mabel-dev/opteryx/pull/2412)] Improve `INSTR` performance [@joocer](https://github.com/joocer)
+- [[#2416](https://github.com/mabel-dev/opteryx/pull/2416)] Cythonize `align_tables` [@joocer](https://github.com/joocer)
 
 ## [0.20.0] - 2025-02-13
 
