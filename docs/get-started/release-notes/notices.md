@@ -51,8 +51,6 @@ Exoplanet dataset acquired from [Kaggle](https://www.kaggle.com/datasets/nasa/ke
 
 English wordlist acquired from [wordlists](https://github.com/kkrypt0nn/wordlists).
 
-Spotify Charts dataset acquired from [Kaggle](https://www.kaggle.com/datasets/dhruvildave/spotify-charts) on September 17, 2023.
-
 Space Mission dataset acquired from [Kaggle](https://www.kaggle.com/datasets/agirlcoding/all-space-missions-from-1957).
 
 Diagrams created using [ASCII Flow](https://asciiflow.com/) or [draw.io](https://github.com/jgraph/drawio).
@@ -62,6 +60,8 @@ Website built using [mkdocs-material](https://github.com/squidfunk/mkdocs-materi
 SQL-92 conformity tests are based on [sqltest](https://github.com/elliotchance/sqltest).
 
 Documentation code color scheme based on [Dracula](https://draculatheme.com/).
+
+Opteryx creates charts and graphs compatible with [Mermaid](https://mermaid.js.org/).
 
 ## References and Guides
 

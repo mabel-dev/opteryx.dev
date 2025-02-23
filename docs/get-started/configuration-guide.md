@@ -1,66 +1,35 @@
 # Configuration Guide
 
-!!! warning
-    This information may not be current for version 0.12 onwards
-
 ## Configuration File
 
 Configuration values are set a [`opteryx.yaml`](opteryx.yaml) file in the directory the application is run from.
 
-### Blob Read Settings
+These items can also be set via Environment Variables.
 
-`DATASET_PREFIX_MAPPING`  
-Data store prefix mapping.
+`DISABLE_OPTIMIZER`=False
+**DANGEROUS** This will cause most queries to fail.
 
-`PARTITION_SCHEME`  
-How the blob/file data is partitioned.
+`OPTERYX_DEBUG`=False
+**DANGEROUS** Diagnostic and debug mode - generates a lot of log entries.
 
-### Cache Settings
+`MAX_CACHE_EVICTIONS_PER_QUERY`=64
+Maximum number of buffer pool evictions by a single query.
 
-`LOCAL_BUFFER_POOL_SIZE`=256  
-The size of the in-memory Buffer Pool (blob size).
+`MAX_CACHEABLE_ITEM_SIZE`=2097152
+Maximum size for items saved to the remote buffer.
 
-`MAX_CACHE_EVICTIONS`=25  
-The maximum number of evictions from in-memory read cache per query.
+`MAX_CONSECUTIVE_CACHE_FAILURES`=10
+Maximum number of consecutive cache failures before disabling cache usage.
 
-`MAX_SIZE_SINGLE_CACHE_ITEM`=1048576  
-The maximum size of an item to store in the cache.
+`MAX_LOCAL_BUFFER_CAPACITY`=0.2
+Local buffer pool size in either bytes or fraction of system memory.
 
-`MEMCACHED_SERVER`  
-Address of Memcached server, in `IP:PORT` format.
+`MAX_READ_BUFFER_CAPACITY`=0.1
+Read buffer pool size in either bytes or fraction of system memory.
 
-`REDIS_CONNECTION`
-Redis connection string.
+`CONCURRENT_READS`=4
+Number of read workers per data source.
 
-`VALKEY_CONNECTION`
-Valkey URL connection string.
-
-### Data Size Management Settings
-
-`INTERNAL_BATCH_SIZE`=500  
-Batch size for left-table of a join processes.
-
-`MAX_JOIN_SIZE`=10000  
-Maximum records created in a `CROSS JOIN` frame.
-
-`MORSEL_SIZE`=67108864  
-The size to try to make data morsels as they are processed.
-
-### Operating System Settings
-
-`DISABLE_HIGH_PRIORITY`=False  
-Disable trying to set the process priority.
-
-### Debug Settings
-
-`PROFILE_LOCATION` :octicons-beaker-24:   
-Save information about the query planning and execution of the previous query to disk - if not set, no information is writte.
-
-`QUERY_LOG_LOCATION` :octicons-beaker-24:   
-Rolling log of recent queries - if not set, no log is written.
-
-`QUERY_LOG_SIZE` :octicons-beaker-24:   
-Size of the rolling query log - if not set and a log location is set, 10 entries are maintained.
 
 ## Environment Variables
 
@@ -71,6 +40,9 @@ The environment is the preferred location for secrets, although the engine will 
 - `MINIO_ACCESS_KEY`
 - `MINIO_SECRET_KEY`
 - `MINIO_SECURE`
+- `VALKEY_CONNECTION`
+- `REDIS_CONNECTION`
+- `MEMCACHED_SERVER`
 
 ## Caching for Blob Stores
 

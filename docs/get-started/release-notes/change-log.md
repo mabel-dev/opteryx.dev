@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2412](https://github.com/mabel-dev/opteryx/pull/2412)] Improve `INSTR` performance [@joocer](https://github.com/joocer)
 - [[#2416](https://github.com/mabel-dev/opteryx/pull/2416)] Cythonize `align_tables` [@joocer](https://github.com/joocer)
 - [[#2420](https://github.com/mabel-dev/opteryx/pull/2420)] Tidy up C++ code [@joocer](https://github.com/joocer)
+- [[#2439](https://github.com/mabel-dev/opteryx/pull/2439)] [Optimizer] Function rewrites (`COALESCE` to `IFNULL`) [@joocer](https://github.com/joocer)
 
 ## [0.20.0] - 2025-02-13
 
