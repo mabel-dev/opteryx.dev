@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
@@ -2124,47 +2124,25 @@
 
 
 <h1 id="configuration-guide">Configuration Guide</h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This information may not be current for version 0.12 onwards</p>
-</div>
 <h2 id="configuration-file">Configuration File</h2>
 <p>Configuration values are set a <a href="../opteryx.yaml"><code>opteryx.yaml</code></a> file in the directory the application is run from.</p>
-<h3 id="blob-read-settings">Blob Read Settings</h3>
-<p><code>DATASET_PREFIX_MAPPING</code><br />
-Data store prefix mapping.</p>
-<p><code>PARTITION_SCHEME</code><br />
-How the blob/file data is partitioned.</p>
-<h3 id="cache-settings">Cache Settings</h3>
-<p><code>LOCAL_BUFFER_POOL_SIZE</code>=256<br />
-The size of the in-memory Buffer Pool (blob size).</p>
-<p><code>MAX_CACHE_EVICTIONS</code>=25<br />
-The maximum number of evictions from in-memory read cache per query.</p>
-<p><code>MAX_SIZE_SINGLE_CACHE_ITEM</code>=1048576<br />
-The maximum size of an item to store in the cache.</p>
-<p><code>MEMCACHED_SERVER</code><br />
-Address of Memcached server, in <code>IP:PORT</code> format.</p>
-<p><code>REDIS_CONNECTION</code>
-Redis connection string.</p>
-<p><code>VALKEY_CONNECTION</code>
-Valkey URL connection string.</p>
-<h3 id="data-size-management-settings">Data Size Management Settings</h3>
-<p><code>INTERNAL_BATCH_SIZE</code>=500<br />
-Batch size for left-table of a join processes.</p>
-<p><code>MAX_JOIN_SIZE</code>=10000<br />
-Maximum records created in a <code>CROSS JOIN</code> frame.</p>
-<p><code>MORSEL_SIZE</code>=67108864<br />
-The size to try to make data morsels as they are processed.</p>
-<h3 id="operating-system-settings">Operating System Settings</h3>
-<p><code>DISABLE_HIGH_PRIORITY</code>=False<br />
-Disable trying to set the process priority.</p>
-<h3 id="debug-settings">Debug Settings</h3>
-<p><code>PROFILE_LOCATION</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> <br />
-Save information about the query planning and execution of the previous query to disk - if not set, no information is writte.</p>
-<p><code>QUERY_LOG_LOCATION</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> <br />
-Rolling log of recent queries - if not set, no log is written.</p>
-<p><code>QUERY_LOG_SIZE</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> <br />
-Size of the rolling query log - if not set and a log location is set, 10 entries are maintained.</p>
+<p>These items can also be set via Environment Variables.</p>
+<p><code>DISABLE_OPTIMIZER</code>=False
+<strong>DANGEROUS</strong> This will cause most queries to fail.</p>
+<p><code>OPTERYX_DEBUG</code>=False
+<strong>DANGEROUS</strong> Diagnostic and debug mode - generates a lot of log entries.</p>
+<p><code>MAX_CACHE_EVICTIONS_PER_QUERY</code>=64
+Maximum number of buffer pool evictions by a single query.</p>
+<p><code>MAX_CACHEABLE_ITEM_SIZE</code>=2097152
+Maximum size for items saved to the remote buffer.</p>
+<p><code>MAX_CONSECUTIVE_CACHE_FAILURES</code>=10
+Maximum number of consecutive cache failures before disabling cache usage.</p>
+<p><code>MAX_LOCAL_BUFFER_CAPACITY</code>=0.2
+Local buffer pool size in either bytes or fraction of system memory.</p>
+<p><code>MAX_READ_BUFFER_CAPACITY</code>=0.1
+Read buffer pool size in either bytes or fraction of system memory.</p>
+<p><code>CONCURRENT_READS</code>=4
+Number of read workers per data source.</p>
 <h2 id="environment-variables">Environment Variables</h2>
 <p>The environment is the preferred location for secrets, although the engine will read <code>.env</code> files if <a href="https://pypi.org/project/python-dotenv/">dotenv</a> has also been installed.</p>
 <ul>
@@ -2173,6 +2151,9 @@ Size of the rolling query log - if not set and a log location is set, 10 entries
 <li><code>MINIO_ACCESS_KEY</code></li>
 <li><code>MINIO_SECRET_KEY</code></li>
 <li><code>MINIO_SECURE</code></li>
+<li><code>VALKEY_CONNECTION</code></li>
+<li><code>REDIS_CONNECTION</code></li>
+<li><code>MEMCACHED_SERVER</code></li>
 </ul>
 <h2 id="caching-for-blob-stores">Caching for Blob Stores</h2>
 <h3 id="read-cache">Read Cache</h3>
