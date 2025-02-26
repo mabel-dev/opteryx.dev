@@ -24,6 +24,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2416](https://github.com/mabel-dev/opteryx/pull/2416)] Cythonize `align_tables` [@joocer](https://github.com/joocer)
 - [[#2420](https://github.com/mabel-dev/opteryx/pull/2420)] Tidy up C++ code [@joocer](https://github.com/joocer)
 - [[#2439](https://github.com/mabel-dev/opteryx/pull/2439)] [Optimizer] Function rewrites (`COALESCE` to `IFNULL`) [@joocer](https://github.com/joocer)
+- [[#2456](https://github.com/mabel-dev/opteryx/pull/2456)] Avoid use of Numpy in `DISTINCT` [@joocer](https://github.com/joocer)
+- [[#2453](https://github.com/mabel-dev/opteryx/pull/2453)] Avoid use of Numpy in BloomFilter [@joocer](https://github.com/joocer)
 
 ## [0.20.0] - 2025-02-13
 
