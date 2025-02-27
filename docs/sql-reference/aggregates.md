@@ -29,8 +29,9 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
 !!! function "`COUNT` (*) → _numeric_"  
     Count the number of rows.
 
-!!! function "`COUNT` (**column**) → _numeric_"  
-    Count the number of non `null` values in **column**.
+!!! function "`COUNT` ([ DISTINCT ] **column**) → _numeric_"  
+    Count the number of non `null` values in **column**.   
+    Optionally accepts **DISTINCT** as a modifier to count unique values, note that **DISTINCT** includes `null` in counts.  
 
 !!! function "`COUNT_DISTINCT` (**column**) → _numeric_"  
     Count the number of unique values.    
