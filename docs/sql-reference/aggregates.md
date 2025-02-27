@@ -25,7 +25,6 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
 
 !!! function "`AVG` (**column**: _numeric_) → _numeric_"  
     The mean average of a numeric column.   
-    Alias for `MEAN` and `AVERAGE`.
 
 !!! function "`COUNT` (*) → _numeric_"  
     Count the number of rows.
@@ -34,19 +33,17 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
     Count the number of non `null` values in **column**.
 
 !!! function "`COUNT_DISTINCT` (**column**) → _numeric_"  
-    Count the number of unique values.
+    Count the number of unique values.    
+    Alias of `COUNT(DISTINCT column)`
 
-!!! function "`LIST` (**column**) → _array_ :octicons-square-16:"  
-    The complete list of values for **column** in the group.   
-    Related: `ARRAY_AGG`
+!!! function ":octicons-beaker-24: `HISTOGRAM` (**column**) → _struct_"    
+    An histogram of values in **column**.
 
 !!! function "`MAX` (**column**) → _any_"  
     The maximum value in **column**.  
-    Alias for `MAXIMUM`.
 
 !!! function "`MIN` (**column**) → _any_"  
     The minimum value in **column**.  
-    Alias for `MINIMUM`.
 
 !!! function "`MIN_MAX` (**column**) → _struct_"  
     The minimum and maximum values in **column**.  

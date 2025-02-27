@@ -101,7 +101,6 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     - `SECOND`  
     - `MINUTE`  
     - `HOUR`  
-    - `TIME`  
     - `DATE`  
     - `DAY`  
     - `DAYOFWEEK` / `DOW`  
@@ -485,8 +484,8 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     Return true if _struct_ contains the key _key_.   
     Struct values can be `VARCHAR` or `BLOB` formatted JSON strings.  
 
-!!! function "_struct_ `@?` _jsonpath_ → _value_:octicons-beaker-24: "  
-    :octicons-star-16: **New in 0.19** :octicons-beaker-24:     
+!!! function "_struct_ `@?` _jsonpath_ → _value_"  
+    :octicons-star-16: **New in 0.19**       
     Return true if _struct_ contains a value at _jsonpath_.   
     Struct values can be `VARCHAR` or `BLOB` formatted JSON strings. 
 
