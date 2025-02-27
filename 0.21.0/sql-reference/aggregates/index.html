@@ -2196,8 +2196,9 @@ The <strong>LIMIT</strong> clause limits the number of items in each list to a m
 <p>Count the number of rows.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>COUNT</code> (<strong>column</strong>) → <em>numeric</em></p>
-<p>Count the number of non <code>null</code> values in <strong>column</strong>.</p>
+<p class="admonition-title"><code>COUNT</code> ([ DISTINCT ] <strong>column</strong>) → <em>numeric</em></p>
+<p>Count the number of non <code>null</code> values in <strong>column</strong>. <br />
+Optionally accepts <strong>DISTINCT</strong> as a modifier to count unique values, note that <strong>DISTINCT</strong> includes <code>null</code> in counts.  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>COUNT_DISTINCT</code> (<strong>column</strong>) → <em>numeric</em></p>
