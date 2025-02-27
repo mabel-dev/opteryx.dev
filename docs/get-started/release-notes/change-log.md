@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2410](https://github.com/mabel-dev/opteryx/issues/2410)] [NumPy](https://numpy.org/) v2 support [@joocer](https://github.com/joocer)
 - [[#2406](https://github.com/mabel-dev/opteryx/issues/2406)] [Security] Row visibility filters accept boolean literals as identifiers [@joocer](https://github.com/joocer)
 - [[#2418](https://github.com/mabel-dev/opteryx/issues/2418)] Support `EXPLAIN ANALYZE FORMAT MERMAID` [@joocer](https://github.com/joocer)
+- [[#2463](https://github.com/mabel-dev/opteryx/issues/2463)] [Optimizer] Smallest table to left in `INNER JOIN` [@joocer](https://github.com/joocer)
 
 ### Fixed
 
