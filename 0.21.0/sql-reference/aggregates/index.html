@@ -2189,8 +2189,7 @@ The <strong>LIMIT</strong> clause limits the number of items in each list to a m
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>AVG</code> (<strong>column</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>The mean average of a numeric column. <br />
-Alias for <code>MEAN</code> and <code>AVERAGE</code>.</p>
+<p>The mean average of a numeric column.   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>COUNT</code> (*) → <em>numeric</em></p>
@@ -2202,22 +2201,20 @@ Alias for <code>MEAN</code> and <code>AVERAGE</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>COUNT_DISTINCT</code> (<strong>column</strong>) → <em>numeric</em></p>
-<p>Count the number of unique values.</p>
+<p>Count the number of unique values.  <br />
+Alias of <code>COUNT(DISTINCT column)</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>LIST</code> (<strong>column</strong>) → <em>array</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 5.75C4 4.784 4.784 4 5.75 4h4.5c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 10.25 12h-4.5A1.75 1.75 0 0 1 4 10.25Zm1.75-.25a.25.25 0 0 0-.25.25v4.5c0 .138.112.25.25.25h4.5a.25.25 0 0 0 .25-.25v-4.5a.25.25 0 0 0-.25-.25Z"/></svg></span></p>
-<p>The complete list of values for <strong>column</strong> in the group. <br />
-Related: <code>ARRAY_AGG</code></p>
+<p class="admonition-title"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> <code>HISTOGRAM</code> (<strong>column</strong>) → <em>struct</em></p>
+<p>An histogram of values in <strong>column</strong>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>MAX</code> (<strong>column</strong>) → <em>any</em></p>
-<p>The maximum value in <strong>column</strong>.<br />
-Alias for <code>MAXIMUM</code>.</p>
+<p>The maximum value in <strong>column</strong>.  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>MIN</code> (<strong>column</strong>) → <em>any</em></p>
-<p>The minimum value in <strong>column</strong>.<br />
-Alias for <code>MINIMUM</code>.</p>
+<p>The minimum value in <strong>column</strong>.  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>MIN_MAX</code> (<strong>column</strong>) → <em>struct</em></p>
