@@ -7,23 +7,29 @@ The following statement forms are supported.
 Retrieve rows from zero or more relations.
 
 ~~~sql
-[ statement UNION [ ALL ] ... ]
-SELECT [ DISTINCT [ ON (<columns>) ] ] <expression> [, ..] [EXCEPT (<columns>)]
-  FROM <relation> [AS <alias>]
-   FOR <period>
-       [ INNER ] JOIN <relation> | <function> | (<subquery>)
-       CROSS JOIN <relation> | <function> | (<subquery>)
-       LEFT [ OUTER | ANTI | SEMI ] JOIN <relation> | <function> | (<subquery>)
-       RIGHT [ OUTER | ANTI | SEMI ] JOIN <relation> | <function> | (<subquery>)
-       FULL [ OUTER ] JOIN <relation> | <function> | (<subquery>)
-                      ON <expression>
-                      USING (<columns>)
- WHERE <expression> [ AND | OR | XOR .. ]
- GROUP BY <expression> [, ..]
-       HAVING <expression> [ AND | OR | XOR .. ]
- ORDER BY <expression> [, ..]
-OFFSET <offset>
+[ <statement> UNION [ ALL ] ... ]
+
+SELECT [ DISTINCT ] [ ON ( <columns> ) ] ] <expression> [ , ... ]
+       | [ * EXCEPT ( <columns> ) ]
+    FROM { <relation> | <function> | (<subquery>) } AS <alias>
+    [ FOR <period> ]
+    [
+        [ INNER ] JOIN { <relation> | <function> | (<subquery>) } [ AS <alias> ]
+            [ ON <condition> | USING ( <columns> ) ]
+        | CROSS JOIN { <relation> | <function> | (<subquery>) } [ AS <alias> ]
+        | LEFT [ OUTER | ANTI | SEMI ] JOIN { <relation> | <function> | (<subquery>) } [ AS <alias> ]
+            [ ON <condition> | USING ( <columns> ) ]
+        | RIGHT [ OUTER ] JOIN { <relation> | <function> | (<subquery>) } [ AS <alias> ]
+            [ ON <condition> | USING ( <columns> ) ]
+        | FULL [ OUTER ] JOIN { <relation> | <function> | (<subquery>) } [ AS <alias>  ]
+            [ ON <condition> | USING ( <columns> ) ]  
+   ] [ ... ]                  
+ WHERE <condition> [ { AND | OR | XOR } ... ]
+ GROUP BY [ ALL | <expression> [ , ... ] ]
+HAVING <condition> [ { AND | OR | XOR } ... ]
+ ORDER BY <expression> [ , ... ]
  LIMIT <limit>
+OFFSET <offset>
 ~~~
 
 ### UNION class
@@ -111,12 +117,15 @@ The `WHERE` clause specifies any filters to apply to the data. This allows you t
 GROUP BY expression [, ...]
 ~~~
 ~~~
+GROUP BY ALL
+~~~
+~~~
 HAVING group_filter
 ~~~
 
 The `GROUP BY` clause specifies which grouping columns should be used to perform any aggregations in the `SELECT` clause. If the `GROUP BY` clause is specified, the query is always an aggregate query, even if no aggregations are present in the `SELECT` clause. The `HAVING` clause specifies filters to apply to aggregated data, `HAVING` clauses require a `GROUP BY` clause.
 
-`GROUP BY` expressions may use column numbers, however, this is not recommended for statements intended for reuse. 
+`GROUP BY ALL` will automatically include all columns in the corresponding `SELECT` clause which do not contain aggregrations.  
 
 ### ORDER BY / LIMIT / OFFSET clauses
 
@@ -139,11 +148,13 @@ LIMIT count
 Show the logical execution plan of a statement.
 
 ~~~sql
-EXPLAIN [ ANALYZE ]
+EXPLAIN [ ANALYZE ] [ FORMAT MERMAID | FORMAT TEXT ]
 statement
 ~~~
 
 The `EXPLAIN` clause outputs a summary of the execution plan for the query in the `SELECT` statement. The `ANALYZE` modifier is used to execute the query and return additional information about the execution of the query.
+
+The optional `FORMAT` modifier controls the output format, `TEXT` is the default tabular representation of the plan, `MERMAID` creates a flow which can be interpretted as a [mermaid](https://mermaid.js.org/) diagram.
 
 !!! Warning  
     The data returned by the `EXPLAIN` statement is intended for interactive usage only and the output format may change between releases. Applications should not depend on the output of the `EXPLAIN` statement.
