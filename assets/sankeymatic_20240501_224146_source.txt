@@ -1,92 +1,96 @@
-// SankeyMATIC diagram inputs - Saved: 01/05/2024, 22:41:46
+// SankeyMATIC diagram inputs - Saved: 01/03/2025
 // https://sankeymatic.com/build/
 
 // === Nodes and Flows ===
 
-User SQL [750] Opteryx
+User SQL [850] Opteryx
 
-Opteryx [200] SQL
+Opteryx [50] Iceberg
+Opteryx [150] Files
+Opteryx [150] Cloud Storage
+Opteryx [250] SQL
 Opteryx [50] CQL
 Opteryx [100] Document Stores
-Opteryx [150] Files
 Opteryx [100] DataFrames
-Opteryx [150] Cloud Storage
+
+Iceberg [50] Parquet
+
+Files [50] Parquet
+Files [50] CSV
+Files [50] JSONL
+
+Cloud Storage [50] Google Cloud Storage
+Cloud Storage [50] AWS S3
+Cloud Storage [50] MinIO
 
 SQL [50] Postgres
 SQL [50] MySql
 SQL [50] BigQuery
 SQL [50] DuckDB
+SQL [50] Sqlite3
 
 CQL [50] Cassandra
 
 Document Stores [50] MongoDB
 Document Stores [50] FireStore
 
-Files [50] CSV
-Files [50] Parquet
-Files [50] JSONL
-
 DataFrames [50] Pandas
 DataFrames [50] Polars
 
-Cloud Storage [50] Google Cloud Storage
-Cloud Storage [50] AWS S3
-Cloud Storage [50] MinIO
-
 // === Settings ===
 
-size w 800
-  h 600
-margin l 12
-  r 12
-  t 18
-  b 20
-bg color #ffffff
-  transparent Y
-node w 12
-  h 50
-  spacing 75
-  border 0
-  theme c
-  color #888888
-  opacity 1
-flow curvature 0.62
-  inheritfrom source
-  color #999999
-  opacity 0.45
-layout order automatic
-  justifyorigins N
-  justifyends N
-  reversegraph N
-  attachincompletesto nearest
-labels color #000000
-  hide N
-  highlight 0.75
-  fontface monospace
-  linespacing 0
-  relativesize 100
-  magnify 100
-labelname appears Y
-  size 16
-  weight 400
-labelvalue appears N
-  fullprecision Y
-  position below
-  weight 400
-labelposition autoalign 0
-  scheme per_stage
-  first after
-  breakpoint 3
-value format ',.'
-  prefix ''
-  suffix ''
-themeoffset a 9
-  b 0
-  c 0
-  d 0
-meta mentionsankeymatic N
-  listimbalances Y
+// ✓ size w 800
+// ✓   h 600
+// ✓ margin l 12
+// ✓   r 12
+// ✓   t 18
+// ✓   b 20
+// ✓ bg color #ffffff
+// ✓   transparent Y
+// ✓ node w 12
+// ✓   h 50
+// ✓   spacing 75
+// ✓   border 0
+// ✓   theme c
+// ✓   color #888888
+// ✓   opacity 1
+// ✓ flow curvature 0.62
+// ✓   inheritfrom source
+// ✓   color #999999
+// ✓   opacity 0.45
+// ✓ layout order automatic
+// ✓   justifyorigins N
+// ✓   justifyends N
+// ✓   reversegraph N
+// ✓   attachincompletesto nearest
+// ✓ labels color #000000
+// ✓   hide N
+// ✓   highlight 0.75
+// ✓   fontface monospace
+// ✓   linespacing 0
+// ✓   relativesize 100
+// ✓   magnify 100
+// ✓ labelname appears Y
+// ✓   size 16
+// ✓   weight 400
+// ✓ labelvalue appears N
+// ✓   fullprecision Y
+// ✓   position below
+// ✓   weight 400
+// ✓ labelposition autoalign 0
+// ✓   scheme per_stage
+// ✓   first after
+// ✓   breakpoint 3
+// ✓ value format ',.'
+// ✓   prefix ''
+// ✓   suffix ''
+// ✓ themeoffset a 9
+// ✓   b 0
+// ✓   c 0
+// ✓   d 0
+// ✓ meta mentionsankeymatic N
+// ✓   listimbalances Y
 
 // === Moved Nodes ===
 
-move Opteryx -0.19936, -0.00359
+// ✓ move Opteryx -0.19936, -0.00359
