@@ -13,7 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2406](https://github.com/mabel-dev/opteryx/issues/2406)] [Security] Row visibility filters accept boolean literals as identifiers [@joocer](https://github.com/joocer)
 - [[#2418](https://github.com/mabel-dev/opteryx/issues/2418)] Support `EXPLAIN ANALYZE FORMAT MERMAID` [@joocer](https://github.com/joocer)
 - [[#2463](https://github.com/mabel-dev/opteryx/issues/2463)] [Optimizer] Smallest table to left in `INNER JOIN` [@joocer](https://github.com/joocer)
-- [[#2469](https://github.com/mabel-dev/opteryx/issues/2469)] [Optimizer] Additional check in constant folder [@joocer](https://github.com/joocer)
+- [[#2469](https://github.com/mabel-dev/opteryx/issues/2469)] [Optimizer] Additional check when folding constants [@joocer](https://github.com/joocer)
 - [[#2384](https://github.com/mabel-dev/opteryx/issues/2384)] Support `GROUP BY ALL` [@joocer](https://github.com/joocer)
 
 ### Fixed
@@ -24,13 +24,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2405](https://github.com/mabel-dev/opteryx/issues/2405)] Refactor of IntBuffer for performance [@joocer](https://github.com/joocer)
 - [[#2412](https://github.com/mabel-dev/opteryx/issues/2412)] Improve `INSTR` performance [@joocer](https://github.com/joocer)
-- [[#2416](https://github.com/mabel-dev/opteryx/issues/2416)] Cythonize `align_tables` [@joocer](https://github.com/joocer)
 - [[#2420](https://github.com/mabel-dev/opteryx/issues/2420)] Tidy up C++ code [@joocer](https://github.com/joocer)
 - [[#2439](https://github.com/mabel-dev/opteryx/issues/2439)] [Optimizer] Function rewrites (`COALESCE` to `IFNULL`) [@joocer](https://github.com/joocer)
 - [[#2456](https://github.com/mabel-dev/opteryx/issues/2456)] Avoid use of Numpy in `DISTINCT` [@joocer](https://github.com/joocer)
 - [[#2453](https://github.com/mabel-dev/opteryx/issues/2453)] Avoid use of Numpy in BloomFilter [@joocer](https://github.com/joocer)
 - [[#2457](https://github.com/mabel-dev/opteryx/issues/2457)] `COUNT(DISTINCT )` refactor [@joocer](https://github.com/joocer)
-
+- [[#2476](https://github.com/mabel-dev/opteryx/issues/2476)] Specialized `CROSS JOIN UNNEST` for string type [@joocer](https://github.com/joocer)
 
 ## [0.20.0] - 2025-02-13
 
