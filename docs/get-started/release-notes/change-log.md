@@ -30,6 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2453](https://github.com/mabel-dev/opteryx/issues/2453)] Avoid use of Numpy in BloomFilter [@joocer](https://github.com/joocer)
 - [[#2457](https://github.com/mabel-dev/opteryx/issues/2457)] `COUNT(DISTINCT )` refactor [@joocer](https://github.com/joocer)
 - [[#2476](https://github.com/mabel-dev/opteryx/issues/2476)] Specialized `CROSS JOIN UNNEST` for string type [@joocer](https://github.com/joocer)
+- [[#2479](https://github.com/mabel-dev/opteryx/issues/2479)] Reduce instances of LITERAL expansion [@joocer](https://github.com/joocer)
 
 ## [0.20.0] - 2025-02-13
 
