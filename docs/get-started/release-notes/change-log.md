@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 
 - Deprecated function aliases removed `CEILING`, `ABSOLUTE`, `MAXIMIM`, `MINIMUM`, use shorter form `CEIL`, `ABS`, `MAX`, `MIN` instead.
-- `INNER JOIN UNNEST` removed, 
+- `INNER JOIN UNNEST` removed from this release
 
 ### Added
 
