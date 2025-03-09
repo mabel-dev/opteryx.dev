@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.21.0] - UNRELEASED
 
+### Removed
+
+- Deprecated function aliases removed `CEILING`, `ABSOLUTE`, `MAXIMIM`, `MINIMUM`, use shorter form `CEIL`, `ABS`, `MAX`, `MIN` instead.
+- `INNER JOIN UNNEST` removed, 
+
 ### Added
 
 - [[#2401](https://github.com/mabel-dev/opteryx/issues/2401)] [Optimizer] Rewrite aggregations to reduce elementwise calculations [@joocer](https://github.com/joocer)
