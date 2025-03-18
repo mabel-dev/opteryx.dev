@@ -13,14 +13,14 @@ Name        | Description
 `INTEGER`   | Whole number
 `DECIMAL` :octicons-star-16:  |
 `VARCHAR`   | Variable-length character string
-`STRUCT`    | A dictionary of multiple named values, where each key is a string, but the value can be a different type for each key.
+`STRUCT` :octicons-star-16:   | A dictionary of multiple named values, where each key is a string, but the value can be a different type for each key.
 `DATE`      | The date component of a TIMESTAMP
 `TIME` :octicons-star-16: | The time component of a TIMESTAMP
 `TIMESTAMP` | Combination of date and time.
 `INTERVAL` :octicons-star-16: | The difference between two TIMESTAMP values
 
 !!! Note  
-    Types marked with :octicons-star-16: (DECIMAL, TIME, and INTERVAL) have limited support.
+    Types marked with :octicons-star-16: (DECIMAL, TIME, STRUCT, and INTERVAL) have limited support.
 
 ## Casting
 
@@ -70,3 +70,9 @@ All `TIMESTAMP` and values read from datasets are coerced to nanosecond precisio
 ### Numbers
 
 Hex literals can be provided using `0x` prefix, for example `0xc0ffee` is handled as the integer `12648430`.
+
+Numeric literals may contain underscores (`_`) which are helpful to improve the readability of long numbers, e.g. `1_000_000`.
+
+### Structs
+
+`VARCHAR` and `BLOB` columns containing JSON formatted strings support `STRUCT` accesors and functions. 

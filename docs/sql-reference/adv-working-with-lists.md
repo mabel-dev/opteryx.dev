@@ -4,6 +4,12 @@ An Array is an ordered collection of zero or more `VARCHAR` values.
 
 ## Actions
 
+### Casting
+
+~~~
+CAST(column AS ARRAY<element_type>)
+~~~
+
 ### Construct
 
 ~~~

@@ -2,6 +2,8 @@
 
 A struct is a collection of zero or more key, value pairs. Keys must be `VARCHAR`, values can be different types.
 
+`STRUCT` as a datatype is being deprecated in favour of treating `BLOB` and `VARCHAR` columns containing JSON strings as implicit `STRUCT` columns. All features available for explicitly typed `STRUCT` columns are available on JSON-formatted columns.
+
 ## Actions
 
 ### Construct
@@ -34,7 +36,6 @@ SELECT birth_place['town'], COUNT(*)
  GROUP BY birth_place['town'];
 ~~~
 
-:octicons-beaker-24: **Beta Functionality**
 ~~~
 struct -> key
 ~~~
@@ -47,7 +48,7 @@ struct ->> key
 struct @? key
 ~~~
 
-Values within structs can be accessed by key using Accessor notation, support is limited.
+Values within structs can be accessed by key using Accessor notation.
 
 ### Searching
 
