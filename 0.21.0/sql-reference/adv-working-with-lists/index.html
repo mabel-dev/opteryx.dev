@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
       
 
@@ -2207,33 +2207,36 @@
 <h1 id="working-with-arrays">Working with Arrays</h1>
 <p>An Array is an ordered collection of zero or more <code>VARCHAR</code> values.</p>
 <h2 id="actions">Actions</h2>
+<h3 id="casting">Casting</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>CAST(column AS ARRAY&lt;element_type&gt;)
+</code></pre></div>
 <h3 id="construct">Construct</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SPLIT(string)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>SPLIT(string)
 </code></pre></div>
 <h3 id="accessing">Accessing</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>list[index]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>list[index]
 </code></pre></div>
 <h3 id="testing">Testing</h3>
 <h4 id="any-comparision">ANY (comparision)</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>value &lt;operator&gt; ANY (column)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>value &lt;operator&gt; ANY (column)
 </code></pre></div>
 <p>The <code>ANY</code> function is used to apply a filter to each item in an array, and returns <code>True</code> if any item in the array matches the condition.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="s1">&#39;Apollo 11&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">ANY</span><span class="p">(</span><span class="n">missions</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="s1">&#39;Apollo 11&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">ANY</span><span class="p">(</span><span class="n">missions</span><span class="p">);</span>
 </code></pre></div>
 <p><code>ANY</code> supports the following operators: <code>=</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, and <code>&lt;=</code>. </p>
 <h4 id="any-similarity">ANY (similarity)</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>value column &lt;operator&gt; ANY (patterns)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>value column &lt;operator&gt; ANY (patterns)
 </code></pre></div>
 <p>The <code>ANY</code> modifier is used to perform a similarity search against all of the items in an array for each item in an array, and returns <code>True</code> is any item in the array matches the pattern.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">missions</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="k">ANY</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Mercury%&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Gemini%&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Apollo%&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">missions</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="k">ANY</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Mercury%&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Gemini%&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Apollo%&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p><code>ANY</code> supports the following operators: <code>LIKE</code>, <code>NOT LIKE</code>, <code>ILIKE</code>, <code>NOT ILIKE</code></p>
 <h4 id="all">ALL</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>value &lt;operator&gt; ALL(column)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>value &lt;operator&gt; ALL(column)
 </code></pre></div>
 <p>The <code>ALL</code> function is used to apply a filter to each item in an array, and returns <code>True</code> if all items in the array matches the condition.</p>
 <div class="admonition note">
@@ -2241,33 +2244,33 @@
 <p><code>ALL</code> currently supports a subset of operators: <code>=</code>, <code>!=</code>. </p>
 </div>
 <h4 id="search">SEARCH</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">Search</span><span class="p">(</span><span class="n">missions</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Apollo 11&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">Search</span><span class="p">(</span><span class="n">missions</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Apollo 11&#39;</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="in">IN</h4>
 <p>The <code>IN</code> operator allows a column to be tested against a list of values.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Earth&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Mars&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Earth&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Mars&#39;</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="in-unnest">IN UNNEST</h4>
 <p>The combination of <code>IN UNNEST</code> allows a value to be tested for containment in a column.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="s1">&#39;Apollo 11&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="k">UNNEST</span><span class="p">(</span><span class="n">missions</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="s1">&#39;Apollo 11&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="k">UNNEST</span><span class="p">(</span><span class="n">missions</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="accessors">Accessors</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Array @? Array
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Array @? Array
 </code></pre></div>
 <h3 id="transforms">Transforms</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>SORT
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>SORT
 </code></pre></div>
 <h2 id="converting-lists-to-relations">Converting Lists to Relations</h2>
 <h3 id="using-unnest">Using <code>UNNEST</code></h3>
 <p><code>UNNEST</code> allows you to create a single column table either as a list of literals, or from a column of LIST type in a dataset.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="k">UNNEST</span><span class="p">((</span><span class="k">True</span><span class="p">,</span><span class="w"> </span><span class="k">False</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Booleans</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="k">UNNEST</span><span class="p">((</span><span class="k">True</span><span class="p">,</span><span class="w"> </span><span class="k">False</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Booleans</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="limitations">Limitations</h2>
 <p>Lists have the following limitations</p>
