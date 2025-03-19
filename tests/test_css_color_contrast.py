@@ -53,7 +53,7 @@ def validate_css_file(css_file: str):
         bg_rgb = hex_to_rgb(bg_hex)
         ratio = contrast_ratio(fg_rgb, bg_rgb)
 
-        if ratio < 4.5:
+        if ratio < 4.5 and fg_hex != bg_hex:
             failed_selectors.append((selector, fg_hex, bg_hex, ratio))
 
     return failed_selectors

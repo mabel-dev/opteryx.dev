@@ -21,10 +21,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2469](https://github.com/mabel-dev/opteryx/issues/2469)] [Optimizer] Additional check when folding constants [@joocer](https://github.com/joocer)
 - [[#2384](https://github.com/mabel-dev/opteryx/issues/2384)] Support `GROUP BY ALL` [@joocer](https://github.com/joocer)
 - [[#2374](https://github.com/mabel-dev/opteryx/issues/2374)] Support underscores in numeric literals [@joocer](https://github.com/joocer)
+- [[#2468](https://github.com/mabel-dev/opteryx/issues/2468)] Combine mulitple `LIKE`s to `RLIKE` [@joocer](https://github.com/joocer)
 
 ### Fixed
 
 - [[#2259](https://github.com/mabel-dev/opteryx/issues/2259)] High number of calls to Aggregate Operators [@joocer](https://github.com/joocer)
+- [[#2517](https://github.com/mabel-dev/opteryx/issues/2517)] `IFNULL` assumes data types [@joocer](https://github.com/joocer)
 
 ### Changed
 
