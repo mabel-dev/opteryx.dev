@@ -41,6 +41,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2479](https://github.com/mabel-dev/opteryx/issues/2479)] Reduce instances of LITERAL expansion [@joocer](https://github.com/joocer)
 - [[#2495](https://github.com/mabel-dev/opteryx/issues/2495)] Remove use of CityHash, replace with [xxHash](https://xxhash.com/) [@joocer](https://github.com/joocer)
 - :octicons-alert-24: [[#2495](https://github.com/mabel-dev/opteryx/issues/2495)] `HASH` function uses xxHash (previously CityHash) [@joocer](https://github.com/joocer)
+- [[#2490](https://github.com/mabel-dev/opteryx/issues/2490)] Replace regular expression engine for `REGEX_REPLACE`. [@joocer](https://github.com/joocer)
 
 ## [0.20.0] - 2025-02-13
 
