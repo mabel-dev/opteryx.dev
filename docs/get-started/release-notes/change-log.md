@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2259](https://github.com/mabel-dev/opteryx/issues/2259)] High number of calls to Aggregate Operators [@joocer](https://github.com/joocer)
 - [[#2517](https://github.com/mabel-dev/opteryx/issues/2517)] `IFNULL` assumes data types [@joocer](https://github.com/joocer)
+- [[#1821](https://github.com/mabel-dev/opteryx/issues/1821)] `CONCAT`/`CONCAT_WS` functional correction [@joocer](https://github.com/joocer)
 
 ### Changed
 
