@@ -29,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2517](https://github.com/mabel-dev/opteryx/issues/2517)] `IFNULL` assumes data types [@joocer](https://github.com/joocer)
 - [[#1821](https://github.com/mabel-dev/opteryx/issues/1821)] `CONCAT`/`CONCAT_WS` functional correction [@joocer](https://github.com/joocer)
 - [[#2525](https://github.com/mabel-dev/opteryx/issues/2525)] Intermittent `CROSS JOIN UNNEST` error [@joocer](https://github.com/joocer)
+- [[#2521](https://github.com/mabel-dev/opteryx/issues/2521)] Intermittent `LIKE` type error [@joocer](https://github.com/joocer)
 
 ### Changed
 
