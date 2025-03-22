@@ -31,6 +31,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2525](https://github.com/mabel-dev/opteryx/issues/2525)] Intermittent `CROSS JOIN UNNEST` error [@joocer](https://github.com/joocer)
 - [[#2521](https://github.com/mabel-dev/opteryx/issues/2521)] Intermittent `LIKE` type error [@joocer](https://github.com/joocer)
 - [[#2524](https://github.com/mabel-dev/opteryx/issues/2524)] `UNION` field order incorrect [@joocer](https://github.com/joocer)
+- [[#2523](https://github.com/mabel-dev/opteryx/issues/2523)] Filters pushed into `UNION` incorrectly [@joocer](https://github.com/joocer)
 
 ### Changed
 
