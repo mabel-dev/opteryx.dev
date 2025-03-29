@@ -35,6 +35,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2524](https://github.com/mabel-dev/opteryx/issues/2524)] `UNION` field order incorrect [@joocer](https://github.com/joocer)
 - [[#2523](https://github.com/mabel-dev/opteryx/issues/2523)] Filters pushed into `UNION` incorrectly [@joocer](https://github.com/joocer)
 - [[#1217](https://github.com/mabel-dev/opteryx/issues/1217)] Subqueries don't precent relation name collisions [@joocer](https://github.com/joocer)
+- [[#2533](https://github.com/mabel-dev/opteryx/issues/2533)] `UNION` field order incorrect [@joocer](https://github.com/joocer)
 
 ### Changed
 
