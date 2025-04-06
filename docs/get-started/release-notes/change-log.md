@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.22.0] - UNRELEASED
 
+### Removed
+
+- Deprecated function aliases removed `NUMERIC`, `LIST_CONTAINS_ANY`, `LIST_CONTAINS_ALL`, use `DOUBLE`, `ARRAY_CONTAINS_ANY`, `ARRAY_CONTAINS_ALL` instead. `STRUCT` removed as no longer required.
+- `LIST_CONTAINS`, `STR`, `STRING`, `FLOAT`, `TRY_NUMERIC`, `TRY_STRING`, `TRY_STRUCT`, `LEN` marked as deprecated to be removed in or after version 0.24.
+
+### Fixed
+
+- [[#2547](https://github.com/mabel-dev/opteryx/issues/2547)] `INSTR` optimzation incorrectly applied in some cases [@joocer](https://github.com/joocer)
+
 ## [0.21.0] - 2025-03-30
 
 ### Removed
