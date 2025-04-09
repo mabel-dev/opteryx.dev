@@ -15,6 +15,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2547](https://github.com/mabel-dev/opteryx/issues/2547)] `INSTR` optimzation incorrectly applied in some cases [@joocer](https://github.com/joocer)
 
+### Changed
+
+- [[#2535](https://github.com/mabel-dev/opteryx/issues/2535)] Avoid conversion to numpy arrays for binary comparisons [@joocer](https://github.com/joocer)
+
 ## [0.21.0] - 2025-03-30
 
 ### Removed
