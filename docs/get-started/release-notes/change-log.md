@@ -14,6 +14,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - [[#2547](https://github.com/mabel-dev/opteryx/issues/2547)] `INSTR` optimzation incorrectly applied in some cases [@joocer](https://github.com/joocer)
+- [[#2554](https://github.com/mabel-dev/opteryx/issues/2554)] Explicit column ordering [@joocer](https://github.com/joocer)
+- [[#2545](https://github.com/mabel-dev/opteryx/issues/2545)] Decimal scale and precision ignored in `CAST` [@joocer](https://github.com/joocer)
 
 ### Changed
 
