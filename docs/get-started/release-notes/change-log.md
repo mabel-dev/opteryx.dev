@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2554](https://github.com/mabel-dev/opteryx/issues/2554)] Explicit column ordering [@joocer](https://github.com/joocer)
 - [[#2545](https://github.com/mabel-dev/opteryx/issues/2545)] Decimal scale and precision ignored in `CAST` [@joocer](https://github.com/joocer)
 - [[#2556](https://github.com/mabel-dev/opteryx/issues/2556)] STRUCT ARRAYS not correctly converted to JSON ARRAYs [@joocer](https://github.com/joocer)
+- [[#2563](https://github.com/mabel-dev/opteryx/issues/2563)] Any/All Ops fail with single row datasets [@joocer](https://github.com/joocer)
 
 ### Changed
 
