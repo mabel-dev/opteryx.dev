@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - [[#2592](https://github.com/mabel-dev/opteryx/issues/2592)] Cannot `GROUP BY` empty sets [@joocer](https://github.com/joocer)
-- [[#2611](https://github.com/mabel-dev/opteryx/issues/2611)] [CI] Refactor version incrementor as pre-commit [@joocer](https://github.com/joocer)
+- [[#2611](https://github.com/mabel-dev/opteryx/issues/2611)] **[CI]** Refactor version incrementor as pre-commit [@joocer](https://github.com/joocer)
 
 ### Changed
 
@@ -97,7 +97,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2213](https://github.com/mabel-dev/opteryx/issues/2213)] Specialized buffer for collecting Integers [@joocer](https://github.com/joocer)
 - [[#2185](https://github.com/mabel-dev/opteryx/issues/2185)] **[Iceberg]** Initial support for **[Iceberg]**(https://iceberg.apache.org/) catalogs [@joocer](https://github.com/joocer)
 - [[#2209](https://github.com/mabel-dev/opteryx/issues/2209)] Initial support for Excel (xlsx) files [@joocer](https://github.com/joocer)
-- [[#2223](https://github.com/mabel-dev/opteryx/issues/2223)] [[Clickbench](https://benchmark.clickhouse.com/)] Avoid creating tables for simple `COUNT(*)` queries [@joocer](https://github.com/joocer)
+- [[#2223](https://github.com/mabel-dev/opteryx/issues/2223)] **[[Clickbench](https://benchmark.clickhouse.com/)]** Avoid creating tables for simple `COUNT(*)` queries [@joocer](https://github.com/joocer)
 - [[#2228](https://github.com/mabel-dev/opteryx/issues/2228)] **[Iceberg]** Push `LIMIT` to Iceberg [@joocer](https://github.com/joocer)
 - [[#2215](https://github.com/mabel-dev/opteryx/issues/2215)] Create connector capability for column statistics [@joocer](https://github.com/joocer)
 - [[#2234](https://github.com/mabel-dev/opteryx/issues/2234)] Capture column and relation statistics [@joocer](https://github.com/joocer)
@@ -121,7 +121,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - [[#1954](https://github.com/mabel-dev/opteryx/issues/1954)] JSON Accessors rewritten to support `literal = document->key` form [@joocer](https://github.com/joocer) 
-- [[#2190](https://github.com/mabel-dev/opteryx/issues/2190)] [[Clickbench](https://benchmark.clickhouse.com/)] Resolve failing queries (partial) [@joocer](https://github.com/joocer)
+- [[#2190](https://github.com/mabel-dev/opteryx/issues/2190)] **[[Clickbench](https://benchmark.clickhouse.com/)]** Resolve failing queries (partial) [@joocer](https://github.com/joocer)
 - [[#2167](https://github.com/mabel-dev/opteryx/issues/2167)] **[CI]** Use [freezegun](https://github.com/spulec/freezegun) to reduce flaky tests [@joocer](https://github.com/joocer)
 - [[#2247](https://github.com/mabel-dev/opteryx/issues/2247)] Non-Existant SQL tables returned incorrect error [@joocer](https://github.com/joocer)
 - [[#2231](https://github.com/mabel-dev/opteryx/issues/2231)] Visibility Filters don't accept array literals [@joocer](https://github.com/joocer)
@@ -133,10 +133,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
-- [[#2197](https://github.com/mabel-dev/opteryx/issues/2197)] [[Clickbench](https://benchmark.clickhouse.com/)] Rewritten local file access routines [@joocer](https://github.com/joocer)
+- [[#2197](https://github.com/mabel-dev/opteryx/issues/2197)] **[[Clickbench](https://benchmark.clickhouse.com/)]** Rewritten local file access routines [@joocer](https://github.com/joocer)
 - [[#1453](https://github.com/mabel-dev/opteryx/issues/1453)] Compiled code restructure [@joocer](https://github.com/joocer)
 - [[#2205](https://github.com/mabel-dev/opteryx/issues/2205)] Prefer [Abseil](https://abseil.io/) containers [@joocer](https://github.com/joocer)
-- [[#2202](https://github.com/mabel-dev/opteryx/issues/2197)] [[Clickbench](https://benchmark.clickhouse.com/)] Allow local reads to use pyarrow multithreading [@joocer](https://github.com/joocer)
+- [[#2202](https://github.com/mabel-dev/opteryx/issues/2197)] **[[Clickbench](https://benchmark.clickhouse.com/)]** Allow local reads to use pyarrow multithreading [@joocer](https://github.com/joocer)
 - [[#2205](https://github.com/mabel-dev/opteryx/issues/2197)] **[CI]** Prefer [uv](https://github.com/astral-sh/uv) as package manager [@joocer](https://github.com/joocer)
 - [[#2220](https://github.com/mabel-dev/opteryx/issues/2220)] Remove steps from `MATCH() AGAINST()` [@joocer](https://github.com/joocer)
 - [[#2233](https://github.com/mabel-dev/opteryx/issues/2233)] Bypass OS cache for disk access [@joocer](https://github.com/joocer)
@@ -193,7 +193,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- [[#1993](https://github.com/mabel-dev/opteryx/issues/1993)] [ClickBench](https://github.com/ClickHouse/ClickBench) regression suite [@joocer](https://github.com/joocer)
+- [[#1993](https://github.com/mabel-dev/opteryx/issues/1993)] **[ClickBench](https://github.com/ClickHouse/ClickBench)** regression suite [@joocer](https://github.com/joocer)
 - [[#2003](https://github.com/mabel-dev/opteryx/issues/2003)] Push Equals filters to Firestore [@joocer](https://github.com/joocer)
 - [[#2008](https://github.com/mabel-dev/opteryx/issues/2008)] Push Not Equals filters to Firestore [@joocer](https://github.com/joocer)
 - [[#2000](https://github.com/mabel-dev/opteryx/issues/2000)] Initial `SHOW CREATE VIEW` support [@joocer](https://github.com/joocer)
