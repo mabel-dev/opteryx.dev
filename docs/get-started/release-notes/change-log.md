@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2481](https://github.com/mabel-dev/opteryx/issues/2481)] **[Optimizer]** Rewrite `STARTS_WITH` and `ENDS_WITH` to `LIKE` statements [@joocer](https://github.com/joocer)
 - [[#2604](https://github.com/mabel-dev/opteryx/issues/2604)] Log the post-optimized plan to the statistics [@joocer](https://github.com/joocer)
 - [[#2607](https://github.com/mabel-dev/opteryx/issues/2607)] Unsided `SEMI` and `ANTI` `JOIN`s are interpretted as `LEFT` [@joocer](https://github.com/joocer)
+- [[#2609](https://github.com/mabel-dev/opteryx/issues/2609)] Filter joins (`SEMI` and `ANTI`) internals rewritten [@joocer](https://github.com/joocer)
 
 
 ## [0.22.0] - 2025-05-20
