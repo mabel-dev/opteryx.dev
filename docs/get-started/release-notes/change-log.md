@@ -15,6 +15,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2588](https://github.com/mabel-dev/opteryx/issues/2588)] Pass through error messages from functions [@joocer](https://github.com/joocer)
 - [[#2594](https://github.com/mabel-dev/opteryx/issues/2594)] **[Optimizer]** Combine `OR` chains of `ANY` equals conditions [@joocer](https://github.com/joocer)
 - [[#2481](https://github.com/mabel-dev/opteryx/issues/2481)] **[Optimizer]** Rewrite `STARTS_WITH` and `ENDS_WITH` to `LIKE` statements [@joocer](https://github.com/joocer)
+- [[#2604](https://github.com/mabel-dev/opteryx/issues/2604)] Log the post-optimized plan to the statistics [@joocer](https://github.com/joocer)
+- [[#2607](https://github.com/mabel-dev/opteryx/issues/2607)] Unsided `SEMI` and `ANTI` `JOIN`s are interpretted as `LEFT` [@joocer](https://github.com/joocer)
 
 
 ## [0.22.0] - 2025-05-20
