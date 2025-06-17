@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2592](https://github.com/mabel-dev/opteryx/issues/2592)] Cannot `GROUP BY` empty sets [@joocer](https://github.com/joocer)
 - [[#2611](https://github.com/mabel-dev/opteryx/issues/2611)] **[CI]** Refactor version incrementor as pre-commit [@joocer](https://github.com/joocer)
+- [[#2614](https://github.com/mabel-dev/opteryx/issues/2614)] Manually replace values to avoid multidimenstional array confusion in numpy [@joocer](https://github.com/joocer)
 
 ### Changed
 
@@ -19,7 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2604](https://github.com/mabel-dev/opteryx/issues/2604)] Log the post-optimized plan to the statistics [@joocer](https://github.com/joocer)
 - [[#2607](https://github.com/mabel-dev/opteryx/issues/2607)] Unsided `SEMI` and `ANTI` `JOIN`s are interpretted as `LEFT` [@joocer](https://github.com/joocer)
 - [[#2609](https://github.com/mabel-dev/opteryx/issues/2609)] Filter joins (`SEMI` and `ANTI`) internals rewritten [@joocer](https://github.com/joocer)
-
+- [[#2616](https://github.com/mabel-dev/opteryx/issues/2616)] Refactor nested loop join to use pyarrow buffers [@joocer](https://github.com/joocer)
 
 ## [0.22.0] - 2025-05-20
 
