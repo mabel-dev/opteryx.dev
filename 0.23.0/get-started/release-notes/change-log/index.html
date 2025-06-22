@@ -3014,6 +3014,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2607">#2607</a>] Unsided <code>SEMI</code> and <code>ANTI</code> <code>JOIN</code>s are interpretted as <code>LEFT</code> <a href="https://github.com/joocer">@joocer</a></li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2609">#2609</a>] Filter joins (<code>SEMI</code> and <code>ANTI</code>) internals rewritten <a href="https://github.com/joocer">@joocer</a></li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2616">#2616</a>] Refactor nested loop join to use pyarrow buffers <a href="https://github.com/joocer">@joocer</a></li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2619">#2619</a>] Refactor hash join variation of <code>INNER JOIN</code> and internal bloom filter to use pyarrow buffers <a href="https://github.com/joocer">@joocer</a></li>
 </ul>
 <h2 id="0220-2025-05-20">[0.22.0] - 2025-05-20</h2>
 <h3 id="removed">Removed</h3>
@@ -3027,7 +3028,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2554">#2554</a>] Explicit column ordering <a href="https://github.com/joocer">@joocer</a></li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2545">#2545</a>] Decimal scale and precision ignored in <code>CAST</code> <a href="https://github.com/joocer">@joocer</a></li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2556">#2556</a>] STRUCT ARRAYS not correctly converted to JSON ARRAYs <a href="https://github.com/joocer">@joocer</a></li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2563">#2563</a>] Any/All Ops fail with single row datasets <a href="https://github.com/joocer">@joocer</a></li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2563">#2563</a>] <code>ANY</code>/<code>ALL</code> Ops fail with single row datasets <a href="https://github.com/joocer">@joocer</a></li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2565">#2565</a>] <code>SHOW COLUMNS</code> doesn't show extended type information <a href="https://github.com/joocer">@joocer</a></li>
 </ul>
 <h3 id="changed_1">Changed</h3>
