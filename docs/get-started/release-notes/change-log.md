@@ -23,8 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2609](https://github.com/mabel-dev/opteryx/issues/2609)] Filter joins (`SEMI` and `ANTI`) internals rewritten [@joocer](https://github.com/joocer)
 - [[#2616](https://github.com/mabel-dev/opteryx/issues/2616)] Refactor nested loop join to use pyarrow buffers [@joocer](https://github.com/joocer)
 - [[#2619](https://github.com/mabel-dev/opteryx/issues/2619)] Refactor hash join variation of `INNER JOIN` and internal bloom filter to use pyarrow buffers [@joocer](https://github.com/joocer)
-
-
+- [[#2627](https://github.com/mabel-dev/opteryx/issues/2627)] Arrow native `CROSS JOIN UNNEST` with pushed filters [@joocer](https://github.com/joocer)
 
 ## [0.22.0] - 2025-05-20
 
