@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2592](https://github.com/mabel-dev/opteryx/issues/2592)] Cannot `GROUP BY` empty sets [@joocer](https://github.com/joocer)
 - [[#2611](https://github.com/mabel-dev/opteryx/issues/2611)] **[CI]** Refactor version incrementor as pre-commit [@joocer](https://github.com/joocer)
 - [[#2614](https://github.com/mabel-dev/opteryx/issues/2614)] Manually replace values to avoid multidimenstional array confusion in numpy [@joocer](https://github.com/joocer)
+- [[#2636](https://github.com/mabel-dev/opteryx/issues/2636)] numpy `object` dtype definition incorrect in `CROSS JOIN` [@joocer](https://github.com/joocer)
 
 ### Changed
 
