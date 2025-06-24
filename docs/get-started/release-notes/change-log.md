@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.23.0] - UNRELEASED
 
+### Added
+
+- [[#2631](https://github.com/mabel-dev/opteryx/issues/2631)] Add support for `DAY` interval definitions to `FOR` clause [@joocer](https://github.com/joocer)
+
 ### Fixed
 
 - [[#2592](https://github.com/mabel-dev/opteryx/issues/2592)] Cannot `GROUP BY` empty sets [@joocer](https://github.com/joocer)

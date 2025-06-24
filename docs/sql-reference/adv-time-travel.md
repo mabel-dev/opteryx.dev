@@ -44,6 +44,9 @@ FOR DATES SINCE start
 ~~~
 FOR DATES IN range
 ~~~
+~~~
+FOR LAST count DAYS
+~~~
 
 `SINCE` clauses select a temporal range which spans from the provided start time until now.
 
