@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.24.0] - UNRELEASED
 
+### Fixed
+
+- [[#2649](https://github.com/mabel-dev/opteryx/issues/2649)] `UNIXTIME` function using incorrect method to convert [@joocer](https://github.com/joocer)
+- :octicons-alert-24: [[#2651](https://github.com/mabel-dev/opteryx/issues/2651)] `current_time` returns a timestamp [@joocer](https://github.com/joocer)
+
+### Added
+
+- [[#2651](https://github.com/mabel-dev/opteryx/issues/2651)] Add `current_timestamp` function [@joocer](https://github.com/joocer)
 
 ## [0.23.0] - 2025-06-29
 
