@@ -4,6 +4,9 @@ Working with DATE and TIMESTAMP often involves working with INTERVALs.
 
 INTERVALs may not always act as expected, especially when working with months and years, primarily due to complexities in quickly and accurately determining if an number of days is a given number of months.
 
+!!! Note  
+    Functions that return the current time or date (including now) will return the time as at the start of the execution of the query.
+
 ## Actions
 
 ### Add/Subtract
@@ -101,6 +104,9 @@ current_date
 current_time
 ~~~
 ~~~
+current_timestamp
+~~~
+~~~
 YESTERDAY()
 ~~~
 ~~~
@@ -110,7 +116,7 @@ TIME()
 generate_series()
 ~~~
 
-Note that `current_date` and `current_time` support being called without parenthesis.
+Note that `current_date`, `current_timestamp` and `current_time` support being called without parenthesis.
 
 
 Recognized date parts and periods and support across various functions:
@@ -130,7 +136,7 @@ year     | ✓          | ✓       | ✓        | ✓           |
 
 ## Implicit Casting
 
-In many situation where a timestamp is expected, if an [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted string is provided, the engine will interpret as a timestamp.
+In many situation where a timestamp is expected, if an [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted string is provided, the engine will default to interpretting as a timestamp. However, for reliability, you should not rely on the engine doing this for you.
 
 ## Timezones
 

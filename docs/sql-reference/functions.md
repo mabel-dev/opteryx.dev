@@ -34,25 +34,22 @@ New functions for this version are annotated with the :octicons-star-16: icon.
     `INTEGER` is a psuedo-type, `CAST` is not supported and values may be coerced to `NUMERIC`.
 
 !!! function "`FLOAT` (**num**: _numeric_) → _numeric_"  
-    Convert **num** to a floating point number.   
-    `FLOAT` is a psuedo-type, `CAST` is not supported and values may be coerced to `NUMERIC`.
+    **DEPRECATED**  
 
 !!! function "`NUMERIC` **any**: _any_ → _numeric_"  
-    Cast **any** to a floating point number, raises an error if cast is not possible. Note `NUMERIC` does not require parenthesis, however any aliases do.   
-    Alias for `CAST`(**any** AS NUMERIC)   
+    **DEPRECATED**  
 
 !!! function "`SAFE_CAST` (**any**: _any_ AS **type**) → _type_"    
     Alias for `TRY_CAST`(**any** AS **type**)  
 
 !!! function "`STR` (**any**: _any_) → _varchar_"     
-    Alias of `VARCHAR`(**any**) and `CAST`(**any** AS VARCHAR)   
+    **DEPRECATED**  
 
 !!! function "`STRING` (**any**: _any_) → _varchar_"     
-    Alias of `VARCHAR`(**any**) and `CAST`(**any** AS VARCHAR)
+    **DEPRECATED**  
 
 !!! function "`STRUCT` (**any**: _any_) → _struct_"   
-    Cast **any** to a struct / dictionary.   
-    Alias of `CAST`(**any** AS STRUCT)
+    **DEPRECATED** 
 
 !!! function "`TIMESTAMP` **iso8601**: _varchar_ → _timestamp_"  
     Cast an [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format string to a timestamp, raises an error if cast is not possible. Note `TIMESTAMP` does not require parenthesis, however any aliases do.    
@@ -69,11 +66,15 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 
 For more details, see [Working with Timestamps](../adv-working-with-timestamps/).
 
-!!! function "`current_date` → _timestamp_"  
+!!! function "`current_date` → _data_"  
     Return the current date, in UTC. Note `current_date` does not require parenthesis.  
 
-!!! function "`current_time` → _timestamp_"  
-    Return the current date and time, in UTC. Note `current_time` does not require parenthesis.  
+!!! function "`current_time` → _time_"  
+    Return the current time, in UTC. Note `current_time` does not require parenthesis.  
+
+!!! function "`current_timestamp` → _timestamp_"  
+    :octicons-star-16: **New in 0.24**    
+    Return the current date and time, in UTC. Note `current_timestamp` does not require parenthesis.  
 
 !!! function "`DATE` (**ts**: _timestamp_) → _timestamp_"  
     Remove any time information, leaving just the date part of **ts**.   
@@ -121,10 +122,7 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     _Related:_ `UNIXTIME` 
 
 !!! function "`NOW` () → _timestamp_"  
-    Alias for `current_time`
-
-!!! function "`TIME` () → _timestamp_"  
-    Returns the current iime (UTC).     
+    Alias for `current_timestamp` 
 
 !!! function "`TIME_BUCKET` (_timestamp_, **multiple**: _numeric_, **unit**: _varchar_) → _timestamp_"  
     Floor timestamps into fixed time interval buckets. **unit** is optional and will be `day` if not provided.
@@ -134,14 +132,17 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
 
 !!! function "`HOUR` (**ts**: _timestamp_) → _numeric_"  
     Returns the hour of the day from **ts**. The value ranges from `0` to `23`.   
+    If no **ts** provided, returns the current hour.      
     Alias for `EXTRACT`(hour FROM **ts**)
 
 !!! function "`MINUTE` (**ts**: _timestamp_) → _numeric_"  
     Returns the minute of the hour from **ts**. The value ranges from `0` to `59`.  
+    If no **ts** provided, returns the current minute.   
     Alias for `EXTRACT`(minute FROM **ts**)
 
 !!! function "`MONTH` (**ts**: _timestamp_) → _numeric_"  
     Returns the month of the year from **ts**. The value ranges from `1` to `12`.  
+    If no **ts** provided, returns the current month.   
     Alias for `EXTRACT`(month FROM **ts**)
 
 !!! function "`QUARTER` (**ts**: _timestamp_) → _numeric_"  
@@ -150,6 +151,7 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
 
 !!! function "`SECOND` (**ts**: _timestamp_) → _numeric_"  
     Returns the second of the minute from **ts**. The value ranges from `0` to `59`.  
+    If no **ts** provided, returns the current second.   
     Alias for `EXTRACT`(second FROM **ts**)
 
 !!! function "`TIMEDIFF` (**unit**: _varchar_, **start**: _timestamp_) → _numeric_"   
@@ -171,7 +173,8 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     Alias for `EXTRACT`(week FROM **ts**)
 
 !!! function "`YEAR` (**ts**: _timestamp_) → _numeric_"  
-    Returns the year from **ts**.  
+    Returns the year from **ts**.   
+    If no **ts** provided, returns the current year.   
     Alias for `EXTRACT`(year FROM **ts**)
 
 ## Infix Functions
@@ -254,23 +257,19 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
     _Related:_ `GREATEST`
 
 !!! function "`LEN` (**array**: _array_) → _numeric_:octicons-dot-16:"   
-    Alias of `LENGTH`(**array**)
+    **DEPRECATED**  
 
 !!! function "`LENGTH` (**array**: _array_) → _numeric_:octicons-dot-16:"   
     Returns the number of elements in **array**.
 
 !!! function "`LIST_CONTAINS` (**array**: _array_, **value**) → _boolean_"  
     **DEPRECATED**   
-    Alias of `ARRAY_CONTAINS`
 
 !!! function "`LIST_CONTAINS_ANY` (**array**: _array_, **values**: _array_) → _boolean_"    
     **DEPRECATED**   
-    Alias of `ARRAY_CONTAINS_ANY`   
-    _Related:_ `@>`
 
 !!! function "`LIST_CONTAINS_ALL` (**array**: _array_, **values**: _array_) → _boolean_"   
     **DEPRECATED**   
-    Alias of `ARRAY_CONTAINS_ALL`
 
 !!! function "`SEARCH` (**array**: _array_, **value**) → _boolean_:octicons-dot-16:"  
     Return `true` if **array** contains **value**. 
@@ -281,10 +280,10 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
 ## Numeric Functions
 
 !!! function "`ABS` (**x**: _numeric_) → _numeric_"  
-    Alias of `ABSOLUTE`  
+    Returns the absolute value of **x**.   
 
 !!! function "`ABSOLUTE` (**x**: _numeric_) → _numeric_"  
-    Returns the absolute value of **x**.   
+    **DEPRECATED** 
 
 !!! function "`CEIL` (**x**: _numeric_, **scale**: _integer_) → _double_"  
     Returns the nearest equal or larger whole number to **x**, or to the nearest equal or larger double with **scale** places after the decimal point.   
@@ -342,10 +341,10 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
     Returns the square root of **x**.
 
 !!! function "`TRUNC` (**x**: _numeric_) → _numeric_"  
-    Alias of `TRUNCATE`  
+    Returns **x** rounded to integer by dropping digits after decimal point.   
 
 !!! function "`TRUNCATE` (**x**: _numeric_) → _numeric_"  
-    Returns **x** rounded to integer by dropping digits after decimal point.    
+    **DEPRECATED** 
 
 ## String Functions
 
