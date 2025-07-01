@@ -2436,13 +2436,11 @@ Convert large numbers to forms easier for humans to read.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>FLOAT</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Convert <strong>num</strong> to a floating point number. <br />
-<code>FLOAT</code> is a psuedo-type, <code>CAST</code> is not supported and values may be coerced to <code>NUMERIC</code>.</p>
+<p><strong>DEPRECATED</strong>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>NUMERIC</code> <strong>any</strong>: <em>any</em> → <em>numeric</em></p>
-<p>Cast <strong>any</strong> to a floating point number, raises an error if cast is not possible. Note <code>NUMERIC</code> does not require parenthesis, however any aliases do. <br />
-Alias for <code>CAST</code>(<strong>any</strong> AS NUMERIC)   </p>
+<p><strong>DEPRECATED</strong>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SAFE_CAST</code> (<strong>any</strong>: <em>any</em> AS <strong>type</strong>) → <em>type</em></p>
@@ -2450,16 +2448,15 @@ Alias for <code>CAST</code>(<strong>any</strong> AS NUMERIC)   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>STR</code> (<strong>any</strong>: <em>any</em>) → <em>varchar</em></p>
-<p>Alias of <code>VARCHAR</code>(<strong>any</strong>) and <code>CAST</code>(<strong>any</strong> AS VARCHAR)   </p>
+<p><strong>DEPRECATED</strong>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>STRING</code> (<strong>any</strong>: <em>any</em>) → <em>varchar</em></p>
-<p>Alias of <code>VARCHAR</code>(<strong>any</strong>) and <code>CAST</code>(<strong>any</strong> AS VARCHAR)</p>
+<p><strong>DEPRECATED</strong>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>STRUCT</code> (<strong>any</strong>: <em>any</em>) → <em>struct</em></p>
-<p>Cast <strong>any</strong> to a struct / dictionary. <br />
-Alias of <code>CAST</code>(<strong>any</strong> AS STRUCT)</p>
+<p><strong>DEPRECATED</strong> </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TIMESTAMP</code> <strong>iso8601</strong>: <em>varchar</em> → <em>timestamp</em></p>
@@ -2478,12 +2475,17 @@ Alias for <code>CAST</code>(<strong>any</strong> AS VARCHAR)</p>
 <h2 id="date-time-functions">Date &amp; Time Functions</h2>
 <p>For more details, see <a href="../adv-working-with-timestamps/">Working with Timestamps</a>.</p>
 <div class="admonition function">
-<p class="admonition-title"><code>current_date</code> → <em>timestamp</em></p>
+<p class="admonition-title"><code>current_date</code> → <em>data</em></p>
 <p>Return the current date, in UTC. Note <code>current_date</code> does not require parenthesis.  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>current_time</code> → <em>timestamp</em></p>
-<p>Return the current date and time, in UTC. Note <code>current_time</code> does not require parenthesis.  </p>
+<p class="admonition-title"><code>current_time</code> → <em>time</em></p>
+<p>Return the current time, in UTC. Note <code>current_time</code> does not require parenthesis.  </p>
+</div>
+<div class="admonition function">
+<p class="admonition-title"><code>current_timestamp</code> → <em>timestamp</em></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z"/></svg></span> <strong>New in 0.24</strong>  <br />
+Return the current date and time, in UTC. Note <code>current_timestamp</code> does not require parenthesis.  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>DATE</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>timestamp</em></p>
@@ -2540,11 +2542,7 @@ Alias for <code>CAST</code>(<strong>any</strong> AS VARCHAR)</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>NOW</code> () → <em>timestamp</em></p>
-<p>Alias for <code>current_time</code></p>
-</div>
-<div class="admonition function">
-<p class="admonition-title"><code>TIME</code> () → <em>timestamp</em></p>
-<p>Returns the current iime (UTC).     </p>
+<p>Alias for <code>current_timestamp</code> </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TIME_BUCKET</code> (<em>timestamp</em>, <strong>multiple</strong>: <em>numeric</em>, <strong>unit</strong>: <em>varchar</em>) → <em>timestamp</em></p>
@@ -2557,16 +2555,19 @@ Alias for <code>CAST</code>(<strong>any</strong> AS VARCHAR)</p>
 <div class="admonition function">
 <p class="admonition-title"><code>HOUR</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
 <p>Returns the hour of the day from <strong>ts</strong>. The value ranges from <code>0</code> to <code>23</code>. <br />
+If no <strong>ts</strong> provided, returns the current hour.    <br />
 Alias for <code>EXTRACT</code>(hour FROM <strong>ts</strong>)</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>MINUTE</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
 <p>Returns the minute of the hour from <strong>ts</strong>. The value ranges from <code>0</code> to <code>59</code>.<br />
+If no <strong>ts</strong> provided, returns the current minute. <br />
 Alias for <code>EXTRACT</code>(minute FROM <strong>ts</strong>)</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>MONTH</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
 <p>Returns the month of the year from <strong>ts</strong>. The value ranges from <code>1</code> to <code>12</code>.<br />
+If no <strong>ts</strong> provided, returns the current month. <br />
 Alias for <code>EXTRACT</code>(month FROM <strong>ts</strong>)</p>
 </div>
 <div class="admonition function">
@@ -2577,6 +2578,7 @@ Alias for <code>EXTRACT</code>(quarter FROM <strong>ts</strong>)</p>
 <div class="admonition function">
 <p class="admonition-title"><code>SECOND</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
 <p>Returns the second of the minute from <strong>ts</strong>. The value ranges from <code>0</code> to <code>59</code>.<br />
+If no <strong>ts</strong> provided, returns the current second. <br />
 Alias for <code>EXTRACT</code>(second FROM <strong>ts</strong>)</p>
 </div>
 <div class="admonition function">
@@ -2604,7 +2606,8 @@ Alias for <code>EXTRACT</code>(week FROM <strong>ts</strong>)</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>YEAR</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
-<p>Returns the year from <strong>ts</strong>.<br />
+<p>Returns the year from <strong>ts</strong>. <br />
+If no <strong>ts</strong> provided, returns the current year. <br />
 Alias for <code>EXTRACT</code>(year FROM <strong>ts</strong>)</p>
 </div>
 <h2 id="infix-functions">Infix Functions</h2>
@@ -2706,7 +2709,7 @@ See also <code>ANY</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LEN</code> (<strong>array</strong>: <em>array</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Alias of <code>LENGTH</code>(<strong>array</strong>)</p>
+<p><strong>DEPRECATED</strong>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LENGTH</code> (<strong>array</strong>: <em>array</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
@@ -2714,19 +2717,15 @@ See also <code>ANY</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LIST_CONTAINS</code> (<strong>array</strong>: <em>array</em>, <strong>value</strong>) → <em>boolean</em></p>
-<p><strong>DEPRECATED</strong> <br />
-Alias of <code>ARRAY_CONTAINS</code></p>
+<p><strong>DEPRECATED</strong>   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LIST_CONTAINS_ANY</code> (<strong>array</strong>: <em>array</em>, <strong>values</strong>: <em>array</em>) → <em>boolean</em></p>
-<p><strong>DEPRECATED</strong> <br />
-Alias of <code>ARRAY_CONTAINS_ANY</code> <br />
-<em>Related:</em> <code>@&gt;</code></p>
+<p><strong>DEPRECATED</strong>   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LIST_CONTAINS_ALL</code> (<strong>array</strong>: <em>array</em>, <strong>values</strong>: <em>array</em>) → <em>boolean</em></p>
-<p><strong>DEPRECATED</strong> <br />
-Alias of <code>ARRAY_CONTAINS_ALL</code></p>
+<p><strong>DEPRECATED</strong>   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SEARCH</code> (<strong>array</strong>: <em>array</em>, <strong>value</strong>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
@@ -2739,11 +2738,11 @@ Alias of <code>ARRAY_CONTAINS_ALL</code></p>
 <h2 id="numeric-functions">Numeric Functions</h2>
 <div class="admonition function">
 <p class="admonition-title"><code>ABS</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Alias of <code>ABSOLUTE</code>  </p>
+<p>Returns the absolute value of <strong>x</strong>.   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>ABSOLUTE</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns the absolute value of <strong>x</strong>.   </p>
+<p><strong>DEPRECATED</strong> </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>CEIL</code> (<strong>x</strong>: <em>numeric</em>, <strong>scale</strong>: <em>integer</em>) → <em>double</em></p>
@@ -2818,11 +2817,11 @@ Alias of <code>ARRAY_CONTAINS_ALL</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TRUNC</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Alias of <code>TRUNCATE</code>  </p>
+<p>Returns <strong>x</strong> rounded to integer by dropping digits after decimal point.   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TRUNCATE</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns <strong>x</strong> rounded to integer by dropping digits after decimal point.    </p>
+<p><strong>DEPRECATED</strong> </p>
 </div>
 <h2 id="string-functions">String Functions</h2>
 <p>Functions for examining and manipulating string values. </p>

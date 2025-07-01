@@ -2314,6 +2314,10 @@
 <h1 id="working-with-timestamps">Working with Timestamps</h1>
 <p>Working with DATE and TIMESTAMP often involves working with INTERVALs. </p>
 <p>INTERVALs may not always act as expected, especially when working with months and years, primarily due to complexities in quickly and accurately determining if an number of days is a given number of months.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Functions that return the current time or date (including now) will return the time as at the start of the execution of the query.</p>
+</div>
 <h2 id="actions">Actions</h2>
 <h3 id="addsubtract">Add/Subtract</h3>
 <p><em>timestamp</em> <code>+</code> <em>interval</em> → <em>timestamp</em>  </p>
@@ -2366,13 +2370,15 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>current_time
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>YESTERDAY()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>current_timestamp
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>TIME()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>YESTERDAY()
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>generate_series()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>TIME()
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>generate_series()
 </code></pre></div></p>
-<p>Note that <code>current_date</code> and <code>current_time</code> support being called without parenthesis.</p>
+<p>Note that <code>current_date</code>, <code>current_timestamp</code> and <code>current_time</code> support being called without parenthesis.</p>
 <p>Recognized date parts and periods and support across various functions:</p>
 <table>
 <thead>
@@ -2469,7 +2475,7 @@
 </tbody>
 </table>
 <h2 id="implicit-casting">Implicit Casting</h2>
-<p>In many situation where a timestamp is expected, if an <a href="https://datatracker.ietf.org/doc/html/rfc3339">RFC 3339</a> formatted string is provided, the engine will interpret as a timestamp.</p>
+<p>In many situation where a timestamp is expected, if an <a href="https://datatracker.ietf.org/doc/html/rfc3339">RFC 3339</a> formatted string is provided, the engine will default to interpretting as a timestamp. However, for reliability, you should not rely on the engine doing this for you.</p>
 <h2 id="timezones">Timezones</h2>
 <p>The engine is opinionated to run in UTC - all instances where the system time is requested, UTC is used.</p>
 <h2 id="precision">Precision</h2>
