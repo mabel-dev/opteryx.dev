@@ -10,10 +10,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2649](https://github.com/mabel-dev/opteryx/issues/2649)] `UNIXTIME` function using incorrect method to convert [@joocer](https://github.com/joocer)
 - :octicons-alert-24: [[#2651](https://github.com/mabel-dev/opteryx/issues/2651)] `current_time` returns a timestamp [@joocer](https://github.com/joocer)
+- [[#2661](https://github.com/mabel-dev/opteryx/issues/2661)] `cache_oversize` statistic over reporting [@joocer](https://github.com/joocer)
+- [[#2657](https://github.com/mabel-dev/opteryx/issues/2657)] Unable to override default connector [@joocer](https://github.com/joocer)
+- [[#2654](https://github.com/mabel-dev/opteryx/issues/2654)] Typo in deprecation warning [@joocer](https://github.com/joocer)
 
 ### Added
 
 - [[#2651](https://github.com/mabel-dev/opteryx/issues/2651)] Add `current_timestamp` function [@joocer](https://github.com/joocer)
+
+### Changed
+
+- [[#2663](https://github.com/mabel-dev/opteryx/issues/2663)] Introduce latches on the memory pool to enable safe zero copy reads [@joocer](https://github.com/joocer)
+- [[#2659](https://github.com/mabel-dev/opteryx/issues/2659)] Code review of GCS Connector [@joocer](https://github.com/joocer)
 
 ## [0.23.0] - 2025-06-29
 
