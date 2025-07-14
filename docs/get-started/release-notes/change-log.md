@@ -22,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2663](https://github.com/mabel-dev/opteryx/issues/2663)] Introduce latches on the memory pool to enable safe zero copy reads [@joocer](https://github.com/joocer)
 - [[#2659](https://github.com/mabel-dev/opteryx/issues/2659)] Code review of GCS Connector [@joocer](https://github.com/joocer)
+- [[#2679](https://github.com/mabel-dev/opteryx/issues/2679)] Purge blob from bufferpool and remote cache on read error [@joocer](https://github.com/joocer)
 
 ## [0.23.0] - 2025-06-29
 
