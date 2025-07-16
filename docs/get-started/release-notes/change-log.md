@@ -17,12 +17,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - [[#2651](https://github.com/mabel-dev/opteryx/issues/2651)] Add `current_timestamp` function [@joocer](https://github.com/joocer)
+- [[#2671](https://github.com/mabel-dev/opteryx/issues/2671)] Support qualified wildcards mixed with explicit columns in `SELECT` [@joocer](https://github.com/joocer)
+- [[#2679](https://github.com/mabel-dev/opteryx/issues/2679)] Purge blob from caches on read error [@joocer](https://github.com/joocer)
 
 ### Changed
 
 - [[#2663](https://github.com/mabel-dev/opteryx/issues/2663)] Introduce latches on the memory pool to enable safe zero copy reads [@joocer](https://github.com/joocer)
 - [[#2659](https://github.com/mabel-dev/opteryx/issues/2659)] Code review of GCS Connector [@joocer](https://github.com/joocer)
 - [[#2679](https://github.com/mabel-dev/opteryx/issues/2679)] Purge blob from bufferpool and remote cache on read error [@joocer](https://github.com/joocer)
+- [[#2682](https://github.com/mabel-dev/opteryx/pull/2682)] Code review following performance profiling [@joocer](https://github.com/joocer)
+- [[#2683](https://github.com/mabel-dev/opteryx/issues/2683)] Update vendored [pysimdjson](https://github.com/TkTech/pysimdjson) [@joocer](https://github.com/joocer)
 
 ## [0.23.0] - 2025-06-29
 
