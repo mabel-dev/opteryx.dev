@@ -313,6 +313,14 @@ strong {
     background-color: #000;
 }
 
+.bg-pink-500 {
+    background-color: #d83790 !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
 .btn-cta {
     background-color: #d83790;
     color: #fff !important;
@@ -489,4 +497,19 @@ strong {
 
 .iceberg {
     color: #80FFEA !important;
+}
+
+
+.gradient-text {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.glow {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
 }
