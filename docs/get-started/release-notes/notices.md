@@ -7,7 +7,6 @@ Opteryx, mesos, and orso are built on the shoulders of other great libraries and
 Library           | Inclusion Type    | Copyright            | Licence   
 :---------------- | :---------------- | :------------------- | :--------------- 
 [abseil-cpp](https://github.com/abseil/abseil-cpp)         | Vendored   | 2017 [Abseil](https://abseil.io/#) | [Apache 2.0](https://github.com/abseil/abseil-cpp/blob/master/LICENSE)
-[cityhash](https://github.com/google/cityhash)             | Dependency | 2011 [Google](https://github.com/google) | [MIT](https://github.com/google/cityhash/blob/master/COPYING)  
 [cython](https://github.com/cython/cython)                 | Dependency |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
 [datafusion-sqlparser-rs](https://github.com/apache/datafusion-sqlparser-rs) | Dependency |  | [Apache 2.0](https://github.com/apache/datafusion-sqlparser-rs/blob/main/LICENSE.TXT)
 [fuzzy](https://github.com/yougov/fuzzy)                   | Vendored   | [Jason R. Coombs](https://github.com/jaraco) | [MIT](https://github.com/yougov/fuzzy/blob/master/LICENSE)
