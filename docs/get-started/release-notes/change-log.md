@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.24.0] - UNRELEASED
 
+### Removed
+
+- Deprecated functions removed: `LIST_CONTAINS`, `STR`, `STRING`, `FLOAT`, `TRY_NUMERIC`, `TRY_STRING`, `TRY_STRUCT`, `LEN`
+
 ### Fixed
 
 - [[#2649](https://github.com/mabel-dev/opteryx/issues/2649)] `UNIXTIME` function using incorrect method to convert ([@joocer](https://github.com/joocer))
