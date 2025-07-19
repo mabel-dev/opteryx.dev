@@ -319,6 +319,7 @@ strong {
 
 .text-white {
     color: #fff !important;
+    font-weight: 600 !important;
 }
 
 .btn-cta {
