@@ -7,10 +7,7 @@ This short guide demonstrates how to connect to [BigQuery](https://cloud.google.
 Install Opteryx and libraries for connecting to BigQuery.
 
 ~~~console
-$ pip install opteryx
-$ pip install sqlalchemy
-$ pip install sqlalchemy-bigquery
-$ pip install google-cloud-bigquery-storage
+$ pip install opteryx sqlalchemy sqlalchemy-bigquery google-cloud-bigquery-storage
 ~~~
 
 ## Registering BigQuery with Opteryx

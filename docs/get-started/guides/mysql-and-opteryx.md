@@ -7,9 +7,7 @@ This short guide demonstrates how to connect to MySQL using Opteryx and [SQLAlch
 Install Opteryx and libraries for connecting to MySQL.
 
 ~~~console
-$ pip install opteryx
-$ pip install sqlalchemy
-$ pip install pymysql
+$ pip install opteryx sqlalchemy pymysql
 ~~~
 
 ## Registering MySQL with Opteryx

@@ -7,9 +7,7 @@ This short guide demonstrates how to connect to Postgres using Opteryx using [SQ
 Install Opteryx and libraries for connecting to Postgres.
 
 ~~~console
-$ pip install opteryx
-$ pip install sqlalchemy
-$ pip install psycopg2-binary
+$ pip install opteryx sqlalchemy psycopg2-binary
 ~~~
 
 ## Registering Postgres with Opteryx

@@ -1,4 +1,4 @@
-# Polars and Opteryx Integration
+# Integrating Polars with Opteryx
 
 This short guide demonstrates how to integrate Polars and Opteryx, showing you how to query a Polars dataframe with Opteryx and how to return Polars dataframe from Opteryx.
 
@@ -7,8 +7,7 @@ This short guide demonstrates how to integrate Polars and Opteryx, showing you h
 Install Opteryx and Polars.
 
 ~~~console
-$ pip install opteryx
-$ pip install polars
+$ pip install opteryx polars
 ~~~
 
 ## Polars to Opteryx
