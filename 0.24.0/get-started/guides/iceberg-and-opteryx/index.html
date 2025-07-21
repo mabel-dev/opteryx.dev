@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#iceberg-and-opteryx-integration" class="md-skip">
+        <a href="#integrating-apache-iceberg-with-opteryx" class="md-skip">
           Skip to content
         </a>
       
@@ -565,9 +565,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iceberg-to-opteryx" class="md-nav__link">
+  <a href="#querying-iceberg-tables-with-opteryx" class="md-nav__link">
     <span class="md-ellipsis">
-      Iceberg to Opteryx
+      Querying Iceberg Tables with Opteryx
     </span>
   </a>
   
@@ -2248,9 +2248,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iceberg-to-opteryx" class="md-nav__link">
+  <a href="#querying-iceberg-tables-with-opteryx" class="md-nav__link">
     <span class="md-ellipsis">
-      Iceberg to Opteryx
+      Querying Iceberg Tables with Opteryx
     </span>
   </a>
   
@@ -2275,34 +2275,42 @@
   
 
 
-<h1 id="iceberg-and-opteryx-integration">Iceberg and Opteryx Integration</h1>
-<p>This short guide demonstrates how to integrate <a href="https://py.iceberg.apache.org/">Apache Iceberg</a> and <a href="https://opteryx.dev/">Opteryx</a>, showing you how to query an Iceberg Table with Opteryx.</p>
-<p>This example is using a catalog in SQLite and local storage as the file store, for other configurations and more detail how to create and connect to Iceberg refer to the <a href="https://py.iceberg.apache.org/configuration/">PyIceberg Documentation</a>.</p>
+<h1 id="integrating-apache-iceberg-with-opteryx">Integrating Apache Iceberg with Opteryx</h1>
+<p>This guide walks you through integrating <a href="https://py.iceberg.apache.org/">Apache Iceberg</a> with <a href="https://opteryx.dev/">Opteryx</a>, enabling you to run SQL queries directly on Iceberg tables using Opteryx.</p>
+<p>The example below uses a SQLite catalog and local file storage. For more advanced configurations—including Hive Metastore, AWS Glue, or remote storage—refer to the <a href="https://py.iceberg.apache.org/configuration/">PyIceberg configuration documentation</a>.</p>
 <h2 id="installation">Installation</h2>
-<p>Install Opteryx and PyIceberg.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>opteryx
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>pyiceberg<span class="o">[</span>sql-sqlite<span class="o">]</span>
+<p>Install both Opteryx and PyIceberg using pip:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>opteryx<span class="w"> </span>pyiceberg
 </code></pre></div>
-<h2 id="iceberg-to-opteryx">Iceberg to Opteryx</h2>
-<p>Opteryx can natively query Pandas DataFrames by registering the DataFrame as a data source.</p>
+<h2 id="querying-iceberg-tables-with-opteryx">Querying Iceberg Tables with Opteryx</h2>
+<p>Opteryx supports querying Iceberg tables by registering an Iceberg catalog as a data source.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pyiceberg.catalog.sql</span><span class="w"> </span><span class="kn">import</span> <span class="n">SqlCatalog</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Load the catalog - this must already exist</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">iceberg_catalog</span> <span class="o">=</span> <span class="n">SqlCatalog</span><span class="p">(</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="o">**</span><span class="p">{</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="s2">&quot;uri&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;sqlite:///pyiceberg_catalog/pyiceberg_catalog.db&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="s2">&quot;warehouse&quot;</span><span class="p">:</span> <span class="s2">&quot;pyiceberg_catalog&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="p">},</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">)</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># Register the &#39;iceberg&#39; namespace to use the IcebergConnector and catalot</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">opteryx</span><span class="o">.</span><span class="n">register_store</span><span class="p">(</span><span class="s2">&quot;iceberg&quot;</span><span class="p">,</span> <span class="n">IcebergConnector</span><span class="p">,</span> <span class="n">catalog</span><span class="o">=</span><span class="n">iceberg_catalog</span><span class="p">)</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># Query a table in the catalog - this must already exist</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">results</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM iceberg.planets&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opteryx.connectors</span><span class="w"> </span><span class="kn">import</span> <span class="n">IcebergConnector</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Load the Iceberg catalog (must already exist)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">iceberg_catalog</span> <span class="o">=</span> <span class="n">SqlCatalog</span><span class="p">(</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;sqlite:///pyiceberg_catalog/pyiceberg_catalog.db&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">warehouse</span><span class="o">=</span><span class="s2">&quot;pyiceberg_catalog&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># Register the Iceberg catalog in Opteryx under the &#39;iceberg&#39; namespace</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">opteryx</span><span class="o">.</span><span class="n">register_store</span><span class="p">(</span><span class="s2">&quot;iceberg&quot;</span><span class="p">,</span> <span class="n">IcebergConnector</span><span class="p">,</span> <span class="n">catalog</span><span class="o">=</span><span class="n">iceberg_catalog</span><span class="p">)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1"># Run a query against an Iceberg table (table must exist in the catalog)</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">results</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM iceberg.planets&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1"># Use the results as needed</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 </code></pre></div>
+<blockquote>
+<p>💡 Note: The iceberg.planets table refers to the planets table inside the Iceberg catalog namespace iceberg.</p>
+</blockquote>
+<p><strong>Troubleshooting</strong>
+- Ensure the Iceberg catalog and referenced tables exist before querying.
+- For remote or cloud-based Iceberg storage, update the catalog and warehouse configuration accordingly.</p>
 
 
 
