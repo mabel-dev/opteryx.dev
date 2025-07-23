@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2651](https://github.com/mabel-dev/opteryx/issues/2651)] Add `current_timestamp` function ([@joocer](https://github.com/joocer))
 - [[#2671](https://github.com/mabel-dev/opteryx/issues/2671)] Support qualified wildcards mixed with explicit columns in `SELECT` ([@joocer](https://github.com/joocer))
 - [[#2679](https://github.com/mabel-dev/opteryx/issues/2679)] Purge blob from caches on read error ([@joocer](https://github.com/joocer))
+- [[#2687](https://github.com/mabel-dev/opteryx/issues/2687)] Cache parquet file statistics and use for read pruning ([@joocer](https://github.com/joocer))
 
 ### Changed
 
