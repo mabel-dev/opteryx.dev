@@ -2202,9 +2202,13 @@
 <h1 id="tpc-h-benchmark">TPC-H Benchmark</h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Conformance is a work in progress and this information represents the current state in order to provide transparent information about progress and capability.</p>
+<p>Conformance is a work in progress. This page reflects the current implementation status to provide transparent insight into Opteryx’s capabilities and development progress.</p>
 </div>
-<p><a href="https://www.tpc.org/">TPC</a> publish a set of benchmarks for computer and database systems. <a href="https://www.tpc.org/tpch/default5.asp">TPC-H</a> is a decision support benchmark which consists of a set of business-oriented queries. This benchmark demonstrates a decision support system that examines large amounts of data, executes highly complex queries, and answers key business questions. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Performance in benchmarks should always be taken with some skepticism, benchmarks tend to be opinionated to specific characteristics and do not represent all factors which should be considered when comparing systems.</p>
+</div>
+<p>The <a href="https://www.tpc.org/">Transaction Processing Performance Council (TPC)</a> publishes industry-standard benchmarks for evaluating database and computer system performance. <a href="https://www.tpc.org/tpch/default5.asp">TPC-H</a> is a decision support benchmark comprising a suite of complex, business-oriented queries. It simulates real-world analytical workloads that scan large volumes of data, perform intensive joins and aggregations, and answer critical business questions.</p>
 <table>
 <thead>
 <tr>
@@ -2354,7 +2358,9 @@
 </blockquote>
 <p>All queries have been modified to refer to the location of the datasets, <strong>modified</strong> in the above table is where the SQL has been written to replace unsupported functionality with supported functionality - this is where the original query either created a view or a temporary table, both of these have been replaced with a CTE definition.</p>
 <p>The test suite for this benchmark is in the <a href="https://github.com/mabel-dev/wrenchy-bench">Opteryx Benchmarking</a> repository.</p>
-<p>TPC-H is Copyright © 1993-2022 Transaction Processing Performance Council. The full TPC-H specification in PDF format can be found <a href="https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-H_v3.0.1.pdf">here</a>.</p>
+<p><strong>Legal Notice</strong></p>
+<p>TPC-H is Copyright © 1993-2022 Transaction Processing Performance Council. <br />
+The full TPC-H specification in PDF format can be found <a href="https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-H_v3.0.1.pdf">here</a>.</p>
 <p>TPC, TPC Benchmark, TPC-H are trademarks of the Transaction Processing Performance Council.</p>
 
 
