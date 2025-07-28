@@ -1,0 +1,284 @@
+{% extends "base.html" %}
+
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+{% endblock %}
+
+{% block site_nav %} {% endblock %}
+
+
+{% block content %}
+
+    <!-- Hero Section -->
+    <section id="hero" class="py-12 px-4 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="md:w-1/2 space-y-6">
+                <h1 class="text-5xl md:text-6xl font-bold">
+                    Opteryx
+                </h1>
+                <p class="text-2xl md:text-3xl font-semibold text-gray-700">
+                    Query your data, <span class="text-indigo-600">where it lives</span>
+                </p>
+                <p class="text-lg text-gray-600">
+                    Skip the data wrangling. Run SQL directly on S3, Iceberg, and more - no pipeline needed.
+                </p>
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <a href="/latest/get-started/get-started/" class="px-6 py-3 bg-pink-500 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-300 flex items-center gap-2 glow hover:shadow-lg">
+                        Get Started <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="https://github.com/mabel-dev/opteryx" 
+                    class="github-btn px-6 py-3 border-2 border-gray-800 rounded-lg transition-all duration-300 flex items-center gap-2 hover:shadow-lg">
+                        <i class="fab fa-github text-gray-800"></i> <span class="text-gray-800 font-medium">Star on GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+            <!---
+                <img src="ho_me-diagram.svg" alt="Opteryx Diagram" class="w-full max-w-md">
+            ---->
+            </div>
+        </div>
+    </section>
+
+    <hr />
+
+    <!-- Value Proposition -->
+    <section class="max-w-4xl mx-auto px-4 text-center mb-16">
+        <div class="text-3xl md:text-4xl font-bold mb-6">
+            One interface, <span class="text-pink-800">endless possibilities</span>
+        </div>
+        <p class="text-xl text-gray-600 leading-relaxed">
+            Effortless cross-platform data analytics that simplifies your workflow while maintaining the power and flexibility you need. 
+            Opteryx bridges the gap between your data sources and your insights, eliminating the need for complex ETL processes.
+        </p>
+    </section>
+
+    <hr />
+
+    <!-- Features Section -->
+    <section id="features" class="py-6 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <div class="text-3xl font-bold text-center mb-4">Features that <span class="text-indigo-600">fit</span> your flow</div>
+            <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                Opteryx adapts to your tools, workflows, and scale — without the usual friction.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl transition-all duration-300 feature-card border border-gray-100">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-server text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Multi-platform</h3>
+                    <p class="text-gray-600">
+                        Runs most places you can run Python; GCP, AWS, Azure, Kubernetes, Knative, your own servers or a Raspberry Pi.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl transition-all duration-300 feature-card border border-gray-100">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-database text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">In-Place Analytics</h3>
+                    <p class="text-gray-600">
+                        Query across multiple data siloes without the need for data migration or additional loading.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl transition-all duration-300 feature-card border border-gray-100">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Simple to Use</h3>
+                    <p class="text-gray-600">
+                        Query your data with SQL, leveraging skills your data analysts already have.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl transition-all duration-300 feature-card border border-gray-100">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-expand text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Elastic & Available</h3>
+                    <p class="text-gray-600">
+                        Scale from zero to thousands of concurrent queries within seconds to meet demand.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl transition-all duration-300 feature-card border border-gray-100">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-history text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Time Travel</h3>
+                    <p class="text-gray-600">
+                        Revisit past data points to replay decisions based on historical facts, enabling better analyses.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl transition-all duration-300 feature-card border border-gray-100">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-code-branch text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Open Source & Extensible</h3>
+                    <p class="text-gray-600">
+                        Opteryx invites contributions from all. Fork, extend, and be part of the community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="py-6 max-w-7xl mx-auto px-4">
+        <div class="text-3xl font-bold text-center mb-4">Transform Your <span class="text-purple-600">Data Workflows</span></div>
+        <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Discover how Opteryx simplifies complex data operations across industries
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+            <!-- card 1 -->
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover">
+                <div class="flex flex-col h-full">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Unified Analytics</h3>
+                    <p class="text-gray-600">
+                        <span class="text-gray-900 font-medium">Simplify analytics across cloud and local sources using a single SQL interface.</span>
+                        <br /><br />
+                        Query Iceberg, Parquet, GCP, and more — no pipeline required.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover">
+                <div class="flex flex-col h-full">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Real-time Log Analysis</h3>
+                    <p class="text-gray-600">
+                        <span class="text-gray-900 font-medium">Query streaming logs while they're still hot.</span>
+                        <br /><br />
+                        Spot issues and patterns instantly — no ingestion delay.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover">
+                <div class="flex flex-col h-full">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Embedded Analytics</h3>
+                    <p class="text-gray-600">
+                        <span class="text-gray-900 font-medium">Give analysts powerful, cost-efficient access to data without infrastructure overhead.</span>
+                        <br /><br />
+                        No need to manage thousands of idle databases — run fast queries on demand, when it counts.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>    
+
+    <!-- Get Started Section -->
+    <section id="get-started" class="py-6 max-w-7xl mx-auto px-4">
+        <div class="text-3xl font-bold text-center mb-4">Resources to <span class="text-green-700">Get Started</span></div>
+        <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Everything you need to begin your Opteryx journey
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col">
+                <div class="bg-green-100 p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-book text-green-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Read the Docs</h3>
+                <p class="text-gray-600 mb-6 flex-grow">
+                    Helpful for new and experienced users, our documentation includes information on how to setup, configure and use Opteryx.
+                </p>
+                <a href="/get-started/overview/" class="text-indigo-600 font-medium flex items-center gap-2 mt-auto">
+                    View Setup Guide <i class="fas fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col">
+                <div class="bg-green-100 p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-terminal text-green-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Run Examples</h3>
+                <p class="text-gray-600 mb-6 flex-grow">
+                    Try out the example Binder Notebooks to get you started with practical, hands-on examples.
+                </p>
+                <a href="https://mybinder.org/v2/gh/mabel-dev/labs/HEAD" class="text-indigo-600 font-medium flex items-center gap-2 mt-auto">
+                    Try in Binder <i class="fas fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col">
+                <div class="bg-green-100 p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-comments text-green-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Community Support</h3>
+                <p class="text-gray-600 mb-6 flex-grow">
+                    Reach out to us with any questions you have on setting up, or using Opteryx. Our community is here to help.
+                </p>
+                <a href="https://discord.gg/qpv2tr989x" class="text-indigo-600 font-medium flex items-center gap-2 mt-auto">
+                    Join Discord <i class="fas fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-8 bg-gradient-to-r from-indigo-50 to-blue-50 mt-2">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="text-3xl font-bold mb-6">Ready to transform your data analytics?</div>
+            <p class="text-xl text-gray-600 mb-8">
+                Join thousands of developers and data professionals who are already using Opteryx to simplify their data workflows.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/latest/get-started/get-started/" class="px-8 py-3 bg-pink-500 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-300 flex items-center gap-2">
+                    Get Started <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block footer %}
+  <section class="home-footer">
+    <div class="item">
+    </div>
+    <div class="item">
+      <h2>
+        <a href="https://opteryx.dev/latest/get-started/guides/iceberg-and-opteryx/"
+        class="iceberg"
+        title="Query Apache Iceberg with Opteryx - Step-by-Step Setup Guide"
+        aria-label="Opteryx Works With Iceberg - Setup Guide for Querying Apache Iceberg with Opteryx">Opteryx ❤️ Iceberg</a>
+      </h2>
+      <ul>
+        <li><i class="fa-fw fa-solid fa-arrow-right-arrow-left"></i> <a href="/get-started/guides/iceberg-and-opteryx/">Iceberg Integration Guide</a></li>
+      </ul>
+    </div>
+    <div class="item">
+      <h2>Let's stay in touch</h2>
+      <ul>
+        <li><i class="fa-fw fa-brands fa-mastodon"></i> <a rel="me" href="https://mastodon.social/@opteryx" target="_blank">Updates on <b>Mastodon</b></a></li>
+        <li><i class="fa-fw fa-brands fa-discord"></i> <a href="https://discord.gg/qpv2tr989x" target="_blank">Ask for help on <b>Discord</b></a></li>
+        <li><i class="fa-fw fa-brands fa-github"></i> <a href="https://github.com/mabel-dev/opteryx" target="_blank">Optertx on <b>GitHub</b></a></li>
+        <li><i class="fa-fw fa-brands fa-python"></i> <a href="https://pypi.org/project/opteryx/" target="_blank">Opteryx on <b>PyPI</b></a></li>
+      </ul>
+    </div>
+  </section>
+    {{super()}}
+{% endblock %}
