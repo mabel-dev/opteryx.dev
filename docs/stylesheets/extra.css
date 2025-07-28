@@ -128,12 +128,23 @@ h2 {
 h3 {
     font-family: Inter, 'IBM Plex Sans', sans-serif;
     font-weight: 600 !important;
-    font-size: 1.2em !important;
+    font-size: 1.3em !important;
     margin-bottom: 0em !important;
     margin-top: 0.5em !important;
     color: #11595c !important;
 }
 
+p {
+    font-size: 1.2em !important;
+    line-height: 1.5em !important;
+    color: #4b4b4b !important;
+}
+
+.md-content li {
+    font-size: 1.2em !important;
+    line-height: 1.5em !important;
+    color: #4b4b4b !important;
+}
 
 p>a {
     color: #2680eb !important;

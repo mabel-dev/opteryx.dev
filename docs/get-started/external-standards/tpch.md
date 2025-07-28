@@ -1,9 +1,12 @@
 # TPC-H Benchmark
 
 !!! Note   
-    Conformance is a work in progress and this information represents the current state in order to provide transparent information about progress and capability.
+    Conformance is a work in progress. This page reflects the current implementation status to provide transparent insight into Opteryx’s capabilities and development progress.
 
-[TPC](https://www.tpc.org/) publish a set of benchmarks for computer and database systems. [TPC-H](https://www.tpc.org/tpch/default5.asp) is a decision support benchmark which consists of a set of business-oriented queries. This benchmark demonstrates a decision support system that examines large amounts of data, executes highly complex queries, and answers key business questions. 
+!!! Note   
+    Performance in benchmarks should always be taken with some skepticism, benchmarks tend to be opinionated to specific characteristics and do not represent all factors which should be considered when comparing systems.
+
+The [Transaction Processing Performance Council (TPC)](https://www.tpc.org/) publishes industry-standard benchmarks for evaluating database and computer system performance. [TPC-H](https://www.tpc.org/tpch/default5.asp) is a decision support benchmark comprising a suite of complex, business-oriented queries. It simulates real-world analytical workloads that scan large volumes of data, perform intensive joins and aggregations, and answer critical business questions.
 
 Query   | Modified | Pass   | Issue
 :------ | :------- | :----- | :-----
@@ -36,6 +39,9 @@ All queries have been modified to refer to the location of the datasets, **modif
 
 The test suite for this benchmark is in the [Opteryx Benchmarking](https://github.com/mabel-dev/wrenchy-bench) repository.
 
-TPC-H is Copyright © 1993-2022 Transaction Processing Performance Council. The full TPC-H specification in PDF format can be found [here](https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-H_v3.0.1.pdf).
+**Legal Notice**
+
+TPC-H is Copyright © 1993-2022 Transaction Processing Performance Council.   
+The full TPC-H specification in PDF format can be found [here](https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-H_v3.0.1.pdf).
 
 TPC, TPC Benchmark, TPC-H are trademarks of the Transaction Processing Performance Council.

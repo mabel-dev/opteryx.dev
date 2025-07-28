@@ -1,7 +1,7 @@
 # Information Schema Conformity (MySQL)
 
 !!! Note   
-    Conformance is a work in progress and this information represents the current state in order to provide transparent information about progress and capability.
+    Conformance is a work in progress. This page reflects the current implementation status to provide transparent insight into Opteryx’s capabilities and development progress.
 
 Opteryx aims to implement parts of the [MySQL Information Schema](https://dev.mysql.com/doc/refman/8.0/en/information-schema-table-reference.html) interface. If a view is not listed below, the current intention is to not support it.
 

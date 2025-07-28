@@ -1,166 +1,154 @@
 # Statements
 
-The following statement forms are supported.
+The following SQL statement forms are supported in Opteryx.
+
+The SQL syntax supported by Opteryx is broadly inspired by [MySQL](https://www.mysql.com/); however, full compatibility is not a design goal. Syntax and feature support are selectively implemented based on relevance to Opteryx’s architecture and intended use cases.
 
 ## SELECT
 
-Retrieve rows from zero or more relations.
+Retrieve rows from one or more relations.
 
 ~~~sql
 [ <statement> UNION [ ALL ] ... ]
 
-SELECT [ DISTINCT ] [ ON ( <columns> ) ] ] <expression> [ , ... ]
+SELECT [ DISTINCT ] [ ON ( <columns> ) ] <expression> [, ...]
        | [ * EXCEPT ( <columns> ) ]
-    FROM { <relation> | <function> | (<subquery>) } AS <alias>
-    [ FOR <period> ]
-    [
-        [ INNER ] JOIN { <relation> | <function> | (<subquery>) } [ AS <alias> ]
-            [ ON <condition> | USING ( <columns> ) ]
-        | CROSS JOIN { <relation> | <function> | (<subquery>) } [ AS <alias> ]
-        | LEFT [ OUTER | ANTI | SEMI ] JOIN { <relation> | <function> | (<subquery>) } [ AS <alias> ]
-            [ ON <condition> | USING ( <columns> ) ]
-        | RIGHT [ OUTER ] JOIN { <relation> | <function> | (<subquery>) } [ AS <alias> ]
-            [ ON <condition> | USING ( <columns> ) ]
-        | FULL [ OUTER ] JOIN { <relation> | <function> | (<subquery>) } [ AS <alias>  ]
-            [ ON <condition> | USING ( <columns> ) ]  
-   ] [ ... ]                  
- WHERE <condition> [ { AND | OR | XOR } ... ]
- GROUP BY [ ALL | <expression> [ , ... ] ]
-HAVING <condition> [ { AND | OR | XOR } ... ]
- ORDER BY <expression> [ , ... ]
- LIMIT <limit>
-OFFSET <offset>
+  FROM { <relation> | <function> | (<subquery>) } AS <alias>
+  [ FOR <period> ]
+  [
+    JOIN clauses...
+  ]
+  WHERE <condition> [ { AND | OR | XOR } ... ]
+  GROUP BY [ ALL | <expression> [, ...] ]
+  HAVING <condition> [ { AND | OR | XOR } ... ]
+  ORDER BY <expression> [, ...]
+  LIMIT <limit>
+  OFFSET <offset>
 ~~~
 
-### UNION class
+### UNION
 
-~~~
+~~~sql
 statement UNION [ ALL ] statement
 ~~~
 
-The `UNION` class appends the results of two queries together one after the other. The names and types of the resulting columns are taken from the first statement, names in the second statement are ignored and types are coerced where possible.
+The `UNION` clause combines the results of two queries by appending the rows. Column names and types are taken from the first query. Names from the second are ignored, and types are coerced when possible.
 
-The default behaviour of the `UNION` class is to deduplicate rows, to return all rows, including duplicates the `ALL` modifier must be used.
+By default, `UNION` removes duplicate rows. Use the `ALL` modifier to retain duplicates.
 
-### SELECT clause
+### SELECT
 
+~~~sql
+SELECT [ DISTINCT [ ON (columns) ]] expression [, ...]
 ~~~
-SELECT [ DISTINCT [ ON (columns )]] expression [, ...]
-~~~
-~~~
-SELECT * EXCEPT (column[, ... ])
+~~~sql
+SELECT * EXCEPT (column[, ...])
 ~~~
 
-The `SELECT` clause specifies the list of columns that will be returned by the query. While it appears first in the clause, logically the expressions here are executed after most other clauses. The `SELECT` clause can contain arbitrary expressions that transform the output, as well as aggregate functions.
+The `SELECT` clause defines the columns or expressions to return. Although it appears first, it executes after the `FROM`, `WHERE`, and `GROUP BY` clauses.
 
-The `DISTINCT` modifier is specified, only unique rows are included in the result set. In this case, each output column must be of a type that allows comparison. `DISTINCT ON ()` will perform a distinct on the specified columns and select one value for other columns. 
+- `DISTINCT` returns only unique rows.
+- `DISTINCT ON (columns)` removes duplicates based on the given columns.
+- `EXCEPT` allows exclusion of specific columns.
 
-`EXCEPT` can be used to list columns to exclude from results.
+### FROM / JOIN
 
-### FROM / JOIN clauses
-
-~~~
+~~~sql
 FROM relation [AS alias] [FOR period] [WITH (NO_CACHE, NO_PARTITION, NO_PUSH_PROJECTION, NO_PUSH_SELECTION)] [, ...] 
-~~~
-~~~
-FROM relation [AS alias] [FOR period] [ INNER ] JOIN relation [FOR period] < USING (columns) | ON condition >
-~~~ 
-~~~
-FROM relation [AS alias] [FOR period] LEFT [ OUTER | ANTI | SEMI ] JOIN relation [FOR period] < USING (columns) | ON condition >
-~~~ 
-~~~
-FROM relation [AS alias] [FOR period] RIGHT [ OUTER | ANTI | SEMI ] JOIN relation [FOR period] < USING (columns) | ON condition >
-~~~ 
-~~~
-FROM relation [AS alias] [FOR period] FULL [OUTER ] JOIN relation [FOR period]
-~~~
-~~~
-FROM relation [AS alias] [FOR period] CROSS JOIN < relation [FOR period] | UNNEST(column) >
+JOIN ...
 ~~~
 
-The `FROM` clause specifies the source of the data on which the remainder of the query should operate. Logically, the `FROM` clause is where the query starts execution. The `FROM` clause can contain a single relation, a combination of multiple relations that are joined together, or another `SELECT` query inside a subquery node.
+`FROM` defines the source(s) of data. It supports single or multiple relations, functions, subqueries, and joins.
 
-`JOIN` clauses allow you to combine data from multiple relations. If no `JOIN` qualifier is provided, `INNER` will be used. `JOIN` qualifiers are mutually exclusive. `ON` and `USING` clauses are also mutually exclusive and can only be used with `INNER` and `LEFT` joins.
+Supported `JOIN` types:
 
-See [Joins](../joins/) for more information on `JOIN` syntax and functionality.
+- `INNER JOIN`   
+- `LEFT [OUTER | ANTI | SEMI] JOIN`   
+- `RIGHT [OUTER] JOIN`   
+- `FULL [OUTER] JOIN`   
+- `CROSS JOIN`  
 
-### FOR clause
+`ON` and `USING` are mutually exclusive and only applicable to `INNER`, `LEFT`, and `RIGHT` joins.
 
-~~~
+See [Joins](../joins/) for full syntax and examples.
+
+### FOR
+
+~~~sql
 FOR date
 ~~~
-~~~
+~~~sql
 FOR DATES BETWEEN start AND end
 ~~~
-~~~
+~~~sql
 FOR DATES IN range
 ~~~
-~~~
+~~~sql
 FOR DATES SINCE start
 ~~~
+~~~sql
+FOR LAST n DAYS
 ~~~
-FOR LAST count DAYS
-~~~
 
-The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation in a `FROM` or `JOIN` clause. If not provided `FOR TODAY` is assumed.
+Filters data by recorded date. If omitted, `FOR TODAY` is assumed.
 
-See [Time Travel](../adv-time-travel/) for more information on `FOR` syntax and functionality.
+See [Time Travel](../adv-time-travel/) for more information.
 
-### WHERE clause
+### WHERE
 
-~~~
+~~~sql
 WHERE condition
 ~~~
 
-The `WHERE` clause specifies any filters to apply to the data. This allows you to select only a subset of the data in which you are interested. Logically the `WHERE` clause is applied immediately after the `FROM` clause.
+Applies filters to rows before grouping or projection.
 
-### GROUP BY / HAVING clauses
+### GROUP BY and HAVING
 
-~~~
+~~~sql
 GROUP BY expression [, ...]
 ~~~
-~~~
+~~~sql
 GROUP BY ALL
 ~~~
+~~~sql
+HAVING group_condition
 ~~~
-HAVING group_filter
-~~~
 
-The `GROUP BY` clause specifies which grouping columns should be used to perform any aggregations in the `SELECT` clause. If the `GROUP BY` clause is specified, the query is always an aggregate query, even if no aggregations are present in the `SELECT` clause. The `HAVING` clause specifies filters to apply to aggregated data, `HAVING` clauses require a `GROUP BY` clause.
+- `GROUP BY` defines grouping keys for aggregation.
+- `GROUP BY ALL` includes all non-aggregated columns from the `SELECT`.
+- `HAVING` filters grouped results and requires a `GROUP BY`.
 
-`GROUP BY ALL` will automatically include all columns in the corresponding `SELECT` clause which do not contain aggregrations.  
+### ORDER BY / LIMIT / OFFSET
 
-### ORDER BY / LIMIT / OFFSET clauses
-
-~~~
+~~~sql
 ORDER BY expression [ ASC | DESC ] [, ...]
 ~~~
+~~~sql
+OFFSET n
 ~~~
-OFFSET count
-~~~
-~~~
-LIMIT count
+~~~sql
+LIMIT n
 ~~~
 
-`ORDER BY`, `LIMIT` and `OFFSET` are output modifiers. Logically they are applied at the very end of the query. The `OFFSET` clause discards initial rows from the returned set, the `LIMIT` clause restricts the amount of rows fetched, and the `ORDER BY` clause sorts the rows on the sorting criteria in either ascending or descending order.
+These clauses apply to the final output:
 
-`ORDER BY` expressions may use column numbers, however, this is not recommended for statements intended for reuse.
+- `ORDER BY` sorts rows.
+- `LIMIT` restricts how many rows are returned.
+- `OFFSET` skips rows before returning results.
 
 ## EXPLAIN
 
-Show the logical execution plan of a statement.
-
 ~~~sql
-EXPLAIN [ ANALYZE ] [ FORMAT MERMAID | FORMAT TEXT ]
-statement
+EXPLAIN [ ANALYZE ] [ FORMAT MERMAID | FORMAT TEXT ] statement
 ~~~
 
-The `EXPLAIN` clause outputs a summary of the execution plan for the query in the `SELECT` statement. The `ANALYZE` modifier is used to execute the query and return additional information about the execution of the query.
+Displays the logical query plan.
 
-The optional `FORMAT` modifier controls the output format, `TEXT` is the default tabular representation of the plan, `MERMAID` creates a flow which can be interpretted as a [mermaid](https://mermaid.js.org/) diagram.
+- `ANALYZE` executes the query and appends execution metrics.
+- `FORMAT` specifies output style: `TEXT` (default) or [`MERMAID`](https://mermaid.js.org/) for diagramming.
 
-!!! Warning  
-    The data returned by the `EXPLAIN` statement is intended for interactive usage only and the output format may change between releases. Applications should not depend on the output of the `EXPLAIN` statement.
+!!! warning
+    Output format may change across versions and is not intended for machine parsing.
 
 ## EXECUTE :octicons-beaker-24: 
 
@@ -203,25 +191,6 @@ Inclusion of the `EXTENDED` modifier includes summary statistics about the colum
 ### FULL modifier
 
 Inclusion of the `FULL` modifier uses the entire dataset in order to return complete column information, rather than just the first morsel from the dataset.
-
-### FOR clause
-
-~~~
-FOR date
-~~~
-~~~
-FOR DATES BETWEEN start AND end
-~~~
-~~~
-FOR DATES IN range
-~~~
-~~~
-FOR DATES SINCE start
-~~~
-
-The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation name the `FROM` clause. If not provided `FOR TODAY` is assumed.
-
-See [Time Travel](../adv-time-travel/) for more information on `FOR` syntax and functionality.
 
 ## SHOW CREATE VIEW
 
