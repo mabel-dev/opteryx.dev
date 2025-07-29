@@ -4,11 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.25.0] - UNRELEASED
+## [0.24.1] - 2025-07-29
 
 ### Fixed
 
 - [[#2707](https://github.com/mabel-dev/opteryx/issues/2707)] **[Security]** Fix potential Buffer Overflow ([@joocer](https://github.com/joocer))
+- [[#2709](https://github.com/mabel-dev/opteryx/issues/2709)] **[ClickBench]** Benchmark script failing ([@joocer](https://github.com/joocer))
 
 ## [0.24.0] - 2025-07-28
 
