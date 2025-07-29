@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.25.0] - UNRELEASED
 
+### Fixed
+
+- [[#2707](https://github.com/mabel-dev/opteryx/issues/2707)] **[Security]** Fix potential Buffer Overflow ([@joocer](https://github.com/joocer))
+
 ## [0.24.0] - 2025-07-28
 
 ### Removed
