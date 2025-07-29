@@ -18,7 +18,7 @@
         <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../get-started/">
+        <link rel="next" href="../quickstart/">
       
       
       <link rel="icon" href="../../icarus-opteryx.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Opteryx Overview - Opteryx</title>
+        <title>Get Started with Opteryx - Opteryx</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#opteryx-overview" class="md-skip">
+        <a href="#get-started-with-opteryx" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Opteryx Overview
+              Get Started with Opteryx
             
           </span>
         </div>
@@ -362,7 +362,7 @@
   
   
   <span class="md-ellipsis">
-    Opteryx Overview
+    Get Started with Opteryx
     
   </span>
   
@@ -375,7 +375,7 @@
   
   
   <span class="md-ellipsis">
-    Opteryx Overview
+    Get Started with Opteryx
     
   </span>
   
@@ -398,18 +398,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#benefits" class="md-nav__link">
+  <a href="#why-opteryx" class="md-nav__link">
     <span class="md-ellipsis">
-      Benefits
+      Why Opteryx?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uses-for-opteryx" class="md-nav__link">
+  <a href="#what-can-you-use-it-for" class="md-nav__link">
     <span class="md-ellipsis">
-      Uses for Opteryx
+      What Can You Use It For?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-not-to-use-opteryx" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Not to Use Opteryx
     </span>
   </a>
   
@@ -425,9 +434,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cloud-native" class="md-nav__link">
+  <a href="#architecture-fit" class="md-nav__link">
     <span class="md-ellipsis">
-      Cloud Native
+      Architecture Fit
     </span>
   </a>
   
@@ -449,12 +458,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../get-started/" class="md-nav__link">
+      <a href="../quickstart/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Get Started
+    Quickstart
     
   </span>
   
@@ -2255,18 +2264,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#benefits" class="md-nav__link">
+  <a href="#why-opteryx" class="md-nav__link">
     <span class="md-ellipsis">
-      Benefits
+      Why Opteryx?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uses-for-opteryx" class="md-nav__link">
+  <a href="#what-can-you-use-it-for" class="md-nav__link">
     <span class="md-ellipsis">
-      Uses for Opteryx
+      What Can You Use It For?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-not-to-use-opteryx" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Not to Use Opteryx
     </span>
   </a>
   
@@ -2282,9 +2300,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cloud-native" class="md-nav__link">
+  <a href="#architecture-fit" class="md-nav__link">
     <span class="md-ellipsis">
-      Cloud Native
+      Architecture Fit
     </span>
   </a>
   
@@ -2309,34 +2327,51 @@
   
 
 
-<h1 id="opteryx-overview">Opteryx Overview</h1>
-<p>Opteryx revolutionizes your data landscape by serving as a seamless federator for diverse data sources. With Opteryx, you're not just querying a database — you're operating a data control room. Unify your data sources, viewing across Postgres databases, Parquet files, and even more specialized storage solutions, all through a single pane of glass. Opteryx empowers you to transcend data silos, synchronize insights, and command your entire data ecosystem with unparalleled speed and reliability.</p>
-<p>Opteryx is not intended to replace databases like SQL Server, MySQL, or Postgres. Instead, it's designed to allow querying of data sources as part of a data analytics process. By bridging the gap between various data storages, Opteryx enhances your analytics pipeline, enabling you to focus on drawing actionable insights rather than wrestling with data access and compatibility issues.</p>
-<h2 id="benefits">Benefits</h2>
+<h1 id="get-started-with-opteryx">Get Started with Opteryx</h1>
+<p>Opteryx is a cloud-native SQL query engine that lets you query data across multiple systems without needing to centralize or duplicate it. Whether your data lives in Postgres, Parquet, JSONL, or somewhere else, Opteryx gives you a unified SQL interface — so you can focus on <strong>analytics, not integration</strong>.</p>
+<p>It’s not a replacement for databases like Postgres or MySQL. Instead, Opteryx acts as a <strong>federated query layer</strong>, ideal for analytics workflows where data lives in many places and fast answers matter more than transactional support.</p>
+<h2 id="why-opteryx">Why Opteryx?</h2>
 <ul>
-<li><strong>Querying large datasets across multiple platforms</strong> - Opteryx allows you to query multiple query engines and storage formats in a single query. This makes it useful for querying large datasets that are stored in different formats or locations.</li>
-<li><strong>Analyzing data in real-time</strong> - Opteryx is designed to run in serverless environments where servers can be created and destroyed regularly or even between every query. This makes it well-suited for real-time data analytics, where you need to analyze data quickly and efficiently.</li>
-<li><strong>Cost-effective data analytics</strong> - Opteryx is consumption-based billing friendly, making it great for low-volume usage or situations where you have many environments. This makes it a cost-effective alternative to traditional database deployment.</li>
-<li><strong>Replaying decisions against past data</strong> - Opteryx allows you to query data at a point in time in the past to replay decision algorithms against facts as they were known in the past. This makes it useful for situations where you need to analyze data retroactively.</li>
-<li><strong>Integration with Python</strong> - Opteryx is Python native and can be easily integrated into Python code, including Jupyter Notebooks. This makes it useful for data analysts and data scientists who use Python as their primary programming language.</li>
+<li><strong>Query across formats and systems</strong> Combine Parquet, Postgres, DuckDB, JSONL, and more — all in a single query. No ETL required.</li>
+<li><strong>Designed for the cloud</strong> Opteryx is stateless and fast to start, making it perfect for serverless platforms like Google Cloud Run. No persistent state, no storage to manage.</li>
+<li><strong>Cost-efficient by design</strong> Built for consumption-based infrastructure. Start fast, scale down to zero, pay only when used.</li>
+<li><strong>Python-native</strong> Use directly from Python or Jupyter notebooks. It speaks PEP 249 (DB API v2.0), so it plugs into your data science stack with minimal friction.</li>
+<li><strong>Time-travel support</strong>
+Query your data as it was at a specific point in time — ideal for replaying decisions or debugging past behavior.</li>
 </ul>
-<h2 id="uses-for-opteryx">Uses for Opteryx</h2>
-<ol>
-<li><strong>Data Analytics</strong> - Opteryx is designed for querying large data sets and can support complex analytics use cases. Its time travel feature allows you to query data as it existed in the past, making it well-suited for replaying decision algorithms against past facts.</li>
-<li><strong>Cloud-Native Data Processing</strong> - Opteryx is designed to run in low-cost, serverless environments like Google Cloud Run. This makes it a great choice for organizations that want to minimize infrastructure costs while still being able to query large datasets.</li>
-<li><strong>Data Warehousing</strong> - Opteryx allows you to query data directly in the systems where it is stored, eliminating the need to duplicate data into a common store for analytics. This can save you the cost and effort of maintaining duplicates, and is a good option for data warehousing use cases.</li>
-<li><strong>Python-Based Data Processing</strong> - Opteryx is written in Python and can be easily integrated into Python code, including Jupyter Notebooks. This makes it a good choice for data processing and analytics workflows that are already written in Python.</li>
-<li><strong>Unified Access to Backend Systems</strong> - Opteryx creates a common SQL-layer over multiple data platforms, allowing you to upgrade, migrate, or consolidate backend systems without changing any Opteryx code. This makes it a good choice for organizations that want to streamline their data infrastructure.</li>
-</ol>
-<p>Opteryx supports accessing multiple database backends, each with their own authentication and access controls. This capability allows Opteryx to serve as a unified access tool for external databases, simplifying challenges such as shifting data schemas and inconsistent API behaviors.</p>
+<h2 id="what-can-you-use-it-for">What Can You Use It For?</h2>
+<ul>
+<li><strong>Analytics over distributed data</strong> Run joins across logs in JSONL, user tables in Postgres, and reports in Parquet — without moving anything.</li>
+<li><strong>Data warehousing without the warehouse</strong> Skip the duplication step. Query data where it already lives.</li>
+<li><strong>Serverless data apps</strong> Use Opteryx in cloud functions or ephemeral containers — no need for warm state or persistent infrastructure.</li>
+<li><strong>Decision auditing and retrospectives</strong> Re-run your logic against how the data looked at any given point in time.</li>
+<li><strong>Python-based pipelines</strong>
+Drop Opteryx into your existing Python workflows. It behaves like a normal SQL engine, with native table and result access.</li>
+</ul>
+<h2 id="when-not-to-use-opteryx">When Not to Use Opteryx</h2>
+<p>Opteryx isn’t a general-purpose OLTP database. It doesn’t support inserts, updates, or deletes, and it doesn’t try to replace your existing databases.</p>
+<p>If you need:<br />
+- A full SQL engine with ACID guarantees → Use Postgres or MySQL<br />
+- An embedded analytics database → Use DuckDB or SQLite  </p>
+<p>We love those tools too — you can even query these using Opteryx.</p>
+<p>Opteryx is for when you need to query across those tools, want to query ad hoc data in files.</p>
 <h2 id="why-opteryx-rather-than-x">Why Opteryx rather than 'X'</h2>
 <p>'X' is great, and for your use case it may be a better option. Opteryx isn't for all users and all use cases - and we're okay with that.</p>
-<p>SQLite and DuckDB are great choices if you're looking for an embedded database engine. We like them so much we have SQLite and DuckDB integration tests in our CI test-suite.</p>
-<p>Postgres and MySQL are great choices if you're looking for a server/client style database engine. They are tried and tested and solve this problem very well. We like them so much we have Postgres and MySQL integration tests in our CI test-suite.</p>
-<p>Opteryx allows you to have the right database or datastore for the job, and combine them all together. Want to combine Customer database in Postgres, logs in JSONL and monthly sales reports in Parquet; do it - you have the freedom to choose the right tool for a specific task and still be able to join and search across all of them with Opteryx.</p>
-<h2 id="cloud-native">Cloud Native</h2>
-<p>Opteryx is a SQL query engine designed to query large datasets in low-cost serverless environments. While it can respond to a subset of SQL statements like a database, Opteryx is not a database itself and does not support activities that insert, update, or delete data.</p>
-<p>Opteryx doesn't rely on any internal state between queries. This means it can run in serverless environments where servers can be created and destroyed regularly, or even between every query. While the engine does use caching to improve performance, it doesn't maintain any persistent state, making it an ideal solution for cloud-based analytics. (<em>the engine does use caching to improve performance</em>)</p>
+<p>Want to query:<br />
+- Customers in Postgres <br />
+- Web logs in JSONL<br />
+- Sales reports in Excel  </p>
+<p>…all in one go?
+Opteryx handles that, with SQL you already know.</p>
+<h2 id="architecture-fit">Architecture Fit</h2>
+<p>Opteryx is stateless between queries. That means:<br />
+- No session management<br />
+- No background jobs <br />
+- No persistent config  </p>
+<p>Just fast, predictable, read-only querying. It caches what it can, but if the container goes away, nothing breaks. Perfect for <strong>serverless</strong>, <strong>batch</strong>, or <strong>ephemeral compute environments</strong>.</p>
+<p>⸻</p>
+<p>Want to run a query now? Check out the <a href="../get-started/">Quickstart Guide</a><br />
+Want to wire it into Python? See the <a href="../python-client/">Python Integration Docs</a></p>
 
 
 

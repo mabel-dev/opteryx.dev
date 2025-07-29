@@ -12,7 +12,7 @@
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://opteryx.dev/0.25.0/get-started/get-started/">
+        <link rel="canonical" href="https://opteryx.dev/0.25.0/get-started/quickstart/">
       
       
         <link rel="prev" href="../overview/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Get Started - Opteryx</title>
+        <title>Quickstart - Opteryx</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#get-started" class="md-skip">
+        <a href="#quickstart-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Get Started
+              Quickstart
             
           </span>
         </div>
@@ -353,7 +353,7 @@
   
   
   <span class="md-ellipsis">
-    Opteryx Overview
+    Get Started with Opteryx
     
   </span>
   
@@ -385,7 +385,7 @@
   
   
   <span class="md-ellipsis">
-    Get Started
+    Quickstart
     
   </span>
   
@@ -398,7 +398,7 @@
   
   
   <span class="md-ellipsis">
-    Get Started
+    Quickstart
     
   </span>
   
@@ -421,36 +421,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
+      Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-from-source" class="md-nav__link">
+  <a href="#install-from-source-bleeding-edge" class="md-nav__link">
     <span class="md-ellipsis">
-      Build from Source
+      Install from Source (Bleeding-edge)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-resources" class="md-nav__link">
+  <a href="#verify-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional Resources
+      Verify Installation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Troubleshooting
+      Resources
     </span>
   </a>
   
@@ -2255,36 +2255,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
+      Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-from-source" class="md-nav__link">
+  <a href="#install-from-source-bleeding-edge" class="md-nav__link">
     <span class="md-ellipsis">
-      Build from Source
+      Install from Source (Bleeding-edge)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-resources" class="md-nav__link">
+  <a href="#verify-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional Resources
+      Verify Installation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Troubleshooting
+      Resources
     </span>
   </a>
   
@@ -2309,41 +2309,41 @@
   
 
 
-<h1 id="get-started">Get Started</h1>
-<h2 id="installation">Installation</h2>
-<h3 id="requirements">Requirements</h3>
+<h1 id="quickstart-guide">Quickstart Guide</h1>
+<p>Get Opteryx running in minutes.</p>
+<h2 id="requirements">Requirements</h2>
 <ul>
-<li>Operating System: MacOS, Linux or Windows</li>
-<li>Python:<ul>
-<li>3.9 or later</li>
-<li><strong>Note</strong>: Windows is not recommented</li>
-</ul>
-</li>
+<li>OS: Linux, macOS, or Windows <em>(Windows is supported but not recommended for production use)</em></li>
+<li>Python: 3.9 or later</li>
 </ul>
 <h3 id="install-from-pypi-recommended">Install from PyPI (recommended)</h3>
-<p>We recommend installing Opteryx within a virtual environment. This will install the latest release version.</p>
+<p>We recommend using a virtual environment:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>myenv/bin/activate<span class="w">  </span><span class="c1"># On Windows, use `myenv\Scripts\activate`</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>opteryx
 </code></pre></div>
-<h2 id="build-from-source">Build from Source</h2>
-<p>To get the latest version, including pre-release and beta versions, you can build from the source code on GitHub.</p>
+<p>This installs the latest stable release.</p>
+<h2 id="install-from-source-bleeding-edge">Install from Source (Bleeding-edge)</h2>
+<p>If you want the latest features or are contributing to Opteryx, install directly from GitHub:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/mabel-dev/opteryx
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is not recommended for production use and involves additional steps and requirements dependant on the operating system and environment.</p>
+<p>Source builds may include unstable or experimental features and can have additional dependencies. Not recommended for production.</p>
 </div>
-<h2 id="additional-resources">Additional Resources</h2>
+<h2 id="verify-installation">Verify Installation</h2>
+<p>Run in Python:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT &#39;Hello, Opteryx!&#39;&quot;</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="resources">Resources</h2>
 <ul>
 <li><a href="../python-client/">API Documentation</a></li>
 <li><a href="https://github.com/mabel-dev/opteryx#examples">Usage Examples</a></li>
 <li><a href="https://discord.gg/qpv2tr989x">Discord Server</a></li>
 </ul>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<h3 id="faq">FAQ</h3>
-<p><strong>Q</strong>: What is the most common cause of installation problems? <br />
-<strong>A</strong>: Often, the issue is related to the Python version. Ensure you have Python 3.9 or later, and for Apple Silicon Mac, Python 3.11 or later is required.</p>
+<hr />
+<p>Ready to use it in Python? See the <a href="../python-client/">Python Integration Guide</a></p>
 
 
 
