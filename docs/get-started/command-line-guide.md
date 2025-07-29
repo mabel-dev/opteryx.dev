@@ -2,7 +2,7 @@
 
 The Opteryx Command Line Interface (CLI) provides a terminal-based interface for executing queries. You can use it either as an interactive shell (REPL) or to execute individual queries (Batch).
 
-Both modes require a working Python environment and Opteryx to be installed. To install Python, refer to the [Python website](https://www.python.org/). To install Opteryx follow the [Installation](../get-started/) guide.
+Both modes require a working Python environment and Opteryx to be installed. To install Python, refer to the [Python website](https://www.python.org/). To install Opteryx follow the [quickstart](../quickstart/) guide.
 
 ## REPL (Interactive) Mode
 

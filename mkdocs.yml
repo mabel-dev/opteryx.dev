@@ -63,7 +63,7 @@ nav:
   - HOME: index.md
   - GET STARTED:
     - get-started/overview.md
-    - Get Started: get-started/get-started.md
+    - Quickstart: get-started/quickstart.md
     - CLI API: get-started/command-line-guide.md
     - Python API: get-started/python-client.md
     - Guides:
