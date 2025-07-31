@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.25.0] - UNRELEASED
+
+### Changed
+
+- [[#2713](https://github.com/mabel-dev/opteryx/issues/2713)] **[ClickBench]** CLI cycles reporting to 3dp ([@joocer](https://github.com/joocer))
+
+
+
 ## [0.24.1] - 2025-07-29
 
 ### Fixed
