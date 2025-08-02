@@ -12,19 +12,25 @@
         <meta name="author" content="Justin Joyce">
       
       
+        <link rel="canonical" href="https://opteryx.dev/0.25.0/get-started/security.html">
       
       
+        <link rel="prev" href="deployment-guide.html">
       
-      <link rel="icon" href="/0.25.0/icarus-opteryx.png">
+      
+        <link rel="next" href="ecosystem/orso/orso.html">
+      
+      
+      <link rel="icon" href="../icarus-opteryx.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Opteryx</title>
+        <title>Security - Opteryx</title>
       
     
     
-      <link rel="stylesheet" href="/0.25.0/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
       
       
 
@@ -43,11 +49,11 @@
       
     
     
-      <link rel="stylesheet" href="/0.25.0/stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="/0.25.0/termynal.css">
+      <link rel="stylesheet" href="../termynal.css">
     
-    <script>__md_scope=new URL("/0.25.0",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#security" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -79,9 +90,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/0.25.0/index.html" title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../index.html" title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="/0.25.0/icarus-opteryx.png" alt="logo">
+  <img src="../icarus-opteryx.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -98,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Security
             
           </span>
         </div>
@@ -143,7 +154,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/0.25.0/index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -160,11 +171,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/0.25.0/get-started/overview.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="overview.html" class="md-tabs__link">
           
   
   
@@ -184,7 +197,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/0.25.0/sql-reference/introduction.html" class="md-tabs__link">
+        <a href="../sql-reference/introduction.html" class="md-tabs__link">
           
   
   
@@ -204,7 +217,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/0.25.0/contributing/contributing.html" class="md-tabs__link">
+        <a href="../contributing/contributing.html" class="md-tabs__link">
           
   
   
@@ -238,9 +251,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/0.25.0/index.html" title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../index.html" title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="/0.25.0/icarus-opteryx.png" alt="logo">
+  <img src="../icarus-opteryx.png" alt="logo">
 
     </a>
     Opteryx
@@ -267,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -286,24 +299,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -316,7 +334,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             GET STARTED
@@ -330,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/overview.html" class="md-nav__link">
+      <a href="overview.html" class="md-nav__link">
         
   
   
@@ -353,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/quickstart.html" class="md-nav__link">
+      <a href="quickstart.html" class="md-nav__link">
         
   
   
@@ -376,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/command-line-guide.html" class="md-nav__link">
+      <a href="command-line-guide.html" class="md-nav__link">
         
   
   
@@ -399,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/python-client.html" class="md-nav__link">
+      <a href="python-client.html" class="md-nav__link">
         
   
   
@@ -463,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/using-opteryx-with-jupyter.html" class="md-nav__link">
+      <a href="guides/using-opteryx-with-jupyter.html" class="md-nav__link">
         
   
   
@@ -486,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/iceberg-and-opteryx.html" class="md-nav__link">
+      <a href="guides/iceberg-and-opteryx.html" class="md-nav__link">
         
   
   
@@ -509,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/pandas-and-opteryx.html" class="md-nav__link">
+      <a href="guides/pandas-and-opteryx.html" class="md-nav__link">
         
   
   
@@ -532,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/polars-and-opteryx.html" class="md-nav__link">
+      <a href="guides/polars-and-opteryx.html" class="md-nav__link">
         
   
   
@@ -555,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/bigquery-and-opteryx.html" class="md-nav__link">
+      <a href="guides/bigquery-and-opteryx.html" class="md-nav__link">
         
   
   
@@ -578,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/mysql-and-opteryx.html" class="md-nav__link">
+      <a href="guides/mysql-and-opteryx.html" class="md-nav__link">
         
   
   
@@ -601,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/postgres-and-opteryx.html" class="md-nav__link">
+      <a href="guides/postgres-and-opteryx.html" class="md-nav__link">
         
   
   
@@ -624,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/convert-csv-to-parquet.html" class="md-nav__link">
+      <a href="guides/convert-csv-to-parquet.html" class="md-nav__link">
         
   
   
@@ -647,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/execute-sql-on-csv.html" class="md-nav__link">
+      <a href="guides/execute-sql-on-csv.html" class="md-nav__link">
         
   
   
@@ -678,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/deployment-guide.html" class="md-nav__link">
+      <a href="deployment-guide.html" class="md-nav__link">
         
   
   
@@ -698,10 +716,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/0.25.0/get-started/security.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="security.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -712,6 +752,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#statement-execution-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statement Execution Controls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-membership-restrictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Membership Restrictions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -765,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/ecosystem/orso/orso.html" class="md-nav__link">
+      <a href="ecosystem/orso/orso.html" class="md-nav__link">
         
   
   
@@ -788,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/ecosystem/mabel.html" class="md-nav__link">
+      <a href="ecosystem/mabel.html" class="md-nav__link">
         
   
   
@@ -811,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/ecosystem/mesos.html" class="md-nav__link">
+      <a href="ecosystem/mesos.html" class="md-nav__link">
         
   
   
@@ -883,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/pep249.html" class="md-nav__link">
+      <a href="external-standards/pep249.html" class="md-nav__link">
         
   
   
@@ -906,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/sql92.html" class="md-nav__link">
+      <a href="external-standards/sql92.html" class="md-nav__link">
         
   
   
@@ -929,7 +1007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/tpch.html" class="md-nav__link">
+      <a href="external-standards/tpch.html" class="md-nav__link">
         
   
   
@@ -952,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/clickbench.html" class="md-nav__link">
+      <a href="external-standards/clickbench.html" class="md-nav__link">
         
   
   
@@ -1024,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/release-notes/change-log.html" class="md-nav__link">
+      <a href="release-notes/change-log.html" class="md-nav__link">
         
   
   
@@ -1047,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/release-notes/notices.html" class="md-nav__link">
+      <a href="release-notes/notices.html" class="md-nav__link">
         
   
   
@@ -1126,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/introduction.html" class="md-nav__link">
+      <a href="../sql-reference/introduction.html" class="md-nav__link">
         
   
   
@@ -1149,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/statements.html" class="md-nav__link">
+      <a href="../sql-reference/statements.html" class="md-nav__link">
         
   
   
@@ -1172,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/data-types.html" class="md-nav__link">
+      <a href="../sql-reference/data-types.html" class="md-nav__link">
         
   
   
@@ -1195,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/expressions.html" class="md-nav__link">
+      <a href="../sql-reference/expressions.html" class="md-nav__link">
         
   
   
@@ -1218,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/functions.html" class="md-nav__link">
+      <a href="../sql-reference/functions.html" class="md-nav__link">
         
   
   
@@ -1241,7 +1319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/aggregates.html" class="md-nav__link">
+      <a href="../sql-reference/aggregates.html" class="md-nav__link">
         
   
   
@@ -1264,7 +1342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/joins.html" class="md-nav__link">
+      <a href="../sql-reference/joins.html" class="md-nav__link">
         
   
   
@@ -1328,7 +1406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-timestamps.html" class="md-nav__link">
+      <a href="../sql-reference/adv-working-with-timestamps.html" class="md-nav__link">
         
   
   
@@ -1351,7 +1429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-lists.html" class="md-nav__link">
+      <a href="../sql-reference/adv-working-with-lists.html" class="md-nav__link">
         
   
   
@@ -1374,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-structs.html" class="md-nav__link">
+      <a href="../sql-reference/adv-working-with-structs.html" class="md-nav__link">
         
   
   
@@ -1397,7 +1475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-ips.html" class="md-nav__link">
+      <a href="../sql-reference/adv-working-with-ips.html" class="md-nav__link">
         
   
   
@@ -1420,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-time-travel.html" class="md-nav__link">
+      <a href="../sql-reference/adv-time-travel.html" class="md-nav__link">
         
   
   
@@ -1443,7 +1521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-null-semantics.html" class="md-nav__link">
+      <a href="../sql-reference/adv-null-semantics.html" class="md-nav__link">
         
   
   
@@ -1466,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-temp-tables.html" class="md-nav__link">
+      <a href="../sql-reference/adv-temp-tables.html" class="md-nav__link">
         
   
   
@@ -1489,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-sample-data.html" class="md-nav__link">
+      <a href="../sql-reference/adv-sample-data.html" class="md-nav__link">
         
   
   
@@ -1512,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-query-optimization.html" class="md-nav__link">
+      <a href="../sql-reference/adv-query-optimization.html" class="md-nav__link">
         
   
   
@@ -1591,7 +1669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/contributing.html" class="md-nav__link">
+      <a href="../contributing/contributing.html" class="md-nav__link">
         
   
   
@@ -1614,7 +1692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/project-goals.html" class="md-nav__link">
+      <a href="../contributing/project-goals.html" class="md-nav__link">
         
   
   
@@ -1637,7 +1715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/code-of-conduct.html" class="md-nav__link">
+      <a href="../contributing/code-of-conduct.html" class="md-nav__link">
         
   
   
@@ -1660,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/etiquette.html" class="md-nav__link">
+      <a href="../contributing/etiquette.html" class="md-nav__link">
         
   
   
@@ -1724,7 +1802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/set-up-guides/debian.html" class="md-nav__link">
+      <a href="../contributing/set-up-guides/debian.html" class="md-nav__link">
         
   
   
@@ -1747,7 +1825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/set-up-guides/macos.html" class="md-nav__link">
+      <a href="../contributing/set-up-guides/macos.html" class="md-nav__link">
         
   
   
@@ -1819,7 +1897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/project-structure.html" class="md-nav__link">
+      <a href="../contributing/internals/project-structure.html" class="md-nav__link">
         
   
   
@@ -1842,7 +1920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/query-engine.html" class="md-nav__link">
+      <a href="../contributing/internals/query-engine.html" class="md-nav__link">
         
   
   
@@ -1865,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/storage-engine.html" class="md-nav__link">
+      <a href="../contributing/internals/storage-engine.html" class="md-nav__link">
         
   
   
@@ -1888,7 +1966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/optimization-strategies.html" class="md-nav__link">
+      <a href="../contributing/internals/optimization-strategies.html" class="md-nav__link">
         
   
   
@@ -1952,7 +2030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/implementations/memory_pool.html" class="md-nav__link">
+      <a href="../contributing/internals/implementations/memory_pool.html" class="md-nav__link">
         
   
   
@@ -1975,7 +2053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/implementations/storage_io.html" class="md-nav__link">
+      <a href="../contributing/internals/implementations/storage_io.html" class="md-nav__link">
         
   
   
@@ -2055,7 +2133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/topics/debug_logging.html" class="md-nav__link">
+      <a href="../contributing/topics/debug_logging.html" class="md-nav__link">
         
   
   
@@ -2078,7 +2156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/topics/dependencies.html" class="md-nav__link">
+      <a href="../contributing/topics/dependencies.html" class="md-nav__link">
         
   
   
@@ -2101,7 +2179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/topics/testing.html" class="md-nav__link">
+      <a href="../contributing/topics/testing.html" class="md-nav__link">
         
   
   
@@ -2149,6 +2227,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#statement-execution-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statement Execution Controls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-membership-restrictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Membership Restrictions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2160,8 +2266,162 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="security">Security</h1>
+<p>Opteryx employs two primary security features designed to restrict user actions and data access within the platform. As Opteryx does not maintain a traditional user model, access is controlled through contextual information, such as AD Groups, rather than predefined user accounts. This framework supports the implementation of a traditional RBAC system if desired.</p>
+<p>The two security features are:</p>
+<p>1) Statement Execution Control which limits the types of queries can be executed by a user - for example limiting users to only successfully run <code>SELECT</code> or <code>EXECUTE</code> queries.
+2) User Membership Restrictions which provides a mechanism to perform fine-grained, row-level access rules.</p>
+<h2 id="statement-execution-controls">Statement Execution Controls</h2>
+<p>Opteryx provides mechanisms to restrict the types of SQL statements that users can execute.</p>
+<p>This can be used to limit user's ability to perform certain actions on the engine; for example, limiting users to only perform <code>EXECUTE</code> queries.</p>
+<h3 id="permissions-overview">Permissions Overview</h3>
+<p>Below is a table of permissions associated with their respective SQL commands:</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Query Keyword</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analyze</td>
+<td><code>ANALYZE</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span></td>
+</tr>
+<tr>
+<td>Execute</td>
+<td><code>EXECUTE</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span></td>
+</tr>
+<tr>
+<td>Explain</td>
+<td><code>EXPLAIN</code></td>
+</tr>
+<tr>
+<td>Query</td>
+<td><code>SELECT</code></td>
+</tr>
+<tr>
+<td>SetVariable</td>
+<td><code>SET</code></td>
+</tr>
+<tr>
+<td>ShowColumns</td>
+<td><code>SHOW COLUMNS</code></td>
+</tr>
+<tr>
+<td>ShowCreate</td>
+<td><code>SHOW CREATE</code></td>
+</tr>
+<tr>
+<td>ShowFunctions</td>
+<td><code>SHOW FUNCTIONS</code></td>
+</tr>
+<tr>
+<td>ShowVariables</td>
+<td><code>SHOW VARIABLES</code></td>
+</tr>
+<tr>
+<td>ShowVariable</td>
+<td><code>SHOW</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><code>Analyze</code> and <code>Execute</code> are not fully supported statements.</li>
+<li><code>ShowVariable</code> only applies to queries that are not one of the more specific <code>SHOW</code> query types.</li>
+<li>Permissions exist for query types supported by the parser library but not supported by Opteryx.</li>
+</ul>
+</div>
+<p>Permissions are applied at the connection level using the <code>permissions</code> parameter, with the default setting allowing all queries.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">permissions</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Query&quot;</span><span class="p">})</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">curr</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># The user does not have permissions to execute a SHOW COLUMNS statement</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># and this will raise a PermissionsError</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">curr</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SHOW COLUMNS FROM $planets&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">curr</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">except</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">PermissionsError</span><span class="p">:</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;User does not have permission to execute this query&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Opteryx does not have any defined roles; however, we can implement a Role-Based access model using code similar to the below.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Define which roles exist and the permissions each role has,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># `opteryx.constants.PERMISSIONS` is all available permissions.</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">role_permissions</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="s2">&quot;admin&quot;</span><span class="p">:</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">PERMISSIONS</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Query&quot;</span><span class="p">}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_user_permissions</span><span class="p">(</span><span class="n">user_roles</span><span class="p">:</span><span class="nb">list</span><span class="p">):</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="c1"># return the accumulated permissions for a user by appending</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="c1"># the permissions for each of the roles for that user</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">permissions</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="k">for</span> <span class="n">role</span> <span class="ow">in</span> <span class="n">user_roles</span><span class="p">:</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        <span class="k">if</span> <span class="n">role</span> <span class="ow">in</span> <span class="n">role_permissions</span><span class="p">:</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>            <span class="n">permissions</span> <span class="o">|=</span> <span class="n">role_permissions</span><span class="p">[</span><span class="n">role</span><span class="p">]</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="k">return</span> <span class="n">permissions</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">user_permissions</span> <span class="o">=</span> <span class="n">get_user_permissions</span><span class="p">([</span><span class="s2">&quot;user&quot;</span><span class="p">])</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="c1"># this can now be passed when creating a connection</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">permissions</span><span class="o">=</span><span class="n">user_permissions</span><span class="p">)</span>
+</code></pre></div>
+<p>In this code, we define a <code>user_roles</code> variable containing the roles assigned to a user and a <code>role_permissions</code> dictionary mapping each role to its permissions. The accumulated permissions for a user are computed and stored in the <code>permissions</code> variable.</p>
+<p>Permissions can also be set using the short-form query API:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $planets&quot;</span><span class="p">,</span> <span class="n">permissions</span><span class="o">=</span><span class="n">user_permissions</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="user-membership-restrictions">User Membership Restrictions</h2>
+<p>Opteryx supports user-specific data access by embedding user attributes directly into queries, enabling fine-grained control. This functionality isn't automatic; it requires explicit query formulation to incorporate data filtering based on user attributes.</p>
+<p>Memberships are specified via the <code>memberships</code> parameter at the connection setup, making them accessible within queries through the <code>@@user_memberships</code> variable and the <code>$user</code> virtual table. By default, no memberships are configured (<code>memberships=[]</code>).</p>
+<p>The following example demonstrates how to use array-type memberships to restrict data access:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">memberships</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Apollo 11&quot;</span><span class="p">])</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">curr</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># the missions field is an ARRAY</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">curr</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $astronauts WHERE ARRAY_CONTAINS_ANY(missions, @@user_memberships)&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">curr</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</code></pre></div>
+<p>Here is how you might test memberships where the attribute is a VARCHAR:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">memberships</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Apollo 11&quot;</span><span class="p">])</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">curr</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># the Missions field is a VARCHAR</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">curr</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT $missions.* FROM $missions INNER JOIN $user ON Mission = value WHERE attribute = &#39;membership&#39;&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">curr</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</code></pre></div>
+<p>Memberships can also be provided using the short-form query API:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $planets&quot;</span><span class="p">,</span> <span class="n">memberships</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Apollo 11&quot;</span><span class="p">])</span>
+</code></pre></div>
+<p>Memberships and permissions can be defined simultaneously and utilized in queries through both explicit SQL and the short-form query API.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2257,12 +2517,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/0.25.0", "features": ["navigation.tabs", "navigation.top"], "search": "/0.25.0/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="/0.25.0/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
       
-        <script src="/0.25.0/termynal.js"></script>
+        <script src="../termynal.js"></script>
       
     
   </body>

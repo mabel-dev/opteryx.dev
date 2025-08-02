@@ -1,283 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://opteryx.dev/0.25.0/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/index.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/thankyou/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/thankyou.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/code-of-conduct/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/code-of-conduct.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/contributing/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/contributing.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/etiquette/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/etiquette.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/project-goals/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/project-goals.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/internals/binder/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/internals/binder.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/internals/joins/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/internals/joins.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/internals/optimization-strategies/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/internals/optimization-strategies.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/internals/overview/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/internals/overview.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/internals/project-structure/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/internals/project-structure.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/internals/query-engine/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/internals/query-engine.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/internals/storage-engine/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/internals/storage-engine.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/internals/implementations/memory_pool/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/internals/implementations/memory_pool.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/internals/implementations/storage_io/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/internals/implementations/storage_io.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/set-up-guides/debian/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/set-up-guides/debian.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/set-up-guides/macos/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/set-up-guides/macos.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/topics/debug_logging/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/topics/debug_logging.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/topics/dependencies/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/topics/dependencies.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/contributing/topics/testing/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/contributing/topics/testing.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/command-line-guide/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/command-line-guide.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/configuration-guide/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/configuration-guide.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/deployment-guide/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/deployment-guide.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/overview/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/overview.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/performance-monitoring/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/performance-monitoring.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/python-client/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/python-client.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/quickstart/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/quickstart.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/schema-evolution/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/schema-evolution.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/security/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/security.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/ecosystem/hadro/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/ecosystem/hadro.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/ecosystem/mabel/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/ecosystem/mabel.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/ecosystem/mesos/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/ecosystem/mesos.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/ecosystem/orso/orso/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/ecosystem/orso/orso.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/external-standards/clickbench/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/external-standards/clickbench.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/external-standards/information-schema/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/external-standards/information-schema.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/external-standards/pep249/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/external-standards/pep249.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/external-standards/sql92/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/external-standards/sql92.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/external-standards/tpch/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/external-standards/tpch.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/guides/_command-line-opteryx/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/guides/_command-line-opteryx.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/guides/_gcp-and-opteryx/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/guides/_gcp-and-opteryx.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/guides/_sqlite-and-opteryx/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/guides/_sqlite-and-opteryx.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/guides/bigquery-and-opteryx/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/guides/bigquery-and-opteryx.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/guides/convert-csv-to-parquet/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/guides/convert-csv-to-parquet.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/guides/execute-sql-on-csv/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/guides/execute-sql-on-csv.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/guides/iceberg-and-opteryx/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/guides/iceberg-and-opteryx.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/guides/mysql-and-opteryx/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/guides/mysql-and-opteryx.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/guides/pandas-and-opteryx/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/guides/pandas-and-opteryx.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/guides/polars-and-opteryx/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/guides/polars-and-opteryx.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/guides/postgres-and-opteryx/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/guides/postgres-and-opteryx.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/guides/using-opteryx-with-jupyter/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/guides/using-opteryx-with-jupyter.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/release-notes/change-log/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/release-notes/change-log.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/get-started/release-notes/notices/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/get-started/release-notes/notices.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-engine-configuration/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-engine-configuration.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-information-schema/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-information-schema.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-null-semantics/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-null-semantics.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-query-optimization/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-query-optimization.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-sample-data/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-sample-data.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-temp-tables/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-temp-tables.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-time-travel/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-time-travel.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-working-with-ips/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-working-with-ips.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-working-with-lists/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-working-with-lists.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-working-with-structs/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-working-with-structs.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-working-with-timestamps/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/adv-working-with-timestamps.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/aggregates/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/aggregates.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/data-types/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/data-types.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/expressions/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/expressions.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/functions/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/functions.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/introduction/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/introduction.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/joins/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/joins.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
     <url>
-         <loc>https://opteryx.dev/0.25.0/sql-reference/statements/</loc>
-         <lastmod>2025-07-31</lastmod>
+         <loc>https://opteryx.dev/0.25.0/sql-reference/statements.html</loc>
+         <lastmod>2025-08-02</lastmod>
     </url>
 </urlset>

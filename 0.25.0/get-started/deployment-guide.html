@@ -12,19 +12,25 @@
         <meta name="author" content="Justin Joyce">
       
       
+        <link rel="canonical" href="https://opteryx.dev/0.25.0/get-started/deployment-guide.html">
       
       
+        <link rel="prev" href="guides/execute-sql-on-csv.html">
       
-      <link rel="icon" href="/0.25.0/icarus-opteryx.png">
+      
+        <link rel="next" href="security.html">
+      
+      
+      <link rel="icon" href="../icarus-opteryx.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Opteryx</title>
+        <title>Deployment Guide - Opteryx</title>
       
     
     
-      <link rel="stylesheet" href="/0.25.0/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
       
       
 
@@ -43,11 +49,11 @@
       
     
     
-      <link rel="stylesheet" href="/0.25.0/stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="/0.25.0/termynal.css">
+      <link rel="stylesheet" href="../termynal.css">
     
-    <script>__md_scope=new URL("/0.25.0",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#deployment-guide" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -79,9 +90,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/0.25.0/index.html" title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../index.html" title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="/0.25.0/icarus-opteryx.png" alt="logo">
+  <img src="../icarus-opteryx.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -98,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Deployment Guide
             
           </span>
         </div>
@@ -143,7 +154,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/0.25.0/index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -160,11 +171,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/0.25.0/get-started/overview.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="overview.html" class="md-tabs__link">
           
   
   
@@ -184,7 +197,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/0.25.0/sql-reference/introduction.html" class="md-tabs__link">
+        <a href="../sql-reference/introduction.html" class="md-tabs__link">
           
   
   
@@ -204,7 +217,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/0.25.0/contributing/contributing.html" class="md-tabs__link">
+        <a href="../contributing/contributing.html" class="md-tabs__link">
           
   
   
@@ -238,9 +251,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/0.25.0/index.html" title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../index.html" title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="/0.25.0/icarus-opteryx.png" alt="logo">
+  <img src="../icarus-opteryx.png" alt="logo">
 
     </a>
     Opteryx
@@ -267,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -286,24 +299,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -316,7 +334,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             GET STARTED
@@ -330,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/overview.html" class="md-nav__link">
+      <a href="overview.html" class="md-nav__link">
         
   
   
@@ -353,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/quickstart.html" class="md-nav__link">
+      <a href="quickstart.html" class="md-nav__link">
         
   
   
@@ -376,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/command-line-guide.html" class="md-nav__link">
+      <a href="command-line-guide.html" class="md-nav__link">
         
   
   
@@ -399,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/python-client.html" class="md-nav__link">
+      <a href="python-client.html" class="md-nav__link">
         
   
   
@@ -463,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/using-opteryx-with-jupyter.html" class="md-nav__link">
+      <a href="guides/using-opteryx-with-jupyter.html" class="md-nav__link">
         
   
   
@@ -486,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/iceberg-and-opteryx.html" class="md-nav__link">
+      <a href="guides/iceberg-and-opteryx.html" class="md-nav__link">
         
   
   
@@ -509,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/pandas-and-opteryx.html" class="md-nav__link">
+      <a href="guides/pandas-and-opteryx.html" class="md-nav__link">
         
   
   
@@ -532,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/polars-and-opteryx.html" class="md-nav__link">
+      <a href="guides/polars-and-opteryx.html" class="md-nav__link">
         
   
   
@@ -555,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/bigquery-and-opteryx.html" class="md-nav__link">
+      <a href="guides/bigquery-and-opteryx.html" class="md-nav__link">
         
   
   
@@ -578,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/mysql-and-opteryx.html" class="md-nav__link">
+      <a href="guides/mysql-and-opteryx.html" class="md-nav__link">
         
   
   
@@ -601,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/postgres-and-opteryx.html" class="md-nav__link">
+      <a href="guides/postgres-and-opteryx.html" class="md-nav__link">
         
   
   
@@ -624,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/convert-csv-to-parquet.html" class="md-nav__link">
+      <a href="guides/convert-csv-to-parquet.html" class="md-nav__link">
         
   
   
@@ -647,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/execute-sql-on-csv.html" class="md-nav__link">
+      <a href="guides/execute-sql-on-csv.html" class="md-nav__link">
         
   
   
@@ -675,10 +693,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/0.25.0/get-started/deployment-guide.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Deployment Guide
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="deployment-guide.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -689,6 +729,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blobfile-stores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blob/File Stores
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -701,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/security.html" class="md-nav__link">
+      <a href="security.html" class="md-nav__link">
         
   
   
@@ -765,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/ecosystem/orso/orso.html" class="md-nav__link">
+      <a href="ecosystem/orso/orso.html" class="md-nav__link">
         
   
   
@@ -788,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/ecosystem/mabel.html" class="md-nav__link">
+      <a href="ecosystem/mabel.html" class="md-nav__link">
         
   
   
@@ -811,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/ecosystem/mesos.html" class="md-nav__link">
+      <a href="ecosystem/mesos.html" class="md-nav__link">
         
   
   
@@ -883,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/pep249.html" class="md-nav__link">
+      <a href="external-standards/pep249.html" class="md-nav__link">
         
   
   
@@ -906,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/sql92.html" class="md-nav__link">
+      <a href="external-standards/sql92.html" class="md-nav__link">
         
   
   
@@ -929,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/tpch.html" class="md-nav__link">
+      <a href="external-standards/tpch.html" class="md-nav__link">
         
   
   
@@ -952,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/clickbench.html" class="md-nav__link">
+      <a href="external-standards/clickbench.html" class="md-nav__link">
         
   
   
@@ -1024,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/release-notes/change-log.html" class="md-nav__link">
+      <a href="release-notes/change-log.html" class="md-nav__link">
         
   
   
@@ -1047,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/release-notes/notices.html" class="md-nav__link">
+      <a href="release-notes/notices.html" class="md-nav__link">
         
   
   
@@ -1126,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/introduction.html" class="md-nav__link">
+      <a href="../sql-reference/introduction.html" class="md-nav__link">
         
   
   
@@ -1149,7 +1236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/statements.html" class="md-nav__link">
+      <a href="../sql-reference/statements.html" class="md-nav__link">
         
   
   
@@ -1172,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/data-types.html" class="md-nav__link">
+      <a href="../sql-reference/data-types.html" class="md-nav__link">
         
   
   
@@ -1195,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/expressions.html" class="md-nav__link">
+      <a href="../sql-reference/expressions.html" class="md-nav__link">
         
   
   
@@ -1218,7 +1305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/functions.html" class="md-nav__link">
+      <a href="../sql-reference/functions.html" class="md-nav__link">
         
   
   
@@ -1241,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/aggregates.html" class="md-nav__link">
+      <a href="../sql-reference/aggregates.html" class="md-nav__link">
         
   
   
@@ -1264,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/joins.html" class="md-nav__link">
+      <a href="../sql-reference/joins.html" class="md-nav__link">
         
   
   
@@ -1328,7 +1415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-timestamps.html" class="md-nav__link">
+      <a href="../sql-reference/adv-working-with-timestamps.html" class="md-nav__link">
         
   
   
@@ -1351,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-lists.html" class="md-nav__link">
+      <a href="../sql-reference/adv-working-with-lists.html" class="md-nav__link">
         
   
   
@@ -1374,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-structs.html" class="md-nav__link">
+      <a href="../sql-reference/adv-working-with-structs.html" class="md-nav__link">
         
   
   
@@ -1397,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-ips.html" class="md-nav__link">
+      <a href="../sql-reference/adv-working-with-ips.html" class="md-nav__link">
         
   
   
@@ -1420,7 +1507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-time-travel.html" class="md-nav__link">
+      <a href="../sql-reference/adv-time-travel.html" class="md-nav__link">
         
   
   
@@ -1443,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-null-semantics.html" class="md-nav__link">
+      <a href="../sql-reference/adv-null-semantics.html" class="md-nav__link">
         
   
   
@@ -1466,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-temp-tables.html" class="md-nav__link">
+      <a href="../sql-reference/adv-temp-tables.html" class="md-nav__link">
         
   
   
@@ -1489,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-sample-data.html" class="md-nav__link">
+      <a href="../sql-reference/adv-sample-data.html" class="md-nav__link">
         
   
   
@@ -1512,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-query-optimization.html" class="md-nav__link">
+      <a href="../sql-reference/adv-query-optimization.html" class="md-nav__link">
         
   
   
@@ -1591,7 +1678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/contributing.html" class="md-nav__link">
+      <a href="../contributing/contributing.html" class="md-nav__link">
         
   
   
@@ -1614,7 +1701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/project-goals.html" class="md-nav__link">
+      <a href="../contributing/project-goals.html" class="md-nav__link">
         
   
   
@@ -1637,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/code-of-conduct.html" class="md-nav__link">
+      <a href="../contributing/code-of-conduct.html" class="md-nav__link">
         
   
   
@@ -1660,7 +1747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/etiquette.html" class="md-nav__link">
+      <a href="../contributing/etiquette.html" class="md-nav__link">
         
   
   
@@ -1724,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/set-up-guides/debian.html" class="md-nav__link">
+      <a href="../contributing/set-up-guides/debian.html" class="md-nav__link">
         
   
   
@@ -1747,7 +1834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/set-up-guides/macos.html" class="md-nav__link">
+      <a href="../contributing/set-up-guides/macos.html" class="md-nav__link">
         
   
   
@@ -1819,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/project-structure.html" class="md-nav__link">
+      <a href="../contributing/internals/project-structure.html" class="md-nav__link">
         
   
   
@@ -1842,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/query-engine.html" class="md-nav__link">
+      <a href="../contributing/internals/query-engine.html" class="md-nav__link">
         
   
   
@@ -1865,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/storage-engine.html" class="md-nav__link">
+      <a href="../contributing/internals/storage-engine.html" class="md-nav__link">
         
   
   
@@ -1888,7 +1975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/optimization-strategies.html" class="md-nav__link">
+      <a href="../contributing/internals/optimization-strategies.html" class="md-nav__link">
         
   
   
@@ -1952,7 +2039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/implementations/memory_pool.html" class="md-nav__link">
+      <a href="../contributing/internals/implementations/memory_pool.html" class="md-nav__link">
         
   
   
@@ -1975,7 +2062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/implementations/storage_io.html" class="md-nav__link">
+      <a href="../contributing/internals/implementations/storage_io.html" class="md-nav__link">
         
   
   
@@ -2055,7 +2142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/topics/debug_logging.html" class="md-nav__link">
+      <a href="../contributing/topics/debug_logging.html" class="md-nav__link">
         
   
   
@@ -2078,7 +2165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/topics/dependencies.html" class="md-nav__link">
+      <a href="../contributing/topics/dependencies.html" class="md-nav__link">
         
   
   
@@ -2101,7 +2188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/topics/testing.html" class="md-nav__link">
+      <a href="../contributing/topics/testing.html" class="md-nav__link">
         
   
   
@@ -2149,6 +2236,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blobfile-stores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blob/File Stores
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2160,8 +2284,345 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="deployment-guide">Deployment Guide</h1>
+<h2 id="requirements">Requirements</h2>
+<h3 id="host-specifications">Host Specifications</h3>
+<p><strong>Minimum</strong>: 1 Gb RAM, 1 CPU (x86) <br />
+<strong>Recommended</strong>: 8 Gb RAM, 4 CPUs (x86)</p>
+<p>Opteryx balances memory consumption with performance, however, being able to process large datasets will require larger memory specifications compared to what is needed to process smaller datasets. The reference implementation of Opteryx regularly processes 100Gb of data in a container with 4 CPUs and 8Gb of memory allocated.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a general recommendation and is a good place to start, your environment and specific problem may require, or perform significantly better, with a different configuration.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Opteryx contains no specific optimiations to make use of multiple CPUs, although multiple CPUs may be beneficial as some libraries Opteryx is built on may use multiple CPUs.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Non x86 environments, such as Raspberry Pi or the Apple Silicon Macs (e.g. M1), may require additional set up steps.</p>
+</div>
+<h3 id="operating-system-support">Operating System Support</h3>
+<p><strong>Recommended Operating System</strong>: Ubuntu 24 (64bit)</p>
+<p>Opteryx can be installed and deployed on a number of different platforms. It has heavy dependency on <a href="https://arrow.apache.org/">Apache Arrow</a> and cannot be run on systems which do not support Arrow.</p>
+<p>The full regression suite is run on Ubuntu (Ubuntu 24) for Python versions 3.10, 3.11, and 3.12. The below table shows regression suite coverage:</p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th style="text-align: center;">Python 3.9</th>
+<th style="text-align: center;">Python 3.10</th>
+<th style="text-align: center;">Python 3.11</th>
+<th style="text-align: center;">Python 3.12</th>
+<th style="text-align: center;">Python 3.13</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MacOS (x86/Intel)</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">Partial</td>
+<td style="text-align: center;">Partial</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+</tr>
+<tr>
+<td>MacOS (M-series)</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">Partial</td>
+<td style="text-align: center;">Partial</td>
+<td style="text-align: center;">Partial</td>
+<td style="text-align: center;">Partial</td>
+</tr>
+<tr>
+<td>Ubuntu (x86)</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">Full</td>
+<td style="text-align: center;">Full</td>
+<td style="text-align: center;">Full</td>
+<td style="text-align: center;">Partial</td>
+</tr>
+<tr>
+<td>Ubuntu (ARM)</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">Partial</td>
+<td style="text-align: center;">Partial</td>
+<td style="text-align: center;">Partial</td>
+<td style="text-align: center;">Partial</td>
+</tr>
+<tr>
+<td>Windows (x86)</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;"><strong>No Build</strong></td>
+</tr>
+</tbody>
+</table>
+<p>&emsp;<strong>Full</strong> - no tests are excluded from the test suite - coverage statistics are from Ubuntu Python 3.10 tests.<br />
+&emsp;<strong>Partial</strong> - some tests are excluded from the test suite or that some tests fail.<br />
+&emsp;<strong>None</strong> - there is no automated test for this configuration.<br />
+&emsp;<strong>No Build</strong> - compatibility issues prevent this combination from being built. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Python 3.9 is not recommended</li>
+<li>Windows (x86) last supported version 0.19.0, builds are still created but not recommended for use beyond prototyping</li>
+<li>Python 3.8 last supported version 0.11.0</li>
+<li>Partial coverage is primarily due to testing platform constraints, not core-compatibility issues.</li>
+</ul>
+</div>
+<h3 id="python-environment">Python Environment</h3>
+<p><strong>Recommended Version</strong>: 3.11</p>
+<p>Opteryx supports Python versions 3.9, 3.10 and 3.11. Due to variations in support for parts of Opteryx and environments to reliably test and build, not all environments support each version of Python. 3.11 has the broadest compatibility</p>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Python Versions Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linux 64bit x86</td>
+<td>3.9, 3.10, 3.11, 3.12, 3.13</td>
+</tr>
+<tr>
+<td>Linux ARM</td>
+<td>3.9, 3.10, 3.11, 3.12, 3.13</td>
+</tr>
+<tr>
+<td>MacOS Intel</td>
+<td>3.9, 3.10, 3.11, 3.12, 3.13</td>
+</tr>
+<tr>
+<td>MacOS Apple (M)</td>
+<td>3.9, 3.10, 3.11, 3.12, 3.13</td>
+</tr>
+<tr>
+<td>Windows x86</td>
+<td>3.9, 3.10, 3.11, 3.12</td>
+</tr>
+</tbody>
+</table>
+<p>Opteryx is primarily developed on workstations running Python 3.11 (Debian x86, Raspian, and MacOS M2) and is known to be deployed in production environments running Python 3.9 and Python 3.11 on Debian. </p>
+<h3 id="jupyter-notebooks">Jupyter Notebooks</h3>
+<p>Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3.</p>
+<p>It is recommended that the Notebook host is located close to the data being queried - such as running Vertex AI Notebooks if the data sources are primarily on GCP, or querying local files if running Jupyter on a local device. Other configurations will work, but are less optimal.</p>
+<h3 id="docker-kubernetes">Docker &amp; Kubernetes</h3>
+<p>There is no Docker image for Opteryx, this is because Opteryx is an embedded Python library. However, system built using Opteryx can be deployed via Docker or Kubernetes.</p>
+<h3 id="google-cloud">Google Cloud</h3>
+<p><strong>Cloud Run</strong></p>
+<p>Opteryx is well-suited for running data manipulation tasks in Cloud Run as this was the target platform for the initial development.</p>
+<p>Running in the Generation 2 container environment is likely to result in faster query processing, but has a slower start-up time. Opteryx runs in Generation 1 container, taking approximately 10% longer to execute queries.</p>
+<h2 id="data-storage">Data Storage</h2>
+<h3 id="connectors">Connectors</h3>
+<p><strong>Built-In Connectors</strong></p>
+<p>The following connectors are part of the base installation of Opteryx and are tested as part of each deployment to ensure they operate as expected.</p>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Connector Name</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS S3</td>
+<td>AwsS3Connector</td>
+<td>Blob/File Store</td>
+</tr>
+<tr>
+<td>Google Cloud Storage</td>
+<td>GcpCloudStorageConnector</td>
+<td>Blob/File Store</td>
+</tr>
+<tr>
+<td>Google FireStore</td>
+<td>GcpFireStoreConnector</td>
+<td>Document Store</td>
+</tr>
+<tr>
+<td>Apache Iceberg</td>
+<td>IcebergConnector</td>
+<td>Specialized</td>
+</tr>
+<tr>
+<td>Local Disk</td>
+<td>DiskConnector</td>
+<td>Blob/File Store</td>
+</tr>
+<tr>
+<td>MinIo</td>
+<td>AwsS3Connector</td>
+<td>Blob/File Store</td>
+</tr>
+<tr>
+<td>MongoDB *</td>
+<td>MongoDbConnector</td>
+<td>Document Store</td>
+</tr>
+<tr>
+<td>BigQuery</td>
+<td>SqlConnector</td>
+<td>SQL Store</td>
+</tr>
+<tr>
+<td>Cockroach DB</td>
+<td>SqlConnector</td>
+<td>SQL Store</td>
+</tr>
+<tr>
+<td>DuckDB</td>
+<td>SqlConnector</td>
+<td>SQL Store</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>SqlConnector</td>
+<td>SQL Store</td>
+</tr>
+<tr>
+<td>Postgres</td>
+<td>SqlConnector</td>
+<td>SQL Store</td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td>SqlConnector</td>
+<td>SQL Store</td>
+</tr>
+<tr>
+<td>Cassandra</td>
+<td>CqlConnector</td>
+<td>CQL Store</td>
+</tr>
+<tr>
+<td>Datastax Astra</td>
+<td>CqlConnector</td>
+<td>CQL Store</td>
+</tr>
+</tbody>
+</table>
+<p>Connectors are registered with the storage engine using the <code>register_store</code> method. Multiple prefixes can be added, using different connectors - multiple storage types can be combined into a single query.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Other data sources with <a href="https://www.sqlalchemy.org/">SqlAlchemy</a> connectors or which support the Cassandra Driver are likely to be supported, however, are not part of the automated test suite.</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">opteryx</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">register_store</span><span class="p">(</span><span class="s2">&quot;tests&quot;</span><span class="p">,</span> <span class="n">DiskConnector</span><span class="p">)</span>
+</code></pre></div>
+<p>A more complete example using the <code>register_store</code> method to set up a connector to Google Cloud Storage (GCS) and then query data on GCS is below:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opteryx.connectors</span><span class="w"> </span><span class="kn">import</span> <span class="n">GcpCloudStorageConnector</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Tell the storage engine that datasets with the prefix &#39;your_bucket&#39;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># are to be read using the GcpCloudStorageConnector connector.</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Multiple prefixes can be added and do not need to be the same</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># connector.</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">opteryx</span><span class="o">.</span><span class="n">register_store</span><span class="p">(</span><span class="s2">&quot;your_bucket&quot;</span><span class="p">,</span> <span class="n">GcpCloudStorageConnector</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">connextion</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM your_bucket.folder;&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">())</span>
+</code></pre></div>
+<h2 id="blobfile-stores">Blob/File Stores</h2>
+<h3 id="datasets">Datasets</h3>
+<p>Opteryx references datasets using their relative path as the table name. For example in the following folder structure</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w"> </span>├─<span class="w"> </span>products/
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w"> </span>├─<span class="w"> </span>customers/
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w"> </span>│<span class="w">   </span>├─<span class="w"> </span>profiles/
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w"> </span>│<span class="w">   </span>└─<span class="w"> </span>preferences/
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w"> </span>│<span class="w">       </span>├─<span class="w"> </span>marketing/
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w"> </span>│<span class="w">       </span>└─<span class="w"> </span>site/
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w"> </span>└──<span class="w"> </span>purchases/<span class="w"> </span>
+</code></pre></div>
+<p>Would have the following datasets available (assuming leaf folders have data files within them)</p>
+<ul>
+<li>products</li>
+<li>customers.profiles</li>
+<li>customers.preferences.marketing</li>
+<li>customers.preferences.site</li>
+<li>purchases</li>
+</ul>
+<p>These are queryable like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">profiles</span>
+</code></pre></div>
+<h3 id="temporal-structures">Temporal Structures</h3>
+<p>To enable temporal queries, data must be structured into date hierarchy folders below the dataset folder. Using just the <em>products</em> dataset from the above example, below the <em>products</em> folder must be year, month and day folders like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>/
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w"> </span>└─<span class="w"> </span>products/
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">     </span>└─<span class="w"> </span>year_2022/
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">         </span>└─<span class="w"> </span>month_05/
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">             </span>└─<span class="w"> </span>day_01/
+</code></pre></div>
+<p>To query the data for today with this structure, you can execute:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">products</span>
+</code></pre></div>
+<p>To query just the folder shown in the example (1st May 2022), you can execute:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">products</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">   </span><span class="k">FOR</span><span class="w"> </span><span class="s1">&#39;2022-05-01&#39;</span>
+</code></pre></div>
+<p>This is the default structure created by <a href="https://github.com/mabel-dev/mabel">Mabel</a> and within Opteryx this is called Mabel Partitioning.</p>
+<h3 id="file-types">File Types</h3>
+<p>Opteryx is primarily designed for use with <a href="https://parquet.apache.org/">Parquet</a> to store data, Parquet is fast to process and offers optimizations not available for other formats, however, in some benchmarks <a href="https://orc.apache.org/">ORC</a> out performs Parquet.</p>
+<p>Opteryx supports:</p>
+<ul>
+<li>Parquet formatted files (<code>.parquet</code>)</li>
+<li>CSV formatted files (<code>.csv</code>)</li>
+<li>Tab delimited files (<code>.tsv</code>)</li>
+<li><a href="https://jsonlines.org/">JSONL</a> formatted files (<code>.jsonl</code>)</li>
+<li>JSONL formatted files which have been <a href="http://facebook.github.io/zstd/">Zstandard</a> compressed (<code>.zstd</code>)</li>
+<li>ORC formatted files (<code>.orc</code>)</li>
+<li>Feather (Arrow) formatted files (<code>.arrow</code>)</li>
+<li>Arrow IPC format (<code>.ipc</code>)</li>
+<li>Avro formatted files (<code>.avro</code>)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>ORC is not supported on Windows environments</li>
+<li>CSV and TSV support is limited and is not recommended beyond trivial use cases</li>
+<li>Avro is not recommended for use in performance-sensitive contexts</li>
+</ul>
+</div>
+<h3 id="file-sizes">File Sizes</h3>
+<p>Opteryx usually loads entire files into memory at a time, this requires the following to be considered:</p>
+<ul>
+<li>Reading one record from a file loads the entire blob. If you regularly only read a few records, prefer smaller blobs.</li>
+<li>Reading each blob, particularly from Cloud Storage (S3/GCS), incurs a per-read overhead. If you have large datasets, prefer larger blobs.</li>
+</ul>
+<p>If you are unsure where to start, 64Mb (pre compression) is a recommended general-purpose blobs size, these should then be compressed (Snappy or zStandard are recommended).</p>
+<!---
+## Document Stores
+--->
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2257,12 +2718,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/0.25.0", "features": ["navigation.tabs", "navigation.top"], "search": "/0.25.0/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="/0.25.0/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
       
-        <script src="/0.25.0/termynal.js"></script>
+        <script src="../termynal.js"></script>
       
     
   </body>
