@@ -10,7 +10,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2713](https://github.com/mabel-dev/opteryx/issues/2713)] **[ClickBench]** CLI cycles reporting to 3dp ([@joocer](https://github.com/joocer))
 
+### Added
 
+- [[#2718](https://github.com/mabel-dev/opteryx/issues/2718)] Use [Ryu](https://github.com/ulfjack/ryu) to `CAST` `DOUBLES` ([@joocer](https://github.com/joocer))
 
 ## [0.24.1] - 2025-07-29
 
