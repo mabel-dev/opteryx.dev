@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - [[#2713](https://github.com/mabel-dev/opteryx/issues/2713)] **[ClickBench]** CLI cycles reporting to 3dp ([@joocer](https://github.com/joocer))
+- [[#2720](https://github.com/mabel-dev/opteryx/issues/2720)] Refactor timestamp parsing ([@joocer](https://github.com/joocer))
 
 ### Added
 
