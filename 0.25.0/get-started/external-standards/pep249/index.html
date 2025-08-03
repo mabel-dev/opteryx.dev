@@ -12,19 +12,25 @@
         <meta name="author" content="Justin Joyce">
       
       
+        <link rel="canonical" href="https://opteryx.dev/0.25.0/get-started/external-standards/pep249/">
       
       
+        <link rel="prev" href="../../ecosystem/mesos/">
       
-      <link rel="icon" href="/0.25.0/icarus-opteryx.png">
+      
+        <link rel="next" href="../sql92/">
+      
+      
+      <link rel="icon" href="../../../icarus-opteryx.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Opteryx</title>
+        <title>Python PEP249 - Opteryx</title>
       
     
     
-      <link rel="stylesheet" href="/0.25.0/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
       
 
@@ -43,11 +49,11 @@
       
     
     
-      <link rel="stylesheet" href="/0.25.0/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="/0.25.0/termynal.css">
+      <link rel="stylesheet" href="../../../termynal.css">
     
-    <script>__md_scope=new URL("/0.25.0",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#python-pep-249-conformity" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -79,9 +90,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/0.25.0/." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../../.." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="/0.25.0/icarus-opteryx.png" alt="logo">
+  <img src="../../../icarus-opteryx.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -98,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Python PEP249
             
           </span>
         </div>
@@ -143,7 +154,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/0.25.0/." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -160,11 +171,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/0.25.0/get-started/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../overview/" class="md-tabs__link">
           
   
   
@@ -184,7 +197,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/0.25.0/sql-reference/introduction/" class="md-tabs__link">
+        <a href="../../../sql-reference/introduction/" class="md-tabs__link">
           
   
   
@@ -204,7 +217,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/0.25.0/contributing/contributing/" class="md-tabs__link">
+        <a href="../../../contributing/contributing/" class="md-tabs__link">
           
   
   
@@ -238,9 +251,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/0.25.0/." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../../.." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="/0.25.0/icarus-opteryx.png" alt="logo">
+  <img src="../../../icarus-opteryx.png" alt="logo">
 
     </a>
     Opteryx
@@ -267,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -286,24 +299,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -316,7 +334,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             GET STARTED
@@ -330,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/overview/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         
   
   
@@ -353,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/quickstart/" class="md-nav__link">
+      <a href="../../quickstart/" class="md-nav__link">
         
   
   
@@ -376,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/command-line-guide/" class="md-nav__link">
+      <a href="../../command-line-guide/" class="md-nav__link">
         
   
   
@@ -399,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/python-client/" class="md-nav__link">
+      <a href="../../python-client/" class="md-nav__link">
         
   
   
@@ -463,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/using-opteryx-with-jupyter/" class="md-nav__link">
+      <a href="../../guides/using-opteryx-with-jupyter/" class="md-nav__link">
         
   
   
@@ -486,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/iceberg-and-opteryx/" class="md-nav__link">
+      <a href="../../guides/iceberg-and-opteryx/" class="md-nav__link">
         
   
   
@@ -509,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/pandas-and-opteryx/" class="md-nav__link">
+      <a href="../../guides/pandas-and-opteryx/" class="md-nav__link">
         
   
   
@@ -532,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/polars-and-opteryx/" class="md-nav__link">
+      <a href="../../guides/polars-and-opteryx/" class="md-nav__link">
         
   
   
@@ -555,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/bigquery-and-opteryx/" class="md-nav__link">
+      <a href="../../guides/bigquery-and-opteryx/" class="md-nav__link">
         
   
   
@@ -578,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/mysql-and-opteryx/" class="md-nav__link">
+      <a href="../../guides/mysql-and-opteryx/" class="md-nav__link">
         
   
   
@@ -601,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/postgres-and-opteryx/" class="md-nav__link">
+      <a href="../../guides/postgres-and-opteryx/" class="md-nav__link">
         
   
   
@@ -624,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/convert-csv-to-parquet/" class="md-nav__link">
+      <a href="../../guides/convert-csv-to-parquet/" class="md-nav__link">
         
   
   
@@ -647,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/execute-sql-on-csv/" class="md-nav__link">
+      <a href="../../guides/execute-sql-on-csv/" class="md-nav__link">
         
   
   
@@ -678,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/deployment-guide/" class="md-nav__link">
+      <a href="../../deployment-guide/" class="md-nav__link">
         
   
   
@@ -701,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/security/" class="md-nav__link">
+      <a href="../../security/" class="md-nav__link">
         
   
   
@@ -765,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/ecosystem/orso/orso/" class="md-nav__link">
+      <a href="../../ecosystem/orso/orso/" class="md-nav__link">
         
   
   
@@ -788,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/ecosystem/mabel/" class="md-nav__link">
+      <a href="../../ecosystem/mabel/" class="md-nav__link">
         
   
   
@@ -811,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/ecosystem/mesos/" class="md-nav__link">
+      <a href="../../ecosystem/mesos/" class="md-nav__link">
         
   
   
@@ -839,6 +857,8 @@
                 
   
   
+    
+  
   
   
     
@@ -849,11 +869,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
         
           
           <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
@@ -869,7 +889,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             Standards & Benchmarks
@@ -880,10 +900,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/pep249/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Python PEP249
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -894,6 +936,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#module-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Interface
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -906,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/sql92/" class="md-nav__link">
+      <a href="../sql92/" class="md-nav__link">
         
   
   
@@ -929,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/tpch/" class="md-nav__link">
+      <a href="../tpch/" class="md-nav__link">
         
   
   
@@ -952,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/clickbench/" class="md-nav__link">
+      <a href="../clickbench/" class="md-nav__link">
         
   
   
@@ -1024,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/release-notes/change-log/" class="md-nav__link">
+      <a href="../../release-notes/change-log/" class="md-nav__link">
         
   
   
@@ -1047,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/release-notes/notices/" class="md-nav__link">
+      <a href="../../release-notes/notices/" class="md-nav__link">
         
   
   
@@ -1126,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/introduction/" class="md-nav__link">
+      <a href="../../../sql-reference/introduction/" class="md-nav__link">
         
   
   
@@ -1149,7 +1220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/statements/" class="md-nav__link">
+      <a href="../../../sql-reference/statements/" class="md-nav__link">
         
   
   
@@ -1172,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/data-types/" class="md-nav__link">
+      <a href="../../../sql-reference/data-types/" class="md-nav__link">
         
   
   
@@ -1195,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/expressions/" class="md-nav__link">
+      <a href="../../../sql-reference/expressions/" class="md-nav__link">
         
   
   
@@ -1218,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/functions/" class="md-nav__link">
+      <a href="../../../sql-reference/functions/" class="md-nav__link">
         
   
   
@@ -1241,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/aggregates/" class="md-nav__link">
+      <a href="../../../sql-reference/aggregates/" class="md-nav__link">
         
   
   
@@ -1264,7 +1335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/joins/" class="md-nav__link">
+      <a href="../../../sql-reference/joins/" class="md-nav__link">
         
   
   
@@ -1328,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-timestamps/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-timestamps/" class="md-nav__link">
         
   
   
@@ -1351,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-lists/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-lists/" class="md-nav__link">
         
   
   
@@ -1374,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-structs/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-structs/" class="md-nav__link">
         
   
   
@@ -1397,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-ips/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-ips/" class="md-nav__link">
         
   
   
@@ -1420,7 +1491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-time-travel/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-time-travel/" class="md-nav__link">
         
   
   
@@ -1443,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-null-semantics/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-null-semantics/" class="md-nav__link">
         
   
   
@@ -1466,7 +1537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-temp-tables/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-temp-tables/" class="md-nav__link">
         
   
   
@@ -1489,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-sample-data/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-sample-data/" class="md-nav__link">
         
   
   
@@ -1512,7 +1583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-query-optimization/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-query-optimization/" class="md-nav__link">
         
   
   
@@ -1591,7 +1662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/contributing/" class="md-nav__link">
+      <a href="../../../contributing/contributing/" class="md-nav__link">
         
   
   
@@ -1614,7 +1685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/project-goals/" class="md-nav__link">
+      <a href="../../../contributing/project-goals/" class="md-nav__link">
         
   
   
@@ -1637,7 +1708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/code-of-conduct/" class="md-nav__link">
+      <a href="../../../contributing/code-of-conduct/" class="md-nav__link">
         
   
   
@@ -1660,7 +1731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/etiquette/" class="md-nav__link">
+      <a href="../../../contributing/etiquette/" class="md-nav__link">
         
   
   
@@ -1724,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/set-up-guides/debian/" class="md-nav__link">
+      <a href="../../../contributing/set-up-guides/debian/" class="md-nav__link">
         
   
   
@@ -1747,7 +1818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/set-up-guides/macos/" class="md-nav__link">
+      <a href="../../../contributing/set-up-guides/macos/" class="md-nav__link">
         
   
   
@@ -1819,7 +1890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/project-structure/" class="md-nav__link">
+      <a href="../../../contributing/internals/project-structure/" class="md-nav__link">
         
   
   
@@ -1842,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/query-engine/" class="md-nav__link">
+      <a href="../../../contributing/internals/query-engine/" class="md-nav__link">
         
   
   
@@ -1865,7 +1936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/storage-engine/" class="md-nav__link">
+      <a href="../../../contributing/internals/storage-engine/" class="md-nav__link">
         
   
   
@@ -1888,7 +1959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/optimization-strategies/" class="md-nav__link">
+      <a href="../../../contributing/internals/optimization-strategies/" class="md-nav__link">
         
   
   
@@ -1952,7 +2023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/implementations/memory_pool/" class="md-nav__link">
+      <a href="../../../contributing/internals/implementations/memory_pool/" class="md-nav__link">
         
   
   
@@ -1975,7 +2046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/implementations/storage_io/" class="md-nav__link">
+      <a href="../../../contributing/internals/implementations/storage_io/" class="md-nav__link">
         
   
   
@@ -2055,7 +2126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/topics/debug_logging/" class="md-nav__link">
+      <a href="../../../contributing/topics/debug_logging/" class="md-nav__link">
         
   
   
@@ -2078,7 +2149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/topics/dependencies/" class="md-nav__link">
+      <a href="../../../contributing/topics/dependencies/" class="md-nav__link">
         
   
   
@@ -2101,7 +2172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/topics/testing/" class="md-nav__link">
+      <a href="../../../contributing/topics/testing/" class="md-nav__link">
         
   
   
@@ -2149,6 +2220,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#module-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Interface
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2160,8 +2250,367 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="python-pep-249-conformity">Python PEP-249 Conformity</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Conformance is a work in progress. This page reflects the current implementation status to provide transparent insight into Opteryx’s capabilities and development progress.</p>
+</div>
+<p>Opteryx is not a full DBMS and therefore aims only for conformance with <a href="https://peps.python.org/pep-0249">PEP-249</a> (Python Database API Specification v2.0) for the subset of features it supports—primarily those related to querying data.</p>
+<h2 id="module-interface">Module Interface</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Imperative</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Module Interface</strong></td>
+<td style="text-align: left;"></td>
+<td>uknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>connect</code> constructor</td>
+<td style="text-align: left;">must</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>apilevel</code> global</td>
+<td style="text-align: left;">must</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>threadsafety</code> global</td>
+<td style="text-align: left;">must</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>paramstyle</code> global</td>
+<td style="text-align: left;">must</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Warning</code> exception</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Error</code> exception</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>InterfaceError</code> exception</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DatabaseError</code> exception</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DataError</code> exception</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>OperationalError</code> exception</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>IntegrityError</code> exception</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>InternalError</code> exception</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ProgrammingError</code> exception</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NotSupportedError</code> exception</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Connection Object</strong></td>
+<td style="text-align: left;"></td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>close</code> method</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>commit</code> method</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rollback</code> method</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cursor</code> method</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>messages</code> attribute</td>
+<td style="text-align: left;">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>errorhandler</code> attribute</td>
+<td style="text-align: left;">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cursor Object</strong></td>
+<td style="text-align: left;"></td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code> attribute</td>
+<td style="text-align: left;">should</td>
+<td>yes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rowcount</code> attribute</td>
+<td style="text-align: left;">should</td>
+<td>yes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>callproc</code> method</td>
+<td style="text-align: left;">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>close</code> method</td>
+<td style="text-align: left;">should</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>execute</code> method</td>
+<td style="text-align: left;">should</td>
+<td>yes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>executemany</code> method</td>
+<td style="text-align: left;">should</td>
+<td>no</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fetchmany</code> method</td>
+<td style="text-align: left;">should</td>
+<td>yes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fetchall</code> method</td>
+<td style="text-align: left;">should</td>
+<td>yes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>nextset</code> method</td>
+<td style="text-align: left;">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>arraysize</code> attribute</td>
+<td style="text-align: left;">should</td>
+<td>yes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>setinputsizes</code> method</td>
+<td style="text-align: left;">should</td>
+<td>no</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>setoutputsize</code> method</td>
+<td style="text-align: left;">should</td>
+<td>no</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rownumber</code> attribute</td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>connection</code> attribute</td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>scroll</code> method</td>
+<td style="text-align: left;">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>messages</code> attribute</td>
+<td style="text-align: left;">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>next</code> method</td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>__iter__</code> method</td>
+<td style="text-align: left;">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>lastrowid</code> attribute</td>
+<td style="text-align: left;">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>errorhandler</code> attribute</td>
+<td style="text-align: left;">optional</td>
+<td>no</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Type Constructors</strong></td>
+<td style="text-align: left;"></td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Date</code></td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Time</code></td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Timestamp</code></td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DateFromTicks</code></td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>TimeFromTicks</code></td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>TimestampFromTicks</code></td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Binary</code></td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>STRING</code></td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>BINARY</code></td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NUMBER</code></td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DATETIME</code></td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ROWID</code></td>
+<td style="text-align: left;">optional</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Two-Phase Commit Extensions</strong></td>
+<td style="text-align: left;"></td>
+<td>n/a</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>xid</code> method</td>
+<td style="text-align: left;">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tpc_begin</code> method</td>
+<td style="text-align: left;">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tpc_prepare</code> method</td>
+<td style="text-align: left;">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tpc_commit</code> method</td>
+<td style="text-align: left;">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tpc_rollback</code> method</td>
+<td style="text-align: left;">optional</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tpc_recover</code> method</td>
+<td style="text-align: left;">optional</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<p>Support statuses in this table:</p>
+<ul>
+<li><strong>yes</strong> The feature is supported and conformance is part of the test suite.  </li>
+<li><strong>no</strong> The feature is not supported.  </li>
+<li><strong>partial</strong> Some features are supported.  </li>
+<li><strong>n/a</strong> The feature relates to a feature not supported by Opteryx.  </li>
+<li><strong>unknown</strong> No test exists to confirm conformance.  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2257,12 +2706,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/0.25.0", "features": ["navigation.tabs", "navigation.top"], "search": "/0.25.0/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="/0.25.0/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
-        <script src="/0.25.0/termynal.js"></script>
+        <script src="../../../termynal.js"></script>
       
     
   </body>

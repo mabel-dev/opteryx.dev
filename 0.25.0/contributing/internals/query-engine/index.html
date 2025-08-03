@@ -12,19 +12,25 @@
         <meta name="author" content="Justin Joyce">
       
       
+        <link rel="canonical" href="https://opteryx.dev/0.25.0/contributing/internals/query-engine/">
       
       
+        <link rel="prev" href="../project-structure/">
       
-      <link rel="icon" href="/0.25.0/icarus-opteryx.png">
+      
+        <link rel="next" href="../storage-engine/">
+      
+      
+      <link rel="icon" href="../../../icarus-opteryx.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Opteryx</title>
+        <title>Query Engine - Opteryx</title>
       
     
     
-      <link rel="stylesheet" href="/0.25.0/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
       
 
@@ -43,11 +49,11 @@
       
     
     
-      <link rel="stylesheet" href="/0.25.0/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="/0.25.0/termynal.css">
+      <link rel="stylesheet" href="../../../termynal.css">
     
-    <script>__md_scope=new URL("/0.25.0",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#query-engine" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -79,9 +90,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/0.25.0/." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../../.." title="Opteryx" class="md-header__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="/0.25.0/icarus-opteryx.png" alt="logo">
+  <img src="../../../icarus-opteryx.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -98,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Query Engine
             
           </span>
         </div>
@@ -143,7 +154,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/0.25.0/." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -164,7 +175,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/0.25.0/get-started/overview/" class="md-tabs__link">
+        <a href="../../../get-started/overview/" class="md-tabs__link">
           
   
   
@@ -184,7 +195,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/0.25.0/sql-reference/introduction/" class="md-tabs__link">
+        <a href="../../../sql-reference/introduction/" class="md-tabs__link">
           
   
   
@@ -200,11 +211,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/0.25.0/contributing/contributing/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../contributing/" class="md-tabs__link">
           
   
   
@@ -238,9 +251,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/0.25.0/." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
+    <a href="../../.." title="Opteryx" class="md-nav__button md-logo" aria-label="Opteryx" data-md-component="logo">
       
-  <img src="/0.25.0/icarus-opteryx.png" alt="logo">
+  <img src="../../../icarus-opteryx.png" alt="logo">
 
     </a>
     Opteryx
@@ -267,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -330,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/overview/" class="md-nav__link">
+      <a href="../../../get-started/overview/" class="md-nav__link">
         
   
   
@@ -353,7 +366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/quickstart/" class="md-nav__link">
+      <a href="../../../get-started/quickstart/" class="md-nav__link">
         
   
   
@@ -376,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/command-line-guide/" class="md-nav__link">
+      <a href="../../../get-started/command-line-guide/" class="md-nav__link">
         
   
   
@@ -399,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/python-client/" class="md-nav__link">
+      <a href="../../../get-started/python-client/" class="md-nav__link">
         
   
   
@@ -463,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/using-opteryx-with-jupyter/" class="md-nav__link">
+      <a href="../../../get-started/guides/using-opteryx-with-jupyter/" class="md-nav__link">
         
   
   
@@ -486,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/iceberg-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/iceberg-and-opteryx/" class="md-nav__link">
         
   
   
@@ -509,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/pandas-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/pandas-and-opteryx/" class="md-nav__link">
         
   
   
@@ -532,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/polars-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/polars-and-opteryx/" class="md-nav__link">
         
   
   
@@ -555,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/bigquery-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/bigquery-and-opteryx/" class="md-nav__link">
         
   
   
@@ -578,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/mysql-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/mysql-and-opteryx/" class="md-nav__link">
         
   
   
@@ -601,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/postgres-and-opteryx/" class="md-nav__link">
+      <a href="../../../get-started/guides/postgres-and-opteryx/" class="md-nav__link">
         
   
   
@@ -624,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/convert-csv-to-parquet/" class="md-nav__link">
+      <a href="../../../get-started/guides/convert-csv-to-parquet/" class="md-nav__link">
         
   
   
@@ -647,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/guides/execute-sql-on-csv/" class="md-nav__link">
+      <a href="../../../get-started/guides/execute-sql-on-csv/" class="md-nav__link">
         
   
   
@@ -678,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/deployment-guide/" class="md-nav__link">
+      <a href="../../../get-started/deployment-guide/" class="md-nav__link">
         
   
   
@@ -701,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/security/" class="md-nav__link">
+      <a href="../../../get-started/security/" class="md-nav__link">
         
   
   
@@ -765,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/ecosystem/orso/orso/" class="md-nav__link">
+      <a href="../../../get-started/ecosystem/orso/orso/" class="md-nav__link">
         
   
   
@@ -788,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/ecosystem/mabel/" class="md-nav__link">
+      <a href="../../../get-started/ecosystem/mabel/" class="md-nav__link">
         
   
   
@@ -811,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/ecosystem/mesos/" class="md-nav__link">
+      <a href="../../../get-started/ecosystem/mesos/" class="md-nav__link">
         
   
   
@@ -883,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/pep249/" class="md-nav__link">
+      <a href="../../../get-started/external-standards/pep249/" class="md-nav__link">
         
   
   
@@ -906,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/sql92/" class="md-nav__link">
+      <a href="../../../get-started/external-standards/sql92/" class="md-nav__link">
         
   
   
@@ -929,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/tpch/" class="md-nav__link">
+      <a href="../../../get-started/external-standards/tpch/" class="md-nav__link">
         
   
   
@@ -952,7 +965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/external-standards/clickbench/" class="md-nav__link">
+      <a href="../../../get-started/external-standards/clickbench/" class="md-nav__link">
         
   
   
@@ -1024,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/release-notes/change-log/" class="md-nav__link">
+      <a href="../../../get-started/release-notes/change-log/" class="md-nav__link">
         
   
   
@@ -1047,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/get-started/release-notes/notices/" class="md-nav__link">
+      <a href="../../../get-started/release-notes/notices/" class="md-nav__link">
         
   
   
@@ -1126,7 +1139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/introduction/" class="md-nav__link">
+      <a href="../../../sql-reference/introduction/" class="md-nav__link">
         
   
   
@@ -1149,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/statements/" class="md-nav__link">
+      <a href="../../../sql-reference/statements/" class="md-nav__link">
         
   
   
@@ -1172,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/data-types/" class="md-nav__link">
+      <a href="../../../sql-reference/data-types/" class="md-nav__link">
         
   
   
@@ -1195,7 +1208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/expressions/" class="md-nav__link">
+      <a href="../../../sql-reference/expressions/" class="md-nav__link">
         
   
   
@@ -1218,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/functions/" class="md-nav__link">
+      <a href="../../../sql-reference/functions/" class="md-nav__link">
         
   
   
@@ -1241,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/aggregates/" class="md-nav__link">
+      <a href="../../../sql-reference/aggregates/" class="md-nav__link">
         
   
   
@@ -1264,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/joins/" class="md-nav__link">
+      <a href="../../../sql-reference/joins/" class="md-nav__link">
         
   
   
@@ -1328,7 +1341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-timestamps/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-timestamps/" class="md-nav__link">
         
   
   
@@ -1351,7 +1364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-lists/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-lists/" class="md-nav__link">
         
   
   
@@ -1374,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-structs/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-structs/" class="md-nav__link">
         
   
   
@@ -1397,7 +1410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-working-with-ips/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-working-with-ips/" class="md-nav__link">
         
   
   
@@ -1420,7 +1433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-time-travel/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-time-travel/" class="md-nav__link">
         
   
   
@@ -1443,7 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-null-semantics/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-null-semantics/" class="md-nav__link">
         
   
   
@@ -1466,7 +1479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-temp-tables/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-temp-tables/" class="md-nav__link">
         
   
   
@@ -1489,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-sample-data/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-sample-data/" class="md-nav__link">
         
   
   
@@ -1512,7 +1525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/sql-reference/adv-query-optimization/" class="md-nav__link">
+      <a href="../../../sql-reference/adv-query-optimization/" class="md-nav__link">
         
   
   
@@ -1547,24 +1560,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -1577,7 +1595,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             CONTRIBUTING
@@ -1591,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/contributing/" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         
   
   
@@ -1614,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/project-goals/" class="md-nav__link">
+      <a href="../../project-goals/" class="md-nav__link">
         
   
   
@@ -1637,7 +1655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/code-of-conduct/" class="md-nav__link">
+      <a href="../../code-of-conduct/" class="md-nav__link">
         
   
   
@@ -1660,7 +1678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/etiquette/" class="md-nav__link">
+      <a href="../../etiquette/" class="md-nav__link">
         
   
   
@@ -1724,7 +1742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/set-up-guides/debian/" class="md-nav__link">
+      <a href="../../set-up-guides/debian/" class="md-nav__link">
         
   
   
@@ -1747,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/set-up-guides/macos/" class="md-nav__link">
+      <a href="../../set-up-guides/macos/" class="md-nav__link">
         
   
   
@@ -1775,6 +1793,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1785,11 +1805,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
         
           
           <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
@@ -1805,7 +1825,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             System Internals
@@ -1819,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/project-structure/" class="md-nav__link">
+      <a href="../project-structure/" class="md-nav__link">
         
   
   
@@ -1839,10 +1859,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/query-engine/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Query Engine
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1853,6 +1895,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parser-lexer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parser &amp; Lexer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-planner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Planner
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-optimizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Optimizer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-executor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Executor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Features
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1865,7 +1981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/storage-engine/" class="md-nav__link">
+      <a href="../storage-engine/" class="md-nav__link">
         
   
   
@@ -1888,7 +2004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/optimization-strategies/" class="md-nav__link">
+      <a href="../optimization-strategies/" class="md-nav__link">
         
   
   
@@ -1952,7 +2068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/implementations/memory_pool/" class="md-nav__link">
+      <a href="../implementations/memory_pool/" class="md-nav__link">
         
   
   
@@ -1975,7 +2091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/internals/implementations/storage_io/" class="md-nav__link">
+      <a href="../implementations/storage_io/" class="md-nav__link">
         
   
   
@@ -2055,7 +2171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/topics/debug_logging/" class="md-nav__link">
+      <a href="../../topics/debug_logging/" class="md-nav__link">
         
   
   
@@ -2078,7 +2194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/topics/dependencies/" class="md-nav__link">
+      <a href="../../topics/dependencies/" class="md-nav__link">
         
   
   
@@ -2101,7 +2217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0.25.0/contributing/topics/testing/" class="md-nav__link">
+      <a href="../../topics/testing/" class="md-nav__link">
         
   
   
@@ -2149,6 +2265,70 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parser-lexer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parser &amp; Lexer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-planner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Planner
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-optimizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Optimizer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-executor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Executor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Features
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2160,8 +2340,76 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="query-engine">Query Engine</h1>
+<!--- https://www.cockroachlabs.com/docs/stable/architecture/sql-layer.html --->
+
+<blockquote>
+<p>If you are interested in how databases work, I recommend the resources from <a href="https://db.cs.cmu.edu/">The CMU Database Group</a>, and the collection of resources at <a href="https://github.com/pingcap/awesome-database-learning">Awesome Database Learning</a> and <a href="https://github.com/huachaohuang/awesome-dbdev">Awesome Database Development</a>.</p>
+</blockquote>
+<p>The Opteryx query engine has the following key components and processing queries follows this high-level series of steps:</p>
+<p>&emsp;<strong>Parser &amp; Lexer</strong> receives the user SQL and builds an Abstract Syntax Tree (AST).<br />
+&emsp;<strong>Binder</strong> maps contextual information to the AST.<br />
+&emsp;<strong>Planner</strong> receives the AST and builds a Query Plan.<br />
+&emsp;<strong>Optimizer</strong> receives a Query Plan and rewrites it to improve performance. <br />
+&emsp;<strong>Executor</strong> receives the Query Plan and returns the result dataset.  </p>
+<h2 id="parser-lexer">Parser &amp; Lexer</h2>
+<p>The primary goal of the Parser and Lexer (which in some engines is two separate components) is to interpret the SQL provided by the user. This is generally done in two steps, the first is the break the query into separate tokens (or words) and the second is to understand the meaning of those tokens.</p>
+<p>For example for this statement</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">SELECT</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="k">FROM</span>
+</code></pre></div>
+<p>The Parser and Lexer will understand that we're requesting the field <code>SELECT</code> from the relation <code>FROM</code>.</p>
+<p>Opteryx uses <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> as its Parser and Lexer, as a Rust library, Opteryx creates Python bindings for sqlparser-rs (derived from <a href="https://github.com/wseaton/sqloxide">sqloxide</a>). Opteryx does not support all features and functionality provided by this library.</p>
+<p>This sqlparser-rs interprets all SQL except for the Temporal <code>FOR</code> clause which are handled separately.</p>
+<h2 id="binder">Binder</h2>
+<p>The Binder's primary goal is to embelish and replace information in the AST with details which the Parser &amp; Lexer did not have.</p>
+<p>This is used for replacing variables in queries with their literal equivalents and adding temporal information to relations.</p>
+<h2 id="query-planner">Query Planner</h2>
+<p>The Query Planner's primary goal is to convert the AST into a plan to respond to the query. The Query Plan is described in a Directed Acyclic Graph (DAG) with the nodes that acquire the raw data, usually from storage, at the start of the flow and the node that forms the data to return to the user (usually the <code>SELECT</code> step) at the end.</p>
+<p>The DAG is made of different nodes which process the data as they pass through then node. Different node types exist for processing actions like Aggregations (<code>GROUP BY</code>), Selection (<code>WHERE</code>) and Distinct (<code>DISTINCT</code>).</p>
+<p>Query plans follow a generally accepted order of execution. This does not match the order queries are usually written in, instead it follows this order:</p>
+<p><img alt="OPERATOR ORDER" src="../operator-order.svg" /> </p>
+<p>The planner ensures the processes to be applied to the data reflect this order and creates the most convenient plan to achieve this.</p>
+<p>The Query Plan can be seen for a given query using the <code>EXPLAIN</code> query.</p>
+<h2 id="query-optimizer">Query Optimizer</h2>
+<p>The goal of the Query Optimizer is to rewrite the Query Plan to a plan which will return result to users faster. This is generally achieved through reducing the data being handled as early in the query as possible (such as projection push-down), reducing the complexity of steps (such as using logical equivelences to make expressions simpler) or combining steps (such as sort and limit into a heap sort).</p>
+<p>The current optimizer in Opteryx is immature with very few rules and requires hand-tuning of the input query for the optimizer to achieve best results.</p>
+<h2 id="query-executor">Query Executor</h2>
+<p>The goal of the Query Executor is to produce the results for the user. It takes the Plan and executes the steps in the plan.</p>
+<p>Opteryx implements a vectorized Volcano model executor. This means that the planner starts at the node closest to the end of the plan (e.g. <code>LIMIT</code>) and asks it for a chunk of data. This node asks its preceeding node for a chunk of data, etc etc until it gets to the node which aquires data from source. The data is then processed by each node until it is returned to the <code>LIMIT</code> node at the end.</p>
+<h2 id="performance-features">Performance Features</h2>
+<p>The following features are build into the query engine to improve performance</p>
+<ul>
+<li>Small chunks are merged together (referred to as 'defragmentation') before activities which operate on the entire chunk-at-a-time (such as selections)</li>
+<li>Projections are pushed to the blob parser, either to prevent parsing of unwanted fields (Parquet), or before passing to the next operation</li>
+<li>A buffer pool is used to maintain an in-memory cache of blobs</li>
+<li>A shared blob cache can be used (e.g. memcached, redis or valkey) to reduce reads to attached or remote storage</li>
+<li>An <a href="https://en.wikipedia.org/wiki/Page_replacement_algorithm#Variants_on_LRU">LRU-K</a> cache eviction strategy with a fixed eviction budget per query to help ensure effective use of the blob cache</li>
+<li>Aggressive pruning of date partitioned datasets</li>
+<li>SIMD and vectorized execution where available (via <a href="https://numpy.org/devdocs/reference/simd/index.html">Numpy</a> and <a href="https://arrow.apache.org/docs/format/Columnar.html">PyArrow</a>)</li>
+<li>Projection before <code>GROUP BY</code> to reduce data handled by the aggregators</li>
+<li><code>null</code> values are eliminated from filters before they are executed, and added back in after values have been compared, reducing the pointless work of comparing <code>null</code> values</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2257,12 +2505,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/0.25.0", "features": ["navigation.tabs", "navigation.top"], "search": "/0.25.0/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="/0.25.0/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
-        <script src="/0.25.0/termynal.js"></script>
+        <script src="../../../termynal.js"></script>
       
     
   </body>
