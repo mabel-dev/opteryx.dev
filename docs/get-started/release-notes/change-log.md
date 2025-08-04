@@ -15,7 +15,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2718](https://github.com/mabel-dev/opteryx/issues/2718)] Use [Ryu](https://github.com/ulfjack/ryu) to `CAST` `DOUBLES` to `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
 - [[#2722](https://github.com/mabel-dev/opteryx/issues/2722)] Use [fast_float](https://github.com/fastfloat/fast_float) to `CAST` `DOUBLES` from `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
-- [[#2726](https://github.com/mabel-dev/opteryx/issues/2726)] Custom routines to to `CAST` `INTEGER` from `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
+- [[#2726](https://github.com/mabel-dev/opteryx/issues/2726)] Custom routines to to `CAST` `INTEGER` to `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
+- [[#2729](https://github.com/mabel-dev/opteryx/issues/2729)] JSON lines reader doesn't need to parse lines to get line count for `COUNT(*)` ([@joocer](https://github.com/joocer))
+- [[#2730](https://github.com/mabel-dev/opteryx/pull/2730)] Custom routines to to `CAST` `INTEGER` from `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
 
 ## [0.24.1] - 2025-07-29
 
