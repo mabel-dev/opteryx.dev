@@ -67,6 +67,8 @@ Literal values in quotes may be in interpreted as a `TIMESTAMP` or `DATE` when t
 
 All `TIMESTAMP` and values read from datasets are coerced to nanosecond precision timestamps.
 
+The default precision for `TIMESTAMP` is milliseconds, values not in this precision may be converted to this precision as handled internally.
+
 ### Numbers
 
 Hex literals can be provided using `0x` prefix, for example `0xc0ffee` is handled as the integer `12648430`.

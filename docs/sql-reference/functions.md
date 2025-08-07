@@ -33,23 +33,8 @@ New functions for this version are annotated with the :octicons-star-16: icon.
     Convert **num** to an integer.   
     `INTEGER` is a psuedo-type, `CAST` is not supported and values may be coerced to `NUMERIC`.
 
-!!! function "`FLOAT` (**num**: _numeric_) → _numeric_"  
-    **DEPRECATED**  
-
-!!! function "`NUMERIC` **any**: _any_ → _numeric_"  
-    **DEPRECATED**  
-
 !!! function "`SAFE_CAST` (**any**: _any_ AS **type**) → _type_"    
     Alias for `TRY_CAST`(**any** AS **type**)  
-
-!!! function "`STR` (**any**: _any_) → _varchar_"     
-    **DEPRECATED**  
-
-!!! function "`STRING` (**any**: _any_) → _varchar_"     
-    **DEPRECATED**  
-
-!!! function "`STRUCT` (**any**: _any_) → _struct_"   
-    **DEPRECATED** 
 
 !!! function "`TIMESTAMP` **iso8601**: _varchar_ → _timestamp_"  
     Cast an [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format string to a timestamp, raises an error if cast is not possible. Note `TIMESTAMP` does not require parenthesis, however any aliases do.    
@@ -177,7 +162,7 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     If no **ts** provided, returns the current year.   
     Alias for `EXTRACT`(year FROM **ts**)
 
-## Infix Functions
+## Infix Functions / Operations
 
 These are functions that are called similar to comparison operators:
 
@@ -256,20 +241,8 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
     Return the smallest value in **array**.  
     _Related:_ `GREATEST`
 
-!!! function "`LEN` (**array**: _array_) → _numeric_:octicons-dot-16:"   
-    **DEPRECATED**  
-
 !!! function "`LENGTH` (**array**: _array_) → _numeric_:octicons-dot-16:"   
     Returns the number of elements in **array**.
-
-!!! function "`LIST_CONTAINS` (**array**: _array_, **value**) → _boolean_"  
-    **DEPRECATED**   
-
-!!! function "`LIST_CONTAINS_ANY` (**array**: _array_, **values**: _array_) → _boolean_"    
-    **DEPRECATED**   
-
-!!! function "`LIST_CONTAINS_ALL` (**array**: _array_, **values**: _array_) → _boolean_"   
-    **DEPRECATED**   
 
 !!! function "`SEARCH` (**array**: _array_, **value**) → _boolean_:octicons-dot-16:"  
     Return `true` if **array** contains **value**. 
@@ -282,15 +255,9 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
 !!! function "`ABS` (**x**: _numeric_) → _numeric_"  
     Returns the absolute value of **x**.   
 
-!!! function "`ABSOLUTE` (**x**: _numeric_) → _numeric_"  
-    **DEPRECATED** 
-
 !!! function "`CEIL` (**x**: _numeric_, **scale**: _integer_) → _double_"  
     Returns the nearest equal or larger whole number to **x**, or to the nearest equal or larger double with **scale** places after the decimal point.   
     _Related:_ `FLOOR`   
-
-!!! function "`CEILING` (**x**: _numeric_, **scale**: _integer_) → _double_"   
-    **DEPRECATED** 
 
 !!! function "`E` () → _numeric_"  
     Returns the constant _e_, also known as [_Euler's number_](https://en.wikipedia.org/wiki/E_(mathematical_constant)).  
@@ -342,9 +309,6 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
 
 !!! function "`TRUNC` (**x**: _numeric_) → _numeric_"  
     Returns **x** rounded to integer by dropping digits after decimal point.   
-
-!!! function "`TRUNCATE` (**x**: _numeric_) → _numeric_"  
-    **DEPRECATED** 
 
 ## String Functions
 
