@@ -1304,9 +1304,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#infix-functions" class="md-nav__link">
+  <a href="#infix-functions-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      Infix Functions
+      Infix Functions / Operations
     </span>
   </a>
   
@@ -2318,9 +2318,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#infix-functions" class="md-nav__link">
+  <a href="#infix-functions-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      Infix Functions
+      Infix Functions / Operations
     </span>
   </a>
   
@@ -2435,28 +2435,8 @@ Convert large numbers to forms easier for humans to read.</p>
 <code>INTEGER</code> is a psuedo-type, <code>CAST</code> is not supported and values may be coerced to <code>NUMERIC</code>.</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>FLOAT</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p><strong>DEPRECATED</strong>  </p>
-</div>
-<div class="admonition function">
-<p class="admonition-title"><code>NUMERIC</code> <strong>any</strong>: <em>any</em> → <em>numeric</em></p>
-<p><strong>DEPRECATED</strong>  </p>
-</div>
-<div class="admonition function">
 <p class="admonition-title"><code>SAFE_CAST</code> (<strong>any</strong>: <em>any</em> AS <strong>type</strong>) → <em>type</em></p>
 <p>Alias for <code>TRY_CAST</code>(<strong>any</strong> AS <strong>type</strong>)  </p>
-</div>
-<div class="admonition function">
-<p class="admonition-title"><code>STR</code> (<strong>any</strong>: <em>any</em>) → <em>varchar</em></p>
-<p><strong>DEPRECATED</strong>  </p>
-</div>
-<div class="admonition function">
-<p class="admonition-title"><code>STRING</code> (<strong>any</strong>: <em>any</em>) → <em>varchar</em></p>
-<p><strong>DEPRECATED</strong>  </p>
-</div>
-<div class="admonition function">
-<p class="admonition-title"><code>STRUCT</code> (<strong>any</strong>: <em>any</em>) → <em>struct</em></p>
-<p><strong>DEPRECATED</strong> </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TIMESTAMP</code> <strong>iso8601</strong>: <em>varchar</em> → <em>timestamp</em></p>
@@ -2610,7 +2590,7 @@ Alias for <code>EXTRACT</code>(week FROM <strong>ts</strong>)</p>
 If no <strong>ts</strong> provided, returns the current year. <br />
 Alias for <code>EXTRACT</code>(year FROM <strong>ts</strong>)</p>
 </div>
-<h2 id="infix-functions">Infix Functions</h2>
+<h2 id="infix-functions-operations">Infix Functions / Operations</h2>
 <p>These are functions that are called similar to comparison operators:</p>
 <div class="admonition function">
 <p class="admonition-title"><em>numeric</em> <code>+</code> <em>numeric</em> → <em>numeric</em></p>
@@ -2708,24 +2688,8 @@ See also <code>ANY</code></p>
 <em>Related:</em> <code>GREATEST</code></p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>LEN</code> (<strong>array</strong>: <em>array</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p><strong>DEPRECATED</strong>  </p>
-</div>
-<div class="admonition function">
 <p class="admonition-title"><code>LENGTH</code> (<strong>array</strong>: <em>array</em>) → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
 <p>Returns the number of elements in <strong>array</strong>.</p>
-</div>
-<div class="admonition function">
-<p class="admonition-title"><code>LIST_CONTAINS</code> (<strong>array</strong>: <em>array</em>, <strong>value</strong>) → <em>boolean</em></p>
-<p><strong>DEPRECATED</strong>   </p>
-</div>
-<div class="admonition function">
-<p class="admonition-title"><code>LIST_CONTAINS_ANY</code> (<strong>array</strong>: <em>array</em>, <strong>values</strong>: <em>array</em>) → <em>boolean</em></p>
-<p><strong>DEPRECATED</strong>   </p>
-</div>
-<div class="admonition function">
-<p class="admonition-title"><code>LIST_CONTAINS_ALL</code> (<strong>array</strong>: <em>array</em>, <strong>values</strong>: <em>array</em>) → <em>boolean</em></p>
-<p><strong>DEPRECATED</strong>   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SEARCH</code> (<strong>array</strong>: <em>array</em>, <strong>value</strong>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
@@ -2741,17 +2705,9 @@ See also <code>ANY</code></p>
 <p>Returns the absolute value of <strong>x</strong>.   </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>ABSOLUTE</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p><strong>DEPRECATED</strong> </p>
-</div>
-<div class="admonition function">
 <p class="admonition-title"><code>CEIL</code> (<strong>x</strong>: <em>numeric</em>, <strong>scale</strong>: <em>integer</em>) → <em>double</em></p>
 <p>Returns the nearest equal or larger whole number to <strong>x</strong>, or to the nearest equal or larger double with <strong>scale</strong> places after the decimal point. <br />
 <em>Related:</em> <code>FLOOR</code>   </p>
-</div>
-<div class="admonition function">
-<p class="admonition-title"><code>CEILING</code> (<strong>x</strong>: <em>numeric</em>, <strong>scale</strong>: <em>integer</em>) → <em>double</em></p>
-<p><strong>DEPRECATED</strong> </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>E</code> () → <em>numeric</em></p>
@@ -2818,10 +2774,6 @@ See also <code>ANY</code></p>
 <div class="admonition function">
 <p class="admonition-title"><code>TRUNC</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
 <p>Returns <strong>x</strong> rounded to integer by dropping digits after decimal point.   </p>
-</div>
-<div class="admonition function">
-<p class="admonition-title"><code>TRUNCATE</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p><strong>DEPRECATED</strong> </p>
 </div>
 <h2 id="string-functions">String Functions</h2>
 <p>Functions for examining and manipulating string values. </p>

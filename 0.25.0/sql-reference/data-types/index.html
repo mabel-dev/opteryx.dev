@@ -2379,6 +2379,7 @@
 <h3 id="timestamps-dates">Timestamps &amp; Dates</h3>
 <p>Literal values in quotes may be in interpreted as a <code>TIMESTAMP</code> or <code>DATE</code> when they match a valid date in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>  format (e.g. <code>YYYY-MM-DD</code> and <code>YYYY-MM-DD HH:MM</code>). The decision regarding coercising to a <code>DATE</code> if there is no time component to the value, otherwise it will be coerced to a <code>TIMESTAMP</code>. </p>
 <p>All <code>TIMESTAMP</code> and values read from datasets are coerced to nanosecond precision timestamps.</p>
+<p>The default precision for <code>TIMESTAMP</code> is milliseconds, values not in this precision may be converted to this precision as handled internally.</p>
 <h3 id="numbers">Numbers</h3>
 <p>Hex literals can be provided using <code>0x</code> prefix, for example <code>0xc0ffee</code> is handled as the integer <code>12648430</code>.</p>
 <p>Numeric literals may contain underscores (<code>_</code>) which are helpful to improve the readability of long numbers, e.g. <code>1_000_000</code>.</p>
