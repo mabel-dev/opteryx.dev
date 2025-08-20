@@ -15,10 +15,9 @@ Strategy                                                      | Type         | S
 [Distinct Pushdown](#distinct-pushdown)                       | Heuristic    | Implemented
 [IN (subquery) to JOIN](#in-subquery-to-join)                 | Schema-Aware | Considered
 [CTE rewrite](#cte-rewrite)                                   | Heuristic    | Considered
-[Subquery flattening](#subquery-flattening)                   | Schema-Aware | Considered
+[Subquery flattening](#subquery-flattening)                   | Schema-Aware | `Considered`
 [JOIN ordering](#join-ordering)                               | Cost-Based   | Considered
-[Predicate Ordering](#join-ordering)                          | Cost-Based   | Attempted
-[Predicate Flattening](#predicate-flattening)                 | Schema-Aware | Attempted
+[Predicate Ordering](#predicate-ordering)                     | Cost-Based   | Partial
 [Predicate Compaction](#predicate-compaction)                 | Schema-Aware | Designed
 [Correlated Predicates](#correlated-predicates)               | Schema-Aware | Implemented
 [Predicate Elimination](#predicate-elimination)               | Heuristic    | Implemented
@@ -161,7 +160,12 @@ Push `DISTINCT` clause into `CROSS JOIN UNNEST`.
 
 ### Predicate Ordering
 
-### Predicate Flattening
+**status** partial
+**goal** fastest order to execute filters
+
+_PredicateOrderingStrategy_
+
+Use execution statistics to determine a 'good' order to execute filters in. This is currently implemented to use the time to execute filters based on the datatype only (e.g. comparing `INTEGER` values is faster than `VARCHAR` values) and does not account for the selectivity of the filtering.
 
 ### Predicate Elimination
 

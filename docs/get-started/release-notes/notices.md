@@ -13,6 +13,7 @@ Library           | Inclusion Type    | Copyright            | Licence
 [fuzzy](https://github.com/yougov/fuzzy)                   | Vendored   | [Jason R. Coombs](https://github.com/jaraco) | [MIT](https://github.com/yougov/fuzzy/blob/master/LICENSE)
 [mbleven](https://github.com/fujimotos/mbleven)            | Vendored   | 2018 [Fujimoto Seiji](https://github.com/fujimotos) | [Public Domain](https://github.com/fujimotos/mbleven/blob/master/LICENSE)
 [mysql-mimic](https://github.com/kelsin/mysql-mimic)       | Derived    | 2022 [Christopher Giroir](https://github.com/kelsin) | [MIT](https://github.com/kelsin/mysql-mimic/blob/main/LICENSE)
+[nanoarrow](https://github.com/apache/arrow-nanoarrow) n   | Vendored   | 2023 [Apache Foundation](https://github.com/apache/arrow-nanoarrow/blob/main/NOTICE.txt) | [Apache 2.0](https://github.com/apache/arrow-nanoarrow/blob/main/LICENSE.txt)
 [numpy](https://github.com/numpy/numpy)                    | Dependency |  | [BSD-3](https://github.com/numpy/numpy/blob/main/LICENSE.txt)
 [orjson](https://github.com/ijl/orjson)                    | Dependency |  | [Apache 2.0](https://github.com/ijl/orjson/blob/master/LICENSE-APACHE)
 [pyarrow](https://github.com/apache/arrow/)                | Dependency |  | [Apache 2.0](https://github.com/apache/arrow/blob/master/LICENSE.txt)
