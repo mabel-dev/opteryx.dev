@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../icarus-opteryx.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
     
     
       
@@ -2277,7 +2277,7 @@
 <tr>
 <td style="text-align: left;"><a href="#subquery-flattening">Subquery flattening</a></td>
 <td style="text-align: left;">Schema-Aware</td>
-<td style="text-align: left;">Considered</td>
+<td style="text-align: left;"><code>Considered</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="#join-ordering">JOIN ordering</a></td>
@@ -2285,14 +2285,9 @@
 <td style="text-align: left;">Considered</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="#join-ordering">Predicate Ordering</a></td>
+<td style="text-align: left;"><a href="#predicate-ordering">Predicate Ordering</a></td>
 <td style="text-align: left;">Cost-Based</td>
-<td style="text-align: left;">Attempted</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="#predicate-flattening">Predicate Flattening</a></td>
-<td style="text-align: left;">Schema-Aware</td>
-<td style="text-align: left;">Attempted</td>
+<td style="text-align: left;">Partial</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="#predicate-compaction">Predicate Compaction</a></td>
@@ -2400,7 +2395,10 @@ Push limit to other readers.</p>
 <h3 id="subquery-flattening">Subquery flattening</h3>
 <h3 id="join-ordering">JOIN ordering</h3>
 <h3 id="predicate-ordering">Predicate Ordering</h3>
-<h3 id="predicate-flattening">Predicate Flattening</h3>
+<p><strong>status</strong> partial
+<strong>goal</strong> fastest order to execute filters</p>
+<p><em>PredicateOrderingStrategy</em></p>
+<p>Use execution statistics to determine a 'good' order to execute filters in. This is currently implemented to use the time to execute filters based on the datatype only (e.g. comparing <code>INTEGER</code> values is faster than <code>VARCHAR</code> values) and does not account for the selectivity of the filtering.</p>
 <h3 id="predicate-elimination">Predicate Elimination</h3>
 <p>Where logical expressions contain boolean literals, these can be removed sometimes resulting in the entire expression being removed. E.g. <code>1 = 1 OR name = 'Alice'</code> can be completely removed avoiding any further handling of the check against the name column.</p>
 <h3 id="correlated-predicates">Correlated Predicates</h3>
@@ -2518,10 +2516,10 @@ Push limit to other readers.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
         <script src="../../../termynal.js"></script>
       
