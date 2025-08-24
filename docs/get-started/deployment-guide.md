@@ -10,13 +10,10 @@
 Opteryx balances memory consumption with performance, however, being able to process large datasets will require larger memory specifications compared to what is needed to process smaller datasets. The reference implementation of Opteryx regularly processes 100Gb of data in a container with 4 CPUs and 8Gb of memory allocated.
 
 !!! Note
-    This is a general recommendation and is a good place to start, your environment and specific problem may require, or perform significantly better, with a different configuration.
+    This is a general recommendation and is a good place to start, your environment and specific problem may require, or perform better, with a different configuration.
 
 !!! Note  
     Opteryx contains no specific optimiations to make use of multiple CPUs, although multiple CPUs may be beneficial as some libraries Opteryx is built on may use multiple CPUs.
-
-!!! Warning
-    Non x86 environments, such as Raspberry Pi or the Apple Silicon Macs (e.g. M1), may require additional set up steps.
 
 ### Operating System Support
 
@@ -34,16 +31,10 @@ Ubuntu (x86)      | Full        | Full        | Full        | Partial     |
 Ubuntu (ARM)      | Partial     | Partial     | Partial     | Partial     |
 Windows (x86)     | None        | None        | None        | **No Build** |
 
-
 &emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from Ubuntu Python 3.10 tests.  
 &emsp;**Partial** - some tests are excluded from the test suite or that some tests fail.  
 &emsp;**None** - there is no automated test for this configuration.  
 &emsp;**No Build** - compatibility issues prevent this combination from being built. 
-
-!!! Note
-    - Windows (x86) last supported version 0.19.0, builds are still created but not recommended for use beyond prototyping
-    - Python 3.8 last supported version 0.11.0
-    - Partial coverage is primarily due to testing platform constraints, not core-compatibility issues.
 
 ### Python Environment
 
@@ -59,7 +50,7 @@ MacOS Intel       | 3.10, 3.11, 3.12, 3.13
 MacOS Apple (M)   | 3.10, 3.11, 3.12, 3.13
 Windows x86       | 3.10, 3.11, 3.12
 
-Opteryx is primarily developed on workstations running Python 3.11 (Debian x86, Raspian, and MacOS M2) and is known to be deployed in production environments running Python 3.11 on Debian. 
+Opteryx is primarily developed on workstations running Python 3.11 (Debian x86, Raspian, and MacOS M2) and is known to be deployed in production environments running Python 3.11 on Debian (64bit x86). 
 
 ### Jupyter Notebooks
 
@@ -215,7 +206,7 @@ Opteryx supports:
 !!! note
     - ORC is not supported on Windows environments
     - CSV and TSV support is limited and is not recommended beyond trivial use cases
-    - Avro is not recommended for use in performance-sensitive contexts
+    - Avro and Vortex are not recommended for use in performance-sensitive contexts
 
 ### File Sizes
 
@@ -224,8 +215,4 @@ Opteryx usually loads entire files into memory at a time, this requires the foll
 - Reading one record from a file loads the entire blob. If you regularly only read a few records, prefer smaller blobs.
 - Reading each blob, particularly from Cloud Storage (S3/GCS), incurs a per-read overhead. If you have large datasets, prefer larger blobs.
 
-If you are unsure where to start, 64Mb (pre compression) is a recommended general-purpose blobs size, these should then be compressed (Snappy or zStandard are recommended).
-
-<!---
-## Document Stores
---->
+If you are unsure where to start, 64Mb (pre-compression) is a recommended general-purpose blobs size, these should then be compressed (Snappy or zStandard are recommended).
