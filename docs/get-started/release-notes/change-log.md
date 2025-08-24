@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.25.0] - UNRELEASED
 
+### Removed
+
+- `INT` marked as deprecated to be removed in or after version 0.27.
+
 ### Changed
 
 - [[#2713](https://github.com/mabel-dev/opteryx/issues/2713)] **[ClickBench]** CLI cycles reporting to 3dp ([@joocer](https://github.com/joocer))
@@ -19,7 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2726](https://github.com/mabel-dev/opteryx/issues/2726)] Custom routines to to `CAST` `INTEGER` to `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
 - [[#2729](https://github.com/mabel-dev/opteryx/issues/2729)] JSON lines reader doesn't need to parse lines to get line count for `COUNT(*)` ([@joocer](https://github.com/joocer))
 - [[#2730](https://github.com/mabel-dev/opteryx/pull/2730)] Custom routines to to `CAST` `INTEGER` from `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
-- [[#2240](https://github.com/mabel-dev/opteryx/issues/2240)] Initial cost-based optimization strategy ([@joocer](https://github.com/joocer))
+- [[#2240](https://github.com/mabel-dev/opteryx/issues/2240)] **[Optimizer]** Initial cost-based optimization strategy ([@joocer](https://github.com/joocer))
 - [[#2736](https://github.com/mabel-dev/opteryx/issues/2736)] Support [Apache Vortex](https://github.com/vortex-data/vortex) files ([@joocer](https://github.com/joocer))
 
 ## [0.24.1] - 2025-07-29
