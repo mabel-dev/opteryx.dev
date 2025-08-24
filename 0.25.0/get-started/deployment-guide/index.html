@@ -2299,15 +2299,11 @@
 <p>Opteryx balances memory consumption with performance, however, being able to process large datasets will require larger memory specifications compared to what is needed to process smaller datasets. The reference implementation of Opteryx regularly processes 100Gb of data in a container with 4 CPUs and 8Gb of memory allocated.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is a general recommendation and is a good place to start, your environment and specific problem may require, or perform significantly better, with a different configuration.</p>
+<p>This is a general recommendation and is a good place to start, your environment and specific problem may require, or perform better, with a different configuration.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Opteryx contains no specific optimiations to make use of multiple CPUs, although multiple CPUs may be beneficial as some libraries Opteryx is built on may use multiple CPUs.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Non x86 environments, such as Raspberry Pi or the Apple Silicon Macs (e.g. M1), may require additional set up steps.</p>
 </div>
 <h3 id="operating-system-support">Operating System Support</h3>
 <p><strong>Recommended Operating System</strong>: Ubuntu 24 (64bit)</p>
@@ -2365,14 +2361,6 @@
 &emsp;<strong>Partial</strong> - some tests are excluded from the test suite or that some tests fail.<br />
 &emsp;<strong>None</strong> - there is no automated test for this configuration.<br />
 &emsp;<strong>No Build</strong> - compatibility issues prevent this combination from being built. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul>
-<li>Windows (x86) last supported version 0.19.0, builds are still created but not recommended for use beyond prototyping</li>
-<li>Python 3.8 last supported version 0.11.0</li>
-<li>Partial coverage is primarily due to testing platform constraints, not core-compatibility issues.</li>
-</ul>
-</div>
 <h3 id="python-environment">Python Environment</h3>
 <p><strong>Recommended Version</strong>: 3.11</p>
 <p>Opteryx supports Python versions 3.10 and 3.11. Due to variations in support for parts of Opteryx and environments to reliably test and build, not all environments support each version of Python. 3.11 has the broadest compatibility</p>
@@ -2406,7 +2394,7 @@
 </tr>
 </tbody>
 </table>
-<p>Opteryx is primarily developed on workstations running Python 3.11 (Debian x86, Raspian, and MacOS M2) and is known to be deployed in production environments running Python 3.11 on Debian. </p>
+<p>Opteryx is primarily developed on workstations running Python 3.11 (Debian x86, Raspian, and MacOS M2) and is known to be deployed in production environments running Python 3.11 on Debian (64bit x86). </p>
 <h3 id="jupyter-notebooks">Jupyter Notebooks</h3>
 <p>Opteryx can run in Jupyter Notebooks to access data locally or, if configured, remotely on systems like GCS and S3.</p>
 <p>It is recommended that the Notebook host is located close to the data being queried - such as running Vertex AI Notebooks if the data sources are primarily on GCP, or querying local files if running Jupyter on a local device. Other configurations will work, but are less optimal.</p>
@@ -2592,7 +2580,7 @@
 <ul>
 <li>ORC is not supported on Windows environments</li>
 <li>CSV and TSV support is limited and is not recommended beyond trivial use cases</li>
-<li>Avro is not recommended for use in performance-sensitive contexts</li>
+<li>Avro and Vortex are not recommended for use in performance-sensitive contexts</li>
 </ul>
 </div>
 <h3 id="file-sizes">File Sizes</h3>
@@ -2601,10 +2589,7 @@
 <li>Reading one record from a file loads the entire blob. If you regularly only read a few records, prefer smaller blobs.</li>
 <li>Reading each blob, particularly from Cloud Storage (S3/GCS), incurs a per-read overhead. If you have large datasets, prefer larger blobs.</li>
 </ul>
-<p>If you are unsure where to start, 64Mb (pre compression) is a recommended general-purpose blobs size, these should then be compressed (Snappy or zStandard are recommended).</p>
-<!---
-## Document Stores
---->
+<p>If you are unsure where to start, 64Mb (pre-compression) is a recommended general-purpose blobs size, these should then be compressed (Snappy or zStandard are recommended).</p>
 
 
 
