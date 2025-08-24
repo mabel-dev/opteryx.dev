@@ -7,6 +7,7 @@ Opteryx, mesos, and orso are built on the shoulders of other great libraries and
 Library           | Inclusion Type    | Copyright            | Licence   
 :---------------- | :---------------- | :------------------- | :--------------- 
 [abseil-cpp](https://github.com/abseil/abseil-cpp)         | Vendored   | 2017 [Abseil](https://abseil.io/#) | [Apache 2.0](https://github.com/abseil/abseil-cpp/blob/master/LICENSE)
+[base64](https://github.com/alantsd/base64)                | Vendored   | 2018 [Rafa Garcia](https://github.com/rafagafe), 2020 [Alan Tong](https://github.com/alantsd) | [MIT](https://github.com/alantsd/base64/blob/master/LICENSE)
 [cython](https://github.com/cython/cython)                 | Dependency |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
 [datafusion-sqlparser-rs](https://github.com/apache/datafusion-sqlparser-rs) | Dependency |  | [Apache 2.0](https://github.com/apache/datafusion-sqlparser-rs/blob/main/LICENSE.TXT)
 [fast_float](https://github.com/fastfloat/fast_float)      | Vendored   | 2021 fast_float authors | [Apache 2.0](https://github.com/fastfloat/fast_float/blob/main/LICENSE-APACHE)  
