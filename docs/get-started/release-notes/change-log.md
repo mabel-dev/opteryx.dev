@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - `INT` marked as deprecated to be removed in or after version 0.27.
 
+### Fixed
+
+- [[#2755](https://github.com/mabel-dev/opteryx/issues/2755)] Ensure `INSTR` recieves arrow arrays ([@joocer](https://github.com/joocer))
+
 ### Changed
 
 - [[#2713](https://github.com/mabel-dev/opteryx/issues/2713)] **[ClickBench]** CLI cycles reporting to 3dp ([@joocer](https://github.com/joocer))
