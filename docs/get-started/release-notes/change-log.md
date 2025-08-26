@@ -12,7 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- [[#2755](https://github.com/mabel-dev/opteryx/issues/2755)] Ensure `INSTR` recieves arrow arrays ([@joocer](https://github.com/joocer))
+- [[#2754](https://github.com/mabel-dev/opteryx/issues/2754)] Ensure `INSTR` recieves arrow arrays ([@joocer](https://github.com/joocer))
 
 ### Changed
 
