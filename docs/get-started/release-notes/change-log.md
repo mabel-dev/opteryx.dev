@@ -10,6 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Python 3.10 regression tests, builds will continue but not recommended.
 
+### Added
+
+- [[#2771](https://github.com/mabel-dev/opteryx/issues/2771)] Add `@>>` as `ARRAY_CONTAINS_ALL` operator([@joocer](https://github.com/joocer))
+- [[#2769](https://github.com/mabel-dev/opteryx/issues/2769)] Rewrite visibility filters to reduce complexity ([@joocer](https://github.com/joocer))
+
 ## [0.25.0] - 2025-09-04
 
 ### Removed
