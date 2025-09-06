@@ -1094,6 +1094,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#0260-unreleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      [0.26.0] - UNRELEASED
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#0250-2025-09-04" class="md-nav__link">
     <span class="md-ellipsis">
       [0.25.0] - 2025-09-04
@@ -2626,6 +2635,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#0260-unreleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      [0.26.0] - UNRELEASED
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#0250-2025-09-04" class="md-nav__link">
     <span class="md-ellipsis">
       [0.25.0] - 2025-09-04
@@ -3052,8 +3070,13 @@
 <h1 id="changelog">Changelog</h1>
 <p>All notable changes to this project will be documented in this file, where appropriate the GitHub issue reference will be noted along with the change. Breaking changes will be clearly indicated with the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> icon.</p>
 <p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>.</p>
-<h2 id="0250-2025-09-04">[0.25.0] - 2025-09-04</h2>
+<h2 id="0260-unreleased">[0.26.0] - UNRELEASED</h2>
 <h3 id="removed">Removed</h3>
+<ul>
+<li>Python 3.10 regression tests, builds will continue but not recommended.</li>
+</ul>
+<h2 id="0250-2025-09-04">[0.25.0] - 2025-09-04</h2>
+<h3 id="removed_1">Removed</h3>
 <ul>
 <li><code>INT</code> marked as deprecated to be removed in or after version 0.27.</li>
 <li>Python 3.10 will be deprecated in version 0.26.</li>
@@ -3087,7 +3110,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2709">#2709</a>] <strong>[ClickBench]</strong> Benchmark script failing (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h2 id="0240-2025-07-28">[0.24.0] - 2025-07-28</h2>
-<h3 id="removed_1">Removed</h3>
+<h3 id="removed_2">Removed</h3>
 <ul>
 <li>Deprecated functions removed: <code>LIST_CONTAINS</code>, <code>STR</code>, <code>STRING</code>, <code>FLOAT</code>, <code>TRY_NUMERIC</code>, <code>TRY_STRING</code>, <code>TRY_STRUCT</code>, <code>LEN</code></li>
 </ul>
@@ -3116,7 +3139,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2683">#2683</a>] Update vendored <a href="https://github.com/TkTech/pysimdjson">pysimdjson</a> (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h2 id="0230-2025-06-29">[0.23.0] - 2025-06-29</h2>
-<h3 id="removed_2">Removed</h3>
+<h3 id="removed_3">Removed</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2643">#2643</a>] Remove redundant murmur hash (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
@@ -3145,7 +3168,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2445">#2445</a>] <code>LEFT JOIN</code> rewrite (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h2 id="0220-2025-05-20">[0.22.0] - 2025-05-20</h2>
-<h3 id="removed_3">Removed</h3>
+<h3 id="removed_4">Removed</h3>
 <ul>
 <li>Deprecated function aliases removed <code>NUMERIC</code>, <code>LIST_CONTAINS_ANY</code>, <code>LIST_CONTAINS_ALL</code>, use <code>DOUBLE</code>, <code>ARRAY_CONTAINS_ANY</code>, <code>ARRAY_CONTAINS_ALL</code> instead. <code>STRUCT</code> removed as no longer required.</li>
 <li><code>LIST_CONTAINS</code>, <code>STR</code>, <code>STRING</code>, <code>FLOAT</code>, <code>TRY_NUMERIC</code>, <code>TRY_STRING</code>, <code>TRY_STRUCT</code>, <code>LEN</code> marked as deprecated to be removed in or after version 0.24.</li>
@@ -3164,7 +3187,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2535">#2535</a>] Avoid conversion to numpy arrays for binary comparisons (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h2 id="0210-2025-03-30">[0.21.0] - 2025-03-30</h2>
-<h3 id="removed_4">Removed</h3>
+<h3 id="removed_5">Removed</h3>
 <ul>
 <li>Deprecated function aliases removed <code>CEILING</code>, <code>ABSOLUTE</code>, <code>MAXIMIM</code>, <code>MINIMUM</code>, use shorter form <code>CEIL</code>, <code>ABS</code>, <code>MAX</code>, <code>MIN</code> instead.</li>
 <li><code>INNER JOIN UNNEST</code> removed from this release</li>
@@ -3617,7 +3640,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/1337">#1337</a>] Support <code>RLIKE</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/1344">#1344</a>] Initial Support for <code>ANY</code> and <code>ALL</code> array containment syntax (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
-<h3 id="removed_5">Removed</h3>
+<h3 id="removed_6">Removed</h3>
 <ul>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> Python 3.8 is no longer supported. (<a href="https://github.com/joocer">@joocer</a>)  </li>
 </ul>

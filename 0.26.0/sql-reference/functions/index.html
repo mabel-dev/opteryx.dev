@@ -2660,6 +2660,11 @@ Alias for <code>EXTRACT</code>(year FROM <strong>ts</strong>)</p>
 <em>Related:</em> <code>ARRAY_CONTAINS_ANY</code>   </p>
 </div>
 <div class="admonition function">
+<p class="admonition-title"><strong>values</strong>: <em>array</em> <code>@&gt;&gt;</code> <strong>array</strong>: <em>array</em> → <em>boolean</em></p>
+<p>Return <code>true</code> if <strong>array</strong> contains all of the elements in <strong>values</strong>. <br />
+<em>Related:</em> <code>ARRAY_CONTAINS_ALL</code>   </p>
+</div>
+<div class="admonition function">
 <p class="admonition-title"><code>ARRAY_CONTAINS</code> (<strong>array</strong>: <em>array</em>, <strong>value</strong>) → <em>boolean</em></p>
 <p>Return <code>true</code> if <strong>array</strong> contains <strong>value</strong>.<br />
 See also <code>SEARCH</code>(<strong>array</strong>, <strong>value</strong>)<br />
@@ -2667,11 +2672,13 @@ See also <code>ANY</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>ARRAY_CONTAINS_ANY</code> (<strong>array</strong>: <em>array</em>, <strong>values</strong>: <em>array</em>) → <em>boolean</em></p>
-<p>Return <code>true</code> if <strong>array</strong> contains any of the elements in <strong>values</strong>.</p>
+<p>Return <code>true</code> if <strong>array</strong> contains any of the elements in <strong>values</strong>.
+<em>Related:</em> <code>@&gt;</code>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>ARRAY_CONTAINS_ALL</code> (<strong>array</strong>: <em>array</em>, <strong>values</strong>: <em>array</em>) → <em>boolean</em></p>
-<p>Return <code>true</code> if <strong>array</strong> contains all of elements in <strong>values</strong>.</p>
+<p>Return <code>true</code> if <strong>array</strong> contains all of elements in <strong>values</strong>.
+<em>Related:</em> <code>@&gt;&gt;</code>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>GET</code> (<strong>array</strong>: <em>array</em>, <strong>index</strong>: <em>numeric</em>) → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
