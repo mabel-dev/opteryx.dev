@@ -4,16 +4,18 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.25.0] - UNRELEASED
+## [0.25.0] - 2025-09-04
 
 ### Removed
 
 - `INT` marked as deprecated to be removed in or after version 0.27.
+- Python 3.10 will be deprecated in version 0.26.
 
 ### Fixed
 
 - [[#2754](https://github.com/mabel-dev/opteryx/issues/2754)] Ensure `INSTR` recieves arrow arrays ([@joocer](https://github.com/joocer))
 - [[#2756](https://github.com/mabel-dev/opteryx/issues/2756)] Improper encoding of UTF-8 strings ([@joocer](https://github.com/joocer))
+- [[#2761](https://github.com/mabel-dev/opteryx/issues/2761)] JOIN internals using both INT64 and UINT64 ([@joocer](https://github.com/joocer))
 
 ### Changed
 

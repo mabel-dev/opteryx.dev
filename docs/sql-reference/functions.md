@@ -216,7 +216,7 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
     Return the **index**th element from **array**. 
 
 !!! function "**array**: _array_ `@>` **values**: _array_ → _boolean_"   
-    Return `true` if **array** contains any of the elements in **values**.   
+    Return `true` if **array** contains any of the elements in **values** (set overlap).   
     _Related:_ `ARRAY_CONTAINS_ANY`   
 
 !!! function "`ARRAY_CONTAINS` (**array**: _array_, **value**) → _boolean_"  
