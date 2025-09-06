@@ -219,6 +219,10 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
     Return `true` if **array** contains any of the elements in **values** (set overlap).   
     _Related:_ `ARRAY_CONTAINS_ANY`   
 
+!!! function "**values**: _array_ `@>>` **array**: _array_ → _boolean_"   
+    Return `true` if **array** contains all of the elements in **values**.   
+    _Related:_ `ARRAY_CONTAINS_ALL`   
+
 !!! function "`ARRAY_CONTAINS` (**array**: _array_, **value**) → _boolean_"  
     Return `true` if **array** contains **value**.  
     See also `SEARCH`(**array**, **value**)  
@@ -226,9 +230,11 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
 
 !!! function "`ARRAY_CONTAINS_ANY` (**array**: _array_, **values**: _array_) → _boolean_"    
     Return `true` if **array** contains any of the elements in **values**.
+    _Related:_ `@>`  
 
 !!! function "`ARRAY_CONTAINS_ALL` (**array**: _array_, **values**: _array_) → _boolean_"   
     Return `true` if **array** contains all of elements in **values**.
+    _Related:_ `@>>`  
 
 !!! function "`GET` (**array**: _array_, **index**: _numeric_) → _value_:octicons-dot-16:"   
     Alias of **array**`[`**index**`]`  
