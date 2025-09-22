@@ -14,7 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2786](https://github.com/mabel-dev/opteryx/issues/2786)] `EXCEPT` and `ORDER BY` cannot coexist ([@joocer](https://github.com/joocer))
 - [[#2781](https://github.com/mabel-dev/opteryx/issues/2781)] Duplicate Aggregate References Cause KeyError ([@tigerquoll](https://github.com/tigerquoll), [@joocer](https://github.com/joocer))
-- [[#2797](https://github.com/mabel-dev/opteryx/issues/2797)] [Iceberg] Empty tables have no statisics to read ([@joocer](https://github.com/joocer))
+- [[#2797](https://github.com/mabel-dev/opteryx/issues/2797)] **[Iceberg]** Empty tables have no statisics to read ([@joocer](https://github.com/joocer))
 
 ### Added
 
