@@ -16,6 +16,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2781](https://github.com/mabel-dev/opteryx/issues/2781)] Duplicate Aggregate References Cause KeyError ([@tigerquoll](https://github.com/tigerquoll), [@joocer](https://github.com/joocer))
 - [[#2797](https://github.com/mabel-dev/opteryx/issues/2797)] **[Iceberg]** Empty tables have no statisics to read ([@joocer](https://github.com/joocer))
 
+### Changed
+
+- [[#2804](https://github.com/mabel-dev/opteryx/issues/2804)] **[rugo](https://github.com/mabel-dev/rugo)** Replace parquet metadata reader ([@joocer](https://github.com/joocer))
+
 ### Added
 
 - [[#2771](https://github.com/mabel-dev/opteryx/issues/2771)] Add `@>>` as `ARRAY_CONTAINS_ALL` operator([@joocer](https://github.com/joocer))
