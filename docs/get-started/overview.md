@@ -57,5 +57,5 @@ Just fast, predictable, read-only querying. It caches what it can, but if the co
 
 ⸻
 
-Want to run a query now? Check out the [Quickstart Guide](../get-started/)  
-Want to wire it into Python? See the [Python Integration Docs](../python-client/)
+Want to run a query now? Check out the [Quickstart Guide](quickstart/)  
+Want to wire it into Python? See the [Python Integration Docs](python-client/)

@@ -5,7 +5,7 @@ Get Opteryx running in minutes.
 ## Requirements
 
 - OS: Linux, macOS, or Windows _(Windows is supported but not recommended for production use)_
-- Python: 3.10 or later
+- Python: 3.11 or later
 
 ### Install from PyPI (recommended)
 
