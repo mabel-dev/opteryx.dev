@@ -27,8 +27,8 @@ Local buffer pool size in either bytes or fraction of system memory.
 `MAX_READ_BUFFER_CAPACITY`=0.1
 Read buffer pool size in either bytes or fraction of system memory.
 
-`CONCURRENT_READS`=4
-Number of read workers per data source.
+`CONCURRENT_READS`=max(system_gigabytes(), 2)
+Number of read workers per data source. Defaults to the system's memory in gigabytes or 2, whichever is higher.
 
 
 ## Environment Variables

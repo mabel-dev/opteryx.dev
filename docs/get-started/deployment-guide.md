@@ -21,17 +21,17 @@ Opteryx balances memory consumption with performance, however, being able to pro
 
 Opteryx can be installed and deployed on a number of different platforms. It has heavy dependency on [Apache Arrow](https://arrow.apache.org/) and cannot be run on systems which do not support Arrow.
 
-The full regression suite is run on Ubuntu (Ubuntu 24) for Python versions 3.10, 3.11, and 3.12. The below table shows regression suite coverage:
+The full regression suite is run on Ubuntu (Ubuntu 24) for Python versions 3.11, 3.12, and 3.13. The below table shows regression suite coverage:
 
-OS                | Python 3.10 | Python 3.11 | Python 3.12 | Python 3.13 |
------------------ | :---------: | :---------: | :---------: | :---------: | 
-MacOS (x86/Intel) | Partial     | Partial     | None        | None        |
-MacOS (M-series)  | Partial     | Partial     | Partial     | Partial     |
-Ubuntu (x86)      | Full        | Full        | Full        | Partial     |
-Ubuntu (ARM)      | Partial     | Partial     | Partial     | Partial     |
-Windows (x86)     | None        | None        | None        | **No Build** |
+OS                | Python 3.11 | Python 3.12 | Python 3.13 |
+----------------- | :---------: | :---------: | :---------: | 
+MacOS (x86/Intel) | Partial     | Partial     | None        |
+MacOS (M-series)  | Partial     | Partial     | Partial     |
+Ubuntu (x86)      | Full        | Full        | Partial     |
+Ubuntu (ARM)      | Partial     | Partial     | Partial     |
+Windows (x86)     | None        | None        | **No Build** |
 
-&emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from Ubuntu Python 3.10 tests.  
+&emsp;**Full** - no tests are excluded from the test suite - coverage statistics are from Ubuntu Python 3.11 tests.  
 &emsp;**Partial** - some tests are excluded from the test suite or that some tests fail.  
 &emsp;**None** - there is no automated test for this configuration.  
 &emsp;**No Build** - compatibility issues prevent this combination from being built. 
@@ -40,15 +40,15 @@ Windows (x86)     | None        | None        | None        | **No Build** |
 
 **Recommended Version**: 3.11
 
-Opteryx supports Python versions 3.10 and 3.11. Due to variations in support for parts of Opteryx and environments to reliably test and build, not all environments support each version of Python. 3.11 has the broadest compatibility
+Opteryx supports Python versions 3.11 and later. Due to variations in support for parts of Opteryx and environments to reliably test and build, not all environments support each version of Python. 3.11 has the broadest compatibility.
 
 Environment       | Python Versions Supported
 ----------------- | -----------------------------------
-Linux 64bit x86   | 3.10, 3.11, 3.12, 3.13
-Linux ARM         | 3.10, 3.11, 3.12, 3.13
-MacOS Intel       | 3.10, 3.11, 3.12, 3.13
-MacOS Apple (M)   | 3.10, 3.11, 3.12, 3.13
-Windows x86       | 3.10, 3.11, 3.12
+Linux 64bit x86   | 3.11, 3.12, 3.13
+Linux ARM         | 3.11, 3.12, 3.13
+MacOS Intel       | 3.11, 3.12, 3.13
+MacOS Apple (M)   | 3.11, 3.12, 3.13
+Windows x86       | 3.11, 3.12
 
 Opteryx is primarily developed on workstations running Python 3.11 (Debian x86, Raspian, and MacOS M2) and is known to be deployed in production environments running Python 3.11 on Debian (64bit x86). 
 
