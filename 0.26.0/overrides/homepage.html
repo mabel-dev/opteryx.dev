@@ -1,5 +1,75 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.canonical_url }}">
+  <meta property="og:title" content="{{ config.site_name }} - SQL Query Engine">
+  <meta property="og:description" content="{{ config.site_description }}">
+  <meta property="og:image" content="{{ config.site_url }}icarus-opteryx.png">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ page.canonical_url }}">
+  <meta property="twitter:title" content="{{ config.site_name }} - SQL Query Engine">
+  <meta property="twitter:description" content="{{ config.site_description }}">
+  <meta property="twitter:image" content="{{ config.site_url }}icarus-opteryx.png">
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ config.site_name }}",
+    "url": "{{ config.site_url }}",
+    "description": "{{ config.site_description }}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ config.site_name }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ config.site_url }}icarus-opteryx.png"
+      }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Opteryx",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Python",
+    "description": "{{ config.site_description }}",
+    "url": "{{ config.site_url }}",
+    "downloadUrl": "https://pypi.org/project/opteryx/",
+    "codeRepository": "https://github.com/mabel-dev/opteryx",
+    "programmingLanguage": "Python",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "softwareVersion": "latest",
+    "screenshot": "{{ config.site_url }}home-diagram.svg"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Opteryx",
+    "url": "{{ config.site_url }}",
+    "logo": "{{ config.site_url }}icarus-opteryx.png",
+    "sameAs": [
+      "https://github.com/mabel-dev/opteryx",
+      "https://mastodon.social/@opteryx",
+      "https://pypi.org/project/opteryx/"
+    ]
+  }
+  </script>
+{% endblock %}
 
 {% block styles %}
 {{super()}}
