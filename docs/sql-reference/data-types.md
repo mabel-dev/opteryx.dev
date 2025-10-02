@@ -13,14 +13,13 @@ Name        | Description
 `INTEGER`   | Whole number
 `DECIMAL` :octicons-star-16:  | Fixed-point number with specified precision
 `VARCHAR`   | Variable-length character string
-`STRUCT` :octicons-star-16:   | A dictionary of multiple named values, where each key is a string, but the value can be a different type for each key.
 `DATE`      | The date component of a TIMESTAMP
 `TIME` :octicons-star-16: | The time component of a TIMESTAMP
 `TIMESTAMP` | Combination of date and time.
 `INTERVAL` :octicons-star-16: | The difference between two TIMESTAMP values
 
 !!! Note  
-    Types marked with :octicons-star-16: (DECIMAL, TIME, STRUCT, and INTERVAL) have limited support.
+    Types marked with :octicons-star-16: (DECIMAL, TIME, and INTERVAL) have limited support.
 
 ## Casting
 
@@ -77,4 +76,4 @@ Numeric literals may contain underscores (`_`) which are helpful to improve the 
 
 ### Structs
 
-`VARCHAR` and `BLOB` columns containing JSON formatted strings support `STRUCT` accessors and functions. 
+`VARCHAR` and `BLOB` columns containing JSON formatted strings support STRUCT accessors and functions. 

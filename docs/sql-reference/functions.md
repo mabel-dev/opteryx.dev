@@ -20,10 +20,11 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 
 !!! function "`CAST` (**any**: _any_ AS **type**) → _type_"  
     Cast **any** to **type**, raises an error if cast is not possible.   
-    Also implemented as individual cast functions (`BOOLEAN`, `INTEGER`, `FLOAT`, `VARCHAR`).
+    Also implemented as individual cast functions (`BLOB`, `BOOLEAN`, `INTEGER`, `FLOAT`, `VARCHAR`).
 
-!!! function "`INT` (**num**: _numeric_) → _numeric_"  
-    Alias for `INTEGER`
+!!! function "`FLOAT` (**num**: _numeric_) → _numeric_"  
+    Convert **num** to an floating point number.   
+    Alias for `CAST`(**any** AS FLOAT)   
 
 !!! function "`HUMANIZE` (**num**: _numeric_) → _varchar_"     
     :octicons-star-16: **New in 0.20** :octicons-beaker-24:    
@@ -31,7 +32,7 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 
 !!! function "`INTEGER` (**num**: _numeric_) → _numeric_"  
     Convert **num** to an integer.   
-    `INTEGER` is a pseudo-type, `CAST` is not supported and values may be coerced to `NUMERIC`.
+    Alias for `CAST`(**any** AS INTEGER)  
 
 !!! function "`SAFE_CAST` (**any**: _any_ AS **type**) → _type_"    
     Alias for `TRY_CAST`(**any** AS **type**)  
@@ -236,7 +237,8 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
     Return `true` if **array** contains all of elements in **values**.
     _Related:_ `@>>`  
 
-!!! function "`GET` (**array**: _array_, **index**: _numeric_) → _value_:octicons-dot-16:"   
+!!! function "`GET` (**array**: _array_, **index**: _numeric_) → _value_:octicons-dot-16:" 
+    **Will be deprecated after version 0.28**    
     Alias of **array**`[`**index**`]`  
 
 !!! function "`GREATEST` (**array**: _array_) → _value_"   
@@ -251,6 +253,7 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
     Returns the number of elements in **array**.
 
 !!! function "`SEARCH` (**array**: _array_, **value**) → _boolean_:octicons-dot-16:"  
+    **Will be deprecated after version 0.28**   
     Return `true` if **array** contains **value**. 
 
 !!! function "`SORT` (**array**: _array_) → _array_"  
@@ -344,6 +347,7 @@ Functions for examining and manipulating string values.
     _Related:_ `STARTS_WITH`
 
 !!! function "`GET` (**str**: _varchar_, **index**: _numeric_) → _varchar_:octicons-dot-16:"  
+    **Will be deprecated after version 0.28**    
     Alias of **str**`[`**index**`]`   
 
 !!! function "`LEFT` (**str**: _varchar_, **n**: _numeric_) → _varchar_"  
@@ -400,6 +404,7 @@ Functions for examining and manipulating string values.
     Returns a character string containing the phonetic representation of char. See [Soundex 🡕](https://en.wikipedia.org/wiki/Soundex).   
 
 !!! function "`SEARCH` (**str**: _varchar_, **substring**: _varchar_) → _boolean_:octicons-dot-16:"  
+    **Will be deprecated after version 0.28**    
     Return `true` if **str** contains **substring**.  
 
 !!! function "`SPLIT` (**str**: _varchar_) → _array_:octicons-dot-16:"   
@@ -463,6 +468,7 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     Alias of **object**`->`**key**  
 
 !!! function "`GET` (**object**: _struct_, **key**: _varchar_) → _value_:octicons-dot-16:"  
+    **Will be deprecated after version 0.28**    
     Alias of **object**`->`**key**    
 
 !!! function "`JSONB_OBJECT_KEYS` (**object**: _struct_) → _array_:octicons-dot-16:"   
@@ -470,6 +476,7 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     Struct values can be `STRUCT` values, or `VARCHAR` or `BLOB` formatted JSON strings.   
 
 !!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → _boolean_:octicons-dot-16:"  
+    **Will be deprecated after version 0.28**    
     Return `true` if any of the values in **object** is **value**. Note `SEARCH` does not match struct keys.
 
 ## System Functions
