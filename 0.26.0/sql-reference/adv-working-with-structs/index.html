@@ -2279,45 +2279,39 @@
 <p>A struct is a collection of zero or more key, value pairs. Keys must be <code>VARCHAR</code>, values can be different types.</p>
 <p><code>STRUCT</code> as a datatype is being deprecated in favour of treating <code>BLOB</code> and <code>VARCHAR</code> columns containing JSON strings as implicit <code>STRUCT</code> columns. All features available for explicitly typed <code>STRUCT</code> columns are available on JSON-formatted columns.</p>
 <h2 id="actions">Actions</h2>
-<h3 id="construct">Construct</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>STRUCT(json string)
-</code></pre></div>
 <h3 id="reading">Reading</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>struct[key]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>struct[key]
 </code></pre></div>
 <p>Values within structs can be accessed by key using subscript notation, putting the key in square brackets following the struct.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">birth_place</span><span class="p">[</span><span class="s1">&#39;town&#39;</span><span class="p">]</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">birth_place</span><span class="p">[</span><span class="s1">&#39;town&#39;</span><span class="p">]</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span><span class="p">;</span>
 </code></pre></div>
 <p>Struct values can be treated the same as other identifiers and, for example, used within <code>SELECT</code>, <code>WHERE</code> and <code>GROUP BY</code> clauses:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">birth_place</span><span class="p">[</span><span class="s1">&#39;town&#39;</span><span class="p">],</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">birth_place</span><span class="p">[</span><span class="s1">&#39;state&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">birth_place</span><span class="p">[</span><span class="s1">&#39;town&#39;</span><span class="p">];</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">birth_place</span><span class="p">[</span><span class="s1">&#39;town&#39;</span><span class="p">],</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">birth_place</span><span class="p">[</span><span class="s1">&#39;state&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">birth_place</span><span class="p">[</span><span class="s1">&#39;town&#39;</span><span class="p">];</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>struct -&gt; key
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>struct -&gt; key
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>struct -&gt;&gt; key
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>struct -&gt;&gt; key
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>struct @? key
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>struct @? key
 </code></pre></div>
 <p>Values within structs can be accessed by key using Accessor notation.</p>
 <h3 id="searching">Searching</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>`SEARCH(struct, value)`
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>`SEARCH(struct, value)`
 </code></pre></div>
 <p>All values in a struct can be searched for a given value using the <code>SEARCH</code> function.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">       </span><span class="k">SEARCH</span><span class="p">(</span><span class="n">birth_place</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Italy&#39;</span><span class="p">)</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">       </span><span class="k">SEARCH</span><span class="p">(</span><span class="n">birth_place</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Italy&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="limitations">Limitations</h2>
 <p>Structs have the following limitations</p>
 <ul>
-<li>Statements cannot <code>ORDER BY</code> a struct column</li>
-<li>Statements cannot contain <code>DISTINCT</code> and <code>JOIN</code> when the relations include struct columns</li>
-<li>Structs cannot be used in comparisons, however, their component values can be</li>
 <li>Subscript references (the bit in square brackets) must be in single quotes only</li>
 </ul>
 <div class="admonition note">
