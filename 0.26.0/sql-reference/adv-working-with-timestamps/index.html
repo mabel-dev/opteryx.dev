@@ -1407,6 +1407,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#implicit-casting" class="md-nav__link">
     <span class="md-ellipsis">
       Implicit Casting
@@ -2266,6 +2275,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#implicit-casting" class="md-nav__link">
     <span class="md-ellipsis">
       Implicit Casting
@@ -2319,66 +2337,155 @@
 <p>Functions that return the current time or date (including now) will return the time as at the start of the execution of the query.</p>
 </div>
 <h2 id="actions">Actions</h2>
-<h3 id="addsubtract">Add/Subtract</h3>
-<p><em>timestamp</em> <code>+</code> <em>interval</em> → <em>timestamp</em>  </p>
-<p><em>timestamp</em> <code>-</code> <em>interval</em> → <em>timestamp</em>  </p>
-<p><em>timestamp</em> <code>-</code> <em>timestamp</em> → <em>interval</em> *</p>
-<p><em>interval</em> <code>+</code> <em>interval</em> -&gt; <em>interval</em></p>
-<p><em>interval</em> <code>-</code> <em>interval</em> -&gt; <em>interval</em></p>
-<p><em>timestamp</em> <code>+</code> <em>timestamp</em> -&gt; <strong>not possible</strong></p>
-<p><code>DATEDIFF</code> (<strong>unit</strong>: <em>varchar</em>, <strong>start</strong>: <em>timestamp</em>, <strong>end</strong>: <em>timestamp</em>) → <em>numeric</em>  </p>
-<p><strong>Note</strong> INTERVALs created as the result of date and timestamp substraction have no month or year component and are handled internally as seconds. This may result in unexpected outcomes, for example when mixed with month calculations.</p>
-<p>If determing differences in months or years, this form is supported:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>WHERE birth + INTERVAL &#39;100&#39; YEAR &gt; death
+<h3 id="casting">Casting</h3>
+<p>Cast values to timestamp types:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CAST</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">CAST</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">DATE</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">CAST</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">TIME</span><span class="p">)</span>
 </code></pre></div>
-<p>this form is not</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>WHERE death - birth &gt; INTERVAL &#39;100&#39; YEAR
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">CAST</span><span class="p">(</span><span class="s1">&#39;2024-02-14&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">);</span>
 </code></pre></div>
-<h3 id="construct">Construct</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>INTERVAL values units
+<h3 id="create">Create</h3>
+<h4 id="timestamp-literal">Timestamp Literal</h4>
+<p>Create a timestamp using type hint notation:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">TIMESTAMP</span><span class="w"> </span><span class="s1">&#39;value&#39;</span>
 </code></pre></div>
-<p>Examples:</p>
-<p><code>INTERVAL '1' YEAR</code>
-<code>INTERVAL '1' DAY</code>
-<code>INTERVAL '1 1' DAY TO HOUR</code></p>
-<p>Supported units:
-<code>YEAR</code>, <code>MONTH</code>, <code>DAY</code>, <code>HOUR</code>, <code>MINUTE</code>, <code>SECOND</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>TIMESTAMP value
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="s1">&#39;2024-02-14&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="s1">&#39;2024-02-14 10:30:00&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="interval-literal">Interval Literal</h4>
+<p>Create an interval using type hint notation:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;values&#39;</span><span class="w"> </span><span class="n">units</span>
 </code></pre></div>
 <p>Examples:</p>
-<p><code>TIMESTAMP '2024-02-14'</code></p>
-<h3 id="extract">Extract</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>EXTRACT(part FROM timestamp)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="w"> </span><span class="k">YEAR</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="w"> </span><span class="k">DAY</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;1 1&#39;</span><span class="w"> </span><span class="k">DAY</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">HOUR</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;30&#39;</span><span class="w"> </span><span class="k">MINUTE</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;45&#39;</span><span class="w"> </span><span class="k">SECOND</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>DATE(timestamp)
-</code></pre></div></p>
-<h3 id="format">Format</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>DATE_FORMAT(timestamp, format)
+<p>Supported units: <code>YEAR</code>, <code>MONTH</code>, <code>DAY</code>, <code>HOUR</code>, <code>MINUTE</code>, <code>SECOND</code></p>
+<h4 id="generate-timestamps">Generate Timestamps</h4>
+<p>Generate current date and time values:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">current_date</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">current_time</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">current_timestamp</span>
 </code></pre></div>
-<h3 id="parse">Parse</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>CAST(field AS TIMESTAMP)
+<p>Note: These functions support being called without parenthesis.</p>
+<p>Additional generators:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">YESTERDAY</span><span class="p">()</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">TIME</span><span class="p">()</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">generate_series</span><span class="p">(</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="n">stop</span><span class="p">,</span><span class="w"> </span><span class="n">step</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>TIMESTAMP(field)
-</code></pre></div></p>
-<h3 id="truncate">Truncate</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>DATE_TRUNC(part, timestamp)
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">generate_series</span><span class="p">(</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="s1">&#39;2024-01-01&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="s1">&#39;2024-01-31&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="w"> </span><span class="k">DAY</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">);</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>TIME_BUCKET(timestamp, multiple, unit)
-</code></pre></div></p>
-<h3 id="generate">Generate</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>current_date
+<h3 id="reading">Reading</h3>
+<h4 id="extract-parts">Extract Parts</h4>
+<p>Extract specific parts from a timestamp:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">EXTRACT</span><span class="p">(</span><span class="n">part</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">timestamp</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>current_time
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">EXTRACT</span><span class="p">(</span><span class="k">YEAR</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">birth_date</span><span class="p">),</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">       </span><span class="k">EXTRACT</span><span class="p">(</span><span class="k">MONTH</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">birth_date</span><span class="p">),</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">       </span><span class="k">EXTRACT</span><span class="p">(</span><span class="k">DAY</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">birth_date</span><span class="p">)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span><span class="p">;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>current_timestamp
+<p>Supported parts: <code>NANOSECOND</code>, <code>MICROSECOND</code>, <code>MILLISECOND</code>, <code>SECOND</code>, <code>MINUTE</code>, <code>HOUR</code>, <code>DATE</code>, <code>DAY</code>, <code>DAYOFWEEK</code>/<code>DOW</code>, <code>WEEK</code>, <code>ISOWEEK</code>, <code>MONTH</code>, <code>QUARTER</code>, <code>DAYOFYEAR</code>/<code>DOY</code>, <code>YEAR</code>, <code>ISOYEAR</code>, <code>DECADE</code></p>
+<p>Shorthand functions for common extractions:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">DATE</span><span class="p">(</span><span class="k">timestamp</span><span class="p">)</span><span class="w">    </span><span class="c1">-- Extract date only</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">DAY</span><span class="p">(</span><span class="k">timestamp</span><span class="p">)</span><span class="w">     </span><span class="c1">-- Extract day number</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">MONTH</span><span class="p">(</span><span class="k">timestamp</span><span class="p">)</span><span class="w">   </span><span class="c1">-- Extract month number</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">YEAR</span><span class="p">(</span><span class="k">timestamp</span><span class="p">)</span><span class="w">    </span><span class="c1">-- Extract year number</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>YESTERDAY()
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="n">birth_date</span><span class="p">)</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span><span class="p">;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>TIME()
+<h4 id="format">Format</h4>
+<p>Format timestamps as strings:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">DATE_FORMAT</span><span class="p">(</span><span class="k">timestamp</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>generate_series()
-</code></pre></div></p>
-<p>Note that <code>current_date</code>, <code>current_timestamp</code> and <code>current_time</code> support being called without parenthesis.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">DATE_FORMAT</span><span class="p">(</span><span class="n">birth_date</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;%Y-%m-%d&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="comparing">Comparing</h3>
+<h4 id="arithmetic-operations">Arithmetic Operations</h4>
+<p>Add or subtract intervals from timestamps:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">timestamp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">interval</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="k">timestamp</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">timestamp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">interval</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="k">timestamp</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="k">timestamp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">timestamp</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nb">interval</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nb">interval</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">interval</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nb">interval</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="nb">interval</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">interval</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nb">interval</span>
+</code></pre></div>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">birth_date</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;100&#39;</span><span class="w"> </span><span class="k">YEAR</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span><span class="p">;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">death_date</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">birth_date</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">lifespan</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span><span class="p">;</span>
+</code></pre></div>
+<p>Note: Timestamps cannot be added together (<code>timestamp + timestamp</code> is not possible).</p>
+<h4 id="date-difference">Date Difference</h4>
+<p>Calculate the difference between two timestamps:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">DATEDIFF</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span><span class="w"> </span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="k">end</span><span class="p">)</span>
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">DATEDIFF</span><span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">birth_date</span><span class="p">,</span><span class="w"> </span><span class="n">death_date</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">days_lived</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>INTERVALs created as the result of timestamp subtraction have no month or year component and are handled internally as seconds. This may result in unexpected outcomes when mixed with month calculations.</p>
+</div>
+<p>Supported form:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">birth</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;100&#39;</span><span class="w"> </span><span class="k">YEAR</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">death</span>
+</code></pre></div>
+<p>Unsupported form:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">death</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">birth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;100&#39;</span><span class="w"> </span><span class="k">YEAR</span>
+</code></pre></div>
+<h4 id="standard-comparisons">Standard Comparisons</h4>
+<p>Timestamps support standard comparison operators:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">birth_date</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="s1">&#39;1950-01-01&#39;</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">   </span><span class="k">AND</span><span class="w"> </span><span class="n">birth_date</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="s1">&#39;1960-01-01&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="transforms">Transforms</h3>
+<h4 id="truncate">Truncate</h4>
+<p>Truncate timestamps to a specified precision:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">DATE_TRUNC</span><span class="p">(</span><span class="n">part</span><span class="p">,</span><span class="w"> </span><span class="k">timestamp</span><span class="p">)</span>
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">DATE_TRUNC</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">birth_date</span><span class="p">)</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">astronauts</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="time-bucket">Time Bucket</h4>
+<p>Group timestamps into buckets:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">TIME_BUCKET</span><span class="p">(</span><span class="k">timestamp</span><span class="p">,</span><span class="w"> </span><span class="n">multiple</span><span class="p">,</span><span class="w"> </span><span class="n">unit</span><span class="p">)</span>
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">TIME_BUCKET</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;minute&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">time_bucket</span><span class="p">,</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">       </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">event_count</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">events</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">time_bucket</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="parse">Parse</h4>
+<p>Parse strings as timestamps:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">CAST</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">)</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="k">TIMESTAMP</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">(</span><span class="s1">&#39;2024-02-14 10:30:00&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="supported-date-parts">Supported Date Parts</h3>
 <p>Recognized date parts and periods and support across various functions:</p>
 <table>
 <thead>
@@ -2446,7 +2553,7 @@
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">▲</td>
 <td style="text-align: center;">✓</td>
-<td>DATEFIFF unreliable calculating months</td>
+<td>DATEDIFF unreliable calculating months</td>
 </tr>
 <tr>
 <td>quarter</td>
@@ -2474,6 +2581,14 @@
 </tr>
 </tbody>
 </table>
+<h2 id="limitations">Limitations</h2>
+<p>Timestamps and intervals have the following limitations:</p>
+<ul>
+<li>INTERVALs created from timestamp subtraction have no month or year component and are handled internally as seconds</li>
+<li>DATEDIFF with month units can be unreliable</li>
+<li>All timestamps are stored in UTC timezone</li>
+<li><code>death - birth &gt; INTERVAL '100' YEAR</code> comparison form is not supported (use <code>birth + INTERVAL '100' YEAR &gt; death</code> instead)</li>
+</ul>
 <h2 id="implicit-casting">Implicit Casting</h2>
 <p>In many situation where a timestamp is expected, if an <a href="https://datatracker.ietf.org/doc/html/rfc3339">RFC 3339</a> formatted string is provided, the engine will default to interpretting as a timestamp. However, for reliability, you should not rely on the engine doing this for you.</p>
 <h2 id="timezones">Timezones</h2>

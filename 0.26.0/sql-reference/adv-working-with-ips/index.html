@@ -1426,6 +1426,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Working with IPs
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1437,6 +1450,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2182,6 +2232,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2200,11 +2276,53 @@
 
 
 <h1 id="working-with-ips">Working with IPs</h1>
-<h3 id="containment-testing">Containment Testing</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&#39;ip&#39; | &#39;cidr&#39;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&#39;192.168.0.1&#39; | &#39;192.168.0.0/24&#39;
+<p>IP addresses are represented as <code>VARCHAR</code> or <code>BLOB</code> values and support containment testing operations. <code>BLOB</code> is the preferred type for storing IP addresses.</p>
+<h2 id="actions">Actions</h2>
+<h3 id="create">Create</h3>
+<p>IP addresses are created as string literals:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="s1">&#39;192.168.0.1&#39;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s1">&#39;2001:0db8:85a3:0000:0000:8a2e:0370:7334&#39;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s1">&#39;192.168.0.0/24&#39;</span>
 </code></pre></div>
+<p>For BLOB storage (preferred):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">b</span><span class="s1">&#39;192.168.0.1&#39;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">b</span><span class="s1">&#39;2001:0db8:85a3:0000:0000:8a2e:0370:7334&#39;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">b</span><span class="s1">&#39;192.168.0.0/24&#39;</span>
+</code></pre></div>
+<h3 id="reading">Reading</h3>
+<p>IP addresses can be read directly as string values from columns:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">ip_address</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">network_logs</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="comparing">Comparing</h3>
+<h4 id="containment-testing">Containment Testing</h4>
+<p>The <code>|</code> operator tests if an IP address is contained within a CIDR block:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">ip_address</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">cidr_block</span>
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">network_logs</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="s1">&#39;192.168.0.1&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;192.168.0.0/24&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>This returns <code>true</code> if the IP address is within the specified CIDR range.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">network_logs</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">ip_address</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;10.0.0.0/8&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="equality">Equality</h4>
+<p>IP addresses can be compared for equality using standard comparison operators:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">network_logs</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">ip_address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;192.168.0.1&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="limitations">Limitations</h2>
+<p>IP addresses have the following limitations:</p>
+<ul>
+<li>IP addresses are stored as strings and do not have a dedicated IP data type</li>
+<li>Only containment testing (<code>|</code>) and equality comparison are supported</li>
+<li>Mathematical operations on IP addresses are not supported</li>
+<li>IP address validation is not automatically performed</li>
+</ul>
 
 
 
