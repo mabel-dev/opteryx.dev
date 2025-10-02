@@ -88,9 +88,6 @@ nav:
     - Deployment Guide: get-started/deployment-guide.md
 #    - Configuration Guide: get-started/configuration-guide.md
     - Security: get-started/security.md
-    - Ecosystem:
-      - Streaming Writer (Mabel): get-started/ecosystem/mabel.md
-      - Connector (mesos): get-started/ecosystem/mesos.md
     - Standards & Benchmarks:
       - Python PEP249: get-started/external-standards/pep249.md
       - ANSI SQL-92: get-started/external-standards/sql92.md
