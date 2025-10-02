@@ -16,6 +16,10 @@ CAST(column AS ARRAY<element_type>)
 SPLIT(string)
 ~~~
 
+~~~
+[<value>, <value>, ...]
+~~~
+
 ### Accessing
 
 ~~~
@@ -35,10 +39,10 @@ The `ANY` function is used to apply a filter to each item in an array, and retur
 ~~~sql
 SELECT * 
   FROM $astronauts
- WHERE 'Apollo 11' = ANY(missions);
+ WHERE 'Apollo 11' = ANY (missions);
 ~~~
 
-`ANY` supports the following operators: `=`, `!=`, `>`, `<`, `>=`, and `<=`. 
+`ANY` (comparison) supports the following operators: `=`, `!=`, `>`, `<`, `>=`, and `<=`. 
 
 #### ANY (similarity)
 
@@ -54,7 +58,7 @@ SELECT *
  WHERE missions LIKE ANY ('Mercury%', 'Gemini%', 'Apollo%')
 ~~~
 
-`ANY` supports the following operators: `LIKE`, `NOT LIKE`, `ILIKE`, `NOT ILIKE`
+`ANY` (similarity) supports the following operators: `LIKE`, `NOT LIKE`, `ILIKE`, `NOT ILIKE`
 
 #### ALL
 
@@ -111,7 +115,7 @@ SORT
 
 ### Using `UNNEST`
 
-`UNNEST` allows you to create a single column table either as a list of literals, or from a column of LIST type in a dataset.
+`UNNEST` allows you to create a single column relation either as a list of literals, or from a column of LIST type in a dataset.
 
 ~~~sql
 SELECT * 
@@ -123,7 +127,6 @@ SELECT *
 Lists have the following limitations
 
 - Statements cannot `ORDER BY` a list column
-- Statements cannot contain `DISTINCT` and `JOIN` when the relations include list columns
 - Lists cannot be used in comparisons
 
 !!! Note

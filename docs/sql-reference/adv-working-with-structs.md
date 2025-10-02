@@ -6,12 +6,6 @@ A struct is a collection of zero or more key, value pairs. Keys must be `VARCHAR
 
 ## Actions
 
-### Construct
-
-~~~
-STRUCT(json string)
-~~~
-
 ### Reading
 
 ~~~
@@ -70,9 +64,6 @@ SELECT name,
 
 Structs have the following limitations
 
-- Statements cannot `ORDER BY` a struct column
-- Statements cannot contain `DISTINCT` and `JOIN` when the relations include struct columns
-- Structs cannot be used in comparisons, however, their component values can be
 - Subscript references (the bit in square brackets) must be in single quotes only
 
 !!! Note  
