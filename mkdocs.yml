@@ -67,20 +67,28 @@ nav:
     - CLI API: get-started/command-line-guide.md
     - Python API: get-started/python-client.md
     - Guides:
+      - Overview: get-started/guides/index.md
       - Use with Jupyter Notebooks: get-started/guides/using-opteryx-with-jupyter.md
-      - Iceberg Integration: get-started/guides/iceberg-and-opteryx.md
-      - Pandas Integration: get-started/guides/pandas-and-opteryx.md
-      - Polars Integration: get-started/guides/polars-and-opteryx.md
-      - Connect to BigQuery: get-started/guides/bigquery-and-opteryx.md
-      - Connect to MySQL: get-started/guides/mysql-and-opteryx.md
-      - Connect to Postgres: get-started/guides/postgres-and-opteryx.md
-      - Convert CSV to Parquet: get-started/guides/convert-csv-to-parquet.md
-      - Execute SQL on CSVs: get-started/guides/execute-sql-on-csv.md
+      - Data Sources:
+        - Iceberg Integration: get-started/guides/iceberg-and-opteryx.md
+        - AWS S3 Storage: get-started/guides/s3-and-opteryx.md
+        - Google Cloud Storage: get-started/guides/gcs-and-opteryx.md
+      - SQL Databases:
+        - Connect to BigQuery: get-started/guides/bigquery-and-opteryx.md
+        - Connect to PostgreSQL: get-started/guides/postgres-and-opteryx.md
+        - Connect to MySQL: get-started/guides/mysql-and-opteryx.md
+        - Connect to DuckDB: get-started/guides/duckdb-and-opteryx.md
+        - Connect to SQLite: get-started/guides/sqlite-and-opteryx.md
+      - DataFrames:
+        - Pandas Integration: get-started/guides/pandas-and-opteryx.md
+        - Polars Integration: get-started/guides/polars-and-opteryx.md
+      - File Operations:
+        - Execute SQL on CSV Files: get-started/guides/execute-sql-on-csv.md
+        - Convert CSV to Parquet: get-started/guides/convert-csv-to-parquet.md
     - Deployment Guide: get-started/deployment-guide.md
 #    - Configuration Guide: get-started/configuration-guide.md
     - Security: get-started/security.md
     - Ecosystem:
-      - Dataframe (orso): get-started/ecosystem/orso/orso.md
       - Streaming Writer (Mabel): get-started/ecosystem/mabel.md
       - Connector (mesos): get-started/ecosystem/mesos.md
     - Standards & Benchmarks:

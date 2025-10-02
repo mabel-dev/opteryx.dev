@@ -1,3 +1,8 @@
+---
+title: Convert CSV to Parquet with Opteryx - Fast File Format Conversion
+description: Convert CSV files to Parquet format using Opteryx command line tool. Support for multiple file formats including JSONL, Avro, and ORC conversion.
+---
+
 # Converting CSV to Parquet using Opteryx
 
 You can use Opteryx to convert CSV files to Parquet files from the command line.
@@ -14,3 +19,70 @@ $ python -m opteryx --o 'taxi_trips.parquet' "SELECT * FROM 'taxi_trips.csv';"
 
 !!! Note
     The terminal may require some special characters to be escaped.
+
+## Advanced Examples
+
+### Convert with Filtering
+
+Apply transformations and filters during conversion:
+
+~~~ console
+$ python -m opteryx --o 'filtered_trips.parquet' "SELECT * FROM 'taxi_trips.csv' WHERE fare_amount > 10;"
+~~~
+
+### Aggregate and Convert
+
+Create aggregated output files:
+
+~~~ console
+$ python -m opteryx --o 'monthly_sales.parquet' "
+    SELECT 
+        DATE_TRUNC('month', date) as month,
+        product_category,
+        SUM(amount) as total_sales
+    FROM 'sales_*.csv'
+    GROUP BY month, product_category
+"
+~~~
+
+### Convert Multiple File Formats
+
+Convert JSONL to Parquet:
+
+~~~ console
+$ python -m opteryx --o 'events.parquet' "SELECT * FROM 'logs/*.jsonl';"
+~~~
+
+Convert Parquet to CSV:
+
+~~~ console
+$ python -m opteryx --o 'export.csv' "SELECT * FROM 'data.parquet';"
+~~~
+
+## Supported Conversions
+
+**Input Formats:**
+- Parquet (`.parquet`)
+- CSV (`.csv`)
+- JSONL (`.jsonl`)
+- Avro (`.avro`)
+- ORC (`.orc`)
+
+**Output Formats:**
+- Parquet (`.parquet`) - Recommended for analytics
+- JSONL (`.jsonl`) - Line-delimited JSON
+- CSV (`.csv`) - Comma-separated values
+
+## Performance Tips
+
+- **Use Parquet for large datasets** - Parquet is columnar and compressed, making it ideal for analytics
+- **Apply filters during conversion** - Reduce output file size by filtering unnecessary data
+- **Partition large outputs** - For very large datasets, consider partitioning by date or category
+
+## Related Guides
+
+- [Execute SQL on CSV Files](execute-sql-on-csv.md) - Query CSV files without conversion
+- [Query AWS S3](s3-and-opteryx.md) - Convert files in cloud storage
+- [Using Opteryx with Jupyter](using-opteryx-with-jupyter.md) - Interactive file processing
+- [Pandas Integration](pandas-and-opteryx.md) - Convert to DataFrames for analysis
+

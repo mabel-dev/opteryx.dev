@@ -1,3 +1,8 @@
+---
+title: Connect PostgreSQL to Opteryx - Query Postgres with SQL
+description: Step-by-step guide to connecting PostgreSQL with Opteryx using SQLAlchemy. Run federated queries across Postgres and other data sources seamlessly.
+---
+
 # Connecting to Postgres using Opteryx
 
 This short guide demonstrates how to connect to Postgres using Opteryx using [SQLAlchemy](https://www.sqlalchemy.org/).
@@ -52,3 +57,11 @@ result.head()
 ## Other Services
 
 Opteryx supports connecting to other SQL engines using this method, such as MySQL, CockroachDB and DuckDB.
+
+## Related Guides
+
+- [Connect to BigQuery](bigquery-and-opteryx.md) - Query Google BigQuery
+- [Connect to MySQL](mysql-and-opteryx.md) - Query MySQL databases
+- [Connect to DuckDB](duckdb-and-opteryx.md) - Query DuckDB databases
+- [Connect to SQLite](sqlite-and-opteryx.md) - Query SQLite databases
+- [Query AWS S3](s3-and-opteryx.md) - Query files in Amazon S3
