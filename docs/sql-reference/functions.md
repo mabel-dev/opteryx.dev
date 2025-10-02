@@ -466,7 +466,7 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     Alias of **object**`->`**key**    
 
 !!! function "`JSONB_OBJECT_KEYS` (**object**: _struct_) → _array_:octicons-dot-16:"   
-    Returnan array of the keys in a struct value.   
+    Return an array of the keys in a struct value.   
     Struct values can be `STRUCT` values, or `VARCHAR` or `BLOB` formatted JSON strings.   
 
 !!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → _boolean_:octicons-dot-16:"  

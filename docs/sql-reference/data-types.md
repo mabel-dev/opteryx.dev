@@ -9,7 +9,7 @@ Name        | Description
 `ARRAY`     | A list of items of the same type
 `BOOLEAN`   | Logical boolean (True/False).
 `BLOB` :octicons-star-16:     | Variable-length binary data
-`DOUBLE`    | floating point number
+`DOUBLE`    | Floating-point number
 `INTEGER`   | Whole number
 `DECIMAL` :octicons-star-16:  | Fixed-point number with specified precision
 `VARCHAR`   | Variable-length character string
@@ -26,7 +26,7 @@ Name        | Description
 
 ### Functions
 
-Values can be cast using the `CAST` function, its form is `CAST(any AS type)`. Where values are incompatible, an error will be thrown, to avoid errors `TRY_CAST` (or `SAFE_CAST`) can be used instead which will return `null` instead of error.
+Values can be cast using the `CAST` function, its form is `CAST(any AS type)`. Where values are incompatible, an error will be thrown, to avoid errors `TRY_CAST` (or `SAFE_CAST`) can be used instead which will return `null` instead of an error.
 
 ### Type Hints
 
@@ -65,9 +65,9 @@ Some types support type annotations in the form `<value>::<type>`, for example `
 
 Literal values in quotes may be interpreted as a `TIMESTAMP` or `DATE` when they match a valid date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)  format (e.g. `YYYY-MM-DD` and `YYYY-MM-DD HH:MM`). The value will be coerced to a `DATE` if there is no time component, otherwise it will be coerced to a `TIMESTAMP`. 
 
-All `TIMESTAMP` and values read from datasets are coerced to nanosecond precision timestamps.
+All `TIMESTAMP` values read from datasets are coerced to nanosecond precision timestamps.
 
-The default precision for `TIMESTAMP` is milliseconds, values not in this precision may be converted to this precision as handled internally.
+The default precision for `TIMESTAMP` is milliseconds, values not in this precision may be converted internally.
 
 ### Numbers
 

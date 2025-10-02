@@ -38,7 +38,7 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
     Alias of `COUNT(DISTINCT column)`
 
 !!! function ":octicons-beaker-24: `HISTOGRAM` (**column**) → _struct_"    
-    An histogram of values in **column**.
+    A histogram of values in **column**.
 
 !!! function "`MAX` (**column**) → _any_"  
     The maximum value in **column**.  
