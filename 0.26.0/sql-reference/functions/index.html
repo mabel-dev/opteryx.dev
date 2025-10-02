@@ -2432,7 +2432,7 @@ Convert large numbers to forms easier for humans to read.</p>
 <div class="admonition function">
 <p class="admonition-title"><code>INTEGER</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
 <p>Convert <strong>num</strong> to an integer. <br />
-<code>INTEGER</code> is a psuedo-type, <code>CAST</code> is not supported and values may be coerced to <code>NUMERIC</code>.</p>
+<code>INTEGER</code> is a pseudo-type, <code>CAST</code> is not supported and values may be coerced to <code>NUMERIC</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SAFE_CAST</code> (<strong>any</strong>: <em>any</em> AS <strong>type</strong>) → <em>type</em></p>
@@ -2735,7 +2735,7 @@ See also <code>ANY</code></p>
 <p>Returns the constant <a href="https://en.wikipedia.org/wiki/Pi">π</a> (<em>pi</em>).  </p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>POWER</code> (<strong>base</strong>: <em>numeric</em>, <strong>exponent</strong>: <em>numeric**) → _numeric</em></p>
+<p class="admonition-title"><code>POWER</code> (<strong>base</strong>: <em>numeric</em>, <strong>exponent</strong>: <em>numeric</em>) → <em>numeric</em></p>
 <p>Returns <strong>base</strong> to the power of <strong>exponent</strong>.  </p>
 </div>
 <div class="admonition function">
@@ -2967,7 +2967,7 @@ Alias of <strong>object</strong><code>-&gt;</code><strong>key</strong>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>JSONB_OBJECT_KEYS</code> (<strong>object</strong>: <em>struct</em>) → <em>array</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Returnan array of the keys in a struct value. <br />
+<p>Return an array of the keys in a struct value. <br />
 Struct values can be <code>STRUCT</code> values, or <code>VARCHAR</code> or <code>BLOB</code> formatted JSON strings.   </p>
 </div>
 <div class="admonition function">
@@ -3048,7 +3048,7 @@ Returns <strong>check_expression</strong> if not <code>null</code>, otherwise re
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>IFNULL</code> (<strong>check_expression</strong>: <em>any</em>, <strong>replacement_value</strong>: <em>any</em>) → <em>input type</em></p>
-<p>Returns <strong>check_expression</strong> if <code>null</code>, otherwise returns <strong>replacement_value</strong>. <br />
+<p>Returns <strong>check_expression</strong> if not <code>null</code>, otherwise returns <strong>replacement_value</strong>. <br />
 <em>Related:</em> <code>COALESCE</code>, <code>IFNOTNULL</code> </p>
 </div>
 <div class="admonition function">
@@ -3092,7 +3092,7 @@ Returns <strong>check_expression</strong> if not <code>null</code>, otherwise re
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SHA384</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
-<p>Calculate the SHA384 hash of <strong>stre</strong>.<br />
+<p>Calculate the SHA384 hash of <strong>str</strong>.<br />
 <em>Related:</em> <code>SHA1</code>, <code>SHA224</code>, <code>SHA256</code>, <code>SHA512</code></p>
 </div>
 <div class="admonition function">

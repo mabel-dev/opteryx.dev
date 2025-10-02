@@ -2257,7 +2257,7 @@
 
 <h1 id="aggregates">Aggregates</h1>
 <p>Aggregates are functions that combine multiple rows into a single value. Aggregates can only be used in the <code>SELECT</code> and <code>HAVING</code> clauses of a SQL query.</p>
-<p>When the <code>ORDER BY</code> clause is provided, the values being aggregated are sorted after applying the function. </p>
+<p>When an <code>ORDER BY</code> clause is provided within an aggregate function, the values are sorted before being aggregated. </p>
 <p>Aggregate functions generally ignore <code>null</code> values when performing calculations.</p>
 <p>Definitions noted with a <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 5.75C4 4.784 4.784 4 5.75 4h4.5c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 10.25 12h-4.5A1.75 1.75 0 0 1 4 10.25Zm1.75-.25a.25.25 0 0 0-.25.25v4.5c0 .138.112.25.25.25h4.5a.25.25 0 0 0 .25-.25v-4.5a.25.25 0 0 0-.25-.25Z"/></svg></span> are only supported in a statement with a <code>GROUP BY</code> clause.</p>
 <p>New aggregates for this version are annotated with the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z"/></svg></span> icon.</p>
@@ -2296,7 +2296,7 @@ Alias of <code>COUNT(DISTINCT column)</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> <code>HISTOGRAM</code> (<strong>column</strong>) → <em>struct</em></p>
-<p>An histogram of values in <strong>column</strong>.</p>
+<p>A histogram of values in <strong>column</strong>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>MAX</code> (<strong>column</strong>) → <em>any</em></p>
