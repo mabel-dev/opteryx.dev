@@ -67,6 +67,7 @@ nav:
     - CLI API: get-started/command-line-guide.md
     - Python API: get-started/python-client.md
     - Guides:
+      - Overview: get-started/guides/index.md
       - Use with Jupyter Notebooks: get-started/guides/using-opteryx-with-jupyter.md
       - Data Sources:
         - Iceberg Integration: get-started/guides/iceberg-and-opteryx.md
@@ -88,7 +89,6 @@ nav:
 #    - Configuration Guide: get-started/configuration-guide.md
     - Security: get-started/security.md
     - Ecosystem:
-      - Dataframe (orso): get-started/ecosystem/orso/orso.md
       - Streaming Writer (Mabel): get-started/ecosystem/mabel.md
       - Connector (mesos): get-started/ecosystem/mesos.md
     - Standards & Benchmarks:
