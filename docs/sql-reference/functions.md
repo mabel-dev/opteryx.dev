@@ -31,7 +31,7 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 
 !!! function "`INTEGER` (**num**: _numeric_) → _numeric_"  
     Convert **num** to an integer.   
-    `INTEGER` is a psuedo-type, `CAST` is not supported and values may be coerced to `NUMERIC`.
+    `INTEGER` is a pseudo-type, `CAST` is not supported and values may be coerced to `NUMERIC`.
 
 !!! function "`SAFE_CAST` (**any**: _any_ AS **type**) → _type_"    
     Alias for `TRY_CAST`(**any** AS **type**)  
@@ -279,7 +279,7 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
 !!! function "`PI` () → _numeric_"  
     Returns the constant [π](https://en.wikipedia.org/wiki/Pi) (_pi_).  
 
-!!! function "`POWER` (**base**: _numeric_, **exponent**: _numeric**) → _numeric_"   
+!!! function "`POWER` (**base**: _numeric_, **exponent**: _numeric_) → _numeric_"   
     Returns **base** to the power of **exponent**.  
 
 !!! function "`LN` (**x**: _numeric_) → _numeric_"   
@@ -532,7 +532,7 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     _Related:_ `IFNULL`   
 
 !!! function "`IFNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _input type_"  
-    Returns **check_expression** if `null`, otherwise returns **replacement_value**.   
+    Returns **check_expression** if not `null`, otherwise returns **replacement_value**.   
     _Related:_ `COALESCE`, `IFNOTNULL` 
 
 !!! function "`NORMAL` () → _numeric_"  
@@ -566,7 +566,7 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     _Related:_ `SHA1`, `SHA224`, `SHA384`, `SHA512`
 
 !!! function "`SHA384` (**str**: _varchar_) → _varchar_"  
-    Calculate the SHA384 hash of **stre**.  
+    Calculate the SHA384 hash of **str**.  
     _Related:_ `SHA1`, `SHA224`, `SHA256`, `SHA512`
 
 !!! function "`SHA512` (**str**: _varchar_) → _varchar_"  

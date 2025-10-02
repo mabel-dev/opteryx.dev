@@ -11,7 +11,7 @@ Name        | Description
 `BLOB` :octicons-star-16:     | Variable-length binary data
 `DOUBLE`    | floating point number
 `INTEGER`   | Whole number
-`DECIMAL` :octicons-star-16:  |
+`DECIMAL` :octicons-star-16:  | Fixed-point number with specified precision
 `VARCHAR`   | Variable-length character string
 `STRUCT` :octicons-star-16:   | A dictionary of multiple named values, where each key is a string, but the value can be a different type for each key.
 `DATE`      | The date component of a TIMESTAMP
@@ -63,7 +63,7 @@ Some types support type annotations in the form `<value>::<type>`, for example `
 
 ### Timestamps & Dates
 
-Literal values in quotes may be in interpreted as a `TIMESTAMP` or `DATE` when they match a valid date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)  format (e.g. `YYYY-MM-DD` and `YYYY-MM-DD HH:MM`). The decision regarding coercising to a `DATE` if there is no time component to the value, otherwise it will be coerced to a `TIMESTAMP`. 
+Literal values in quotes may be interpreted as a `TIMESTAMP` or `DATE` when they match a valid date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)  format (e.g. `YYYY-MM-DD` and `YYYY-MM-DD HH:MM`). The value will be coerced to a `DATE` if there is no time component, otherwise it will be coerced to a `TIMESTAMP`. 
 
 All `TIMESTAMP` and values read from datasets are coerced to nanosecond precision timestamps.
 
@@ -77,4 +77,4 @@ Numeric literals may contain underscores (`_`) which are helpful to improve the 
 
 ### Structs
 
-`VARCHAR` and `BLOB` columns containing JSON formatted strings support `STRUCT` accesors and functions. 
+`VARCHAR` and `BLOB` columns containing JSON formatted strings support `STRUCT` accessors and functions. 
