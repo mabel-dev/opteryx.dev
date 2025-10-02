@@ -61,10 +61,13 @@ Combine data from multiple sources in a single query:
 
 ~~~python
 import opteryx
-from opteryx.connectors import SqlConnector
+from opteryx.connectors import SqlConnector, AwsS3Connector
 from sqlalchemy import create_engine
 
-# Register multiple data sources
+# Register S3 connector
+opteryx.register_store("my-bucket", AwsS3Connector)
+
+# Register PostgreSQL
 postgres_engine = create_engine("postgresql+psycopg2://user:pass@host/")
 opteryx.register_store("pg", SqlConnector, remove_prefix=True, engine=postgres_engine)
 
@@ -74,7 +77,7 @@ result = opteryx.query("""
         s3_data.customer_id,
         s3_data.purchase_amount,
         pg_data.customer_name
-    FROM 's3://my-bucket/sales/*.parquet' AS s3_data
+    FROM my-bucket.sales AS s3_data
     JOIN pg.customers AS pg_data
     ON s3_data.customer_id = pg_data.id
 """)
@@ -86,14 +89,18 @@ Use Opteryx in data pipelines:
 
 ~~~python
 import opteryx
+from opteryx.connectors import GcpCloudStorageConnector
 
-# Read from various sources
+# Register GCS connector
+opteryx.register_store("data", GcpCloudStorageConnector)
+
+# Read from GCS
 df = opteryx.query("""
     SELECT 
         date,
         product_id,
         SUM(amount) as total_sales
-    FROM 'gs://data/sales/*.parquet'
+    FROM data.sales
     WHERE date >= '2024-01-01'
     GROUP BY date, product_id
 """).pandas()

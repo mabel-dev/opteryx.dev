@@ -99,13 +99,13 @@ Happy querying!
 import opteryx
 import matplotlib.pyplot as plt
 
-# Analyze time series data
+# Analyze time series data from local files
 sql_statement = """
 SELECT 
     DATE(timestamp) as date,
     COUNT(*) as events,
     AVG(value) as avg_value
-FROM 'logs/*.jsonl'
+FROM 'logs.jsonl'
 WHERE timestamp >= CURRENT_DATE - INTERVAL '30 days'
 GROUP BY DATE(timestamp)
 ORDER BY date
@@ -134,14 +134,14 @@ from sqlalchemy import create_engine
 engine = create_engine("postgresql+psycopg2://user:pass@host/db")
 opteryx.register_store("pg", SqlConnector, remove_prefix=True, engine=engine)
 
-# Join database data with files
+# Join database data with local files
 sql_statement = """
 SELECT 
     u.user_name,
     u.email,
     COUNT(e.event_id) as event_count
 FROM pg.users AS u
-LEFT JOIN 'events/*.parquet' AS e
+LEFT JOIN 'events.parquet' AS e
 ON u.user_id = e.user_id
 GROUP BY u.user_name, u.email
 ORDER BY event_count DESC
@@ -155,8 +155,12 @@ results
 
 ~~~python
 import opteryx
+from opteryx.connectors import AwsS3Connector
 import ipywidgets as widgets
 from IPython.display import display
+
+# Register S3 connector
+opteryx.register_store("sales", AwsS3Connector)
 
 # Create interactive filters
 date_range = widgets.DateRangeSlider(
@@ -170,7 +174,7 @@ def update_results(change):
     SELECT 
         product_category,
         SUM(amount) as total_sales
-    FROM 's3://sales/*.parquet'
+    FROM sales.data
     WHERE date BETWEEN '{start}' AND '{end}'
     GROUP BY product_category
     ORDER BY total_sales DESC

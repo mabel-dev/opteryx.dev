@@ -77,20 +77,20 @@ result = opteryx.query("""
 print(result.head())
 ~~~
 
-### Using Wildcards for Multiple Files
+### Querying Multiple Files
+
+You can query multiple CSV files by running separate queries or by combining them with UNION:
 
 ~~~python
 import opteryx
 
-# Query all CSV files in a directory
+# Combine multiple CSV files with UNION
 result = opteryx.query("""
-    SELECT 
-        year,
-        month,
-        SUM(revenue) as total_revenue
-    FROM 'sales/2024-*.csv'
-    GROUP BY year, month
-    ORDER BY year, month
+    SELECT * FROM 'sales_january.csv'
+    UNION ALL
+    SELECT * FROM 'sales_february.csv'
+    UNION ALL
+    SELECT * FROM 'sales_march.csv'
 """)
 ~~~
 
