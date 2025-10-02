@@ -2418,11 +2418,12 @@ Alias for <code>CAST</code>(<strong>any</strong> AS BOOLEAN)   </p>
 <div class="admonition function">
 <p class="admonition-title"><code>CAST</code> (<strong>any</strong>: <em>any</em> AS <strong>type</strong>) → <em>type</em></p>
 <p>Cast <strong>any</strong> to <strong>type</strong>, raises an error if cast is not possible. <br />
-Also implemented as individual cast functions (<code>BOOLEAN</code>, <code>INTEGER</code>, <code>FLOAT</code>, <code>VARCHAR</code>).</p>
+Also implemented as individual cast functions (<code>BLOB</code>, <code>BOOLEAN</code>, <code>INTEGER</code>, <code>FLOAT</code>, <code>VARCHAR</code>).</p>
 </div>
 <div class="admonition function">
-<p class="admonition-title"><code>INT</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Alias for <code>INTEGER</code></p>
+<p class="admonition-title"><code>FLOAT</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
+<p>Convert <strong>num</strong> to an floating point number. <br />
+Alias for <code>CAST</code>(<strong>any</strong> AS FLOAT)   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>HUMANIZE</code> (<strong>num</strong>: <em>numeric</em>) → <em>varchar</em></p>
@@ -2432,7 +2433,7 @@ Convert large numbers to forms easier for humans to read.</p>
 <div class="admonition function">
 <p class="admonition-title"><code>INTEGER</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
 <p>Convert <strong>num</strong> to an integer. <br />
-<code>INTEGER</code> is a pseudo-type, <code>CAST</code> is not supported and values may be coerced to <code>NUMERIC</code>.</p>
+Alias for <code>CAST</code>(<strong>any</strong> AS INTEGER)  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SAFE_CAST</code> (<strong>any</strong>: <em>any</em> AS <strong>type</strong>) → <em>type</em></p>
@@ -2682,7 +2683,8 @@ See also <code>ANY</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>GET</code> (<strong>array</strong>: <em>array</em>, <strong>index</strong>: <em>numeric</em>) → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Alias of <strong>array</strong><code>[</code><strong>index</strong><code>]</code>  </p>
+<p><strong>Will be deprecated after version 0.28</strong>  <br />
+Alias of <strong>array</strong><code>[</code><strong>index</strong><code>]</code>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>GREATEST</code> (<strong>array</strong>: <em>array</em>) → <em>value</em></p>
@@ -2700,7 +2702,8 @@ See also <code>ANY</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SEARCH</code> (<strong>array</strong>: <em>array</em>, <strong>value</strong>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Return <code>true</code> if <strong>array</strong> contains <strong>value</strong>. </p>
+<p><strong>Will be deprecated after version 0.28</strong> <br />
+Return <code>true</code> if <strong>array</strong> contains <strong>value</strong>. </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SORT</code> (<strong>array</strong>: <em>array</em>) → <em>array</em></p>
@@ -2815,7 +2818,8 @@ See also <code>ANY</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>GET</code> (<strong>str</strong>: <em>varchar</em>, <strong>index</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Alias of <strong>str</strong><code>[</code><strong>index</strong><code>]</code>   </p>
+<p><strong>Will be deprecated after version 0.28</strong>  <br />
+Alias of <strong>str</strong><code>[</code><strong>index</strong><code>]</code>   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LEFT</code> (<strong>str</strong>: <em>varchar</em>, <strong>n</strong>: <em>numeric</em>) → <em>varchar</em></p>
@@ -2887,7 +2891,8 @@ See also <code>ANY</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SEARCH</code> (<strong>str</strong>: <em>varchar</em>, <strong>substring</strong>: <em>varchar</em>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Return <code>true</code> if <strong>str</strong> contains <strong>substring</strong>.  </p>
+<p><strong>Will be deprecated after version 0.28</strong>  <br />
+Return <code>true</code> if <strong>str</strong> contains <strong>substring</strong>.  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SPLIT</code> (<strong>str</strong>: <em>varchar</em>) → <em>array</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
@@ -2963,7 +2968,8 @@ Alias of <strong>object</strong><code>-&gt;</code><strong>key</strong>  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>GET</code> (<strong>object</strong>: <em>struct</em>, <strong>key</strong>: <em>varchar</em>) → <em>value</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Alias of <strong>object</strong><code>-&gt;</code><strong>key</strong>    </p>
+<p><strong>Will be deprecated after version 0.28</strong>  <br />
+Alias of <strong>object</strong><code>-&gt;</code><strong>key</strong>    </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>JSONB_OBJECT_KEYS</code> (<strong>object</strong>: <em>struct</em>) → <em>array</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
@@ -2972,7 +2978,8 @@ Struct values can be <code>STRUCT</code> values, or <code>VARCHAR</code> or <cod
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SEARCH</code> (<strong>object</strong>: <em>struct</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Return <code>true</code> if any of the values in <strong>object</strong> is <strong>value</strong>. Note <code>SEARCH</code> does not match struct keys.</p>
+<p><strong>Will be deprecated after version 0.28</strong>  <br />
+Return <code>true</code> if any of the values in <strong>object</strong> is <strong>value</strong>. Note <code>SEARCH</code> does not match struct keys.</p>
 </div>
 <h2 id="system-functions">System Functions</h2>
 <div class="admonition function">
