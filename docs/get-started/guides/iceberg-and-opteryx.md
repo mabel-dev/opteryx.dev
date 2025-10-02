@@ -1,3 +1,8 @@
+---
+title: Integrating Apache Iceberg with Opteryx - Query Iceberg Tables
+description: Learn how to integrate Apache Iceberg with Opteryx SQL query engine. Step-by-step guide to query Iceberg tables using Python with SQLite catalog and remote storage support.
+---
+
 # Integrating Apache Iceberg with Opteryx
 
 This guide walks you through integrating [Apache Iceberg](https://py.iceberg.apache.org/) with [Opteryx](https://opteryx.dev/), enabling you to run SQL queries directly on Iceberg tables using Opteryx.
@@ -44,3 +49,11 @@ for row in results:
 **Troubleshooting**
 - Ensure the Iceberg catalog and referenced tables exist before querying.
 - For remote or cloud-based Iceberg storage, update the catalog and warehouse configuration accordingly.
+
+## Related Guides
+
+- [Query AWS S3 with Opteryx](s3-and-opteryx.md) - Query data files stored in S3
+- [Query Google Cloud Storage](gcs-and-opteryx.md) - Query data files in GCS
+- [Pandas Integration](pandas-and-opteryx.md) - Convert results to Pandas DataFrames
+- [Using Opteryx with Jupyter](using-opteryx-with-jupyter.md) - Interactive data analysis
+

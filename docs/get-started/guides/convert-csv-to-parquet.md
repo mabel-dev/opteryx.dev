@@ -1,3 +1,8 @@
+---
+title: Convert CSV to Parquet with Opteryx - Fast File Format Conversion
+description: Convert CSV files to Parquet format using Opteryx command line tool. Support for multiple file formats including JSONL, Avro, and ORC conversion.
+---
+
 # Converting CSV to Parquet using Opteryx
 
 You can use Opteryx to convert CSV files to Parquet files from the command line.

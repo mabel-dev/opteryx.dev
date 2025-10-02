@@ -1,3 +1,8 @@
+---
+title: Connect BigQuery to Opteryx - Query Google BigQuery with SQL
+description: Complete guide to connecting Google BigQuery with Opteryx using SQLAlchemy. Query BigQuery tables alongside other data sources with unified SQL interface.
+---
+
 # Connecting to BigQuery using Opteryx
 
 This short guide demonstrates how to connect to [BigQuery](https://cloud.google.com/bigquery) using Opteryx using [SQLAlchemy](https://www.sqlalchemy.org/).
@@ -53,3 +58,11 @@ result.head()
 ## Other Services
 
 Opteryx supports connecting to other SQL engines using this method, such as MySQL, CockroachDB and DuckDB.
+
+## Related Guides
+
+- [Connect to PostgreSQL](postgres-and-opteryx.md) - Query PostgreSQL databases
+- [Connect to MySQL](mysql-and-opteryx.md) - Query MySQL databases
+- [Connect to DuckDB](duckdb-and-opteryx.md) - Query DuckDB databases
+- [Query Google Cloud Storage](gcs-and-opteryx.md) - Combine BigQuery with GCS data
+- [Pandas Integration](pandas-and-opteryx.md) - Work with query results in Pandas

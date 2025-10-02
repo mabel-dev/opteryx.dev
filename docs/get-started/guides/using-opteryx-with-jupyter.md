@@ -1,3 +1,8 @@
+---
+title: Using Opteryx with Jupyter Notebooks - SQL Query Engine for Data Science
+description: Complete guide to using Opteryx SQL query engine in Jupyter Notebooks. Query data, visualize results with Matplotlib, and integrate with Pandas and Polars.
+---
+
 # Using Opteryx with Jupyter Notebooks
 
 This guide demonstrates how to use Opteryx, a high-performance SQL query engine, with Jupyter Notebooks to analyze and visualize data interactively. Opteryx is designed to work seamlessly with large datasets and integrates directly with Python’s most popular data science libraries.

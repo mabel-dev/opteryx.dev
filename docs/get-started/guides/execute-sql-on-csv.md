@@ -1,3 +1,8 @@
+---
+title: Execute SQL Queries on CSV Files - Query CSV with Opteryx
+description: Run SQL queries directly on CSV files using Opteryx. No database required - query CSV, Parquet, JSONL and other file formats with standard SQL.
+---
+
 # Executing SQL Queries on CSV Files with Opteryx
 
 You can use Opteryx to execute SQL queries on CSV files. Simply replace the table name in a query with the location of the CSV file.
