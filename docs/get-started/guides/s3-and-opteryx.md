@@ -25,17 +25,22 @@ Opteryx uses standard AWS credential mechanisms. Ensure you have AWS credentials
 
 ## Querying S3 Files
 
-You can query files in S3 by using the S3 URI in your SQL query.
+To query files in S3, you need to register the S3 connector with a prefix that maps to your bucket.
 
-### Query a Single File
+### Basic Setup
 
 ~~~python
 import opteryx
+from opteryx.connectors import AwsS3Connector
 
-# Query a Parquet file in S3
+# Register S3 connector for your bucket
+# Use the bucket name as the prefix
+opteryx.register_store("my-bucket", AwsS3Connector)
+
+# Now you can query files using the registered prefix
 result = opteryx.query("""
     SELECT * 
-    FROM 's3://my-bucket/data/planets.parquet'
+    FROM my-bucket.data.planets
     LIMIT 10
 """)
 
@@ -43,20 +48,50 @@ result = opteryx.query("""
 result.head()
 ~~~
 
-### Query Multiple Files with Wildcards
+!!! note
+    The dataset path `my-bucket.data.planets` refers to files in the S3 path `s3://my-bucket/data/planets/`. Opteryx uses dot notation instead of S3 URIs.
+
+### Query a Single File
 
 ~~~python
 import opteryx
+from opteryx.connectors import AwsS3Connector
 
-# Query all Parquet files in a directory
+# Register the S3 connector
+opteryx.register_store("my-bucket", AwsS3Connector)
+
+# Query a Parquet file in S3
 result = opteryx.query("""
     SELECT * 
-    FROM 's3://my-bucket/data/*.parquet'
+    FROM my-bucket.data.planets
+    LIMIT 10
+""")
+
+# Display results
+result.head()
+~~~
+
+### Query Multiple Files
+
+~~~python
+import opteryx
+from opteryx.connectors import AwsS3Connector
+
+# Register the S3 connector
+opteryx.register_store("my-bucket", AwsS3Connector)
+
+# Query all files in a dataset directory
+result = opteryx.query("""
+    SELECT * 
+    FROM my-bucket.data.planets
     WHERE name LIKE 'M%'
 """)
 
 result.head()
 ~~~
+
+!!! note
+    When querying a dataset like `my-bucket.data.planets`, Opteryx reads all compatible files in that directory (e.g., all `.parquet` files in `s3://my-bucket/data/planets/`).
 
 ## Supported File Formats
 
@@ -71,14 +106,18 @@ Opteryx can query the following formats directly from S3:
 ## Performance Tips
 
 - **Use Parquet** for better performance with columnar data
-- **Partition your data** to enable partition pruning
-- **Use wildcards strategically** to limit the number of files scanned
+- **Partition your data** by date or category to enable partition pruning
+- **Structure data in dataset directories** - Opteryx will automatically read all compatible files in a dataset folder
 - **Apply filters** to reduce data transfer from S3
 
 ## Example: Joining S3 Data with Local Data
 
 ~~~python
 import opteryx
+from opteryx.connectors import AwsS3Connector
+
+# Register the S3 connector
+opteryx.register_store("my-bucket", AwsS3Connector)
 
 # Join data from S3 with a local file
 result = opteryx.query("""
@@ -86,7 +125,7 @@ result = opteryx.query("""
         s3_data.customer_id,
         s3_data.purchase_amount,
         local_data.customer_name
-    FROM 's3://my-bucket/sales/2024/*.parquet' AS s3_data
+    FROM my-bucket.sales.transactions AS s3_data
     JOIN 'local_customers.csv' AS local_data
     ON s3_data.customer_id = local_data.id
 """)

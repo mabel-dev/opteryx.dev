@@ -31,17 +31,22 @@ $ gcloud auth application-default login
 
 ## Querying GCS Files
 
-You can query files in GCS by using the GCS URI in your SQL query.
+To query files in GCS, you need to register the GCS connector with a prefix that maps to your bucket.
 
-### Query a Single File
+### Basic Setup
 
 ~~~python
 import opteryx
+from opteryx.connectors import GcpCloudStorageConnector
 
-# Query a Parquet file in GCS
+# Register GCS connector for your bucket
+# Use the bucket name as the prefix
+opteryx.register_store("my-bucket", GcpCloudStorageConnector)
+
+# Now you can query files using the registered prefix
 result = opteryx.query("""
     SELECT * 
-    FROM 'gs://my-bucket/data/planets.parquet'
+    FROM my-bucket.data.planets
     LIMIT 10
 """)
 
@@ -49,20 +54,50 @@ result = opteryx.query("""
 result.head()
 ~~~
 
-### Query Multiple Files with Wildcards
+!!! note
+    The dataset path `my-bucket.data.planets` refers to files in the GCS path `gs://my-bucket/data/planets/`. Opteryx uses dot notation instead of GCS URIs.
+
+### Query a Single File
 
 ~~~python
 import opteryx
+from opteryx.connectors import GcpCloudStorageConnector
 
-# Query all Parquet files in a directory
+# Register the GCS connector
+opteryx.register_store("my-bucket", GcpCloudStorageConnector)
+
+# Query a Parquet file in GCS
 result = opteryx.query("""
     SELECT * 
-    FROM 'gs://my-bucket/data/*.parquet'
+    FROM my-bucket.data.planets
+    LIMIT 10
+""")
+
+# Display results
+result.head()
+~~~
+
+### Query Multiple Files
+
+~~~python
+import opteryx
+from opteryx.connectors import GcpCloudStorageConnector
+
+# Register the GCS connector
+opteryx.register_store("my-bucket", GcpCloudStorageConnector)
+
+# Query all files in a dataset directory
+result = opteryx.query("""
+    SELECT * 
+    FROM my-bucket.data.planets
     WHERE name LIKE 'M%'
 """)
 
 result.head()
 ~~~
+
+!!! note
+    When querying a dataset like `my-bucket.data.planets`, Opteryx reads all compatible files in that directory (e.g., all `.parquet` files in `gs://my-bucket/data/planets/`).
 
 ## Supported File Formats
 
@@ -77,14 +112,18 @@ Opteryx can query the following formats directly from GCS:
 ## Performance Tips
 
 - **Use Parquet** for better performance with columnar data
-- **Partition your data** to enable partition pruning
-- **Use wildcards strategically** to limit the number of files scanned
+- **Partition your data** by date or category to enable partition pruning
+- **Structure data in dataset directories** - Opteryx will automatically read all compatible files in a dataset folder
 - **Apply filters** to reduce data transfer from GCS
 
 ## Example: Joining GCS Data with Local Data
 
 ~~~python
 import opteryx
+from opteryx.connectors import GcpCloudStorageConnector
+
+# Register the GCS connector
+opteryx.register_store("my-bucket", GcpCloudStorageConnector)
 
 # Join data from GCS with a local file
 result = opteryx.query("""
@@ -92,7 +131,7 @@ result = opteryx.query("""
         gcs_data.customer_id,
         gcs_data.purchase_amount,
         local_data.customer_name
-    FROM 'gs://my-bucket/sales/2024/*.parquet' AS gcs_data
+    FROM my-bucket.sales.transactions AS gcs_data
     JOIN 'local_customers.csv' AS local_data
     ON gcs_data.customer_id = local_data.id
 """)
@@ -104,8 +143,11 @@ result.head()
 
 ~~~python
 import opteryx
-from opteryx.connectors import SqlConnector
+from opteryx.connectors import SqlConnector, GcpCloudStorageConnector
 from sqlalchemy import create_engine
+
+# Register GCS
+opteryx.register_store("my-bucket", GcpCloudStorageConnector)
 
 # Register BigQuery
 GCP_PROJECT = "your-gcp-project"
@@ -123,7 +165,7 @@ result = opteryx.query("""
         gcs.transaction_id,
         gcs.amount,
         bq.customer_name
-    FROM 'gs://my-bucket/transactions/*.parquet' AS gcs
+    FROM my-bucket.transactions AS gcs
     JOIN bq.customers AS bq
     ON gcs.customer_id = bq.id
 """)
@@ -139,7 +181,7 @@ result.head()
 - Run `gcloud auth application-default login` for local development
 
 **File Not Found**
-- Ensure the GCS path is correct (use `gs://` prefix)
+- Ensure the GCS path is correct
 - Verify the bucket name and object path exist
 - Check bucket permissions
 

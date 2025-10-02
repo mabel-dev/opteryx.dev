@@ -40,7 +40,7 @@ $ python -m opteryx --o 'monthly_sales.parquet' "
         DATE_TRUNC('month', date) as month,
         product_category,
         SUM(amount) as total_sales
-    FROM 'sales_*.csv'
+    FROM 'sales_data.csv'
     GROUP BY month, product_category
 "
 ~~~
@@ -50,7 +50,7 @@ $ python -m opteryx --o 'monthly_sales.parquet' "
 Convert JSONL to Parquet:
 
 ~~~ console
-$ python -m opteryx --o 'events.parquet' "SELECT * FROM 'logs/*.jsonl';"
+$ python -m opteryx --o 'events.parquet' "SELECT * FROM 'logs.jsonl';"
 ~~~
 
 Convert Parquet to CSV:
@@ -64,14 +64,25 @@ $ python -m opteryx --o 'export.csv' "SELECT * FROM 'data.parquet';"
 **Input Formats:**
 - Parquet (`.parquet`)
 - CSV (`.csv`)
+- Tab-delimited (`.tsv`)
 - JSONL (`.jsonl`)
+- JSONL Zstandard compressed (`.zstd`)
 - Avro (`.avro`)
 - ORC (`.orc`)
+- Feather/Arrow (`.arrow`)
+- Arrow IPC (`.ipc`)
+- Excel (`.xlsx`)
+- Apache Vortex (`.vortex`)
 
 **Output Formats:**
 - Parquet (`.parquet`) - Recommended for analytics
 - JSONL (`.jsonl`) - Line-delimited JSON
 - CSV (`.csv`) - Comma-separated values
+
+!!! note
+    - ORC is not supported on Windows environments
+    - CSV and TSV support is limited and not recommended beyond trivial use cases
+    - Avro and Vortex are not recommended for performance-sensitive contexts
 
 ## Performance Tips
 
