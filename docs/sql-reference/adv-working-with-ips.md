@@ -1,16 +1,8 @@
 # Working with IPs
 
-IP addresses are represented as `VARCHAR` values and support containment testing operations.
+IP addresses are represented as `VARCHAR` or `BLOB` values and support containment testing operations. `BLOB` is the preferred type for storing IP addresses.
 
 ## Actions
-
-### Casting
-
-IP addresses are stored and manipulated as `VARCHAR` values:
-
-~~~sql
-CAST(column AS VARCHAR)
-~~~
 
 ### Create
 
@@ -20,6 +12,14 @@ IP addresses are created as string literals:
 '192.168.0.1'
 '2001:0db8:85a3:0000:0000:8a2e:0370:7334'
 '192.168.0.0/24'
+~~~
+
+For BLOB storage (preferred):
+
+~~~sql
+b'192.168.0.1'
+b'2001:0db8:85a3:0000:0000:8a2e:0370:7334'
+b'192.168.0.0/24'
 ~~~
 
 ### Reading

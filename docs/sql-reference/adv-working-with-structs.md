@@ -6,23 +6,18 @@ A struct is a collection of zero or more key, value pairs. Keys must be `VARCHAR
 
 ## Actions
 
-### Casting
-
-Structs can be cast from JSON strings:
-
-~~~sql
-CAST(json_string AS STRUCT)
-~~~
-
-Note: `VARCHAR` and `BLOB` columns containing JSON-formatted strings automatically support struct operations without explicit casting.
-
 ### Create
 
-Structs are typically created from JSON data or can be constructed from columns:
+Structs are created as JSON-formatted strings stored in `VARCHAR` or `BLOB` columns:
 
 ~~~sql
--- JSON string that will be treated as struct
-SELECT '{"name": "Alice", "age": 30}'::STRUCT;
+-- JSON string in VARCHAR column
+SELECT '{"name": "Alice", "age": 30}';
+~~~
+
+~~~sql
+-- JSON string in BLOB column (preferred)
+SELECT b'{"name": "Alice", "age": 30}';
 ~~~
 
 ### Reading
@@ -97,6 +92,20 @@ SELECT *
  WHERE birth_place @? 'country';
 ~~~
 
+The `@?` operator also supports JSON Path expressions for more complex queries:
+
+~~~sql
+struct @? jsonpath
+~~~
+
+Example:
+
+~~~sql
+SELECT *
+  FROM $astronauts
+ WHERE birth_place @? '$.country';
+~~~
+
 #### Get Keys
 
 ~~~sql
@@ -112,14 +121,6 @@ SELECT JSONB_OBJECT_KEYS(birth_place)
   FROM $astronauts;
 ~~~
 
-#### Alias Function
-
-~~~sql
-GET(struct, key)
-~~~
-
-Alias for the `->` operator.
-
 ### Comparing
 
 Structs can be compared for equality:
@@ -129,24 +130,6 @@ SELECT *
   FROM table1
  WHERE struct_column = '{"key": "value"}';
 ~~~
-
-### Searching
-
-~~~sql
-SEARCH(struct, value)
-~~~
-
-All values in a struct can be searched for a given value using the `SEARCH` function.
-
-Example:
-
-~~~sql
-SELECT name,
-       SEARCH(birth_place, 'Italy')
-  FROM $astronauts;
-~~~
-
-Note: `SEARCH` does not match struct keys, only values.
 
 ## Limitations
 

@@ -65,21 +65,6 @@ SELECT missions[0]
   FROM $astronauts;
 ~~~
 
-#### GET Function
-
-Alias for subscript access:
-
-~~~sql
-GET(array, index)
-~~~
-
-Example:
-
-~~~sql
-SELECT GET(missions, 0)
-  FROM $astronauts;
-~~~
-
 #### Get Length
 
 Get the number of elements in an array:
@@ -180,22 +165,6 @@ SELECT *
 
 #### Containment Testing
 
-##### SEARCH Function
-
-Test if a value exists in an array:
-
-~~~sql
-SEARCH(array, value)
-~~~
-
-Example:
-
-~~~sql
-SELECT *
-  FROM $astronauts
- WHERE SEARCH(missions, 'Apollo 11');
-~~~
-
 ##### ARRAY_CONTAINS
 
 Test if an array contains a specific value:
@@ -226,6 +195,8 @@ Or using the `@>` operator:
 array @> values
 ~~~
 
+The `@>` operator also supports JSON Path expressions for more complex queries on nested structures.
+
 Example:
 
 ~~~sql
@@ -247,6 +218,8 @@ Or using the `@>>` operator:
 ~~~sql
 values @>> array
 ~~~
+
+The `@>>` operator also supports JSON Path expressions for more complex queries on nested structures.
 
 Example:
 
