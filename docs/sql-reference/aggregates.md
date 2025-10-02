@@ -2,7 +2,7 @@
 
 Aggregates are functions that combine multiple rows into a single value. Aggregates can only be used in the `SELECT` and `HAVING` clauses of a SQL query.
 
-When the `ORDER BY` clause is provided, the values being aggregated are sorted after applying the function. 
+When an `ORDER BY` clause is provided within an aggregate function, the values are sorted before being aggregated. 
 
 Aggregate functions generally ignore `null` values when performing calculations.
 
@@ -38,7 +38,7 @@ New aggregates for this version are annotated with the :octicons-star-16: icon.
     Alias of `COUNT(DISTINCT column)`
 
 !!! function ":octicons-beaker-24: `HISTOGRAM` (**column**) → _struct_"    
-    An histogram of values in **column**.
+    A histogram of values in **column**.
 
 !!! function "`MAX` (**column**) → _any_"  
     The maximum value in **column**.  
