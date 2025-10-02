@@ -277,6 +277,15 @@ quarter  | ✓          | ✓       | ✓        | ✓           |
 doy      | ✘          | ✓       | ✘        | ✘           | day of year
 year     | ✓          | ✓       | ✓        | ✓           |
 
+## Limitations
+
+Timestamps and intervals have the following limitations:
+
+- INTERVALs created from timestamp subtraction have no month or year component and are handled internally as seconds
+- DATEDIFF with month units can be unreliable
+- All timestamps are stored in UTC timezone
+- `death - birth > INTERVAL '100' YEAR` comparison form is not supported (use `birth + INTERVAL '100' YEAR > death` instead)
+
 ## Implicit Casting
 
 In many situation where a timestamp is expected, if an [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted string is provided, the engine will default to interpretting as a timestamp. However, for reliability, you should not rely on the engine doing this for you.
