@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Learn how to connect MySQL with Opteryx using SQLAlchemy. Query MySQL tables and join with other data sources using Opteryx federated SQL engine.">
+        <meta name="description" content="Query Parquet, CSV, JSONL files in Google Cloud Storage with Opteryx SQL engine. Run federated queries across GCS, BigQuery, and other sources.">
       
       
         <meta name="author" content="Justin Joyce">
       
       
-        <link rel="canonical" href="https://opteryx.dev/0.26.0/get-started/guides/mysql-and-opteryx/">
+        <link rel="canonical" href="https://opteryx.dev/0.26.0/get-started/guides/gcs-and-opteryx/">
       
       
-        <link rel="prev" href="../postgres-and-opteryx/">
+        <link rel="prev" href="../s3-and-opteryx/">
       
       
-        <link rel="next" href="../duckdb-and-opteryx/">
+        <link rel="next" href="../bigquery-and-opteryx/">
       
       
       <link rel="icon" href="../../../icarus-opteryx.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Connect MySQL to Opteryx - Query MySQL Database with SQL - Opteryx</title>
+        <title>Query Google Cloud Storage with Opteryx - SQL for GCS Data - Opteryx</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#connecting-to-mysql-using-opteryx" class="md-skip">
+        <a href="#querying-google-cloud-storage-with-opteryx" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Connect MySQL to Opteryx - Query MySQL Database with SQL
+              Query Google Cloud Storage with Opteryx - SQL for GCS Data
             
           </span>
         </div>
@@ -526,6 +526,8 @@
                 
   
   
+    
+  
   
   
     
@@ -536,11 +538,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_5_3" id="__nav_2_5_3_label" tabindex="0">
@@ -556,7 +558,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5_3">
             <span class="md-nav__icon md-icon"></span>
             Data Sources
@@ -613,10 +615,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../gcs-and-opteryx/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Google Cloud Storage
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -627,6 +651,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#querying-gcs-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Querying GCS Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-file-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported File Formats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-joining-gcs-data-with-local-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Joining GCS Data with Local Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-combining-gcs-and-bigquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Combining GCS and BigQuery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -644,8 +760,6 @@
                 
   
   
-    
-  
   
   
     
@@ -656,11 +770,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_4" >
         
           
           <label class="md-nav__link" for="__nav_2_5_4" id="__nav_2_5_4_label" tabindex="0">
@@ -676,7 +790,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5_4">
             <span class="md-nav__icon md-icon"></span>
             SQL Databases
@@ -733,32 +847,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Connect to MySQL
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../mysql-and-opteryx/" class="md-nav__link">
         
   
   
@@ -769,80 +861,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#registering-mysql-with-opteryx" class="md-nav__link">
-    <span class="md-ellipsis">
-      Registering MySQL with Opteryx
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters-explained" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters Explained
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#querying-mysql-from-opteryx" class="md-nav__link">
-    <span class="md-ellipsis">
-      Querying MySQL from Opteryx
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other Services
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-guides" class="md-nav__link">
-    <span class="md-ellipsis">
-      Related Guides
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2574,45 +2592,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#registering-mysql-with-opteryx" class="md-nav__link">
+  <a href="#authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      Registering MySQL with Opteryx
+      Authentication
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters-explained" class="md-nav__link">
+  <a href="#querying-gcs-files" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters Explained
+      Querying GCS Files
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#querying-mysql-from-opteryx" class="md-nav__link">
+  <a href="#supported-file-formats" class="md-nav__link">
     <span class="md-ellipsis">
-      Querying MySQL from Opteryx
+      Supported File Formats
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-services" class="md-nav__link">
+  <a href="#performance-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      Other Services
+      Performance Tips
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-guides" class="md-nav__link">
+  <a href="#example-joining-gcs-data-with-local-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Guides
+      Example: Joining GCS Data with Local Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-combining-gcs-and-bigquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Combining GCS and BigQuery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
     </span>
   </a>
   
@@ -2637,55 +2673,122 @@
   
 
 
-<h1 id="connecting-to-mysql-using-opteryx">Connecting to MySQL using Opteryx</h1>
-<p>This short guide demonstrates how to connect to MySQL using Opteryx and <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>.</p>
+<h1 id="querying-google-cloud-storage-with-opteryx">Querying Google Cloud Storage with Opteryx</h1>
+<p>This guide demonstrates how to query data stored in Google Cloud Storage (GCS) buckets using Opteryx. Opteryx can directly read various file formats (Parquet, CSV, JSONL, ORC, Avro) from GCS without needing to download them first.</p>
 <h2 id="installation">Installation</h2>
-<p>Install Opteryx and libraries for connecting to MySQL.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>opteryx<span class="w"> </span>sqlalchemy<span class="w"> </span>pymysql
+<p>Install Opteryx with GCS support.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>opteryx
 </code></pre></div>
-<h2 id="registering-mysql-with-opteryx">Registering MySQL with Opteryx</h2>
-<p>Create a <a href="https://docs.sqlalchemy.org/en/20/tutorial/engine.html#tutorial-engine">SQLAlchemy Engine</a> and register it as a store with Opteryx.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opteryx.connectors</span><span class="w"> </span><span class="kn">import</span> <span class="n">SqlConnector</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sqlalchemy</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_engine</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Replace with your connection string.</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># For more information on SQLAlchemy Engine, see:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># https://docs.sqlalchemy.org/en/20/tutorial/engine.html#tutorial-engine</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">connection_string</span> <span class="o">=</span> <span class="s2">&quot;mysql+pymysql://&lt;user&gt;:&lt;password&gt;@&lt;server&gt;/&quot;</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">sqlalchemy_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">connection_string</span><span class="p">)</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1"># Register as a store. Queries for relations with the provided prefix will</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># be directed to this database.</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">opteryx</span><span class="o">.</span><span class="n">register_store</span><span class="p">(</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;mysql_example&quot;</span><span class="p">,</span>  <span class="c1"># use this prefix before table names in queries</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">connector</span><span class="o">=</span><span class="n">SqlConnector</span><span class="p">,</span> 
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="n">remove_prefix</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># the prefix isn&#39;t part of the MySQL table name</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="n">engine</span><span class="o">=</span><span class="n">sqlalchemy_engine</span><span class="p">,</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">)</span>
-</code></pre></div>
-<h2 id="parameters-explained">Parameters Explained</h2>
+<h2 id="authentication">Authentication</h2>
+<p>Opteryx uses standard Google Cloud credential mechanisms. Ensure you have GCP credentials configured through one of:</p>
 <ul>
-<li><code>prefix</code> A string to identify which queries should be directed to this database.</li>
-<li><code>connector</code> The type of connector to use.</li>
-<li><code>remove_prefix</code> Boolean flag to indicate if the prefix should be removed when querying the actual MySQL table.</li>
-<li><code>engine</code> SQLAlchemy Engine to connect to MySQL.</li>
+<li>Application Default Credentials (ADC)</li>
+<li>Service account key file (set <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable)</li>
+<li>OAuth 2.0 token (when running on Google Cloud infrastructure)</li>
 </ul>
-<h2 id="querying-mysql-from-opteryx">Querying MySQL from Opteryx</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Execute query against the store.</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">result</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM mysql_example.planets LIMIT 5;&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">result</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<p>For local development, authenticate using:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">$ </span>gcloud<span class="w"> </span>auth<span class="w"> </span>application-default<span class="w"> </span>login
 </code></pre></div>
-<h2 id="other-services">Other Services</h2>
-<p>Opteryx supports connecting to other SQL engines using this method, such as Postgres, CockroachDB, and DuckDB.</p>
-<h2 id="related-guides">Related Guides</h2>
+<h2 id="querying-gcs-files">Querying GCS Files</h2>
+<p>You can query files in GCS by using the GCS URI in your SQL query.</p>
+<h3 id="query-a-single-file">Query a Single File</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Query a Parquet file in GCS</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="s2">    SELECT * </span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="s2">    FROM &#39;gs://my-bucket/data/planets.parquet&#39;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="s2">    LIMIT 10</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Display results</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">result</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="query-multiple-files-with-wildcards">Query Multiple Files with Wildcards</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># Query all Parquet files in a directory</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="s2">    SELECT * </span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="s2">    FROM &#39;gs://my-bucket/data/*.parquet&#39;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="s2">    WHERE name LIKE &#39;M%&#39;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">result</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="supported-file-formats">Supported File Formats</h2>
+<p>Opteryx can query the following formats directly from GCS:</p>
 <ul>
-<li><a href="../postgres-and-opteryx/">Connect to PostgreSQL</a> - Query PostgreSQL databases</li>
-<li><a href="../bigquery-and-opteryx/">Connect to BigQuery</a> - Query Google BigQuery</li>
-<li><a href="../duckdb-and-opteryx/">Connect to DuckDB</a> - Query DuckDB databases</li>
-<li><a href="../sqlite-and-opteryx/">Connect to SQLite</a> - Query SQLite databases</li>
-<li><a href="../polars-and-opteryx/">Polars Integration</a> - Work with query results in Polars</li>
+<li><strong>Parquet</strong> (<code>.parquet</code>)</li>
+<li><strong>CSV</strong> (<code>.csv</code>)</li>
+<li><strong>JSONL</strong> (<code>.jsonl</code>)</li>
+<li><strong>ORC</strong> (<code>.orc</code>)</li>
+<li><strong>Avro</strong> (<code>.avro</code>)</li>
 </ul>
+<h2 id="performance-tips">Performance Tips</h2>
+<ul>
+<li><strong>Use Parquet</strong> for better performance with columnar data</li>
+<li><strong>Partition your data</strong> to enable partition pruning</li>
+<li><strong>Use wildcards strategically</strong> to limit the number of files scanned</li>
+<li><strong>Apply filters</strong> to reduce data transfer from GCS</li>
+</ul>
+<h2 id="example-joining-gcs-data-with-local-data">Example: Joining GCS Data with Local Data</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># Join data from GCS with a local file</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="s2">    SELECT </span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="s2">        gcs_data.customer_id,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="s2">        gcs_data.purchase_amount,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="s2">        local_data.customer_name</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="s2">    FROM &#39;gs://my-bucket/sales/2024/*.parquet&#39; AS gcs_data</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="s2">    JOIN &#39;local_customers.csv&#39; AS local_data</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="s2">    ON gcs_data.customer_id = local_data.id</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">result</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="example-combining-gcs-and-bigquery">Example: Combining GCS and BigQuery</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">opteryx.connectors</span><span class="w"> </span><span class="kn">import</span> <span class="n">SqlConnector</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sqlalchemy</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_engine</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># Register BigQuery</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">GCP_PROJECT</span> <span class="o">=</span> <span class="s2">&quot;your-gcp-project&quot;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">bq_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;bigquery://</span><span class="si">{</span><span class="n">GCP_PROJECT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">opteryx</span><span class="o">.</span><span class="n">register_store</span><span class="p">(</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;bq&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="n">connector</span><span class="o">=</span><span class="n">SqlConnector</span><span class="p">,</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="n">remove_prefix</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    <span class="n">engine</span><span class="o">=</span><span class="n">bq_engine</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">)</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="c1"># Query joining GCS files with BigQuery tables</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="n">result</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="s2">    SELECT </span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="s2">        gcs.transaction_id,</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="s2">        gcs.amount,</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="s2">        bq.customer_name</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="s2">    FROM &#39;gs://my-bucket/transactions/*.parquet&#39; AS gcs</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="s2">    JOIN bq.customers AS bq</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="s2">    ON gcs.customer_id = bq.id</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="n">result</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Permission Denied Errors</strong>
+- Verify your GCP credentials are configured correctly
+- Check that your service account has <code>storage.objects.get</code> permission for the bucket
+- Run <code>gcloud auth application-default login</code> for local development</p>
+<p><strong>File Not Found</strong>
+- Ensure the GCS path is correct (use <code>gs://</code> prefix)
+- Verify the bucket name and object path exist
+- Check bucket permissions</p>
+<p><strong>Slow Queries</strong>
+- Consider using Parquet instead of CSV for better performance
+- Apply WHERE clauses to filter data early
+- Check your network connection to Google Cloud</p>
 
 
 

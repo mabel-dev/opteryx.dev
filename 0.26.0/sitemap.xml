@@ -153,15 +153,15 @@
          <lastmod>2025-10-02</lastmod>
     </url>
     <url>
+         <loc>https://opteryx.dev/0.26.0/get-started/guides/</loc>
+         <lastmod>2025-10-02</lastmod>
+    </url>
+    <url>
          <loc>https://opteryx.dev/0.26.0/get-started/guides/_command-line-opteryx/</loc>
          <lastmod>2025-10-02</lastmod>
     </url>
     <url>
          <loc>https://opteryx.dev/0.26.0/get-started/guides/_gcp-and-opteryx/</loc>
-         <lastmod>2025-10-02</lastmod>
-    </url>
-    <url>
-         <loc>https://opteryx.dev/0.26.0/get-started/guides/_sqlite-and-opteryx/</loc>
          <lastmod>2025-10-02</lastmod>
     </url>
     <url>
@@ -173,7 +173,15 @@
          <lastmod>2025-10-02</lastmod>
     </url>
     <url>
+         <loc>https://opteryx.dev/0.26.0/get-started/guides/duckdb-and-opteryx/</loc>
+         <lastmod>2025-10-02</lastmod>
+    </url>
+    <url>
          <loc>https://opteryx.dev/0.26.0/get-started/guides/execute-sql-on-csv/</loc>
+         <lastmod>2025-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://opteryx.dev/0.26.0/get-started/guides/gcs-and-opteryx/</loc>
          <lastmod>2025-10-02</lastmod>
     </url>
     <url>
@@ -194,6 +202,14 @@
     </url>
     <url>
          <loc>https://opteryx.dev/0.26.0/get-started/guides/postgres-and-opteryx/</loc>
+         <lastmod>2025-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://opteryx.dev/0.26.0/get-started/guides/s3-and-opteryx/</loc>
+         <lastmod>2025-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://opteryx.dev/0.26.0/get-started/guides/sqlite-and-opteryx/</loc>
          <lastmod>2025-10-02</lastmod>
     </url>
     <url>

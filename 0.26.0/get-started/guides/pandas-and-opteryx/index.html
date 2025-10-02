@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+        <meta name="description" content="Integrate Pandas DataFrames with Opteryx SQL engine. Query Pandas data using SQL and convert Opteryx results to Pandas DataFrames seamlessly.">
       
       
         <meta name="author" content="Justin Joyce">
@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://opteryx.dev/0.26.0/get-started/guides/pandas-and-opteryx/">
       
       
-        <link rel="prev" href="../iceberg-and-opteryx/">
+        <link rel="prev" href="../sqlite-and-opteryx/">
       
       
         <link rel="next" href="../polars-and-opteryx/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Pandas Integration - Opteryx</title>
+        <title>Pandas and Opteryx Integration - Query DataFrames with SQL - Opteryx</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pandas Integration
+              Pandas and Opteryx Integration - Query DataFrames with SQL
             
           </span>
         </div>
@@ -483,6 +483,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../using-opteryx-with-jupyter/" class="md-nav__link">
         
   
@@ -498,6 +521,47 @@
   
 
               
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_3" id="__nav_2_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Sources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Sources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -521,6 +585,267 @@
   
 
               
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s3-and-opteryx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AWS S3 Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gcs-and-opteryx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Google Cloud Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_4" id="__nav_2_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SQL Databases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            SQL Databases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bigquery-and-opteryx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connect to BigQuery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgres-and-opteryx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connect to PostgreSQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysql-and-opteryx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connect to MySQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../duckdb-and-opteryx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connect to DuckDB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sqlite-and-opteryx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connect to SQLite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_5" id="__nav_2_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DataFrames
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            DataFrames
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -605,6 +930,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#related-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Guides
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -637,24 +971,9 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bigquery-and-opteryx/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Connect to BigQuery
-    
-  </span>
-  
-
-      </a>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -666,22 +985,40 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../mysql-and-opteryx/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_6" id="__nav_2_5_6_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
-    Connect to MySQL
+    File Operations
     
   </span>
   
 
-      </a>
-    </li>
-  
-
-              
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            File Operations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -690,12 +1027,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../postgres-and-opteryx/" class="md-nav__link">
+      <a href="../execute-sql-on-csv/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Connect to Postgres
+    Execute SQL on CSV Files
     
   </span>
   
@@ -729,24 +1066,9 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../execute-sql-on-csv/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Execute SQL on CSVs
-    
-  </span>
-  
-
-      </a>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -846,29 +1168,6 @@
             Ecosystem
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ecosystem/orso/orso/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Dataframe (orso)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -2274,6 +2573,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#related-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Guides
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2323,12 +2631,22 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">dataframe</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $planets&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pandas</span><span class="p">()</span>
 </code></pre></div>
+<h2 id="related-guides">Related Guides</h2>
+<ul>
+<li><a href="../polars-and-opteryx/">Polars Integration</a> - Use Polars for high-performance analytics</li>
+<li><a href="../using-opteryx-with-jupyter/">Using Opteryx with Jupyter</a> - Interactive data analysis in notebooks</li>
+<li><a href="../postgres-and-opteryx/">Connect to PostgreSQL</a> - Join DataFrames with database tables</li>
+<li><a href="../execute-sql-on-csv/">Execute SQL on CSV Files</a> - Query files alongside DataFrames</li>
+</ul>
 
 
 
 
 
 
+
+  
+  
 
 
 
