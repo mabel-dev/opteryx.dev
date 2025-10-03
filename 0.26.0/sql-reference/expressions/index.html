@@ -2528,9 +2528,9 @@
 
 
 <h1 id="expressions">Expressions</h1>
-<p>An expression is a combination of values, operators and functions. Expressions are highly composable, and range from very simple to arbitrarily complex. They can be found in many different parts of SQL statements. In this section, we provide the different types of operators that can be used within expressions.</p>
+<p>An expression is a combination of values, operators, and functions that evaluates to a single value. Expressions are highly composable and can range from very simple (e.g., a single column reference) to arbitrarily complex (e.g., nested function calls with multiple operators). They can appear in many different parts of SQL statements, including <code>SELECT</code>, <code>WHERE</code>, <code>HAVING</code>, and <code>ORDER BY</code> clauses.</p>
 <h2 id="logical-operators">Logical Operators</h2>
-<p>Logical Operators are used within Expressions to express how predicates combine.</p>
+<p>Logical operators are used within expressions to combine or modify boolean predicates (conditions).</p>
 <p>The following logical operators are available: <code>AND</code>, <code>OR</code>, <code>XOR</code>, and <code>NOT</code>.</p>
 <table>
 <thead>
@@ -2586,10 +2586,10 @@
 </tr>
 </tbody>
 </table>
-<p>The operators <code>AND</code>, <code>OR</code>, and <code>XOR</code> are commutative, that is, you can switch the left and right operand without affecting the result.</p>
+<p>The operators <code>AND</code>, <code>OR</code>, and <code>XOR</code> are commutative, meaning you can switch the left and right operands without changing the result.</p>
 <h2 id="comparison-operators">Comparison Operators</h2>
-<p>Comparison Operators are used within Expressions to compare values, usually involving comparing a field within the datasets against a literal value - although comparisons can be used against two fields, or two literals.</p>
-<p>Usually when one of the values involved in the comparison is <code>null</code>, the result is <code>null</code>.</p>
+<p>Comparison operators are used within expressions to compare values. Common use cases include comparing a field from the dataset against a literal value, though comparisons can also be between two fields or two literal values.</p>
+<p>When one of the values in a comparison is <code>null</code>, the result is typically <code>null</code> (following SQL's three-valued logic).</p>
 <table>
 <thead>
 <tr>
@@ -2600,71 +2600,71 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>=</code></td>
-<td style="text-align: left;">equal to</td>
+<td style="text-align: left;">Equal to</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>&lt;&gt;</code></td>
-<td style="text-align: left;">not equal to</td>
+<td style="text-align: left;">Not equal to</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>&lt;</code></td>
-<td style="text-align: left;">less than</td>
+<td style="text-align: left;">Less than</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>&gt;</code></td>
-<td style="text-align: left;">greater than</td>
+<td style="text-align: left;">Greater than</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>&lt;=</code></td>
-<td style="text-align: left;">less than or equal to</td>
+<td style="text-align: left;">Less than or equal to</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>&gt;=</code></td>
-<td style="text-align: left;">greater than or equal to</td>
+<td style="text-align: left;">Greater than or equal to</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>IN</code></td>
-<td style="text-align: left;">value in list</td>
+<td style="text-align: left;">Value is in a list</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>NOT IN</code></td>
-<td style="text-align: left;">value not in list</td>
+<td style="text-align: left;">Value is not in a list</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>LIKE</code></td>
-<td style="text-align: left;">pattern match</td>
+<td style="text-align: left;">String pattern matching</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>NOT LIKE</code></td>
-<td style="text-align: left;">inverse results of <code>LIKE</code></td>
+<td style="text-align: left;">Negation of <code>LIKE</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>ILIKE</code></td>
-<td style="text-align: left;">case-insensitive pattern match</td>
+<td style="text-align: left;">Case-insensitive pattern matching</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>NOT ILIKE</code></td>
-<td style="text-align: left;">inverse results of <code>ILIKE</code></td>
+<td style="text-align: left;">Negation of <code>ILIKE</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>RLIKE</code></td>
-<td style="text-align: left;">regular expression match (also <code>~</code> and <code>SIMILAR TO</code>)</td>
+<td style="text-align: left;">Regular expression matching (aliases: <code>~</code>, <code>SIMILAR TO</code>)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>NOT RLIKE</code></td>
-<td style="text-align: left;">inverse results of <code>RLIKE</code> (also <code>!~</code> and <code>NOT SIMILAR TO</code>)</td>
+<td style="text-align: left;">Negation of <code>RLIKE</code> (aliases: <code>!~</code>, <code>NOT SIMILAR TO</code>)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>~*</code></td>
-<td style="text-align: left;">case insensitive regular expression match</td>
+<td style="text-align: left;">Case-insensitive regular expression matching</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>IS</code></td>
-<td style="text-align: left;">special comparison for <code>true</code>, <code>false</code> and <code>null</code></td>
+<td style="text-align: left;">Special comparison for <code>true</code>, <code>false</code>, and <code>null</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>|</code></td>
-<td style="text-align: left;">Bitwise OR, or IP containment</td>
+<td style="text-align: left;">Bitwise OR, or IP address containment</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>&amp;</code></td>
@@ -2678,6 +2678,7 @@
 </table>
 <h2 id="other-comparisons">Other Comparisons</h2>
 <h3 id="between">BETWEEN</h3>
+<p>The <code>BETWEEN</code> operator provides a convenient way to test if a value falls within a range.</p>
 <table>
 <thead>
 <tr>
@@ -2688,27 +2689,29 @@
 <tbody>
 <tr>
 <td>a <code>BETWEEN</code> x <code>AND</code> y</td>
-<td>equivalent to <code>a &gt;= x AND a &lt;= y</code></td>
+<td>Equivalent to <code>a &gt;= x AND a &lt;= y</code></td>
 </tr>
 <tr>
 <td>a <code>NOT BETWEEN</code> x <code>AND</code> y</td>
-<td>equivalent to <code>a &lt; x OR a &gt; y</code></td>
+<td>Equivalent to <code>a &lt; x OR a &gt; y</code></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Using <code>BETWEEN</code> with other predicates, especially when used with an <code>AND</code> conjunction, can cause the query parser to fail. </p>
+<p>Using <code>BETWEEN</code> with other predicates in complex expressions, especially when combined with additional <code>AND</code> conjunctions, can sometimes cause the query parser to fail. Consider using explicit comparison operators for complex conditions.</p>
 </div>
 <h3 id="case">CASE</h3>
-<p>The <code>CASE</code> expression has two forms. The 'simple' form searches each value expression from top to bottom until it finds one that equals expression:</p>
+<p>The <code>CASE</code> expression provides conditional logic within SQL queries and comes in two forms.</p>
+<p>The <strong>simple</strong> form searches each value expression from top to bottom until it finds one that equals the input expression:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CASE</span><span class="w"> </span><span class="n">expression</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="k">result</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">]</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="k">result</span><span class="w"> </span><span class="p">]</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">END</span>
 </code></pre></div>
-<p>The result for the matching value is returned. If no match is found, the result from the <code>ELSE</code> clause is returned if it exists, otherwise <code>null</code> is returned. Example:</p>
+<p>The result for the matching value is returned. If no match is found, the result from the <code>ELSE</code> clause is returned if present; otherwise <code>null</code> is returned.</p>
+<p>Example:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">       </span><span class="k">CASE</span><span class="w"> </span><span class="n">numberOfMoons</span><span class="w"> </span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;none&#39;</span><span class="w"> </span>
@@ -2717,14 +2720,15 @@
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">       </span><span class="k">END</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">how_many_moons</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="err">$</span><span class="n">planets</span><span class="p">;</span>
 </code></pre></div>
-<p>The 'searched' form evaluates each boolean condition from top to bottom until one is true and returns the matching result:</p>
+<p>The <strong>searched</strong> form evaluates each boolean condition from top to bottom until one evaluates to true, then returns the corresponding result:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CASE</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="n">condition</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="k">result</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">]</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="k">result</span><span class="w"> </span><span class="p">]</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">END</span>
 </code></pre></div>
-<p>If no conditions are true, the result from the <code>ELSE</code> clause is returned if it exists, otherwise <code>null</code> is returned. Example:</p>
+<p>If no conditions are true, the result from the <code>ELSE</code> clause is returned if present; otherwise <code>null</code> is returned.</p>
+<p>Example:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">       </span><span class="k">CASE</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">           </span><span class="k">WHEN</span><span class="w"> </span><span class="n">numberOfMoons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;none&#39;</span><span class="w"> </span>

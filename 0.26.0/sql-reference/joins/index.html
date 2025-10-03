@@ -2654,46 +2654,49 @@
 
 
 <h1 id="joins">Joins</h1>
-<p>Joins allow you to combine data from multiple relations into a single relation. There are a number of different join types available, each combines relations in different ways.</p>
+<p>Joins allow you to combine data from multiple relations (tables or datasets) into a single result set. Different join types provide different ways to combine data, each suited to specific use cases.</p>
 <h2 id="cross-join">CROSS JOIN</h2>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>FROM left_relation CROSS JOIN right_relation
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>FROM left_relation, right_relation
 </code></pre></div></p>
-<p>A <code>CROSS JOIN</code> returns the Cartesian product (all combinations) of two relations. </p>
+<p>A <code>CROSS JOIN</code> returns the Cartesian product (all possible combinations) of two relations. Each row from the left relation is paired with every row from the right relation.</p>
 <p><strong>Syntax</strong></p>
-<p>Cross joins can either be specified using the explicit <code>CROSS JOIN</code> syntax or by specifying multiple relations in the <code>FROM</code> clause.</p>
+<p>Cross joins can be specified using either the explicit <code>CROSS JOIN</code> syntax or by listing multiple relations in the <code>FROM</code> clause separated by commas.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">left_relation</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w"> </span><span class="k">CROSS</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">right_relation</span><span class="p">;</span>
 </code></pre></div>
 <p><img alt="CROSS JOIN" src="../cross-join.svg" /></p>
-<p>The size of the resultant dataset when using <code>CROSS JOIN</code> is length of the two datasets multiplied together (2 x 3 = 6, in the pictorial example), which can easily result in extremely large datasets. When an alternate join approach is possible, it will almost always perform better than a <code>CROSS JOIN</code>.</p>
-<p><code>CROSS JOIN UNNEST</code> is a specific variation of a <code>CROSS JOIN</code>, where the values in an ARRAY column are treated like a single column relation.</p>
+<p>The size of the result set from a <code>CROSS JOIN</code> is the product of the row counts of the two input datasets (2 × 3 = 6 in the pictorial example). This can easily result in extremely large datasets. When an alternative join approach is possible, it will almost always perform better than a <code>CROSS JOIN</code>.</p>
+<p><strong>Special case:</strong> <code>CROSS JOIN UNNEST</code> is a specific variation where the values in an ARRAY column are treated as if they were rows in a single-column relation.</p>
 <h2 id="inner-join">INNER JOIN</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FROM left_relation [ INNER ] JOIN right_relation &lt; ON condition | USING (column) &gt;
 </code></pre></div>
-<p>An <code>INNER JOIN</code> returns rows from both relations where the value in the joining column of one relation matches the value in the joining column of the other relation. It's often the most commonly used join due to its straightforward and predictable behavior.</p>
+<p>An <code>INNER JOIN</code> returns only the rows from both relations where the values in the joining columns match. It's often the most commonly used join type due to its straightforward and predictable behavior.</p>
 <p><strong>Syntax</strong></p>
-<p>You can specify the <code>INNER JOIN</code> using the full <code>INNER JOIN</code> syntax or the shorter <code>JOIN</code> syntax. You can define the joining logic using either the <code>ON</code> condition or <code>USING(column)</code> syntax.</p>
+<p>You can specify an <code>INNER JOIN</code> using the full <code>INNER JOIN</code> keyword or the shorter <code>JOIN</code> keyword. You can define the joining condition using either the <code>ON</code> clause or the <code>USING(column)</code> syntax.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">left_relation</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">right_relation</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">left_relation</span><span class="p">.</span><span class="k">column_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">right_relation</span><span class="p">.</span><span class="k">column_name</span><span class="p">;</span>
 </code></pre></div>
 <p><img alt="INNER JOIN" src="../inner-join.svg" /></p>
-<p>In this example, the blue column is used as the joining column in both relations. Only the value <code>1</code> occurs in both relations so the resultant dataset is the combination of the row with <code>1</code> in <em>right_relation</em> and the row with <code>1</code> in <em>left_relation</em>.</p>
-<p><code>INNER JOIN ... ON</code> maintains all of the columns in relations on both sides of the <code>JOIN</code>.</p>
-<p><code>INNER JOIN ... USING</code> keeps a single instance of the columns in the <code>USING</code> clause, these columns are not considered a member of either of the left or right relations.</p>
+<p>In this example, the blue column is used as the joining column in both relations. Only the value <code>1</code> appears in both relations, so the result set contains the combination of rows with <code>1</code> from both <em>left_relation</em> and <em>right_relation</em>.</p>
+<p><strong>Note on column handling:</strong></p>
+<ul>
+<li><code>INNER JOIN ... ON</code> retains all columns from both relations in the result.</li>
+<li><code>INNER JOIN ... USING</code> keeps only a single instance of the columns specified in the <code>USING</code> clause. These shared columns are not considered members of either the left or right relation.</li>
+</ul>
 <h2 id="natural-join">NATURAL JOIN</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>FROM left_relation NATURAL JOIN right_relation
 </code></pre></div>
-<p>A <code>NATURAL JOIN</code> performs a similar join to an <code>INNER JOIN ... ON</code> where the join conditions are automatically determined as equals conditions between columns with the same names in the two relations. This is not recommended in queries supporting production systems as these queries are brittle, especially in situations where schemas may change.</p>
-<p>Performing a self <code>NATURAL JOIN</code> (the same relation for the left and right relations) removes rows which contain <code>null</code> values.</p>
+<p>A <code>NATURAL JOIN</code> performs a join similar to an <code>INNER JOIN</code> where the join conditions are automatically determined. It creates equality conditions between all columns with matching names in both relations. This approach is generally not recommended for production systems, as queries using <code>NATURAL JOIN</code> are fragile and can break when schemas change (e.g., when new columns with matching names are added).</p>
+<p><strong>Special behavior:</strong> Performing a self <code>NATURAL JOIN</code> (using the same relation for both left and right sides) effectively filters out rows containing <code>null</code> values in any column.</p>
 <h2 id="left-join">LEFT JOIN</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>FROM left_relation LEFT [ OUTER ] JOIN right_relation ON condition
 </code></pre></div>
-<p>A <code>LEFT JOIN</code> returns all rows from the left relation, and rows from the right relation where there is a matching row, otherwise the fields for the right relation are populated with <code>null</code>.</p>
+<p>A <code>LEFT JOIN</code> returns all rows from the left relation. For rows with matching values in the right relation, the corresponding right relation columns are included. For rows without a match, the right relation columns are filled with <code>null</code> values.</p>
 <p><strong>Syntax</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">left_relation</span>
@@ -2702,11 +2705,11 @@
 </code></pre></div>
 <p><img alt="LEFT JOIN" src="../left-join.svg" /></p>
 <h2 id="right-join">RIGHT JOIN</h2>
-<p>A <code>RIGHT JOIN</code> is the same as a <code>LEFT JOIN</code> with the relations swapped.</p>
+<p>A <code>RIGHT JOIN</code> is functionally equivalent to a <code>LEFT JOIN</code> with the left and right relations swapped. It returns all rows from the right relation, with matching left relation data where available, and <code>null</code> values for non-matching rows.</p>
 <h2 id="full-join">FULL JOIN</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>FROM left_relation FULL [ OUTER ] JOIN right_relation ON condition
 </code></pre></div>
-<p>The <code>FULL JOIN</code> keyword returns all rows from the left relation, and all rows from the right relation. Where they have a matching value in the joining column, the rows will be aligned, otherwise the fields will be populated with <code>null</code>.</p>
+<p>The <code>FULL JOIN</code> (also called <code>FULL OUTER JOIN</code>) returns all rows from both the left and right relations. Where rows have matching values in the joining column, they are aligned in the result. For non-matching rows from either side, the columns from the other relation are filled with <code>null</code> values.</p>
 <p><strong>Syntax</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">left_relation</span>
@@ -2717,7 +2720,7 @@
 <h2 id="left-semi-join">LEFT SEMI JOIN</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>FROM left_relation LEFT SEMI JOIN right_relation ON condition
 </code></pre></div>
-<p>The <code>LEFT SEMI JOIN</code> keyword performs an <code>INNER JOIN</code> between the left and right relations but only return columns from the left_relation.</p>
+<p>The <code>LEFT SEMI JOIN</code> performs an intersection between the left and right relations, but returns only columns from the left relation. This is useful when you want to filter the left relation to only include rows that have matching rows in the right relation, without actually including any columns from the right relation.</p>
 <p><strong>Syntax</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">left_relation</span>
@@ -2726,11 +2729,11 @@
 </code></pre></div>
 <p><img alt="LEFT SEMI JOIN" src="../left-semi-join.svg" /></p>
 <h2 id="right-semi-join">RIGHT SEMI JOIN</h2>
-<p>A <code>RIGHT SEMI JOIN</code> is the same as a <code>LEFT SEMI JOIN</code> with the relations swapped.</p>
+<p>A <code>RIGHT SEMI JOIN</code> is functionally equivalent to a <code>LEFT SEMI JOIN</code> with the left and right relations swapped.</p>
 <h2 id="left-anti-join">LEFT ANTI JOIN</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>FROM left_relation LEFT ANTI JOIN right_relation ON condition
 </code></pre></div>
-<p>The <code>LEFT ANTI JOIN</code> keyword performs an <code>INNER JOIN</code> between the left and right relations, however, instead of returning matching rows, only rows from the left_relation where there is no match are returned, and no columns or rows from the right_relation are returned.</p>
+<p>The <code>LEFT ANTI JOIN</code> returns rows from the left relation that do <strong>not</strong> have matching rows in the right relation. Only columns from the left relation are included in the result; the right relation serves only to filter out matching rows.</p>
 <p><strong>Syntax</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">left_relation</span>
@@ -2739,7 +2742,7 @@
 </code></pre></div>
 <p><img alt="LEFT ANTI JOIN" src="../left-anti-join.svg" /></p>
 <h2 id="right-anti-join">RIGHT ANTI JOIN</h2>
-<p>A <code>RIGHT ANTI JOIN</code> is the same as a <code>LEFT ANTI JOIN</code> with the relations swapped.</p>
+<p>A <code>RIGHT ANTI JOIN</code> is functionally equivalent to a <code>LEFT ANTI JOIN</code> with the left and right relations swapped.</p>
 
 
 

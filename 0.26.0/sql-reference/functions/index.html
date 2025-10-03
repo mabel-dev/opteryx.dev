@@ -2658,13 +2658,13 @@ Also implemented as individual cast functions (<code>BLOB</code>, <code>BOOLEAN<
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>FLOAT</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Convert <strong>num</strong> to an floating point number. <br />
+<p>Convert <strong>num</strong> to a floating point number. <br />
 Alias for <code>CAST</code>(<strong>any</strong> AS FLOAT)   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>HUMANIZE</code> (<strong>num</strong>: <em>numeric</em>) → <em>varchar</em></p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z"/></svg></span> <strong>New in 0.20</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span>  <br />
-Convert large numbers to forms easier for humans to read.</p>
+Convert large numbers to human-readable formats (e.g., 1000 becomes "1K", 1000000 becomes "1M").</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>INTEGER</code> (<strong>num</strong>: <em>numeric</em>) → <em>numeric</em></p>
@@ -2706,11 +2706,11 @@ Return the current date and time, in UTC. Note <code>current_timestamp</code> do
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>DATE</code> (<strong>ts</strong>: <em>timestamp</em>) → <em>timestamp</em></p>
-<p>Remove any time information, leaving just the date part of <strong>ts</strong>.   </p>
+<p>Extract the date portion from <strong>ts</strong>, removing any time information.   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>DATE_FORMAT</code> (<strong>ts</strong>: <em>timestamp</em>, <strong>format</strong>: <em>varchar</em>) → <em>varchar</em></p>
-<p>Formats <strong>ts</strong> as a string using <strong>format</strong>.   </p>
+<p>Format <strong>ts</strong> as a string according to the specified <strong>format</strong> string. Common format codes include <code>%Y</code> (year), <code>%m</code> (month), <code>%d</code> (day), <code>%H</code> (hour), <code>%M</code> (minute), <code>%S</code> (second).   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>DATEPART</code>(<strong>unit</strong>: <em>varchar</em>, <strong>ts</strong>: <em>timestamp</em>) → <em>numeric</em></p>
@@ -2718,15 +2718,15 @@ Return the current date and time, in UTC. Note <code>current_timestamp</code> do
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>DATE_TRUNC</code> (<strong>unit</strong>: <em>varchar</em>, <strong>ts</strong>: <em>timestamp</em>) → <em>varchar</em></p>
-<p>Returns <strong>ts</strong> truncated to <strong>unit</strong>.  </p>
+<p>Truncate <strong>ts</strong> to the specified <strong>unit</strong> (e.g., 'day', 'month', 'year'), setting all less significant fields to their minimum values.  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>DATEDIFF</code> (<strong>unit</strong>: <em>varchar</em>, <strong>start</strong>: <em>timestamp</em>, <strong>end</strong>: <em>timestamp</em>) → <em>numeric</em></p>
-<p>Calculate the difference between the start and end timestamps in a given <strong>unit</strong>.  </p>
+<p>Calculate the difference between <strong>start</strong> and <strong>end</strong> timestamps measured in the specified <strong>unit</strong> (e.g., 'day', 'hour', 'second').  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>DAY</code> (<em>timestamp</em>) → <em>numeric</em></p>
-<p>Extract day number from a timestamp. See <code>EXTRACT</code>.</p>
+<p>Extract the day of the month from a timestamp (value ranges from 1 to 31). See <code>EXTRACT</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>EXTRACT</code> (<strong>unit</strong> FROM <em>timestamp</em>) → <em>numeric</em></p>
@@ -2763,7 +2763,7 @@ Return the current date and time, in UTC. Note <code>current_timestamp</code> do
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TIME_BUCKET</code> (<em>timestamp</em>, <strong>multiple</strong>: <em>numeric</em>, <strong>unit</strong>: <em>varchar</em>) → <em>timestamp</em></p>
-<p>Floor timestamps into fixed time interval buckets. <strong>unit</strong> is optional and will be <code>day</code> if not provided.</p>
+<p>Round timestamps down into fixed time interval buckets. For example, <code>TIME_BUCKET(timestamp, 5, 'minute')</code> groups timestamps into 5-minute buckets. The <strong>unit</strong> parameter is optional and defaults to <code>day</code> if not provided.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TODAY</code> () → <em>timestamp</em></p>
@@ -2800,7 +2800,7 @@ Alias for <code>EXTRACT</code>(second FROM <strong>ts</strong>)</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TIMEDIFF</code> (<strong>unit</strong>: <em>varchar</em>, <strong>start</strong>: <em>timestamp</em>) → <em>numeric</em></p>
-<p>Calculate the difference between the start and end times.  </p>
+<p>Calculate the difference between <strong>start</strong> and the current time, measured in the specified <strong>unit</strong>.  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>UNIXTIME</code> () → <em>numeric</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
@@ -2952,7 +2952,7 @@ Return <code>true</code> if <strong>array</strong> contains <strong>value</stron
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>CEIL</code> (<strong>x</strong>: <em>numeric</em>, <strong>scale</strong>: <em>integer</em>) → <em>double</em></p>
-<p>Returns the nearest equal or larger whole number to <strong>x</strong>, or to the nearest equal or larger double with <strong>scale</strong> places after the decimal point. <br />
+<p>Return the smallest integer greater than or equal to <strong>x</strong>, or when <strong>scale</strong> is provided, round up to <strong>scale</strong> decimal places. <br />
 <em>Related:</em> <code>FLOOR</code>   </p>
 </div>
 <div class="admonition function">
@@ -2962,7 +2962,7 @@ Return <code>true</code> if <strong>array</strong> contains <strong>value</stron
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>FLOOR</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns the nearest equal or lesser whole number to <strong>x</strong>, or to the nearest equal or lesser double with <strong>scale</strong> places after the decimal point. <br />
+<p>Return the largest integer less than or equal to <strong>x</strong>, or when <strong>scale</strong> is provided, round down to <strong>scale</strong> decimal places. <br />
 <em>Related:</em> <code>CEIL</code>    </p>
 </div>
 <div class="admonition function">
@@ -2975,26 +2975,26 @@ Return <code>true</code> if <strong>array</strong> contains <strong>value</stron
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>POWER</code> (<strong>base</strong>: <em>numeric</em>, <strong>exponent</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns <strong>base</strong> to the power of <strong>exponent</strong>.  </p>
+<p>Return <strong>base</strong> raised to the power of <strong>exponent</strong> (i.e., base^exponent).  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LN</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns the natural logarithm of <strong>x</strong>.<br />
+<p>Return the natural logarithm of <strong>x</strong> (logarithm to the base e).<br />
 <em>Related:</em> <code>E</code>, <code>LOG</code>, <code>LOG10</code>, <code>LOG2</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LOG</code> (<strong>x</strong>: <em>numeric</em>, <strong>base</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns the logarithm of <strong>x</strong> for base <strong>base</strong>. <br />
+<p>Return the logarithm of <strong>x</strong> using <strong>base</strong> as the logarithm base. <br />
 <em>Related:</em> <code>LN</code>, <code>LOG10</code>, <code>LOG2</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LOG10</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns the logarithm for base 10 of <strong>x</strong>.<br />
+<p>Return the base-10 logarithm of <strong>x</strong>.<br />
 <em>Related:</em> <code>LN</code>, <code>LOG</code>, <code>LOG2</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LOG2</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns the logarithm for base 2 of <strong>x</strong>.<br />
+<p>Return the base-2 logarithm of <strong>x</strong>.<br />
 <em>Related:</em> <code>LN</code>, <code>LOG</code>, <code>LOG10</code></p>
 </div>
 <div class="admonition function">
@@ -3007,7 +3007,7 @@ Return <code>true</code> if <strong>array</strong> contains <strong>value</stron
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SIGN</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns the signum function of <strong>x</strong>; 0 if <strong>x</strong> is 0, -1 if <strong>x</strong> is less than 0 and 1 if <strong>x</strong> is greater than 0.</p>
+<p>Return the sign of <strong>x</strong>: returns 0 if <strong>x</strong> is 0, -1 if <strong>x</strong> is negative, and 1 if <strong>x</strong> is positive.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SIGNUM</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
@@ -3015,11 +3015,11 @@ Return <code>true</code> if <strong>array</strong> contains <strong>value</stron
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SQRT</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns the square root of <strong>x</strong>.</p>
+<p>Return the square root of <strong>x</strong>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TRUNC</code> (<strong>x</strong>: <em>numeric</em>) → <em>numeric</em></p>
-<p>Returns <strong>x</strong> rounded to integer by dropping digits after decimal point.   </p>
+<p>Return <strong>x</strong> truncated to an integer by removing digits after the decimal point.   </p>
 </div>
 <h2 id="string-functions">String Functions</h2>
 <p>Functions for examining and manipulating string values. </p>
@@ -3039,12 +3039,12 @@ Return <code>true</code> if <strong>array</strong> contains <strong>value</stron
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>CONCAT</code> (<strong>list</strong>: <em>array</em>&lt;<em>varchar</em>&gt;) → <em>varchar</em></p>
-<p>Returns the result of concatenating, or joining, of two or more string values in an end-to-end manner.<br />
+<p>Concatenate all string values in <strong>list</strong> into a single string.<br />
 <em>Related:</em> <code>CONCAT_WS</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>CONCAT_WS</code> (<strong>separator</strong>: <em>varchar</em>, <strong>list</strong>: <em>array</em>&lt;<em>varchar</em>&gt;) → <em>varchar</em></p>
-<p>Returns the result of concatenating, or joining, of two or more string values with a <strong>separator</strong> used to delimit individual values.<br />
+<p>Concatenate all string values in <strong>list</strong> into a single string, using <strong>separator</strong> to delimit each value.<br />
 <em>Related:</em> <code>CONCAT</code></p>
 </div>
 <div class="admonition function">
@@ -3072,7 +3072,7 @@ Alias of <strong>str</strong><code>[</code><strong>index</strong><code>]</code> 
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LEVENSHTEIN</code> (<strong>str1</strong>: <em>varchar</em>, <strong>str2</strong>: <em>varchar</em>) → <em>numeric</em></p>
-<p>Returns the <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a> between <strong>str1</strong> and <strong>str2</strong>   </p>
+<p>Calculate the <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a> between <strong>str1</strong> and <strong>str2</strong>. This measures the minimum number of single-character edits required to change one string into the other.   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LOWER</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
@@ -3081,7 +3081,7 @@ Alias of <strong>str</strong><code>[</code><strong>index</strong><code>]</code> 
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>LPAD</code> (<strong>string</strong>: <em>varchar</em>, <strong>width</strong>: <em>integer</em>, <strong>fill</strong>: <em>char</em>) → <em>varchar</em></p>
-<p>Returns a string at least <strong>width</strong> characters wide, with <strong>fill</strong> used to pad the string, to the left, to fill to the required width. <br />
+<p>Return a string that is at least <strong>width</strong> characters wide. If <strong>string</strong> is shorter than <strong>width</strong>, pad it on the left with <strong>fill</strong> characters to reach the required width. <br />
 <em>Related:</em> <code>RPAD</code></p>
 </div>
 <div class="admonition function">
@@ -3091,20 +3091,20 @@ Alias of <strong>str</strong><code>[</code><strong>index</strong><code>]</code> 
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>MATCH</code> (<strong>column</strong>: <em>varchar</em>) <code>AGAINST</code> (<strong>query</strong>: <em>varchar</em>) → <em>boolean</em></p>
-<p>Perform a fulltext search of <strong>column</strong> for the values in <strong>query</strong>.<br />
+<p>Perform a full-text search of <strong>column</strong> for the values in <strong>query</strong>. This function is useful for searching text content.<br />
 <em>Note:</em> Values in <code>$stop_words</code> are ignored.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>POSITION</code> (<strong>substring</strong>: <em>varchar</em> IN <strong>string</strong>: <em>varchar</em>) → <em>numeric</em></p>
-<p>Returns the starting position of the first instance of <strong>substring</strong> in <strong>string</strong>. Positions start with 1. If not found, 0 is returned.   </p>
+<p>Return the starting position of the first occurrence of <strong>substring</strong> within <strong>string</strong>. Positions start at 1. If <strong>substring</strong> is not found, 0 is returned.   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>REGEXP_REPLACE</code> (<strong>str</strong>: <em>varchar</em>, <strong>pattern</strong>: <em>varchar</em>, <strong>replace</strong>: <em>varchar</em>) → <em>varchar</em></p>
-<p>Performs a replace based on regular expressions.  </p>
+<p>Replace all occurrences of the regular expression <strong>pattern</strong> in <strong>str</strong> with <strong>replace</strong>.  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>REVERSE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
-<p>Returns <strong>str</strong> with the characters in reverse order.</p>
+<p>Return <strong>str</strong> with its characters in reverse order.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>RIGHT</code> (<strong>str</strong>: <em>varchar</em>, <strong>n</strong>: <em>numeric</em>) → <em>varchar</em></p>
@@ -3113,7 +3113,7 @@ Alias of <strong>str</strong><code>[</code><strong>index</strong><code>]</code> 
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>RPAD</code> (<strong>string</strong>: <em>varchar</em>, <strong>width</strong>: <em>integer</em>, <strong>fill</strong>: <em>char</em>) → <em>varchar</em></p>
-<p>Returns a string at least <strong>width</strong> characters wide, with <strong>fill</strong> used to pad the string, to the right, to fill to the required width.
+<p>Return a string that is at least <strong>width</strong> characters wide. If <strong>string</strong> is shorter than <strong>width</strong>, pad it on the right with <strong>fill</strong> characters to reach the required width.
 <em>Related:</em> <code>LPAD</code></p>
 </div>
 <div class="admonition function">
@@ -3123,7 +3123,7 @@ Alias of <strong>str</strong><code>[</code><strong>index</strong><code>]</code> 
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SOUNDEX</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
-<p>Returns a character string containing the phonetic representation of char. See <a href="https://en.wikipedia.org/wiki/Soundex">Soundex 🡕</a>.   </p>
+<p>Return a character string containing the phonetic representation of <strong>str</strong>. This is useful for finding similar-sounding words. See <a href="https://en.wikipedia.org/wiki/Soundex">Soundex 🡕</a>.   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SEARCH</code> (<strong>str</strong>: <em>varchar</em>, <strong>substring</strong>: <em>varchar</em>) → <em>boolean</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
@@ -3144,11 +3144,11 @@ Return <code>true</code> if <strong>str</strong> contains <strong>substring</str
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SUBSTRING</code> (<strong>str</strong>: <em>varchar</em>, <strong>start</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Return substring from a string from <strong>start</strong> position to the end of <strong>str</strong>.  </p>
+<p>Extract a substring from <strong>str</strong> starting at position <strong>start</strong> and continuing to the end of the string.  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SUBSTRING</code> (<strong>str</strong>: <em>varchar</em>, <strong>start</strong>: <em>numeric</em>, <strong>length</strong>: <em>numeric</em>) → <em>varchar</em><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Return substring from a string from <strong>start</strong> position for <strong>length</strong> characters.  </p>
+<p>Extract a substring from <strong>str</strong> starting at position <strong>start</strong> for <strong>length</strong> characters.  </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>STARTS_WITH</code> (<strong>str</strong>: <em>varchar</em>, <strong>value</strong>: <em>varchar</em>) → <em>boolean</em></p>
@@ -3157,15 +3157,15 @@ Return <code>true</code> if <strong>str</strong> contains <strong>substring</str
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TITLE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
-<p>Returns <strong>str</strong> with the first letter of each work in upper case. <br />
+<p>Return <strong>str</strong> with the first letter of each word capitalized. <br />
 <em>Related:</em> <code>LOWER</code>, <code>UPPER</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>TRIM</code> ( [ LEADING | TRAILING | BOTH ] [ <strong>chars</strong>: <em>varchar</em> FROM ] <strong>str</strong>: <em>varchar</em> ) → <em>varchar</em></p>
-<p>Removes leading and trailing <strong>chars</strong> from <strong>str</strong>, if <strong>chars</strong> is not specified, whitespace is removed. Note that any instance of a character in <strong>chars</strong> is removed in any order they appear.<br />
-The <strong>LEADING</strong> modifier removes <strong>chars</strong> from the start of <strong>str</strong>. <br />
+<p>Remove leading and/or trailing characters from <strong>str</strong>. If <strong>chars</strong> is not specified, whitespace is removed. Note that any character present in <strong>chars</strong> will be removed, regardless of order.<br />
+The <strong>LEADING</strong> modifier removes <strong>chars</strong> from the beginning of <strong>str</strong>. <br />
 The <strong>TRAILING</strong> modifier removes <strong>chars</strong> from the end of <strong>str</strong>.  <br />
-The <strong>BOTH</strong> modifier removes <strong>chars</strong> from both the start and end of <strong>str</strong>, this is the default behaviour if no positional modifier is supplied. <br />
+The <strong>BOTH</strong> modifier removes <strong>chars</strong> from both the beginning and end of <strong>str</strong>. This is the default behavior if no modifier is specified. <br />
 <em>Related:</em> <code>LTRIM</code>, <code>RTRIM</code></p>
 </div>
 <div class="admonition function">
@@ -3250,57 +3250,57 @@ Return <code>true</code> if any of the values in <strong>object</strong> is <str
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>COSINE_SIMILARITY</code>  (<strong>str</strong>: <em>varchar</em>, <strong>value</strong>: <em>varchar</em>) → <em>double</em></p>
-<p>Perform an ad hoc cosine similarity comparison between <strong>str</strong> and <strong>value</strong>. <br />
+<p>Calculate the cosine similarity between <strong>str</strong> and <strong>value</strong>. This measures the similarity of two text strings based on their content. <br />
 <em>Note:</em> Values in <code>$stop_words</code> are ignored.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>) → <em>array</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Return a numeric list between <strong>start</strong> and <strong>stop</strong>, with a step of 1.</p>
+<p>Generate an array of numbers from <strong>start</strong> to <strong>stop</strong> (inclusive) with a step of 1.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>numeric</em>, <strong>stop</strong>: <em>numeric</em>, <strong>step</strong>: <em>numeric</em>) → <em>array</em>&lt;<em>numeric</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Return a numeric list between <strong>start</strong> and <strong>stop</strong>, with an increment of <strong>step</strong>.</p>
+<p>Generate an array of numbers from <strong>start</strong> to <strong>stop</strong> (inclusive) with an increment of <strong>step</strong>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>GENERATE_SERIES</code> (<strong>start</strong>: <em>timestamp</em>, <strong>stop</strong>: <em>timestamp</em>, <em>interval</em>) → <em>array</em>&lt;<em>timestamp</em>&gt;<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span></p>
-<p>Return a timestamp list between <strong>start</strong> and <strong>stop</strong>, with a interval of <strong>step</strong>.     </p>
+<p>Generate an array of timestamps from <strong>start</strong> to <strong>stop</strong> (inclusive) with the specified <em>interval</em>.     </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>HASH</code> (<strong>value</strong>: <em>any</em>) → <em>varchar</em></p>
-<p>Calculate the <a href="https://opensource.googleblog.com/2011/04/introducing-cityhash.html">CityHash</a> (64 bit) of <strong>value</strong>.</p>
+<p>Calculate the <a href="https://opensource.googleblog.com/2011/04/introducing-cityhash.html">CityHash</a> (64-bit) hash value of <strong>value</strong>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>HEX_DECODE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
-<p>Decode hexidecimal (BASE16) encoded value, <strong>str</strong>.  <br />
+<p>Decode a hexadecimal (BASE16) encoded string <strong>str</strong>.  <br />
 <em>Related:</em> <code>HEX_ENCODE</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>HEX_ENCODE</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
-<p>Encode <strong>str</strong> with hexadecimal (BASE16) encoding.<br />
+<p>Encode <strong>str</strong> using hexadecimal (BASE16) encoding.<br />
 <em>Related:</em> <code>HEX_DECODE</code></p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>IIF</code> (<strong>condition</strong>, <strong>true_value</strong>, <strong>false_value</strong>) → <em>input type</em></p>
-<p>Return the <strong>true_value</strong> if the condition evaluates to <code>True</code>, otherwise return the <strong>false_value</strong>.</p>
+<p>Return <strong>true_value</strong> if <strong>condition</strong> evaluates to <code>True</code>, otherwise return <strong>false_value</strong>. This is a shorthand for a simple <code>CASE</code> expression.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>IFNOTNULL</code> (<strong>check_expression</strong>: <em>any</em>, <strong>replacement_value</strong>: <em>any</em>) → <em>input type</em></p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z"/></svg></span> <strong>New in 0.19</strong> <br />
-Returns <strong>check_expression</strong> if not <code>null</code>, otherwise returns <strong>replacement_value</strong>. <br />
+Return <strong>check_expression</strong> if it is not <code>null</code>, otherwise return <strong>replacement_value</strong>. <br />
 <em>Related:</em> <code>IFNULL</code>   </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>IFNULL</code> (<strong>check_expression</strong>: <em>any</em>, <strong>replacement_value</strong>: <em>any</em>) → <em>input type</em></p>
-<p>Returns <strong>check_expression</strong> if not <code>null</code>, otherwise returns <strong>replacement_value</strong>. <br />
+<p>Return <strong>check_expression</strong> if it is not <code>null</code>, otherwise return <strong>replacement_value</strong>. <br />
 <em>Related:</em> <code>COALESCE</code>, <code>IFNOTNULL</code> </p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>NORMAL</code> () → <em>numeric</em></p>
-<p>Random number from a normal (Gaussian) distribution; distribution is centred at 0.0 and has a standard deviation of 1.0. Per record.</p>
+<p>Generate a random number from a normal (Gaussian) distribution with mean 0.0 and standard deviation 1.0. A different value is generated for each row.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>NULLIF</code> (<strong>value1</strong>: <em>any</em>, <strong>value2</strong>: <em>any</em>) → <em>input type</em></p>
-<p>Returns <code>null</code> if <strong>value1</strong> equals <strong>value2</strong>, otherwise returns <strong>value1</strong>. </p>
+<p>Return <code>null</code> if <strong>value1</strong> equals <strong>value2</strong>, otherwise return <strong>value1</strong>. This is useful for converting specific values to <code>null</code>.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>MD5</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
@@ -3308,7 +3308,7 @@ Returns <strong>check_expression</strong> if not <code>null</code>, otherwise re
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>RAND</code> () → <em>numeric</em></p>
-<p>Returns a random number between 0 and 1. Per record.</p>
+<p>Generate a random number between 0 and 1. A different value is generated for each row.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>RANDOM</code> () → <em>numeric</em></p>
@@ -3316,7 +3316,7 @@ Returns <strong>check_expression</strong> if not <code>null</code>, otherwise re
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>RANDOM_STRING</code> (<strong>length</strong>: <em>numeric</em>) → <em>varchar</em></p>
-<p>Returns a random string of lowercase alphabetic characters with a length of <strong>length</strong>. Per record.</p>
+<p>Generate a random string of lowercase alphabetic characters with the specified <strong>length</strong>. A different value is generated for each row.</p>
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>SHA1</code> (<strong>str</strong>: <em>varchar</em>) → <em>varchar</em></p>
@@ -3345,7 +3345,7 @@ Returns <strong>check_expression</strong> if not <code>null</code>, otherwise re
 </div>
 <div class="admonition function">
 <p class="admonition-title"><code>UNNEST</code> (<strong>array</strong>: <em>array</em>) → <em>relation</em></p>
-<p>Create a virtual relation with a row for each element in <strong>array</strong>.</p>
+<p>Convert an array into a virtual relation where each array element becomes a separate row.</p>
 </div>
 
 

@@ -2644,7 +2644,7 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">FOR</span><span class="w"> </span><span class="k">LAST</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="n">DAYS</span>
 </code></pre></div></p>
-<p>Filters data by recorded date. If omitted, <code>FOR TODAY</code> is assumed.</p>
+<p>Filters data by the date it was recorded for. If omitted, <code>FOR TODAY</code> is assumed.</p>
 <p>See <a href="../adv-time-travel/">Time Travel</a> for more information.</p>
 <h3 id="where">WHERE</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span>
@@ -2688,27 +2688,27 @@
 <p>Output format may change across versions and is not intended for machine parsing.</p>
 </div>
 <h2 id="execute">EXECUTE <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span></h2>
-<p>Execute a preprated statement.</p>
+<p>Execute a prepared statement.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">EXECUTE</span><span class="w"> </span><span class="n">statement_name</span><span class="p">[(</span><span class="o">&lt;</span><span class="k">parameter</span><span class="o">=</span><span class="n">value</span><span class="p">[,</span><span class="w"> </span><span class="p">...]</span><span class="o">&gt;</span><span class="p">)]</span>
 </code></pre></div>
-<p>The <code>EXECUTE</code> clause executes a prepared statement, the parameters supplied in the invocation clause are used to populate placeholders in the prepared statement. The supplied parameters must be named, for example <code>EXECUTE PLANETS_BY_ID (id=1)</code>.</p>
+<p>The <code>EXECUTE</code> clause executes a prepared statement. The parameters supplied in the invocation clause are used to populate placeholders in the prepared statement. The supplied parameters must be named, for example <code>EXECUTE PLANETS_BY_ID (id=1)</code>.</p>
 <h2 id="set">SET</h2>
-<p>Specifies the value of a variable, the variable is available to the scope of the executing query batch.</p>
+<p>Specifies the value of a variable. The variable is available within the scope of the executing query batch.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">SET</span><span class="w"> </span><span class="k">variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span>
 </code></pre></div>
-<p>User defined variable names must be prefixed with an 'at' symbol (<code>@</code>) and the value must be a literal value. The variable can be used within <code>SELECT</code> clauses within the same query batch. A <code>SET</code> statement without a <code>SELECT</code> statement is invalid.</p>
-<p>System parameters can also be temporarily for a query batch and are prefixed with a dollar sign (<code>$</code>).</p>
+<p>User-defined variable names must be prefixed with an 'at' symbol (<code>@</code>) and the value must be a literal value. The variable can be used within <code>SELECT</code> clauses within the same query batch. A <code>SET</code> statement without a <code>SELECT</code> statement is invalid.</p>
+<p>System parameters can also be set temporarily for a query batch and are prefixed with a dollar sign (<code>$</code>).</p>
 <p><strong>Related</strong>: <code>SHOW VARIABLES</code> and <code>SHOW PARAMETER</code></p>
 <h2 id="show-columns">SHOW COLUMNS</h2>
-<p>List the columns in a relation along with their data type. Without any modifiers, <code>SHOW COLUMNS</code> only reads a single morsel of data before returning.</p>
+<p>List the columns in a relation along with their data types. Without any modifiers, <code>SHOW COLUMNS</code> reads only a single morsel of data before returning results.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="p">[</span><span class="n">EXTENDED</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="k">FULL</span><span class="p">]</span><span class="w"> </span><span class="n">COLUMNS</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">relation</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">period</span>
 </code></pre></div>
 <h3 id="extended-modifier">EXTENDED modifier</h3>
-<p>Inclusion of the <code>EXTENDED</code> modifier includes summary statistics about the columns which take longer and more memory to create than the standard summary information without the modifier. The summary information varies between column types and values.</p>
+<p>The <code>EXTENDED</code> modifier includes summary statistics about the columns. These statistics take longer to compute and require more memory than the standard summary information. The summary information varies depending on column types and values.</p>
 <h3 id="full-modifier">FULL modifier</h3>
-<p>Inclusion of the <code>FULL</code> modifier uses the entire dataset in order to return complete column information, rather than just the first morsel from the dataset.</p>
+<p>The <code>FULL</code> modifier uses the entire dataset to return complete column information, rather than just the first morsel from the dataset.</p>
 <h2 id="show-create-view">SHOW CREATE VIEW</h2>
 <p>Show an approximation of the SQL to create a specified relation.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">view</span>
@@ -2724,7 +2724,7 @@ Show an approximation of the SQL to create a specified relation.
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">period</span>
 </code></pre></div>
 
-The SQL generated by this statement is unlikely to be able to be used with any SQL engine to create the table without some intervention and edits. It is intended to reduce effort to obtain this SQL, not eliminate it.
+The SQL generated by this statement is unlikely to work with any SQL engine to create the table without some manual intervention and edits. It is intended to reduce the effort required to obtain this SQL, not eliminate it entirely.
 
 ### FOR clause
 
@@ -2735,7 +2735,7 @@ The SQL generated by this statement is unlikely to be able to be used with any S
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>FOR DATES IN range
 </code></pre></div>
 
-The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided `FOR` clauses must directly follow the relation name. If not provided `FOR TODAY` is assumed.
+The `FOR` clause is a non-standard clause which filters data by the date it was recorded for. When provided, `FOR` clauses must directly follow the relation name. If not provided, `FOR TODAY` is assumed.
 
 ## SHOW FUNCTIONS
 
