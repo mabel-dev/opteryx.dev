@@ -34,7 +34,19 @@ In addition to SQL syntax, special dot commands may be entered that are specific
 
 ## Batch Mode
 
-Opteryx Command Line Interface (CLI) provides a terminal-based interface for running queries. The CLI is a Python script that is usually run by invoking Python, like this:
+The Opteryx Command Line Interface (CLI) provides a terminal-based interface for running queries. The CLI is a Python script that is usually run by invoking Python.
+
+### Simple Query Example
+
+Execute a simple query and see results in the console:
+
+~~~console
+$ python -m opteryx "SELECT 'Hello, Opteryx!' AS greeting"
+~~~
+
+### Querying Files
+
+To query individual files, use the file path in place of the table name. Here's an example querying a file called `planets.csv`:
 
 ~~~console
 $ python -m opteryx --o 'planets.csv' "SELECT * FROM \$planets"
@@ -44,6 +56,8 @@ $ python -m opteryx --o 'planets.csv' "SELECT * FROM \$planets"
     CLI usage may have character escaping requirements, such as a backslash before dollar signs and backticks.
 
 Querying individual files requires the relative path in place of the relation/table name in the query. This usually requires putting the filename in quotes, as filenames often contain illegal characters.
+
+### Command Line Options
 
 Abridged usage guidance is available below:
 

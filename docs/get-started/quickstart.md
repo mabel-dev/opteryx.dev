@@ -7,7 +7,7 @@ Get Opteryx running in minutes.
 - OS: Linux, macOS, or Windows _(Windows is supported but not recommended for production use)_
 - Python: 3.11 or later
 
-### Install from PyPI (recommended)
+## Install from PyPI (recommended)
 
 We recommend using a virtual environment:
 
@@ -39,12 +39,22 @@ import opteryx
 print(opteryx.query("SELECT 'Hello, Opteryx!'"))
 ~~~
 
+You should see output similar to:
+
+~~~
+┏━━━━━━━━━━━━━━━━┓
+┃ Hello, Opteryx!┃
+┡━━━━━━━━━━━━━━━━┩
+│ Hello, Opteryx!│
+└────────────────┘
+~~~
+
 ## Resources
 
-- [API Documentation](../python-client/)
+- [API Documentation](python-client.md)
 - [Usage Examples](https://github.com/mabel-dev/opteryx#examples)
 - [Discord Server](https://discord.gg/qpv2tr989x)
 
 ---
 
-Ready to use it in Python? See the [Python Integration Guide](../python-client/)
+Ready to use it in Python? See the [Python Integration Guide](python-client.md)
