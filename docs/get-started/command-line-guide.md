@@ -46,10 +46,18 @@ $ python -m opteryx "SELECT 'Hello, Opteryx!' AS greeting"
 
 ### Querying Files
 
-To query individual files, use the file path in place of the table name. Here's an example querying a file called `planets.csv`:
+To query individual files, use the file path in place of the table name in your SQL query. The file path must be prefixed with a dollar sign (`$`).
+
+For example, to query a local CSV file:
 
 ~~~console
-$ python -m opteryx --o 'planets.csv' "SELECT * FROM \$planets"
+$ python -m opteryx "SELECT * FROM \$data/sales.csv"
+~~~
+
+To query and save results to a different file:
+
+~~~console
+$ python -m opteryx --o 'results.csv' "SELECT * FROM \$data/sales.csv WHERE amount > 100"
 ~~~
 
 !!! Note
