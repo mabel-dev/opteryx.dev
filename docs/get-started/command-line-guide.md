@@ -2,7 +2,7 @@
 
 The Opteryx Command Line Interface (CLI) provides a terminal-based interface for executing queries. You can use it either as an interactive shell (REPL) or to execute individual queries (Batch).
 
-Both modes require a working Python environment and Opteryx to be installed. To install Python, refer to the [Python website](https://www.python.org/). To install Opteryx follow the [quickstart](../quickstart/) guide.
+Both modes require a working Python environment and Opteryx to be installed. To install Python, refer to the [Python website](https://www.python.org/). To install Opteryx follow the [quickstart](quickstart.md) guide.
 
 ## REPL (Interactive) Mode
 
@@ -34,10 +34,30 @@ In addition to SQL syntax, special dot commands may be entered that are specific
 
 ## Batch Mode
 
-Opteryx Command Line Interface (CLI) provides a terminal-based interface for running queries. The CLI is a Python script that is usually run by invoking Python, like this:
+The Opteryx Command Line Interface (CLI) provides a terminal-based interface for running queries. The CLI is a Python script that is usually run by invoking Python.
+
+### Simple Query Example
+
+Execute a simple query and see results in the console:
 
 ~~~console
-$ python -m opteryx --o 'planets.csv' "SELECT * FROM \$planets"
+$ python -m opteryx "SELECT 'Hello, Opteryx!' AS greeting"
+~~~
+
+### Querying Files
+
+To query individual files, use the file path in place of the table name in your SQL query. The file path must be prefixed with a dollar sign (`$`).
+
+For example, to query a local CSV file:
+
+~~~console
+$ python -m opteryx "SELECT * FROM \$data/sales.csv"
+~~~
+
+To query and save results to a different file:
+
+~~~console
+$ python -m opteryx --o 'results.csv' "SELECT * FROM \$data/sales.csv WHERE amount > 100"
 ~~~
 
 !!! Note
@@ -45,7 +65,7 @@ $ python -m opteryx --o 'planets.csv' "SELECT * FROM \$planets"
 
 Querying individual files requires the relative path in place of the relation/table name in the query. This usually requires putting the filename in quotes, as filenames often contain illegal characters.
 
-Abridged usage guidance is available below:
+### Command Line Options
 
 ~~~console
 Usage: python -m opteryx [OPTIONS] [SQL] 

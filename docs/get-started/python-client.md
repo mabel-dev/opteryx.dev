@@ -2,6 +2,31 @@
 
 Opteryx provides Python bindings compliant with a subset of the [PEP 249](https://peps.python.org/pep-0249/) DBAPI specification. This allows for seamless integration into Python applications, scripts, and Jupyter notebooks, facilitating easy manipulation and querying of data.
 
+## Your First Query
+
+The simplest way to get started is using the convenience API:
+
+~~~python
+import opteryx
+
+# Execute a query and get results
+result = opteryx.query("SELECT 'Hello, Opteryx!' AS greeting")
+print(result)
+~~~
+
+This returns an [Orso DataFrame](https://github.com/mabel-dev/orso) that you can convert to other formats:
+
+~~~python
+# Get as pandas DataFrame
+df = result.pandas()
+
+# Get as Arrow Table
+table = result.arrow()
+
+# Get as Polars DataFrame  
+pl_df = result.polars()
+~~~
+
 ## Basic Usage
 
 This section demonstrates how to establish a connection to Opteryx, execute a query, and fetch results.
