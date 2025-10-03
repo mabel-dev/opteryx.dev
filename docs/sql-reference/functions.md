@@ -23,12 +23,12 @@ New functions for this version are annotated with the :octicons-star-16: icon.
     Also implemented as individual cast functions (`BLOB`, `BOOLEAN`, `INTEGER`, `FLOAT`, `VARCHAR`).
 
 !!! function "`FLOAT` (**num**: _numeric_) → _numeric_"  
-    Convert **num** to an floating point number.   
+    Convert **num** to a floating point number.   
     Alias for `CAST`(**any** AS FLOAT)   
 
 !!! function "`HUMANIZE` (**num**: _numeric_) → _varchar_"     
     :octicons-star-16: **New in 0.20** :octicons-beaker-24:    
-    Convert large numbers to forms easier for humans to read.
+    Convert large numbers to human-readable formats (e.g., 1000 becomes "1K", 1000000 becomes "1M").
 
 !!! function "`INTEGER` (**num**: _numeric_) → _numeric_"  
     Convert **num** to an integer.   
@@ -63,22 +63,22 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     Return the current date and time, in UTC. Note `current_timestamp` does not require parenthesis.  
 
 !!! function "`DATE` (**ts**: _timestamp_) → _timestamp_"  
-    Remove any time information, leaving just the date part of **ts**.   
+    Extract the date portion from **ts**, removing any time information.   
 
 !!! function "`DATE_FORMAT` (**ts**: _timestamp_, **format**: _varchar_) → _varchar_"  
-    Formats **ts** as a string using **format**.   
+    Format **ts** as a string according to the specified **format** string. Common format codes include `%Y` (year), `%m` (month), `%d` (day), `%H` (hour), `%M` (minute), `%S` (second).   
 
 !!! function "`DATEPART`(**unit**: _varchar_, **ts**: _timestamp_) → _numeric_"  
     Alias of `EXTRACT`(**unit** FROM **ts**)
 
 !!! function "`DATE_TRUNC` (**unit**: _varchar_, **ts**: _timestamp_) → _varchar_"  
-    Returns **ts** truncated to **unit**.  
+    Truncate **ts** to the specified **unit** (e.g., 'day', 'month', 'year'), setting all less significant fields to their minimum values.  
 
 !!! function "`DATEDIFF` (**unit**: _varchar_, **start**: _timestamp_, **end**: _timestamp_) → _numeric_"  
-    Calculate the difference between the start and end timestamps in a given **unit**.  
+    Calculate the difference between **start** and **end** timestamps measured in the specified **unit** (e.g., 'day', 'hour', 'second').  
 
 !!! function "`DAY` (_timestamp_) → _numeric_"  
-    Extract day number from a timestamp. See `EXTRACT`.
+    Extract the day of the month from a timestamp (value ranges from 1 to 31). See `EXTRACT`.
 
 !!! function "`EXTRACT` (**unit** FROM _timestamp_) → _numeric_"       
     Extract **unit** of a timestamp.   
@@ -111,7 +111,7 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     Alias for `current_timestamp` 
 
 !!! function "`TIME_BUCKET` (_timestamp_, **multiple**: _numeric_, **unit**: _varchar_) → _timestamp_"  
-    Floor timestamps into fixed time interval buckets. **unit** is optional and will be `day` if not provided.
+    Round timestamps down into fixed time interval buckets. For example, `TIME_BUCKET(timestamp, 5, 'minute')` groups timestamps into 5-minute buckets. The **unit** parameter is optional and defaults to `day` if not provided.
 
 !!! function "`TODAY` () → _timestamp_"  
     Alias for `current_date`
@@ -141,7 +141,7 @@ For more details, see [Working with Timestamps](../adv-working-with-timestamps/)
     Alias for `EXTRACT`(second FROM **ts**)
 
 !!! function "`TIMEDIFF` (**unit**: _varchar_, **start**: _timestamp_) → _numeric_"   
-    Calculate the difference between the start and end times.  
+    Calculate the difference between **start** and the current time, measured in the specified **unit**.  
 
 !!! function "`UNIXTIME` () → _numeric_:octicons-dot-16:"       
     Return the current time as a [Unix Timestamp](https://www.unixtimestamp.com/).    
@@ -265,7 +265,7 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
     Returns the absolute value of **x**.   
 
 !!! function "`CEIL` (**x**: _numeric_, **scale**: _integer_) → _double_"  
-    Returns the nearest equal or larger whole number to **x**, or to the nearest equal or larger double with **scale** places after the decimal point.   
+    Return the smallest integer greater than or equal to **x**, or when **scale** is provided, round up to **scale** decimal places.   
     _Related:_ `FLOOR`   
 
 !!! function "`E` () → _numeric_"  
@@ -273,7 +273,7 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
     _Related:_ `LN`.
 
 !!! function "`FLOOR` (**x**: _numeric_) → _numeric_"  
-    Returns the nearest equal or lesser whole number to **x**, or to the nearest equal or lesser double with **scale** places after the decimal point.   
+    Return the largest integer less than or equal to **x**, or when **scale** is provided, round down to **scale** decimal places.   
     _Related:_ `CEIL`    
 
 !!! function "`PHI` () → _numeric_"  
@@ -283,22 +283,22 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
     Returns the constant [π](https://en.wikipedia.org/wiki/Pi) (_pi_).  
 
 !!! function "`POWER` (**base**: _numeric_, **exponent**: _numeric_) → _numeric_"   
-    Returns **base** to the power of **exponent**.  
+    Return **base** raised to the power of **exponent** (i.e., base^exponent).  
 
 !!! function "`LN` (**x**: _numeric_) → _numeric_"   
-    Returns the natural logarithm of **x**.  
+    Return the natural logarithm of **x** (logarithm to the base e).  
     _Related:_ `E`, `LOG`, `LOG10`, `LOG2`
 
 !!! function "`LOG` (**x**: _numeric_, **base**: _numeric_) → _numeric_"   
-    Returns the logarithm of **x** for base **base**.   
+    Return the logarithm of **x** using **base** as the logarithm base.   
     _Related:_ `LN`, `LOG10`, `LOG2`
 
 !!! function "`LOG10` (**x**: _numeric_) → _numeric_"   
-    Returns the logarithm for base 10 of **x**.  
+    Return the base-10 logarithm of **x**.  
     _Related:_ `LN`, `LOG`, `LOG2`
 
 !!! function "`LOG2` (**x**: _numeric_) → _numeric_"   
-    Returns the logarithm for base 2 of **x**.  
+    Return the base-2 logarithm of **x**.  
     _Related:_ `LN`, `LOG`, `LOG10`
 
 !!! function "`ROUND` (**x**: _numeric_) → _numeric_:octicons-dot-16:"  
@@ -308,16 +308,16 @@ For more details, see [Working with Arrays](../adv-working-with-lists/).
     Returns **x** rounded to **places** decimal places.
 
 !!! function "`SIGN` (**x**: _numeric_) → _numeric_"   
-    Returns the signum function of **x**; 0 if **x** is 0, -1 if **x** is less than 0 and 1 if **x** is greater than 0.
+    Return the sign of **x**: returns 0 if **x** is 0, -1 if **x** is negative, and 1 if **x** is positive.
 
 !!! function "`SIGNUM` (**x**: _numeric_) → _numeric_"   
     Alias for `SIGN`
 
 !!! function "`SQRT` (**x**: _numeric_) → _numeric_"   
-    Returns the square root of **x**.
+    Return the square root of **x**.
 
 !!! function "`TRUNC` (**x**: _numeric_) → _numeric_"  
-    Returns **x** rounded to integer by dropping digits after decimal point.   
+    Return **x** truncated to an integer by removing digits after the decimal point.   
 
 ## String Functions
 
@@ -335,11 +335,11 @@ Functions for examining and manipulating string values.
     _Related:_ `ASCII`
 
 !!! function "`CONCAT` (**list**: _array_<_varchar_>) → _varchar_"   
-    Returns the result of concatenating, or joining, of two or more string values in an end-to-end manner.  
+    Concatenate all string values in **list** into a single string.  
     _Related:_ `CONCAT_WS`
 
 !!! function "`CONCAT_WS` (**separator**: _varchar_, **list**: _array_<_varchar_>) → _varchar_"   
-    Returns the result of concatenating, or joining, of two or more string values with a **separator** used to delimit individual values.  
+    Concatenate all string values in **list** into a single string, using **separator** to delimit each value.  
     _Related:_ `CONCAT`
 
 !!! function "`ENDS_WITH` (**str**: _varchar_, **value**: _varchar_) → _boolean_"  
@@ -361,14 +361,14 @@ Functions for examining and manipulating string values.
     Returns the length of **str** in characters.    
 
 !!! function "`LEVENSHTEIN` (**str1**: _varchar_, **str2**: _varchar_) → _numeric_"   
-    Returns the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) between **str1** and **str2**   
+    Calculate the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) between **str1** and **str2**. This measures the minimum number of single-character edits required to change one string into the other.   
 
 !!! function "`LOWER` (**str**: _varchar_) → _varchar_"  
     Converts **str** to lowercase.   
     _Related:_ `UPPER`, `TITLE`
 
 !!! function "`LPAD` (**string**: _varchar_, **width**: _integer_, **fill**: _char_) → _varchar_"   
-    Returns a string at least **width** characters wide, with **fill** used to pad the string, to the left, to fill to the required width.   
+    Return a string that is at least **width** characters wide. If **string** is shorter than **width**, pad it on the left with **fill** characters to reach the required width.   
     _Related:_ `RPAD`
 
 !!! function "`LTRIM` (**str**: _varchar_) → _varchar_"    
@@ -376,24 +376,24 @@ Functions for examining and manipulating string values.
     _Related:_ `RTRIM`, `TRIM`
 
 !!! function "`MATCH` (**column**: _varchar_) `AGAINST` (**query**: _varchar_) → _boolean_"    
-    Perform a fulltext search of **column** for the values in **query**.  
+    Perform a full-text search of **column** for the values in **query**. This function is useful for searching text content.  
     _Note:_ Values in `$stop_words` are ignored.
 
 !!! function "`POSITION` (**substring**: _varchar_ IN **string**: _varchar_) → _numeric_"    
-    Returns the starting position of the first instance of **substring** in **string**. Positions start with 1. If not found, 0 is returned.   
+    Return the starting position of the first occurrence of **substring** within **string**. Positions start at 1. If **substring** is not found, 0 is returned.   
 
 !!! function "`REGEXP_REPLACE` (**str**: _varchar_, **pattern**: _varchar_, **replace**: _varchar_) → _varchar_"   
-    Performs a replace based on regular expressions.  
+    Replace all occurrences of the regular expression **pattern** in **str** with **replace**.  
 
 !!! function "`REVERSE` (**str**: _varchar_) → _varchar_"  
-    Returns **str** with the characters in reverse order.
+    Return **str** with its characters in reverse order.
 
 !!! function "`RIGHT` (**str**: _varchar_, **n**: _numeric_) → _varchar_"  
     Extract the right-most **n** characters of **str**.   
     _Related:_ `LEFT`
 
 !!! function "`RPAD` (**string**: _varchar_, **width**: _integer_, **fill**: _char_) → _varchar_"   
-    Returns a string at least **width** characters wide, with **fill** used to pad the string, to the right, to fill to the required width.
+    Return a string that is at least **width** characters wide. If **string** is shorter than **width**, pad it on the right with **fill** characters to reach the required width.
     _Related:_ `LPAD`
 
 !!! function "`RTRIM` (**str**: _varchar_) → _varchar_"     
@@ -401,7 +401,7 @@ Functions for examining and manipulating string values.
     _Related:_ `LTRIM`, `TRIM`
 
 !!! function "`SOUNDEX` (**str**: _varchar_) → _varchar_"  
-    Returns a character string containing the phonetic representation of char. See [Soundex 🡕](https://en.wikipedia.org/wiki/Soundex).   
+    Return a character string containing the phonetic representation of **str**. This is useful for finding similar-sounding words. See [Soundex 🡕](https://en.wikipedia.org/wiki/Soundex).   
 
 !!! function "`SEARCH` (**str**: _varchar_, **substring**: _varchar_) → _boolean_:octicons-dot-16:"  
     **Will be deprecated after version 0.28**    
@@ -417,24 +417,24 @@ Functions for examining and manipulating string values.
     Splits **str** on **delimiter** and returns an array of size at most **limit**. The last element in the array contains the remaining part of the string. **limit** must be greater than zero.
 
 !!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_) → _varchar_:octicons-dot-16:" 
-    Return substring from a string from **start** position to the end of **str**.  
+    Extract a substring from **str** starting at position **start** and continuing to the end of the string.  
 
 !!! function "`SUBSTRING` (**str**: _varchar_, **start**: _numeric_, **length**: _numeric_) → _varchar_:octicons-dot-16:"  
-    Return substring from a string from **start** position for **length** characters.  
+    Extract a substring from **str** starting at position **start** for **length** characters.  
  
 !!! function "`STARTS_WITH` (**str**: _varchar_, **value**: _varchar_) → _boolean_"  
     Return `true` if **str** starts with **value**.  
     _Related:_ `ENDS_WITH`
 
 !!! function "`TITLE` (**str**: _varchar_) → _varchar_"  
-    Returns **str** with the first letter of each work in upper case.   
+    Return **str** with the first letter of each word capitalized.   
     _Related:_ `LOWER`, `UPPER`
 
 !!! function "`TRIM` ( [ LEADING | TRAILING | BOTH ] [ **chars**: _varchar_ FROM ] **str**: _varchar_ ) → _varchar_"   
-    Removes leading and trailing **chars** from **str**, if **chars** is not specified, whitespace is removed. Note that any instance of a character in **chars** is removed in any order they appear.  
-    The **LEADING** modifier removes **chars** from the start of **str**.   
+    Remove leading and/or trailing characters from **str**. If **chars** is not specified, whitespace is removed. Note that any character present in **chars** will be removed, regardless of order.  
+    The **LEADING** modifier removes **chars** from the beginning of **str**.   
     The **TRAILING** modifier removes **chars** from the end of **str**.    
-    The **BOTH** modifier removes **chars** from both the start and end of **str**, this is the default behaviour if no positional modifier is supplied.   
+    The **BOTH** modifier removes **chars** from both the beginning and end of **str**. This is the default behavior if no modifier is specified.   
     _Related:_ `LTRIM`, `RTRIM`
 
 !!! function "`UPPER` (**str**: _varchar_) → _varchar_"  
@@ -507,58 +507,58 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     _Related:_ `IFNULL`
 
 !!! function "`COSINE_SIMILARITY`  (**str**: _varchar_, **value**: _varchar_) → _double_"     
-    Perform an ad hoc cosine similarity comparison between **str** and **value**.   
+    Calculate the cosine similarity between **str** and **value**. This measures the similarity of two text strings based on their content.   
     _Note:_ Values in `$stop_words` are ignored.
 
 !!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_) → _array_<_numeric_>:octicons-dot-16:"   
-    Return a numeric list between **start** and **stop**, with a step of 1.
+    Generate an array of numbers from **start** to **stop** (inclusive) with a step of 1.
 
 !!! function "`GENERATE_SERIES` (**start**: _numeric_, **stop**: _numeric_, **step**: _numeric_) → _array_<_numeric_>:octicons-dot-16:"  
-    Return a numeric list between **start** and **stop**, with an increment of **step**.
+    Generate an array of numbers from **start** to **stop** (inclusive) with an increment of **step**.
 
 !!! function "`GENERATE_SERIES` (**start**: _timestamp_, **stop**: _timestamp_, _interval_) → _array_<_timestamp_>:octicons-dot-16:"    
-    Return a timestamp list between **start** and **stop**, with a interval of **step**.     
+    Generate an array of timestamps from **start** to **stop** (inclusive) with the specified _interval_.     
 
 !!! function "`HASH` (**value**: _any_) → _varchar_"  
-    Calculate the [CityHash](https://opensource.googleblog.com/2011/04/introducing-cityhash.html) (64 bit) of **value**.
+    Calculate the [CityHash](https://opensource.googleblog.com/2011/04/introducing-cityhash.html) (64-bit) hash value of **value**.
 
 !!! function "`HEX_DECODE` (**str**: _varchar_) → _varchar_"  
-    Decode hexidecimal (BASE16) encoded value, **str**.    
+    Decode a hexadecimal (BASE16) encoded string **str**.    
     _Related:_ `HEX_ENCODE`
 
 !!! function "`HEX_ENCODE` (**str**: _varchar_) → _varchar_"  
-    Encode **str** with hexadecimal (BASE16) encoding.  
+    Encode **str** using hexadecimal (BASE16) encoding.  
     _Related:_ `HEX_DECODE`
 
 !!! function "`IIF` (**condition**, **true_value**, **false_value**) → _input type_"  
-    Return the **true_value** if the condition evaluates to `True`, otherwise return the **false_value**.
+    Return **true_value** if **condition** evaluates to `True`, otherwise return **false_value**. This is a shorthand for a simple `CASE` expression.
 
 !!! function "`IFNOTNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _input type_"  
     :octicons-star-16: **New in 0.19**   
-    Returns **check_expression** if not `null`, otherwise returns **replacement_value**.   
+    Return **check_expression** if it is not `null`, otherwise return **replacement_value**.   
     _Related:_ `IFNULL`   
 
 !!! function "`IFNULL` (**check_expression**: _any_, **replacement_value**: _any_) → _input type_"  
-    Returns **check_expression** if not `null`, otherwise returns **replacement_value**.   
+    Return **check_expression** if it is not `null`, otherwise return **replacement_value**.   
     _Related:_ `COALESCE`, `IFNOTNULL` 
 
 !!! function "`NORMAL` () → _numeric_"  
-    Random number from a normal (Gaussian) distribution; distribution is centred at 0.0 and has a standard deviation of 1.0. Per record.
+    Generate a random number from a normal (Gaussian) distribution with mean 0.0 and standard deviation 1.0. A different value is generated for each row.
 
 !!! function "`NULLIF` (**value1**: _any_, **value2**: _any_) → _input type_"  
-    Returns `null` if **value1** equals **value2**, otherwise returns **value1**. 
+    Return `null` if **value1** equals **value2**, otherwise return **value1**. This is useful for converting specific values to `null`.
 
 !!! function "`MD5` (**str**: _varchar_) → _varchar_"  
     Calculate the MD5 hash of **str**.
 
 !!! function "`RAND` () → _numeric_"  
-    Returns a random number between 0 and 1. Per record.
+    Generate a random number between 0 and 1. A different value is generated for each row.
 
 !!! function "`RANDOM` () → _numeric_"  
     Alias of `RAND`
 
 !!! function "`RANDOM_STRING` (**length**: _numeric_) → _varchar_"  
-    Returns a random string of lowercase alphabetic characters with a length of **length**. Per record.
+    Generate a random string of lowercase alphabetic characters with the specified **length**. A different value is generated for each row.
 
 !!! function "`SHA1` (**str**: _varchar_) → _varchar_"  
     Calculate the SHA1 hash of **str**.  
@@ -581,5 +581,5 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
     _Related:_ `SHA1`, `SHA224`, `SHA256`, `SHA384`
 
 !!! function "`UNNEST` (**array**: _array_) → _relation_"  
-    Create a virtual relation with a row for each element in **array**.
+    Convert an array into a virtual relation where each array element becomes a separate row.
 

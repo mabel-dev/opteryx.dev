@@ -1,6 +1,6 @@
 # Joins
 
-Joins allow you to combine data from multiple relations into a single relation. There are a number of different join types available, each combines relations in different ways.
+Joins allow you to combine data from multiple relations (tables or datasets) into a single result set. Different join types provide different ways to combine data, each suited to specific use cases.
 
 ## CROSS JOIN
 
@@ -11,11 +11,11 @@ FROM left_relation CROSS JOIN right_relation
 FROM left_relation, right_relation
 ~~~
 
-A `CROSS JOIN` returns the Cartesian product (all combinations) of two relations. 
+A `CROSS JOIN` returns the Cartesian product (all possible combinations) of two relations. Each row from the left relation is paired with every row from the right relation.
 
 **Syntax**
 
-Cross joins can either be specified using the explicit `CROSS JOIN` syntax or by specifying multiple relations in the `FROM` clause.
+Cross joins can be specified using either the explicit `CROSS JOIN` syntax or by listing multiple relations in the `FROM` clause separated by commas.
 
 ~~~sql
 SELECT *
@@ -25,9 +25,9 @@ SELECT *
 
 ![CROSS JOIN](cross-join.svg)
 
-The size of the resultant dataset when using `CROSS JOIN` is length of the two datasets multiplied together (2 x 3 = 6, in the pictorial example), which can easily result in extremely large datasets. When an alternate join approach is possible, it will almost always perform better than a `CROSS JOIN`.
+The size of the result set from a `CROSS JOIN` is the product of the row counts of the two input datasets (2 × 3 = 6 in the pictorial example). This can easily result in extremely large datasets. When an alternative join approach is possible, it will almost always perform better than a `CROSS JOIN`.
 
-`CROSS JOIN UNNEST` is a specific variation of a `CROSS JOIN`, where the values in an ARRAY column are treated like a single column relation.
+**Special case:** `CROSS JOIN UNNEST` is a specific variation where the values in an ARRAY column are treated as if they were rows in a single-column relation.
 
 ## INNER JOIN
 
@@ -35,11 +35,11 @@ The size of the resultant dataset when using `CROSS JOIN` is length of the two d
 FROM left_relation [ INNER ] JOIN right_relation < ON condition | USING (column) >
 ~~~
 
-An `INNER JOIN` returns rows from both relations where the value in the joining column of one relation matches the value in the joining column of the other relation. It's often the most commonly used join due to its straightforward and predictable behavior.
+An `INNER JOIN` returns only the rows from both relations where the values in the joining columns match. It's often the most commonly used join type due to its straightforward and predictable behavior.
 
 **Syntax**
 
-You can specify the `INNER JOIN` using the full `INNER JOIN` syntax or the shorter `JOIN` syntax. You can define the joining logic using either the `ON` condition or `USING(column)` syntax.
+You can specify an `INNER JOIN` using the full `INNER JOIN` keyword or the shorter `JOIN` keyword. You can define the joining condition using either the `ON` clause or the `USING(column)` syntax.
 
 ~~~sql
 SELECT *
@@ -50,11 +50,12 @@ SELECT *
 
 ![INNER JOIN](inner-join.svg)
 
-In this example, the blue column is used as the joining column in both relations. Only the value `1` occurs in both relations so the resultant dataset is the combination of the row with `1` in _right_relation_ and the row with `1` in _left_relation_.
+In this example, the blue column is used as the joining column in both relations. Only the value `1` appears in both relations, so the result set contains the combination of rows with `1` from both _left_relation_ and _right_relation_.
 
-`INNER JOIN ... ON` maintains all of the columns in relations on both sides of the `JOIN`.
+**Note on column handling:**
 
-`INNER JOIN ... USING` keeps a single instance of the columns in the `USING` clause, these columns are not considered a member of either of the left or right relations.
+- `INNER JOIN ... ON` retains all columns from both relations in the result.
+- `INNER JOIN ... USING` keeps only a single instance of the columns specified in the `USING` clause. These shared columns are not considered members of either the left or right relation.
 
 ## NATURAL JOIN
 
@@ -62,9 +63,9 @@ In this example, the blue column is used as the joining column in both relations
 FROM left_relation NATURAL JOIN right_relation
 ~~~
 
-A `NATURAL JOIN` performs a similar join to an `INNER JOIN ... ON` where the join conditions are automatically determined as equals conditions between columns with the same names in the two relations. This is not recommended in queries supporting production systems as these queries are brittle, especially in situations where schemas may change.
+A `NATURAL JOIN` performs a join similar to an `INNER JOIN` where the join conditions are automatically determined. It creates equality conditions between all columns with matching names in both relations. This approach is generally not recommended for production systems, as queries using `NATURAL JOIN` are fragile and can break when schemas change (e.g., when new columns with matching names are added).
 
-Performing a self `NATURAL JOIN` (the same relation for the left and right relations) removes rows which contain `null` values.
+**Special behavior:** Performing a self `NATURAL JOIN` (using the same relation for both left and right sides) effectively filters out rows containing `null` values in any column.
 
 ## LEFT JOIN
 
@@ -72,7 +73,7 @@ Performing a self `NATURAL JOIN` (the same relation for the left and right relat
 FROM left_relation LEFT [ OUTER ] JOIN right_relation ON condition
 ~~~
 
-A `LEFT JOIN` returns all rows from the left relation, and rows from the right relation where there is a matching row, otherwise the fields for the right relation are populated with `null`.
+A `LEFT JOIN` returns all rows from the left relation. For rows with matching values in the right relation, the corresponding right relation columns are included. For rows without a match, the right relation columns are filled with `null` values.
 
 **Syntax**
 
@@ -87,7 +88,7 @@ SELECT *
 
 ## RIGHT JOIN
 
-A `RIGHT JOIN` is the same as a `LEFT JOIN` with the relations swapped.
+A `RIGHT JOIN` is functionally equivalent to a `LEFT JOIN` with the left and right relations swapped. It returns all rows from the right relation, with matching left relation data where available, and `null` values for non-matching rows.
 
 ## FULL JOIN
 
@@ -95,7 +96,7 @@ A `RIGHT JOIN` is the same as a `LEFT JOIN` with the relations swapped.
 FROM left_relation FULL [ OUTER ] JOIN right_relation ON condition
 ~~~
 
-The `FULL JOIN` keyword returns all rows from the left relation, and all rows from the right relation. Where they have a matching value in the joining column, the rows will be aligned, otherwise the fields will be populated with `null`.
+The `FULL JOIN` (also called `FULL OUTER JOIN`) returns all rows from both the left and right relations. Where rows have matching values in the joining column, they are aligned in the result. For non-matching rows from either side, the columns from the other relation are filled with `null` values.
 
 **Syntax**
 
@@ -114,7 +115,7 @@ SELECT *
 FROM left_relation LEFT SEMI JOIN right_relation ON condition
 ~~~
 
-The `LEFT SEMI JOIN` keyword performs an `INNER JOIN` between the left and right relations but only return columns from the left_relation.
+The `LEFT SEMI JOIN` performs an intersection between the left and right relations, but returns only columns from the left relation. This is useful when you want to filter the left relation to only include rows that have matching rows in the right relation, without actually including any columns from the right relation.
 
 **Syntax**
 
@@ -129,7 +130,7 @@ SELECT *
 
 ## RIGHT SEMI JOIN
 
-A `RIGHT SEMI JOIN` is the same as a `LEFT SEMI JOIN` with the relations swapped.
+A `RIGHT SEMI JOIN` is functionally equivalent to a `LEFT SEMI JOIN` with the left and right relations swapped.
 
 ## LEFT ANTI JOIN
 
@@ -137,7 +138,7 @@ A `RIGHT SEMI JOIN` is the same as a `LEFT SEMI JOIN` with the relations swapped
 FROM left_relation LEFT ANTI JOIN right_relation ON condition
 ~~~
 
-The `LEFT ANTI JOIN` keyword performs an `INNER JOIN` between the left and right relations, however, instead of returning matching rows, only rows from the left_relation where there is no match are returned, and no columns or rows from the right_relation are returned.
+The `LEFT ANTI JOIN` returns rows from the left relation that do **not** have matching rows in the right relation. Only columns from the left relation are included in the result; the right relation serves only to filter out matching rows.
 
 **Syntax**
 
@@ -152,4 +153,4 @@ SELECT *
 
 ## RIGHT ANTI JOIN
 
-A `RIGHT ANTI JOIN` is the same as a `LEFT ANTI JOIN` with the relations swapped.
+A `RIGHT ANTI JOIN` is functionally equivalent to a `LEFT ANTI JOIN` with the left and right relations swapped.
