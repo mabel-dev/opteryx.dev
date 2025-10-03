@@ -1,79 +1,79 @@
 # Data Types
 
-The engine supports a reduced set of types compared to full DBMS platforms.
+Opteryx supports a streamlined set of data types compared to full DBMS platforms, focusing on the types most commonly needed for analytical queries.
 
 ## Types
 
 Name        | Description
 ----------- | --------------
-`ARRAY`     | A list of items of the same type
-`BOOLEAN`   | Logical boolean (True/False).
+`ARRAY`     | A list of items, all of the same type
+`BOOLEAN`   | Logical boolean (True/False)
 `BLOB` :octicons-star-16:     | Variable-length binary data
-`DOUBLE`    | Floating-point number
-`INTEGER`   | Whole number
-`DECIMAL` :octicons-star-16:  | Fixed-point number with specified precision
-`VARCHAR`   | Variable-length character string
-`DATE`      | The date component of a TIMESTAMP
-`TIME` :octicons-star-16: | The time component of a TIMESTAMP
-`TIMESTAMP` | Combination of date and time.
-`INTERVAL` :octicons-star-16: | The difference between two TIMESTAMP values
+`DOUBLE`    | Double-precision floating-point number
+`INTEGER`   | Whole number (64-bit signed integer)
+`DECIMAL` :octicons-star-16:  | Fixed-point number with specified precision and scale
+`VARCHAR`   | Variable-length character string (text)
+`DATE`      | Calendar date (year, month, day)
+`TIME` :octicons-star-16: | Time of day (hour, minute, second)
+`TIMESTAMP` | Combined date and time
+`INTERVAL` :octicons-star-16: | Time duration (difference between two TIMESTAMP values)
 
 !!! Note  
-    Types marked with :octicons-star-16: (DECIMAL, TIME, and INTERVAL) have limited support.
+    Types marked with :octicons-star-16: (BLOB, DECIMAL, TIME, and INTERVAL) have limited support and may not be fully implemented in all contexts.
 
 ## Casting
 
 ### Functions
 
-Values can be cast using the `CAST` function, its form is `CAST(any AS type)`. Where values are incompatible, an error will be thrown, to avoid errors `TRY_CAST` (or `SAFE_CAST`) can be used instead which will return `null` instead of an error.
+Values can be cast to different types using the `CAST` function. The syntax is `CAST(value AS type)`. When a value cannot be converted to the target type, an error will be raised. To avoid errors, use `TRY_CAST` (or its alias `SAFE_CAST`) which returns `null` instead of raising an error when casting fails.
 
 ### Type Hints
 
 **Intervals**
 
-Intervals require definition by type hints, using the type name before providing a literal description of the value.
+Intervals require definition using type hints. Use the `INTERVAL` keyword followed by a literal value and a time unit.
 
 ~~~
 INTERVAL 'value' unit
 ~~~
 
-Where unit can be 'Year', 'Month', 'Day', 'Hour', 'Minute' or 'Second'.
+Where unit can be 'YEAR', 'MONTH', 'DAY', 'HOUR', 'MINUTE', or 'SECOND'.
 
 Example:
 ~~~sql
 SELECT INTERVAL '1' YEAR
 ~~~
 
-**Other**
+**Other Types**
 
-`BOOLEAN`, `DOUBLE`, `INTEGER` and `TIMESTAMP` also support 'type hint' notation (e.g. `SELECT TIMESTAMP '2022-01-01';`) to perform casting.
+`BOOLEAN`, `DOUBLE`, `INTEGER`, and `TIMESTAMP` also support type hint notation (e.g., `SELECT TIMESTAMP '2022-01-01';`) to perform casting.
 
-`BLOB` supports `b` prefix notation (e.g. `b'string'`)
+`BLOB` supports the `b` prefix notation (e.g., `b'string'`) to create binary string literals.
 
 ### Type Annotations
 
-Some types support type annotations in the form `<value>::<type>`, for example `1::double` is equivalent to `1.0`.
+Some types support type annotations using the form `<value>::<type>`. For example, `1::double` is equivalent to `1.0`.
 
 ### Byte Strings
 
-`b` prefixes can be used to mark string literals as byte strings. For example `b'abc'` is equivalent to `blob('abc')`.
+The `b` prefix can be used to mark string literals as byte strings (BLOB type). For example, `b'abc'` is equivalent to `blob('abc')`.
 
 ## Coercion
 
 ### Timestamps & Dates
 
-Literal values in quotes may be interpreted as a `TIMESTAMP` or `DATE` when they match a valid date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)  format (e.g. `YYYY-MM-DD` and `YYYY-MM-DD HH:MM`). The value will be coerced to a `DATE` if there is no time component, otherwise it will be coerced to a `TIMESTAMP`. 
+Literal string values in quotes may be automatically interpreted as `TIMESTAMP` or `DATE` types when they match valid dates in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format (e.g., `YYYY-MM-DD` or `YYYY-MM-DD HH:MM`). Values without a time component are coerced to `DATE`, while those with a time component become `TIMESTAMP`.
 
-All `TIMESTAMP` values read from datasets are coerced to nanosecond precision timestamps.
+All `TIMESTAMP` values read from datasets are standardized to nanosecond precision internally.
 
-The default precision for `TIMESTAMP` is milliseconds, values not in this precision may be converted internally.
+The default precision for `TIMESTAMP` values is milliseconds. Values in other precisions may be converted internally to maintain consistency.
 
 ### Numbers
 
-Hex literals can be provided using `0x` prefix, for example `0xc0ffee` is handled as the integer `12648430`.
+Hexadecimal literals can be provided using the `0x` prefix. For example, `0xc0ffee` is interpreted as the integer `12648430`.
 
-Numeric literals may contain underscores (`_`) which are helpful to improve the readability of long numbers, e.g. `1_000_000`.
+Numeric literals may contain underscores (`_`) to improve readability of long numbers. For example, `1_000_000` is equivalent to `1000000`.
 
 ### Structs
 
-`VARCHAR` and `BLOB` columns containing JSON formatted strings support STRUCT accessors and functions. 
+`VARCHAR` and `BLOB` columns containing JSON-formatted strings support struct accessors and functions, allowing you to query nested data structures.

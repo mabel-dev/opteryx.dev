@@ -1,10 +1,10 @@
 # Expressions
 
-An expression is a combination of values, operators and functions. Expressions are highly composable, and range from very simple to arbitrarily complex. They can be found in many different parts of SQL statements. In this section, we provide the different types of operators that can be used within expressions.
+An expression is a combination of values, operators, and functions that evaluates to a single value. Expressions are highly composable and can range from very simple (e.g., a single column reference) to arbitrarily complex (e.g., nested function calls with multiple operators). They can appear in many different parts of SQL statements, including `SELECT`, `WHERE`, `HAVING`, and `ORDER BY` clauses.
 
 ## Logical Operators
 
-Logical Operators are used within Expressions to express how predicates combine.
+Logical operators are used within expressions to combine or modify boolean predicates (conditions).
 
 The following logical operators are available: `AND`, `OR`, `XOR`, and `NOT`.
 
@@ -16,33 +16,33 @@ The following logical operators are available: `AND`, `OR`, `XOR`, and `NOT`.
 | _null_ | true  | _null_    | true     | _null_    | _null_  |
 | _null_ | false | false     | _null_   | _null_    | _null_  |
 
-The operators `AND`, `OR`, and `XOR` are commutative, that is, you can switch the left and right operand without affecting the result.
+The operators `AND`, `OR`, and `XOR` are commutative, meaning you can switch the left and right operands without changing the result.
 
 ## Comparison Operators
 
-Comparison Operators are used within Expressions to compare values, usually involving comparing a field within the datasets against a literal value - although comparisons can be used against two fields, or two literals.
+Comparison operators are used within expressions to compare values. Common use cases include comparing a field from the dataset against a literal value, though comparisons can also be between two fields or two literal values.
 
-Usually when one of the values involved in the comparison is `null`, the result is `null`.
+When one of the values in a comparison is `null`, the result is typically `null` (following SQL's three-valued logic).
 
 Operator     | Description                   
 :----------- | :-----------------------------
-`=`          | equal to               
-`<>`         | not equal to  
-`<`          | less than                     
-`>`          | greater than                
-`<=`         | less than or equal to        
-`>=`         | greater than or equal to                  
-`IN`         | value in list              
-`NOT IN`     | value not in list            
-`LIKE`       | pattern match           
-`NOT LIKE`   | inverse results of `LIKE`         
-`ILIKE`      | case-insensitive pattern match 
-`NOT ILIKE`  | inverse results of `ILIKE`     
-`RLIKE`      | regular expression match (also `~` and `SIMILAR TO`)     
-`NOT RLIKE`  | inverse results of `RLIKE` (also `!~` and `NOT SIMILAR TO`)
-`~*`         | case insensitive regular expression match
-`IS`         | special comparison for `true`, `false` and `null`
-`|`          | Bitwise OR, or IP containment
+`=`          | Equal to               
+`<>`         | Not equal to  
+`<`          | Less than                     
+`>`          | Greater than                
+`<=`         | Less than or equal to        
+`>=`         | Greater than or equal to                  
+`IN`         | Value is in a list              
+`NOT IN`     | Value is not in a list            
+`LIKE`       | String pattern matching           
+`NOT LIKE`   | Negation of `LIKE`         
+`ILIKE`      | Case-insensitive pattern matching 
+`NOT ILIKE`  | Negation of `ILIKE`     
+`RLIKE`      | Regular expression matching (aliases: `~`, `SIMILAR TO`)     
+`NOT RLIKE`  | Negation of `RLIKE` (aliases: `!~`, `NOT SIMILAR TO`)
+`~*`         | Case-insensitive regular expression matching
+`IS`         | Special comparison for `true`, `false`, and `null`
+`|`          | Bitwise OR, or IP address containment
 `&`          | Bitwise AND
 `^`          | Bitwise XOR
 
@@ -50,17 +50,21 @@ Operator     | Description
 
 ### BETWEEN
 
+The `BETWEEN` operator provides a convenient way to test if a value falls within a range.
+
 Predicate                 | Description
 ------------------------- | ---------------------------------
-a `BETWEEN` x `AND` y     | equivalent to `a >= x AND a <= y`
-a `NOT BETWEEN` x `AND` y | equivalent to `a < x OR a > y`
+a `BETWEEN` x `AND` y     | Equivalent to `a >= x AND a <= y`
+a `NOT BETWEEN` x `AND` y | Equivalent to `a < x OR a > y`
 
 !!! Warning  
-    Using `BETWEEN` with other predicates, especially when used with an `AND` conjunction, can cause the query parser to fail. 
+    Using `BETWEEN` with other predicates in complex expressions, especially when combined with additional `AND` conjunctions, can sometimes cause the query parser to fail. Consider using explicit comparison operators for complex conditions.
 
 ### CASE
 
-The `CASE` expression has two forms. The 'simple' form searches each value expression from top to bottom until it finds one that equals expression:
+The `CASE` expression provides conditional logic within SQL queries and comes in two forms.
+
+The **simple** form searches each value expression from top to bottom until it finds one that equals the input expression:
 
 ~~~sql
 CASE expression
@@ -70,7 +74,9 @@ CASE expression
 END
 ~~~
 
-The result for the matching value is returned. If no match is found, the result from the `ELSE` clause is returned if it exists, otherwise `null` is returned. Example:
+The result for the matching value is returned. If no match is found, the result from the `ELSE` clause is returned if present; otherwise `null` is returned.
+
+Example:
 
 ~~~sql
 SELECT name, 
@@ -82,7 +88,7 @@ SELECT name,
   FROM $planets;
 ~~~
 
-The 'searched' form evaluates each boolean condition from top to bottom until one is true and returns the matching result:
+The **searched** form evaluates each boolean condition from top to bottom until one evaluates to true, then returns the corresponding result:
 
 ~~~sql
 CASE
@@ -92,7 +98,9 @@ CASE
 END
 ~~~
 
-If no conditions are true, the result from the `ELSE` clause is returned if it exists, otherwise `null` is returned. Example:
+If no conditions are true, the result from the `ELSE` clause is returned if present; otherwise `null` is returned.
+
+Example:
 
 ~~~sql
 SELECT name, 
