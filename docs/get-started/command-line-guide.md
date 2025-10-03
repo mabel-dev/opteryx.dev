@@ -2,7 +2,7 @@
 
 The Opteryx Command Line Interface (CLI) provides a terminal-based interface for executing queries. You can use it either as an interactive shell (REPL) or to execute individual queries (Batch).
 
-Both modes require a working Python environment and Opteryx to be installed. To install Python, refer to the [Python website](https://www.python.org/). To install Opteryx follow the [quickstart](../quickstart/) guide.
+Both modes require a working Python environment and Opteryx to be installed. To install Python, refer to the [Python website](https://www.python.org/). To install Opteryx follow the [quickstart](quickstart.md) guide.
 
 ## REPL (Interactive) Mode
 
@@ -58,8 +58,6 @@ $ python -m opteryx --o 'planets.csv' "SELECT * FROM \$planets"
 Querying individual files requires the relative path in place of the relation/table name in the query. This usually requires putting the filename in quotes, as filenames often contain illegal characters.
 
 ### Command Line Options
-
-Abridged usage guidance is available below:
 
 ~~~console
 Usage: python -m opteryx [OPTIONS] [SQL] 
