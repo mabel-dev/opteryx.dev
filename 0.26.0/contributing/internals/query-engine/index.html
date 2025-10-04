@@ -18,7 +18,7 @@
         <link rel="prev" href="../project-structure/">
       
       
-        <link rel="next" href="../storage-engine/">
+        <link rel="next" href="../binder/">
       
       
       <link rel="icon" href="../../../icarus-opteryx.png">
@@ -2075,6 +2075,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../project-structure/" class="md-nav__link">
         
   
@@ -2148,9 +2171,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#sql-rewriter" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL Rewriter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parser-lexer" class="md-nav__link">
     <span class="md-ellipsis">
       Parser &amp; Lexer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ast-rewriter" class="md-nav__link">
+    <span class="md-ellipsis">
+      AST Rewriter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-planner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Planner
     </span>
   </a>
   
@@ -2166,9 +2216,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#query-planner" class="md-nav__link">
+  <a href="#physical-planner" class="md-nav__link">
     <span class="md-ellipsis">
-      Query Planner
+      Physical Planner
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operator-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operator Execution
     </span>
   </a>
   
@@ -2217,12 +2276,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../binder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../storage-engine/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Storage Engine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../joins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JOINs
     
   </span>
   
@@ -2274,10 +2379,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_8" >
         
           
-          <label class="md-nav__link" for="__nav_4_6_5" id="__nav_4_6_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_6_8" id="__nav_4_6_8_label" tabindex="0">
             
   
   
@@ -2290,8 +2395,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_8">
             <span class="md-nav__icon md-icon"></span>
             Implementation
           </label>
@@ -2511,9 +2616,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#sql-rewriter" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL Rewriter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parser-lexer" class="md-nav__link">
     <span class="md-ellipsis">
       Parser &amp; Lexer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ast-rewriter" class="md-nav__link">
+    <span class="md-ellipsis">
+      AST Rewriter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-planner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Planner
     </span>
   </a>
   
@@ -2529,9 +2661,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#query-planner" class="md-nav__link">
+  <a href="#physical-planner" class="md-nav__link">
     <span class="md-ellipsis">
-      Query Planner
+      Physical Planner
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operator-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operator Execution
     </span>
   </a>
   
@@ -2590,11 +2731,23 @@
 <p>If you are interested in how databases work, I recommend the resources from <a href="https://db.cs.cmu.edu/">The CMU Database Group</a>, and the collection of resources at <a href="https://github.com/pingcap/awesome-database-learning">Awesome Database Learning</a> and <a href="https://github.com/huachaohuang/awesome-dbdev">Awesome Database Development</a>.</p>
 </blockquote>
 <p>The Opteryx query engine has the following key components and processing queries follows this high-level series of steps:</p>
-<p>&emsp;<strong>Parser &amp; Lexer</strong> receives the user SQL and builds an Abstract Syntax Tree (AST).<br />
-&emsp;<strong>Binder</strong> maps contextual information to the AST.<br />
-&emsp;<strong>Planner</strong> receives the AST and builds a Query Plan.<br />
+<p>&emsp;<strong>SQL Rewriter</strong> preprocesses the SQL query to handle special syntax and prepare for parsing.<br />
+&emsp;<strong>Parser &amp; Lexer</strong> receives the user SQL and builds an Abstract Syntax Tree (AST).<br />
+&emsp;<strong>AST Rewriter</strong> transforms the AST to simplify and normalize the structure.<br />
+&emsp;<strong>Logical Planner</strong> creates a logical query plan from the AST.<br />
+&emsp;<strong>Binder</strong> maps contextual information to the plan, resolving identifiers to schemas.<br />
 &emsp;<strong>Optimizer</strong> receives a Query Plan and rewrites it to improve performance. <br />
+&emsp;<strong>Physical Planner</strong> converts the optimized logical plan into a physical execution plan.<br />
 &emsp;<strong>Executor</strong> receives the Query Plan and returns the result dataset.  </p>
+<h2 id="sql-rewriter">SQL Rewriter</h2>
+<p>The SQL Rewriter is the first component in the query processing pipeline. It performs preprocessing on the SQL query before it reaches the parser. This includes:</p>
+<ul>
+<li>Handling temporal <code>FOR</code> clauses which are Opteryx-specific syntax</li>
+<li>Normalizing SQL syntax variations</li>
+<li>Expanding macros and syntactic sugar</li>
+<li>Preparing the query for standard SQL parsing</li>
+</ul>
+<p>The SQL Rewriter allows Opteryx to support custom extensions while still using a standard SQL parser.</p>
 <h2 id="parser-lexer">Parser &amp; Lexer</h2>
 <p>The primary goal of the Parser and Lexer (which in some engines is two separate components) is to interpret the SQL provided by the user. This is generally done in two steps, the first is the break the query into separate tokens (or words) and the second is to understand the meaning of those tokens.</p>
 <p>For example for this statement</p>
@@ -2603,13 +2756,48 @@
 </code></pre></div>
 <p>The Parser and Lexer will understand that we're requesting the field <code>SELECT</code> from the relation <code>FROM</code>.</p>
 <p>Opteryx uses <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> as its Parser and Lexer, as a Rust library, Opteryx creates Python bindings for sqlparser-rs (derived from <a href="https://github.com/wseaton/sqloxide">sqloxide</a>). Opteryx does not support all features and functionality provided by this library.</p>
-<p>This sqlparser-rs interprets all SQL except for the Temporal <code>FOR</code> clause which are handled separately.</p>
+<p>This sqlparser-rs interprets all SQL except for the Temporal <code>FOR</code> clause which is handled by the SQL Rewriter.</p>
+<h2 id="ast-rewriter">AST Rewriter</h2>
+<p>After the Parser &amp; Lexer creates the AST, the AST Rewriter performs transformations on the tree structure to:</p>
+<ul>
+<li>Normalize and simplify the AST structure</li>
+<li>Apply early optimizations that are easier to perform on the AST than on the query plan</li>
+<li>Resolve certain syntactic constructs into their canonical forms</li>
+<li>Prepare the AST for the logical planning stage</li>
+</ul>
+<p>The AST Rewriter operates before the Binder, so it works with unbound identifiers and doesn't require schema information.</p>
+<h2 id="logical-planner">Logical Planner</h2>
+<p>The Logical Planner converts the AST into a logical query plan - a directed acyclic graph (DAG) that represents the operations needed to answer the query without concern for how they will be physically executed.</p>
+<p>The logical plan focuses on <em>what</em> needs to be done, not <em>how</em> to do it efficiently. This separation allows the optimizer to work on a clean, normalized representation.</p>
 <h2 id="binder">Binder</h2>
-<p>The Binder's primary goal is to embelish and replace information in the AST with details which the Parser &amp; Lexer did not have.</p>
-<p>This is used for replacing variables in queries with their literal equivalents and adding temporal information to relations.</p>
-<h2 id="query-planner">Query Planner</h2>
-<p>The Query Planner's primary goal is to convert the AST into a plan to respond to the query. The Query Plan is described in a Directed Acyclic Graph (DAG) with the nodes that acquire the raw data, usually from storage, at the start of the flow and the node that forms the data to return to the user (usually the <code>SELECT</code> step) at the end.</p>
-<p>The DAG is made of different nodes which process the data as they pass through then node. Different node types exist for processing actions like Aggregations (<code>GROUP BY</code>), Selection (<code>WHERE</code>) and Distinct (<code>DISTINCT</code>).</p>
+<p>The Binder's primary goal is to resolve and validate identifiers in the query plan, connecting them to actual schemas and data sources.</p>
+<p>Key responsibilities of the Binder include:</p>
+<ul>
+<li><strong>Identifier Resolution</strong>: Maps column and table references to their actual sources and schemas</li>
+<li><strong>Schema Binding</strong>: Associates each identifier with its schema information (data type, source relation, etc.)</li>
+<li><strong>Variable Substitution</strong>: Replaces query variables with their literal values</li>
+<li><strong>Temporal Information</strong>: Adds temporal information to relations for time-travel queries</li>
+<li><strong>Validation</strong>: Ensures referenced columns and tables exist and are accessible</li>
+<li><strong>Ambiguity Detection</strong>: Identifies and reports ambiguous column references</li>
+</ul>
+<p>The Binder transforms a logical plan with unresolved identifiers into a bound plan where all references are validated and connected to their schemas. This bound plan is essential for subsequent optimization and execution stages.</p>
+<p>For example, when you write <code>SELECT name FROM users</code>, the Binder:
+1. Resolves <code>users</code> to an actual data source
+2. Confirms the <code>name</code> column exists in the <code>users</code> schema<br />
+3. Records the data type and source information for the <code>name</code> column
+4. Creates schema information that later stages can use</p>
+<h2 id="physical-planner">Physical Planner</h2>
+<p>The Physical Planner takes the optimized logical plan and converts it into a physical execution plan that can be executed by the query executor.</p>
+<p>While the logical plan describes <em>what</em> to do, the physical plan describes <em>how</em> to do it, including:</p>
+<ul>
+<li>Choosing specific algorithms for operations (e.g., hash join vs. nested loop join)</li>
+<li>Determining data flow and memory management strategies</li>
+<li>Setting up operator nodes for execution</li>
+<li>Preparing for the volcano-style execution model</li>
+</ul>
+<p>The physical plan is the final plan that gets executed.</p>
+<h2 id="operator-execution">Operator Execution</h2>
+<p>The Query Plan is composed of operator nodes which process data as it flows through the plan. Different node types exist for processing actions like Aggregations (<code>GROUP BY</code>), Selection (<code>WHERE</code>) and Distinct (<code>DISTINCT</code>).</p>
 <p>Query plans follow a generally accepted order of execution. This does not match the order queries are usually written in, instead it follows this order:</p>
 <p><img alt="OPERATOR ORDER" src="../operator-order.svg" /> </p>
 <p>The planner ensures the processes to be applied to the data reflect this order and creates the most convenient plan to achieve this.</p>

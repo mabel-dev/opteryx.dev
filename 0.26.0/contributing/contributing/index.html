@@ -1904,6 +1904,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#code-style-and-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Style and Quality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#licensing" class="md-nav__link">
     <span class="md-ellipsis">
       Licensing
@@ -2142,6 +2151,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../internals/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../internals/project-structure/" class="md-nav__link">
         
   
@@ -2188,12 +2220,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../internals/binder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../internals/storage-engine/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Storage Engine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../internals/joins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JOINs
     
   </span>
   
@@ -2245,10 +2323,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_8" >
         
           
-          <label class="md-nav__link" for="__nav_4_6_5" id="__nav_4_6_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_6_8" id="__nav_4_6_8_label" tabindex="0">
             
   
   
@@ -2261,8 +2339,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_8">
             <span class="md-nav__icon md-icon"></span>
             Implementation
           </label>
@@ -2491,6 +2569,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#code-style-and-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Style and Quality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#licensing" class="md-nav__link">
     <span class="md-ellipsis">
       Licensing
@@ -2539,12 +2626,32 @@
 <p>All submissions, including submissions by core project members, require review. We use GitHub pull requests for this purpose. Consult <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">GitHub Help</a> for more information on using pull requests. </p>
 <p>Pull requests that add support for, or fix a bug in, a feature in a popular RDBMS, or address deficiency in documentation, will likely be accepted after a brief review. For more substantive changes you should start a <a href="https://github.com/mabel-dev/opteryx/discussions">discussion</a> to coordinate with maintainers.</p>
 <p>We have included a number of tests which run automatically when code is submitted to help maintain consistency and quality of the codebase, note that these may not be automatically triggered for new contributors. Pull requests which do not meet the quality criteria will not be reviewed or merged.</p>
-<p>Changes should have:  </p>
+<h2 id="code-style-and-quality">Code Style and Quality</h2>
+<p>For consistent style, code should follow these guidelines:</p>
 <ul>
-<li>Corresponding unit and regression tests  </li>
-<li>A clean execution of the CI tests on GitHub     </li>
-<li>Updated documentation   </li>
-<li>Attributed external sources  </li>
+<li>Imports on separate lines (<code>import</code>s then <code>from</code>s)</li>
+<li>Variables should be in <code>snake_case</code></li>
+<li>Classes should be in <code>PascalCase</code></li>
+<li>Constants should be in <code>UPPER_SNAKE_CASE</code></li>
+<li>Methods should have docstrings</li>
+<li><a href="https://github.com/psf/black">Black</a> formatted</li>
+<li>Self-explanatory method, class and variable names</li>
+<li>Type hints, especially in function definitions</li>
+</ul>
+<p>All code changes should include:</p>
+<ul>
+<li>Corresponding unit and regression tests</li>
+<li>A clean execution of the CI tests on GitHub</li>
+<li>Updated documentation where relevant</li>
+<li>Attributed external sources - even if there is no explicit license requirement</li>
+</ul>
+<h3 id="comments">Comments</h3>
+<ul>
+<li>Computers will interpret anything, humans need help interpreting code</li>
+<li>Spend time writing readable code rather than verbose comments</li>
+<li>Humans struggle with threading, recursion, parallelization, variables called <code>x</code> and more than 10... of anything</li>
+<li>Comments should usually be more than just the code in other words</li>
+<li>Well-written code doesn't always need comments</li>
 </ul>
 <h3 id="discord">Discord</h3>
 <p>Discord is our target channel for community and discussion.</p>

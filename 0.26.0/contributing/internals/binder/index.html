@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://opteryx.dev/0.26.0/contributing/internals/binder/">
       
       
+        <link rel="prev" href="../query-engine/">
+      
+      
+        <link rel="next" href="../storage-engine/">
       
       
       <link rel="icon" href="../../../icarus-opteryx.png">
@@ -109,6 +113,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#binder" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -245,10 +254,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../contributing/" class="md-tabs__link">
           
   
@@ -1785,24 +1796,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -1815,7 +1831,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             CONTRIBUTING
@@ -2013,6 +2029,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2023,11 +2041,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
         
           
           <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
@@ -2043,12 +2061,35 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             System Internals
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2100,6 +2141,107 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Binder
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binder
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Details
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
@@ -2109,6 +2251,29 @@
   
   <span class="md-ellipsis">
     Storage Engine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../joins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JOINs
     
   </span>
   
@@ -2160,10 +2325,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_8" >
         
           
-          <label class="md-nav__link" for="__nav_4_6_5" id="__nav_4_6_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_6_8" id="__nav_4_6_8_label" tabindex="0">
             
   
   
@@ -2176,8 +2341,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_8">
             <span class="md-nav__icon md-icon"></span>
             Implementation
           </label>
@@ -2387,6 +2552,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Details
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2405,22 +2616,99 @@
   
 
 
-  <h1>Binder</h1>
-
-<p>LITERAL COLUMNS
-- node_type is LITERAL
-- schema_column is a ConstantColumn
-- type is the data type of the ConstantColumn</p>
-<p>get the value from the schema_column.value</p>
-<p>IDENTIFIER
-- node_tpye is IDENTIFIER
-- schema_column is a FlatColumn
-- source is the relation (remote dataset, subquery)
-- source_column is the name of the column at the source</p>
-<div class="highlight"><pre><span></span><code>    alias=alias,  # AS alias, if provided
-    source_column=branch[-1][&quot;value&quot;],  # the source column
-    source=&quot;.&quot;.join(p[&quot;value&quot;] for p in branch[:-1]),  # the source relation
+<h1 id="binder">Binder</h1>
+<p>The Binder is a critical component in the Opteryx query engine that bridges the gap between the logical query plan and the physical execution. It resolves all identifiers (table names, column names, aliases) to their actual schemas and validates that the query is semantically correct.</p>
+<h2 id="purpose">Purpose</h2>
+<p>The primary purposes of the Binder are:</p>
+<ol>
+<li><strong>Identifier Resolution</strong>: Map all column and table references to their actual data sources</li>
+<li><strong>Schema Binding</strong>: Associate each identifier with complete schema information (data type, nullable, source relation, etc.)</li>
+<li><strong>Type Checking</strong>: Validate that operations are performed on compatible data types</li>
+<li><strong>Ambiguity Detection</strong>: Identify and report ambiguous column references that could refer to multiple sources</li>
+<li><strong>Variable Substitution</strong>: Replace query parameters and variables with their actual values</li>
+<li><strong>Temporal Binding</strong>: Add temporal information for time-travel queries</li>
+</ol>
+<h2 id="how-it-works">How It Works</h2>
+<h3 id="column-resolution">Column Resolution</h3>
+<p>When the binder encounters a column reference, it must determine which relation (table, subquery, CTE) the column comes from. The process is:</p>
+<ol>
+<li>Search all available schemas in the current context</li>
+<li>Check if the column exists in exactly one schema (if multiple matches, report ambiguity)</li>
+<li>Create a <code>FlatColumn</code> object with the column's metadata:</li>
+<li>Column name and any alias</li>
+<li>Data type</li>
+<li>Source relation</li>
+<li>Source column name (may differ from the reference if aliased)</li>
+</ol>
+<h3 id="schema-context">Schema Context</h3>
+<p>The binder maintains a context of available schemas as it traverses the query plan. This context includes:</p>
+<ul>
+<li>Schemas from scanned relations (tables, views)</li>
+<li>Schemas from subqueries and CTEs</li>
+<li>Schemas created by previous operators in the plan</li>
+</ul>
+<p>As operators are bound, the available schema context changes. For example, a projection changes which columns are available to downstream operators.</p>
+<h3 id="column-types">Column Types</h3>
+<p>The binder works with different types of columns:</p>
+<h4 id="identifier-columns">Identifier Columns</h4>
+<p>These reference columns from relations:</p>
+<ul>
+<li><code>node_type</code> is <code>IDENTIFIER</code></li>
+<li><code>schema_column</code> is a <code>FlatColumn</code></li>
+<li><code>source</code> is the relation (remote dataset, subquery, CTE)</li>
+<li><code>source_column</code> is the name of the column at the source</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">FlatColumn</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">alias</span><span class="o">=</span><span class="n">alias</span><span class="p">,</span>  <span class="c1"># AS alias, if provided</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">source_column</span><span class="o">=</span><span class="n">branch</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">],</span>  <span class="c1"># the source column name</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">source</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">branch</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span>  <span class="c1"># the source relation</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span>
 </code></pre></div>
+<h4 id="literal-columns">Literal Columns</h4>
+<p>These are constant values in the query:</p>
+<ul>
+<li><code>node_type</code> is <code>LITERAL</code></li>
+<li><code>schema_column</code> is a <code>ConstantColumn</code></li>
+<li><code>type</code> is the data type of the constant</li>
+</ul>
+<p>The value is retrieved from <code>schema_column.value</code>.</p>
+<h4 id="computed-columns">Computed Columns</h4>
+<p>These are expressions that produce new columns (e.g., <code>price * quantity</code>).</p>
+<h2 id="examples">Examples</h2>
+<h3 id="simple-query">Simple Query</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span>
+</code></pre></div>
+<p>The binder will:
+1. Resolve <code>users</code> to a data source and load its schema
+2. Confirm <code>name</code> and <code>age</code> columns exist in the <code>users</code> schema
+3. Create bound column references with full type information</p>
+<h3 id="ambiguous-reference">Ambiguous Reference</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">users</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">user_id</span>
+</code></pre></div>
+<p>If both <code>users</code> and <code>orders</code> have an <code>id</code> column, the binder will raise an <code>AmbiguousIdentifierError</code> because it cannot determine which <code>id</code> is being requested in the SELECT clause.</p>
+<h3 id="with-alias">With Alias</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">total</span><span class="w"> </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">u</span><span class="w"> </span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">o</span><span class="w"> </span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">user_id</span>
+</code></pre></div>
+<p>The binder will:
+1. Register <code>users</code> with alias <code>u</code>
+2. Register <code>orders</code> with alias <code>o</code><br />
+3. Resolve <code>u.name</code> to <code>users.name</code>
+4. Resolve <code>o.total</code> to <code>orders.total</code></p>
+<h2 id="implementation-details">Implementation Details</h2>
+<p>The binder is implemented in <code>/opteryx/planner/binder/</code> with several key files:</p>
+<ul>
+<li><code>binder.py</code>: Main binding logic and helper functions</li>
+<li><code>binder_visitor.py</code>: Traverses the query plan and applies binding</li>
+<li><code>binding_context.py</code>: Manages the schema context during binding</li>
+<li><code>operator_map.py</code>: Maps operators to their schema transformations</li>
+</ul>
+<p>The binder operates after the logical planner creates the initial query plan, but before optimization. This ensures the optimizer has complete schema information to make informed decisions.</p>
 
 
 

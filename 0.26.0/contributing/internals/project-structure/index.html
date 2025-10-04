@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://opteryx.dev/0.26.0/contributing/internals/project-structure/">
       
       
-        <link rel="prev" href="../../set-up-guides/macos/">
+        <link rel="prev" href="../overview/">
       
       
         <link rel="next" href="../query-engine/">
@@ -2072,6 +2072,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2172,12 +2195,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../binder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../storage-engine/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Storage Engine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../joins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JOINs
     
   </span>
   
@@ -2229,10 +2298,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_8" >
         
           
-          <label class="md-nav__link" for="__nav_4_6_5" id="__nav_4_6_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_6_8" id="__nav_4_6_8_label" tabindex="0">
             
   
   
@@ -2245,8 +2314,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_8">
             <span class="md-nav__icon md-icon"></span>
             Implementation
           </label>
@@ -2497,36 +2566,44 @@
 <h2 id="folder-structure">Folder Structure</h2>
 <p>Opteryx's repository folder structure is described below:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>opteryx/                 &lt;- main opteryx library
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> ├── connectors/         &lt;- modules to connect to data sources
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> ├── compiled/           &lt;- cython modules
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> ├── functions/          &lt;- modules to execute functions within SQL statements
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> ├── managers/           &lt;- libraries responsible for key functional units
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a> │   ├── cache/          &lt;- modules implementing caching systems
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a> │   ├── expression/     &lt;- modules implementing expression evaluation
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a> │   ├── kvstores/       &lt;- modules implementing interfacing with KV Stores
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a> │   └── schemes/        &lt;- modules implementing storage schemes
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a> ├── models/             &lt;- internal data models
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a> ├── operators/          &lt;- modules implementing steps in the query plan
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a> ├── planner/            &lt;- the planning and management of the query engine
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a> ├── virtual_datasets/   &lt;- sample data (e.g. $planets, $astronauts, $satellites)
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a> ├── shared/             &lt;- global resources
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a> ├── third_party/        &lt;- third party code
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a> │   ├── abseil/ 
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a> │   ├── alantsd/
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a> │   ├── cyan4973/
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a> │   ├── fastfloat/
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a> │   ├── maki_nage/
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a> │   ├── query_builder/
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a> │   ├── sqloxide/
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a> │   ├── tktech/
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a> │   ├── travers/
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a> │   ├── ulfjack/
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a> │   └── ...  
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a> ├── utils/              &lt;- helper libraries
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a> └── ...       
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>src/                     &lt;- Rust libraries
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>testdata/                &lt;- Data referenced in unit tests
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>tests/                   &lt;- Unit tests
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> ├── compiled/           &lt;- cython-compiled modules for performance
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> ├── connectors/         &lt;- modules to connect to data sources
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> ├── constants/          &lt;- constant definitions used across the codebase
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> ├── datatypes/          &lt;- data type definitions and handling
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a> ├── functions/          &lt;- modules to execute functions within SQL statements
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a> ├── managers/           &lt;- libraries responsible for key functional units
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a> │   ├── cache/          &lt;- modules implementing caching systems
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a> │   ├── execution/      &lt;- query execution management
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a> │   ├── expression/     &lt;- modules implementing expression evaluation
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a> │   ├── kvstores/       &lt;- modules implementing interfacing with KV Stores
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a> │   ├── permissions/    &lt;- permission and access control management
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a> │   └── schemes/        &lt;- modules implementing storage schemes
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a> ├── models/             &lt;- internal data models
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a> ├── operators/          &lt;- modules implementing steps in the query plan
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a> ├── planner/            &lt;- the planning and management of the query engine
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a> │   ├── binder/         &lt;- binds identifiers to schemas and resolves references
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a> │   ├── logical_planner/ &lt;- creates logical query plans from AST
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a> │   ├── optimizer/      &lt;- optimizes query plans for performance
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a> │   └── views/          &lt;- view management
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a> ├── shared/             &lt;- global resources
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a> ├── third_party/        &lt;- third party code
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a> │   ├── abseil/ 
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a> │   ├── alantsd/
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a> │   ├── cyan4973/
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a> │   ├── fastfloat/
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a> │   ├── maki_nage/
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a> │   ├── query_builder/
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a> │   ├── sqloxide/
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a> │   ├── tktech/
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a> │   ├── travers/
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a> │   ├── ulfjack/
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a> │   └── ...  
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a> ├── utils/              &lt;- helper libraries
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a> ├── virtual_datasets/   &lt;- sample data (e.g. $planets, $astronauts, $satellites)
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a> └── ...       
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>src/                     &lt;- Rust libraries
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>testdata/                &lt;- Data referenced in unit tests
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>tests/                   &lt;- Unit tests
 </code></pre></div>
 
 
