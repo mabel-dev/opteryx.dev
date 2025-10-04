@@ -1,3 +1,8 @@
+---
+title: Community Etiquette - Opteryx Interaction Guidelines
+description: Best practices for interacting with the Opteryx community. Respectful communication and collaboration guidelines.
+---
+
 # Community Etiquette
 
 ### Be nice to everyone

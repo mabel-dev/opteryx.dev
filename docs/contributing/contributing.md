@@ -1,3 +1,8 @@
+---
+title: Contributing to Opteryx - Developer Guide
+description: Contribute to Opteryx open source SQL query engine. Guidelines for pull requests, testing, documentation, and community participation.
+---
+
 # Contributor Guide
 
 ### Welcome to the Opteryx Contributor Guide

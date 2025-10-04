@@ -1,3 +1,8 @@
+---
+title: Code of Conduct - Opteryx Community Guidelines
+description: Opteryx project code of conduct. Community standards, expected behavior, and guidelines for contributors.
+---
+
 # Code of Conduct
 
 ## Our Pledge

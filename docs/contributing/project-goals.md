@@ -1,3 +1,8 @@
+---
+title: Opteryx Project Goals - Vision and Mission
+description: Understand Opteryx project goals, design philosophy, and development roadmap. Learn what drives the SQL query engine.
+---
+
 # Project Goals of Opteryx
 
 ## Introduction
