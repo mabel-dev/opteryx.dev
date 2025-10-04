@@ -1,3 +1,8 @@
+---
+title: Working with Arrays in Opteryx - SQL Array Functions
+description: Learn how to query and manipulate arrays in Opteryx SQL. Array functions, operations, and best practices.
+---
+
 # Working with Arrays
 
 An Array is an ordered collection of zero or more `VARCHAR` values.

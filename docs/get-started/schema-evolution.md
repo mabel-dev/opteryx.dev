@@ -1,3 +1,8 @@
+---
+title: Schema Evolution in Opteryx - Handle Changing Data Structures
+description: Learn how Opteryx handles schema evolution and changing data structures. Adapt to evolving datasets without breaking queries.
+---
+
 # Schema Evolution
 
 [Opteryx](https://github.com/mabel-dev/opteryx) has support for in-place relation evolution. You can evolve a table schema or change a partition layout without requiring existing data to be rewritten or migrated to a new dataset.

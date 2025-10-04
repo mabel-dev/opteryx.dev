@@ -1,3 +1,8 @@
+---
+title: Opteryx Command Line Interface - CLI Usage Guide
+description: Complete guide to the Opteryx CLI. Run SQL queries from the terminal in REPL or batch mode with examples and options.
+---
+
 # Command Line Interface
 
 The Opteryx Command Line Interface (CLI) provides a terminal-based interface for executing queries. You can use it either as an interactive shell (REPL) or to execute individual queries (Batch).

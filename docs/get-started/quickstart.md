@@ -1,3 +1,8 @@
+---
+title: Opteryx Quickstart - Install and Run Your First Query
+description: Get started with Opteryx in minutes. Installation guide for Python query engine with quick setup and verification steps.
+---
+
 # Quickstart Guide
 
 Get Opteryx running in minutes.

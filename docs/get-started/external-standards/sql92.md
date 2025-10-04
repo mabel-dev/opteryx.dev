@@ -1,3 +1,8 @@
+---
+title: ANSI SQL-92 Compliance - SQL Standard Support
+description: Opteryx SQL-92 standard compliance. Supported SQL features, statements, and ANSI SQL conformity level.
+---
+
 # ANSI SQL-92 Conformity
 
 !!! Note   

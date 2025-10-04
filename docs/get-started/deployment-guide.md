@@ -1,3 +1,8 @@
+---
+title: Opteryx Deployment Guide - Production Setup and Configuration
+description: Deploy Opteryx in production environments. System requirements, cloud deployment, connector setup, and best practices.
+---
+
 # Deployment Guide
 
 ## Requirements

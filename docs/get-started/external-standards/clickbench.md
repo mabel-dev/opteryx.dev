@@ -1,3 +1,8 @@
+---
+title: ClickBench Performance - Opteryx Benchmark Results
+description: Opteryx performance on ClickBench benchmark. Compare query execution speed against other SQL engines and databases.
+---
+
 # ClickBench
 
 !!! Note   

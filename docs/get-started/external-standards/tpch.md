@@ -1,3 +1,8 @@
+---
+title: TPC-H Benchmark - Opteryx Query Performance Testing
+description: Opteryx performance on TPC-H decision support benchmark. Query execution results and analytical workload testing.
+---
+
 # TPC-H Benchmark
 
 !!! Note   
