@@ -12,6 +12,17 @@ For a system to [attest to supporting SQL][^1] it should demonstrate strong conf
 
 Opteryx is not a full DBMS and does not aim for full compliance with the entire SQL-92 standard. Instead, it targets conformity with a relevant subset of SQL-92—primarily focused on the features required to support `SELECT` statements and related analytical operations.
 
+## Purpose and Scope
+
+This conformance matrix serves to:
+
+- **Provide transparency** - Show which SQL features are supported, partially supported, or not implemented
+- **Guide development** - Identify areas for future enhancement
+- **Set expectations** - Help users understand what SQL operations they can perform
+- **Track progress** - Document improvements in SQL standard compliance over time
+
+## Conformance Matrix
+
 Function | Description                                               | Support
 :------- | :-------------------------------------------------------- | :---------
 **E011** | **Numeric data types**                                    | partial
@@ -199,8 +210,43 @@ Support statuses in this table:
 - **yes** The feature is supported and conformance is part of the test suite.  
 - **no** The feature is not supported.  
 - **partial** Some features are supported.  
-- **n/a** The feature relates to a feature not supported by Opteryx.  
-- **unknown** No test exists to confirm conformance.  
+- **n/a** The feature relates to functionality not supported by Opteryx (e.g., DDL, DML, transactions).  
+- **unknown** No test exists to confirm conformance.
+
+## Compliance Summary
+
+Opteryx demonstrates strong conformance in areas critical for analytical querying:
+
+### Well-Supported Features
+
+- **Basic query operations** - `SELECT`, `WHERE`, `GROUP BY`, `HAVING`, `ORDER BY`
+- **Set functions** - `AVG`, `COUNT`, `MAX`, `MIN`, `SUM` with `DISTINCT` support
+- **Join operations** - `INNER JOIN`, `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`
+- **Data types** - Numeric types, character strings, dates, and timestamps
+- **Predicates** - `BETWEEN`, `IN`, `LIKE`, comparison operators
+- **Case expressions** - `CASE`, `NULLIF`, `COALESCE`
+- **Type conversion** - `CAST` function
+- **Null handling** - `NULL` semantics and operations
+
+### Not Supported
+
+As a read-only analytical engine, Opteryx does not support:
+
+- **Data modification** - `INSERT`, `UPDATE`, `DELETE` statements
+- **Schema management** - `CREATE`, `ALTER`, `DROP` operations
+- **Transaction control** - `COMMIT`, `ROLLBACK`, `SET TRANSACTION`
+- **Integrity constraints** - `PRIMARY KEY`, `FOREIGN KEY`, `CHECK` constraints
+- **Privileges** - Security and permission features (handled at connection level)
+
+### Areas Under Development
+
+Features marked as **unknown** or **partial** represent areas where:
+
+- Testing is incomplete or in progress
+- Implementation is ongoing
+- Feature scope needs refinement
+
+This transparency helps users understand current capabilities while guiding future development priorities.  
 
 
 [^1]: https://15445.courses.cs.cmu.edu/fall2020/slides/02-advancedsql.pdf

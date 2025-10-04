@@ -27,7 +27,24 @@ We use ClickBench to measure how well Opteryx performs on a variety of analytica
 
 You can find detailed information on how to reproduce Opteryx's ClickBench results in the [ClickBench GitHub repository](https://github.com/ClickHouse/ClickBench/tree/main/opteryx).
 
-Our benchmarking process is fully documented and reproducible, allowing you to verify our results or compare them against your specific use case.
+Our benchmarking process is fully documented and reproducible, allowing you to:
+
+- **Verify results** - Run the same benchmarks in your own environment
+- **Compare performance** - Evaluate Opteryx against other engines with your data
+- **Understand methodology** - Review the exact configuration and dataset used
+- **Customize tests** - Adapt benchmarks to your specific use case
+
+## Interpreting Results
+
+When reviewing ClickBench results, consider:
+
+- **Hardware variations** - Performance can vary significantly based on CPU, memory, and storage
+- **Configuration differences** - Settings and optimizations affect results
+- **Data characteristics** - Your data may have different patterns than the benchmark dataset
+- **Query patterns** - Real-world workloads may differ from standardized benchmarks
+- **Version differences** - Performance improves over time as engines are optimized
+
+Use benchmark results as one data point among many when evaluating query engines for your specific needs.
 
 ---
 
