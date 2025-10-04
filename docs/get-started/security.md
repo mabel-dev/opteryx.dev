@@ -1,17 +1,17 @@
 # Security
 
-Opteryx employs two primary security features designed to restrict user actions and data access within the platform. As Opteryx does not maintain a traditional user model, access is controlled through contextual information, such as AD Groups, rather than predefined user accounts. This framework supports the implementation of a traditional RBAC system if desired.
+Opteryx provides two primary security features designed to restrict user actions and control data access. Since Opteryx does not maintain a traditional user model, access control is managed through contextual information, such as AD Groups, rather than predefined user accounts. This framework supports implementing a traditional Role-Based Access Control (RBAC) system if desired.
 
 The two security features are:
 
-1) Statement Execution Control which limits the types of queries can be executed by a user - for example limiting users to only successfully run `SELECT` or `EXECUTE` queries.
-2) User Membership Restrictions which provides a mechanism to perform fine-grained, row-level access rules.
+1. **Statement Execution Control** - Limits the types of queries users can execute (e.g., restricting users to only `SELECT` or `EXECUTE` statements)
+2. **User Membership Restrictions** - Provides a mechanism for fine-grained, row-level access control
 
 ## Statement Execution Controls
 
 Opteryx provides mechanisms to restrict the types of SQL statements that users can execute.
 
-This can be used to limit user's ability to perform certain actions on the engine; for example, limiting users to only perform `EXECUTE` queries.
+This feature limits a user's ability to perform certain actions on the engine. For example, you can restrict users to only execute `EXECUTE` queries, or allow only `SELECT` statements.
 
 ### Permissions Overview
 
@@ -51,7 +51,7 @@ except opteryx.exceptions.PermissionsError:
     print("User does not have permission to execute this query")
 ~~~
 
-Opteryx does not have any defined roles; however, we can implement a Role-Based access model using code similar to the below.
+Opteryx does not have predefined roles; however, you can implement a Role-Based Access Control (RBAC) model using code similar to the example below.
 
 ~~~python
 import opteryx
@@ -78,7 +78,7 @@ user_permissions = get_user_permissions(["user"])
 conn = opteryx.connect(permissions=user_permissions)
 ~~~
 
-In this code, we define a `user_roles` variable containing the roles assigned to a user and a `role_permissions` dictionary mapping each role to its permissions. The accumulated permissions for a user are computed and stored in the `permissions` variable.
+In this code, we define a `user_roles` variable containing the roles assigned to a user and a `role_permissions` dictionary mapping each role to its permissions. The accumulated permissions for a user are computed and stored in the `user_permissions` variable.
 
 Permissions can also be set using the short-form query API:
 
@@ -88,9 +88,9 @@ data = opteryx.query("SELECT * FROM $planets", permissions=user_permissions)
 
 ## User Membership Restrictions
 
-Opteryx supports user-specific data access by embedding user attributes directly into queries, enabling fine-grained control. This functionality isn't automatic; it requires explicit query formulation to incorporate data filtering based on user attributes.
+Opteryx supports user-specific data access by embedding user attributes directly into queries, enabling fine-grained access control. This functionality isn't automatic; it requires explicit query formulation to incorporate data filtering based on user attributes.
 
-Memberships are specified via the `memberships` parameter at the connection setup, making them accessible within queries through the `@@user_memberships` variable and the `$user` virtual table. By default, no memberships are configured (`memberships=[]`).
+Memberships are specified via the `memberships` parameter during connection setup, making them accessible within queries through the `@@user_memberships` variable and the `$user` virtual table. By default, no memberships are configured (`memberships=[]`).
 
 The following example demonstrates how to use array-type memberships to restrict data access:
 

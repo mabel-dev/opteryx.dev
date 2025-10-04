@@ -25,9 +25,9 @@ SELECT *
 
 ![CROSS JOIN](cross-join.svg)
 
-The size of the result set from a `CROSS JOIN` is the product of the row counts of the two input datasets (2 × 3 = 6 in the pictorial example). This can easily result in extremely large datasets. When an alternative join approach is possible, it will almost always perform better than a `CROSS JOIN`.
+The size of the result set from a `CROSS JOIN` is the product of the row counts of the two input datasets (2 × 3 = 6 in the pictorial example). This can easily result in extremely large datasets. When an alternative join approach is available, it will almost always perform better than a `CROSS JOIN`.
 
-**Special case:** `CROSS JOIN UNNEST` is a specific variation where the values in an ARRAY column are treated as if they were rows in a single-column relation.
+**Special case:** `CROSS JOIN UNNEST` is a specific variation where values in an ARRAY column are treated as if they were rows in a single-column relation.
 
 ## INNER JOIN
 
@@ -35,7 +35,7 @@ The size of the result set from a `CROSS JOIN` is the product of the row counts 
 FROM left_relation [ INNER ] JOIN right_relation < ON condition | USING (column) >
 ~~~
 
-An `INNER JOIN` returns only the rows from both relations where the values in the joining columns match. It's often the most commonly used join type due to its straightforward and predictable behavior.
+An `INNER JOIN` returns only the rows from both relations where the values in the joining columns match. It's the most commonly used join type due to its straightforward and predictable behavior.
 
 **Syntax**
 

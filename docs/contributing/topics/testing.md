@@ -2,7 +2,7 @@
 
 Testing in Opteryx is a cornerstone to ensure the system's performance, security, and correctness. This document outlines the key test harnesses used to maintain the high-quality standard of Opteryx.
 
-Most testing is part of the main Opteryx repository on GitHub, however, some testing is located in other respositories.
+Most testing is part of the main Opteryx repository on GitHub; however, some testing is located in other repositories.
 
 ## Unit Testing
 
@@ -29,7 +29,7 @@ The SQL battery has five types of test:
 - Is the shape of the results as expected - only the row and column counts are checked. Focused on high-volume query execution testing.
 - Does the Query return the right results - the returned dataset is checked. Focused on ensuring results are correct.
 
-The SQL Battery the most effective test to identify when functionality has been broken or changed by updates. The shape testing is currently considered the best value of this suite - it is fast and easy to write new tests for, and the execution give reasonable considence in the correctness of the result in most situations.
+The SQL Battery is the most effective test to identify when functionality has been broken or changed by updates. The shape testing is currently considered the best value of this suite - it is fast and easy to write new tests for, and the execution gives reasonable confidence in the correctness of the result in most situations.
 
 ## Performance Testing
 
@@ -37,7 +37,7 @@ The SQL Battery the most effective test to identify when functionality has been 
 **Maturity**: Low  
 **Location**: [mabel-dev/wrenchy-bench](https://github.com/mabel-dev/wrenchy-bench)
 
-The performance testing framework is only able to be run ad hoc, and there is currently no meaningful treatment or tracking out outcomes. It us currently used to confirm optimizations do have the impact of reducing query execution times.
+The performance testing framework can only be run ad hoc, and there is currently no meaningful treatment or tracking of outcomes. It is currently used to confirm that optimizations do reduce query execution times.
 
 ## SQL Logic Test
 
@@ -45,13 +45,13 @@ The performance testing framework is only able to be run ad hoc, and there is cu
 **Maturity**: Very Low  
 **Location**: [mabel-dev/wrenchy-bench](https://github.com/mabel-dev/wrenchy-bench)
 
-Runs SQL statements in both Operyx and DuckDB to verify Opteryx returns the same answer as DuckDB. This has a growing set of tests which are executed, but as how relations are referenced in these systems, most queries require some hand-tuning and many are not possible with the framework as it currently is written.
+Runs SQL statements in both Opteryx and DuckDB to verify Opteryx returns the same answer as DuckDB. This has a growing set of tests which are executed, but due to how relations are referenced in these systems, most queries require some hand-tuning and many are not possible with the framework as it is currently written.
 
 What has been able to be tested has demonstrated some deviation between these systems, so is a valuable and useful test, even in its current form.
 
 ## Fuzzing
 
-**Frequency**: On Commit to GitHub
+**Frequency**: On Commit to GitHub  
 **Maturity**: Low  
 **Location**: [mabel-dev/opteryx](https://github.com/mabel-dev/opteryx/tree/main/tests)
 
@@ -59,7 +59,7 @@ Fuzzing executes randomized data against the engine. There are currently three f
 
 - Random inputs fuzzer - used to help ensure the robustness of parameter handling
 - Random `SELECT` statements - generates single table queries 
-- Ransom `JOIN` statements - generates random JOIN conditions
+- Random `JOIN` statements - generates random JOIN conditions
 
 The variation created by the statement fuzzers is limited and primarily is focused on creating variation in testing and in removing developer bias from test cases.
 
