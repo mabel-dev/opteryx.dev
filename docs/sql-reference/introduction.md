@@ -4,28 +4,28 @@
 
 ## Overview
 
-This page provides an overview of how to perform simple operations in SQL. This tutorial is only intended to give you an introduction and is not a complete tutorial on SQL.
+This page provides an overview of how to perform simple operations in SQL. This tutorial is only intended to give you an introduction and is not a complete SQL tutorial.
 
-All queries use the internal sample NASA datasets and should work regardless of the data your installation and set up has access to.
+All queries use the internal sample NASA datasets and should work regardless of what data your installation and setup has access to.
 
 ## Concepts
 
-[Opteryx](https://github.com/mabel-dev/opteryx) is a system for querying ad hoc data stored in files as [relations](https://en.wikipedia.org/wiki/Relation_(database)). A relation is mathematical term for a data table.
+[Opteryx](https://github.com/mabel-dev/opteryx) is a system for querying ad hoc data stored in files as [relations](https://en.wikipedia.org/wiki/Relation_(database)). A relation is a mathematical term for a data table.
 
-Each relation is a named collection of rows, organized in columns, each column should be a common datatype. 
+Each relation is a named collection of rows, organized into columns, where each column should have a common datatype. 
 
-As an ad hoc query engine, the relations and their schema do not need to be predefined, they are determined at the time the query is run. This is one of the reasons Opteryx cannot be considered a RDBMS (relational database management system), even though it can be used to query data using SQL.
+As an ad hoc query engine, relations and their schemas do not need to be predefined; they are determined when the query is executed. This is one of the reasons Opteryx cannot be considered an RDBMS (relational database management system), even though it can be used to query data using SQL.
 
 ## Querying Relations
 
-To retrieve data from a relation, the relation is queried using a SQL `SELECT` statement. Basic statements are made of three parts; the list of columns to be returned and the list of relations to retrieve data from, and optional clauses to shape and filter the data that is returned.
+To retrieve data from a relation, you query it using a SQL `SELECT` statement. Basic statements consist of three parts: the list of columns to be returned, the list of relations to retrieve data from, and optional clauses to shape and filter the returned data.
 
 ~~~sql
 SELECT *
   FROM $planets;
 ~~~
 
-The `*` is shorthand for "all columns", by convention keywords are capitalized, and `;` optionally terminates the query.
+The `*` is shorthand for "all columns". By convention, keywords are capitalized, and `;` optionally terminates the query.
 
 ~~~sql
 SELECT id,
@@ -67,7 +67,7 @@ The `SELECT` clause can be thought of as choosing which columns we want from the
 
 ![WHERE and SELECT](select-project.svg)
 
-For example, the following the planets with fewer than 10 moons and a day longer than 24 hours:
+For example, the following query returns planets with fewer than 10 moons and a day longer than 24 hours:
 
 ~~~sql
 SELECT *
@@ -87,10 +87,10 @@ Mars  	|        24.7 |             2
 Pluto 	|       153.3 |             5
 ~~~
 
-The order of results are not guaranteed and should not be relied upon. If you request the results of the below query, you might get the Mercury or Venus in either order. 
+The order of results is not guaranteed and should not be relied upon. If you request the results of the query below, you might get Mercury or Venus in either order. 
 
 !!! note
-    The same query, of the same data in the same version of the query engine will likely to return results in the same order, don't expect to test result order non-determinism by rerunning the query millions of times and looking for differences. These differences may manifest over different versions, or from subtle differences to the query statement or data.
+    The same query, on the same data in the same version of the query engine, will likely return results in the same order. Don't expect to test result order non-determinism by rerunning the query millions of times and looking for differences. These differences may manifest across different versions, or from subtle differences in the query statement or data.
 
 ~~~sql
 SELECT name,
@@ -149,9 +149,9 @@ SELECT DISTINCT planetId
 
 ## Joins Between Relations
 
-So far our queries have only accessed one relation at a time. Queries can access multiple relations at once, or access the same relation in such a way that multiple rows of the relation are being processed at the same time. A query that accesses multiple rows of the same or different relations at one time is called a join query. 
+So far, our queries have only accessed one relation at a time. Queries can access multiple relations at once, or access the same relation in such a way that multiple rows are being processed simultaneously. A query that accesses multiple rows of the same or different relations at one time is called a join query. 
 
-As an example, say you wish to list all the _$satellites_ records together with the planet they orbit. To do that, we need to compare the _planetId_ of each row of the _$satellites_ relation with the _id_ column of all rows in the _$planets_ relation, and return the pairs of rows where these values match.
+As an example, say you wish to list all the _$satellites_ records together with the planet they orbit. To do that, we need to compare the _planetId_ of each row in the _$satellites_ relation with the _id_ column of all rows in the _$planets_ relation, and return the pairs of rows where these values match.
 
 This would be accomplished by the following query:
 
@@ -175,11 +175,11 @@ $satellites.id | planetId | $satellites.name | ...
 
 Observe two things about the result set:
 
-There are no result row for the planets of Mercury or Venus (_planetIds_ 1 and 2). This is because there is no matching entry in the _$satellites_ relation for these planets, so the join ignores the unmatched rows in the _$planets_ relation.
+There are no result rows for the planets Mercury or Venus (_planetIds_ 1 and 2). This is because there is no matching entry in the _$satellites_ relation for these planets, so the join ignores the unmatched rows in the _$planets_ relation.
 
-Each of the relations being joined have an _id_ and a _name_ column, to ensure it is clear which relation the value being displayed is from, columns with clashing names are qualified with the relation name.
+Each of the relations being joined has an _id_ and a _name_ column. To ensure it is clear which relation the displayed value is from, columns with clashing names are qualified with the relation name.
 
-To avoid abiguity and problems in the future if new columns are added to relations, it is good practice to qualify column names in join conditions:
+To avoid ambiguity and problems in the future if new columns are added to relations, it is good practice to qualify column names in join conditions:
 
 ~~~sql
 SELECT *
@@ -187,7 +187,7 @@ SELECT *
  WHERE $satellites.planetId = $planets.id;
 ~~~
 
-Will return the same result as above, but be more resistant to future failure.
+Will return the same result as above, but will be more resistant to future failures.
 
 Join queries of the kind seen thus far can also be written in this alternative form:
 
@@ -198,7 +198,7 @@ SELECT *
          ON $satellites.planetId = $planets.id;
 ~~~
 
-The planner currently uses a different execution strategy for these two similar queries, the explicit `INNER JOIN` style generally executes faster.
+The planner currently uses a different execution strategy for these two similar queries; the explicit `INNER JOIN` style generally executes faster.
 
 Now we will figure out how we can get the Mercury and Venus records back in. What we want the query to do is to scan the _$planets_ relation and for each row to find the matching _$satellites_ row(s). If no matching row is found we want some “empty values” to be substituted for the _$satellites_ relations columns. This kind of query is called an outer join. (The joins we have seen so far are inner joins and cross joins.) The command looks like this:
 
@@ -226,7 +226,7 @@ $satellites.id | planetId | $satellites.name | ...
 Using the `LEFT OUTER JOIN` will mean the relation mentioned on the left of the join operator will have each of its rows in the output at least once, whereas the relation on the right will only have those rows output that match some row of the left relation. When outputting a left-relation row for which there is no right-relation match, empty (`null`) values are substituted for the right-relation columns. 
 
 !!! note
-    How `null` values are displayed may be different between different systems, common approaches are to display an empty cell or display 'none' or 'null' in an alternate format (e.g. italics or different font color). This is not controlled by the query engine.
+    How `null` values are displayed may differ between different systems. Common approaches include displaying an empty cell or displaying 'none' or 'null' in an alternate format (e.g., italics or different font color). This is not controlled by the query engine.
 
 ## Aggregate Functions
 
