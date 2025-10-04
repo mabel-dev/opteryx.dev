@@ -1,3 +1,8 @@
+---
+title: Working with Structs in Opteryx - SQL JSON Operations
+description: Query and manipulate struct data types and JSON in Opteryx. Access nested data structures with SQL.
+---
+
 # Working with Structs
 
 A struct is a collection of zero or more key, value pairs. Keys must be `VARCHAR`, values can be different types.

@@ -1,3 +1,8 @@
+---
+title: TPC-H Benchmark - Opteryx Query Performance Testing
+description: Opteryx performance on TPC-H decision support benchmark. Query execution results and analytical workload testing.
+---
+
 # TPC-H Benchmark
 
 !!! Note   
@@ -7,6 +12,17 @@
     Performance in benchmarks should always be taken with some skepticism, benchmarks tend to be opinionated to specific characteristics and do not represent all factors which should be considered when comparing systems.
 
 The [Transaction Processing Performance Council (TPC)](https://www.tpc.org/) publishes industry-standard benchmarks for evaluating database and computer system performance. [TPC-H](https://www.tpc.org/tpch/default5.asp) is a decision support benchmark comprising a suite of complex, business-oriented queries. It simulates real-world analytical workloads that scan large volumes of data, perform intensive joins and aggregations, and answer critical business questions.
+
+## Why We Use TPC-H
+
+We use TPC-H to evaluate Opteryx's capabilities in handling complex analytical queries typical of decision support systems. The benchmark helps us:
+
+- **Identify feature gaps** - Understand which SQL features need implementation or improvement
+- **Validate functionality** - Ensure query correctness and completeness
+- **Track compatibility** - Monitor progress toward supporting industry-standard SQL patterns
+- **Guide development** - Prioritize features based on real-world query patterns
+
+## Query Results
 
 Query   | Modified | Pass   | Issue
 :------ | :------- | :----- | :-----
@@ -35,9 +51,13 @@ query22 | yes      | no     | [Reimplement CTEs](https://github.com/mabel-dev/op
 
 > :octicons-dot-16: query doesn't complete within a reasonable time
 
-All queries have been modified to refer to the location of the datasets, **modified** in the above table is where the SQL has been written to replace unsupported functionality with supported functionality - this is where the original query either created a view or a temporary table, both of these have been replaced with a CTE definition.
+## Notes on Query Modifications
 
-The test suite for this benchmark is in the [Opteryx Benchmarking](https://github.com/mabel-dev/wrenchy-bench) repository.
+All queries have been modified to refer to the location of the datasets. The **Modified** column in the above table indicates where the SQL has been rewritten to replace unsupported functionality with supported functionality. This primarily occurs where the original query created a view or a temporary table—both of these have been replaced with Common Table Expression (CTE) definitions.
+
+## Testing and Reproducibility
+
+The test suite for this benchmark is maintained in the [Opteryx Benchmarking](https://github.com/mabel-dev/wrenchy-bench) repository. This allows for transparent verification of results and provides a framework for tracking progress as new features are implemented.
 
 **Legal Notice**
 

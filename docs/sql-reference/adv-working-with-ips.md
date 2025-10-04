@@ -1,3 +1,8 @@
+---
+title: Working with IP Addresses in Opteryx - SQL IP Functions
+description: Query and manipulate IP addresses in Opteryx. Perform containment testing and IP operations with SQL.
+---
+
 # Working with IPs
 
 IP addresses are represented as `VARCHAR` or `BLOB` values and support containment testing operations. `BLOB` is the preferred type for storing IP addresses.

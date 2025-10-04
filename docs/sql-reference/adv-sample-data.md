@@ -1,3 +1,8 @@
+---
+title: Sample Data in Opteryx - Built-in Test Datasets
+description: Explore built-in sample datasets in Opteryx for testing and demonstration. Query planets, satellites, astronauts, and missions data.
+---
+
 # Sample Data
 
 There are four built-in relations for demonstration and testing.

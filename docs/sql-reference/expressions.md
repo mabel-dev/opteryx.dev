@@ -1,3 +1,8 @@
+---
+title: SQL Expressions and Operators - Opteryx Reference
+description: Complete guide to SQL expressions in Opteryx. Logical operators, comparison operators, arithmetic, and expression composition.
+---
+
 # Expressions
 
 An expression is a combination of values, operators, and functions that evaluates to a single value. Expressions are highly composable and can range from very simple (e.g., a single column reference) to arbitrarily complex (e.g., nested function calls with multiple operators). They can appear in many different parts of SQL statements, including `SELECT`, `WHERE`, `HAVING`, and `ORDER BY` clauses.

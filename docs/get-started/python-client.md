@@ -1,3 +1,8 @@
+---
+title: Opteryx Python API - Query Engine Client Library
+description: Use Opteryx Python API for data querying. PEP 249 compliant interface with examples for connections, queries, and results handling.
+---
+
 # Python Client
 
 Opteryx provides Python bindings compliant with a subset of the [PEP 249](https://peps.python.org/pep-0249/) DBAPI specification. This allows for seamless integration into Python applications, scripts, and Jupyter notebooks, facilitating easy manipulation and querying of data.

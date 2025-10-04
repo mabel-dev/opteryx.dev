@@ -1,3 +1,8 @@
+---
+title: SQL Introduction Tutorial - Learn SQL with Opteryx
+description: Beginner-friendly SQL tutorial using Opteryx. Learn SELECT, WHERE, JOIN, and aggregate functions with sample data.
+---
+
 # SQL Introduction
 
 > This tutorial is reworked from the [DuckDB](https://duckdb.org/docs/sql/introduction) tutorial.

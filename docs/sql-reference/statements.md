@@ -1,3 +1,8 @@
+---
+title: SQL Statements Reference - Opteryx Documentation
+description: Complete reference guide for SQL statements supported by Opteryx. Learn SELECT, SHOW, SET, and other SQL commands with examples.
+---
+
 # Statements
 
 The following SQL statement forms are supported in Opteryx.

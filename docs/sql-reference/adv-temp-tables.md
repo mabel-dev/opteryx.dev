@@ -1,3 +1,8 @@
+---
+title: Temporary Tables and Relation Constructors - Opteryx SQL
+description: Create temporary tables in Opteryx using VALUES, CTEs, and relation constructors. Learn how to define inline data for SQL queries.
+---
+
 # Relation Constructors
 
 There are multiple options to create temporary relations as part of query definitions. These relations exist only for the execution of the query that defines them.

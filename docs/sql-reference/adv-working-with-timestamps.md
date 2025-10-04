@@ -1,3 +1,8 @@
+---
+title: Working with Timestamps in Opteryx - Date and Time Functions
+description: Master date, time, and timestamp operations in Opteryx. Learn intervals, date arithmetic, and temporal functions.
+---
+
 # Working with Timestamps
 
 Working with DATE and TIMESTAMP often involves working with INTERVALs. 

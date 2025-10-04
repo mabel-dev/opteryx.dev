@@ -1,3 +1,8 @@
+---
+title: Security in Opteryx - Access Control and Permissions
+description: Implement security in Opteryx with statement execution controls, user membership restrictions, and role-based access control (RBAC).
+---
+
 # Security
 
 Opteryx provides two primary security features designed to restrict user actions and control data access. Since Opteryx does not maintain a traditional user model, access control is managed through contextual information, such as AD Groups, rather than predefined user accounts. This framework supports implementing a traditional Role-Based Access Control (RBAC) system if desired.

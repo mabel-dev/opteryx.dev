@@ -1,3 +1,8 @@
+---
+title: Get Started with Opteryx - Cloud-Native SQL Query Engine
+description: Introduction to Opteryx SQL query engine. Query data across multiple systems without centralization. Perfect for federated analytics and serverless environments.
+---
+
 # Get Started with Opteryx
 
 Opteryx is a cloud-native SQL query engine that lets you query data across multiple systems without needing to centralize or duplicate it. Whether your data lives in Postgres, Parquet, JSONL, or somewhere else, Opteryx gives you a unified SQL interface — so you can focus on **analytics, not integration**.

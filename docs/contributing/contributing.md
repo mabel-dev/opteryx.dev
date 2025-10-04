@@ -1,3 +1,8 @@
+---
+title: Contributing to Opteryx - Developer Guide
+description: Contribute to Opteryx open source SQL query engine. Guidelines for pull requests, testing, documentation, and community participation.
+---
+
 # Contributor Guide
 
 ### Welcome to the Opteryx Contributor Guide
@@ -18,7 +23,7 @@ We use [GitHub](https://github.com/mabel-dev/opteryx) to host the code, track fe
 
 All submissions, including submissions by core project members, require review. We use GitHub pull requests for this purpose. Consult [GitHub Help](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) for more information on using pull requests. 
 
-Pull requests that add support for, or fix a bug in, a feature in a popular RDBMS, or address deficiency in documentation, will likely be accepted after a brief review. For more substative changes you should start a [discussion](https://github.com/mabel-dev/opteryx/discussions) to coordinate with maintainers.
+Pull requests that add support for, or fix a bug in, a feature in a popular RDBMS, or address deficiency in documentation, will likely be accepted after a brief review. For more substantive changes you should start a [discussion](https://github.com/mabel-dev/opteryx/discussions) to coordinate with maintainers.
 
 We have included a number of tests which run automatically when code is submitted to help maintain consistency and quality of the codebase, note that these may not be automatically triggered for new contributors. Pull requests which do not meet the quality criteria will not be reviewed or merged.
 
@@ -48,7 +53,7 @@ Any submissions with incompatible license or license conditions may be rejected 
 We hope this guide has provided you with all the information you need to start contributing to Opteryx. Here's how you can take the next steps:
 
 - **Star the Project:** Show your support by starring the project on [GitHub](https://github.com/mabel-dev/opteryx).
-- **Fork and Clone:** Fork the project and clone it to your local machine. Follow our [setup guide](link-to-setup-guide) to get your environment ready.
+- **Fork and Clone:** Fork the project and clone it to your local machine. Follow our setup guides for [Debian/Ubuntu](set-up-guides/debian.md) or [macOS](set-up-guides/macos.md) to get your environment ready.
 - **Find an Issue:** Browse through our [open issues](https://github.com/mabel-dev/opteryx/issues) to find one that interests you. If you're new to the project, look for issues tagged as `good first issue`.
 - **Join the Discussion:** If you have ideas or want to collaborate, join our [Discord channel](https://discord.gg/qpv2tr989x) and introduce yourself.
 - **Submit a Pull Request:** Once you're ready with your changes, create a pull request. Make sure to review the PR guidelines one last time to ensure a smooth process.

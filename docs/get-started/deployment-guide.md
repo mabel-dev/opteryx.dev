@@ -1,3 +1,8 @@
+---
+title: Opteryx Deployment Guide - Production Setup and Configuration
+description: Deploy Opteryx in production environments. System requirements, cloud deployment, connector setup, and best practices.
+---
+
 # Deployment Guide
 
 ## Requirements
@@ -13,7 +18,7 @@ Opteryx balances memory consumption with performance, however, being able to pro
     This is a general recommendation and is a good place to start, your environment and specific problem may require, or perform better, with a different configuration.
 
 !!! Note  
-    Opteryx contains no specific optimiations to make use of multiple CPUs, although multiple CPUs may be beneficial as some libraries Opteryx is built on may use multiple CPUs.
+    Opteryx contains no specific optimizations to make use of multiple CPUs, although multiple CPUs may be beneficial as some libraries Opteryx is built on may use multiple CPUs.
 
 ### Operating System Support
 
@@ -117,7 +122,7 @@ from opteryx.connectors import GcpCloudStorageConnector
 # connector.
 opteryx.register_store("your_bucket", GcpCloudStorageConnector)
 
-connextion = opteryx.connect()
+connection = opteryx.connect()
 cursor = connection.cursor()
 cursor.execute("SELECT * FROM your_bucket.folder;")
 

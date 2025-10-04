@@ -1,3 +1,8 @@
+---
+title: SQL Functions and Operators - Opteryx Reference
+description: Comprehensive guide to SQL functions and operators in Opteryx. String functions, date/time operations, mathematical functions, and more.
+---
+
 # Functions
 
 This document describes the supported SQL functions and operators.

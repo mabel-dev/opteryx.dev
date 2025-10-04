@@ -1,12 +1,17 @@
+---
+title: Time Travel Queries in Opteryx - Query Historical Data
+description: Use Opteryx time travel feature to query data as it existed at specific points in time. Access historical snapshots and temporal data for analytics.
+---
+
 # Time Travel
 
 Opteryx supports temporality, the ability to view things as they were at a different point in time.
 
-For datasets which are snapshots, this allows you to recall the data of that snapshop as at a point in the past. For datasets which are logs, this allows you to prune queries to just the dates which contain relevant data.
+For datasets which are snapshots, this allows you to recall the data of that snapshot as at a point in the past. For datasets which are logs, this allows you to prune queries to just the dates which contain relevant data.
 
 !!! Note  
     - Data must be Mabel partitioned or using a custom partition schema which supports data partitioning.
-    - Data returned for previous days with be the latest data as at today. For example if a backfill updates data from seven days ago, when querying that data today the backfilled data will be returned.
+    - Data returned for previous days will be the latest data as at today. For example if a backfill updates data from seven days ago, when querying that data today the backfilled data will be returned.
     - There is no implicit deduplication of records as they are returned.
 
 Partition schemes that supports temporal queries allow you to view data from a different date by using a `FOR` clause after the dateset name in the SQL statement. `FOR` clauses state the date, or date range, a query should retrieve results for.
