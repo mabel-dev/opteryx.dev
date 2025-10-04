@@ -9,7 +9,7 @@ description: Opteryx performance on TPC-H decision support benchmark. Query exec
     Conformance is a work in progress. This page reflects the current implementation status to provide transparent insight into Opteryx’s capabilities and development progress.
 
 !!! Note   
-    Performance in benchmarks should always be taken with some skepticism, benchmarks tend to be opinionated to specific characteristics and do not represent all factors which should be considered when comparing systems.
+    PPerformance benchmarks should always be viewed with healthy skepticism. Benchmarks tend to be optimized for specific characteristics and workload patterns, and may not represent all factors that should be considered when comparing systems in real-world scenarios.
 
 The [Transaction Processing Performance Council (TPC)](https://www.tpc.org/) publishes industry-standard benchmarks for evaluating database and computer system performance. [TPC-H](https://www.tpc.org/tpch/default5.asp) is a decision support benchmark comprising a suite of complex, business-oriented queries. It simulates real-world analytical workloads that scan large volumes of data, perform intensive joins and aggregations, and answer critical business questions.
 
