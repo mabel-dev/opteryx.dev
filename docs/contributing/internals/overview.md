@@ -1,22 +1,28 @@
 ~~~mermaid
 flowchart TD
 
-    subgraph  
-        subgraph Z[" "]
-            USER
-        end
-        EXE --> |Results| USER
-        USER  --> |SQL| SQLRE(SQL Rewriter)
-        PHYPL --> |Plan| EXE(Executor)
-        SQLRE --> |SQL| PARSER(Parser)
-        PARSER --> |AST| ASTRE(AST Rewriter)
-        ASTRE --> |AST| LOGPL(Logical Planner)
-        LOGPL --> |Plan| BINDER(Binder)
-        OPT --> |Plan| PHYPL(Physical Planner)
-        CATALOG[(Catalog)] --> |Schemas| BINDER
-        CATALOG --> |Stats| OPT(Optimizer)
-        CATALOG --> |Manifests| EXE
-        BINDER --> |Plan| OPT
+    USER[User]
+    SQLRE[SQL Rewriter]
+    PARSER[Parser & Lexer]
+    ASTRE[AST Rewriter]
+    LOGPL[Logical Planner]
+    BINDER[Binder]
+    OPT[Optimizer]
+    PHYPL[Physical Planner]
+    EXE[Executor]
+    CATALOG[(Catalog)]
 
-    end
+    USER -->|SQL Query| SQLRE
+    SQLRE -->|Rewritten SQL| PARSER
+    PARSER -->|AST| ASTRE
+    ASTRE -->|Rewritten AST| LOGPL
+    LOGPL -->|Logical Plan| BINDER
+    BINDER -->|Bound Plan| OPT
+    OPT -->|Optimized Plan| PHYPL
+    PHYPL -->|Physical Plan| EXE
+    EXE -->|Results| USER
+    
+    CATALOG -->|Schemas| BINDER
+    CATALOG -->|Statistics| OPT
+    CATALOG -->|Manifests| EXE
 ~~~

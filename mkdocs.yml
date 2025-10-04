@@ -126,9 +126,12 @@ nav:
         - Debian/Ubuntu: contributing/set-up-guides/debian.md
         - MacOS: contributing/set-up-guides/macos.md
       - System Internals:
+        - Overview: contributing/internals/overview.md
         - Project Structure: contributing/internals/project-structure.md
         - Query Engine: contributing/internals/query-engine.md
+        - Binder: contributing/internals/binder.md
         - Storage Engine: contributing/internals/storage-engine.md
+        - JOINs: contributing/internals/joins.md
         - Optimization Strategies: contributing/internals/optimization-strategies.md
         - Implementation:
           - Memory Pool: contributing/internals/implementations/memory_pool.md
