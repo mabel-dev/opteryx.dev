@@ -139,7 +139,7 @@ SELECT HEX
 
 ## Using `FAKE`
 
-`FAKE` creates a table of random integers from provided row and column counts. This functionality has limited application outside of creating datasets for testing.
+`FAKE` creates a table of random data from provided row and column counts. This functionality has limited application outside of creating datasets for testing.
 
 A simple example is as follows:
 

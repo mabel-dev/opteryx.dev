@@ -12,7 +12,7 @@ A principle the Query Optimizer uses is to eliminate rows and columns to process
 
 ## 2. Prune Early
 
-Where available, use temporal filters (`FOR DATE`) to limit the date range over will limit the number of partitions that need need to be read.
+Where available, use temporal filters (`FOR DATE`) to limit the date range which will limit the number of partitions that need to be read.
 
 Not reading the record is faster than reading and working out if it needs to be filtered out of the result set.
 
@@ -34,7 +34,7 @@ Most `JOIN`s require iterating over two relations, the _left_ relation, which is
 
 ## 6. Use `LIKE` when comparing strings
 
-`LIKE` can be used for pattern matching but it can also be used for comparisions without wildcards and generally performs faster than `=` comparisons.
+`LIKE` can be used for pattern matching but it can also be used for comparisons without wildcards and generally performs faster than `=` comparisons.
 
 ## 7. Use the correct `JOIN`
 
@@ -48,7 +48,7 @@ However, some operations are 'greedy', that is, they need all of the data for th
 
 ## 9. Use `WHERE` to filter before `GROUP BY`
 
-Only using `HAVING` to filter the aggregation results of `GROUP BY`. `GROUP BY` is a relatively expensive operation in terms of memory and compute, filter as much before the `GROUP BY` by using the `WHERE` clause and only use `HAVING` to filter the by aggregation function (e.g. `COUNT`, `SUM`).
+Only use `HAVING` to filter the aggregation results of `GROUP BY`. `GROUP BY` is a relatively expensive operation in terms of memory and compute, filter as much before the `GROUP BY` by using the `WHERE` clause and only use `HAVING` to filter by the aggregation function (e.g. `COUNT`, `SUM`).
 
 ## 10. `IS` filters are generally faster than `=`
 
