@@ -47,7 +47,7 @@ E021-11  | `POSITION` function                                       | partial
 E021-12  | Character comparison                                      | yes
 **E031** | **Identifiers**                                           | unknown
 E031-01  | Delimited identifiers                                     | yes
-E031-02  | Lower case identifiers                                    | unknown
+E031-02  | Lower case identifiers                                    | no
 E031-03  | Trailing underscore                                       | unknown
 **E051** | **Basic query specification**                             | unknown
 E051-01  | `SELECT DISTINCT`                                         | yes
@@ -67,10 +67,10 @@ E061-05  | `LIKE` predicate: `ESCAPE` clause                         | unknown
 E061-06  | `NULL` predicate                                          | unknown
 E061-07  | Quantified comparison predicate                           | unknown
 E061-08  | `EXISTS` predicate                                        | no
-E061-09  | Subqueries in comparison predicate                        | unknown
-E061-11  | Subqueries in `IN` predicate                              | unknown
-E061-12  | Subqueries in quantified comparison predicate             | unknown
-E061-13  | Correlated subqueries                                     | unknown
+E061-09  | Subqueries in comparison predicate                        | no
+E061-11  | Subqueries in `IN` predicate                              | no
+E061-12  | Subqueries in quantified comparison predicate             | no
+E061-13  | Correlated subqueries                                     | no
 E061-14  | Search condition                                          | unknown
 **E071** | **Basic query expressions**                               | unknown
 E071-01  | `UNION DISTINCT` table operator                           | no
@@ -79,7 +79,7 @@ E071-03  | `EXCEPT DISTINCT` table operator                          | no
 E071-05  | Columns combined via table operators need not have exactly the same data type | partial
 E071-06  | Table operators in subqueries                             | unknown
 **E081** | **Basic Privileges**                                      | unknown
-E081-01  | `SELECT` privilege at the table level                     | unknown
+E081-01  | `SELECT` privilege at the table level                     | partial
 E081-02  | `DELETE` privilege                                        | n/a
 E081-03  | `INSERT` privilege at the table level                     | n/a
 E081-04  | `UPDATE` privilege at the table level                     | n/a  
@@ -106,10 +106,10 @@ E101-04  | Searched `DELETE` statement                               | n/a
 E121-01  | `DECLARE CURSOR`                                          | no
 E121-02  | `ORDER BY` columns need not be in select                  | yes
 E121-03  | Value expressions in `ORDER BY` clause                    | unknown
-E121-04  | `OPEN` statement                                          | no
-E121-06  | Positioned `UPDATE` statement                             | no
-E121-07  | Positioned `DELETE` statement                             | no
-E121-08  | `CLOSE` statement                                         | no
+E121-04  | `OPEN` statement                                          | n/a
+E121-06  | Positioned `UPDATE` statement                             | n/a
+E121-07  | Positioned `DELETE` statement                             | n/a
+E121-08  | `CLOSE` statement                                         | n/a
 E121-10  | `FETCH` statement: implicit `NEXT`                        | no
 E121-17  | `WITH HOLD` cursors                                       | no
 **E131** | **Null value support**                                    | yes
