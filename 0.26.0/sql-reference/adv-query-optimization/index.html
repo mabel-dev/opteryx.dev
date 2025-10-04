@@ -2664,7 +2664,7 @@
 <p>Selecting only the fields you need to be returned improves query performance by reducing the amount of data that is processed internally.</p>
 <p>A principle the Query Optimizer uses is to eliminate rows and columns to process as early as possible, <code>SELECT *</code> removes the option to remove columns from the data being processed.</p>
 <h2 id="2-prune-early">2. Prune Early</h2>
-<p>Where available, use temporal filters (<code>FOR DATE</code>) to limit the date range over will limit the number of partitions that need need to be read.</p>
+<p>Where available, use temporal filters (<code>FOR DATE</code>) to limit the date range which will limit the number of partitions that need to be read.</p>
 <p>Not reading the record is faster than reading and working out if it needs to be filtered out of the result set.</p>
 <h2 id="3-group-by-field-selection">3. <code>GROUP BY</code> field selection</h2>
 <p><strong>VARCHAR</strong>
@@ -2676,14 +2676,14 @@ Grouping by columns with high cardinality (mostly unique) is generally slower th
 <h2 id="5-small-table-drives-big-table">5. Small table drives big table</h2>
 <p>Most <code>JOIN</code>s require iterating over two relations, the <em>left</em> relation, which is the one in the <code>FROM</code> clause, and the <em>right</em> relation which is the one in the <code>JOIN</code> clause (<code>SELECT * FROM left JOIN right</code>). It is generally faster to put the smaller relation to the <em>left</em>.</p>
 <h2 id="6-use-like-when-comparing-strings">6. Use <code>LIKE</code> when comparing strings</h2>
-<p><code>LIKE</code> can be used for pattern matching but it can also be used for comparisions without wildcards and generally performs faster than <code>=</code> comparisons.</p>
+<p><code>LIKE</code> can be used for pattern matching but it can also be used for comparisons without wildcards and generally performs faster than <code>=</code> comparisons.</p>
 <h2 id="7-use-the-correct-join">7. Use the correct <code>JOIN</code></h2>
 <p>A <code>CROSS JOIN</code> can quickly generate millions of records to be filtered, if you can use any join other than the <code>CROSS JOIN</code>, do that.</p>
 <h2 id="8-use-limit">8. Use <code>LIMIT</code></h2>
 <p><code>LIMIT</code> stops a query when it has returned the desired number of results; if you do not want the full dataset, using <code>LIMIT</code> can reduce the time taken to process a statement.</p>
 <p>However, some operations are 'greedy', that is, they need all of the data for their operation (for example <code>ORDER BY</code>, and <code>GROUP BY</code>) - <code>LIMIT</code> does not have the same impact on these queries.</p>
 <h2 id="9-use-where-to-filter-before-group-by">9. Use <code>WHERE</code> to filter before <code>GROUP BY</code></h2>
-<p>Only using <code>HAVING</code> to filter the aggregation results of <code>GROUP BY</code>. <code>GROUP BY</code> is a relatively expensive operation in terms of memory and compute, filter as much before the <code>GROUP BY</code> by using the <code>WHERE</code> clause and only use <code>HAVING</code> to filter the by aggregation function (e.g. <code>COUNT</code>, <code>SUM</code>).</p>
+<p>Only use <code>HAVING</code> to filter the aggregation results of <code>GROUP BY</code>. <code>GROUP BY</code> is a relatively expensive operation in terms of memory and compute, filter as much before the <code>GROUP BY</code> by using the <code>WHERE</code> clause and only use <code>HAVING</code> to filter by the aggregation function (e.g. <code>COUNT</code>, <code>SUM</code>).</p>
 <h2 id="10-is-filters-are-generally-faster-than">10. <code>IS</code> filters are generally faster than <code>=</code></h2>
 <p><code>IS</code> comparisons are optimized for a specific check and perform up to twice as fast as <code>=</code> comparisons. However, they are only available for a limited set of checks:</p>
 <ul>
