@@ -1,7 +1,7 @@
 site_name: Opteryx
 site_url: https://opteryx.dev/
 site_author: Justin Joyce
-site_description: A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.
+site_description: A SQL query engine that executes queries across multiple databases and file formats. Query your data where it lives - no ETL or data migration required.
 copyright: Copyright &copy; 2021 - 2025 Justin Joyce (@joocer)
 
 theme:

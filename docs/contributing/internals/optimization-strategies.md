@@ -126,7 +126,7 @@ This works by acquiring tuples to sort in batches, sorting the batch, keeping th
 **goal** reduce memory usage
 **description** incremental distinct  
 
-When dealing with large number of records, rather than load them all into memory to to the distinct, use a pass-thru limit approach by maintaining a HashSet of the seen values and checking each morsel against the HashSet.
+When dealing with large number of records, rather than load them all into memory to perform the distinct, use a pass-thru limit approach by maintaining a HashSet of the seen values and checking each morsel against the HashSet.
 
 ### Limit Pushdown
 
