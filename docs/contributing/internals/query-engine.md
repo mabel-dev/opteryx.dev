@@ -6,11 +6,25 @@
 
 The Opteryx query engine has the following key components and processing queries follows this high-level series of steps:
 
+&emsp;**SQL Rewriter** preprocesses the SQL query to handle special syntax and prepare for parsing.  
 &emsp;**Parser & Lexer** receives the user SQL and builds an Abstract Syntax Tree (AST).  
-&emsp;**Binder** maps contextual information to the AST.  
-&emsp;**Planner** receives the AST and builds a Query Plan.  
+&emsp;**AST Rewriter** transforms the AST to simplify and normalize the structure.  
+&emsp;**Logical Planner** creates a logical query plan from the AST.  
+&emsp;**Binder** maps contextual information to the plan, resolving identifiers to schemas.  
 &emsp;**Optimizer** receives a Query Plan and rewrites it to improve performance.   
+&emsp;**Physical Planner** converts the optimized logical plan into a physical execution plan.  
 &emsp;**Executor** receives the Query Plan and returns the result dataset.  
+
+## SQL Rewriter
+
+The SQL Rewriter is the first component in the query processing pipeline. It performs preprocessing on the SQL query before it reaches the parser. This includes:
+
+- Handling temporal `FOR` clauses which are Opteryx-specific syntax
+- Normalizing SQL syntax variations
+- Expanding macros and syntactic sugar
+- Preparing the query for standard SQL parsing
+
+The SQL Rewriter allows Opteryx to support custom extensions while still using a standard SQL parser.
 
 ## Parser & Lexer
 
@@ -27,19 +41,62 @@ The Parser and Lexer will understand that we're requesting the field `SELECT` fr
 
 Opteryx uses [sqlparser-rs](https://github.com/sqlparser-rs/sqlparser-rs) as its Parser and Lexer, as a Rust library, Opteryx creates Python bindings for sqlparser-rs (derived from [sqloxide](https://github.com/wseaton/sqloxide)). Opteryx does not support all features and functionality provided by this library.
 
-This sqlparser-rs interprets all SQL except for the Temporal `FOR` clause which are handled separately.
+This sqlparser-rs interprets all SQL except for the Temporal `FOR` clause which is handled by the SQL Rewriter.
+
+## AST Rewriter
+
+After the Parser & Lexer creates the AST, the AST Rewriter performs transformations on the tree structure to:
+
+- Normalize and simplify the AST structure
+- Apply early optimizations that are easier to perform on the AST than on the query plan
+- Resolve certain syntactic constructs into their canonical forms
+- Prepare the AST for the logical planning stage
+
+The AST Rewriter operates before the Binder, so it works with unbound identifiers and doesn't require schema information.
+
+## Logical Planner
+
+The Logical Planner converts the AST into a logical query plan - a directed acyclic graph (DAG) that represents the operations needed to answer the query without concern for how they will be physically executed.
+
+The logical plan focuses on *what* needs to be done, not *how* to do it efficiently. This separation allows the optimizer to work on a clean, normalized representation.
 
 ## Binder
 
-The Binder's primary goal is to embelish and replace information in the AST with details which the Parser & Lexer did not have.
+The Binder's primary goal is to resolve and validate identifiers in the query plan, connecting them to actual schemas and data sources.
 
-This is used for replacing variables in queries with their literal equivalents and adding temporal information to relations.
+Key responsibilities of the Binder include:
 
-## Query Planner
+- **Identifier Resolution**: Maps column and table references to their actual sources and schemas
+- **Schema Binding**: Associates each identifier with its schema information (data type, source relation, etc.)
+- **Variable Substitution**: Replaces query variables with their literal values
+- **Temporal Information**: Adds temporal information to relations for time-travel queries
+- **Validation**: Ensures referenced columns and tables exist and are accessible
+- **Ambiguity Detection**: Identifies and reports ambiguous column references
 
-The Query Planner's primary goal is to convert the AST into a plan to respond to the query. The Query Plan is described in a Directed Acyclic Graph (DAG) with the nodes that acquire the raw data, usually from storage, at the start of the flow and the node that forms the data to return to the user (usually the `SELECT` step) at the end.
+The Binder transforms a logical plan with unresolved identifiers into a bound plan where all references are validated and connected to their schemas. This bound plan is essential for subsequent optimization and execution stages.
 
-The DAG is made of different nodes which process the data as they pass through then node. Different node types exist for processing actions like Aggregations (`GROUP BY`), Selection (`WHERE`) and Distinct (`DISTINCT`).
+For example, when you write `SELECT name FROM users`, the Binder:
+1. Resolves `users` to an actual data source
+2. Confirms the `name` column exists in the `users` schema  
+3. Records the data type and source information for the `name` column
+4. Creates schema information that later stages can use
+
+## Physical Planner
+
+The Physical Planner takes the optimized logical plan and converts it into a physical execution plan that can be executed by the query executor.
+
+While the logical plan describes *what* to do, the physical plan describes *how* to do it, including:
+
+- Choosing specific algorithms for operations (e.g., hash join vs. nested loop join)
+- Determining data flow and memory management strategies
+- Setting up operator nodes for execution
+- Preparing for the volcano-style execution model
+
+The physical plan is the final plan that gets executed.
+
+## Operator Execution
+
+The Query Plan is composed of operator nodes which process data as it flows through the plan. Different node types exist for processing actions like Aggregations (`GROUP BY`), Selection (`WHERE`) and Distinct (`DISTINCT`).
 
 Query plans follow a generally accepted order of execution. This does not match the order queries are usually written in, instead it follows this order:
 

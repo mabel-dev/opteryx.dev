@@ -27,12 +27,33 @@ Pull requests that add support for, or fix a bug in, a feature in a popular RDBM
 
 We have included a number of tests which run automatically when code is submitted to help maintain consistency and quality of the codebase, note that these may not be automatically triggered for new contributors. Pull requests which do not meet the quality criteria will not be reviewed or merged.
 
-Changes should have:  
+## Code Style and Quality
 
-- Corresponding unit and regression tests  
-- A clean execution of the CI tests on GitHub     
-- Updated documentation   
-- Attributed external sources  
+For consistent style, code should follow these guidelines:
+
+- Imports on separate lines (`import`s then `from`s)
+- Variables should be in `snake_case`
+- Classes should be in `PascalCase`
+- Constants should be in `UPPER_SNAKE_CASE`
+- Methods should have docstrings
+- [Black](https://github.com/psf/black) formatted
+- Self-explanatory method, class and variable names
+- Type hints, especially in function definitions
+
+All code changes should include:
+
+- Corresponding unit and regression tests
+- A clean execution of the CI tests on GitHub
+- Updated documentation where relevant
+- Attributed external sources - even if there is no explicit license requirement
+
+### Comments
+
+- Computers will interpret anything, humans need help interpreting code
+- Spend time writing readable code rather than verbose comments
+- Humans struggle with threading, recursion, parallelization, variables called `x` and more than 10... of anything
+- Comments should usually be more than just the code in other words
+- Well-written code doesn't always need comments
 
 ### Discord
 
