@@ -1,3 +1,8 @@
+---
+title: NULL Semantics in Opteryx - Understanding NULL Handling
+description: Learn how Opteryx handles NULL values in SQL queries. Understand NULL comparisons, filtering behavior, and best practices for working with NULL.
+---
+
 # NULL Semantics
 
 Most comparisons to `null` return `null`. Exceptions are generally in functions or comparisons specifically to handle `null`, such as `IS NULL`.

@@ -1,3 +1,8 @@
+---
+title: SQL Data Types - Opteryx Reference Guide
+description: Learn about SQL data types in Opteryx including VARCHAR, INTEGER, TIMESTAMP, ARRAY, and more. Understand type casting and coercion.
+---
+
 # Data Types
 
 Opteryx supports a streamlined set of data types compared to full DBMS platforms, focusing on the types most commonly needed for analytical queries.

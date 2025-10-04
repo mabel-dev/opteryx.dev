@@ -1,3 +1,8 @@
+---
+title: SQL Aggregate Functions - Opteryx Reference
+description: Complete guide to SQL aggregate functions in Opteryx. Learn how to use COUNT, SUM, AVG, MIN, MAX, and other aggregation functions.
+---
+
 # Aggregates
 
 Aggregates are functions that combine multiple rows into a single value. Aggregates can only be used in the `SELECT` and `HAVING` clauses of a SQL query.

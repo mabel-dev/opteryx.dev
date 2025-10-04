@@ -117,7 +117,7 @@ from opteryx.connectors import GcpCloudStorageConnector
 # connector.
 opteryx.register_store("your_bucket", GcpCloudStorageConnector)
 
-connextion = opteryx.connect()
+connection = opteryx.connect()
 cursor = connection.cursor()
 cursor.execute("SELECT * FROM your_bucket.folder;")
 

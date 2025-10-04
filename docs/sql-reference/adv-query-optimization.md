@@ -1,3 +1,8 @@
+---
+title: SQL Query Optimization - Best Practices for Opteryx
+description: Learn SQL query optimization techniques for Opteryx. Best practices to improve query performance, reduce execution time, and optimize data retrieval.
+---
+
 # Query Optimization
 
 > Adapted from [15 Best Practices for SQL Optimization](https://betterprogramming.pub/15-best-practices-for-sql-optimization-956759626321).

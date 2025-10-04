@@ -1,3 +1,8 @@
+---
+title: SQL Joins - Inner, Outer, and Cross Joins in Opteryx
+description: Master SQL joins in Opteryx. Learn INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, and CROSS JOIN with practical examples.
+---
+
 # Joins
 
 Joins allow you to combine data from multiple relations (tables or datasets) into a single result set. Different join types provide different ways to combine data, each suited to specific use cases.
