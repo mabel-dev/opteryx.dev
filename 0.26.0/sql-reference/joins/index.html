@@ -2668,12 +2668,12 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w"> </span><span class="k">CROSS</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">right_relation</span><span class="p">;</span>
 </code></pre></div>
 <p><img alt="CROSS JOIN" src="../cross-join.svg" /></p>
-<p>The size of the result set from a <code>CROSS JOIN</code> is the product of the row counts of the two input datasets (2 × 3 = 6 in the pictorial example). This can easily result in extremely large datasets. When an alternative join approach is possible, it will almost always perform better than a <code>CROSS JOIN</code>.</p>
-<p><strong>Special case:</strong> <code>CROSS JOIN UNNEST</code> is a specific variation where the values in an ARRAY column are treated as if they were rows in a single-column relation.</p>
+<p>The size of the result set from a <code>CROSS JOIN</code> is the product of the row counts of the two input datasets (2 × 3 = 6 in the pictorial example). This can easily result in extremely large datasets. When an alternative join approach is available, it will almost always perform better than a <code>CROSS JOIN</code>.</p>
+<p><strong>Special case:</strong> <code>CROSS JOIN UNNEST</code> is a specific variation where values in an ARRAY column are treated as if they were rows in a single-column relation.</p>
 <h2 id="inner-join">INNER JOIN</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FROM left_relation [ INNER ] JOIN right_relation &lt; ON condition | USING (column) &gt;
 </code></pre></div>
-<p>An <code>INNER JOIN</code> returns only the rows from both relations where the values in the joining columns match. It's often the most commonly used join type due to its straightforward and predictable behavior.</p>
+<p>An <code>INNER JOIN</code> returns only the rows from both relations where the values in the joining columns match. It's the most commonly used join type due to its straightforward and predictable behavior.</p>
 <p><strong>Syntax</strong></p>
 <p>You can specify an <code>INNER JOIN</code> using the full <code>INNER JOIN</code> keyword or the shorter <code>JOIN</code> keyword. You can define the joining condition using either the <code>ON</code> clause or the <code>USING(column)</code> syntax.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>

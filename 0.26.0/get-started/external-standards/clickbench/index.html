@@ -1217,6 +1217,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Clickbench
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1228,6 +1241,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-clickbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is ClickBench?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-we-use-clickbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why We Use ClickBench
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducing-our-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducing Our Results
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2418,6 +2477,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-clickbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is ClickBench?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-we-use-clickbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why We Use ClickBench
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducing-our-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducing Our Results
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2438,11 +2532,23 @@
 <h1 id="clickbench">ClickBench</h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Performance in benchmarks should always be taken with some skepticism, benchmarks tend to be opinionated to specific characteristics and do not represent all factors which should be considered when comparing systems.</p>
+<p>Performance benchmarks should always be viewed with healthy skepticism. Benchmarks tend to be optimized for specific characteristics and workload patterns, and may not represent all factors that should be considered when comparing systems in real-world scenarios.</p>
 </div>
-<p><a href="https://benchmark.clickhouse.com/">ClickBench</a> is a public benchmarking suite developed by <a href="https://clickhouse.com/">ClickHouse, Inc.</a>, designed to evaluate the performance of analytical databases under real-world, single-table summarization workloads. It provides a common ground for comparing query execution speed, efficiency, and scalability across systems.</p>
-<p>We use ClickBench to measure how well Opteryx performs on a variety of analytical queries compared to similarly architected and industry-leading databases and query engines. These results help us identify optimization opportunities and validate our engine against established performance expectations.</p>
-<p>You can find information on how to reproduce Opteryx’s ClickBench results in the <a href="https://github.com/ClickHouse/ClickBench/tree/main/opteryx">ClickBench GitHub repository</a>.</p>
+<h2 id="what-is-clickbench">What is ClickBench?</h2>
+<p><a href="https://benchmark.clickhouse.com/">ClickBench</a> is a public benchmarking suite developed by <a href="https://clickhouse.com/">ClickHouse, Inc.</a>, designed to evaluate the performance of analytical databases under real-world, single-table summarization workloads. It provides a standardized environment for comparing query execution speed, efficiency, and scalability across different database systems and query engines.</p>
+<p>The benchmark uses the ClickHouse Hits dataset, which contains 100 million rows of anonymized web analytics data, testing a variety of analytical queries including aggregations, filters, and group-by operations.</p>
+<h2 id="why-we-use-clickbench">Why We Use ClickBench</h2>
+<p>We use ClickBench to measure how well Opteryx performs on a variety of analytical queries compared to similarly architected and industry-leading databases and query engines. These standardized results help us:</p>
+<ul>
+<li><strong>Identify optimization opportunities</strong> - Understanding where Opteryx can improve relative to other systems</li>
+<li><strong>Validate performance</strong> - Ensuring our engine meets established performance expectations</li>
+<li><strong>Track progress</strong> - Monitoring performance improvements over time as we enhance the engine</li>
+<li><strong>Provide transparency</strong> - Giving users objective data to inform their technology decisions</li>
+</ul>
+<h2 id="reproducing-our-results">Reproducing Our Results</h2>
+<p>You can find detailed information on how to reproduce Opteryx's ClickBench results in the <a href="https://github.com/ClickHouse/ClickBench/tree/main/opteryx">ClickBench GitHub repository</a>.</p>
+<p>Our benchmarking process is fully documented and reproducible, allowing you to verify our results or compare them against your specific use case.</p>
+<hr />
 <p>ClickHouse is a registered trademark of ClickHouse, Inc. https://clickhouse.com</p>
 
 

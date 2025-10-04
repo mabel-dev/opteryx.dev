@@ -2510,13 +2510,15 @@
 
 
 <h1 id="security">Security</h1>
-<p>Opteryx employs two primary security features designed to restrict user actions and data access within the platform. As Opteryx does not maintain a traditional user model, access is controlled through contextual information, such as AD Groups, rather than predefined user accounts. This framework supports the implementation of a traditional RBAC system if desired.</p>
+<p>Opteryx provides two primary security features designed to restrict user actions and control data access. Since Opteryx does not maintain a traditional user model, access control is managed through contextual information, such as AD Groups, rather than predefined user accounts. This framework supports implementing a traditional Role-Based Access Control (RBAC) system if desired.</p>
 <p>The two security features are:</p>
-<p>1) Statement Execution Control which limits the types of queries can be executed by a user - for example limiting users to only successfully run <code>SELECT</code> or <code>EXECUTE</code> queries.
-2) User Membership Restrictions which provides a mechanism to perform fine-grained, row-level access rules.</p>
+<ol>
+<li><strong>Statement Execution Control</strong> - Limits the types of queries users can execute (e.g., restricting users to only <code>SELECT</code> or <code>EXECUTE</code> statements)</li>
+<li><strong>User Membership Restrictions</strong> - Provides a mechanism for fine-grained, row-level access control</li>
+</ol>
 <h2 id="statement-execution-controls">Statement Execution Controls</h2>
 <p>Opteryx provides mechanisms to restrict the types of SQL statements that users can execute.</p>
-<p>This can be used to limit user's ability to perform certain actions on the engine; for example, limiting users to only perform <code>EXECUTE</code> queries.</p>
+<p>This feature limits a user's ability to perform certain actions on the engine. For example, you can restrict users to only execute <code>EXECUTE</code> queries, or allow only <code>SELECT</code> statements.</p>
 <h3 id="permissions-overview">Permissions Overview</h3>
 <p>Below is a table of permissions associated with their respective SQL commands:</p>
 <table>
@@ -2590,7 +2592,7 @@
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">except</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">PermissionsError</span><span class="p">:</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;User does not have permission to execute this query&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>Opteryx does not have any defined roles; however, we can implement a Role-Based access model using code similar to the below.</p>
+<p>Opteryx does not have predefined roles; however, you can implement a Role-Based Access Control (RBAC) model using code similar to the example below.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Define which roles exist and the permissions each role has,</span>
@@ -2614,13 +2616,13 @@
 <a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="c1"># this can now be passed when creating a connection</span>
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">permissions</span><span class="o">=</span><span class="n">user_permissions</span><span class="p">)</span>
 </code></pre></div>
-<p>In this code, we define a <code>user_roles</code> variable containing the roles assigned to a user and a <code>role_permissions</code> dictionary mapping each role to its permissions. The accumulated permissions for a user are computed and stored in the <code>permissions</code> variable.</p>
+<p>In this code, we define a <code>user_roles</code> variable containing the roles assigned to a user and a <code>role_permissions</code> dictionary mapping each role to its permissions. The accumulated permissions for a user are computed and stored in the <code>user_permissions</code> variable.</p>
 <p>Permissions can also be set using the short-form query API:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM $planets&quot;</span><span class="p">,</span> <span class="n">permissions</span><span class="o">=</span><span class="n">user_permissions</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="user-membership-restrictions">User Membership Restrictions</h2>
-<p>Opteryx supports user-specific data access by embedding user attributes directly into queries, enabling fine-grained control. This functionality isn't automatic; it requires explicit query formulation to incorporate data filtering based on user attributes.</p>
-<p>Memberships are specified via the <code>memberships</code> parameter at the connection setup, making them accessible within queries through the <code>@@user_memberships</code> variable and the <code>$user</code> virtual table. By default, no memberships are configured (<code>memberships=[]</code>).</p>
+<p>Opteryx supports user-specific data access by embedding user attributes directly into queries, enabling fine-grained access control. This functionality isn't automatic; it requires explicit query formulation to incorporate data filtering based on user attributes.</p>
+<p>Memberships are specified via the <code>memberships</code> parameter during connection setup, making them accessible within queries through the <code>@@user_memberships</code> variable and the <code>$user</code> virtual table. By default, no memberships are configured (<code>memberships=[]</code>).</p>
 <p>The following example demonstrates how to use array-type memberships to restrict data access:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">opteryx</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
