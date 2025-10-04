@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+        <meta name="description" content="Opteryx performance on ClickBench benchmark. Compare query execution speed against other SQL engines and databases.">
       
       
         <meta name="author" content="Justin Joyce">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Clickbench - Opteryx</title>
+        <title>ClickBench Performance - Opteryx Benchmark Results - Opteryx</title>
       
     
     
@@ -64,10 +64,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://opteryx.dev/0.26.0/get-started/external-standards/clickbench/">
   
-    <meta property="og:title" content="Clickbench - Opteryx">
+    <meta property="og:title" content="ClickBench Performance - Opteryx Benchmark Results - Opteryx">
   
   
-    <meta property="og:description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+    <meta property="og:description" content="Opteryx performance on ClickBench benchmark. Compare query execution speed against other SQL engines and databases.">
   
   <meta property="og:image" content="https://opteryx.dev/0.26.0icarus-opteryx.png">
   <meta property="og:site_name" content="Opteryx">
@@ -76,10 +76,10 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://opteryx.dev/0.26.0/get-started/external-standards/clickbench/">
   
-    <meta property="twitter:title" content="Clickbench - Opteryx">
+    <meta property="twitter:title" content="ClickBench Performance - Opteryx Benchmark Results - Opteryx">
   
   
-    <meta property="twitter:description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+    <meta property="twitter:description" content="Opteryx performance on ClickBench benchmark. Compare query execution speed against other SQL engines and databases.">
   
   <meta property="twitter:image" content="https://opteryx.dev/0.26.0icarus-opteryx.png">
 
@@ -90,7 +90,7 @@
     "@type": "WebSite",
     "name": "Opteryx",
     "url": "https://opteryx.dev/0.26.0",
-    "description": "A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.",
+    "description": "A SQL query engine that executes queries across multiple databases and file formats. Query your data where it lives - no ETL or data migration required.",
     "publisher": {
       "@type": "Organization",
       "name": "Opteryx",
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Clickbench
+              ClickBench Performance - Opteryx Benchmark Results
             
           </span>
         </div>
@@ -396,7 +396,7 @@
   
   
   <span class="md-ellipsis">
-    Get Started with Opteryx
+    Get Started with Opteryx - Cloud-Native SQL Query Engine
     
   </span>
   
@@ -1284,6 +1284,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#interpreting-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interpreting Results
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1456,7 +1465,7 @@
   
   
   <span class="md-ellipsis">
-    SQL Introduction
+    SQL Introduction Tutorial - Learn SQL with Opteryx
     
   </span>
   
@@ -1921,7 +1930,7 @@
   
   
   <span class="md-ellipsis">
-    Contributor Guide
+    Contributing to Opteryx - Developer Guide
     
   </span>
   
@@ -2510,6 +2519,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#interpreting-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interpreting Results
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2547,7 +2565,23 @@
 </ul>
 <h2 id="reproducing-our-results">Reproducing Our Results</h2>
 <p>You can find detailed information on how to reproduce Opteryx's ClickBench results in the <a href="https://github.com/ClickHouse/ClickBench/tree/main/opteryx">ClickBench GitHub repository</a>.</p>
-<p>Our benchmarking process is fully documented and reproducible, allowing you to verify our results or compare them against your specific use case.</p>
+<p>Our benchmarking process is fully documented and reproducible, allowing you to:</p>
+<ul>
+<li><strong>Verify results</strong> - Run the same benchmarks in your own environment</li>
+<li><strong>Compare performance</strong> - Evaluate Opteryx against other engines with your data</li>
+<li><strong>Understand methodology</strong> - Review the exact configuration and dataset used</li>
+<li><strong>Customize tests</strong> - Adapt benchmarks to your specific use case</li>
+</ul>
+<h2 id="interpreting-results">Interpreting Results</h2>
+<p>When reviewing ClickBench results, consider:</p>
+<ul>
+<li><strong>Hardware variations</strong> - Performance can vary significantly based on CPU, memory, and storage</li>
+<li><strong>Configuration differences</strong> - Settings and optimizations affect results</li>
+<li><strong>Data characteristics</strong> - Your data may have different patterns than the benchmark dataset</li>
+<li><strong>Query patterns</strong> - Real-world workloads may differ from standardized benchmarks</li>
+<li><strong>Version differences</strong> - Performance improves over time as engines are optimized</li>
+</ul>
+<p>Use benchmark results as one data point among many when evaluating query engines for your specific needs.</p>
 <hr />
 <p>ClickHouse is a registered trademark of ClickHouse, Inc. https://clickhouse.com</p>
 
@@ -2556,6 +2590,9 @@
 
 
 
+
+  
+  
 
 
 

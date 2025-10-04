@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+        <meta name="description" content="Deploy Opteryx in production environments. System requirements, cloud deployment, connector setup, and best practices.">
       
       
         <meta name="author" content="Justin Joyce">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Deployment Guide - Opteryx</title>
+        <title>Opteryx Deployment Guide - Production Setup and Configuration - Opteryx</title>
       
     
     
@@ -64,10 +64,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://opteryx.dev/0.26.0/get-started/deployment-guide/">
   
-    <meta property="og:title" content="Deployment Guide - Opteryx">
+    <meta property="og:title" content="Opteryx Deployment Guide - Production Setup and Configuration - Opteryx">
   
   
-    <meta property="og:description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+    <meta property="og:description" content="Deploy Opteryx in production environments. System requirements, cloud deployment, connector setup, and best practices.">
   
   <meta property="og:image" content="https://opteryx.dev/0.26.0icarus-opteryx.png">
   <meta property="og:site_name" content="Opteryx">
@@ -76,10 +76,10 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://opteryx.dev/0.26.0/get-started/deployment-guide/">
   
-    <meta property="twitter:title" content="Deployment Guide - Opteryx">
+    <meta property="twitter:title" content="Opteryx Deployment Guide - Production Setup and Configuration - Opteryx">
   
   
-    <meta property="twitter:description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+    <meta property="twitter:description" content="Deploy Opteryx in production environments. System requirements, cloud deployment, connector setup, and best practices.">
   
   <meta property="twitter:image" content="https://opteryx.dev/0.26.0icarus-opteryx.png">
 
@@ -90,7 +90,7 @@
     "@type": "WebSite",
     "name": "Opteryx",
     "url": "https://opteryx.dev/0.26.0",
-    "description": "A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.",
+    "description": "A SQL query engine that executes queries across multiple databases and file formats. Query your data where it lives - no ETL or data migration required.",
     "publisher": {
       "@type": "Organization",
       "name": "Opteryx",
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deployment Guide
+              Opteryx Deployment Guide - Production Setup and Configuration
             
           </span>
         </div>
@@ -396,7 +396,7 @@
   
   
   <span class="md-ellipsis">
-    Get Started with Opteryx
+    Get Started with Opteryx - Cloud-Native SQL Query Engine
     
   </span>
   
@@ -1454,7 +1454,7 @@
   
   
   <span class="md-ellipsis">
-    SQL Introduction
+    SQL Introduction Tutorial - Learn SQL with Opteryx
     
   </span>
   
@@ -1919,7 +1919,7 @@
   
   
   <span class="md-ellipsis">
-    Contributor Guide
+    Contributing to Opteryx - Developer Guide
     
   </span>
   
@@ -2539,7 +2539,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Opteryx contains no specific optimiations to make use of multiple CPUs, although multiple CPUs may be beneficial as some libraries Opteryx is built on may use multiple CPUs.</p>
+<p>Opteryx contains no specific optimizations to make use of multiple CPUs, although multiple CPUs may be beneficial as some libraries Opteryx is built on may use multiple CPUs.</p>
 </div>
 <h3 id="operating-system-support">Operating System Support</h3>
 <p><strong>Recommended Operating System</strong>: Ubuntu 24 (64bit)</p>
@@ -2741,7 +2741,7 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># connector.</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">opteryx</span><span class="o">.</span><span class="n">register_store</span><span class="p">(</span><span class="s2">&quot;your_bucket&quot;</span><span class="p">,</span> <span class="n">GcpCloudStorageConnector</span><span class="p">)</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">connextion</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">connection</span> <span class="o">=</span> <span class="n">opteryx</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM your_bucket.folder;&quot;</span><span class="p">)</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
@@ -2826,6 +2826,9 @@
 
 
 
+
+  
+  
 
 
 

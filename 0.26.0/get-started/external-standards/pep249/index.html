@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+        <meta name="description" content="Opteryx compliance with Python PEP 249 Database API specification. DB-API 2.0 implementation details and compatibility.">
       
       
         <meta name="author" content="Justin Joyce">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Python PEP249 - Opteryx</title>
+        <title>PEP 249 Compliance - Python Database API Compatibility - Opteryx</title>
       
     
     
@@ -64,10 +64,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://opteryx.dev/0.26.0/get-started/external-standards/pep249/">
   
-    <meta property="og:title" content="Python PEP249 - Opteryx">
+    <meta property="og:title" content="PEP 249 Compliance - Python Database API Compatibility - Opteryx">
   
   
-    <meta property="og:description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+    <meta property="og:description" content="Opteryx compliance with Python PEP 249 Database API specification. DB-API 2.0 implementation details and compatibility.">
   
   <meta property="og:image" content="https://opteryx.dev/0.26.0icarus-opteryx.png">
   <meta property="og:site_name" content="Opteryx">
@@ -76,10 +76,10 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://opteryx.dev/0.26.0/get-started/external-standards/pep249/">
   
-    <meta property="twitter:title" content="Python PEP249 - Opteryx">
+    <meta property="twitter:title" content="PEP 249 Compliance - Python Database API Compatibility - Opteryx">
   
   
-    <meta property="twitter:description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+    <meta property="twitter:description" content="Opteryx compliance with Python PEP 249 Database API specification. DB-API 2.0 implementation details and compatibility.">
   
   <meta property="twitter:image" content="https://opteryx.dev/0.26.0icarus-opteryx.png">
 
@@ -90,7 +90,7 @@
     "@type": "WebSite",
     "name": "Opteryx",
     "url": "https://opteryx.dev/0.26.0",
-    "description": "A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.",
+    "description": "A SQL query engine that executes queries across multiple databases and file formats. Query your data where it lives - no ETL or data migration required.",
     "publisher": {
       "@type": "Organization",
       "name": "Opteryx",
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python PEP249
+              PEP 249 Compliance - Python Database API Compatibility
             
           </span>
         </div>
@@ -396,7 +396,7 @@
   
   
   <span class="md-ellipsis">
-    Get Started with Opteryx
+    Get Started with Opteryx - Cloud-Native SQL Query Engine
     
   </span>
   
@@ -1189,9 +1189,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conformance-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conformance Status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#module-interface" class="md-nav__link">
     <span class="md-ellipsis">
       Module Interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-supported-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Supported Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features-not-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features Not Supported
     </span>
   </a>
   
@@ -1438,7 +1474,7 @@
   
   
   <span class="md-ellipsis">
-    SQL Introduction
+    SQL Introduction Tutorial - Learn SQL with Opteryx
     
   </span>
   
@@ -1903,7 +1939,7 @@
   
   
   <span class="md-ellipsis">
-    Contributor Guide
+    Contributing to Opteryx - Developer Guide
     
   </span>
   
@@ -2466,9 +2502,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conformance-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conformance Status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#module-interface" class="md-nav__link">
     <span class="md-ellipsis">
       Module Interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-supported-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Supported Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features-not-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features Not Supported
     </span>
   </a>
   
@@ -2499,6 +2571,9 @@
 <p>Conformance is a work in progress. This page reflects the current implementation status to provide transparent insight into Opteryx’s capabilities and development progress.</p>
 </div>
 <p>Opteryx is not a full DBMS and therefore aims only for conformance with <a href="https://peps.python.org/pep-0249">PEP-249</a> (Python Database API Specification v2.0) for the subset of features it supports—primarily those related to querying data.</p>
+<h2 id="overview">Overview</h2>
+<p>The implementation prioritizes compatibility with data analysis workflows, providing a familiar Python database interface for data scientists and analysts working with distributed data sources. As a read-only query engine, Opteryx does not support transactional operations like inserts, updates, or deletes.</p>
+<h2 id="conformance-status">Conformance Status</h2>
 <h2 id="module-interface">Module Interface</h2>
 <table>
 <thead>
@@ -2831,15 +2906,35 @@
 <li><strong>yes</strong> The feature is supported and conformance is part of the test suite.  </li>
 <li><strong>no</strong> The feature is not supported.  </li>
 <li><strong>partial</strong> Some features are supported.  </li>
-<li><strong>n/a</strong> The feature relates to a feature not supported by Opteryx.  </li>
-<li><strong>unknown</strong> No test exists to confirm conformance.  </li>
+<li><strong>n/a</strong> The feature relates to functionality not supported by Opteryx (e.g., transactional operations).  </li>
+<li><strong>unknown</strong> No test exists to confirm conformance.</li>
 </ul>
+<h2 id="key-supported-features">Key Supported Features</h2>
+<p>Opteryx implements the core features needed for read-only data analysis:</p>
+<ul>
+<li><strong>Connection management</strong> via <code>connect()</code> constructor</li>
+<li><strong>Cursor operations</strong> including <code>execute()</code>, <code>fetchall()</code>, <code>fetchmany()</code>, and <code>fetchone()</code></li>
+<li><strong>Result metadata</strong> through <code>description</code> and <code>rowcount</code> attributes</li>
+<li><strong>Parameterized queries</strong> for secure SQL execution</li>
+<li><strong>Iterator protocol</strong> for efficient result processing</li>
+</ul>
+<h2 id="features-not-supported">Features Not Supported</h2>
+<p>As a read-only query engine, Opteryx does not support:</p>
+<ul>
+<li><strong>Transaction management</strong> (<code>commit</code>, <code>rollback</code>, two-phase commit)</li>
+<li><strong>Data modification</strong> (<code>executemany</code> for bulk operations)</li>
+<li><strong>Cursor positioning</strong> (<code>scroll</code>, <code>setinputsizes</code>, <code>setoutputsize</code>)</li>
+</ul>
+<p>These limitations align with Opteryx's design as an analytical query engine focused on reading and processing data rather than managing database state.  </p>
 
 
 
 
 
 
+
+  
+  
 
 
 

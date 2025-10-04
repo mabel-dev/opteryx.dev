@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+        <meta name="description" content="Opteryx performance on TPC-H decision support benchmark. Query execution results and analytical workload testing.">
       
       
         <meta name="author" content="Justin Joyce">
@@ -26,7 +26,7 @@
     
     
       
-        <title>TPC-H - Opteryx</title>
+        <title>TPC-H Benchmark - Opteryx Query Performance Testing - Opteryx</title>
       
     
     
@@ -64,10 +64,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://opteryx.dev/0.26.0/get-started/external-standards/tpch/">
   
-    <meta property="og:title" content="TPC-H - Opteryx">
+    <meta property="og:title" content="TPC-H Benchmark - Opteryx Query Performance Testing - Opteryx">
   
   
-    <meta property="og:description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+    <meta property="og:description" content="Opteryx performance on TPC-H decision support benchmark. Query execution results and analytical workload testing.">
   
   <meta property="og:image" content="https://opteryx.dev/0.26.0icarus-opteryx.png">
   <meta property="og:site_name" content="Opteryx">
@@ -76,10 +76,10 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://opteryx.dev/0.26.0/get-started/external-standards/tpch/">
   
-    <meta property="twitter:title" content="TPC-H - Opteryx">
+    <meta property="twitter:title" content="TPC-H Benchmark - Opteryx Query Performance Testing - Opteryx">
   
   
-    <meta property="twitter:description" content="A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.">
+    <meta property="twitter:description" content="Opteryx performance on TPC-H decision support benchmark. Query execution results and analytical workload testing.">
   
   <meta property="twitter:image" content="https://opteryx.dev/0.26.0icarus-opteryx.png">
 
@@ -90,7 +90,7 @@
     "@type": "WebSite",
     "name": "Opteryx",
     "url": "https://opteryx.dev/0.26.0",
-    "description": "A SQL-on-everything Query Engine you can execute over multiple databases and file formats. Query your data, where it lives.",
+    "description": "A SQL query engine that executes queries across multiple databases and file formats. Query your data where it lives - no ETL or data migration required.",
     "publisher": {
       "@type": "Organization",
       "name": "Opteryx",
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TPC-H
+              TPC-H Benchmark - Opteryx Query Performance Testing
             
           </span>
         </div>
@@ -396,7 +396,7 @@
   
   
   <span class="md-ellipsis">
-    Get Started with Opteryx
+    Get Started with Opteryx - Cloud-Native SQL Query Engine
     
   </span>
   
@@ -1194,6 +1194,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    TPC-H
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1205,6 +1218,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-we-use-tpc-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why We Use TPC-H
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-query-modifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes on Query Modifications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-and-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing and Reproducibility
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1397,7 +1465,7 @@
   
   
   <span class="md-ellipsis">
-    SQL Introduction
+    SQL Introduction Tutorial - Learn SQL with Opteryx
     
   </span>
   
@@ -1862,7 +1930,7 @@
   
   
   <span class="md-ellipsis">
-    Contributor Guide
+    Contributing to Opteryx - Developer Guide
     
   </span>
   
@@ -2418,6 +2486,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-we-use-tpc-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why We Use TPC-H
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-query-modifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes on Query Modifications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-and-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing and Reproducibility
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2445,6 +2557,15 @@
 <p>Performance in benchmarks should always be taken with some skepticism, benchmarks tend to be opinionated to specific characteristics and do not represent all factors which should be considered when comparing systems.</p>
 </div>
 <p>The <a href="https://www.tpc.org/">Transaction Processing Performance Council (TPC)</a> publishes industry-standard benchmarks for evaluating database and computer system performance. <a href="https://www.tpc.org/tpch/default5.asp">TPC-H</a> is a decision support benchmark comprising a suite of complex, business-oriented queries. It simulates real-world analytical workloads that scan large volumes of data, perform intensive joins and aggregations, and answer critical business questions.</p>
+<h2 id="why-we-use-tpc-h">Why We Use TPC-H</h2>
+<p>We use TPC-H to evaluate Opteryx's capabilities in handling complex analytical queries typical of decision support systems. The benchmark helps us:</p>
+<ul>
+<li><strong>Identify feature gaps</strong> - Understand which SQL features need implementation or improvement</li>
+<li><strong>Validate functionality</strong> - Ensure query correctness and completeness</li>
+<li><strong>Track compatibility</strong> - Monitor progress toward supporting industry-standard SQL patterns</li>
+<li><strong>Guide development</strong> - Prioritize features based on real-world query patterns</li>
+</ul>
+<h2 id="query-results">Query Results</h2>
 <table>
 <thead>
 <tr>
@@ -2592,8 +2713,10 @@
 <blockquote>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5"/></svg></span> query doesn't complete within a reasonable time</p>
 </blockquote>
-<p>All queries have been modified to refer to the location of the datasets, <strong>modified</strong> in the above table is where the SQL has been written to replace unsupported functionality with supported functionality - this is where the original query either created a view or a temporary table, both of these have been replaced with a CTE definition.</p>
-<p>The test suite for this benchmark is in the <a href="https://github.com/mabel-dev/wrenchy-bench">Opteryx Benchmarking</a> repository.</p>
+<h2 id="notes-on-query-modifications">Notes on Query Modifications</h2>
+<p>All queries have been modified to refer to the location of the datasets. The <strong>Modified</strong> column in the above table indicates where the SQL has been rewritten to replace unsupported functionality with supported functionality. This primarily occurs where the original query created a view or a temporary table—both of these have been replaced with Common Table Expression (CTE) definitions.</p>
+<h2 id="testing-and-reproducibility">Testing and Reproducibility</h2>
+<p>The test suite for this benchmark is maintained in the <a href="https://github.com/mabel-dev/wrenchy-bench">Opteryx Benchmarking</a> repository. This allows for transparent verification of results and provides a framework for tracking progress as new features are implemented.</p>
 <p><strong>Legal Notice</strong></p>
 <p>TPC-H is Copyright © 1993-2022 Transaction Processing Performance Council. <br />
 The full TPC-H specification in PDF format can be found <a href="https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-H_v3.0.1.pdf">here</a>.</p>
@@ -2604,6 +2727,9 @@ The full TPC-H specification in PDF format can be found <a href="https://www.tpc
 
 
 
+
+  
+  
 
 
 
