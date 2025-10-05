@@ -3384,7 +3384,7 @@
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2786">#2786</a>] <code>EXCEPT</code> and <code>ORDER BY</code> cannot coexist (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2781">#2781</a>] Duplicate Aggregate References Cause KeyError (<a href="https://github.com/tigerquoll">@tigerquoll</a>, <a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2797">#2797</a>] <strong>[Iceberg]</strong> Empty tables have no statisics to read (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2797">#2797</a>] <strong>[Iceberg]</strong> Empty tables have no statistics to read (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/2805">#2805</a>] Read more rows to guess SQL Schema (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h3 id="changed">Changed</h3>
@@ -3393,10 +3393,11 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/2806">#2806</a>] Fix file descriptor leak and improve buffer handling in connectors and decoders (@copilot)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/2809">#2809</a>] [sqlparser-rs] Version bump and planning changes (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/2814">#2814</a>] Consolidate list_ops Cython files into single file with auto-generation (<a href="https://github.com/joocer">@joocer</a>, @copilot)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/2816">#2816</a>] Optimize initialization performance (<a href="https://github.com/joocer">@joocer</a>, @copilot)</li>
 </ul>
 <h3 id="added">Added</h3>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2771">#2771</a>] Add <code>@&gt;&gt;</code> as <code>ARRAY_CONTAINS_ALL</code> operator(<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2771">#2771</a>] Add <code>@&gt;&gt;</code> as <code>ARRAY_CONTAINS_ALL</code> operator (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2769">#2769</a>] Rewrite visibility filters to reduce complexity (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h2 id="0250-2025-09-04">[0.25.0] - 2025-09-04</h2>
@@ -3407,7 +3408,7 @@
 </ul>
 <h3 id="fixed_1">Fixed</h3>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2754">#2754</a>] Ensure <code>INSTR</code> recieves arrow arrays (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2754">#2754</a>] Ensure <code>INSTR</code> receives arrow arrays (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2756">#2756</a>] Improper encoding of UTF-8 strings (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2761">#2761</a>] JOIN internals using both INT64 and UINT64 (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
@@ -3421,9 +3422,9 @@
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2718">#2718</a>] Use <a href="https://github.com/ulfjack/ryu">Ryu</a> to <code>CAST</code> <code>DOUBLES</code> to <code>VARCHAR</code> and <code>BLOB</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2722">#2722</a>] Use <a href="https://github.com/fastfloat/fast_float">fast_float</a> to <code>CAST</code> <code>DOUBLES</code> from <code>VARCHAR</code> and <code>BLOB</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2726">#2726</a>] Custom routines to to <code>CAST</code> <code>INTEGER</code> to <code>VARCHAR</code> and <code>BLOB</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2726">#2726</a>] Custom routines to <code>CAST</code> <code>INTEGER</code> to <code>VARCHAR</code> and <code>BLOB</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2729">#2729</a>] JSON lines reader doesn't need to parse lines to get line count for <code>COUNT(*)</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/2730">#2730</a>] Custom routines to to <code>CAST</code> <code>INTEGER</code> from <code>VARCHAR</code> and <code>BLOB</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/2730">#2730</a>] Custom routines to <code>CAST</code> <code>INTEGER</code> from <code>VARCHAR</code> and <code>BLOB</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2240">#2240</a>] <strong>[Optimizer]</strong> Initial cost-based optimization strategy (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2736">#2736</a>] Support <a href="https://github.com/vortex-data/vortex">Apache Vortex</a> files (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
@@ -3475,7 +3476,7 @@
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2592">#2592</a>] Cannot <code>GROUP BY</code> empty sets (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2611">#2611</a>] <strong>[CI]</strong> Refactor version incrementor as pre-commit (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2614">#2614</a>] Manually replace values to avoid multidimenstional array confusion in numpy (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2614">#2614</a>] Manually replace values to avoid multidimensional array confusion in numpy (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2636">#2636</a>] numpy <code>object</code> dtype definition incorrect in <code>CROSS JOIN</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h3 id="changed_3">Changed</h3>
@@ -3484,7 +3485,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2594">#2594</a>] <strong>[Optimizer]</strong> Combine <code>OR</code> chains of <code>ANY</code> equals conditions (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2481">#2481</a>] <strong>[Optimizer]</strong> Rewrite <code>STARTS_WITH</code> and <code>ENDS_WITH</code> to <code>LIKE</code> statements (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2604">#2604</a>] Log the post-optimized plan to the statistics (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2607">#2607</a>] Unsided <code>SEMI</code> and <code>ANTI</code> <code>JOIN</code>s are interpretted as <code>LEFT</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2607">#2607</a>] Unqualified <code>SEMI</code> and <code>ANTI</code> <code>JOIN</code>s are interpreted as <code>LEFT</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2609">#2609</a>] Filter joins (<code>SEMI</code> and <code>ANTI</code>) internals rewritten (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2616">#2616</a>] Refactor nested loop join to use pyarrow buffers (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2619">#2619</a>] Refactor hash join variation of <code>INNER JOIN</code> and internal bloom filter to use pyarrow buffers (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -3499,7 +3500,7 @@
 </ul>
 <h3 id="fixed_5">Fixed</h3>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2547">#2547</a>] <code>INSTR</code> optimzation incorrectly applied in some cases (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2547">#2547</a>] <code>INSTR</code> optimization incorrectly applied in some cases (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2554">#2554</a>] Explicit column ordering (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2545">#2545</a>] Decimal scale and precision ignored in <code>CAST</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2556">#2556</a>] STRUCT ARRAYS not correctly converted to JSON ARRAYs (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -3513,7 +3514,7 @@
 <h2 id="0210-2025-03-30">[0.21.0] - 2025-03-30</h2>
 <h3 id="removed_5">Removed</h3>
 <ul>
-<li>Deprecated function aliases removed <code>CEILING</code>, <code>ABSOLUTE</code>, <code>MAXIMIM</code>, <code>MINIMUM</code>, use shorter form <code>CEIL</code>, <code>ABS</code>, <code>MAX</code>, <code>MIN</code> instead.</li>
+<li>Deprecated function aliases removed <code>CEILING</code>, <code>ABSOLUTE</code>, <code>MAXIMUM</code>, <code>MINIMUM</code>, use shorter form <code>CEIL</code>, <code>ABS</code>, <code>MAX</code>, <code>MIN</code> instead.</li>
 <li><code>INNER JOIN UNNEST</code> removed from this release</li>
 </ul>
 <h3 id="added_4">Added</h3>
@@ -3526,8 +3527,8 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2469">#2469</a>] <strong>[Optimizer]</strong> Additional check when folding constants (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2384">#2384</a>] Support <code>GROUP BY ALL</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2374">#2374</a>] Support underscores in numeric literals (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2468">#2468</a>] Combine mulitple <code>LIKE</code>s to <code>RLIKE</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2520">#2520</a>] Combine mulitple <code>=</code>s to <code>IN</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2468">#2468</a>] Combine multiple <code>LIKE</code>s to <code>RLIKE</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2520">#2520</a>] Combine multiple <code>=</code>s to <code>IN</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1352">#1352</a>] Basic CTE expressions (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h3 id="fixed_6">Fixed</h3>
@@ -3539,7 +3540,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2521">#2521</a>] Intermittent <code>LIKE</code> type error (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2524">#2524</a>] <code>UNION</code> field order incorrect (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2523">#2523</a>] Filters pushed into <code>UNION</code> incorrectly (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1217">#1217</a>] Subqueries don't precent relation name collisions (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1217">#1217</a>] Subqueries don't prevent relation name collisions (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2537">#2537</a>] Intermittent errors with aggregations (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2533">#2533</a>] <code>UNION</code> field order incorrect (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
@@ -3562,7 +3563,7 @@
 <h3 id="added_5">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2213">#2213</a>] Specialized buffer for collecting Integers (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2185">#2185</a>] <strong>[Iceberg]</strong> Initial support for <strong>[Iceberg]</strong>(https://iceberg.apache.org/) catalogs (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2185">#2185</a>] <strong>[Iceberg]</strong> Initial support for <a href="https://iceberg.apache.org/">Iceberg</a> catalogs (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2209">#2209</a>] Initial support for Excel (xlsx) files (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2223">#2223</a>] <strong>[<a href="https://benchmark.clickhouse.com/">Clickbench</a>]</strong> Avoid creating tables for simple <code>COUNT(*)</code> queries (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2228">#2228</a>] <strong>[Iceberg]</strong> Push <code>LIMIT</code> to Iceberg (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -3590,7 +3591,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1954">#1954</a>] JSON Accessors rewritten to support <code>literal = document-&gt;key</code> form (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2190">#2190</a>] <strong>[<a href="https://benchmark.clickhouse.com/">Clickbench</a>]</strong> Resolve failing queries (partial) (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2167">#2167</a>] <strong>[CI]</strong> Use <a href="https://github.com/spulec/freezegun">freezegun</a> to reduce flaky tests (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2247">#2247</a>] Non-Existant SQL tables returned incorrect error (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2247">#2247</a>] Non-Existent SQL tables returned incorrect error (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2231">#2231</a>] Visibility Filters don't accept array literals (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2300">#2300</a>] Visibility Filters don't restrict when no filter provided (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2299">#2299</a>] <strong>[Fuzzer]</strong> Unable to sort by <code>DECIMAL</code> columns which contain <code>NULL</code> values (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -3628,12 +3629,12 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2105">#2105</a>] Support <code>LIKE ANY</code> and <code>ILIKE ANY</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2111">#2111</a>] <code>x LIKE '%'</code> written to <code>x IS NOT NULL</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2133">#2133</a>] Add support for ValKey cache (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1866">#1866</a>] Rewrite aggregegations on constants to literal values (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1866">#1866</a>] Rewrite aggregations on constants to literal values (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2159">#2159</a>] Added <code>IFNOTNULL</code> and <code>PASSTHRU</code> functions (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h3 id="fixed_8">Fixed</h3>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2085">#2085</a>] LEFT/RIGHT side in a <code>LEFT JOIN</code> occassionally swapped. (<a href="https://github.com/joocer">@joocer</a>)  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2085">#2085</a>] LEFT/RIGHT side in a <code>LEFT JOIN</code> occasionally swapped. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2082">#2082</a>] Buffer Pool eviction puts reader into an invalid state (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2091">#2091</a>] Command Line interface fails with unhelpful errors (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2113">#2113</a>] Improve reliability of <code>NULLIF</code> function (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -3758,7 +3759,7 @@
 <h3 id="added_11">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1763">#1763</a>] Support <code>@?</code> JSON Accessor (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1670">#1670</a>] Inital <a href="https://github.com/mabel-dev/tarchia">Tarchia</a> catalog support (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1670">#1670</a>] Initial <a href="https://github.com/mabel-dev/tarchia">Tarchia</a> catalog support (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h3 id="fixed_13">Fixed</h3>
 <ul>
@@ -3789,7 +3790,7 @@
 <h3 id="changed_12">Changed</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1715">#1715</a>] More optimizations <code>AND</code>, <code>OR</code> and <code>XOR</code> aware  (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1717">#1717</a>] Memcahed notified when resource read from local buffers (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1717">#1717</a>] Memcached notified when resource read from local buffers (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h2 id="0151-2024-05-31">[0.15.1] - 2024-05-31</h2>
 <h3 id="added_13">Added</h3>
@@ -3845,7 +3846,7 @@
 <h2 id="0140-2024-04-07">[0.14.0] - 2024-04-07</h2>
 <h3 id="added_16">Added</h3>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1460">#1460</a>] Support PyArrow's IPC formated files. (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1460">#1460</a>] Support PyArrow's IPC formatted files. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1464">#1464</a>] <code>LIKE</code> with no wildcards rewritten as <code>=</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1468">#1468</a>] Python 3.12 support (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1459">#1459</a>] Primitive support for <code>EXECUTE</code> queries (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -3855,7 +3856,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1491">#1491</a>] New test dataset <code>$missions</code>. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1300">#1300</a>] Support named Parameters. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1516">#1516</a>] Day of Week placeholders for temporal queries. (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1563">#1563</a>] Add support for Cassandra-based sources<a href="https://github.com/joocer">@joocer</a></li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1563">#1563</a>] Add support for Cassandra-based sources (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h3 id="changed_14">Changed</h3>
 <ul>
@@ -4006,7 +4007,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1008">#1008</a>] <code>JOIN</code> on a literal fails when attempting to find good match. (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1006">#1006</a>] Errors handling filenames with multiple dots in the name. (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1010">#1010</a>] Predicates not pushed for ZSTD compressed files. (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1007">#1007</a>] Wildcards not interpretted correctly in some projection pushdowns (<a href="https://github.com/joocer">@joocer</a>) </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/1007">#1007</a>] Wildcards not interpreted correctly in some projection pushdowns (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1015">#1015</a>] Column comparisons not working as expected in predicate pushdowns (<a href="https://github.com/joocer">@joocer</a>) </li>
 </ul>
 <h3 id="changed_19">Changed</h3>
@@ -4080,7 +4081,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/589">#589</a>] Moved conditional imports out of program initialization (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/836">#836</a>] Use PyArrow 11s exposure of underlying date values in profiler (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/853">#853</a>] CaskDB replaces RocksDB as default KV store (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/853">#855</a>] Caches have been renamed and separated from KV Stores to disencourage incorrect use; The Memcache Cache is now imported using <code>from opteryx.managers.cache import MemcachedCache</code> (<a href="https://github.com/joocer">@joocer</a>) </li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/853">#855</a>] Caches have been renamed and separated from KV Stores to discourage incorrect use; The Memcache Cache is now imported using <code>from opteryx.managers.cache import MemcachedCache</code> (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/857">#857</a>] Removed PyYAML install (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/865">#865</a>] Replaced third-party <code>DATE_TRUNC</code> implementation with a first-party implementation (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/861">#861</a>] Replaced third-party <code>bitarray</code> library with a first-party implementation (<a href="https://github.com/joocer">@joocer</a>) </li>
@@ -4131,7 +4132,7 @@
 <h2 id="081-2022-12-30">[0.8.1] - 2022-12-30</h2>
 <h3 id="fixed_30">Fixed</h3>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/754">#754</a>] Occassional segfaults on Aggregates. (<a href="https://github.com/joocer">@joocer</a>) </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/754">#754</a>] Occasional segfaults on Aggregates. (<a href="https://github.com/joocer">@joocer</a>) </li>
 </ul>
 <h2 id="080-2022-12-27">[0.8.0] - 2022-12-27</h2>
 <h3 id="fixed_31">Fixed</h3>
@@ -4378,7 +4379,7 @@
 <h3 id="added_34">Added</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/72">#72</a>] Configuration is now read from <code>opteryx.yaml</code> rather than the environment.  (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/issues/139">#139</a>] Gather statistics on planning reading of segements.  (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/139">#139</a>] Gather statistics on planning reading of segments.  (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/151">#151</a>] Implement <code>SELECT table.*</code>.  (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/137">#137</a>] <code>GENERATE_SERIES</code> function.  (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
