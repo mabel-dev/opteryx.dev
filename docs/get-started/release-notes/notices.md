@@ -14,7 +14,7 @@ Library           | Inclusion Type    | Copyright            | Licence
 [fuzzy](https://github.com/yougov/fuzzy)                   | Vendored   | [Jason R. Coombs](https://github.com/jaraco) | [MIT](https://github.com/yougov/fuzzy/blob/master/LICENSE)
 [mbleven](https://github.com/fujimotos/mbleven)            | Vendored   | 2018 [Fujimoto Seiji](https://github.com/fujimotos) | [Public Domain](https://github.com/fujimotos/mbleven/blob/master/LICENSE)
 [mysql-mimic](https://github.com/kelsin/mysql-mimic)       | Derived    | 2022 [Christopher Giroir](https://github.com/kelsin) | [MIT](https://github.com/kelsin/mysql-mimic/blob/main/LICENSE)
-[nanoarrow](https://github.com/apache/arrow-nanoarrow) n   | Vendored   | 2023 [Apache Foundation](https://github.com/apache/arrow-nanoarrow/blob/main/NOTICE.txt) | [Apache 2.0](https://github.com/apache/arrow-nanoarrow/blob/main/LICENSE.txt)
+[nanoarrow](https://github.com/apache/arrow-nanoarrow)     | Vendored   | 2023 [Apache Foundation](https://github.com/apache/arrow-nanoarrow/blob/main/NOTICE.txt) | [Apache 2.0](https://github.com/apache/arrow-nanoarrow/blob/main/LICENSE.txt)
 [numpy](https://github.com/numpy/numpy)                    | Dependency |  | [BSD-3](https://github.com/numpy/numpy/blob/main/LICENSE.txt)
 [orjson](https://github.com/ijl/orjson)                    | Dependency |  | [Apache 2.0](https://github.com/ijl/orjson/blob/master/LICENSE-APACHE)
 [pyarrow](https://github.com/apache/arrow/)                | Dependency |  | [Apache 2.0](https://github.com/apache/arrow/blob/master/LICENSE.txt)
@@ -44,7 +44,7 @@ Integrated components may differ from their original versions. While we generall
 
 ## Other Assets
 
-The [Icarus Opteryx](../../icarus-opteryx.png) image based on '[Evening: Fall of Day](https://collections.mfa.org/objects/30905)' by William Rimmer (Public Domain), more commonly associated with Led Zepplin's [Swan Song](https://en.wikipedia.org/wiki/Swan_Song_Records). The Icarus Opteryx image is created using visual components from 'Archaeopteryx' fossil image by Caro Asercion ([CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt)).
+The [Icarus Opteryx](../../icarus-opteryx.png) image based on '[Evening: Fall of Day](https://collections.mfa.org/objects/30905)' by William Rimmer (Public Domain), more commonly associated with Led Zeppelin's [Swan Song](https://en.wikipedia.org/wiki/Swan_Song_Records). The Icarus Opteryx image is created using visual components from 'Archaeopteryx' fossil image by Caro Asercion ([CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt)).
 
 Satellite and Planet datasets acquired from [devstronomy](https://github.com/devstronomy/nasa-data-scraper/tree/f610e541a053f05e26573570604aed50b358cc43/data/json).
 

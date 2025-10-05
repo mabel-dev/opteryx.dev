@@ -1,0 +1,12 @@
+repos:
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+      - id: codespell
+        exclude: |
+          (?x)(
+            ^docs/home-diagram\.svg$
+          )
+        args:
+          - --skip=.git,*.svg,*.png,*.jpg,*.jpeg,*.gif,*.ico,*.woff,*.woff2,*.ttf
+          - --ignore-words-list=joocer,opteryx,mabel,sqlparser,orso,rugo,draken,mesos

@@ -14,7 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2786](https://github.com/mabel-dev/opteryx/issues/2786)] `EXCEPT` and `ORDER BY` cannot coexist ([@joocer](https://github.com/joocer))
 - [[#2781](https://github.com/mabel-dev/opteryx/issues/2781)] Duplicate Aggregate References Cause KeyError ([@tigerquoll](https://github.com/tigerquoll), [@joocer](https://github.com/joocer))
-- [[#2797](https://github.com/mabel-dev/opteryx/issues/2797)] **[Iceberg]** Empty tables have no statisics to read ([@joocer](https://github.com/joocer))
+- [[#2797](https://github.com/mabel-dev/opteryx/issues/2797)] **[Iceberg]** Empty tables have no statistics to read ([@joocer](https://github.com/joocer))
 - [[#2805](https://github.com/mabel-dev/opteryx/pull/2805)] Read more rows to guess SQL Schema ([@joocer](https://github.com/joocer))
 
 ### Changed
@@ -23,10 +23,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2806](https://github.com/mabel-dev/opteryx/pull/2806)] Fix file descriptor leak and improve buffer handling in connectors and decoders (@copilot)
 - [[#2809](https://github.com/mabel-dev/opteryx/pull/2809)] [sqlparser-rs] Version bump and planning changes ([@joocer](https://github.com/joocer))
 - [[#2814](https://github.com/mabel-dev/opteryx/pull/2814)] Consolidate list_ops Cython files into single file with auto-generation ([@joocer](https://github.com/joocer), @copilot)
+- [[#2816](https://github.com/mabel-dev/opteryx/pull/2816)] Optimize initialization performance ([@joocer](https://github.com/joocer), @copilot)
 
 ### Added
 
-- [[#2771](https://github.com/mabel-dev/opteryx/issues/2771)] Add `@>>` as `ARRAY_CONTAINS_ALL` operator([@joocer](https://github.com/joocer))
+- [[#2771](https://github.com/mabel-dev/opteryx/issues/2771)] Add `@>>` as `ARRAY_CONTAINS_ALL` operator ([@joocer](https://github.com/joocer))
 - [[#2769](https://github.com/mabel-dev/opteryx/issues/2769)] Rewrite visibility filters to reduce complexity ([@joocer](https://github.com/joocer))
 
 ## [0.25.0] - 2025-09-04
@@ -38,7 +39,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- [[#2754](https://github.com/mabel-dev/opteryx/issues/2754)] Ensure `INSTR` recieves arrow arrays ([@joocer](https://github.com/joocer))
+- [[#2754](https://github.com/mabel-dev/opteryx/issues/2754)] Ensure `INSTR` receives arrow arrays ([@joocer](https://github.com/joocer))
 - [[#2756](https://github.com/mabel-dev/opteryx/issues/2756)] Improper encoding of UTF-8 strings ([@joocer](https://github.com/joocer))
 - [[#2761](https://github.com/mabel-dev/opteryx/issues/2761)] JOIN internals using both INT64 and UINT64 ([@joocer](https://github.com/joocer))
 
@@ -52,9 +53,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2718](https://github.com/mabel-dev/opteryx/issues/2718)] Use [Ryu](https://github.com/ulfjack/ryu) to `CAST` `DOUBLES` to `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
 - [[#2722](https://github.com/mabel-dev/opteryx/issues/2722)] Use [fast_float](https://github.com/fastfloat/fast_float) to `CAST` `DOUBLES` from `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
-- [[#2726](https://github.com/mabel-dev/opteryx/issues/2726)] Custom routines to to `CAST` `INTEGER` to `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
+- [[#2726](https://github.com/mabel-dev/opteryx/issues/2726)] Custom routines to `CAST` `INTEGER` to `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
 - [[#2729](https://github.com/mabel-dev/opteryx/issues/2729)] JSON lines reader doesn't need to parse lines to get line count for `COUNT(*)` ([@joocer](https://github.com/joocer))
-- [[#2730](https://github.com/mabel-dev/opteryx/pull/2730)] Custom routines to to `CAST` `INTEGER` from `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
+- [[#2730](https://github.com/mabel-dev/opteryx/pull/2730)] Custom routines to `CAST` `INTEGER` from `VARCHAR` and `BLOB` ([@joocer](https://github.com/joocer))
 - [[#2240](https://github.com/mabel-dev/opteryx/issues/2240)] **[Optimizer]** Initial cost-based optimization strategy ([@joocer](https://github.com/joocer))
 - [[#2736](https://github.com/mabel-dev/opteryx/issues/2736)] Support [Apache Vortex](https://github.com/vortex-data/vortex) files ([@joocer](https://github.com/joocer))
 
@@ -109,7 +110,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2592](https://github.com/mabel-dev/opteryx/issues/2592)] Cannot `GROUP BY` empty sets ([@joocer](https://github.com/joocer))
 - [[#2611](https://github.com/mabel-dev/opteryx/issues/2611)] **[CI]** Refactor version incrementor as pre-commit ([@joocer](https://github.com/joocer))
-- [[#2614](https://github.com/mabel-dev/opteryx/issues/2614)] Manually replace values to avoid multidimenstional array confusion in numpy ([@joocer](https://github.com/joocer))
+- [[#2614](https://github.com/mabel-dev/opteryx/issues/2614)] Manually replace values to avoid multidimensional array confusion in numpy ([@joocer](https://github.com/joocer))
 - [[#2636](https://github.com/mabel-dev/opteryx/issues/2636)] numpy `object` dtype definition incorrect in `CROSS JOIN` ([@joocer](https://github.com/joocer))
 
 ### Changed
@@ -118,7 +119,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2594](https://github.com/mabel-dev/opteryx/issues/2594)] **[Optimizer]** Combine `OR` chains of `ANY` equals conditions ([@joocer](https://github.com/joocer))
 - [[#2481](https://github.com/mabel-dev/opteryx/issues/2481)] **[Optimizer]** Rewrite `STARTS_WITH` and `ENDS_WITH` to `LIKE` statements ([@joocer](https://github.com/joocer))
 - [[#2604](https://github.com/mabel-dev/opteryx/issues/2604)] Log the post-optimized plan to the statistics ([@joocer](https://github.com/joocer))
-- [[#2607](https://github.com/mabel-dev/opteryx/issues/2607)] Unsided `SEMI` and `ANTI` `JOIN`s are interpretted as `LEFT` ([@joocer](https://github.com/joocer))
+- [[#2607](https://github.com/mabel-dev/opteryx/issues/2607)] Unqualified `SEMI` and `ANTI` `JOIN`s are interpreted as `LEFT` ([@joocer](https://github.com/joocer))
 - [[#2609](https://github.com/mabel-dev/opteryx/issues/2609)] Filter joins (`SEMI` and `ANTI`) internals rewritten ([@joocer](https://github.com/joocer))
 - [[#2616](https://github.com/mabel-dev/opteryx/issues/2616)] Refactor nested loop join to use pyarrow buffers ([@joocer](https://github.com/joocer))
 - [[#2619](https://github.com/mabel-dev/opteryx/issues/2619)] Refactor hash join variation of `INNER JOIN` and internal bloom filter to use pyarrow buffers ([@joocer](https://github.com/joocer))
@@ -134,7 +135,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- [[#2547](https://github.com/mabel-dev/opteryx/issues/2547)] `INSTR` optimzation incorrectly applied in some cases ([@joocer](https://github.com/joocer))
+- [[#2547](https://github.com/mabel-dev/opteryx/issues/2547)] `INSTR` optimization incorrectly applied in some cases ([@joocer](https://github.com/joocer))
 - [[#2554](https://github.com/mabel-dev/opteryx/issues/2554)] Explicit column ordering ([@joocer](https://github.com/joocer))
 - [[#2545](https://github.com/mabel-dev/opteryx/issues/2545)] Decimal scale and precision ignored in `CAST` ([@joocer](https://github.com/joocer))
 - [[#2556](https://github.com/mabel-dev/opteryx/issues/2556)] STRUCT ARRAYS not correctly converted to JSON ARRAYs ([@joocer](https://github.com/joocer))
@@ -149,7 +150,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Removed
 
-- Deprecated function aliases removed `CEILING`, `ABSOLUTE`, `MAXIMIM`, `MINIMUM`, use shorter form `CEIL`, `ABS`, `MAX`, `MIN` instead.
+- Deprecated function aliases removed `CEILING`, `ABSOLUTE`, `MAXIMUM`, `MINIMUM`, use shorter form `CEIL`, `ABS`, `MAX`, `MIN` instead.
 - `INNER JOIN UNNEST` removed from this release
 
 ### Added
@@ -162,8 +163,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2469](https://github.com/mabel-dev/opteryx/issues/2469)] **[Optimizer]** Additional check when folding constants ([@joocer](https://github.com/joocer))
 - [[#2384](https://github.com/mabel-dev/opteryx/issues/2384)] Support `GROUP BY ALL` ([@joocer](https://github.com/joocer))
 - [[#2374](https://github.com/mabel-dev/opteryx/issues/2374)] Support underscores in numeric literals ([@joocer](https://github.com/joocer))
-- [[#2468](https://github.com/mabel-dev/opteryx/issues/2468)] Combine mulitple `LIKE`s to `RLIKE` ([@joocer](https://github.com/joocer))
-- [[#2520](https://github.com/mabel-dev/opteryx/issues/2520)] Combine mulitple `=`s to `IN` ([@joocer](https://github.com/joocer))
+- [[#2468](https://github.com/mabel-dev/opteryx/issues/2468)] Combine multiple `LIKE`s to `RLIKE` ([@joocer](https://github.com/joocer))
+- [[#2520](https://github.com/mabel-dev/opteryx/issues/2520)] Combine multiple `=`s to `IN` ([@joocer](https://github.com/joocer))
 - [[#1352](https://github.com/mabel-dev/opteryx/issues/1352)] Basic CTE expressions ([@joocer](https://github.com/joocer))
 
 ### Fixed
@@ -175,7 +176,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2521](https://github.com/mabel-dev/opteryx/issues/2521)] Intermittent `LIKE` type error ([@joocer](https://github.com/joocer))
 - [[#2524](https://github.com/mabel-dev/opteryx/issues/2524)] `UNION` field order incorrect ([@joocer](https://github.com/joocer))
 - [[#2523](https://github.com/mabel-dev/opteryx/issues/2523)] Filters pushed into `UNION` incorrectly ([@joocer](https://github.com/joocer))
-- [[#1217](https://github.com/mabel-dev/opteryx/issues/1217)] Subqueries don't precent relation name collisions ([@joocer](https://github.com/joocer))
+- [[#1217](https://github.com/mabel-dev/opteryx/issues/1217)] Subqueries don't prevent relation name collisions ([@joocer](https://github.com/joocer))
 - [[#2537](https://github.com/mabel-dev/opteryx/issues/2537)] Intermittent errors with aggregations ([@joocer](https://github.com/joocer))
 - [[#2533](https://github.com/mabel-dev/opteryx/issues/2533)] `UNION` field order incorrect ([@joocer](https://github.com/joocer))
 
@@ -199,7 +200,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - [[#2213](https://github.com/mabel-dev/opteryx/issues/2213)] Specialized buffer for collecting Integers ([@joocer](https://github.com/joocer))
-- [[#2185](https://github.com/mabel-dev/opteryx/issues/2185)] **[Iceberg]** Initial support for **[Iceberg]**(https://iceberg.apache.org/) catalogs ([@joocer](https://github.com/joocer))
+- [[#2185](https://github.com/mabel-dev/opteryx/issues/2185)] **[Iceberg]** Initial support for [Iceberg](https://iceberg.apache.org/) catalogs ([@joocer](https://github.com/joocer))
 - [[#2209](https://github.com/mabel-dev/opteryx/issues/2209)] Initial support for Excel (xlsx) files ([@joocer](https://github.com/joocer))
 - [[#2223](https://github.com/mabel-dev/opteryx/issues/2223)] **[[Clickbench](https://benchmark.clickhouse.com/)]** Avoid creating tables for simple `COUNT(*)` queries ([@joocer](https://github.com/joocer))
 - [[#2228](https://github.com/mabel-dev/opteryx/issues/2228)] **[Iceberg]** Push `LIMIT` to Iceberg ([@joocer](https://github.com/joocer))
@@ -227,7 +228,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1954](https://github.com/mabel-dev/opteryx/issues/1954)] JSON Accessors rewritten to support `literal = document->key` form ([@joocer](https://github.com/joocer)) 
 - [[#2190](https://github.com/mabel-dev/opteryx/issues/2190)] **[[Clickbench](https://benchmark.clickhouse.com/)]** Resolve failing queries (partial) ([@joocer](https://github.com/joocer))
 - [[#2167](https://github.com/mabel-dev/opteryx/issues/2167)] **[CI]** Use [freezegun](https://github.com/spulec/freezegun) to reduce flaky tests ([@joocer](https://github.com/joocer))
-- [[#2247](https://github.com/mabel-dev/opteryx/issues/2247)] Non-Existant SQL tables returned incorrect error ([@joocer](https://github.com/joocer))
+- [[#2247](https://github.com/mabel-dev/opteryx/issues/2247)] Non-Existent SQL tables returned incorrect error ([@joocer](https://github.com/joocer))
 - [[#2231](https://github.com/mabel-dev/opteryx/issues/2231)] Visibility Filters don't accept array literals ([@joocer](https://github.com/joocer))
 - [[#2300](https://github.com/mabel-dev/opteryx/issues/2300)] Visibility Filters don't restrict when no filter provided ([@joocer](https://github.com/joocer))
 - [[#2299](https://github.com/mabel-dev/opteryx/issues/2299)] **[Fuzzer]** Unable to sort by `DECIMAL` columns which contain `NULL` values ([@joocer](https://github.com/joocer))
@@ -266,12 +267,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2105](https://github.com/mabel-dev/opteryx/issues/2105)] Support `LIKE ANY` and `ILIKE ANY` ([@joocer](https://github.com/joocer))
 - [[#2111](https://github.com/mabel-dev/opteryx/issues/2111)] `x LIKE '%'` written to `x IS NOT NULL` ([@joocer](https://github.com/joocer))
 - [[#2133](https://github.com/mabel-dev/opteryx/issues/2133)] Add support for ValKey cache ([@joocer](https://github.com/joocer))
-- [[#1866](https://github.com/mabel-dev/opteryx/issues/1866)] Rewrite aggregegations on constants to literal values ([@joocer](https://github.com/joocer))
+- [[#1866](https://github.com/mabel-dev/opteryx/issues/1866)] Rewrite aggregations on constants to literal values ([@joocer](https://github.com/joocer))
 - [[#2159](https://github.com/mabel-dev/opteryx/issues/2159)] Added `IFNOTNULL` and `PASSTHRU` functions ([@joocer](https://github.com/joocer))
 
 ### Fixed
 
-- [[#2085](https://github.com/mabel-dev/opteryx/issues/2085)] LEFT/RIGHT side in a `LEFT JOIN` occassionally swapped. ([@joocer](https://github.com/joocer))  
+- [[#2085](https://github.com/mabel-dev/opteryx/issues/2085)] LEFT/RIGHT side in a `LEFT JOIN` occasionally swapped. ([@joocer](https://github.com/joocer))
 - [[#2082](https://github.com/mabel-dev/opteryx/issues/2082)] Buffer Pool eviction puts reader into an invalid state ([@joocer](https://github.com/joocer))
 - [[#2091](https://github.com/mabel-dev/opteryx/issues/2091)] Command Line interface fails with unhelpful errors ([@joocer](https://github.com/joocer))
 - [[#2113](https://github.com/mabel-dev/opteryx/issues/2113)] Improve reliability of `NULLIF` function ([@joocer](https://github.com/joocer))
@@ -402,7 +403,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - [[#1763](https://github.com/mabel-dev/opteryx/issues/1763)] Support `@?` JSON Accessor ([@joocer](https://github.com/joocer))
-- [[#1670](https://github.com/mabel-dev/opteryx/issues/1670)] Inital [Tarchia](https://github.com/mabel-dev/tarchia) catalog support ([@joocer](https://github.com/joocer))
+- [[#1670](https://github.com/mabel-dev/opteryx/issues/1670)] Initial [Tarchia](https://github.com/mabel-dev/tarchia) catalog support ([@joocer](https://github.com/joocer))
 
 ### Fixed
 
@@ -436,7 +437,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - [[#1715](https://github.com/mabel-dev/opteryx/issues/1715)] More optimizations `AND`, `OR` and `XOR` aware  ([@joocer](https://github.com/joocer))
-- [[#1717](https://github.com/mabel-dev/opteryx/issues/1717)] Memcahed notified when resource read from local buffers ([@joocer](https://github.com/joocer))
+- [[#1717](https://github.com/mabel-dev/opteryx/issues/1717)] Memcached notified when resource read from local buffers ([@joocer](https://github.com/joocer))
 
 ## [0.15.1] - 2024-05-31
 
@@ -497,7 +498,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- [[#1460](https://github.com/mabel-dev/opteryx/issues/1460)] Support PyArrow's IPC formated files. ([@joocer](https://github.com/joocer))
+- [[#1460](https://github.com/mabel-dev/opteryx/issues/1460)] Support PyArrow's IPC formatted files. ([@joocer](https://github.com/joocer))
 - [[#1464](https://github.com/mabel-dev/opteryx/issues/1464)] `LIKE` with no wildcards rewritten as `=` ([@joocer](https://github.com/joocer))
 - [[#1468](https://github.com/mabel-dev/opteryx/issues/1468)] Python 3.12 support ([@joocer](https://github.com/joocer))
 - [[#1459](https://github.com/mabel-dev/opteryx/issues/1459)] Primitive support for `EXECUTE` queries ([@joocer](https://github.com/joocer))
@@ -507,7 +508,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1491](https://github.com/mabel-dev/opteryx/issues/1491)] New test dataset `$missions`. ([@joocer](https://github.com/joocer))
 - [[#1300](https://github.com/mabel-dev/opteryx/issues/1300)] Support named Parameters. ([@joocer](https://github.com/joocer))
 - [[#1516](https://github.com/mabel-dev/opteryx/issues/1516)] Day of Week placeholders for temporal queries. ([@joocer](https://github.com/joocer))
-- [[#1563](https://github.com/mabel-dev/opteryx/issues/1563)] Add support for Cassandra-based sources[@joocer](https://github.com/joocer)
+- [[#1563](https://github.com/mabel-dev/opteryx/issues/1563)] Add support for Cassandra-based sources ([@joocer](https://github.com/joocer))
 
 ### Changed
 
@@ -664,7 +665,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#1008](https://github.com/mabel-dev/opteryx/issues/1008)] `JOIN` on a literal fails when attempting to find good match. ([@joocer](https://github.com/joocer)) 
 - [[#1006](https://github.com/mabel-dev/opteryx/issues/1006)] Errors handling filenames with multiple dots in the name. ([@joocer](https://github.com/joocer)) 
 - [[#1010](https://github.com/mabel-dev/opteryx/issues/1010)] Predicates not pushed for ZSTD compressed files. ([@joocer](https://github.com/joocer)) 
-- [[#1007](https://github.com/mabel-dev/opteryx/issues/1007)] Wildcards not interpretted correctly in some projection pushdowns ([@joocer](https://github.com/joocer)) 
+- [[#1007](https://github.com/mabel-dev/opteryx/issues/1007)] Wildcards not interpreted correctly in some projection pushdowns ([@joocer](https://github.com/joocer)) 
 - [[#1015](https://github.com/mabel-dev/opteryx/issues/1015)] Column comparisons not working as expected in predicate pushdowns ([@joocer](https://github.com/joocer)) 
 
 ### Changed
@@ -743,7 +744,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#589](https://github.com/mabel-dev/opteryx/issues/589)] Moved conditional imports out of program initialization ([@joocer](https://github.com/joocer)) 
 - [[#836](https://github.com/mabel-dev/opteryx/issues/836)] Use PyArrow 11s exposure of underlying date values in profiler ([@joocer](https://github.com/joocer)) 
 - [[#853](https://github.com/mabel-dev/opteryx/issues/853)] CaskDB replaces RocksDB as default KV store ([@joocer](https://github.com/joocer)) 
-- :octicons-alert-24: [[#855](https://github.com/mabel-dev/opteryx/issues/853)] Caches have been renamed and separated from KV Stores to disencourage incorrect use; The Memcache Cache is now imported using `from opteryx.managers.cache import MemcachedCache` ([@joocer](https://github.com/joocer)) 
+- :octicons-alert-24: [[#855](https://github.com/mabel-dev/opteryx/issues/853)] Caches have been renamed and separated from KV Stores to discourage incorrect use; The Memcache Cache is now imported using `from opteryx.managers.cache import MemcachedCache` ([@joocer](https://github.com/joocer)) 
 - [[#857](https://github.com/mabel-dev/opteryx/issues/857)] Removed PyYAML install ([@joocer](https://github.com/joocer)) 
 - [[#865](https://github.com/mabel-dev/opteryx/issues/865)] Replaced third-party `DATE_TRUNC` implementation with a first-party implementation ([@joocer](https://github.com/joocer)) 
 - [[#861](https://github.com/mabel-dev/opteryx/issues/861)] Replaced third-party `bitarray` library with a first-party implementation ([@joocer](https://github.com/joocer)) 
@@ -797,7 +798,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- [[#754](https://github.com/mabel-dev/opteryx/issues/754)] Occassional segfaults on Aggregates. ([@joocer](https://github.com/joocer)) 
+- [[#754](https://github.com/mabel-dev/opteryx/issues/754)] Occasional segfaults on Aggregates. ([@joocer](https://github.com/joocer)) 
 
 ## [0.8.0] - 2022-12-27
 
@@ -1055,7 +1056,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - [[#72](https://github.com/mabel-dev/opteryx/issues/72)] Configuration is now read from `opteryx.yaml` rather than the environment.  ([@joocer](https://github.com/joocer))
-- [[#139](https://github.com/mabel-dev/opteryx/issues/139)] Gather statistics on planning reading of segements.  ([@joocer](https://github.com/joocer))
+- [[#139](https://github.com/mabel-dev/opteryx/issues/139)] Gather statistics on planning reading of segments.  ([@joocer](https://github.com/joocer))
 - [[#151](https://github.com/mabel-dev/opteryx/issues/151)] Implement `SELECT table.*`.  ([@joocer](https://github.com/joocer))
 - [[#137](https://github.com/mabel-dev/opteryx/issues/137)] `GENERATE_SERIES` function.  ([@joocer](https://github.com/joocer))
 
