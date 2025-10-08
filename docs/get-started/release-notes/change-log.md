@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 
 - Python 3.10 regression tests, builds will continue but not recommended for use in production.
+- `GET` and `SEARCH` marked as deprecated to be removed in or after version 0.27.
 
 ### Fixed
 
@@ -24,6 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2809](https://github.com/mabel-dev/opteryx/pull/2809)] [sqlparser-rs] Version bump and planning changes ([@joocer](https://github.com/joocer))
 - [[#2814](https://github.com/mabel-dev/opteryx/pull/2814)] Consolidate list_ops Cython files into single file with auto-generation ([@joocer](https://github.com/joocer), @copilot)
 - [[#2816](https://github.com/mabel-dev/opteryx/pull/2816)] Optimize initialization performance ([@joocer](https://github.com/joocer), @copilot)
+- [[#2825](https://github.com/mabel-dev/opteryx/pull/2825)] Improve interactions with external DBMSs ([@joocer](https://github.com/joocer))
 
 ### Added
 
