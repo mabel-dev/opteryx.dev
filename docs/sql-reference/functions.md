@@ -355,6 +355,10 @@ Functions for examining and manipulating string values.
     **Will be deprecated after version 0.28**    
     Alias of **str**`[`**index**`]`   
 
+!!! function "`INITCAP` (**str**: _varchar_) → _varchar_"   
+    :octicons-star-16: **New in 0.26**   
+    Capitalize the initial letter of each word in a string.  
+
 !!! function "`LEFT` (**str**: _varchar_, **n**: _numeric_) → _varchar_"  
     Extract the left-most **n** characters of **str**.  
     _Related:_ `RIGHT`
@@ -389,6 +393,10 @@ Functions for examining and manipulating string values.
 
 !!! function "`REGEXP_REPLACE` (**str**: _varchar_, **pattern**: _varchar_, **replace**: _varchar_) → _varchar_"   
     Replace all occurrences of the regular expression **pattern** in **str** with **replace**.  
+
+!!! function "`REPLACE` (**str**: _varchar_, **pattern**: _varchar_, **replace**: _varchar_) → _varchar_"   
+    :octicons-star-16: **New in 0.26**   
+    Replace all occurrences of **pattern** in **str** with **replace**.  
 
 !!! function "`REVERSE` (**str**: _varchar_) → _varchar_"  
     Return **str** with its characters in reverse order.
