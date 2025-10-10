@@ -21,11 +21,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - [[#2804](https://github.com/mabel-dev/opteryx/issues/2804)] **[[rugo](https://github.com/mabel-dev/rugo)]** Replace parquet metadata reader ([@joocer](https://github.com/joocer))
-- [[#2806](https://github.com/mabel-dev/opteryx/pull/2806)] Fix file descriptor leak and improve buffer handling in connectors and decoders (@copilot)
+- [[#2806](https://github.com/mabel-dev/opteryx/pull/2806)] Fix file descriptor leak and improve buffer handling in connectors and decoders (@Copilot)
 - [[#2809](https://github.com/mabel-dev/opteryx/pull/2809)] [sqlparser-rs] Version bump and planning changes ([@joocer](https://github.com/joocer))
-- [[#2814](https://github.com/mabel-dev/opteryx/pull/2814)] Consolidate list_ops Cython files into single file with auto-generation ([@joocer](https://github.com/joocer), @copilot)
-- [[#2816](https://github.com/mabel-dev/opteryx/pull/2816)] Optimize initialization performance ([@joocer](https://github.com/joocer), @copilot)
+- [[#2814](https://github.com/mabel-dev/opteryx/pull/2814)] Consolidate list_ops Cython files into single file with auto-generation ([@joocer](https://github.com/joocer), @Copilot)
+- [[#2816](https://github.com/mabel-dev/opteryx/pull/2816)] Optimize initialization performance ([@joocer](https://github.com/joocer), @Copilot)
 - [[#2825](https://github.com/mabel-dev/opteryx/pull/2825)] Improve interactions with external DBMSs ([@joocer](https://github.com/joocer))
+- Numerous housekeeping changes to tidy the structure of the code and repository ([@joocer](https://github.com/joocer),@Copilot)
 
 ### Added
 
