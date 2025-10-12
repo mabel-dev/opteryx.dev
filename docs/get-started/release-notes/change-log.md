@@ -33,6 +33,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2771](https://github.com/mabel-dev/opteryx/issues/2771)] Add `@>>` as `ARRAY_CONTAINS_ALL` operator ([@joocer](https://github.com/joocer))
 - [[#2769](https://github.com/mabel-dev/opteryx/issues/2769)] Rewrite visibility filters to reduce complexity ([@joocer](https://github.com/joocer))
 - [[#2836](https://github.com/mabel-dev/opteryx/issues/2836)] Add `REPLACE` and `INITCAP` functions ([@joocer](https://github.com/joocer))
+- [[#2832](https://github.com/mabel-dev/opteryx/pull/2832)] Experimental support for [free-threaded](https://peps.python.org/pep-0703/) Python ([@joocer](https://github.com/joocer))
+
 
 ## [0.25.0] - 2025-09-04
 
