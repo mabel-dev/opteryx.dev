@@ -17,6 +17,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2781](https://github.com/mabel-dev/opteryx/issues/2781)] Duplicate Aggregate References Cause KeyError ([@tigerquoll](https://github.com/tigerquoll), [@joocer](https://github.com/joocer))
 - [[#2797](https://github.com/mabel-dev/opteryx/issues/2797)] **[Iceberg]** Empty tables have no statistics to read ([@joocer](https://github.com/joocer))
 - [[#2805](https://github.com/mabel-dev/opteryx/pull/2805)] Read more rows to guess SQL Schema ([@joocer](https://github.com/joocer))
+- [[#2829](https://github.com/mabel-dev/opteryx/pull/2829)] Support schemas in table names for Postgres ([@joocer](https://github.com/joocer))
+- [[#2849](https://github.com/mabel-dev/opteryx/pull/2849)] Return column names as per `SELECT` clause ([@joocer](https://github.com/joocer))
 
 ### Changed
 
@@ -27,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2816](https://github.com/mabel-dev/opteryx/pull/2816)] Optimize initialization performance ([@joocer](https://github.com/joocer), @Copilot)
 - [[#2825](https://github.com/mabel-dev/opteryx/pull/2825)] Improve interactions with external DBMSs ([@joocer](https://github.com/joocer))
 - Numerous housekeeping changes to tidy the structure of the code and repository ([@joocer](https://github.com/joocer),@Copilot)
+- 
 
 ### Added
 
@@ -36,6 +39,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2832](https://github.com/mabel-dev/opteryx/pull/2832)] Experimental support for [free-threaded](https://peps.python.org/pep-0703/) Python ([@joocer](https://github.com/joocer))
 - [[#2808](https://github.com/mabel-dev/opteryx/issues/2808)] Support wildcards when querying local filesystem (@Copilot)
 - [[#2807](https://github.com/mabel-dev/opteryx/issues/2807)] Support protocol prefixes for paths (gs://, s3://) (@Copilot)
+- [[#2851](https://github.com/mabel-dev/opteryx/issues/2851)] Bespoke JSONL decoder with projection pushdown support ([@joocer](https://github.com/joocer), @Copilot)
 
 ## [0.25.0] - 2025-09-04
 
