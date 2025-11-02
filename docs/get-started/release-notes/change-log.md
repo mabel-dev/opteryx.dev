@@ -19,17 +19,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2805](https://github.com/mabel-dev/opteryx/pull/2805)] Read more rows to guess SQL Schema ([@joocer](https://github.com/joocer))
 - [[#2829](https://github.com/mabel-dev/opteryx/pull/2829)] Support schemas in table names for Postgres ([@joocer](https://github.com/joocer))
 - [[#2849](https://github.com/mabel-dev/opteryx/pull/2849)] Return column names as per `SELECT` clause ([@joocer](https://github.com/joocer))
+- [[#2877](https://github.com/mabel-dev/opteryx/pull/2877)] **[ClickBench]** Various changes to address performance degradation ([@joocer](https://github.com/joocer))
 
 ### Changed
 
 - [[#2804](https://github.com/mabel-dev/opteryx/issues/2804)] **[[rugo](https://github.com/mabel-dev/rugo)]** Replace parquet metadata reader ([@joocer](https://github.com/joocer))
 - [[#2806](https://github.com/mabel-dev/opteryx/pull/2806)] Fix file descriptor leak and improve buffer handling in connectors and decoders (@Copilot)
-- [[#2809](https://github.com/mabel-dev/opteryx/pull/2809)] [sqlparser-rs] Version bump and planning changes ([@joocer](https://github.com/joocer))
+- [[#2809](https://github.com/mabel-dev/opteryx/pull/2809)] **[sqlparser-rs]** Version bump and planner changes ([@joocer](https://github.com/joocer))
 - [[#2814](https://github.com/mabel-dev/opteryx/pull/2814)] Consolidate list_ops Cython files into single file with auto-generation ([@joocer](https://github.com/joocer), @Copilot)
 - [[#2816](https://github.com/mabel-dev/opteryx/pull/2816)] Optimize initialization performance ([@joocer](https://github.com/joocer), @Copilot)
 - [[#2825](https://github.com/mabel-dev/opteryx/pull/2825)] Improve interactions with external DBMSs ([@joocer](https://github.com/joocer))
 - Numerous housekeeping changes to tidy the structure of the code and repository ([@joocer](https://github.com/joocer),@Copilot)
-- 
 
 ### Added
 
@@ -40,6 +40,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2808](https://github.com/mabel-dev/opteryx/issues/2808)] Support wildcards when querying local filesystem (@Copilot)
 - [[#2807](https://github.com/mabel-dev/opteryx/issues/2807)] Support protocol prefixes for paths (gs://, s3://) (@Copilot)
 - [[#2851](https://github.com/mabel-dev/opteryx/issues/2851)] Bespoke JSONL decoder with projection pushdown support ([@joocer](https://github.com/joocer), @Copilot)
+- [[#2885](https://github.com/mabel-dev/opteryx/issues/2885)] Predicate compaction strategy ([@joocer](https://github.com/joocer), @Copilot)
 
 ## [0.25.0] - 2025-09-04
 
