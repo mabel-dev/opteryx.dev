@@ -21,6 +21,7 @@ Library           | Inclusion Type    | Copyright            | Licence
 [pyarrow_ops](https://github.com/TomScheffers/pyarrow_ops) | Derived    | [TomScheffers](https://github.com/TomScheffers) (assumed) | [Apache 2.0](https://github.com/TomScheffers/pyarrow_ops/blob/main/LICENSE)
 [pysimdjson](https://github.com/TkTech/pysimdjson)         | Vendored   | 2019 [Tyler Kennedy](https://github.com/TkTech) | [Apache 2.0](https://github.com/TkTech/pysimdjson/blob/master/LICENSE)
 [query-builder](https://death.andgravity.com/query-builder-how) | Vendored | 2021 [lemon24](https://github.com/lemon24) (assumed) | [BSD-3](https://github.com/lemon24/reader/blob/15121f667a6f2e388f0072a3fcd715f533883899/LICENSE)
+[re2](https://github.com/google/re2)                       | Vendored   | 2009 RE2 Authors | [BSD-3](https://github.com/google/re2/blob/main/LICENSE)
 [ryu](https://github.com/ulfjack/ryu)                      | Vendored   | 2018 [Ulf Adams](https://github.com/ulfjack) (assumed) | [Apache 2.0](https://github.com/ulfjack/ryu/blob/master/LICENSE-Apache2)
 [sqloxide](https://github.com/wseaton/sqloxide)            | Vendored   | 2020 [Will Eaton](https://github.com/wseaton) | [MIT](https://github.com/wseaton/sqloxide/blob/master/LICENSE)
 [xxHash](https://github.com/Cyan4973/xxHash)               | Vendored   | 2023 [Yann Collet](https://github.com/Cyan4973) | [BSD-2](https://github.com/Cyan4973/xxHash/blob/dev/LICENSE)

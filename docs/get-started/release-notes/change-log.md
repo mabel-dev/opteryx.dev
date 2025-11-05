@@ -41,6 +41,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2807](https://github.com/mabel-dev/opteryx/issues/2807)] Support protocol prefixes for paths (gs://, s3://) (@Copilot)
 - [[#2851](https://github.com/mabel-dev/opteryx/issues/2851)] Bespoke JSONL decoder with projection pushdown support ([@joocer](https://github.com/joocer), @Copilot)
 - [[#2885](https://github.com/mabel-dev/opteryx/issues/2885)] Predicate compaction strategy ([@joocer](https://github.com/joocer), @Copilot)
+- [[#2892](https://github.com/mabel-dev/opteryx/issues/2892)] Vendor [RE2](https://github.com/google/re2) ([@joocer](https://github.com/joocer), @Copilot)
 
 ## [0.25.0] - 2025-09-04
 
