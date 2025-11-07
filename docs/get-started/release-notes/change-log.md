@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file, where appro
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.27.0] - UNRELEASED
+
+### Changed
+
+- [[#2901](https://github.com/mabel-dev/opteryx/issues/2901)] Low-level directory listing code ([@joocer](https://github.com/joocer))
+
 ## [0.26.1] - 2025-11-05
 
 ### Removed

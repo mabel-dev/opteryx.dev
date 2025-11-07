@@ -22,8 +22,8 @@ jobs:
       - run: markdownify ./docs/get-started/ecosystem/orso/orso.html > ./docs/get-started/ecosystem/orso/orso.md
 
       # this should match the version
-      - run: mike delete latest
-      - run: mike deploy -p "0.26.1" latest
-      - run: mike delete dev
+#      - run: mike delete latest
+#      - run: mike deploy -p "0.26.1" latest
+#      - run: mike delete dev
  
       - run: mike deploy -p "0.27.0" dev
