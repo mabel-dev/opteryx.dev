@@ -3397,6 +3397,8 @@
 <h3 id="changed">Changed</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2901">#2901</a>] Low-level directory listing code (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2902">#2902</a>] Remove requirement to name subqueries (<a href="https://github.com/joocer">@joocer</a>)</li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/issues/2888">#2888</a>] Push projection into <code>JOIN</code>s to reduce wasteful materialisation (<a href="https://github.com/joocer">@joocer</a>)</li>
 </ul>
 <h2 id="0261-2025-11-05">[0.26.1] - 2025-11-05</h2>
 <h3 id="removed">Removed</h3>
@@ -3653,7 +3655,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2361">#2361</a>] Split <code>list_ops</code> to function per file (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2356">#2356</a>] <strong>[Parser]</strong> Create an Opteryx dialect for <a href="https://github.com/apache/datafusion-sqlparser-rs">sqlparser-rs</a> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/2376">#2376</a>] <strong>[Parser]</strong> Support hyphens in identifier names (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/2327">#2327</a>] Updated <a href="https://github.com/apache/datafusion-sqlparser-rs">sqlparser-rs</a> to version 0.54.0 <a href="https://github.com/apps/dependabot">dependabot</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/2327">#2327</a>] Updated <a href="https://github.com/apache/datafusion-sqlparser-rs">sqlparser-rs</a> to version 0.54.0 (<a href="https://github.com/apps/dependabot">dependabot</a>) </li>
 </ul>
 <h2 id="0190-2025-01-02">[0.19.0] - 2025-01-02</h2>
 <h3 id="added_6">Added</h3>
@@ -3952,7 +3954,7 @@
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1374">#1374</a>] GCS access improvements (up to 2.5x faster IO). (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1393">#1393</a>] Performance Tuning blob reading. (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/1411">#1411</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.43.1 <a href="https://github.com/apps/dependabot">dependabot</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/1411">#1411</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.43.1 (<a href="https://github.com/apps/dependabot">dependabot</a>)</li>
 </ul>
 <h2 id="0122-2024-01-10">[0.12.2] - 2024-01-10</h2>
 <h3 id="added_19">Added</h3>
@@ -3979,7 +3981,7 @@
 <h3 id="changed_18">Changed</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1083">#1083</a>] Simplify the handling of Query Statistics. (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/1086">#1086</a>] Update <a href="https://github.com/davidhewitt/pythonize">Pythonize</a> to v0.19 and <a href="https://github.com/PyO3/pyo3">py03</a> to v0.20.0 <a href="https://github.com/apps/dependabot">dependabot</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/1086">#1086</a>] Update <a href="https://github.com/davidhewitt/pythonize">Pythonize</a> to v0.19 and <a href="https://github.com/PyO3/pyo3">py03</a> to v0.20.0 (<a href="https://github.com/apps/dependabot">dependabot</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/1042">#1042</a>] Create a generic base connector and use for all access (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/1032">#1032</a>] Introduce a query binder (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/1158">#1158</a>] Resync sqloxide (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -3996,7 +3998,7 @@
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/1171">#1171</a>] Support <code>SEMI</code> and <code>ANTI</code> join syntax (<a href="https://github.com/joocer">@joocer</a>)  </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/1219">#1219</a>] Extended <code>FAKE</code> syntax (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/1219">#1219</a>] <code>DISTINCT ON</code> syntax added (<a href="https://github.com/joocer">@joocer</a>)</li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/1339">#1339</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.41.0 <a href="https://github.com/apps/dependabot">dependabot</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/1339">#1339</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.41.0 (<a href="https://github.com/apps/dependabot">dependabot</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/1329">#1329</a>] Add Redis as remote read cache option. (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/1337">#1337</a>] Support <code>RLIKE</code> (<a href="https://github.com/joocer">@joocer</a>)</li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/1344">#1344</a>] Initial Support for <code>ANY</code> and <code>ALL</code> array containment syntax (<a href="https://github.com/joocer">@joocer</a>)</li>
@@ -4010,15 +4012,15 @@
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1069">#1069</a>] Minor improvements identified during code review of code to generate numeric series. (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1072">#1072</a>] Minor improvements identified during code review of code to handle dates and intervals. (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/1026">#1026</a>] Removed pin to version 0.11 of PyArrow <a href="https://github.com/apps/dependabot">dependabot</a> </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/1077">#1077</a>] Removed pin to version 0.7.1 of DuckDB <a href="https://github.com/apps/dependabot">dependabot</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/1026">#1026</a>] Removed pin to version 0.11 of PyArrow (<a href="https://github.com/apps/dependabot">dependabot</a>) </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/1077">#1077</a>] Removed pin to version 0.7.1 of DuckDB (<a href="https://github.com/apps/dependabot">dependabot</a>) </li>
 </ul>
 <h3 id="changed_19">Changed</h3>
 <ul>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/808">#808</a>] Rewrite of AST to Logical plan. (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1031">#1031</a>] <code>.to_df</code> deprecation complete. (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/356">#356</a>] Prepositioning changes for extended types. (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/1046">#1046</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.34.0 <a href="https://github.com/apps/dependabot">dependabot</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/1046">#1046</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.34.0 (<a href="https://github.com/apps/dependabot">dependabot</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/discussions/1017">#1017</a>] Fuzzy matching for suggestions is punctuation insensitive (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1060">#1060</a>] Conditional test execution made more explicit. (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/pull/1026">#1026</a>] Timeout FireStore connection. (<a href="https://github.com/joocer">@joocer</a>) </li>
@@ -4048,15 +4050,15 @@
 </ul>
 <h3 id="changed_20">Changed</h3>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/925">#925</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.31.0 <a href="https://github.com/apps/dependabot">dependabot</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/925">#925</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.31.0 (<a href="https://github.com/apps/dependabot">dependabot</a>) </li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/931">#931</a>] Cursor <code>fetch</code> no longer accept <code>asdict</code> parameter, instead each tuple (an <a href="https://github.com/mabel-dev/orso">orso</a> Row) has an <code>as_dict</code> method (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/906">#906</a>] Cursor extends an <a href="https://github.com/mabel-dev/orso">orso</a> DataFrame, providing additional functionality (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/938">#938</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.32.0 <a href="https://github.com/apps/dependabot">dependabot</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/938">#938</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.32.0 (<a href="https://github.com/apps/dependabot">dependabot</a>)  </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/940">#940</a>] CityHash moved to <a href="https://github.com/mabel-dev/orso">orso</a>.cityhash (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/942">#942</a>] Profiler (and distogram) moved to <a href="https://github.com/mabel-dev/orso">orso</a> (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0z"/><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"/></svg></span> [<a href="https://github.com/mabel-dev/opteryx/issues/965">#965</a>] (MySQL Compatibility) <code>SHOW STORES</code> renamed to <code>SHOW DATABASES</code> (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/973">#973</a>] Improved readability of Sort nodes in <code>EXPLAIN</code> queries  (<a href="https://github.com/joocer">@joocer</a>) </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/984">#984</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.33.0 <a href="https://github.com/apps/dependabot">dependabot</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/984">#984</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.33.0 (<a href="https://github.com/apps/dependabot">dependabot</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/999">#999</a>] Improved error messages when using subscript functions (<a href="https://github.com/joocer">@joocer</a>) </li>
 <li>[<a href="https://github.com/mabel-dev/opteryx/issues/1019">#1019</a>] CircularLog renamed RollingLog (<a href="https://github.com/joocer">@joocer</a>) </li>
 </ul>
@@ -4140,7 +4142,7 @@
 </ul>
 <h3 id="changed_23">Changed</h3>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/789">#789</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.30.0 <a href="https://github.com/apps/dependabot">dependabot</a>  </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/789">#789</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.30.0 (<a href="https://github.com/apps/dependabot">dependabot</a>)  </li>
 </ul>
 <h3 id="added_24">Added</h3>
 <ul>
@@ -4158,7 +4160,7 @@
 <h3 id="changed_24">Changed</h3>
 <ul>
 <li>Internal refactoring relating to creation of metadata service. (<a href="https://github.com/joocer">@joocer</a>)  </li>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/761">#761</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.29.0 <a href="https://github.com/apps/dependabot">dependabot</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/761">#761</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.29.0 (<a href="https://github.com/apps/dependabot">dependabot</a>) </li>
 </ul>
 <h3 id="added_25">Added</h3>
 <ul>
@@ -4203,7 +4205,7 @@
 </ul>
 <h3 id="changed_26">Changed</h3>
 <ul>
-<li>[<a href="https://github.com/mabel-dev/opteryx/pull/662">#662</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.27.0 <a href="https://github.com/apps/dependabot">dependabot</a> </li>
+<li>[<a href="https://github.com/mabel-dev/opteryx/pull/662">#662</a>] Updated <a href="https://github.com/sqlparser-rs/sqlparser-rs">sqlparser-rs</a> to version 0.27.0 (<a href="https://github.com/apps/dependabot">dependabot</a>) </li>
 </ul>
 <h3 id="added_27">Added</h3>
 <ul>
