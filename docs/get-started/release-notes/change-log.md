@@ -12,7 +12,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2902](https://github.com/mabel-dev/opteryx/issues/2902)] Remove requirement to name subqueries ([@joocer](https://github.com/joocer))
 - [[#2888](https://github.com/mabel-dev/opteryx/issues/2888)] Push projection into `JOIN`s to reduce wasteful materialisation ([@joocer](https://github.com/joocer))
 
+### Added
 
+- [[#2905](https://github.com/mabel-dev/opteryx/issues/2905)] Add an ARM build ([@joocer](https://github.com/joocer))
 
 ## [0.26.1] - 2025-11-05
 
