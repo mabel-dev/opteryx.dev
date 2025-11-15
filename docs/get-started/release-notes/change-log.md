@@ -17,7 +17,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2902](https://github.com/mabel-dev/opteryx/issues/2902)] Remove requirement to name subqueries ([@joocer](https://github.com/joocer))
 - [[#2888](https://github.com/mabel-dev/opteryx/issues/2888)] **[Optimizer]** Push projection into `JOIN`s to reduce wasteful materialisation ([@joocer](https://github.com/joocer))
 - [[#2923](https://github.com/mabel-dev/opteryx/issues/2923)] Improve DBAPI conformance ([@joocer](https://github.com/joocer))
-- [[#2915](https://github.com/mabel-dev/opteryx/pull/2915)] **[Draken]** Implement `hash_into` to improve hash performanct ([@joocer](https://github.com/joocer))
+- [[#2915](https://github.com/mabel-dev/opteryx/pull/2915)] **[Draken]** Implement `hash_into` to improve hash performance ([@joocer](https://github.com/joocer))
+- [[#2924](https://github.com/mabel-dev/opteryx/issues/2924)] **[Draken]** All vectors now use SIMD to merge hashes ([@joocer](https://github.com/joocer))
 
 ### Added
 
