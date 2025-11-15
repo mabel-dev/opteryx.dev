@@ -24,6 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - [[#2905](https://github.com/mabel-dev/opteryx/issues/2905)] **[CI/CD]** Add an ARM build ([@joocer](https://github.com/joocer))
 - [[#2896](https://github.com/mabel-dev/opteryx/issues/2896)] Vendor Rugo and Draken ([@joocer](https://github.com/joocer))
+- [[#2929](https://github.com/mabel-dev/opteryx/issues/2929)] Initial support for non-equi JOINs ([@joocer](https://github.com/joocer))
 
 ## [0.26.1] - 2025-11-05
 
