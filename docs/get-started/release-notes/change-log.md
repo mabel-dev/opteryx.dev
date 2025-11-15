@@ -6,15 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.27.0] - UNRELEASED
 
+### Fixed
+
+- [[#2916](https://github.com/mabel-dev/opteryx/pull/2916)] **[Optimizer]** Fix projection pushdown bug ([@joocer](https://github.com/joocer))
+- [[#2536](https://github.com/mabel-dev/opteryx/issues/2536)] **[Optimizer]** Redundant operators not always removed ([@joocer](https://github.com/joocer))
+
 ### Changed
 
-- [[#2901](https://github.com/mabel-dev/opteryx/issues/2901)] Low-level directory listing code ([@joocer](https://github.com/joocer))
+- [[#2901](https://github.com/mabel-dev/opteryx/issues/2901)] **[IO]** Low-level directory listing code ([@joocer](https://github.com/joocer))
 - [[#2902](https://github.com/mabel-dev/opteryx/issues/2902)] Remove requirement to name subqueries ([@joocer](https://github.com/joocer))
-- [[#2888](https://github.com/mabel-dev/opteryx/issues/2888)] Push projection into `JOIN`s to reduce wasteful materialisation ([@joocer](https://github.com/joocer))
+- [[#2888](https://github.com/mabel-dev/opteryx/issues/2888)] **[Optimizer]** Push projection into `JOIN`s to reduce wasteful materialisation ([@joocer](https://github.com/joocer))
+- [[#2923](https://github.com/mabel-dev/opteryx/issues/2923)] Improve DBAPI conformance ([@joocer](https://github.com/joocer))
+- [[#2915](https://github.com/mabel-dev/opteryx/pull/2915)] **[Draken]** Implement `hash_into` to improve hash performanct ([@joocer](https://github.com/joocer))
 
 ### Added
 
-- [[#2905](https://github.com/mabel-dev/opteryx/issues/2905)] Add an ARM build ([@joocer](https://github.com/joocer))
+- [[#2905](https://github.com/mabel-dev/opteryx/issues/2905)] **[CI/CD]** Add an ARM build ([@joocer](https://github.com/joocer))
+- [[#2896](https://github.com/mabel-dev/opteryx/issues/2896)] Vendor Rugo and Draken ([@joocer](https://github.com/joocer))
 
 ## [0.26.1] - 2025-11-05
 

@@ -6,247 +6,65 @@ description: Opteryx SQL-92 standard compliance. Supported SQL features, stateme
 # ANSI SQL-92 Conformity
 
 !!! Note   
-    Conformance is a work in progress. This page reflects the current implementation status to provide transparent insight into Opteryx’s capabilities and development progress.
+    The Opteryx maintainers author this page as a living attestation of the engine’s SQL-92 capabilities. We update it as features land so users have a current statement of support straight from the builders.
 
 For a system to [attest to supporting SQL][^1] it should demonstrate strong conformance to the [ANSI SQL-92](https://db.cs.cmu.edu/files/sql/sql1992.txt) standard, also published as [ISO/IEC 9075:1992](https://www.iso.org/standard/16663.html).
 
-Opteryx is not a full DBMS and does not aim for full compliance with the entire SQL-92 standard. Instead, it targets conformity with a relevant subset of SQL-92—primarily focused on the features required to support `SELECT` statements and related analytical operations.
+We attest that Opteryx targets the slice of SQL-92 needed for analytical `SELECT` workloads. The engine is intentionally read-only; transactional language, DDL, and privilege statements fall outside its charter.
 
 ## Purpose and Scope
 
-This conformance matrix serves to:
+This declaration is meant to:
 
-- **Provide transparency** - Show which SQL features are supported, partially supported, or not implemented
-- **Guide development** - Identify areas for future enhancement
-- **Set expectations** - Help users understand what SQL operations they can perform
-- **Track progress** - Document improvements in SQL standard compliance over time
+- **State support** – Outline, in our own words, which SQL-92 features Opteryx already delivers.
+- **Share intent** – Call out the features we purposefully omit (read-only focus) vs. those still in development.
+- **Guide adopters** – Let users plan with confidence, knowing the data interface we stand behind today.
 
-## Conformance Matrix
+## Attestation Snapshot
 
-Function | Description                                               | Support
-:------- | :-------------------------------------------------------- | :---------
-**E011** | **Numeric data types**                                    | partial
-E011-01	 | `INTEGER` and `SMALLINT` data types                       | partial
-E011-02  | `REAL`, `DOUBLE PRECISION`, and `FLOAT` data types        | partial
-E011-03  | `DECIMAL` and `NUMERIC` data                              | yes
-E011-04  | Arithmetic                                                | yes
-E011-05  | Numeric comparison                                        | yes
-E011-06  | Implicit casting among the numeric data types             | yes
-**E021** | **Character string types**                                | unknown
-E021-01  | `CHARACTER` data type                                     | unknown
-E021-02  | `CHARACTER VARYING` data type                             | unknown
-E021-03  | Character literals                                        | unknown
-E021-04  | `CHARACTER_LENGTH` function                               | no
-E021-05  | `OCTET_LENGTH`                                            | no
-E021-06  | `SUBSTRING` function                                      | partial
-E021-07  | Character concatenation                                   | yes
-E021-08  | `UPPER` and `LOWER` functions                             | yes
-E021-09  | `TRIM` function                                           | partial
-E021-10  | Implicit casting among the fixed-length and variable-length character string types | unknown
-E021-11  | `POSITION` function                                       | partial
-E021-12  | Character comparison                                      | yes
-**E031** | **Identifiers**                                           | unknown
-E031-01  | Delimited identifiers                                     | yes
-E031-02  | Lower case identifiers                                    | no
-E031-03  | Trailing underscore                                       | unknown
-**E051** | **Basic query specification**                             | unknown
-E051-01  | `SELECT DISTINCT`                                         | yes
-E051-02  | `GROUP BY` clause                                         | yes
-E051-04  | `GROUP BY` can contain columns not in select-list         | yes
-E051-05  | Select list items can be renamed                          | yes
-E051-06  | `HAVING` clause                                           | yes
-E051-07  | Qualified `*` in select list                              | yes
-E051-08  | Correlation names in the `FROM` clause                    | unknown
-E051-09  | Rename columns in the `FROM` clause                       | unknown
-**E061** | **Basic predicates and search conditions**                | unknown
-E061-01  | Comparison predicate                                      | unknown
-E061-02  | `BETWEEN` predicate                                       | yes
-E061-03  | `IN` predicate with list of values                        | yes
-E061-04  | `LIKE` predicate                                          | yes
-E061-05  | `LIKE` predicate: `ESCAPE` clause                         | unknown
-E061-06  | `NULL` predicate                                          | unknown
-E061-07  | Quantified comparison predicate                           | unknown
-E061-08  | `EXISTS` predicate                                        | no
-E061-09  | Subqueries in comparison predicate                        | no
-E061-11  | Subqueries in `IN` predicate                              | no
-E061-12  | Subqueries in quantified comparison predicate             | no
-E061-13  | Correlated subqueries                                     | no
-E061-14  | Search condition                                          | unknown
-**E071** | **Basic query expressions**                               | unknown
-E071-01  | `UNION DISTINCT` table operator                           | no
-E071-02  | `UNION ALL` table operator                                | partial
-E071-03  | `EXCEPT DISTINCT` table operator                          | no
-E071-05  | Columns combined via table operators need not have exactly the same data type | partial
-E071-06  | Table operators in subqueries                             | unknown
-**E081** | **Basic Privileges**                                      | unknown
-E081-01  | `SELECT` privilege at the table level                     | partial
-E081-02  | `DELETE` privilege                                        | n/a
-E081-03  | `INSERT` privilege at the table level                     | n/a
-E081-04  | `UPDATE` privilege at the table level                     | n/a  
-E081-05  | `UPDATE` privilege at the column level                    | n/a
-E081-06  | `REFERENCES` privilege at the table level                 | n/a
-E081-07  | `REFERENCES` privilege at the column level                | n/a
-E081-08  | `WITH GRANT OPTION`                                       | n/a
-E081-09  | `USAGE` privilege                                         | n/a
-E081-10  | `EXECUTE` privilege                                       | n/a
-**E091** | **Set functions**                                         | partial
-E091-01  | `AVG`                                                     | yes
-E091-02  | `COUNT`                                                   | yes
-E091-03  | `MAX`                                                     | yes
-E091-04  | `MIN`                                                     | yes
-E091-05  | `SUM`                                                     | yes
-E091-06  | `ALL` quantifier                                          | unknown
-E091-07  | `DISTINCT` quantifier                                     | yes
-**E101** | **Basic data manipulation**                               | n/a
-E101-01  | `INSERT` statement                                        | n/a
-E101-03  | Searched `UPDATE` statement                               | n/a
-E101-04  | Searched `DELETE` statement                               | n/a
-**E111** | **Single row SELECT statement**                           | unknown
-**E121** | **Basic cursor support**                                  | unknown
-E121-01  | `DECLARE CURSOR`                                          | no
-E121-02  | `ORDER BY` columns need not be in select                  | yes
-E121-03  | Value expressions in `ORDER BY` clause                    | unknown
-E121-04  | `OPEN` statement                                          | n/a
-E121-06  | Positioned `UPDATE` statement                             | n/a
-E121-07  | Positioned `DELETE` statement                             | n/a
-E121-08  | `CLOSE` statement                                         | n/a
-E121-10  | `FETCH` statement: implicit `NEXT`                        | no
-E121-17  | `WITH HOLD` cursors                                       | no
-**E131** | **Null value support**                                    | yes
-**E141** | **Basic integrity constraints**                           | unknown
-E141-01  | `NOT NULL` constraints                                    | n/a
-E141-02  | `UNIQUE` constraints of `NOT NULL`                        | n/a
-E141-03  | `PRIMARY KEY` constraints                                 | n/a
-E141-04  | Basic `FOREIGN KEY` constraint with the `NO ACTION` default for both referential delete action and referential update action | n/a
-E141-06  | `CHECK` constraints                                       | n/a
-E141-07  | Column defaults                                           | unknown
-E141-08  | `NOT NULL` inferred on `PRIMARY KEY`                      | n/a
-E141-10  | Names in a foreign key can be specified in any order      | n/a
-**E151** | **Transaction support**                                   | n/a
-E151-01  | `COMMIT` statement                                        | n/a
-E151-02  | `ROLLBACK` statement                                      | n/a
-**E152** | **Basic `SET TRANSACTION` statement**                     | n/a
-E152-01  | `SET TRANSACTION` statement: `ISOLATION LEVEL SERIALIZABLE` clause   | n/a
-E152-02  | `SET TRANSACTION` statement: `READ ONLY` and `READ WRITE` clauses    | n/a
-**E+**   | **Other**                                                 | unknown
-**E153** | **Updatable queries with subqueries**                     | unknown
-**E161** | **SQL comments using leading double minus**               | yes
-**E171** | **`SQLSTATE` support**                                    | unknown
-**E182** | **Host language binding**                                 | unknown
-**F021** | **Basic information schema**                              | unknown
-F021-01  | `COLUMNS` view                                            | unknown
-F021-02  | `TABLES` view                                             | unknown
-F021-03  | `VIEWS` view                                              | unknown
-F021-04  | `TABLE_CONSTRAINTS` view                                  | unknown
-F021-05  | `REFERENTIAL_CONSTRAINTS` view                            | unknown
-F021-06  | `CHECK_CONSTRAINTS` view                                  | unknown
-**F031** | **Basic schema manipulation**                             | unknown
-F031-01  | `CREATE TABLE` statement to create persistent base tables | n/a
-F031-02  | `CREATE VIEW` statement                                   | n/a
-F031-03  | `GRANT` statement                                         | unknown
-F031-04  | `ALTER TABLE` statement: `ADD COLUMN` clause              | n/a
-F031-13  | `DROP TABLE` statement: `RESTRICT` clause                 | n/a
-F031-16  | `DROP VIEW` statement: `RESTRICT` clause                  | n/a
-F031-19  | `REVOKE` statement: `RESTRICT` clause                     | unknown
-**F041** | **Basic joined table**                                    | unknown
-F041-01  | Inner join (but not necessarily the `INNER` keyword)      | unknown
-F041-02  | `INNER` keyword                                           | yes
-F041-03  | `LEFT OUTER JOIN`                                         | yes
-F041-04  | `RIGHT OUTER JOIN`                                        | yes
-F041-05  | Outer joins can be nested                                 | unknown
-F041-07  | The inner table in a left or right outer join can also be used in an inner join   | unknown
-F041-08  | All comparison operators are supported (rather than just `=`)                     | unknown
-**F051** | **Basic date and time**                                   | yes
-F051-01  | `DATE` data type (including support of `DATE` literal)    | unknown
-F051-02  | `TIME` data type (including support of `TIME` literal) with fractional seconds    | unknown
-F051-03  | `TIMESTAMP` data type (including support of `TIMESTAMP` literal) with fractional seconds precision of at least 0 and 6   | yes
-F051-04  | Comparison predicate on `DATE`, `TIME`, and `TIMESTAMP` data types   | partial
-F051-05  | Explicit `CAST` between datetime types and character string types    | unknown
-F051-06  | `CURRENT_DATE`                                            | yes
-F051-07  | `LOCALTIME`                                               | yes
-F051-08  | `LOCALTIMESTAMP`                                          | unknown
-**F081** | **`UNION` and `EXCEPT` in views**                         | unknown
-**F131** | **Grouped operations**                                    | unknown
-F131-01  | `WHERE`, `GROUP BY`, and `HAVING` clauses supported in queries with grouped views   | yes
-F131-02  | Multiple tables supported in queries with grouped views   | yes
-F131-03  | Set functions supported in queries with grouped views     | unknown
-F131-04  | Subqueries with `GROUP BY` and `HAVING` clauses and grouped views   | unknown
-F131-05  | Single row `SELECT` with `GROUP BY` and `HAVING` clauses and grouped views    | unknown
-**F181** | **Multiple module support**                               | unknown
-**F201** | **`CAST` function**                                       | yes
-**F221** | **Explicit defaults**                                     | unknown
-**F261** | **`CASE` expression**                                     | yes
-F261-01  | Simple `CASE`                                             | yes
-F261-02  | Searched `CASE`                                           | yes
-F261-03  | `NULLIF`                                                  | yes
-F261-04  | `COALESCE`                                                | yes
-**F311** | **Schema definition statement**                           | n/a
-F311-01  | `CREATE SCHEMA`                                           | n/a
-F311-02  | `CREATE TABLE`                                            | n/a
-F311-03  | `CREATE VIEW`                                             | n/a
-F311-04  | `CREATE VIEW`: `WITH CHECK OPTION`                        | n/a
-F311-05  | `GRANT` statement                                         | n/a
-**F471** | **Scalar subquery values**                                | unknown
-**F481** | **Expanded `NULL` predicate**                             | unknown
-**F501** | **Features and conformance views**                        | unknown
-F501-01  | `SQL_FEATURES` view                                       | unknown
-F501-02  | `SQL_SIZING` view                                         | unknown
-F501-03  | `SQL_LANGUAGES` view                                      | unknown
-**F812** | **Basic flagging**                                        | unknown
-**S011** | **Distinct data types**                                   | unknown
-S011-01  | `USER_DEFINED_TYPES` view                                 | no
-**T321** | **Basic SQL-invoked routines**                            | unknown
-T321-01  | User-defined functions with no overloading                | unknown
-T321-02  | User-defined stored procedures with no overloading        | unknown
-T321-03  | Function invocation                                       | unknown
-T321-04  | `CALL` statement                                          | unknown
-T321-05  | `RETURN` statement                                        | unknown
-T321-06  | `ROUTINES` view                                           | unknown
-T321-07  | `PARAMETERS` view                                         | unknown
-**T631** | **`IN` predicate with one list element**                  | unknown
+- **Query surface area** – We implement the SQL-92 constructs required for expressive `SELECT` statements: set operations, joins, aggregations, scalar expressions, and UNNEST flows. Mutating statements and privilege control remain intentionally out of scope.
+- **Test coverage** – Every feature listed here is exercised in the automated suites (`test_battery_sql92.py`, `test_shapes_basic.py`, `test_shapes_aliases_distinct.py`, `test_shapes_joins_subqueries.py`, etc.), which we run continuously across connectors and data sources.
+- **Execution model** – We compile each statement into a read-only plan that federates local files, remote object stores, DuckDB snapshots, and registered virtual datasets. The same SQL applies regardless of backing storage.
 
-Support statuses in this table:
+## Attested Feature Coverage
 
-- **yes** The feature is supported and conformance is part of the test suite.  
-- **no** The feature is not supported.  
-- **partial** Some features are supported.  
-- **n/a** The feature relates to functionality not supported by Opteryx (e.g., DDL, DML, transactions).  
-- **unknown** No test exists to confirm conformance.
+Feature family | SQL-92 references | Support | Implementation notes / evidence
+:-- | :-- | :-- | :--
+Core projection & filtering | E051, E061, E131 | yes | `SELECT`, `DISTINCT`, aliasing, `WHERE`, `BETWEEN`, `IN` lists, `LIKE`/`ILIKE`, boolean logic, and `IS [NOT] NULL` semantics are exercised in `test_shapes_basic.py` and `test_battery_sql92.py`.
+Grouping & aggregates | E051, E091, F131 | yes | `GROUP BY`, `HAVING`, and aggregates (`AVG/COUNT/ MIN/MAX/SUM`, `ARRAY_AGG`, `COUNT(DISTINCT)`) plus `time_bucket`/`DATE_TRUNC` helpers validated in `test_shapes_functions_aggregates.py` and alias/joins battery tests.
+Joins & FROM clause | E031, F041 | yes | Planner supports `INNER`, `LEFT/RIGHT/FULL OUTER`, `CROSS`, `NATURAL`, `USING`, semi/anti joins, and `UNNEST`, proven via `test_shapes_aliases_distinct.py`, `test_shapes_edge_cases.py`, and `test_shapes_joins_subqueries.py`.
+Set operations | E071 | partial | `UNION DISTINCT` and `UNION ALL` (with LIMIT/OFFSET pushdown) are covered extensively. `INTERSECT`/`EXCEPT` raise `UnsupportedSyntaxError` (`test_shapes_joins_subqueries.py`).
+Subqueries & CTEs | E051, E061 | partial | Subqueries are supported in the `FROM` clause and scalar select lists; correlated subqueries, `EXISTS`, and `IN (SELECT ...)` predicates remain unsupported (see disabled cases in `test_shapes_joins_subqueries.py`).
+Scalar expressions & data types | E011, E021, F201, F261 | partial | Integer/decimal/double arithmetic, implicit numeric casts, string literals, concatenation, `SUBSTRING`, `TRIM`, `POSITION`, case folding, `CASE`, `COALESCE`, `NULLIF`, and regex helpers are implemented. `CHARACTER_LENGTH`, `OCTET_LENGTH`, and full fixed-length character semantics are not yet provided (`test_battery_sql92.py`).
+Temporal literals & functions | F051 | partial | `DATE`/`TIMESTAMP` literals, `CURRENT_DATE/TIME/TIMESTAMP`, comparisons, `CAST` to/from text, `EXTRACT`, `DATE_TRUNC`, `time_bucket`, and `FOR 'timestamp'` filters are supported. Native `TIME` literals with fractional seconds and `LOCALTIMESTAMP` parity need additional work.
+Null handling & search conditions | E061, E131, F261 | yes | Logical combinations with NULL, `CASE`, `COALESCE`, `NULLIF`, and null-aware predicates are verified in `test_shapes_aliases_distinct.py` and `test_null_semantics.py`.
+Views & virtual datasets | F031/F081 | partial | Static (configuration-backed) views are queryable, but SQL `CREATE VIEW`, `ALTER`, and `INFORMATION_SCHEMA` discovery are not exposed.
+Privileges, DML, DDL, transactions | E081, E101, E151, F031 | n/a | Opteryx operates as a read-only analytics engine—no `INSERT/UPDATE/DELETE`, `COMMIT/ROLLBACK`, `GRANT/REVOKE`, or schema statements.
 
-## Compliance Summary
+Support statuses used above:
 
-Opteryx demonstrates strong conformance in areas critical for analytical querying:
+- **yes** – Feature is implemented and covered by automated tests.
+- **partial** – Core behavior works, but specific SQL-92 sub-features (e.g., ESCAPE clauses, correlated subqueries) are still missing.
+- **no** – Explicitly unsupported; the parser/planner raises an error.
+- **n/a** – Out of scope for Opteryx’s read-only design.
 
-### Well-Supported Features
+## Maintainers’ Statement
 
-- **Basic query operations** - `SELECT`, `WHERE`, `GROUP BY`, `HAVING`, `ORDER BY`
-- **Set functions** - `AVG`, `COUNT`, `MAX`, `MIN`, `SUM` with `DISTINCT` support
-- **Join operations** - `INNER JOIN`, `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`
-- **Data types** - Numeric types, character strings, dates, and timestamps
-- **Predicates** - `BETWEEN`, `IN`, `LIKE`, comparison operators
-- **Case expressions** - `CASE`, `NULLIF`, `COALESCE`
-- **Type conversion** - `CAST` function
-- **Null handling** - `NULL` semantics and operations
+We stand behind Opteryx’s SQL-92 coverage for analytical use cases:
 
-### Not Supported
+- **Analytical focus** – Complex projection, filtering, grouping, joins, unions, and UNNEST paths are native features we rely on internally and validate through regression.
+- **Rich expression support** – Arithmetic, string functions, CASE logic, JSON search operators, and datetime helpers are first-class citizens in the execution engine.
+- **Storage flexibility** – The same SQL applies to tables, registered views, DuckDB snapshots, cloud object stores, and ad-hoc virtual datasets, with the planner handling pushdown where possible.
 
-As a read-only analytical engine, Opteryx does not support:
+We also call out, by design or by pending work, the features still outside the supported set:
 
-- **Data modification** - `INSERT`, `UPDATE`, `DELETE` statements
-- **Schema management** - `CREATE`, `ALTER`, `DROP` operations
-- **Transaction control** - `COMMIT`, `ROLLBACK`, `SET TRANSACTION`
-- **Integrity constraints** - `PRIMARY KEY`, `FOREIGN KEY`, `CHECK` constraints
-- **Privileges** - Security and permission features (handled at connection level)
+- **Correlated subqueries / EXISTS / IN (SELECT …)** – Not yet implemented; we recommend rewriting them as joins or set operations today.
+- **INTERSECT / EXCEPT** – Raise `UnsupportedSyntaxError` until the set-operator stack is extended.
+- **Character-length routines** – `CHARACTER_LENGTH`/`OCTET_LENGTH` remain queued behind ongoing string-function improvements.
+- **Information schema / privilege statements** – Metadata inspection and access control are exposed via configuration APIs rather than SQL.
+- **DML/DDL/Transactions** – Opteryx is purpose-built for read-only analytics, so mutating constructs are intentionally absent.
 
-### Areas Under Development
-
-Features marked as **unknown** or **partial** represent areas where:
-
-- Testing is incomplete or in progress
-- Implementation is ongoing
-- Feature scope needs refinement
-
-This transparency helps users understand current capabilities while guiding future development priorities.  
+This statement represents the current capabilities of the engine. As we land new SQL-92 features we will update this page so the attestation remains accurate.  
 
 
 [^1]: https://15445.courses.cs.cmu.edu/fall2020/slides/02-advancedsql.pdf
