@@ -3076,8 +3076,8 @@
 <td>Logical boolean (True/False)</td>
 </tr>
 <tr>
-<td><code>BLOB</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z"/></svg></span></td>
-<td>Variable-length binary data</td>
+<td><code>VARBINARY</code></td>
+<td>Variable-length binary data (also <code>BLOB</code>)</td>
 </tr>
 <tr>
 <td><code>DOUBLE</code></td>
@@ -3115,7 +3115,11 @@
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Types marked with <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z"/></svg></span> (BLOB, DECIMAL, TIME, and INTERVAL) have limited support and may not be fully implemented in all contexts.</p>
+<p><code>BLOB</code> is being transitioned to <code>VARBINARY</code> and some parts of the system may expect one or the other type name during this transition.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Types marked with <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z"/></svg></span> (DECIMAL, TIME, and INTERVAL) have limited support and may not be fully implemented in all contexts.</p>
 </div>
 <h2 id="casting">Casting</h2>
 <h3 id="functions">Functions</h3>
@@ -3131,11 +3135,11 @@
 </code></pre></div></p>
 <p><strong>Other Types</strong></p>
 <p><code>BOOLEAN</code>, <code>DOUBLE</code>, <code>INTEGER</code>, and <code>TIMESTAMP</code> also support type hint notation (e.g., <code>SELECT TIMESTAMP '2022-01-01';</code>) to perform casting.</p>
-<p><code>BLOB</code> supports the <code>b</code> prefix notation (e.g., <code>b'string'</code>) to create binary string literals.</p>
+<p><code>VARBINARY</code> supports the <code>b</code> prefix notation (e.g., <code>b'string'</code>) to create binary string literals.</p>
 <h3 id="type-annotations">Type Annotations</h3>
 <p>Some types support type annotations using the form <code>&lt;value&gt;::&lt;type&gt;</code>. For example, <code>1::double</code> is equivalent to <code>1.0</code>.</p>
 <h3 id="byte-strings">Byte Strings</h3>
-<p>The <code>b</code> prefix can be used to mark string literals as byte strings (BLOB type). For example, <code>b'abc'</code> is equivalent to <code>blob('abc')</code>.</p>
+<p>The <code>b</code> prefix can be used to mark string literals as byte strings (BLOB type). For example, <code>b'abc'</code> is equivalent to <code>'abc'::VARBINARY</code>.</p>
 <h2 id="coercion">Coercion</h2>
 <h3 id="timestamps-dates">Timestamps &amp; Dates</h3>
 <p>Literal string values in quotes may be automatically interpreted as <code>TIMESTAMP</code> or <code>DATE</code> types when they match valid dates in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format (e.g., <code>YYYY-MM-DD</code> or <code>YYYY-MM-DD HH:MM</code>). Values without a time component are coerced to <code>DATE</code>, while those with a time component become <code>TIMESTAMP</code>.</p>
@@ -3145,7 +3149,7 @@
 <p>Hexadecimal literals can be provided using the <code>0x</code> prefix. For example, <code>0xc0ffee</code> is interpreted as the integer <code>12648430</code>.</p>
 <p>Numeric literals may contain underscores (<code>_</code>) to improve readability of long numbers. For example, <code>1_000_000</code> is equivalent to <code>1000000</code>.</p>
 <h3 id="structs">Structs</h3>
-<p><code>VARCHAR</code> and <code>BLOB</code> columns containing JSON-formatted strings support struct accessors and functions, allowing you to query nested data structures.</p>
+<p><code>VARCHAR</code> and <code>VARBINARY</code> columns containing JSON-formatted strings support struct accessors and functions, allowing you to query nested data structures.</p>
 
 
 
