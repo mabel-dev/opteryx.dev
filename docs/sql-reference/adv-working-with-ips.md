@@ -5,7 +5,7 @@ description: Query and manipulate IP addresses in Opteryx. Perform containment t
 
 # Working with IPs
 
-IP addresses are represented as `VARCHAR` or `BLOB` values and support containment testing operations. `BLOB` is the preferred type for storing IP addresses.
+IP addresses are represented as `VARCHAR` or `VARBINARY` values and support containment testing operations. `VARBINARY` is the preferred type for storing IP addresses.
 
 ## Actions
 
@@ -19,7 +19,7 @@ IP addresses are created as string literals:
 '192.168.0.0/24'
 ~~~
 
-For BLOB storage (preferred):
+For `VARBINARY` storage (preferred):
 
 ~~~sql
 b'192.168.0.1'

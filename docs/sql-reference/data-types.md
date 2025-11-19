@@ -13,7 +13,7 @@ Name        | Description
 ----------- | --------------
 `ARRAY`     | A list of items, all of the same type
 `BOOLEAN`   | Logical boolean (True/False)
-`BLOB` :octicons-star-16:     | Variable-length binary data
+`VARBINARY` | Variable-length binary data (also `BLOB`)
 `DOUBLE`    | Double-precision floating-point number
 `INTEGER`   | Whole number (64-bit signed integer)
 `DECIMAL` :octicons-star-16:  | Fixed-point number with specified precision and scale
@@ -23,8 +23,11 @@ Name        | Description
 `TIMESTAMP` | Combined date and time
 `INTERVAL` :octicons-star-16: | Time duration (difference between two TIMESTAMP values)
 
+!!! Note
+    `BLOB` is being transitioned to `VARBINARY` and some parts of the system may expect one or the other type name during this transition.
+
 !!! Note  
-    Types marked with :octicons-star-16: (BLOB, DECIMAL, TIME, and INTERVAL) have limited support and may not be fully implemented in all contexts.
+    Types marked with :octicons-star-16: (DECIMAL, TIME, and INTERVAL) have limited support and may not be fully implemented in all contexts.
 
 ## Casting
 
@@ -53,7 +56,7 @@ SELECT INTERVAL '1' YEAR
 
 `BOOLEAN`, `DOUBLE`, `INTEGER`, and `TIMESTAMP` also support type hint notation (e.g., `SELECT TIMESTAMP '2022-01-01';`) to perform casting.
 
-`BLOB` supports the `b` prefix notation (e.g., `b'string'`) to create binary string literals.
+`VARBINARY` supports the `b` prefix notation (e.g., `b'string'`) to create binary string literals.
 
 ### Type Annotations
 
@@ -61,7 +64,7 @@ Some types support type annotations using the form `<value>::<type>`. For exampl
 
 ### Byte Strings
 
-The `b` prefix can be used to mark string literals as byte strings (BLOB type). For example, `b'abc'` is equivalent to `blob('abc')`.
+The `b` prefix can be used to mark string literals as byte strings (BLOB type). For example, `b'abc'` is equivalent to `'abc'::VARBINARY`.
 
 ## Coercion
 
@@ -81,4 +84,4 @@ Numeric literals may contain underscores (`_`) to improve readability of long nu
 
 ### Structs
 
-`VARCHAR` and `BLOB` columns containing JSON-formatted strings support struct accessors and functions, allowing you to query nested data structures.
+`VARCHAR` and `VARBINARY` columns containing JSON-formatted strings support struct accessors and functions, allowing you to query nested data structures.

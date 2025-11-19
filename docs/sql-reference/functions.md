@@ -19,13 +19,15 @@ New functions for this version are annotated with the :octicons-star-16: icon.
     Cast **any** to a `BOOLEAN`, raises an error if cast is not possible. Note `BOOLEAN` does not require parenthesis, however any aliases do.      
     Alias for `CAST`(**any** AS BOOLEAN)   
 
-!!! function "`BLOB` (**varchar**: _varchar_) → _blob_"  
-    Cast **varchar** to **blob**, raises an error if cast is not possible.   
-    _Note_: prefixing can also be used to define a literal blob string, `b'value'` is equivalent to `blob('value')`.   
+!!! function "`BLOB` (**any**: _any_) → _varbinary_"    
+    **Will be deprecated after version 0.29**  
+    Cast **varchar** to **varbinary**, raises an error if cast is not possible.    
+    Alias for `VARBINARY`(**any**)   
+    _Note_: prefixing can also be used to define a literal binary string, `b'value'` is equivalent to `blob('value')`.  
 
 !!! function "`CAST` (**any**: _any_ AS **type**) → _type_"  
     Cast **any** to **type**, raises an error if cast is not possible.   
-    Also implemented as individual cast functions (`BLOB`, `BOOLEAN`, `INTEGER`, `FLOAT`, `VARCHAR`).
+    Also implemented as individual cast functions (`VARBINARY`, `BOOLEAN`, `INTEGER`, `FLOAT`, `VARCHAR`).
 
 !!! function "`FLOAT` (**num**: _numeric_) → _numeric_"  
     Convert **num** to a floating point number.   
@@ -48,6 +50,10 @@ New functions for this version are annotated with the :octicons-star-16: icon.
 
 !!! function "`TRY_CAST` (**any**: _any_ AS **type**) → _type_"  
     Cast **any** to **type**, if cast is not possible, returns `null`.   
+
+!!! function "`VARBINARY` (_any_) → _varbinary_"  
+    Cast **any** to a binary string, raises an error if cast is not possible.  
+    Alias for `CAST`(**any** AS VARBINARY)
 
 !!! function "`VARCHAR` (_any_) → _varchar_"  
     Cast **any** to a string, raises an error if cast is not possible.  
@@ -460,21 +466,21 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
 
 !!! function "_struct_ `->` _key_ → _value_ "    
     Return the value for **key** from **object**.   
-    Struct values can be `VARCHAR` or `BLOB` formatted JSON strings.
+    Struct values can be `VARCHAR` or `VARBINARY` formatted JSON strings.
 
 !!! function "_struct_ `->>` _key_ → _varchar_ "   
     Return the value for **key** from **object**, non `null` values are cast to `VARCHAR`.   
-    Struct values can be `VARCHAR` or `BLOB` formatted JSON strings.
+    Struct values can be `VARCHAR` or `VARBINARY` formatted JSON strings.
     _Related:_ `->` operator
 
 !!! function "_struct_ `@?` _key_ → _value_ "   
     Return true if _struct_ contains the key _key_.   
-    Struct values can be `VARCHAR` or `BLOB` formatted JSON strings.  
+    Struct values can be `VARCHAR` or `VARBINARY` formatted JSON strings.  
 
 !!! function "_struct_ `@?` _jsonpath_ → _value_"  
     :octicons-star-16: **New in 0.19**       
     Return true if _struct_ contains a value at _jsonpath_.   
-    Struct values can be `VARCHAR` or `BLOB` formatted JSON strings. 
+    Struct values can be `VARCHAR` or `VARBINARY` formatted JSON strings. 
 
 !!! function "**object**: _struct_`[`**key**: _varchar_`]` → _value_:octicons-dot-16:"  
     Subscript operator
@@ -486,7 +492,7 @@ For more details, see [Working with Structs](../adv-working-with-structs/).
 
 !!! function "`JSONB_OBJECT_KEYS` (**object**: _struct_) → _array_:octicons-dot-16:"   
     Return an array of the keys in a struct value.   
-    Struct values can be `STRUCT` values, or `VARCHAR` or `BLOB` formatted JSON strings.   
+    Struct values can be `STRUCT` values, or `VARCHAR` or `VARBINARY` formatted JSON strings.   
 
 !!! function "`SEARCH` (**object**: _struct_, **value**: _varchar_) → _boolean_:octicons-dot-16:"  
     **Will be deprecated after version 0.28**    

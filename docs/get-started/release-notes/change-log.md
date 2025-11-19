@@ -6,10 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.27.0] - UNRELEASED
 
+### Removed
+
+- `BLOB` marked as deprecated to be removed in or after version 0.29, use `VARBINARY` instead.
+
 ### Fixed
 
 - [[#2916](https://github.com/mabel-dev/opteryx/pull/2916)] **[Optimizer]** Fix projection pushdown bug ([@joocer](https://github.com/joocer))
 - [[#2536](https://github.com/mabel-dev/opteryx/issues/2536)] **[Optimizer]** Redundant operators not always removed ([@joocer](https://github.com/joocer))
+- [[#2934](https://github.com/mabel-dev/opteryx/issues/2934)] **[Iceberg]** Namespace issue with Iceberg ([@joocer](https://github.com/joocer))
+- [[#2927](https://github.com/mabel-dev/opteryx/issues/2927)] **[Iceberg]** Support time travel ([@joocer](https://github.com/joocer))
+- [[#2940](https://github.com/mabel-dev/opteryx/issues/2940)] **[Iceberg]** Tables with no snapshots give unhelpful errors ([@joocer](https://github.com/joocer))
 
 ### Changed
 
@@ -19,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [[#2923](https://github.com/mabel-dev/opteryx/issues/2923)] Improve DBAPI conformance ([@joocer](https://github.com/joocer))
 - [[#2915](https://github.com/mabel-dev/opteryx/pull/2915)] **[Draken]** Implement `hash_into` to improve hash performance ([@joocer](https://github.com/joocer))
 - [[#2924](https://github.com/mabel-dev/opteryx/issues/2924)] **[Draken]** All vectors now use SIMD to merge hashes ([@joocer](https://github.com/joocer))
+- [[#2942](https://github.com/mabel-dev/opteryx/issues/2942)] Support `VARBINARY` ([@joocer](https://github.com/joocer))
 
 ### Added
 
