@@ -7,7 +7,7 @@ Opteryx, mesos, and orso are built on the shoulders of other great libraries and
 Library           | Inclusion Type    | Copyright            | Licence   
 :---------------- | :---------------- | :------------------- | :--------------- 
 [abseil-cpp](https://github.com/abseil/abseil-cpp)         | Vendored   | 2017 [Abseil](https://abseil.io/#) | [Apache 2.0](https://github.com/abseil/abseil-cpp/blob/master/LICENSE)
-[base64](https://github.com/alantsd/base64)                | Vendored   | 2018 [Rafa Garcia](https://github.com/rafagafe), 2020 [Alan Tong](https://github.com/alantsd) | [MIT](https://github.com/alantsd/base64/blob/master/LICENSE)
+[base64](https://github.com/alantsd/base64)                | Derived    | 2018 [Rafa Garcia](https://github.com/rafagafe), 2020 [Alan Tong](https://github.com/alantsd) | [MIT](https://github.com/alantsd/base64/blob/master/LICENSE)
 [cython](https://github.com/cython/cython)                 | Dependency |  | [Apache 2.0](https://github.com/cython/cython/blob/master/LICENSE.txt)
 [datafusion-sqlparser-rs](https://github.com/apache/datafusion-sqlparser-rs) | Dependency |  | [Apache 2.0](https://github.com/apache/datafusion-sqlparser-rs/blob/main/LICENSE.TXT)
 [fast_float](https://github.com/fastfloat/fast_float)      | Vendored   | 2021 fast_float authors | [Apache 2.0](https://github.com/fastfloat/fast_float/blob/main/LICENSE-APACHE)  
@@ -23,8 +23,10 @@ Library           | Inclusion Type    | Copyright            | Licence
 [query-builder](https://death.andgravity.com/query-builder-how) | Vendored | 2021 [lemon24](https://github.com/lemon24) (assumed) | [BSD-3](https://github.com/lemon24/reader/blob/15121f667a6f2e388f0072a3fcd715f533883899/LICENSE)
 [re2](https://github.com/google/re2)                       | Vendored   | 2009 RE2 Authors | [BSD-3](https://github.com/google/re2/blob/main/LICENSE)
 [ryu](https://github.com/ulfjack/ryu)                      | Vendored   | 2018 [Ulf Adams](https://github.com/ulfjack) (assumed) | [Apache 2.0](https://github.com/ulfjack/ryu/blob/master/LICENSE-Apache2)
+[snappy](https://github.com/google/snappy)                 | Vendored   | 2011 Google Inc. | [BSD-3](https://github.com/google/snappy/blob/main/COPYING)
 [sqloxide](https://github.com/wseaton/sqloxide)            | Vendored   | 2020 [Will Eaton](https://github.com/wseaton) | [MIT](https://github.com/wseaton/sqloxide/blob/master/LICENSE)
 [xxHash](https://github.com/Cyan4973/xxHash)               | Vendored   | 2023 [Yann Collet](https://github.com/Cyan4973) | [BSD-2](https://github.com/Cyan4973/xxHash/blob/dev/LICENSE)
+[zstd](https://github.com/facebook/zstd)                   | Vendored   | 2016 Facebook, Inc. | [BSD-3](https://github.com/facebook/zstd/blob/dev/LICENSE)
 
 Inclusion Types in this table:
 
