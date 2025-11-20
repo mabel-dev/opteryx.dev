@@ -1,5 +1,5 @@
 ---
-title: Get Started with Opteryx - Cloud-Native SQL Query Engine
+title: Get Started with Opteryx
 description: Introduction to Opteryx SQL query engine. Query data across multiple systems without centralization. Perfect for federated analytics and serverless environments.
 ---
 
