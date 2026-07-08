@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 
 - `BLOB` marked as deprecated to be removed in or after version 0.29, use `VARBINARY` instead.
+- MacOS Intel builds are no longer supported.
 
 ### Fixed
 
