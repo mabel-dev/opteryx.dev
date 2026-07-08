@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.canonical_url }}">
+  {% if page.meta and page.meta.title %}
+    <meta property="og:title" content="{{ page.meta.title }} - {{ config.site_name }}">
+  {% elif page.title and not page.is_homepage %}
+    <meta property="og:title" content="{{ page.title | striptags }} - {{ config.site_name }}">
+  {% else %}
+    <meta property="og:title" content="{{ config.site_name }} - SQL Query Engine">
+  {% endif %}
+  {% if page.meta and page.meta.description %}
+    <meta property="og:description" content="{{ page.meta.description }}">
+  {% elif config.site_description %}
+    <meta property="og:description" content="{{ config.site_description }}">
+  {% endif %}
+  <meta property="og:image" content="{{ config.site_url }}icarus-opteryx.png">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ page.canonical_url }}">
+  {% if page.meta and page.meta.title %}
+    <meta property="twitter:title" content="{{ page.meta.title }} - {{ config.site_name }}">
+  {% elif page.title and not page.is_homepage %}
+    <meta property="twitter:title" content="{{ page.title | striptags }} - {{ config.site_name }}">
+  {% else %}
+    <meta property="twitter:title" content="{{ config.site_name }} - SQL Query Engine">
+  {% endif %}
+  {% if page.meta and page.meta.description %}
+    <meta property="twitter:description" content="{{ page.meta.description }}">
+  {% elif config.site_description %}
+    <meta property="twitter:description" content="{{ config.site_description }}">
+  {% endif %}
+  <meta property="twitter:image" content="{{ config.site_url }}icarus-opteryx.png">
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ config.site_name }}",
+    "url": "{{ config.site_url }}",
+    "description": "{{ config.site_description }}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ config.site_name }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ config.site_url }}icarus-opteryx.png"
+      }
+    }
+  }
+  </script>
+  {% if page.is_homepage %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Opteryx",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Python",
+    "description": "{{ config.site_description }}",
+    "url": "{{ config.site_url }}",
+    "downloadUrl": "https://pypi.org/project/opteryx/",
+    "codeRepository": "https://github.com/mabel-dev/opteryx",
+    "programmingLanguage": "Python",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "softwareVersion": "latest",
+    "screenshot": "{{ config.site_url }}home-diagram.svg"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Opteryx",
+    "url": "{{ config.site_url }}",
+    "logo": "{{ config.site_url }}icarus-opteryx.png",
+    "sameAs": [
+      "https://github.com/mabel-dev/opteryx",
+      "https://mastodon.social/@opteryx",
+      "https://pypi.org/project/opteryx/"
+    ]
+  }
+  </script>
+  {% endif %}
+{% endblock %}
