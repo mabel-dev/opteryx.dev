@@ -2,37 +2,46 @@
 
 This document primarily applies to the Blob and File stores, such as GCS, S3 and local disk.
 
+## The Rugo File Engine
+
+File reads and writes for Parquet, CSV, and JSONL go through [Rugo](https://rugo.dev), Opteryx's native file engine (also published standalone at `pip install rugo`). Rugo is C++ end to end with no PyArrow, NumPy, or other heavy dependency in the decode path, and it is built around reading as little as possible:
+
+- **Column projection** — only columns the query references are decoded.
+- **Row-group pruning** — Parquet footer statistics (min/max) rule out row groups that can't match a predicate before they're touched.
+- **Bloom-filter pruning** — where a Parquet file carries bloom filters, equality and `IN` predicates use them to rule out row groups that plain min/max ranges can't.
+- **Dictionary-aware skipping** — a dictionary-encoded column's predicate can be evaluated against its dictionary before any per-row data is decoded.
+
+This makes Parquet the format with the most optimization available, since it's the only one of the three with page-level statistics and dictionaries to prune against. CSV and JSONL still benefit from column projection and predicate pushdown, applied via SIMD structural scanning, but they carry no footer metadata to skip whole sections of a file the way Parquet can.
+
+Rugo reads from local disk, HTTP(S) range requests, and Google Cloud Storage behind one interface, and writes all three formats back out — including bloom filters on Parquet output.
+
+See [Rugo — the file engine](https://rugo.dev) for the full architecture.
+
 ## Supported Data Files
 
 ### Parquet
 
-Parquet is the preferred file format for Opteryx and use of Parquet offers optimizations not available with other formats. If a data source has query performance issues or is hot in terms of query use, converting to Parquet is likely to improve performance. Performance testing suggests Parquet with zStandard compression provides best balance of IO to read the files and CPU to decompress the files.
-
-As will all guidance on performance tuning - this appears to be generally correct but test for your specific circumstances.
+Parquet is the preferred file format for Opteryx. It's the only format with row-group statistics and bloom filters for Rugo to prune against, so it sees the most optimization and is the best choice for data that's hot or has performance requirements. Parquet with zStandard compression is generally the best balance of IO to read and CPU to decompress, though as with all performance guidance, test against your own data.
 
 ### ORC & Feather
 
-Opteryx support ORC and Feather, but not all optimizations implemented for Parquet are implemented for these formats. These will still provide better performance than traditional data formats.
+Opteryx supports ORC and Feather via Arrow, but neither goes through Rugo's pruning path, so treat them as compatibility formats rather than a performance choice — convert to Parquet if either becomes a hot dataset.
 
 ORC files have limited support on Windows and PyPy environments.
 
 ### JSONL
 
-[JSONL](https://jsonlines.org/) and zStandard compressed JSONL files.
+[JSONL](https://jsonlines.org/) and zStandard-compressed JSONL files, read and written natively by Rugo with no explicit schema required — types are inferred from the records, and inconsistent types across a partition will fail the read.
 
-Files don't need an explicit schema, but each partition must have the same columns in the same order in every row of every file.
-
-Data types are inferred from the records, where data types are not consistent, the read will fail.
-
-Opteryx supports zStandard Compressed JSONL files as created by Mabel, these perform approximately 20% faster than raw JSONL files primarily due to reduced IO.
+Each partition must have the same columns in the same order in every row of every file.
 
 ### CSV & TSV
 
-Comma-separated and tab-delimited files can be used with Opteryx, however this is only provided to meet the base expectation that the system can support these formats. It is not recommended and limited regression tests are written relating to CSV handling.
+Comma-separated and tab-delimited files are read and written natively by Rugo, with column projection and predicate pushdown applied the same way as JSONL. CSV lacks the schema and per-row-group metadata Parquet carries, so prefer Parquet for anything beyond casual use or data interchange.
 
 ### Avro
 
-Avro formatted files are supported, however require an additional library to be installed (`pip install avro`) and performance is considered poor.
+Avro formatted files are supported via Arrow, however this requires an additional library to be installed (`pip install avro`) and does not go through Rugo — expect it to be slower than the three natively-supported formats.
 
 ## Storage Layout
 
