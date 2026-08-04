@@ -1,0 +1,3 @@
+# opteryx.dev has moved to https://opteryx.app
+User-agent: *
+Allow: /
