@@ -1,7 +1,13 @@
-# opteryx.dev
+# opteryx.dev (retired)
 
-Content for the Opteryx community and documentation website at https://opteryx.dev.
+**opteryx.dev is no longer maintained.** The domain now redirects to
+[opteryx.app](https://opteryx.app), which is where the Opteryx documentation
+and community site now lives.
 
-The site is built using [mk-docs](https://www.mkdocs.org/) and is hosted on [GitHub Pages](https://pages.github.com/).
+The `.github/workflows/documents.yaml` workflow publishes a static
+redirect-only page (see [`redirect/`](redirect/)) to the `gh-pages` branch on
+every push to `main`, so this domain forwards visitors to opteryx.app.
 
-We make use of [Material for mk-docs](https://squidfunk.github.io/mkdocs-material/) and [Mike](https://github.com/jimporter/mike) for theming and document versioning.
+The historical mkdocs/mike-based site content (`docs/`, `mkdocs.yml`,
+`builder/`, `template/`) is kept for reference but is no longer built or
+deployed.

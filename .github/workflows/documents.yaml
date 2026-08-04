@@ -5,25 +5,34 @@ on:
       - 'main'
 jobs:
   deploy:
-    name: 'Deploy Documentation'
+    name: 'Deploy Redirect'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
-      - run: git config user.name XB500
-      - run: git config user.email XB500@users.noreply.github.com
-      - run: git fetch origin gh-pages --depth=1
-      - run: pip install --upgrade mkdocs-material mike termynal pdoc markdownify
 
-      - run: pip install --upgrade orso
-      - run: pdoc orso --no-show-source --mermaid --no-search -t ./template -o ./docs/get-started/ecosystem/orso
-      - run: markdownify ./docs/get-started/ecosystem/orso/orso.html > ./docs/get-started/ecosystem/orso/orso.md
+      # opteryx.dev is retired; this publishes a redirect-only site to
+      # gh-pages so the domain forwards visitors to https://opteryx.app
+      - name: Publish redirect site to gh-pages
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/gh-pages-deploy
+          mkdir -p /tmp/gh-pages-deploy
+          cp redirect/index.html /tmp/gh-pages-deploy/index.html
+          cp redirect/404.html /tmp/gh-pages-deploy/404.html
+          cp redirect/robots.txt /tmp/gh-pages-deploy/robots.txt
+          printf 'opteryx.dev\nwww.opteryx.dev\n' > /tmp/gh-pages-deploy/CNAME
+          touch /tmp/gh-pages-deploy/.nojekyll
 
-      # this should match the version
-      - run: mike delete latest
-      - run: mike deploy -p "0.26.8" latest
-#      - run: mike delete dev
-
-      - run: mike deploy -p "0.27.0" dev
+          cd /tmp/gh-pages-deploy
+          git init -q
+          git checkout -q -b gh-pages
+          git config user.name XB500
+          git config user.email XB500@users.noreply.github.com
+          git add -A
+          git commit -q -m "Redirect opteryx.dev to opteryx.app"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push -f origin gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
